@@ -2371,8 +2371,8 @@
           }
         ],
         "calibration": {
-          "version": 28,
-          "team_adjustment_weight": 1.14868566764928,
+          "version": 27,
+          "team_adjustment_weight": 1.126162419264,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.0,
@@ -2398,7 +2398,6 @@
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
@@ -2663,9 +2662,9 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.566508833719855,
+        "home_win": 0.5629051139782103,
         "draw": 0.276547914960316,
-        "away_win": 0.1569432513198289,
+        "away_win": 0.1605469710614737,
         "confidence_interval_width": 0.22999999999999998,
         "expected_goals": {
           "home": 1.4031715957446809,
@@ -2710,7 +2709,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 28,
+        "calibration_version": 27,
         "recommended_label": "home_win",
         "explanation": "Egypt vs Iran: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
       }
