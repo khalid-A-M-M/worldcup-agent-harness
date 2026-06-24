@@ -1,6 +1,6 @@
 {
-  "version": 26,
-  "team_adjustment_weight": 1.1040808032,
+  "version": 25,
+  "team_adjustment_weight": 1.08243216,
   "butterfly_adjustment_weight": 1.0,
   "advanced_stats_weight": 1.0,
   "confidence_penalty_weight": 1.0,
@@ -26,7 +26,6 @@
     "Not enough completed forecasts for aggressive recalibration.",
     "Not enough completed forecasts for aggressive recalibration.",
     "Not enough completed forecasts for aggressive recalibration.",
-    "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
