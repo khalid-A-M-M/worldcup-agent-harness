@@ -1,21 +1,21 @@
 {
   "match": {
-    "match_id": "WC-011",
-    "home_team": "Switzerland",
-    "away_team": "Canada",
-    "kickoff_utc": "2026-06-24T19:00:00+00:00",
-    "group": "Group B",
-    "ground": "Vancouver",
-    "round": "Matchday 14",
+    "match_id": "WC-066",
+    "home_team": "DR Congo",
+    "away_team": "Uzbekistan",
+    "kickoff_utc": "2026-06-27T23:30:00+00:00",
+    "group": "Group K",
+    "ground": "Atlanta",
+    "round": "Matchday 17",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 48 historical matches, 47 team priors, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Switzerland and Canada.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: away_win.",
+    "synthesizer: ok - Final forecast: home_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
@@ -2371,8 +2371,8 @@
           }
         ],
         "calibration": {
-          "version": 29,
-          "team_adjustment_weight": 1.1716593810022657,
+          "version": 28,
+          "team_adjustment_weight": 1.14868566764928,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.0,
@@ -2404,7 +2404,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2416,221 +2415,227 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.31796253778703815,
-          "draw": 0.24762827933736492,
-          "away_win": 0.43440918287559666
+          "home_win": 0.5239881436058788,
+          "draw": 0.2514632623276853,
+          "away_win": 0.22454859406643593
         },
         "expected_goals": {
-          "home": 1.4734812419056427,
-          "away": 1.7477327925531916
+          "home": 1.7721267769041011,
+          "away": 1.0925923373419675
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.11100351039880355
+            "probability": 0.11920334411361512
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.09779788796307927
           },
           {
             "home_goals": 1,
-            "away_goals": 2,
-            "probability": 0.08981688667245748
+            "away_goals": 0,
+            "probability": 0.09218992940555026
           },
           {
             "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.0757229584992199
-          },
-          {
-            "home_goals": 2,
-            "away_goals": 2,
-            "probability": 0.0661717488591155
+            "away_goals": 0,
+            "probability": 0.08950995226728355
           },
           {
             "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.061531393959184895
+            "away_goals": 0,
+            "probability": 0.06583471924351252
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Switzerland and Canada.",
+      "summary": "Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Switzerland",
+          "team": "DR Congo",
           "matches": 2,
-          "wins": 1,
+          "wins": 0,
           "draws": 1,
-          "losses": 0,
-          "goals_for": 5,
+          "losses": 1,
+          "goals_for": 1,
           "goals_against": 2,
-          "goal_difference": 3,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 14
+          "goal_difference": -1,
+          "points": 1,
+          "points_per_match": 0.5,
+          "seed_rank": 56
         },
         "away_profile": {
-          "team": "Canada",
+          "team": "Uzbekistan",
           "matches": 2,
-          "wins": 1,
-          "draws": 1,
-          "losses": 0,
-          "goals_for": 7,
-          "goals_against": 1,
-          "goal_difference": 6,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 36
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goals_for": 1,
+          "goals_against": 8,
+          "goal_difference": -7,
+          "points": 0,
+          "points_per_match": 0.0,
+          "seed_rank": 59
         },
         "home_advanced_profile": {
-          "team": "Switzerland",
+          "team": "DR Congo",
           "matches": 1,
-          "shots": 26.0,
-          "shots_on_target": 7.0,
-          "possession": 68.0,
+          "shots": 8.0,
+          "shots_on_target": 2.0,
+          "possession": 24.6,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 10.0,
+          "corners": 4.0,
           "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 11.0,
-          "offsides": 1.0,
-          "saves": 3.0,
-          "accurate_passes": 527.0,
-          "total_passes": 576.0,
-          "pass_pct": 0.9,
-          "accurate_crosses": 6.0,
-          "total_crosses": 35.0,
-          "blocked_shots": 9.0,
-          "total_tackles": 8.0,
-          "interceptions": 7.0,
-          "clearances": 13.0,
+          "fouls": 10.0,
+          "offsides": 2.0,
+          "saves": 0.0,
+          "accurate_passes": 195.0,
+          "total_passes": 249.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 1.0,
+          "total_crosses": 10.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 17.0,
+          "interceptions": 5.0,
+          "clearances": 27.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 70.91,
-          "attacking_pressure_index": 74.0,
-          "shots_per_match": 26.0,
-          "shots_on_target_per_match": 7.0,
-          "possession_per_match": 68.0,
+          "dominance_index": 38.64,
+          "attacking_pressure_index": 54.68,
+          "shots_per_match": 8.0,
+          "shots_on_target_per_match": 2.0,
+          "possession_per_match": 24.6,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 10.0,
+          "corners_per_match": 4.0,
           "yellow_cards_per_match": 1.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 11.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 3.0,
-          "accurate_passes_per_match": 527.0,
-          "total_passes_per_match": 576.0,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 6.0,
-          "total_crosses_per_match": 35.0,
-          "blocked_shots_per_match": 9.0,
-          "total_tackles_per_match": 8.0,
-          "interceptions_per_match": 7.0,
-          "clearances_per_match": 13.0,
+          "fouls_per_match": 10.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 0.0,
+          "accurate_passes_per_match": 195.0,
+          "total_passes_per_match": 249.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 1.0,
+          "total_crosses_per_match": 10.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 17.0,
+          "interceptions_per_match": 5.0,
+          "clearances_per_match": 27.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 70.91,
-          "attacking_pressure_index_per_match": 74.0
+          "dominance_index_per_match": 38.64,
+          "attacking_pressure_index_per_match": 54.68
         },
         "away_advanced_profile": {
-          "team": "Canada",
+          "team": "Uzbekistan",
           "matches": 1,
-          "shots": 32.0,
-          "shots_on_target": 10.0,
-          "possession": 79.0,
+          "shots": 7.0,
+          "shots_on_target": 2.0,
+          "possession": 34.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 19.0,
+          "corners": 2.0,
           "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 9.0,
-          "offsides": 1.0,
-          "saves": 0.0,
-          "accurate_passes": 515.0,
-          "total_passes": 567.0,
-          "pass_pct": 0.9,
-          "accurate_crosses": 13.0,
-          "total_crosses": 55.0,
-          "blocked_shots": 14.0,
-          "total_tackles": 9.0,
-          "interceptions": 6.0,
-          "clearances": 3.0,
+          "fouls": 15.0,
+          "offsides": 2.0,
+          "saves": 4.0,
+          "accurate_passes": 262.0,
+          "total_passes": 325.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 0.0,
+          "total_crosses": 8.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 18.0,
+          "interceptions": 14.0,
+          "clearances": 30.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 85.92,
-          "attacking_pressure_index": 95.43,
-          "shots_per_match": 32.0,
-          "shots_on_target_per_match": 10.0,
-          "possession_per_match": 79.0,
+          "dominance_index": 29.93,
+          "attacking_pressure_index": 26.87,
+          "shots_per_match": 7.0,
+          "shots_on_target_per_match": 2.0,
+          "possession_per_match": 34.0,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 19.0,
+          "corners_per_match": 2.0,
           "yellow_cards_per_match": 1.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 9.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 0.0,
-          "accurate_passes_per_match": 515.0,
-          "total_passes_per_match": 567.0,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 13.0,
-          "total_crosses_per_match": 55.0,
-          "blocked_shots_per_match": 14.0,
-          "total_tackles_per_match": 9.0,
-          "interceptions_per_match": 6.0,
-          "clearances_per_match": 3.0,
+          "fouls_per_match": 15.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 4.0,
+          "accurate_passes_per_match": 262.0,
+          "total_passes_per_match": 325.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 0.0,
+          "total_crosses_per_match": 8.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 18.0,
+          "interceptions_per_match": 14.0,
+          "clearances_per_match": 30.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 85.92,
-          "attacking_pressure_index_per_match": 95.43
+          "dominance_index_per_match": 29.93,
+          "attacking_pressure_index_per_match": 26.87
         },
-        "home_factor_score": 0.324315,
-        "away_factor_score": 0.36675,
-        "probability_adjustment": -0.042435,
+        "home_factor_score": -0.18836599999999998,
+        "away_factor_score": -0.39698900000000004,
+        "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 3.",
-            "impact": 0.083
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 14.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 56.",
+            "impact": -0.002
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 6.",
-            "impact": 0.11
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
+            "impact": -0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 36.",
-            "impact": 0.038
+            "value": "Seed rank داخل النموذج: 59.",
+            "impact": -0.008
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 68.0%، ضغط هجومي 74.0.",
-            "impact": 0.089
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 24.6%، ضغط هجومي 54.7.",
+            "impact": -0.124
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 10.0، استحواذ 79.0%، ضغط هجومي 95.4.",
-            "impact": 0.124
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
+            "impact": -0.184
           }
         ]
       }
@@ -2652,66 +2657,72 @@
         "No butterfly events found for this match."
       ],
       "payload": {
-        "favorite": "away_win",
+        "favorite": "home_win",
         "objections": [],
         "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: away_win.",
+      "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.26824317195420705,
-        "draw": 0.24762827933736498,
-        "away_win": 0.4841285487084279,
+        "home_win": 0.7077778504297636,
+        "draw": 0.2514632623276853,
+        "away_win": 0.04075888724255111,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.4734812419056427,
-          "away": 1.7477327925531916
+          "home": 1.7721267769041011,
+          "away": 1.0925923373419675
         },
         "key_factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 3.",
-            "impact": 0.083
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 14.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 56.",
+            "impact": -0.002
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 6.",
-            "impact": 0.11
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
+            "impact": -0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 36.",
-            "impact": 0.038
+            "value": "Seed rank داخل النموذج: 59.",
+            "impact": -0.008
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 68.0%، ضغط هجومي 74.0.",
-            "impact": 0.089
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 24.6%، ضغط هجومي 54.7.",
+            "impact": -0.124
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 10.0، استحواذ 79.0%، ضغط هجومي 95.4.",
-            "impact": 0.124
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
+            "impact": -0.184
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 29,
-        "recommended_label": "away_win",
-        "explanation": "Switzerland vs Canada: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "calibration_version": 28,
+        "recommended_label": "home_win",
+        "explanation": "DR Congo vs Uzbekistan: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {

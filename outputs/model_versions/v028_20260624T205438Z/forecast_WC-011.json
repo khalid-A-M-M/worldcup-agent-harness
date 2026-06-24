@@ -2371,8 +2371,8 @@
           }
         ],
         "calibration": {
-          "version": 29,
-          "team_adjustment_weight": 1.1716593810022657,
+          "version": 28,
+          "team_adjustment_weight": 1.14868566764928,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.0,
@@ -2398,7 +2398,6 @@
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
@@ -2662,9 +2661,9 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.26824317195420705,
+        "home_win": 0.269218061480341,
         "draw": 0.24762827933736498,
-        "away_win": 0.4841285487084279,
+        "away_win": 0.48315365918229397,
         "confidence_interval_width": 0.18,
         "expected_goals": {
           "home": 1.4734812419056427,
@@ -2709,7 +2708,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 29,
+        "calibration_version": 28,
         "recommended_label": "away_win",
         "explanation": "Switzerland vs Canada: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
