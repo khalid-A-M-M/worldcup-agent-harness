@@ -1,11 +1,23 @@
 {
   "metrics": {
-    "completed_forecasts": 4,
-    "accuracy": 0.75,
-    "mean_brier_score": 0.4562883763808569,
-    "mean_log_loss": 0.7808376901099104
+    "completed_forecasts": 5,
+    "accuracy": 0.6,
+    "mean_brier_score": 0.5312643554634361,
+    "mean_log_loss": 0.8878424224546603
   },
   "matches": [
+    {
+      "match_id": "WC-011",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "predicted": "away_win",
+      "actual": "home_win",
+      "correct": false,
+      "probability_actual": 0.26824317195420705,
+      "brier_score": 0.8311682717937529,
+      "log_loss": 1.3158613518336595,
+      "calibration_version": 29
+    },
     {
       "match_id": "WC-064",
       "home_team": "Colombia",
@@ -55,5 +67,5 @@
       "calibration_version": 3
     }
   ],
-  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v028_20260624T205438Z"
+  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v029_20260624T210151Z"
 }
