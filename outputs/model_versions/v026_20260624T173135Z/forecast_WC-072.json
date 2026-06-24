@@ -2371,8 +2371,8 @@
           }
         ],
         "calibration": {
-          "version": 27,
-          "team_adjustment_weight": 1.126162419264,
+          "version": 26,
+          "team_adjustment_weight": 1.1040808032,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.0,
@@ -2398,7 +2398,6 @@
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
@@ -2669,9 +2668,9 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.39793718447283805,
+        "home_win": 0.39649137962023967,
         "draw": 0.2946173101793026,
-        "away_win": 0.3074455053478593,
+        "away_win": 0.3088913102004577,
         "confidence_interval_width": 0.22999999999999998,
         "expected_goals": {
           "home": 1.1568487922705315,
@@ -2722,7 +2721,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 27,
+        "calibration_version": 26,
         "recommended_label": "home_win",
         "explanation": "Croatia vs Ghana: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the away-side baseline.."
       }

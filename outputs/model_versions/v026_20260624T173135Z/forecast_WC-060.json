@@ -1,30 +1,28 @@
 {
   "match": {
-    "match_id": "WC-072",
-    "home_team": "Croatia",
-    "away_team": "Ghana",
-    "kickoff_utc": "2026-06-27T21:00:00+00:00",
-    "group": "Group L",
-    "ground": "Philadelphia",
+    "match_id": "WC-060",
+    "home_team": "Jordan",
+    "away_team": "Argentina",
+    "kickoff_utc": "2026-06-28T02:00:00+00:00",
+    "group": "Group J",
+    "ground": "Dallas (Arlington)",
     "round": "Matchday 17",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 48 historical matches, 47 team priors, and 0 live event cues.",
+    "data_collection: ok - Loaded 48 historical matches, 47 team priors, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Croatia and Ghana.",
-    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "critic_auditor: reviewed - Devil's Advocate found 2 objections.",
-    "synthesizer: ok - Final forecast: home_win.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Jordan and Argentina.",
+    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
+    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
+    "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 48 historical matches, 47 team priors, and 0 live event cues.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "summary": "Loaded 48 historical matches, 47 team priors, and 1 live event cues.",
+      "warnings": [],
       "payload": {
         "historical_results": [
           {
@@ -316,7 +314,17 @@
             "away_goals": 1
           }
         ],
-        "butterfly_events": [],
+        "butterfly_events": [
+          {
+            "match_id": "WC-060",
+            "event_time_utc": "2026-06-23T10:00:00Z",
+            "event_type": "favorite_pressure",
+            "description": "Argentina carries heavy favorite pressure in a decisive group fixture.",
+            "impact": "medium",
+            "confidence": "medium",
+            "benefits": "against_away"
+          }
+        ],
         "team_priors": {
           "France": [
             1.18,
@@ -2371,8 +2379,8 @@
           }
         ],
         "calibration": {
-          "version": 27,
-          "team_adjustment_weight": 1.126162419264,
+          "version": 26,
+          "team_adjustment_weight": 1.1040808032,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.0,
@@ -2402,7 +2410,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2414,317 +2421,327 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.3242011369903179,
-          "draw": 0.2946173101793025,
-          "away_win": 0.3811815528303792
+          "home_win": 0.10266744183577915,
+          "draw": 0.18163386934625383,
+          "away_win": 0.7156986888179672
         },
         "expected_goals": {
-          "home": 1.1568487922705315,
-          "away": 1.2750591312056738
+          "home": 0.8026030555555556,
+          "away": 2.3677441443108234
         },
         "top_scores": [
           {
-            "home_goals": 1,
-            "away_goals": 1,
-            "probability": 0.1399817672134775
-          },
-          {
             "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.10167046910581602
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 0,
-            "probability": 0.09823905354917398
-          },
-          {
-            "home_goals": 1,
-            "away_goals": 0,
-            "probability": 0.09128332263332616
+            "away_goals": 2,
+            "probability": 0.11779216559788554
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.08263195855919049
+            "probability": 0.09454035202936892
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 1,
+            "probability": 0.09310882487061982
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 3,
+            "probability": 0.0929672367800281
+          },
+          {
+            "home_goals": 1,
+            "away_goals": 1,
+            "probability": 0.08624545049519074
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Croatia and Ghana.",
+      "summary": "Computed tournament form and prior-strength factors for Jordan and Argentina.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Croatia",
+          "team": "Jordan",
           "matches": 2,
-          "wins": 1,
+          "wins": 0,
           "draws": 0,
-          "losses": 1,
-          "goals_for": 3,
-          "goals_against": 4,
-          "goal_difference": -1,
-          "points": 3,
-          "points_per_match": 1.5,
-          "seed_rank": 10
+          "losses": 2,
+          "goals_for": 2,
+          "goals_against": 5,
+          "goal_difference": -3,
+          "points": 0,
+          "points_per_match": 0.0,
+          "seed_rank": 77
         },
         "away_profile": {
-          "team": "Ghana",
+          "team": "Argentina",
           "matches": 2,
-          "wins": 1,
-          "draws": 1,
+          "wins": 2,
+          "draws": 0,
           "losses": 0,
-          "goals_for": 1,
+          "goals_for": 5,
           "goals_against": 0,
-          "goal_difference": 1,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 45
+          "goal_difference": 5,
+          "points": 6,
+          "points_per_match": 3.0,
+          "seed_rank": 2
         },
         "home_advanced_profile": {
-          "team": "Croatia",
-          "matches": 2,
-          "shots": 16.0,
-          "shots_on_target": 7.0,
-          "possession": 106.3,
+          "team": "Jordan",
+          "matches": 1,
+          "shots": 11.0,
+          "shots_on_target": 4.0,
+          "possession": 36.8,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 4.0,
-          "yellow_cards": 1.0,
+          "corners": 3.0,
+          "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 24.0,
-          "offsides": 3.0,
-          "saves": 8.0,
-          "accurate_passes": 813.0,
-          "total_passes": 955.0,
-          "pass_pct": 1.7000000000000002,
-          "accurate_crosses": 7.0,
-          "total_crosses": 31.0,
-          "blocked_shots": 3.0,
-          "total_tackles": 30.0,
-          "interceptions": 14.0,
-          "clearances": 55.0,
+          "fouls": 7.0,
+          "offsides": 1.0,
+          "saves": 1.0,
+          "accurate_passes": 241.0,
+          "total_passes": 332.0,
+          "pass_pct": 0.7,
+          "accurate_crosses": 3.0,
+          "total_crosses": 15.0,
+          "blocked_shots": 2.0,
+          "total_tackles": 15.0,
+          "interceptions": 12.0,
+          "clearances": 39.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 98.5,
-          "attacking_pressure_index": 81.67,
-          "shots_per_match": 8.0,
-          "shots_on_target_per_match": 3.5,
-          "possession_per_match": 53.15,
+          "dominance_index": 41.98,
+          "attacking_pressure_index": 47.25,
+          "shots_per_match": 11.0,
+          "shots_on_target_per_match": 4.0,
+          "possession_per_match": 36.8,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.0,
-          "yellow_cards_per_match": 0.5,
+          "corners_per_match": 3.0,
+          "yellow_cards_per_match": 0.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 12.0,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 4.0,
-          "accurate_passes_per_match": 406.5,
-          "total_passes_per_match": 477.5,
-          "pass_pct_per_match": 0.8500000000000001,
-          "accurate_crosses_per_match": 3.5,
-          "total_crosses_per_match": 15.5,
-          "blocked_shots_per_match": 1.5,
+          "fouls_per_match": 7.0,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 241.0,
+          "total_passes_per_match": 332.0,
+          "pass_pct_per_match": 0.7,
+          "accurate_crosses_per_match": 3.0,
+          "total_crosses_per_match": 15.0,
+          "blocked_shots_per_match": 2.0,
           "total_tackles_per_match": 15.0,
-          "interceptions_per_match": 7.0,
-          "clearances_per_match": 27.5,
+          "interceptions_per_match": 12.0,
+          "clearances_per_match": 39.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 49.25,
-          "attacking_pressure_index_per_match": 40.835
+          "dominance_index_per_match": 41.98,
+          "attacking_pressure_index_per_match": 47.25
         },
         "away_advanced_profile": {
-          "team": "Ghana",
-          "matches": 2,
-          "shots": 9.0,
-          "shots_on_target": 3.0,
-          "possession": 59.1,
+          "team": "Argentina",
+          "matches": 1,
+          "shots": 12.0,
+          "shots_on_target": 5.0,
+          "possession": 53.6,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 4.0,
+          "corners": 1.0,
           "yellow_cards": 2.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 33.0,
-          "offsides": 6.0,
-          "saves": 7.0,
-          "accurate_passes": 419.0,
-          "total_passes": 524.0,
-          "pass_pct": 1.5,
-          "accurate_crosses": 4.0,
-          "total_crosses": 21.0,
-          "blocked_shots": 2.0,
-          "total_tackles": 38.0,
-          "interceptions": 16.0,
-          "clearances": 67.0,
+          "fouls": 13.0,
+          "offsides": 2.0,
+          "saves": 1.0,
+          "accurate_passes": 494.0,
+          "total_passes": 554.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 1.0,
+          "total_crosses": 4.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 21.0,
+          "interceptions": 8.0,
+          "clearances": 35.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 56.78999999999999,
-          "attacking_pressure_index": 57.900000000000006,
-          "shots_per_match": 4.5,
-          "shots_on_target_per_match": 1.5,
-          "possession_per_match": 29.55,
+          "dominance_index": 62.31,
+          "attacking_pressure_index": 64.53,
+          "shots_per_match": 12.0,
+          "shots_on_target_per_match": 5.0,
+          "possession_per_match": 53.6,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.0,
-          "yellow_cards_per_match": 1.0,
+          "corners_per_match": 1.0,
+          "yellow_cards_per_match": 2.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 16.5,
-          "offsides_per_match": 3.0,
-          "saves_per_match": 3.5,
-          "accurate_passes_per_match": 209.5,
-          "total_passes_per_match": 262.0,
-          "pass_pct_per_match": 0.75,
-          "accurate_crosses_per_match": 2.0,
-          "total_crosses_per_match": 10.5,
-          "blocked_shots_per_match": 1.0,
-          "total_tackles_per_match": 19.0,
+          "fouls_per_match": 13.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 494.0,
+          "total_passes_per_match": 554.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 1.0,
+          "total_crosses_per_match": 4.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 21.0,
           "interceptions_per_match": 8.0,
-          "clearances_per_match": 33.5,
+          "clearances_per_match": 35.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 28.394999999999996,
-          "attacking_pressure_index_per_match": 28.950000000000003
+          "dominance_index_per_match": 62.31,
+          "attacking_pressure_index_per_match": 64.53
         },
-        "home_factor_score": -0.021071999999999994,
-        "away_factor_score": -0.08654749999999999,
-        "probability_adjustment": 0.06547549999999999,
+        "home_factor_score": -0.30862999999999996,
+        "away_factor_score": 0.317569,
+        "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف -1.",
-            "impact": -0.028
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -3.",
+            "impact": -0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 10.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 77.",
+            "impact": -0.044
           },
           {
             "side": "home",
             "label": "إنذار دفاعي",
-            "value": "استقبل 4 أهداف في 2 مباراة.",
+            "value": "استقبل 5 أهداف في 2 مباراة.",
             "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 1.",
-            "impact": 0.028
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 45.",
-            "impact": 0.02
+            "value": "Seed rank داخل النموذج: 2.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.5، استحواذ 53.1%، ضغط هجومي 40.8.",
-            "impact": -0.074
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 36.8%، ضغط هجومي 47.2.",
+            "impact": -0.1
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 1.5، استحواذ 29.6%، ضغط هجومي 29.0.",
-            "impact": -0.192
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 53.6%، ضغط هجومي 64.5.",
+            "impact": 0.008
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 0 high-impact contextual cues.",
+      "summary": "Scored 1 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "events": []
+        "away_adjustment": -0.010119278588240651,
+        "events": [
+          {
+            "event_type": "favorite_pressure",
+            "description": "Argentina carries heavy favorite pressure in a decisive group fixture.",
+            "hours_to_kickoff": 112.0,
+            "time_weight": 0.413,
+            "signed_effect": 0.0101,
+            "benefits": "against_away"
+          }
+        ]
       }
     },
     "critic_auditor": {
       "status": "reviewed",
-      "summary": "Devil's Advocate found 2 objections.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "summary": "Devil's Advocate found 0 objections.",
+      "warnings": [],
       "payload": {
         "favorite": "away_win",
-        "objections": [
-          "Baseline edge is narrow; avoid overconfident final probability.",
-          "Tournament form layer challenges the away-side baseline."
-        ],
-        "confidence_penalty": 0.11
+        "objections": [],
+        "confidence_penalty": 0.0
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: home_win.",
+      "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.39793718447283805,
-        "draw": 0.2946173101793026,
-        "away_win": 0.3074455053478593,
-        "confidence_interval_width": 0.22999999999999998,
+        "home_win": 0.0009404256203459422,
+        "draw": 0.1693856799292146,
+        "away_win": 0.8296738944504395,
+        "confidence_interval_width": 0.12,
         "expected_goals": {
-          "home": 1.1568487922705315,
-          "away": 1.2750591312056738
+          "home": 0.8026030555555556,
+          "away": 2.3677441443108234
         },
         "key_factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف -1.",
-            "impact": -0.028
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -3.",
+            "impact": -0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 10.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 77.",
+            "impact": -0.044
           },
           {
             "side": "home",
             "label": "إنذار دفاعي",
-            "value": "استقبل 4 أهداف في 2 مباراة.",
+            "value": "استقبل 5 أهداف في 2 مباراة.",
             "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 1.",
-            "impact": 0.028
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 45.",
-            "impact": 0.02
+            "value": "Seed rank داخل النموذج: 2.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.5، استحواذ 53.1%، ضغط هجومي 40.8.",
-            "impact": -0.074
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 36.8%، ضغط هجومي 47.2.",
+            "impact": -0.1
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 1.5، استحواذ 29.6%، ضغط هجومي 29.0.",
-            "impact": -0.192
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 53.6%، ضغط هجومي 64.5.",
+            "impact": 0.008
+          },
+          {
+            "side": "home",
+            "label": "أثر فراشة",
+            "value": "Argentina carries heavy favorite pressure in a decisive group fixture.",
+            "impact": 0.0101
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 27,
-        "recommended_label": "home_win",
-        "explanation": "Croatia vs Ghana: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the away-side baseline.."
+        "calibration_version": 26,
+        "recommended_label": "away_win",
+        "explanation": "Jordan vs Argentina: baseline model favors away_win; butterfly cues: Argentina carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
     },
     "self_correction": {
