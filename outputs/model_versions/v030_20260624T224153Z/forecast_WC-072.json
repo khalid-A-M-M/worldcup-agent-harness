@@ -10,7 +10,7 @@
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 50 historical matches, 47 team priors, and 0 live event cues.",
+    "data_collection: ok - Loaded 49 historical matches, 47 team priors, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
     "team_intelligence: ok - Computed tournament form and prior-strength factors for Croatia and Ghana.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
@@ -21,7 +21,7 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 50 historical matches, 47 team priors, and 0 live event cues.",
+      "summary": "Loaded 49 historical matches, 47 team priors, and 0 live event cues.",
       "warnings": [
         "No butterfly events found for this match."
       ],
@@ -79,12 +79,6 @@
             "home_team": "Switzerland",
             "away_team": "Canada",
             "home_goals": 2,
-            "away_goals": 1
-          },
-          {
-            "home_team": "Bosnia & Herzegovina",
-            "away_team": "Qatar",
-            "home_goals": 3,
             "away_goals": 1
           },
           {
@@ -2445,7 +2439,7 @@
           }
         ],
         "calibration": {
-          "version": 31,
+          "version": 30,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -2480,7 +2474,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2492,39 +2485,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.3250199361631391,
-          "draw": 0.29380201149879787,
-          "away_win": 0.3811780523380631
+          "home_win": 0.3242477047253321,
+          "draw": 0.29457095877752165,
+          "away_win": 0.3811813364971461
         },
         "expected_goals": {
-          "home": 1.1635428792270532,
-          "away": 1.2802916036036034
+          "home": 1.1572282756580894,
+          "away": 1.2753556059460822
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.13969356010441694
+            "probability": 0.13996560519619697
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.10081788306468067
+            "probability": 0.10162199419489805
           },
           {
             "home_goals": 0,
             "away_goals": 0,
-            "probability": 0.0971759795062721
+            "probability": 0.09817848206547154
           },
           {
             "home_goals": 1,
             "away_goals": 0,
-            "probability": 0.09068078882067493
+            "probability": 0.09124915542225556
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.08280022781443534
+            "probability": 0.0826416292715768
           }
         ]
       }
@@ -2747,13 +2740,13 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.4022810261631391,
-        "draw": 0.29380201149879787,
-        "away_win": 0.30391696233806315,
+        "home_win": 0.4015087947253322,
+        "draw": 0.2945709587775217,
+        "away_win": 0.30392024649714616,
         "confidence_interval_width": 0.22999999999999998,
         "expected_goals": {
-          "home": 1.1635428792270532,
-          "away": 1.2802916036036034
+          "home": 1.1572282756580894,
+          "away": 1.2753556059460822
         },
         "key_factors": [
           {
@@ -2800,7 +2793,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 31,
+        "calibration_version": 30,
         "recommended_label": "home_win",
         "explanation": "Croatia vs Ghana: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the away-side baseline.."
       }

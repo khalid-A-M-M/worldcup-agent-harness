@@ -1,7 +1,6 @@
 match_id,home_team,away_team,kickoff_utc,generated_at_utc,group,ground,round,stage
 WC-005,Czech Republic,Mexico,2026-06-25T01:00:00Z,2026-06-23T10:00:00Z,Group A,Mexico City,Matchday 14,group
 WC-006,South Africa,South Korea,2026-06-25T01:00:00Z,2026-06-23T10:00:00Z,Group A,Monterrey (Guadalupe),Matchday 14,group
-WC-012,Bosnia & Herzegovina,Qatar,2026-06-24T19:00:00Z,2026-06-23T10:00:00Z,Group B,Seattle,Matchday 14,group
 WC-017,Scotland,Brazil,2026-06-24T22:00:00Z,2026-06-23T10:00:00Z,Group C,Miami (Miami Gardens),Matchday 14,group
 WC-018,Morocco,Haiti,2026-06-24T22:00:00Z,2026-06-23T10:00:00Z,Group C,Atlanta,Matchday 14,group
 WC-023,Turkey,USA,2026-06-26T02:00:00Z,2026-06-23T10:00:00Z,Group D,Los Angeles (Inglewood),Matchday 15,group
