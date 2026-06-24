@@ -1,0 +1,313 @@
+{
+  "match": {
+    "match_id": "M-002",
+    "home_team": "Nile United",
+    "away_team": "Mountain Club",
+    "kickoff_utc": "2026-06-24T18:30:00+00:00"
+  },
+  "audit_log": [
+    "data_collection: ok - Loaded 30 historical matches and 1 live event cues.",
+    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
+    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
+    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
+    "synthesizer: ok - Final forecast: home_win.",
+    "self_correction: pending - Actual result is not available yet; calibration update skipped."
+  ],
+  "agents": {
+    "data_collection": {
+      "status": "ok",
+      "summary": "Loaded 30 historical matches and 1 live event cues.",
+      "warnings": [],
+      "payload": {
+        "historical_results": [
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Nile United",
+            "home_goals": 2,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Harbor City",
+            "home_goals": 0,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Capital SC",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Desert Stars",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Atlas FC",
+            "home_goals": 0,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Mountain Club",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Desert Stars",
+            "home_goals": 3,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Capital SC",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Mountain Club",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Atlas FC",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Nile United",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Harbor City",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Mountain Club",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Harbor City",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Capital SC",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Capital SC",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Desert Stars",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Atlas FC",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Nile United",
+            "home_goals": 2,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Atlas FC",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Harbor City",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Capital SC",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Nile United",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Mountain Club",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Harbor City",
+            "home_goals": 3,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Mountain Club",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Desert Stars",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Atlas FC",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Desert Stars",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Nile United",
+            "home_goals": 1,
+            "away_goals": 0
+          }
+        ],
+        "butterfly_events": [
+          {
+            "match_id": "M-002",
+            "event_time_utc": "2026-06-23T07:00:00Z",
+            "event_type": "travel_delay",
+            "description": "Mountain Club arrived later than planned after travel disruption",
+            "impact": "medium",
+            "confidence": "high",
+            "benefits": "home"
+          }
+        ]
+      }
+    },
+    "specialist_analysis": {
+      "status": "ok",
+      "summary": "Produced Dixon-Coles-lite baseline probabilities.",
+      "warnings": [],
+      "payload": {
+        "baseline_probabilities": {
+          "home_win": 0.4691448740283972,
+          "draw": 0.31234070666200187,
+          "away_win": 0.2185144193096006
+        },
+        "expected_goals": {
+          "home": 1.2673801681558752,
+          "away": 0.7787242398442851
+        },
+        "top_scores": [
+          {
+            "home_goals": 1,
+            "away_goals": 0,
+            "probability": 0.1535901045554505
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 0,
+            "probability": 0.13944240351949663
+          },
+          {
+            "home_goals": 1,
+            "away_goals": 1,
+            "probability": 0.13775450626506205
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 0,
+            "probability": 0.10379472365129908
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 1,
+            "probability": 0.09043701083526548
+          }
+        ]
+      }
+    },
+    "butterfly_factors": {
+      "status": "ok",
+      "summary": "Scored 1 high-impact contextual cues.",
+      "warnings": [],
+      "payload": {
+        "home_adjustment": 0.020797978646498197,
+        "away_adjustment": 0.0,
+        "events": [
+          {
+            "event_type": "travel_delay",
+            "description": "Mountain Club arrived later than planned after travel disruption",
+            "hours_to_kickoff": 35.5,
+            "time_weight": 0.66,
+            "signed_effect": 0.0208,
+            "benefits": "home"
+          }
+        ]
+      }
+    },
+    "critic_auditor": {
+      "status": "reviewed",
+      "summary": "Devil's Advocate found 0 objections.",
+      "warnings": [],
+      "payload": {
+        "favorite": "home_win",
+        "objections": [],
+        "confidence_penalty": 0.0
+      }
+    },
+    "synthesizer": {
+      "status": "ok",
+      "summary": "Final forecast: home_win.",
+      "warnings": [],
+      "payload": {
+        "home_win": 0.484900378812782,
+        "draw": 0.3060385185778334,
+        "away_win": 0.20906110260938462,
+        "confidence_interval_width": 0.12,
+        "expected_goals": {
+          "home": 1.2673801681558752,
+          "away": 0.7787242398442851
+        },
+        "recommended_label": "home_win",
+        "explanation": "Nile United vs Mountain Club: baseline model favors home_win; butterfly cues: Mountain Club arrived later than planned after travel disruption; critic: no blocking objection."
+      }
+    },
+    "self_correction": {
+      "status": "pending",
+      "summary": "Actual result is not available yet; calibration update skipped.",
+      "warnings": [],
+      "payload": {}
+    }
+  }
+}

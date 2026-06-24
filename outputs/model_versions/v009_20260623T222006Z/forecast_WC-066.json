@@ -1,0 +1,871 @@
+{
+  "match": {
+    "match_id": "WC-066",
+    "home_team": "DR Congo",
+    "away_team": "Uzbekistan",
+    "kickoff_utc": "2026-06-27T23:30:00+00:00",
+    "group": "Group K",
+    "ground": "Atlanta",
+    "round": "Matchday 17",
+    "stage": "group"
+  },
+  "audit_log": [
+    "data_collection: ok - Loaded 45 historical matches, 47 team priors, and 0 live event cues.",
+    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
+    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
+    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
+    "synthesizer: ok - Final forecast: home_win.",
+    "self_correction: pending - Actual result is not available yet; calibration update skipped."
+  ],
+  "agents": {
+    "data_collection": {
+      "status": "ok",
+      "summary": "Loaded 45 historical matches, 47 team priors, and 0 live event cues.",
+      "warnings": [
+        "No butterfly events found for this match."
+      ],
+      "payload": {
+        "historical_results": [
+          {
+            "home_team": "Mexico",
+            "away_team": "South Africa",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "South Korea",
+            "away_team": "Czech Republic",
+            "home_goals": 2,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Czech Republic",
+            "away_team": "South Africa",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mexico",
+            "away_team": "South Korea",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Canada",
+            "away_team": "Bosnia & Herzegovina",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Qatar",
+            "away_team": "Switzerland",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Switzerland",
+            "away_team": "Bosnia & Herzegovina",
+            "home_goals": 4,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Canada",
+            "away_team": "Qatar",
+            "home_goals": 6,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Brazil",
+            "away_team": "Morocco",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Haiti",
+            "away_team": "Scotland",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Scotland",
+            "away_team": "Morocco",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Brazil",
+            "away_team": "Haiti",
+            "home_goals": 3,
+            "away_goals": 0
+          },
+          {
+            "home_team": "USA",
+            "away_team": "Paraguay",
+            "home_goals": 4,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Australia",
+            "away_team": "Turkey",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "USA",
+            "away_team": "Australia",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Turkey",
+            "away_team": "Paraguay",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Germany",
+            "away_team": "Curaçao",
+            "home_goals": 7,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Ivory Coast",
+            "away_team": "Ecuador",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Germany",
+            "away_team": "Ivory Coast",
+            "home_goals": 2,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Ecuador",
+            "away_team": "Curaçao",
+            "home_goals": 0,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Netherlands",
+            "away_team": "Japan",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Sweden",
+            "away_team": "Tunisia",
+            "home_goals": 5,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Netherlands",
+            "away_team": "Sweden",
+            "home_goals": 5,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Tunisia",
+            "away_team": "Japan",
+            "home_goals": 0,
+            "away_goals": 4
+          },
+          {
+            "home_team": "Belgium",
+            "away_team": "Egypt",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Iran",
+            "away_team": "New Zealand",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Belgium",
+            "away_team": "Iran",
+            "home_goals": 0,
+            "away_goals": 0
+          },
+          {
+            "home_team": "New Zealand",
+            "away_team": "Egypt",
+            "home_goals": 1,
+            "away_goals": 3
+          },
+          {
+            "home_team": "Spain",
+            "away_team": "Cape Verde",
+            "home_goals": 0,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Saudi Arabia",
+            "away_team": "Uruguay",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Spain",
+            "away_team": "Saudi Arabia",
+            "home_goals": 4,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Uruguay",
+            "away_team": "Cape Verde",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "France",
+            "away_team": "Senegal",
+            "home_goals": 3,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Iraq",
+            "away_team": "Norway",
+            "home_goals": 1,
+            "away_goals": 4
+          },
+          {
+            "home_team": "France",
+            "away_team": "Iraq",
+            "home_goals": 3,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Norway",
+            "away_team": "Senegal",
+            "home_goals": 3,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Argentina",
+            "away_team": "Algeria",
+            "home_goals": 3,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Austria",
+            "away_team": "Jordan",
+            "home_goals": 3,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Argentina",
+            "away_team": "Austria",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Jordan",
+            "away_team": "Algeria",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Portugal",
+            "away_team": "DR Congo",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Uzbekistan",
+            "away_team": "Colombia",
+            "home_goals": 1,
+            "away_goals": 3
+          },
+          {
+            "home_team": "Portugal",
+            "away_team": "Uzbekistan",
+            "home_goals": 5,
+            "away_goals": 0
+          },
+          {
+            "home_team": "England",
+            "away_team": "Croatia",
+            "home_goals": 4,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Ghana",
+            "away_team": "Panama",
+            "home_goals": 1,
+            "away_goals": 0
+          }
+        ],
+        "butterfly_events": [],
+        "team_priors": {
+          "France": [
+            1.18,
+            0.86
+          ],
+          "Argentina": [
+            1.18,
+            0.86
+          ],
+          "Spain": [
+            1.18,
+            0.86
+          ],
+          "England": [
+            1.18,
+            0.86
+          ],
+          "Brazil": [
+            1.18,
+            0.86
+          ],
+          "Portugal": [
+            1.18,
+            0.86
+          ],
+          "Netherlands": [
+            1.18,
+            0.86
+          ],
+          "Belgium": [
+            1.18,
+            0.86
+          ],
+          "Germany": [
+            1.18,
+            0.86
+          ],
+          "Croatia": [
+            1.18,
+            0.86
+          ],
+          "Uruguay": [
+            1.18,
+            0.86
+          ],
+          "Colombia": [
+            1.18,
+            0.86
+          ],
+          "USA": [
+            1.18,
+            0.86
+          ],
+          "Switzerland": [
+            1.18,
+            0.86
+          ],
+          "Morocco": [
+            1.18,
+            0.86
+          ],
+          "Mexico": [
+            1.18,
+            0.86
+          ],
+          "Japan": [
+            1.18,
+            0.86
+          ],
+          "Senegal": [
+            1.18,
+            0.86
+          ],
+          "Iran": [
+            1.18,
+            0.86
+          ],
+          "Austria": [
+            1.18,
+            0.86
+          ],
+          "South Korea": [
+            1.1777777777777778,
+            0.8608695652173913
+          ],
+          "Australia": [
+            1.1666666666666667,
+            0.8695652173913043
+          ],
+          "Turkey": [
+            1.1611111111111112,
+            0.8739130434782609
+          ],
+          "Ecuador": [
+            1.1555555555555554,
+            0.8782608695652174
+          ],
+          "Qatar": [
+            1.1277777777777778,
+            0.9
+          ],
+          "Ivory Coast": [
+            1.1222222222222222,
+            0.9043478260869565
+          ],
+          "Algeria": [
+            1.1111111111111112,
+            0.9130434782608696
+          ],
+          "Canada": [
+            1.1055555555555556,
+            0.9173913043478261
+          ],
+          "Scotland": [
+            1.1,
+            0.9217391304347826
+          ],
+          "Norway": [
+            1.0944444444444446,
+            0.9260869565217391
+          ],
+          "Egypt": [
+            1.0888888888888888,
+            0.9304347826086956
+          ],
+          "Ghana": [
+            1.0555555555555556,
+            0.9565217391304348
+          ],
+          "Tunisia": [
+            1.05,
+            0.9608695652173913
+          ],
+          "Panama": [
+            1.038888888888889,
+            0.9695652173913043
+          ],
+          "Cape Verde": [
+            1.0277777777777777,
+            0.9782608695652174
+          ],
+          "Saudi Arabia": [
+            1.011111111111111,
+            0.991304347826087
+          ],
+          "DR Congo": [
+            0.9944444444444445,
+            1.0043478260869565
+          ],
+          "South Africa": [
+            0.9833333333333333,
+            1.0130434782608695
+          ],
+          "Uzbekistan": [
+            0.9777777777777777,
+            1.017391304347826
+          ],
+          "Paraguay": [
+            0.9722222222222222,
+            1.0217391304347827
+          ],
+          "Czech Republic": [
+            0.9666666666666667,
+            1.0260869565217392
+          ],
+          "Bosnia & Herzegovina": [
+            0.9611111111111111,
+            1.0304347826086957
+          ],
+          "Iraq": [
+            0.9555555555555556,
+            1.0347826086956522
+          ],
+          "New Zealand": [
+            0.9277777777777778,
+            1.0565217391304347
+          ],
+          "Haiti": [
+            0.8888888888888888,
+            1.0869565217391304
+          ],
+          "Jordan": [
+            0.8777777777777778,
+            1.0956521739130434
+          ],
+          "Curaçao": [
+            0.8611111111111112,
+            1.108695652173913
+          ]
+        },
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\my project kaf\\projects\\17_football_agent_harness\\data\\team_seed_ranks.csv",
+        "advanced_stats": [
+          {
+            "match_id": "WC-063",
+            "team": "Portugal",
+            "shots": "17.0",
+            "shots_on_target": "9.0",
+            "possession": "66.0",
+            "xg": "",
+            "big_chances": "",
+            "corners": "3.0",
+            "yellow_cards": "1.0",
+            "red_cards": "0.0",
+            "passes_into_final_third": "",
+            "fouls": "14.0",
+            "offsides": "2.0",
+            "saves": "2.0",
+            "accurate_passes": "561.0",
+            "total_passes": "624.0",
+            "pass_pct": "0.9",
+            "accurate_crosses": "5.0",
+            "total_crosses": "22.0",
+            "blocked_shots": "3.0",
+            "total_tackles": "14.0",
+            "interceptions": "5.0",
+            "clearances": "16.0",
+            "match_momentum": "",
+            "momentum_last_15": "",
+            "dominance_index": "70.07",
+            "attacking_pressure_index": "73.13",
+            "data_completeness": "partial_no_timeline_momentum_no_xg",
+            "source": "ESPN"
+          },
+          {
+            "match_id": "WC-063",
+            "team": "Uzbekistan",
+            "shots": "7.0",
+            "shots_on_target": "2.0",
+            "possession": "34.0",
+            "xg": "",
+            "big_chances": "",
+            "corners": "2.0",
+            "yellow_cards": "1.0",
+            "red_cards": "0.0",
+            "passes_into_final_third": "",
+            "fouls": "15.0",
+            "offsides": "2.0",
+            "saves": "4.0",
+            "accurate_passes": "262.0",
+            "total_passes": "325.0",
+            "pass_pct": "0.8",
+            "accurate_crosses": "0.0",
+            "total_crosses": "8.0",
+            "blocked_shots": "3.0",
+            "total_tackles": "18.0",
+            "interceptions": "14.0",
+            "clearances": "30.0",
+            "match_momentum": "",
+            "momentum_last_15": "",
+            "dominance_index": "29.93",
+            "attacking_pressure_index": "26.87",
+            "data_completeness": "partial_no_timeline_momentum_no_xg",
+            "source": "ESPN"
+          }
+        ],
+        "calibration": {
+          "version": 9,
+          "team_adjustment_weight": 1.0,
+          "butterfly_adjustment_weight": 1.0,
+          "advanced_stats_weight": 1.0,
+          "confidence_penalty_weight": 1.0,
+          "notes": [
+            "Updated by evolve_after_results.py after completed matches are scored.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration.",
+            "Not enough completed forecasts for aggressive recalibration."
+          ]
+        }
+      }
+    },
+    "specialist_analysis": {
+      "status": "ok",
+      "summary": "Produced Dixon-Coles-lite baseline probabilities.",
+      "warnings": [],
+      "payload": {
+        "baseline_probabilities": {
+          "home_win": 0.5757195323774851,
+          "draw": 0.22176491752335836,
+          "away_win": 0.20251555009915623
+        },
+        "expected_goals": {
+          "home": 2.1085245208663985,
+          "away": 1.194518903138359
+        },
+        "top_scores": [
+          {
+            "home_goals": 1,
+            "away_goals": 1,
+            "probability": 0.10005867806232598
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.09767415565735696
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 0,
+            "probability": 0.08176861446121757
+          },
+          {
+            "home_goals": 1,
+            "away_goals": 0,
+            "probability": 0.07014827788508796
+          },
+          {
+            "home_goals": 3,
+            "away_goals": 1,
+            "probability": 0.06864945075281956
+          }
+        ]
+      }
+    },
+    "team_intelligence": {
+      "status": "ok",
+      "summary": "Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
+      "warnings": [
+        "Tournament sample is still small; prediction should stay conservative.",
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
+      "payload": {
+        "home_profile": {
+          "team": "DR Congo",
+          "matches": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_difference": 0,
+          "points": 1,
+          "points_per_match": 1.0,
+          "seed_rank": 56
+        },
+        "away_profile": {
+          "team": "Uzbekistan",
+          "matches": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goals_for": 1,
+          "goals_against": 8,
+          "goal_difference": -7,
+          "points": 0,
+          "points_per_match": 0.0,
+          "seed_rank": 59
+        },
+        "home_advanced_profile": {
+          "team": "DR Congo",
+          "matches": 0,
+          "shots": 0.0,
+          "shots_on_target": 0.0,
+          "possession": 0.0,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 0.0,
+          "yellow_cards": 0.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 0.0,
+          "offsides": 0.0,
+          "saves": 0.0,
+          "accurate_passes": 0.0,
+          "total_passes": 0.0,
+          "pass_pct": 0.0,
+          "accurate_crosses": 0.0,
+          "total_crosses": 0.0,
+          "blocked_shots": 0.0,
+          "total_tackles": 0.0,
+          "interceptions": 0.0,
+          "clearances": 0.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 0.0,
+          "attacking_pressure_index": 0.0
+        },
+        "away_advanced_profile": {
+          "team": "Uzbekistan",
+          "matches": 1,
+          "shots": 7.0,
+          "shots_on_target": 2.0,
+          "possession": 34.0,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 2.0,
+          "yellow_cards": 1.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 15.0,
+          "offsides": 2.0,
+          "saves": 4.0,
+          "accurate_passes": 262.0,
+          "total_passes": 325.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 0.0,
+          "total_crosses": 8.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 18.0,
+          "interceptions": 14.0,
+          "clearances": 30.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 29.93,
+          "attacking_pressure_index": 26.87,
+          "shots_per_match": 7.0,
+          "shots_on_target_per_match": 2.0,
+          "possession_per_match": 34.0,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 2.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 15.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 4.0,
+          "accurate_passes_per_match": 262.0,
+          "total_passes_per_match": 325.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 0.0,
+          "total_crosses_per_match": 8.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 18.0,
+          "interceptions_per_match": 14.0,
+          "clearances_per_match": 30.0,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 29.93,
+          "attacking_pressure_index_per_match": 26.87
+        },
+        "home_factor_score": -0.002,
+        "away_factor_score": -0.39698900000000004,
+        "probability_adjustment": 0.16,
+        "factors": [
+          {
+            "side": "home",
+            "label": "أداء البطولة حتى الآن",
+            "value": "1 نقطة من 1 مباراة، فارق أهداف 0.",
+            "impact": 0.0
+          },
+          {
+            "side": "home",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 56.",
+            "impact": -0.002
+          },
+          {
+            "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
+            "impact": -0.11
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 59.",
+            "impact": -0.008
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "impact": -0.045
+          },
+          {
+            "side": "away",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
+            "impact": -0.184
+          }
+        ]
+      }
+    },
+    "butterfly_factors": {
+      "status": "ok",
+      "summary": "Scored 0 high-impact contextual cues.",
+      "warnings": [],
+      "payload": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "events": []
+      }
+    },
+    "critic_auditor": {
+      "status": "reviewed",
+      "summary": "Devil's Advocate found 0 objections.",
+      "warnings": [
+        "No butterfly events found for this match.",
+        "Tournament sample is still small; prediction should stay conservative.",
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
+      "payload": {
+        "favorite": "home_win",
+        "objections": [],
+        "confidence_penalty": 0.06
+      }
+    },
+    "synthesizer": {
+      "status": "ok",
+      "summary": "Final forecast: home_win.",
+      "warnings": [],
+      "payload": {
+        "home_win": 0.7357195323774853,
+        "draw": 0.22176491752335845,
+        "away_win": 0.04251555009915624,
+        "confidence_interval_width": 0.18,
+        "expected_goals": {
+          "home": 2.1085245208663985,
+          "away": 1.194518903138359
+        },
+        "key_factors": [
+          {
+            "side": "home",
+            "label": "أداء البطولة حتى الآن",
+            "value": "1 نقطة من 1 مباراة، فارق أهداف 0.",
+            "impact": 0.0
+          },
+          {
+            "side": "home",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 56.",
+            "impact": -0.002
+          },
+          {
+            "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
+            "impact": -0.11
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 59.",
+            "impact": -0.008
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "impact": -0.045
+          },
+          {
+            "side": "away",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
+            "impact": -0.184
+          }
+        ],
+        "data_quality_warnings": [
+          "Tournament sample is still small; prediction should stay conservative.",
+          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        ],
+        "calibration_version": 9,
+        "recommended_label": "home_win",
+        "explanation": "DR Congo vs Uzbekistan: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
+      }
+    },
+    "self_correction": {
+      "status": "pending",
+      "summary": "Actual result is not available yet; calibration update skipped.",
+      "warnings": [],
+      "payload": {}
+    }
+  }
+}

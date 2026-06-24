@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+outputs/match_monitor*.log
+outputs/match_monitor.pid
+outputs/match_monitor_state.json
+data/espn_cache/

@@ -1,0 +1,56 @@
+name: World Cup Agent Harness
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/20 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: worldcup-agent-harness
+  cancel-in-progress: false
+
+jobs:
+  update-model:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run autonomous result/stat refresh and model evolution
+        run: python update_worldcup_results.py
+
+      - name: Mark dashboard as GitHub Pages friendly
+        run: touch .nojekyll
+
+      - name: Persist model evolution history
+        run: |
+          git config user.name "worldcup-agent-harness"
+          git config user.email "actions@users.noreply.github.com"
+          git add data outputs index.html .nojekyll
+          if git diff --cached --quiet; then
+            echo "No model changes to commit."
+          else
+            git commit -m "chore: refresh World Cup agent harness"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy dashboard to Pages
+        uses: actions/deploy-pages@v4

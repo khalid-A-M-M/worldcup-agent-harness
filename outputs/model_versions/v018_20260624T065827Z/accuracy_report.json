@@ -1,0 +1,22 @@
+{
+  "metrics": {
+    "completed_forecasts": 1,
+    "accuracy": 1.0,
+    "mean_brier_score": 0.17454288594624398,
+    "mean_log_loss": 0.399232120542577
+  },
+  "matches": [
+    {
+      "match_id": "WC-063",
+      "home_team": "Portugal",
+      "away_team": "Uzbekistan",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.6708349687028565,
+      "brier_score": 0.17454288594624398,
+      "log_loss": 0.399232120542577,
+      "calibration_version": 3
+    }
+  ]
+}

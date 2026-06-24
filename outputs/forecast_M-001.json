@@ -1,0 +1,335 @@
+{
+  "match": {
+    "match_id": "M-001",
+    "home_team": "Atlas FC",
+    "away_team": "Capital SC",
+    "kickoff_utc": "2026-06-23T19:00:00+00:00"
+  },
+  "audit_log": [
+    "data_collection: ok - Loaded 30 historical matches and 2 live event cues.",
+    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
+    "butterfly_factors: ok - Scored 2 high-impact contextual cues.",
+    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
+    "synthesizer: ok - Final forecast: home_win.",
+    "self_correction: updated - Compared forecast with actual result; keep weights stable."
+  ],
+  "agents": {
+    "data_collection": {
+      "status": "ok",
+      "summary": "Loaded 30 historical matches and 2 live event cues.",
+      "warnings": [],
+      "payload": {
+        "historical_results": [
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Nile United",
+            "home_goals": 2,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Harbor City",
+            "home_goals": 0,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Capital SC",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Desert Stars",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Atlas FC",
+            "home_goals": 0,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Mountain Club",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Desert Stars",
+            "home_goals": 3,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Capital SC",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Mountain Club",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Atlas FC",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Nile United",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Harbor City",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Mountain Club",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Harbor City",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Capital SC",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Capital SC",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Desert Stars",
+            "home_goals": 1,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Atlas FC",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Nile United",
+            "home_goals": 2,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Atlas FC",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Harbor City",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Capital SC",
+            "home_goals": 2,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Nile United",
+            "home_goals": 1,
+            "away_goals": 2
+          },
+          {
+            "home_team": "Desert Stars",
+            "away_team": "Mountain Club",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Harbor City",
+            "home_goals": 3,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Nile United",
+            "away_team": "Mountain Club",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Atlas FC",
+            "away_team": "Desert Stars",
+            "home_goals": 2,
+            "away_goals": 0
+          },
+          {
+            "home_team": "Mountain Club",
+            "away_team": "Atlas FC",
+            "home_goals": 0,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Harbor City",
+            "away_team": "Desert Stars",
+            "home_goals": 1,
+            "away_goals": 1
+          },
+          {
+            "home_team": "Capital SC",
+            "away_team": "Nile United",
+            "home_goals": 1,
+            "away_goals": 0
+          }
+        ],
+        "butterfly_events": [
+          {
+            "match_id": "M-001",
+            "event_time_utc": "2026-06-23T08:30:00Z",
+            "event_type": "referee_change",
+            "description": "Late referee replacement favors more physical away side",
+            "impact": "medium",
+            "confidence": "medium",
+            "benefits": "away"
+          },
+          {
+            "match_id": "M-001",
+            "event_time_utc": "2026-06-23T09:20:00Z",
+            "event_type": "lineup_news",
+            "description": "Capital SC center-back is doubtful after warm-up report",
+            "impact": "high",
+            "confidence": "medium",
+            "benefits": "against_away"
+          }
+        ]
+      }
+    },
+    "specialist_analysis": {
+      "status": "ok",
+      "summary": "Produced Dixon-Coles-lite baseline probabilities.",
+      "warnings": [],
+      "payload": {
+        "baseline_probabilities": {
+          "home_win": 0.5038623622666145,
+          "draw": 0.2966856589945553,
+          "away_win": 0.19945197873883025
+        },
+        "expected_goals": {
+          "home": 1.3828848507781437,
+          "away": 0.7727043397746263
+        },
+        "top_scores": [
+          {
+            "home_goals": 1,
+            "away_goals": 0,
+            "probability": 0.15028646814360183
+          },
+          {
+            "home_goals": 1,
+            "away_goals": 1,
+            "probability": 0.13368082705210507
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 0,
+            "probability": 0.12573893578419693
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 0,
+            "probability": 0.11076129894636395
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.08558573637493017
+          }
+        ]
+      }
+    },
+    "butterfly_factors": {
+      "status": "ok",
+      "summary": "Scored 2 high-impact contextual cues.",
+      "warnings": [],
+      "payload": {
+        "home_adjustment": 0.0,
+        "away_adjustment": -0.021819285174349296,
+        "events": [
+          {
+            "event_type": "referee_change",
+            "description": "Late referee replacement favors more physical away side",
+            "hours_to_kickoff": 10.5,
+            "time_weight": 0.872,
+            "signed_effect": 0.0214,
+            "benefits": "away"
+          },
+          {
+            "event_type": "lineup_news",
+            "description": "Capital SC center-back is doubtful after warm-up report",
+            "hours_to_kickoff": 9.67,
+            "time_weight": 0.881,
+            "signed_effect": 0.0432,
+            "benefits": "against_away"
+          }
+        ]
+      }
+    },
+    "critic_auditor": {
+      "status": "reviewed",
+      "summary": "Devil's Advocate found 0 objections.",
+      "warnings": [],
+      "payload": {
+        "favorite": "home_win",
+        "objections": [],
+        "confidence_penalty": 0.0
+      }
+    },
+    "synthesizer": {
+      "status": "ok",
+      "summary": "Final forecast: home_win.",
+      "warnings": [],
+      "payload": {
+        "home_win": 0.5205861664973381,
+        "draw": 0.2986254004363427,
+        "away_win": 0.18078843306631917,
+        "confidence_interval_width": 0.12,
+        "expected_goals": {
+          "home": 1.3828848507781437,
+          "away": 0.7727043397746263
+        },
+        "recommended_label": "home_win",
+        "explanation": "Atlas FC vs Capital SC: baseline model favors home_win; butterfly cues: Late referee replacement favors more physical away side; Capital SC center-back is doubtful after warm-up report; critic: no blocking objection."
+      }
+    },
+    "self_correction": {
+      "status": "updated",
+      "summary": "Compared forecast with actual result; keep weights stable.",
+      "warnings": [],
+      "payload": {
+        "actual_outcome": "home_win",
+        "brier_score": 0.351699211070059,
+        "log_loss": 0.6527998590041896,
+        "calibration_note": "keep weights stable"
+      }
+    }
+  }
+}

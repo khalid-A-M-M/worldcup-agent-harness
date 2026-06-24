@@ -1,0 +1,270 @@
+{
+  "files": [
+    "outputs/forecast_WC-005.json",
+    "outputs/forecast_WC-006.json",
+    "outputs/forecast_WC-011.json",
+    "outputs/forecast_WC-012.json",
+    "outputs/forecast_WC-017.json",
+    "outputs/forecast_WC-018.json",
+    "outputs/forecast_WC-023.json",
+    "outputs/forecast_WC-024.json",
+    "outputs/forecast_WC-029.json",
+    "outputs/forecast_WC-030.json",
+    "outputs/forecast_WC-035.json",
+    "outputs/forecast_WC-036.json",
+    "outputs/forecast_WC-041.json",
+    "outputs/forecast_WC-042.json",
+    "outputs/forecast_WC-047.json",
+    "outputs/forecast_WC-048.json",
+    "outputs/forecast_WC-053.json",
+    "outputs/forecast_WC-054.json",
+    "outputs/forecast_WC-059.json",
+    "outputs/forecast_WC-060.json",
+    "outputs/forecast_WC-065.json",
+    "outputs/forecast_WC-066.json",
+    "outputs/forecast_WC-071.json",
+    "outputs/forecast_WC-072.json"
+  ],
+  "team_visuals": {
+    "France": {
+      "arabic_name": "فرنسا",
+      "primary_color": "#1d4ed8",
+      "secondary_color": "#ef4444"
+    },
+    "Argentina": {
+      "arabic_name": "الأرجنتين",
+      "primary_color": "#6ecff6",
+      "secondary_color": "#ffffff"
+    },
+    "Spain": {
+      "arabic_name": "إسبانيا",
+      "primary_color": "#c60b1e",
+      "secondary_color": "#ffc400"
+    },
+    "England": {
+      "arabic_name": "إنجلترا",
+      "primary_color": "#ffffff",
+      "secondary_color": "#cf142b"
+    },
+    "Brazil": {
+      "arabic_name": "البرازيل",
+      "primary_color": "#009b3a",
+      "secondary_color": "#ffdf00"
+    },
+    "Portugal": {
+      "arabic_name": "البرتغال",
+      "primary_color": "#006600",
+      "secondary_color": "#ff0000"
+    },
+    "Netherlands": {
+      "arabic_name": "هولندا",
+      "primary_color": "#f97316",
+      "secondary_color": "#1d4ed8"
+    },
+    "Belgium": {
+      "arabic_name": "بلجيكا",
+      "primary_color": "#111111",
+      "secondary_color": "#ef3340"
+    },
+    "Germany": {
+      "arabic_name": "ألمانيا",
+      "primary_color": "#111111",
+      "secondary_color": "#dd0000"
+    },
+    "Croatia": {
+      "arabic_name": "كرواتيا",
+      "primary_color": "#d90429",
+      "secondary_color": "#ffffff"
+    },
+    "Uruguay": {
+      "arabic_name": "أوروغواي",
+      "primary_color": "#60a5fa",
+      "secondary_color": "#111827"
+    },
+    "Colombia": {
+      "arabic_name": "كولومبيا",
+      "primary_color": "#facc15",
+      "secondary_color": "#2563eb"
+    },
+    "USA": {
+      "arabic_name": "الولايات المتحدة",
+      "primary_color": "#1d4ed8",
+      "secondary_color": "#b91c1c"
+    },
+    "Switzerland": {
+      "arabic_name": "سويسرا",
+      "primary_color": "#dc2626",
+      "secondary_color": "#ffffff"
+    },
+    "Morocco": {
+      "arabic_name": "المغرب",
+      "primary_color": "#c1272d",
+      "secondary_color": "#006233"
+    },
+    "Mexico": {
+      "arabic_name": "المكسيك",
+      "primary_color": "#006847",
+      "secondary_color": "#ce1126"
+    },
+    "Japan": {
+      "arabic_name": "اليابان",
+      "primary_color": "#ffffff",
+      "secondary_color": "#bc002d"
+    },
+    "Sweden": {
+      "arabic_name": "السويد",
+      "primary_color": "#006aa7",
+      "secondary_color": "#fecc00"
+    },
+    "Senegal": {
+      "arabic_name": "السنغال",
+      "primary_color": "#00853f",
+      "secondary_color": "#fdef42"
+    },
+    "Iran": {
+      "arabic_name": "إيران",
+      "primary_color": "#239f40",
+      "secondary_color": "#da0000"
+    },
+    "Austria": {
+      "arabic_name": "النمسا",
+      "primary_color": "#ed2939",
+      "secondary_color": "#ffffff"
+    },
+    "South Korea": {
+      "arabic_name": "كوريا الجنوبية",
+      "primary_color": "#ffffff",
+      "secondary_color": "#cd2e3a"
+    },
+    "Australia": {
+      "arabic_name": "أستراليا",
+      "primary_color": "#006b3f",
+      "secondary_color": "#ffcd00"
+    },
+    "Turkey": {
+      "arabic_name": "تركيا",
+      "primary_color": "#e30a17",
+      "secondary_color": "#ffffff"
+    },
+    "Ecuador": {
+      "arabic_name": "الإكوادور",
+      "primary_color": "#ffdd00",
+      "secondary_color": "#034ea2"
+    },
+    "Qatar": {
+      "arabic_name": "قطر",
+      "primary_color": "#8a1538",
+      "secondary_color": "#ffffff"
+    },
+    "Ivory Coast": {
+      "arabic_name": "ساحل العاج",
+      "primary_color": "#f77f00",
+      "secondary_color": "#009e60"
+    },
+    "Algeria": {
+      "arabic_name": "الجزائر",
+      "primary_color": "#006233",
+      "secondary_color": "#ffffff"
+    },
+    "Canada": {
+      "arabic_name": "كندا",
+      "primary_color": "#ff0000",
+      "secondary_color": "#ffffff"
+    },
+    "Scotland": {
+      "arabic_name": "اسكتلندا",
+      "primary_color": "#005eb8",
+      "secondary_color": "#ffffff"
+    },
+    "Norway": {
+      "arabic_name": "النرويج",
+      "primary_color": "#ba0c2f",
+      "secondary_color": "#00205b"
+    },
+    "Egypt": {
+      "arabic_name": "مصر",
+      "primary_color": "#ce1126",
+      "secondary_color": "#000000"
+    },
+    "Ghana": {
+      "arabic_name": "غانا",
+      "primary_color": "#ce1126",
+      "secondary_color": "#fcd116"
+    },
+    "Tunisia": {
+      "arabic_name": "تونس",
+      "primary_color": "#e70013",
+      "secondary_color": "#ffffff"
+    },
+    "Panama": {
+      "arabic_name": "بنما",
+      "primary_color": "#005293",
+      "secondary_color": "#d21034"
+    },
+    "Cape Verde": {
+      "arabic_name": "الرأس الأخضر",
+      "primary_color": "#003893",
+      "secondary_color": "#f7d116"
+    },
+    "Saudi Arabia": {
+      "arabic_name": "السعودية",
+      "primary_color": "#006c35",
+      "secondary_color": "#ffffff"
+    },
+    "DR Congo": {
+      "arabic_name": "الكونغو الديمقراطية",
+      "primary_color": "#007fff",
+      "secondary_color": "#f7d618"
+    },
+    "South Africa": {
+      "arabic_name": "جنوب أفريقيا",
+      "primary_color": "#007a4d",
+      "secondary_color": "#ffb612"
+    },
+    "Uzbekistan": {
+      "arabic_name": "أوزبكستان",
+      "primary_color": "#1eb4e9",
+      "secondary_color": "#009739"
+    },
+    "Paraguay": {
+      "arabic_name": "باراغواي",
+      "primary_color": "#0038a8",
+      "secondary_color": "#d52b1e"
+    },
+    "Czech Republic": {
+      "arabic_name": "التشيك",
+      "primary_color": "#11457e",
+      "secondary_color": "#d7141a"
+    },
+    "Bosnia & Herzegovina": {
+      "arabic_name": "البوسنة والهرسك",
+      "primary_color": "#002395",
+      "secondary_color": "#fecb00"
+    },
+    "Iraq": {
+      "arabic_name": "العراق",
+      "primary_color": "#ce1126",
+      "secondary_color": "#000000"
+    },
+    "New Zealand": {
+      "arabic_name": "نيوزيلندا",
+      "primary_color": "#111827",
+      "secondary_color": "#ffffff"
+    },
+    "Haiti": {
+      "arabic_name": "هايتي",
+      "primary_color": "#00209f",
+      "secondary_color": "#d21034"
+    },
+    "Jordan": {
+      "arabic_name": "الأردن",
+      "primary_color": "#007a3d",
+      "secondary_color": "#ce1126"
+    },
+    "Curaçao": {
+      "arabic_name": "كوراساو",
+      "primary_color": "#002b7f",
+      "secondary_color": "#f9e814"
+    }
+  }
+}

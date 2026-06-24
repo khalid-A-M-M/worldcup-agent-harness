@@ -1,0 +1,9 @@
+{
+  "metrics": {
+    "completed_forecasts": 0,
+    "accuracy": 0.0,
+    "mean_brier_score": null,
+    "mean_log_loss": null
+  },
+  "matches": []
+}
