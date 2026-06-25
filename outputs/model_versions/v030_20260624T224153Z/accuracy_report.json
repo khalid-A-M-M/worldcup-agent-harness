@@ -1,0 +1,82 @@
+{
+  "metrics": {
+    "completed_forecasts": 6,
+    "accuracy": 0.6666666666666666,
+    "mean_brier_score": 0.48509572643837906,
+    "mean_log_loss": 0.8275178992248944
+  },
+  "matches": [
+    {
+      "match_id": "WC-011",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "predicted": "away_win",
+      "actual": "home_win",
+      "correct": false,
+      "probability_actual": 0.26824317195420705,
+      "brier_score": 0.8311682717937529,
+      "log_loss": 1.3158613518336595,
+      "calibration_version": 29
+    },
+    {
+      "match_id": "WC-012",
+      "home_team": "Bosnia & Herzegovina",
+      "away_team": "Qatar",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.5910259918650218,
+      "brier_score": 0.2542525813130938,
+      "log_loss": 0.5258952830760653,
+      "calibration_version": 30
+    },
+    {
+      "match_id": "WC-064",
+      "home_team": "Colombia",
+      "away_team": "DR Congo",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.6788195107181142,
+      "brier_score": 0.16870741578909784,
+      "log_loss": 0.3874000030797533,
+      "calibration_version": 21
+    },
+    {
+      "match_id": "WC-069",
+      "home_team": "England",
+      "away_team": "Ghana",
+      "predicted": "home_win",
+      "actual": "draw",
+      "correct": false,
+      "probability_actual": 0.250588289914531,
+      "brier_score": 0.9091269859702786,
+      "log_loss": 1.383943965806175,
+      "calibration_version": 21
+    },
+    {
+      "match_id": "WC-070",
+      "home_team": "Panama",
+      "away_team": "Croatia",
+      "predicted": "away_win",
+      "actual": "away_win",
+      "correct": true,
+      "probability_actual": 0.38566943169270074,
+      "brier_score": 0.5727762178178071,
+      "log_loss": 0.9527746710111366,
+      "calibration_version": 21
+    },
+    {
+      "match_id": "WC-063",
+      "home_team": "Portugal",
+      "away_team": "Uzbekistan",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.6708349687028565,
+      "brier_score": 0.17454288594624398,
+      "log_loss": 0.399232120542577,
+      "calibration_version": 3
+    }
+  ]
+}

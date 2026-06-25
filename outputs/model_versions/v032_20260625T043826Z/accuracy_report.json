@@ -1,0 +1,130 @@
+{
+  "metrics": {
+    "completed_forecasts": 10,
+    "accuracy": 0.7,
+    "mean_brier_score": 0.49767395825119476,
+    "mean_log_loss": 0.883891851548474
+  },
+  "matches": [
+    {
+      "match_id": "WC-005",
+      "home_team": "Czech Republic",
+      "away_team": "Mexico",
+      "predicted": "away_win",
+      "actual": "away_win",
+      "correct": true,
+      "probability_actual": 0.7152581790258209,
+      "brier_score": 0.14772523240623067,
+      "log_loss": 0.3351117119186677,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-006",
+      "home_team": "South Africa",
+      "away_team": "South Korea",
+      "predicted": "away_win",
+      "actual": "home_win",
+      "correct": false,
+      "probability_actual": 0.08385571196872779,
+      "brier_score": 1.327388364485255,
+      "log_loss": 2.478657671760226,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-011",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "predicted": "away_win",
+      "actual": "home_win",
+      "correct": false,
+      "probability_actual": 0.31411163649419266,
+      "brier_score": 0.7250264071748316,
+      "log_loss": 1.1580068260235,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-012",
+      "home_team": "Bosnia & Herzegovina",
+      "away_team": "Qatar",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.3803577842469882,
+      "brier_score": 0.5850076957459004,
+      "log_loss": 0.9666429317380302,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-017",
+      "home_team": "Scotland",
+      "away_team": "Brazil",
+      "predicted": "away_win",
+      "actual": "away_win",
+      "correct": true,
+      "probability_actual": 0.607545175808035,
+      "brier_score": 0.24850351339762403,
+      "log_loss": 0.4983287430622428,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-018",
+      "home_team": "Morocco",
+      "away_team": "Haiti",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.7566761906117605,
+      "brier_score": 0.11793486377867782,
+      "log_loss": 0.2788198705424326,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-064",
+      "home_team": "Colombia",
+      "away_team": "DR Congo",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.6788195107181142,
+      "brier_score": 0.16870741578909784,
+      "log_loss": 0.3874000030797533,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-069",
+      "home_team": "England",
+      "away_team": "Ghana",
+      "predicted": "home_win",
+      "actual": "draw",
+      "correct": false,
+      "probability_actual": 0.250588289914531,
+      "brier_score": 0.9091269859702786,
+      "log_loss": 1.383943965806175,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-070",
+      "home_team": "Panama",
+      "away_team": "Croatia",
+      "predicted": "away_win",
+      "actual": "away_win",
+      "correct": true,
+      "probability_actual": 0.38566943169270074,
+      "brier_score": 0.5727762178178071,
+      "log_loss": 0.9527746710111366,
+      "calibration_version": 10
+    },
+    {
+      "match_id": "WC-063",
+      "home_team": "Portugal",
+      "away_team": "Uzbekistan",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.6708349687028565,
+      "brier_score": 0.17454288594624398,
+      "log_loss": 0.399232120542577,
+      "calibration_version": 3
+    }
+  ]
+}

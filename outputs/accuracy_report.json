@@ -1,11 +1,83 @@
 {
   "metrics": {
-    "completed_forecasts": 4,
-    "accuracy": 0.75,
-    "mean_brier_score": 0.4562883763808569,
-    "mean_log_loss": 0.7808376901099104
+    "completed_forecasts": 10,
+    "accuracy": 0.7,
+    "mean_brier_score": 0.4804306338937697,
+    "mean_log_loss": 0.891379297296585
   },
   "matches": [
+    {
+      "match_id": "WC-005",
+      "home_team": "Czech Republic",
+      "away_team": "Mexico",
+      "predicted": "away_win",
+      "actual": "away_win",
+      "correct": true,
+      "probability_actual": 0.7411919293684682,
+      "brier_score": 0.13344515384371364,
+      "log_loss": 0.29949567323184845,
+      "calibration_version": 32
+    },
+    {
+      "match_id": "WC-006",
+      "home_team": "South Africa",
+      "away_team": "South Korea",
+      "predicted": "away_win",
+      "actual": "home_win",
+      "correct": false,
+      "probability_actual": 0.05388906170292161,
+      "brier_score": 1.420792850550925,
+      "log_loss": 2.920827758527676,
+      "calibration_version": 32
+    },
+    {
+      "match_id": "WC-011",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "predicted": "away_win",
+      "actual": "home_win",
+      "correct": false,
+      "probability_actual": 0.26824317195420705,
+      "brier_score": 0.8311682717937529,
+      "log_loss": 1.3158613518336595,
+      "calibration_version": 29
+    },
+    {
+      "match_id": "WC-012",
+      "home_team": "Bosnia & Herzegovina",
+      "away_team": "Qatar",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.5910259918650218,
+      "brier_score": 0.2542525813130938,
+      "log_loss": 0.5258952830760653,
+      "calibration_version": 30
+    },
+    {
+      "match_id": "WC-017",
+      "home_team": "Scotland",
+      "away_team": "Brazil",
+      "predicted": "away_win",
+      "actual": "away_win",
+      "correct": true,
+      "probability_actual": 0.6349602816549902,
+      "brier_score": 0.2249463126407621,
+      "log_loss": 0.4541928306205077,
+      "calibration_version": 31
+    },
+    {
+      "match_id": "WC-018",
+      "home_team": "Morocco",
+      "away_team": "Haiti",
+      "predicted": "home_win",
+      "actual": "home_win",
+      "correct": true,
+      "probability_actual": 0.7602033503536285,
+      "brier_score": 0.11454766327202157,
+      "log_loss": 0.2741693152364524,
+      "calibration_version": 31
+    },
     {
       "match_id": "WC-064",
       "home_team": "Colombia",
@@ -55,5 +127,5 @@
       "calibration_version": 3
     }
   ],
-  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v027_20260624T191654Z"
+  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v034_20260625T111015Z"
 }
