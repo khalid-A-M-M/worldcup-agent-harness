@@ -3171,7 +3171,7 @@
           }
         ],
         "calibration": {
-          "version": 42,
+          "version": 41,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3198,7 +3198,6 @@
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
@@ -3607,7 +3606,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 42,
+        "calibration_version": 41,
         "recommended_label": "away_win",
         "explanation": "Jordan vs Argentina: baseline model favors away_win; butterfly cues: Argentina carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
