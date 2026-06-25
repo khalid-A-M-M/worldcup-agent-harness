@@ -1,6 +1,9 @@
 name: World Cup Agent Harness
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
   schedule:
     - cron: "*/20 * * * *"
