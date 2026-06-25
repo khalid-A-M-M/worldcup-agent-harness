@@ -1,22 +1,22 @@
 {
   "match": {
-    "match_id": "WC-054",
-    "home_team": "Senegal",
-    "away_team": "Iraq",
-    "kickoff_utc": "2026-06-26T19:00:00+00:00",
-    "group": "Group I",
-    "ground": "Toronto",
-    "round": "Matchday 16",
+    "match_id": "WC-030",
+    "home_team": "Ecuador",
+    "away_team": "Germany",
+    "kickoff_utc": "2026-06-25T20:00:00+00:00",
+    "group": "Group E",
+    "ground": "New York/New Jersey (East Rutherford)",
+    "round": "Matchday 15",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Senegal and Iraq.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Ecuador and Germany.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Senegal 62.7 vs Iraq 53.9.",
+    "economic_world: ok - Computed long-run country-strength layer: Ecuador 61.6 vs Germany 84.3.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: home_win.",
+    "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
@@ -3163,7 +3163,7 @@
           }
         ],
         "calibration": {
-          "version": 38,
+          "version": 37,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3205,7 +3205,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3217,233 +3216,221 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.5652350161206499,
-          "draw": 0.21080937284992976,
-          "away_win": 0.22395561102942024
+          "home_win": 0.19873536556159263,
+          "draw": 0.2442667787518918,
+          "away_win": 0.5569978556865154
         },
         "expected_goals": {
-          "home": 2.2832891107532656,
-          "away": 1.4075085151956648
+          "home": 1.0206475720164607,
+          "away": 1.8399968540244869
         },
         "top_scores": [
           {
-            "home_goals": 2,
+            "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.09160560533547872
+            "probability": 0.11609438195070448
           },
           {
             "home_goals": 1,
-            "away_goals": 1,
-            "probability": 0.08665924371677867
-          },
-          {
-            "home_goals": 3,
-            "away_goals": 1,
-            "probability": 0.06972069371548661
-          },
-          {
-            "home_goals": 2,
-            "away_goals": 0,
-            "probability": 0.06508351768141464
-          },
-          {
-            "home_goals": 2,
             "away_goals": 2,
-            "probability": 0.06446783477466986
+            "probability": 0.09889504516630251
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 2,
+            "probability": 0.09689441084048114
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 1,
+            "probability": 0.09672060800816211
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 0,
+            "probability": 0.06583891641879876
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Senegal and Iraq.",
+      "summary": "Computed tournament form and prior-strength factors for Ecuador and Germany.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Senegal",
+          "team": "Ecuador",
           "matches": 2,
           "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goals_for": 3,
-          "goals_against": 6,
-          "goal_difference": -3,
-          "points": 0,
-          "points_per_match": 0.0,
-          "seed_rank": 19
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 0,
+          "goals_against": 1,
+          "goal_difference": -1,
+          "points": 1,
+          "points_per_match": 0.5,
+          "seed_rank": 27
         },
         "away_profile": {
-          "team": "Iraq",
+          "team": "Germany",
           "matches": 2,
-          "wins": 0,
+          "wins": 2,
           "draws": 0,
-          "losses": 2,
-          "goals_for": 1,
-          "goals_against": 7,
-          "goal_difference": -6,
-          "points": 0,
-          "points_per_match": 0.0,
-          "seed_rank": 63
+          "losses": 0,
+          "goals_for": 9,
+          "goals_against": 2,
+          "goal_difference": 7,
+          "points": 6,
+          "points_per_match": 3.0,
+          "seed_rank": 9
         },
         "home_advanced_profile": {
-          "team": "Senegal",
+          "team": "Ecuador",
           "matches": 1,
-          "shots": 6.0,
-          "shots_on_target": 2.0,
-          "possession": 46.6,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 4.0,
-          "yellow_cards": 0.0,
-          "red_cards": 0.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 9.0,
-          "offsides": 3.0,
-          "saves": 5.0,
-          "accurate_passes": 430.0,
-          "total_passes": 502.0,
-          "pass_pct": 0.9,
-          "accurate_crosses": 1.0,
-          "total_crosses": 9.0,
-          "blocked_shots": 1.0,
-          "total_tackles": 14.0,
-          "interceptions": 8.0,
-          "clearances": 17.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 39.02,
-          "attacking_pressure_index": 30.48,
-          "shots_per_match": 6.0,
-          "shots_on_target_per_match": 2.0,
-          "possession_per_match": 46.6,
-          "xg_per_match": 0.0,
-          "big_chances_per_match": 0.0,
-          "corners_per_match": 4.0,
-          "yellow_cards_per_match": 0.0,
-          "red_cards_per_match": 0.0,
-          "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 9.0,
-          "offsides_per_match": 3.0,
-          "saves_per_match": 5.0,
-          "accurate_passes_per_match": 430.0,
-          "total_passes_per_match": 502.0,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 1.0,
-          "total_crosses_per_match": 9.0,
-          "blocked_shots_per_match": 1.0,
-          "total_tackles_per_match": 14.0,
-          "interceptions_per_match": 8.0,
-          "clearances_per_match": 17.0,
-          "match_momentum_per_match": 0.0,
-          "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 39.02,
-          "attacking_pressure_index_per_match": 30.48
-        },
-        "away_advanced_profile": {
-          "team": "Iraq",
-          "matches": 2,
-          "shots": 15.0,
+          "shots": 12.0,
           "shots_on_target": 1.0,
-          "possession": 83.1,
+          "possession": 51.6,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 4.0,
-          "yellow_cards": 2.0,
+          "corners": 6.0,
+          "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 16.0,
-          "offsides": 1.0,
-          "saves": 4.0,
-          "accurate_passes": 684.0,
-          "total_passes": 815.0,
-          "pass_pct": 1.7000000000000002,
-          "accurate_crosses": 10.0,
-          "total_crosses": 22.0,
+          "fouls": 13.0,
+          "offsides": 0.0,
+          "saves": 3.0,
+          "accurate_passes": 419.0,
+          "total_passes": 492.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 4.0,
+          "total_crosses": 14.0,
           "blocked_shots": 3.0,
-          "total_tackles": 35.0,
-          "interceptions": 15.0,
-          "clearances": 48.0,
+          "total_tackles": 21.0,
+          "interceptions": 13.0,
+          "clearances": 18.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 66.14,
-          "attacking_pressure_index": 44.489999999999995,
-          "shots_per_match": 7.5,
-          "shots_on_target_per_match": 0.5,
-          "possession_per_match": 41.55,
+          "dominance_index": 43.73,
+          "attacking_pressure_index": 38.6,
+          "shots_per_match": 12.0,
+          "shots_on_target_per_match": 1.0,
+          "possession_per_match": 51.6,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.0,
+          "corners_per_match": 6.0,
           "yellow_cards_per_match": 1.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 8.0,
-          "offsides_per_match": 0.5,
-          "saves_per_match": 2.0,
-          "accurate_passes_per_match": 342.0,
-          "total_passes_per_match": 407.5,
-          "pass_pct_per_match": 0.8500000000000001,
-          "accurate_crosses_per_match": 5.0,
-          "total_crosses_per_match": 11.0,
-          "blocked_shots_per_match": 1.5,
-          "total_tackles_per_match": 17.5,
-          "interceptions_per_match": 7.5,
-          "clearances_per_match": 24.0,
+          "fouls_per_match": 13.0,
+          "offsides_per_match": 0.0,
+          "saves_per_match": 3.0,
+          "accurate_passes_per_match": 419.0,
+          "total_passes_per_match": 492.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 4.0,
+          "total_crosses_per_match": 14.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 21.0,
+          "interceptions_per_match": 13.0,
+          "clearances_per_match": 18.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 33.07,
-          "attacking_pressure_index_per_match": 22.244999999999997
+          "dominance_index_per_match": 43.73,
+          "attacking_pressure_index_per_match": 38.6
         },
-        "home_factor_score": -0.233656,
-        "away_factor_score": -0.409504,
-        "probability_adjustment": 0.16,
+        "away_advanced_profile": {
+          "team": "Germany",
+          "matches": 2,
+          "shots": 42.0,
+          "shots_on_target": 19.0,
+          "possession": 124.1,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 16.0,
+          "yellow_cards": 0.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 23.0,
+          "offsides": 0.0,
+          "saves": 2.0,
+          "accurate_passes": 1109.0,
+          "total_passes": 1261.0,
+          "pass_pct": 1.8,
+          "accurate_crosses": 10.0,
+          "total_crosses": 33.0,
+          "blocked_shots": 12.0,
+          "total_tackles": 45.0,
+          "interceptions": 20.0,
+          "clearances": 22.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 135.26999999999998,
+          "attacking_pressure_index": 153.43,
+          "shots_per_match": 21.0,
+          "shots_on_target_per_match": 9.5,
+          "possession_per_match": 62.05,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 8.0,
+          "yellow_cards_per_match": 0.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 11.5,
+          "offsides_per_match": 0.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 554.5,
+          "total_passes_per_match": 630.5,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 5.0,
+          "total_crosses_per_match": 16.5,
+          "blocked_shots_per_match": 6.0,
+          "total_tackles_per_match": 22.5,
+          "interceptions_per_match": 10.0,
+          "clearances_per_match": 11.0,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 67.63499999999999,
+          "attacking_pressure_index_per_match": 76.715
+        },
+        "home_factor_score": -0.125475,
+        "away_factor_score": 0.4023895,
+        "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -3.",
-            "impact": -0.083
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 19.",
-            "impact": 0.07
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 6 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 27.",
+            "impact": 0.056
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -6.",
-            "impact": -0.11
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 7.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 63.",
-            "impact": -0.016
-          },
-          {
-            "side": "away",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 7 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 9.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 46.6%، ضغط هجومي 30.5.",
-            "impact": -0.139
+            "value": "xG 0.00، تسديدات على المرمى 1.0، استحواذ 51.6%، ضغط هجومي 38.6.",
+            "impact": -0.119
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 0.5، استحواذ 41.5%، ضغط هجومي 22.2.",
-            "impact": -0.189
+            "value": "xG 0.00، تسديدات على المرمى 9.5، استحواذ 62.0%، ضغط هجومي 76.7.",
+            "impact": 0.092
           }
         ]
       }
@@ -3460,48 +3447,48 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Senegal 62.7 vs Iraq 53.9.",
+      "summary": "Computed long-run country-strength layer: Ecuador 61.6 vs Germany 84.3.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Senegal",
+          "team": "Ecuador",
           "found": true,
-          "notes": "Elite exports and strong athletic/talent conversion.",
-          "gdp_per_capita_index": 35.0,
-          "population_index": 47.0,
-          "football_market_index": 70.0,
-          "academy_pipeline_index": 72.0,
+          "notes": "Altitude/climate adaptation and strong recent pipeline.",
+          "gdp_per_capita_index": 43.0,
+          "population_index": 46.0,
+          "football_market_index": 66.0,
+          "academy_pipeline_index": 68.0,
           "climate_fit_index": 84.0,
-          "league_export_index": 68.0,
+          "league_export_index": 64.0,
           "home_region_fit_index": 72.0
         },
         "away_profile": {
-          "team": "Iraq",
+          "team": "Germany",
           "found": true,
-          "notes": "Strong culture",
-          "gdp_per_capita_index": 32.0,
-          "population_index": 54.0,
-          "football_market_index": 52.0,
-          "academy_pipeline_index": 56.0,
-          "climate_fit_index": 88.0,
-          "league_export_index": 52.0,
-          "home_region_fit_index": 76.0
+          "notes": "Large economy and deep league infrastructure.",
+          "gdp_per_capita_index": 86.0,
+          "population_index": 68.0,
+          "football_market_index": 92.0,
+          "academy_pipeline_index": 88.0,
+          "climate_fit_index": 72.0,
+          "league_export_index": 92.0,
+          "home_region_fit_index": 68.0
         },
-        "home_score": 62.730000000000004,
-        "away_score": 53.940000000000005,
-        "probability_adjustment": 0.00879,
+        "home_score": 61.56,
+        "away_score": 84.32,
+        "probability_adjustment": -0.022759999999999992,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 62.7/100: دخل 35، سكان 47، سوق كرة 70، أكاديميات 72، مناخ 84.",
-            "impact": 0.013
+            "value": "قوة بنيوية 61.6/100: دخل 43، سكان 46، سوق كرة 66، أكاديميات 68، مناخ 84.",
+            "impact": 0.012
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 53.9/100: دخل 32، سكان 54، سوق كرة 52، أكاديميات 56، مناخ 88.",
-            "impact": 0.004
+            "value": "قوة بنيوية 84.3/100: دخل 86، سكان 68، سوق كرة 92، أكاديميات 88، مناخ 72.",
+            "impact": 0.034
           }
         ]
       }
@@ -3513,90 +3500,78 @@
         "No butterfly events found for this match."
       ],
       "payload": {
-        "favorite": "home_win",
+        "favorite": "away_win",
         "objections": [],
         "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: home_win.",
+      "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.75974851612065,
-        "draw": 0.2108093728499298,
-        "away_win": 0.02944211102942025,
+        "home_win": 0.0009941754892409131,
+        "draw": 0.24284404427096387,
+        "away_win": 0.7561617802397953,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 2.2832891107532656,
-          "away": 1.4075085151956648
+          "home": 1.0206475720164607,
+          "away": 1.8399968540244869
         },
         "key_factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 62.7/100: دخل 35، سكان 47، سوق كرة 70، أكاديميات 72، مناخ 84.",
-            "impact": 0.013
+            "value": "قوة بنيوية 61.6/100: دخل 43، سكان 46، سوق كرة 66، أكاديميات 68، مناخ 84.",
+            "impact": 0.012
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 53.9/100: دخل 32، سكان 54، سوق كرة 52، أكاديميات 56، مناخ 88.",
-            "impact": 0.004
+            "value": "قوة بنيوية 84.3/100: دخل 86، سكان 68، سوق كرة 92، أكاديميات 88، مناخ 72.",
+            "impact": 0.034
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -3.",
-            "impact": -0.083
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 19.",
+            "value": "Seed rank داخل النموذج: 27.",
+            "impact": 0.056
+          },
+          {
+            "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 7.",
+            "impact": 0.11
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 9.",
             "impact": 0.07
           },
           {
             "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 6 أهداف في 2 مباراة.",
-            "impact": -0.045
-          },
-          {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -6.",
-            "impact": -0.11
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 63.",
-            "impact": -0.016
-          },
-          {
-            "side": "away",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 7 أهداف في 2 مباراة.",
-            "impact": -0.045
-          },
-          {
-            "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 46.6%، ضغط هجومي 30.5.",
-            "impact": -0.139
+            "value": "xG 0.00، تسديدات على المرمى 1.0، استحواذ 51.6%، ضغط هجومي 38.6.",
+            "impact": -0.119
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 0.5، استحواذ 41.5%، ضغط هجومي 22.2.",
-            "impact": -0.189
+            "value": "xG 0.00، تسديدات على المرمى 9.5، استحواذ 62.0%، ضغط هجومي 76.7.",
+            "impact": 0.092
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 38,
-        "recommended_label": "home_win",
-        "explanation": "Senegal vs Iraq: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "calibration_version": 37,
+        "recommended_label": "away_win",
+        "explanation": "Ecuador vs Germany: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {
