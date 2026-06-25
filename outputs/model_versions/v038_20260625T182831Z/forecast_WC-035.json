@@ -1,20 +1,20 @@
 {
   "match": {
-    "match_id": "WC-066",
-    "home_team": "DR Congo",
-    "away_team": "Uzbekistan",
-    "kickoff_utc": "2026-06-27T23:30:00+00:00",
-    "group": "Group K",
-    "ground": "Atlanta",
-    "round": "Matchday 17",
+    "match_id": "WC-035",
+    "home_team": "Japan",
+    "away_team": "Sweden",
+    "kickoff_utc": "2026-06-25T23:00:00+00:00",
+    "group": "Group F",
+    "ground": "Dallas (Arlington)",
+    "round": "Matchday 15",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Japan and Sweden.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: DR Congo 56.0 vs Uzbekistan 50.6.",
+    "economic_world: ok - Computed long-run country-strength layer: Japan 74.2 vs Sweden 68.3.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: home_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -3163,7 +3163,7 @@
           }
         ],
         "calibration": {
-          "version": 39,
+          "version": 38,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3206,7 +3206,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3218,227 +3217,221 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.5238275359291006,
-          "draw": 0.25046790522344925,
-          "away_win": 0.22570455884745003
+          "home_win": 0.5945159045373103,
+          "draw": 0.19068553813822,
+          "away_win": 0.21479855732446995
         },
         "expected_goals": {
-          "home": 1.7826382409324437,
-          "away": 1.1038876466528638
+          "home": 2.608804012984689,
+          "away": 1.5679854254530583
         },
         "top_scores": [
           {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.08201935539945784
+          },
+          {
+            "home_goals": 3,
+            "away_goals": 1,
+            "probability": 0.0713241411695077
+          },
+          {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.1185372982689438
+            "probability": 0.06790920543706966
           },
           {
             "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.09782829669955294
+            "away_goals": 2,
+            "probability": 0.06430257693570224
           },
           {
-            "home_goals": 1,
-            "away_goals": 0,
-            "probability": 0.09064693100493396
-          },
-          {
-            "home_goals": 2,
-            "away_goals": 0,
-            "probability": 0.08862160655224427
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 0,
-            "probability": 0.06455600269698127
+            "home_goals": 3,
+            "away_goals": 2,
+            "probability": 0.05591760691837225
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
+      "summary": "Computed tournament form and prior-strength factors for Japan and Sweden.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "DR Congo",
+          "team": "Japan",
           "matches": 2,
-          "wins": 0,
+          "wins": 1,
           "draws": 1,
-          "losses": 1,
-          "goals_for": 1,
+          "losses": 0,
+          "goals_for": 6,
           "goals_against": 2,
-          "goal_difference": -1,
-          "points": 1,
-          "points_per_match": 0.5,
-          "seed_rank": 56
+          "goal_difference": 4,
+          "points": 4,
+          "points_per_match": 2.0,
+          "seed_rank": 17
         },
         "away_profile": {
-          "team": "Uzbekistan",
+          "team": "Sweden",
           "matches": 2,
-          "wins": 0,
+          "wins": 1,
           "draws": 0,
-          "losses": 2,
-          "goals_for": 1,
-          "goals_against": 8,
-          "goal_difference": -7,
-          "points": 0,
-          "points_per_match": 0.0,
-          "seed_rank": 59
+          "losses": 1,
+          "goals_for": 6,
+          "goals_against": 6,
+          "goal_difference": 0,
+          "points": 3,
+          "points_per_match": 1.5,
+          "seed_rank": null
         },
         "home_advanced_profile": {
-          "team": "DR Congo",
-          "matches": 1,
-          "shots": 8.0,
-          "shots_on_target": 2.0,
-          "possession": 24.6,
+          "team": "Japan",
+          "matches": 2,
+          "shots": 21.0,
+          "shots_on_target": 8.0,
+          "possession": 102.30000000000001,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 4.0,
-          "yellow_cards": 1.0,
+          "corners": 9.0,
+          "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 10.0,
-          "offsides": 2.0,
-          "saves": 0.0,
-          "accurate_passes": 195.0,
-          "total_passes": 249.0,
-          "pass_pct": 0.8,
-          "accurate_crosses": 1.0,
-          "total_crosses": 10.0,
-          "blocked_shots": 3.0,
-          "total_tackles": 17.0,
-          "interceptions": 5.0,
-          "clearances": 27.0,
+          "fouls": 22.0,
+          "offsides": 1.0,
+          "saves": 4.0,
+          "accurate_passes": 807.0,
+          "total_passes": 924.0,
+          "pass_pct": 1.7000000000000002,
+          "accurate_crosses": 8.0,
+          "total_crosses": 34.0,
+          "blocked_shots": 4.0,
+          "total_tackles": 29.0,
+          "interceptions": 11.0,
+          "clearances": 57.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 38.64,
-          "attacking_pressure_index": 54.68,
-          "shots_per_match": 8.0,
-          "shots_on_target_per_match": 2.0,
-          "possession_per_match": 24.6,
+          "dominance_index": 114.8,
+          "attacking_pressure_index": 125.27,
+          "shots_per_match": 10.5,
+          "shots_on_target_per_match": 4.0,
+          "possession_per_match": 51.150000000000006,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 4.0,
-          "yellow_cards_per_match": 1.0,
+          "corners_per_match": 4.5,
+          "yellow_cards_per_match": 0.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 10.0,
-          "offsides_per_match": 2.0,
-          "saves_per_match": 0.0,
-          "accurate_passes_per_match": 195.0,
-          "total_passes_per_match": 249.0,
-          "pass_pct_per_match": 0.8,
-          "accurate_crosses_per_match": 1.0,
-          "total_crosses_per_match": 10.0,
-          "blocked_shots_per_match": 3.0,
-          "total_tackles_per_match": 17.0,
-          "interceptions_per_match": 5.0,
-          "clearances_per_match": 27.0,
+          "fouls_per_match": 11.0,
+          "offsides_per_match": 0.5,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 403.5,
+          "total_passes_per_match": 462.0,
+          "pass_pct_per_match": 0.8500000000000001,
+          "accurate_crosses_per_match": 4.0,
+          "total_crosses_per_match": 17.0,
+          "blocked_shots_per_match": 2.0,
+          "total_tackles_per_match": 14.5,
+          "interceptions_per_match": 5.5,
+          "clearances_per_match": 28.5,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 38.64,
-          "attacking_pressure_index_per_match": 54.68
+          "dominance_index_per_match": 57.4,
+          "attacking_pressure_index_per_match": 62.635
         },
         "away_advanced_profile": {
-          "team": "Uzbekistan",
+          "team": "Sweden",
           "matches": 1,
-          "shots": 7.0,
-          "shots_on_target": 2.0,
-          "possession": 34.0,
+          "shots": 16.0,
+          "shots_on_target": 8.0,
+          "possession": 49.1,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 2.0,
-          "yellow_cards": 1.0,
+          "corners": 5.0,
+          "yellow_cards": 3.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 15.0,
-          "offsides": 2.0,
-          "saves": 4.0,
-          "accurate_passes": 262.0,
-          "total_passes": 325.0,
+          "fouls": 12.0,
+          "offsides": 3.0,
+          "saves": 2.0,
+          "accurate_passes": 361.0,
+          "total_passes": 425.0,
           "pass_pct": 0.8,
-          "accurate_crosses": 0.0,
-          "total_crosses": 8.0,
+          "accurate_crosses": 3.0,
+          "total_crosses": 21.0,
           "blocked_shots": 3.0,
           "total_tackles": 18.0,
-          "interceptions": 14.0,
-          "clearances": 30.0,
+          "interceptions": 5.0,
+          "clearances": 14.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 29.93,
-          "attacking_pressure_index": 26.87,
-          "shots_per_match": 7.0,
-          "shots_on_target_per_match": 2.0,
-          "possession_per_match": 34.0,
+          "dominance_index": 52.32,
+          "attacking_pressure_index": 58.58,
+          "shots_per_match": 16.0,
+          "shots_on_target_per_match": 8.0,
+          "possession_per_match": 49.1,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.0,
-          "yellow_cards_per_match": 1.0,
+          "corners_per_match": 5.0,
+          "yellow_cards_per_match": 3.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 15.0,
-          "offsides_per_match": 2.0,
-          "saves_per_match": 4.0,
-          "accurate_passes_per_match": 262.0,
-          "total_passes_per_match": 325.0,
+          "fouls_per_match": 12.0,
+          "offsides_per_match": 3.0,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 361.0,
+          "total_passes_per_match": 425.0,
           "pass_pct_per_match": 0.8,
-          "accurate_crosses_per_match": 0.0,
-          "total_crosses_per_match": 8.0,
+          "accurate_crosses_per_match": 3.0,
+          "total_crosses_per_match": 21.0,
           "blocked_shots_per_match": 3.0,
           "total_tackles_per_match": 18.0,
-          "interceptions_per_match": 14.0,
-          "clearances_per_match": 30.0,
+          "interceptions_per_match": 5.0,
+          "clearances_per_match": 14.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 29.93,
-          "attacking_pressure_index_per_match": 26.87
+          "dominance_index_per_match": 52.32,
+          "attacking_pressure_index_per_match": 58.58
         },
-        "home_factor_score": -0.18836599999999998,
-        "away_factor_score": -0.39698900000000004,
+        "home_factor_score": 0.25489300000000004,
+        "away_factor_score": 0.031374000000000006,
         "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
-            "impact": -0.028
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 4.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 56.",
-            "impact": -0.002
+            "value": "Seed rank داخل النموذج: 17.",
+            "impact": 0.07
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
-            "impact": -0.11
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 59.",
-            "impact": -0.008
+            "value": "3 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "إنذار دفاعي",
-            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "value": "استقبل 6 أهداف في 2 مباراة.",
             "impact": -0.045
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 24.6%، ضغط هجومي 54.7.",
-            "impact": -0.124
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 51.2%، ضغط هجومي 62.6.",
+            "impact": -0.02
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
-            "impact": -0.184
+            "value": "xG 0.00، تسديدات على المرمى 8.0، استحواذ 49.1%، ضغط هجومي 58.6.",
+            "impact": 0.009
           }
         ]
       }
@@ -3455,48 +3448,48 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: DR Congo 56.0 vs Uzbekistan 50.6.",
+      "summary": "Computed long-run country-strength layer: Japan 74.2 vs Sweden 68.3.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "DR Congo",
+          "team": "Japan",
           "found": true,
-          "notes": "Large population and talent",
-          "gdp_per_capita_index": 22.0,
+          "notes": "High organization and technical development.",
+          "gdp_per_capita_index": 82.0,
           "population_index": 76.0,
-          "football_market_index": 54.0,
-          "academy_pipeline_index": 58.0,
-          "climate_fit_index": 86.0,
-          "league_export_index": 54.0,
-          "home_region_fit_index": 72.0
+          "football_market_index": 70.0,
+          "academy_pipeline_index": 76.0,
+          "climate_fit_index": 76.0,
+          "league_export_index": 72.0,
+          "home_region_fit_index": 60.0
         },
         "away_profile": {
-          "team": "Uzbekistan",
+          "team": "Sweden",
           "found": true,
-          "notes": "Rising football system",
-          "gdp_per_capita_index": 34.0,
-          "population_index": 52.0,
-          "football_market_index": 48.0,
-          "academy_pipeline_index": 54.0,
-          "climate_fit_index": 76.0,
-          "league_export_index": 48.0,
-          "home_region_fit_index": 66.0
+          "notes": "Stable development and exports.",
+          "gdp_per_capita_index": 82.0,
+          "population_index": 38.0,
+          "football_market_index": 70.0,
+          "academy_pipeline_index": 74.0,
+          "climate_fit_index": 64.0,
+          "league_export_index": 74.0,
+          "home_region_fit_index": 62.0
         },
-        "home_score": 56.0,
-        "away_score": 50.620000000000005,
-        "probability_adjustment": 0.005379999999999995,
+        "home_score": 74.18,
+        "away_score": 68.28,
+        "probability_adjustment": 0.005900000000000006,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 56.0/100: دخل 22، سكان 76، سوق كرة 54، أكاديميات 58، مناخ 86.",
-            "impact": 0.006
+            "value": "قوة بنيوية 74.2/100: دخل 82، سكان 76، سوق كرة 70، أكاديميات 76، مناخ 76.",
+            "impact": 0.024
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 50.6/100: دخل 34، سكان 52، سوق كرة 48، أكاديميات 54، مناخ 76.",
-            "impact": 0.001
+            "value": "قوة بنيوية 68.3/100: دخل 82، سكان 38، سوق كرة 70، أكاديميات 74، مناخ 64.",
+            "impact": 0.018
           }
         ]
       }
@@ -3518,74 +3511,68 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.7161245359291006,
-        "draw": 0.2504679052234493,
-        "away_win": 0.03340755884745004,
+        "home_win": 0.7871509045373101,
+        "draw": 0.19068553813821995,
+        "away_win": 0.022163557324469948,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.7826382409324437,
-          "away": 1.1038876466528638
+          "home": 2.608804012984689,
+          "away": 1.5679854254530583
         },
         "key_factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 56.0/100: دخل 22، سكان 76، سوق كرة 54، أكاديميات 58، مناخ 86.",
-            "impact": 0.006
+            "value": "قوة بنيوية 74.2/100: دخل 82، سكان 76، سوق كرة 70، أكاديميات 76، مناخ 76.",
+            "impact": 0.024
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 50.6/100: دخل 34، سكان 52، سوق كرة 48، أكاديميات 54، مناخ 76.",
-            "impact": 0.001
+            "value": "قوة بنيوية 68.3/100: دخل 82، سكان 38، سوق كرة 70، أكاديميات 74، مناخ 64.",
+            "impact": 0.018
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
-            "impact": -0.028
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 4.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 56.",
-            "impact": -0.002
+            "value": "Seed rank داخل النموذج: 17.",
+            "impact": 0.07
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
-            "impact": -0.11
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 59.",
-            "impact": -0.008
+            "value": "3 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "إنذار دفاعي",
-            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "value": "استقبل 6 أهداف في 2 مباراة.",
             "impact": -0.045
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 24.6%، ضغط هجومي 54.7.",
-            "impact": -0.124
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 51.2%، ضغط هجومي 62.6.",
+            "impact": -0.02
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
-            "impact": -0.184
+            "value": "xG 0.00، تسديدات على المرمى 8.0، استحواذ 49.1%، ضغط هجومي 58.6.",
+            "impact": 0.009
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 39,
+        "calibration_version": 38,
         "recommended_label": "home_win",
-        "explanation": "DR Congo vs Uzbekistan: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "explanation": "Japan vs Sweden: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {
