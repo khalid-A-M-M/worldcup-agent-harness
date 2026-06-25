@@ -1,19 +1,19 @@
 {
   "match": {
-    "match_id": "WC-060",
-    "home_team": "Jordan",
-    "away_team": "Argentina",
-    "kickoff_utc": "2026-06-28T02:00:00+00:00",
-    "group": "Group J",
-    "ground": "Dallas (Arlington)",
-    "round": "Matchday 17",
+    "match_id": "WC-023",
+    "home_team": "Turkey",
+    "away_team": "USA",
+    "kickoff_utc": "2026-06-26T02:00:00+00:00",
+    "group": "Group D",
+    "ground": "Los Angeles (Inglewood)",
+    "round": "Matchday 15",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 54 historical matches, 47 team priors, and 1 live event cues.",
+    "data_collection: ok - Loaded 52 historical matches, 47 team priors, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Jordan and Argentina.",
-    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Turkey and USA.",
+    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -21,8 +21,10 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 54 historical matches, 47 team priors, and 1 live event cues.",
-      "warnings": [],
+      "summary": "Loaded 52 historical matches, 47 team priors, and 0 live event cues.",
+      "warnings": [
+        "No butterfly events found for this match."
+      ],
       "payload": {
         "historical_results": [
           {
@@ -45,18 +47,6 @@
           },
           {
             "home_team": "Mexico",
-            "away_team": "South Korea",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
-            "home_team": "Czech Republic",
-            "away_team": "Mexico",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "South Africa",
             "away_team": "South Korea",
             "home_goals": 1,
             "away_goals": 0
@@ -350,17 +340,7 @@
             "away_goals": 1
           }
         ],
-        "butterfly_events": [
-          {
-            "match_id": "WC-060",
-            "event_time_utc": "2026-06-23T10:00:00Z",
-            "event_type": "favorite_pressure",
-            "description": "Argentina carries heavy favorite pressure in a decisive group fixture.",
-            "impact": "medium",
-            "confidence": "medium",
-            "benefits": "against_away"
-          }
-        ],
+        "butterfly_events": [],
         "team_priors": {
           "France": [
             1.18,
@@ -2601,7 +2581,7 @@
           }
         ],
         "calibration": {
-          "version": 33,
+          "version": 32,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -2638,7 +2618,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2650,184 +2629,161 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.10349129092182402,
-          "draw": 0.181235302519059,
-          "away_win": 0.7152734065591171
+          "home_win": 0.16874474616428384,
+          "draw": 0.23496408623159723,
+          "away_win": 0.5962911676041189
         },
         "expected_goals": {
-          "home": 0.8120274074074073,
-          "away": 2.3779099435114897
+          "home": 0.924268846153846,
+          "away": 1.90996687829448
         },
         "top_scores": [
           {
+            "home_goals": 1,
+            "away_goals": 1,
+            "probability": 0.11205441919893548
+          },
+          {
             "home_goals": 0,
             "away_goals": 2,
-            "probability": 0.11650378873619702
+            "probability": 0.10720196820833473
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 1,
+            "probability": 0.10395498914627911
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09460426952059438
+            "probability": 0.09908343946133882
           },
           {
             "home_goals": 0,
             "away_goals": 3,
-            "probability": 0.09234517256418825
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.09162285348256977
-          },
-          {
-            "home_goals": 1,
-            "away_goals": 1,
-            "probability": 0.08593480283896904
+            "probability": 0.0682507361886324
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Jordan and Argentina.",
-      "warnings": [],
+      "summary": "Computed tournament form and prior-strength factors for Turkey and USA.",
+      "warnings": [
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
       "payload": {
         "home_profile": {
-          "team": "Jordan",
+          "team": "Turkey",
           "matches": 2,
           "wins": 0,
           "draws": 0,
           "losses": 2,
-          "goals_for": 2,
-          "goals_against": 5,
+          "goals_for": 0,
+          "goals_against": 3,
           "goal_difference": -3,
           "points": 0,
           "points_per_match": 0.0,
-          "seed_rank": 77
+          "seed_rank": 26
         },
         "away_profile": {
-          "team": "Argentina",
+          "team": "USA",
           "matches": 2,
           "wins": 2,
           "draws": 0,
           "losses": 0,
-          "goals_for": 5,
-          "goals_against": 0,
+          "goals_for": 6,
+          "goals_against": 1,
           "goal_difference": 5,
           "points": 6,
           "points_per_match": 3.0,
-          "seed_rank": 2
+          "seed_rank": 13
         },
         "home_advanced_profile": {
-          "team": "Jordan",
-          "matches": 1,
-          "shots": 11.0,
-          "shots_on_target": 4.0,
-          "possession": 36.8,
+          "team": "Turkey",
+          "matches": 0,
+          "shots": 0.0,
+          "shots_on_target": 0.0,
+          "possession": 0.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 3.0,
+          "corners": 0.0,
           "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 7.0,
-          "offsides": 1.0,
-          "saves": 1.0,
-          "accurate_passes": 241.0,
-          "total_passes": 332.0,
-          "pass_pct": 0.7,
-          "accurate_crosses": 3.0,
-          "total_crosses": 15.0,
-          "blocked_shots": 2.0,
-          "total_tackles": 15.0,
-          "interceptions": 12.0,
-          "clearances": 39.0,
+          "fouls": 0.0,
+          "offsides": 0.0,
+          "saves": 0.0,
+          "accurate_passes": 0.0,
+          "total_passes": 0.0,
+          "pass_pct": 0.0,
+          "accurate_crosses": 0.0,
+          "total_crosses": 0.0,
+          "blocked_shots": 0.0,
+          "total_tackles": 0.0,
+          "interceptions": 0.0,
+          "clearances": 0.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 41.98,
-          "attacking_pressure_index": 47.25,
-          "shots_per_match": 11.0,
-          "shots_on_target_per_match": 4.0,
-          "possession_per_match": 36.8,
-          "xg_per_match": 0.0,
-          "big_chances_per_match": 0.0,
-          "corners_per_match": 3.0,
-          "yellow_cards_per_match": 0.0,
-          "red_cards_per_match": 0.0,
-          "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 7.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 1.0,
-          "accurate_passes_per_match": 241.0,
-          "total_passes_per_match": 332.0,
-          "pass_pct_per_match": 0.7,
-          "accurate_crosses_per_match": 3.0,
-          "total_crosses_per_match": 15.0,
-          "blocked_shots_per_match": 2.0,
-          "total_tackles_per_match": 15.0,
-          "interceptions_per_match": 12.0,
-          "clearances_per_match": 39.0,
-          "match_momentum_per_match": 0.0,
-          "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 41.98,
-          "attacking_pressure_index_per_match": 47.25
+          "dominance_index": 0.0,
+          "attacking_pressure_index": 0.0
         },
         "away_advanced_profile": {
-          "team": "Argentina",
+          "team": "USA",
           "matches": 1,
-          "shots": 12.0,
-          "shots_on_target": 5.0,
-          "possession": 53.6,
+          "shots": 10.0,
+          "shots_on_target": 2.0,
+          "possession": 61.9,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 1.0,
-          "yellow_cards": 2.0,
+          "corners": 7.0,
+          "yellow_cards": 3.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 13.0,
-          "offsides": 2.0,
-          "saves": 1.0,
-          "accurate_passes": 494.0,
-          "total_passes": 554.0,
-          "pass_pct": 0.9,
-          "accurate_crosses": 1.0,
-          "total_crosses": 4.0,
-          "blocked_shots": 3.0,
-          "total_tackles": 21.0,
-          "interceptions": 8.0,
-          "clearances": 35.0,
+          "fouls": 12.0,
+          "offsides": 1.0,
+          "saves": 2.0,
+          "accurate_passes": 444.0,
+          "total_passes": 523.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 4.0,
+          "total_crosses": 14.0,
+          "blocked_shots": 6.0,
+          "total_tackles": 20.0,
+          "interceptions": 20.0,
+          "clearances": 31.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 62.31,
-          "attacking_pressure_index": 64.53,
-          "shots_per_match": 12.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 53.6,
+          "dominance_index": 60.69,
+          "attacking_pressure_index": 58.08,
+          "shots_per_match": 10.0,
+          "shots_on_target_per_match": 2.0,
+          "possession_per_match": 61.9,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 1.0,
-          "yellow_cards_per_match": 2.0,
+          "corners_per_match": 7.0,
+          "yellow_cards_per_match": 3.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 13.0,
-          "offsides_per_match": 2.0,
-          "saves_per_match": 1.0,
-          "accurate_passes_per_match": 494.0,
-          "total_passes_per_match": 554.0,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 1.0,
-          "total_crosses_per_match": 4.0,
-          "blocked_shots_per_match": 3.0,
-          "total_tackles_per_match": 21.0,
-          "interceptions_per_match": 8.0,
-          "clearances_per_match": 35.0,
+          "fouls_per_match": 12.0,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 444.0,
+          "total_passes_per_match": 523.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 4.0,
+          "total_crosses_per_match": 14.0,
+          "blocked_shots_per_match": 6.0,
+          "total_tackles_per_match": 20.0,
+          "interceptions_per_match": 20.0,
+          "clearances_per_match": 31.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 62.31,
-          "attacking_pressure_index_per_match": 64.53
+          "dominance_index_per_match": 60.69,
+          "attacking_pressure_index_per_match": 58.08
         },
-        "home_factor_score": -0.30862999999999996,
-        "away_factor_score": 0.317569,
+        "home_factor_score": -0.10700000000000001,
+        "away_factor_score": 0.284129,
         "probability_adjustment": -0.16,
         "factors": [
           {
@@ -2839,14 +2795,8 @@
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 77.",
-            "impact": -0.044
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 26.",
+            "impact": 0.058
           },
           {
             "side": "away",
@@ -2857,51 +2807,39 @@
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 2.",
+            "value": "Seed rank داخل النموذج: 13.",
             "impact": 0.07
-          },
-          {
-            "side": "home",
-            "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 36.8%، ضغط هجومي 47.2.",
-            "impact": -0.1
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 53.6%، ضغط هجومي 64.5.",
-            "impact": 0.008
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 61.9%، ضغط هجومي 58.1.",
+            "impact": -0.026
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 1 high-impact contextual cues.",
+      "summary": "Scored 0 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": -0.010119278588240651,
-        "events": [
-          {
-            "event_type": "favorite_pressure",
-            "description": "Argentina carries heavy favorite pressure in a decisive group fixture.",
-            "hours_to_kickoff": 112.0,
-            "time_weight": 0.413,
-            "signed_effect": 0.0101,
-            "benefits": "against_away"
-          }
-        ]
+        "away_adjustment": 0.0,
+        "events": []
       }
     },
     "critic_auditor": {
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
-      "warnings": [],
+      "warnings": [
+        "No butterfly events found for this match.",
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
       "payload": {
         "favorite": "away_win",
         "objections": [],
-        "confidence_penalty": 0.0
+        "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
@@ -2909,13 +2847,13 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.0009305168732839904,
-        "draw": 0.16723008310794,
-        "away_win": 0.8318394000187761,
-        "confidence_interval_width": 0.12,
+        "home_win": 0.0009793789280681732,
+        "draw": 0.2301188749080195,
+        "away_win": 0.7689017461639124,
+        "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 0.8120274074074073,
-          "away": 2.3779099435114897
+          "home": 0.924268846153846,
+          "away": 1.90996687829448
         },
         "key_factors": [
           {
@@ -2927,14 +2865,8 @@
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 77.",
-            "impact": -0.044
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 26.",
+            "impact": 0.058
           },
           {
             "side": "away",
@@ -2945,32 +2877,22 @@
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 2.",
+            "value": "Seed rank داخل النموذج: 13.",
             "impact": 0.07
-          },
-          {
-            "side": "home",
-            "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 36.8%، ضغط هجومي 47.2.",
-            "impact": -0.1
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 53.6%، ضغط هجومي 64.5.",
-            "impact": 0.008
-          },
-          {
-            "side": "home",
-            "label": "أثر فراشة",
-            "value": "Argentina carries heavy favorite pressure in a decisive group fixture.",
-            "impact": 0.0101
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 61.9%، ضغط هجومي 58.1.",
+            "impact": -0.026
           }
         ],
-        "data_quality_warnings": [],
-        "calibration_version": 33,
+        "data_quality_warnings": [
+          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        ],
+        "calibration_version": 32,
         "recommended_label": "away_win",
-        "explanation": "Jordan vs Argentina: baseline model favors away_win; butterfly cues: Argentina carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
+        "explanation": "Turkey vs USA: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {

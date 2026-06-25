@@ -10,7 +10,7 @@
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 54 historical matches, 47 team priors, and 1 live event cues.",
+    "data_collection: ok - Loaded 52 historical matches, 47 team priors, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
     "team_intelligence: ok - Computed tournament form and prior-strength factors for Jordan and Argentina.",
     "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
@@ -21,7 +21,7 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 54 historical matches, 47 team priors, and 1 live event cues.",
+      "summary": "Loaded 52 historical matches, 47 team priors, and 1 live event cues.",
       "warnings": [],
       "payload": {
         "historical_results": [
@@ -45,18 +45,6 @@
           },
           {
             "home_team": "Mexico",
-            "away_team": "South Korea",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
-            "home_team": "Czech Republic",
-            "away_team": "Mexico",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "South Africa",
             "away_team": "South Korea",
             "home_goals": 1,
             "away_goals": 0
@@ -2601,7 +2589,7 @@
           }
         ],
         "calibration": {
-          "version": 33,
+          "version": 32,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -2638,7 +2626,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2650,39 +2637,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.10349129092182402,
-          "draw": 0.181235302519059,
-          "away_win": 0.7152734065591171
+          "home_win": 0.10418628032178555,
+          "draw": 0.18088415592539023,
+          "away_win": 0.7149295637528248
         },
         "expected_goals": {
-          "home": 0.8120274074074073,
-          "away": 2.3779099435114897
+          "home": 0.8201163247863247,
+          "away": 2.3867389584058207
         },
         "top_scores": [
           {
             "home_goals": 0,
             "away_goals": 2,
-            "probability": 0.11650378873619702
+            "probability": 0.11540399640026931
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09460426952059438
+            "probability": 0.09464470139344311
           },
           {
             "home_goals": 0,
             "away_goals": 3,
-            "probability": 0.09234517256418825
+            "probability": 0.09181307138808263
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.09162285348256977
+            "probability": 0.09035962639233792
           },
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.08593480283896904
+            "probability": 0.085653504037318
           }
         ]
       }
@@ -2909,13 +2896,13 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.0009305168732839904,
-        "draw": 0.16723008310794,
-        "away_win": 0.8318394000187761,
+        "home_win": 0.0009311190273662539,
+        "draw": 0.16701134140570553,
+        "away_win": 0.8320575395669283,
         "confidence_interval_width": 0.12,
         "expected_goals": {
-          "home": 0.8120274074074073,
-          "away": 2.3779099435114897
+          "home": 0.8201163247863247,
+          "away": 2.3867389584058207
         },
         "key_factors": [
           {
@@ -2968,7 +2955,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 33,
+        "calibration_version": 32,
         "recommended_label": "away_win",
         "explanation": "Jordan vs Argentina: baseline model favors away_win; butterfly cues: Argentina carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
