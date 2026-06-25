@@ -1,28 +1,28 @@
 {
   "match": {
-    "match_id": "WC-065",
-    "home_team": "Colombia",
-    "away_team": "Portugal",
-    "kickoff_utc": "2026-06-27T23:30:00+00:00",
-    "group": "Group K",
-    "ground": "Miami (Miami Gardens)",
-    "round": "Matchday 17",
+    "match_id": "WC-069",
+    "home_team": "England",
+    "away_team": "Ghana",
+    "kickoff_utc": "2026-06-23T20:00:00+00:00",
+    "group": "Group L",
+    "ground": "Boston (Foxborough)",
+    "round": "Matchday 13",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
+    "data_collection: ok - Loaded 45 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Colombia and Portugal.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for England and Ghana.",
     "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Colombia 66.7 vs Portugal 75.7.",
+    "economic_world: ok - Computed long-run country-strength layer: England 84.9 vs Ghana 60.4.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: away_win.",
-    "self_correction: pending - Actual result is not available yet; calibration update skipped."
+    "synthesizer: ok - Final forecast: home_win.",
+    "self_correction: updated - Compared forecast with actual result; increase weight of challenged factors."
   ],
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
+      "summary": "Loaded 45 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
       "warnings": [],
       "payload": {
         "historical_results": [
@@ -46,18 +46,6 @@
           },
           {
             "home_team": "Mexico",
-            "away_team": "South Korea",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
-            "home_team": "Czech Republic",
-            "away_team": "Mexico",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "South Africa",
             "away_team": "South Korea",
             "home_goals": 1,
             "away_goals": 0
@@ -87,18 +75,6 @@
             "away_goals": 0
           },
           {
-            "home_team": "Switzerland",
-            "away_team": "Canada",
-            "home_goals": 2,
-            "away_goals": 1
-          },
-          {
-            "home_team": "Bosnia & Herzegovina",
-            "away_team": "Qatar",
-            "home_goals": 3,
-            "away_goals": 1
-          },
-          {
             "home_team": "Brazil",
             "away_team": "Morocco",
             "home_goals": 1,
@@ -121,18 +97,6 @@
             "away_team": "Haiti",
             "home_goals": 3,
             "away_goals": 0
-          },
-          {
-            "home_team": "Scotland",
-            "away_team": "Brazil",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "Morocco",
-            "away_team": "Haiti",
-            "home_goals": 4,
-            "away_goals": 2
           },
           {
             "home_team": "USA",
@@ -321,12 +285,6 @@
             "away_goals": 0
           },
           {
-            "home_team": "Colombia",
-            "away_team": "DR Congo",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
             "home_team": "England",
             "away_team": "Croatia",
             "home_goals": 4,
@@ -337,29 +295,17 @@
             "away_team": "Panama",
             "home_goals": 1,
             "away_goals": 0
-          },
-          {
-            "home_team": "England",
-            "away_team": "Ghana",
-            "home_goals": 0,
-            "away_goals": 0
-          },
-          {
-            "home_team": "Panama",
-            "away_team": "Croatia",
-            "home_goals": 0,
-            "away_goals": 1
           }
         ],
         "butterfly_events": [
           {
-            "match_id": "WC-065",
+            "match_id": "WC-069",
             "event_time_utc": "2026-06-23T10:00:00Z",
             "event_type": "favorite_pressure",
-            "description": "Portugal carries heavy favorite pressure in a decisive group fixture.",
+            "description": "England carries heavy favorite pressure in a decisive group fixture.",
             "impact": "medium",
             "confidence": "medium",
-            "benefits": "against_away"
+            "benefits": "against_home"
           }
         ],
         "team_priors": {
@@ -552,7 +498,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\my project kaf\\projects\\17_football_agent_harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -803,68 +749,6 @@
             "source": "ESPN"
           },
           {
-            "match_id": "WC-011",
-            "team": "Canada",
-            "shots": "13.0",
-            "shots_on_target": "7.0",
-            "possession": "44.8",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "13.0",
-            "offsides": "3.0",
-            "saves": "2.0",
-            "accurate_passes": "271.0",
-            "total_passes": "339.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "6.0",
-            "total_crosses": "26.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "9.0",
-            "interceptions": "12.0",
-            "clearances": "19.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "52.96",
-            "attacking_pressure_index": "65.78",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-011",
-            "team": "Switzerland",
-            "shots": "6.0",
-            "shots_on_target": "4.0",
-            "possession": "55.2",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "19.0",
-            "offsides": "1.0",
-            "saves": "6.0",
-            "accurate_passes": "367.0",
-            "total_passes": "441.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "1.0",
-            "total_crosses": "6.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "15.0",
-            "interceptions": "5.0",
-            "clearances": "43.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "47.04",
-            "attacking_pressure_index": "34.22",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
             "match_id": "WC-013",
             "team": "Brazil",
             "shots": "12.0",
@@ -985,130 +869,6 @@
             "momentum_last_15": "",
             "dominance_index": "31.18",
             "attacking_pressure_index": "18.16",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-017",
-            "team": "Brazil",
-            "shots": "21.0",
-            "shots_on_target": "9.0",
-            "possession": "54.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "1.0",
-            "saves": "5.0",
-            "accurate_passes": "564.0",
-            "total_passes": "607.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "2.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "14.0",
-            "interceptions": "13.0",
-            "clearances": "23.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.5",
-            "attacking_pressure_index": "59.34",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-017",
-            "team": "Scotland",
-            "shots": "14.0",
-            "shots_on_target": "5.0",
-            "possession": "45.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "5.0",
-            "accurate_passes": "448.0",
-            "total_passes": "500.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "10.0",
-            "total_crosses": "23.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "11.0",
-            "interceptions": "2.0",
-            "clearances": "13.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.5",
-            "attacking_pressure_index": "40.66",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-018",
-            "team": "Haiti",
-            "shots": "9.0",
-            "shots_on_target": "2.0",
-            "possession": "31.0",
-            "xg": "",
-            "big_chances": "",
-            "corners": "1.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "18.0",
-            "offsides": "0.0",
-            "saves": "8.0",
-            "accurate_passes": "198.0",
-            "total_passes": "248.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "2.0",
-            "total_crosses": "3.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "25.0",
-            "interceptions": "14.0",
-            "clearances": "26.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "27.58",
-            "attacking_pressure_index": "19.28",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-018",
-            "team": "Morocco",
-            "shots": "22.0",
-            "shots_on_target": "11.0",
-            "possession": "69.0",
-            "xg": "",
-            "big_chances": "",
-            "corners": "9.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "5.0",
-            "saves": "1.0",
-            "accurate_passes": "479.0",
-            "total_passes": "542.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "7.0",
-            "total_crosses": "22.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "18.0",
-            "interceptions": "7.0",
-            "clearances": "14.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "72.42",
-            "attacking_pressure_index": "80.72",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -3171,10 +2931,11 @@
           }
         ],
         "calibration": {
-          "version": 40,
+          "version": 44,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
+          "economic_world_weight": 0.65,
           "confidence_penalty_weight": 1.0,
           "notes": [
             "Updated by evolve_after_results.py after completed matches are scored.",
@@ -3216,6 +2977,10 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
+            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
+            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
+            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
+            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3227,192 +2992,223 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.32154194948839826,
-          "draw": 0.26825531641424827,
-          "away_win": 0.4102027340973537
+          "home_win": 0.439242655879072,
+          "draw": 0.24950291461859744,
+          "away_win": 0.31125442950233007
         },
         "expected_goals": {
-          "home": 1.3205910320783172,
-          "away": 1.517597519310891
+          "home": 1.7352324879227057,
+          "away": 1.4357708499866773
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.12669420205412354
-          },
-          {
-            "home_goals": 1,
-            "away_goals": 2,
-            "probability": 0.08901426238352346
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.07944626275058429
+            "probability": 0.11291774527360172
           },
           {
             "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.07745890141157123
+            "probability": 0.09071228706561772
           },
           {
-            "home_goals": 0,
+            "home_goals": 1,
+            "away_goals": 2,
+            "probability": 0.07505741069910105
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 2,
+            "probability": 0.06512102875221872
+          },
+          {
+            "home_goals": 1,
             "away_goals": 0,
-            "probability": 0.06791873281821409
+            "probability": 0.06445616452996666
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Colombia and Portugal.",
+      "summary": "Computed tournament form and prior-strength factors for England and Ghana.",
       "warnings": [
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        "Tournament sample is still small; prediction should stay conservative."
       ],
       "payload": {
         "home_profile": {
-          "team": "Colombia",
-          "matches": 2,
-          "wins": 2,
+          "team": "England",
+          "matches": 1,
+          "wins": 1,
           "draws": 0,
           "losses": 0,
           "goals_for": 4,
-          "goals_against": 1,
-          "goal_difference": 3,
-          "points": 6,
+          "goals_against": 2,
+          "goal_difference": 2,
+          "points": 3,
           "points_per_match": 3.0,
-          "seed_rank": 12
+          "seed_rank": 4
         },
         "away_profile": {
-          "team": "Portugal",
-          "matches": 2,
+          "team": "Ghana",
+          "matches": 1,
           "wins": 1,
-          "draws": 1,
+          "draws": 0,
           "losses": 0,
-          "goals_for": 6,
-          "goals_against": 1,
-          "goal_difference": 5,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 6
+          "goals_for": 1,
+          "goals_against": 0,
+          "goal_difference": 1,
+          "points": 3,
+          "points_per_match": 3.0,
+          "seed_rank": 45
         },
         "home_advanced_profile": {
-          "team": "Colombia",
-          "matches": 0,
-          "shots": 0.0,
-          "shots_on_target": 0.0,
-          "possession": 0.0,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 0.0,
-          "yellow_cards": 0.0,
-          "red_cards": 0.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 0.0,
-          "offsides": 0.0,
-          "saves": 0.0,
-          "accurate_passes": 0.0,
-          "total_passes": 0.0,
-          "pass_pct": 0.0,
-          "accurate_crosses": 0.0,
-          "total_crosses": 0.0,
-          "blocked_shots": 0.0,
-          "total_tackles": 0.0,
-          "interceptions": 0.0,
-          "clearances": 0.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 0.0,
-          "attacking_pressure_index": 0.0
-        },
-        "away_advanced_profile": {
-          "team": "Portugal",
+          "team": "England",
           "matches": 2,
-          "shots": 24.0,
-          "shots_on_target": 10.0,
-          "possession": 141.4,
+          "shots": 41.0,
+          "shots_on_target": 14.0,
+          "possession": 130.60000000000002,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 8.0,
-          "yellow_cards": 4.0,
+          "corners": 17.0,
+          "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 23.0,
-          "offsides": 5.0,
+          "fouls": 24.0,
+          "offsides": 2.0,
           "saves": 3.0,
-          "accurate_passes": 1285.0,
-          "total_passes": 1407.0,
+          "accurate_passes": 992.0,
+          "total_passes": 1107.0,
           "pass_pct": 1.8,
-          "accurate_crosses": 11.0,
-          "total_crosses": 45.0,
-          "blocked_shots": 5.0,
-          "total_tackles": 26.0,
+          "accurate_crosses": 13.0,
+          "total_crosses": 43.0,
+          "blocked_shots": 11.0,
+          "total_tackles": 23.0,
           "interceptions": 8.0,
-          "clearances": 26.0,
+          "clearances": 22.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 131.43,
-          "attacking_pressure_index": 118.44999999999999,
-          "shots_per_match": 12.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 70.7,
+          "dominance_index": 138.89000000000001,
+          "attacking_pressure_index": 149.92000000000002,
+          "shots_per_match": 20.5,
+          "shots_on_target_per_match": 7.0,
+          "possession_per_match": 65.30000000000001,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 4.0,
-          "yellow_cards_per_match": 2.0,
+          "corners_per_match": 8.5,
+          "yellow_cards_per_match": 0.5,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 11.5,
-          "offsides_per_match": 2.5,
+          "fouls_per_match": 12.0,
+          "offsides_per_match": 1.0,
           "saves_per_match": 1.5,
-          "accurate_passes_per_match": 642.5,
-          "total_passes_per_match": 703.5,
+          "accurate_passes_per_match": 496.0,
+          "total_passes_per_match": 553.5,
           "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 5.5,
-          "total_crosses_per_match": 22.5,
-          "blocked_shots_per_match": 2.5,
-          "total_tackles_per_match": 13.0,
+          "accurate_crosses_per_match": 6.5,
+          "total_crosses_per_match": 21.5,
+          "blocked_shots_per_match": 5.5,
+          "total_tackles_per_match": 11.5,
           "interceptions_per_match": 4.0,
-          "clearances_per_match": 13.0,
+          "clearances_per_match": 11.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 65.715,
-          "attacking_pressure_index_per_match": 59.224999999999994
+          "dominance_index_per_match": 69.44500000000001,
+          "attacking_pressure_index_per_match": 74.96000000000001
         },
-        "home_factor_score": 0.27,
-        "away_factor_score": 0.3059275,
-        "probability_adjustment": -0.0359275,
+        "away_advanced_profile": {
+          "team": "Ghana",
+          "matches": 2,
+          "shots": 9.0,
+          "shots_on_target": 3.0,
+          "possession": 59.1,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 4.0,
+          "yellow_cards": 2.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 33.0,
+          "offsides": 6.0,
+          "saves": 7.0,
+          "accurate_passes": 419.0,
+          "total_passes": 524.0,
+          "pass_pct": 1.5,
+          "accurate_crosses": 4.0,
+          "total_crosses": 21.0,
+          "blocked_shots": 2.0,
+          "total_tackles": 38.0,
+          "interceptions": 16.0,
+          "clearances": 67.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 56.78999999999999,
+          "attacking_pressure_index": 57.900000000000006,
+          "shots_per_match": 4.5,
+          "shots_on_target_per_match": 1.5,
+          "possession_per_match": 29.55,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 2.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 16.5,
+          "offsides_per_match": 3.0,
+          "saves_per_match": 3.5,
+          "accurate_passes_per_match": 209.5,
+          "total_passes_per_match": 262.0,
+          "pass_pct_per_match": 0.75,
+          "accurate_crosses_per_match": 2.0,
+          "total_crosses_per_match": 10.5,
+          "blocked_shots_per_match": 1.0,
+          "total_tackles_per_match": 19.0,
+          "interceptions_per_match": 8.0,
+          "clearances_per_match": 33.5,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 28.394999999999996,
+          "attacking_pressure_index_per_match": 28.950000000000003
+        },
+        "home_factor_score": 0.39444550000000006,
+        "away_factor_score": -0.011547499999999988,
+        "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 3.",
-            "impact": 0.083
+            "value": "3 نقطة من 1 مباراة، فارق أهداف 2.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 12.",
+            "value": "Seed rank داخل النموذج: 4.",
             "impact": 0.07
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 5.",
-            "impact": 0.11
+            "value": "3 نقطة من 1 مباراة، فارق أهداف 1.",
+            "impact": 0.055
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 6.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 45.",
+            "impact": 0.02
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 65.3%، ضغط هجومي 75.0.",
+            "impact": 0.084
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 70.7%، ضغط هجومي 59.2.",
-            "impact": 0.031
+            "value": "xG 0.00، تسديدات على المرمى 1.5، استحواذ 29.6%، ضغط هجومي 29.0.",
+            "impact": -0.192
           }
         ]
       }
@@ -3422,64 +3218,64 @@
       "summary": "Scored 1 high-impact contextual cues.",
       "warnings": [],
       "payload": {
-        "home_adjustment": 0.0,
-        "away_adjustment": -0.010201841168984304,
+        "home_adjustment": -0.02150508631244886,
+        "away_adjustment": 0.0,
         "events": [
           {
             "event_type": "favorite_pressure",
-            "description": "Portugal carries heavy favorite pressure in a decisive group fixture.",
-            "hours_to_kickoff": 109.5,
-            "time_weight": 0.416,
-            "signed_effect": 0.0102,
-            "benefits": "against_away"
+            "description": "England carries heavy favorite pressure in a decisive group fixture.",
+            "hours_to_kickoff": 10.0,
+            "time_weight": 0.878,
+            "signed_effect": 0.0215,
+            "benefits": "against_home"
           }
         ]
       }
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Colombia 66.7 vs Portugal 75.7.",
+      "summary": "Computed long-run country-strength layer: England 84.9 vs Ghana 60.4.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Colombia",
+          "team": "England",
           "found": true,
-          "notes": "Strong talent base and climate familiarity.",
-          "gdp_per_capita_index": 47.0,
-          "population_index": 57.0,
-          "football_market_index": 72.0,
-          "academy_pipeline_index": 72.0,
-          "climate_fit_index": 82.0,
-          "league_export_index": 70.0,
-          "home_region_fit_index": 74.0
+          "notes": "Very high market and league power.",
+          "gdp_per_capita_index": 84.0,
+          "population_index": 63.0,
+          "football_market_index": 96.0,
+          "academy_pipeline_index": 88.0,
+          "climate_fit_index": 72.0,
+          "league_export_index": 96.0,
+          "home_region_fit_index": 68.0
         },
         "away_profile": {
-          "team": "Portugal",
+          "team": "Ghana",
           "found": true,
-          "notes": "Small population but elite export model.",
-          "gdp_per_capita_index": 70.0,
-          "population_index": 36.0,
-          "football_market_index": 88.0,
-          "academy_pipeline_index": 84.0,
-          "climate_fit_index": 78.0,
-          "league_export_index": 88.0,
-          "home_region_fit_index": 66.0
+          "notes": "Strong talent identity with lower macro base.",
+          "gdp_per_capita_index": 34.0,
+          "population_index": 48.0,
+          "football_market_index": 66.0,
+          "academy_pipeline_index": 68.0,
+          "climate_fit_index": 84.0,
+          "league_export_index": 64.0,
+          "home_region_fit_index": 72.0
         },
-        "home_score": 66.65,
-        "away_score": 75.66,
-        "probability_adjustment": -0.00900999999999999,
+        "home_score": 84.87,
+        "away_score": 60.38,
+        "probability_adjustment": 0.02449,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 66.7/100: دخل 47، سكان 57، سوق كرة 72، أكاديميات 72، مناخ 82.",
-            "impact": 0.017
+            "value": "قوة بنيوية 84.9/100: دخل 84، سكان 63، سوق كرة 96، أكاديميات 88، مناخ 72.",
+            "impact": 0.035
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 75.7/100: دخل 70، سكان 36، سوق كرة 88، أكاديميات 84، مناخ 78.",
-            "impact": 0.026
+            "value": "قوة بنيوية 60.4/100: دخل 34، سكان 48، سوق كرة 66، أكاديميات 68، مناخ 84.",
+            "impact": 0.01
           }
         ]
       }
@@ -3488,90 +3284,101 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        "Tournament sample is still small; prediction should stay conservative."
       ],
       "payload": {
-        "favorite": "away_win",
+        "favorite": "home_win",
         "objections": [],
         "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: away_win.",
+      "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.279139836115129,
-        "draw": 0.2689198220886122,
-        "away_win": 0.4519403417962588,
+        "home_win": 0.6333523063785103,
+        "draw": 0.25058828991453097,
+        "away_win": 0.11605940370695882,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.3205910320783172,
-          "away": 1.517597519310891
+          "home": 1.7352324879227057,
+          "away": 1.4357708499866773
         },
         "key_factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 66.7/100: دخل 47، سكان 57، سوق كرة 72، أكاديميات 72، مناخ 82.",
-            "impact": 0.017
+            "value": "قوة بنيوية 84.9/100: دخل 84، سكان 63، سوق كرة 96، أكاديميات 88، مناخ 72.",
+            "impact": 0.035
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 75.7/100: دخل 70، سكان 36، سوق كرة 88، أكاديميات 84، مناخ 78.",
-            "impact": 0.026
+            "value": "قوة بنيوية 60.4/100: دخل 34، سكان 48، سوق كرة 66، أكاديميات 68، مناخ 84.",
+            "impact": 0.01
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 3.",
-            "impact": 0.083
-          },
-          {
-            "side": "home",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 12.",
-            "impact": 0.07
-          },
-          {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 5.",
+            "value": "3 نقطة من 1 مباراة، فارق أهداف 2.",
             "impact": 0.11
           },
           {
+            "side": "home",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 4.",
+            "impact": 0.07
+          },
+          {
+            "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "3 نقطة من 1 مباراة، فارق أهداف 1.",
+            "impact": 0.055
+          },
+          {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 6.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 45.",
+            "impact": 0.02
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 65.3%، ضغط هجومي 75.0.",
+            "impact": 0.084
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 70.7%، ضغط هجومي 59.2.",
-            "impact": 0.031
+            "value": "xG 0.00، تسديدات على المرمى 1.5، استحواذ 29.6%، ضغط هجومي 29.0.",
+            "impact": -0.192
           },
           {
-            "side": "home",
+            "side": "away",
             "label": "أثر فراشة",
-            "value": "Portugal carries heavy favorite pressure in a decisive group fixture.",
-            "impact": 0.0102
+            "value": "England carries heavy favorite pressure in a decisive group fixture.",
+            "impact": 0.0215
           }
         ],
         "data_quality_warnings": [
-          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+          "Tournament sample is still small; prediction should stay conservative."
         ],
-        "calibration_version": 40,
-        "recommended_label": "away_win",
-        "explanation": "Colombia vs Portugal: baseline model favors away_win; butterfly cues: Portugal carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
+        "calibration_version": 44,
+        "recommended_label": "home_win",
+        "explanation": "England vs Ghana: baseline model favors home_win; butterfly cues: England carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
     },
     "self_correction": {
-      "status": "pending",
-      "summary": "Actual result is not available yet; calibration update skipped.",
+      "status": "updated",
+      "summary": "Compared forecast with actual result; increase weight of challenged factors.",
       "warnings": [],
-      "payload": {}
+      "payload": {
+        "actual_outcome": "draw",
+        "brier_score": 0.9762228403970202,
+        "log_loss": 1.3839439658061752,
+        "calibration_note": "increase weight of challenged factors"
+      }
     }
   }
 }

@@ -1,29 +1,30 @@
 {
   "match": {
-    "match_id": "WC-065",
-    "home_team": "Colombia",
-    "away_team": "Portugal",
-    "kickoff_utc": "2026-06-27T23:30:00+00:00",
-    "group": "Group K",
-    "ground": "Miami (Miami Gardens)",
-    "round": "Matchday 17",
+    "match_id": "WC-012",
+    "home_team": "Bosnia & Herzegovina",
+    "away_team": "Qatar",
+    "kickoff_utc": "2026-06-24T19:00:00+00:00",
+    "group": "Group B",
+    "ground": "Seattle",
+    "round": "Matchday 14",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
+    "data_collection: ok - Loaded 49 historical matches, 47 team priors, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Colombia and Portugal.",
-    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Colombia 66.7 vs Portugal 75.7.",
-    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: away_win.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Bosnia & Herzegovina and Qatar.",
+    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
+    "critic_auditor: reviewed - Devil's Advocate found 1 objections.",
+    "synthesizer: ok - Final forecast: home_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
-      "warnings": [],
+      "summary": "Loaded 49 historical matches, 47 team priors, and 0 live event cues.",
+      "warnings": [
+        "No butterfly events found for this match."
+      ],
       "payload": {
         "historical_results": [
           {
@@ -46,18 +47,6 @@
           },
           {
             "home_team": "Mexico",
-            "away_team": "South Korea",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
-            "home_team": "Czech Republic",
-            "away_team": "Mexico",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "South Africa",
             "away_team": "South Korea",
             "home_goals": 1,
             "away_goals": 0
@@ -93,12 +82,6 @@
             "away_goals": 1
           },
           {
-            "home_team": "Bosnia & Herzegovina",
-            "away_team": "Qatar",
-            "home_goals": 3,
-            "away_goals": 1
-          },
-          {
             "home_team": "Brazil",
             "away_team": "Morocco",
             "home_goals": 1,
@@ -121,18 +104,6 @@
             "away_team": "Haiti",
             "home_goals": 3,
             "away_goals": 0
-          },
-          {
-            "home_team": "Scotland",
-            "away_team": "Brazil",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "Morocco",
-            "away_team": "Haiti",
-            "home_goals": 4,
-            "away_goals": 2
           },
           {
             "home_team": "USA",
@@ -351,17 +322,7 @@
             "away_goals": 1
           }
         ],
-        "butterfly_events": [
-          {
-            "match_id": "WC-065",
-            "event_time_utc": "2026-06-23T10:00:00Z",
-            "event_type": "favorite_pressure",
-            "description": "Portugal carries heavy favorite pressure in a decisive group fixture.",
-            "impact": "medium",
-            "confidence": "medium",
-            "benefits": "against_away"
-          }
-        ],
+        "butterfly_events": [],
         "team_priors": {
           "France": [
             1.18,
@@ -985,130 +946,6 @@
             "momentum_last_15": "",
             "dominance_index": "31.18",
             "attacking_pressure_index": "18.16",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-017",
-            "team": "Brazil",
-            "shots": "21.0",
-            "shots_on_target": "9.0",
-            "possession": "54.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "1.0",
-            "saves": "5.0",
-            "accurate_passes": "564.0",
-            "total_passes": "607.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "2.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "14.0",
-            "interceptions": "13.0",
-            "clearances": "23.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.5",
-            "attacking_pressure_index": "59.34",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-017",
-            "team": "Scotland",
-            "shots": "14.0",
-            "shots_on_target": "5.0",
-            "possession": "45.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "5.0",
-            "accurate_passes": "448.0",
-            "total_passes": "500.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "10.0",
-            "total_crosses": "23.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "11.0",
-            "interceptions": "2.0",
-            "clearances": "13.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.5",
-            "attacking_pressure_index": "40.66",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-018",
-            "team": "Haiti",
-            "shots": "9.0",
-            "shots_on_target": "2.0",
-            "possession": "31.0",
-            "xg": "",
-            "big_chances": "",
-            "corners": "1.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "18.0",
-            "offsides": "0.0",
-            "saves": "8.0",
-            "accurate_passes": "198.0",
-            "total_passes": "248.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "2.0",
-            "total_crosses": "3.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "25.0",
-            "interceptions": "14.0",
-            "clearances": "26.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "27.58",
-            "attacking_pressure_index": "19.28",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-018",
-            "team": "Morocco",
-            "shots": "22.0",
-            "shots_on_target": "11.0",
-            "possession": "69.0",
-            "xg": "",
-            "big_chances": "",
-            "corners": "9.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "5.0",
-            "saves": "1.0",
-            "accurate_passes": "479.0",
-            "total_passes": "542.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "7.0",
-            "total_crosses": "22.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "18.0",
-            "interceptions": "7.0",
-            "clearances": "14.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "72.42",
-            "attacking_pressure_index": "80.72",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -2601,577 +2438,8 @@
             "source": "ESPN"
           }
         ],
-        "economic_world": [
-          {
-            "team": "France",
-            "gdp_per_capita_index": "82",
-            "population_index": "64",
-            "football_market_index": "95",
-            "academy_pipeline_index": "94",
-            "climate_fit_index": "78",
-            "league_export_index": "95",
-            "home_region_fit_index": "72",
-            "notes": "Elite economy-football pipeline with deep exports and academies."
-          },
-          {
-            "team": "Argentina",
-            "gdp_per_capita_index": "58",
-            "population_index": "54",
-            "football_market_index": "90",
-            "academy_pipeline_index": "88",
-            "climate_fit_index": "76",
-            "league_export_index": "86",
-            "home_region_fit_index": "70",
-            "notes": "Historic football culture offsets weaker macro economy."
-          },
-          {
-            "team": "Spain",
-            "gdp_per_capita_index": "76",
-            "population_index": "55",
-            "football_market_index": "94",
-            "academy_pipeline_index": "92",
-            "climate_fit_index": "80",
-            "league_export_index": "94",
-            "home_region_fit_index": "70",
-            "notes": "Elite league and academy structure."
-          },
-          {
-            "team": "England",
-            "gdp_per_capita_index": "84",
-            "population_index": "63",
-            "football_market_index": "96",
-            "academy_pipeline_index": "88",
-            "climate_fit_index": "72",
-            "league_export_index": "96",
-            "home_region_fit_index": "68",
-            "notes": "Very high market and league power."
-          },
-          {
-            "team": "Brazil",
-            "gdp_per_capita_index": "54",
-            "population_index": "92",
-            "football_market_index": "93",
-            "academy_pipeline_index": "90",
-            "climate_fit_index": "82",
-            "league_export_index": "88",
-            "home_region_fit_index": "74",
-            "notes": "Large population and extreme football culture."
-          },
-          {
-            "team": "Portugal",
-            "gdp_per_capita_index": "70",
-            "population_index": "36",
-            "football_market_index": "88",
-            "academy_pipeline_index": "84",
-            "climate_fit_index": "78",
-            "league_export_index": "88",
-            "home_region_fit_index": "66",
-            "notes": "Small population but elite export model."
-          },
-          {
-            "team": "Netherlands",
-            "gdp_per_capita_index": "84",
-            "population_index": "42",
-            "football_market_index": "86",
-            "academy_pipeline_index": "90",
-            "climate_fit_index": "74",
-            "league_export_index": "90",
-            "home_region_fit_index": "66",
-            "notes": "High academy efficiency and export pipeline."
-          },
-          {
-            "team": "Belgium",
-            "gdp_per_capita_index": "83",
-            "population_index": "38",
-            "football_market_index": "84",
-            "academy_pipeline_index": "82",
-            "climate_fit_index": "72",
-            "league_export_index": "84",
-            "home_region_fit_index": "66",
-            "notes": "Small population but strong modern pipeline."
-          },
-          {
-            "team": "Germany",
-            "gdp_per_capita_index": "86",
-            "population_index": "68",
-            "football_market_index": "92",
-            "academy_pipeline_index": "88",
-            "climate_fit_index": "72",
-            "league_export_index": "92",
-            "home_region_fit_index": "68",
-            "notes": "Large economy and deep league infrastructure."
-          },
-          {
-            "team": "Croatia",
-            "gdp_per_capita_index": "62",
-            "population_index": "28",
-            "football_market_index": "80",
-            "academy_pipeline_index": "82",
-            "climate_fit_index": "74",
-            "league_export_index": "80",
-            "home_region_fit_index": "66",
-            "notes": "Small country with exceptional talent conversion."
-          },
-          {
-            "team": "Uruguay",
-            "gdp_per_capita_index": "61",
-            "population_index": "25",
-            "football_market_index": "78",
-            "academy_pipeline_index": "78",
-            "climate_fit_index": "78",
-            "league_export_index": "76",
-            "home_region_fit_index": "70",
-            "notes": "Small population but elite football identity."
-          },
-          {
-            "team": "Mexico",
-            "gdp_per_capita_index": "60",
-            "population_index": "72",
-            "football_market_index": "76",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "82",
-            "league_export_index": "70",
-            "home_region_fit_index": "92",
-            "notes": "Host-region advantage and large football market."
-          },
-          {
-            "team": "USA",
-            "gdp_per_capita_index": "94",
-            "population_index": "96",
-            "football_market_index": "78",
-            "academy_pipeline_index": "74",
-            "climate_fit_index": "78",
-            "league_export_index": "74",
-            "home_region_fit_index": "95",
-            "notes": "Massive economy and host advantage",
-            "null": [
-              " developing football culture."
-            ]
-          },
-          {
-            "team": "Morocco",
-            "gdp_per_capita_index": "45",
-            "population_index": "52",
-            "football_market_index": "74",
-            "academy_pipeline_index": "76",
-            "climate_fit_index": "82",
-            "league_export_index": "72",
-            "home_region_fit_index": "72",
-            "notes": "Strong diaspora and rising academy/export model."
-          },
-          {
-            "team": "Switzerland",
-            "gdp_per_capita_index": "95",
-            "population_index": "34",
-            "football_market_index": "72",
-            "academy_pipeline_index": "76",
-            "climate_fit_index": "72",
-            "league_export_index": "76",
-            "home_region_fit_index": "66",
-            "notes": "High economy and stable development system."
-          },
-          {
-            "team": "Canada",
-            "gdp_per_capita_index": "88",
-            "population_index": "53",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "66",
-            "league_export_index": "64",
-            "home_region_fit_index": "94",
-            "notes": "Host advantage and improving pipeline."
-          },
-          {
-            "team": "Colombia",
-            "gdp_per_capita_index": "47",
-            "population_index": "57",
-            "football_market_index": "72",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "82",
-            "league_export_index": "70",
-            "home_region_fit_index": "74",
-            "notes": "Strong talent base and climate familiarity."
-          },
-          {
-            "team": "Japan",
-            "gdp_per_capita_index": "82",
-            "population_index": "76",
-            "football_market_index": "70",
-            "academy_pipeline_index": "76",
-            "climate_fit_index": "76",
-            "league_export_index": "72",
-            "home_region_fit_index": "60",
-            "notes": "High organization and technical development."
-          },
-          {
-            "team": "Sweden",
-            "gdp_per_capita_index": "82",
-            "population_index": "38",
-            "football_market_index": "70",
-            "academy_pipeline_index": "74",
-            "climate_fit_index": "64",
-            "league_export_index": "74",
-            "home_region_fit_index": "62",
-            "notes": "Stable development and exports."
-          },
-          {
-            "team": "Austria",
-            "gdp_per_capita_index": "86",
-            "population_index": "34",
-            "football_market_index": "68",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "66",
-            "league_export_index": "72",
-            "home_region_fit_index": "64",
-            "notes": "Strong Central European football infrastructure."
-          },
-          {
-            "team": "Turkey",
-            "gdp_per_capita_index": "54",
-            "population_index": "68",
-            "football_market_index": "72",
-            "academy_pipeline_index": "70",
-            "climate_fit_index": "76",
-            "league_export_index": "72",
-            "home_region_fit_index": "64",
-            "notes": "Large population and serious domestic league."
-          },
-          {
-            "team": "Ecuador",
-            "gdp_per_capita_index": "43",
-            "population_index": "46",
-            "football_market_index": "66",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "84",
-            "league_export_index": "64",
-            "home_region_fit_index": "72",
-            "notes": "Altitude/climate adaptation and strong recent pipeline."
-          },
-          {
-            "team": "Senegal",
-            "gdp_per_capita_index": "35",
-            "population_index": "47",
-            "football_market_index": "70",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "84",
-            "league_export_index": "68",
-            "home_region_fit_index": "72",
-            "notes": "Elite exports and strong athletic/talent conversion."
-          },
-          {
-            "team": "Ghana",
-            "gdp_per_capita_index": "34",
-            "population_index": "48",
-            "football_market_index": "66",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "84",
-            "league_export_index": "64",
-            "home_region_fit_index": "72",
-            "notes": "Strong talent identity with lower macro base."
-          },
-          {
-            "team": "Ivory Coast",
-            "gdp_per_capita_index": "36",
-            "population_index": "45",
-            "football_market_index": "68",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "84",
-            "league_export_index": "66",
-            "home_region_fit_index": "72",
-            "notes": "Strong exports and athletic profile."
-          },
-          {
-            "team": "South Korea",
-            "gdp_per_capita_index": "80",
-            "population_index": "57",
-            "football_market_index": "68",
-            "academy_pipeline_index": "74",
-            "climate_fit_index": "72",
-            "league_export_index": "70",
-            "home_region_fit_index": "58",
-            "notes": "Organized system and strong economy."
-          },
-          {
-            "team": "Australia",
-            "gdp_per_capita_index": "88",
-            "population_index": "50",
-            "football_market_index": "58",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "70",
-            "league_export_index": "60",
-            "home_region_fit_index": "58",
-            "notes": "High economy",
-            "null": [
-              " thinner football depth."
-            ]
-          },
-          {
-            "team": "Norway",
-            "gdp_per_capita_index": "96",
-            "population_index": "30",
-            "football_market_index": "68",
-            "academy_pipeline_index": "70",
-            "climate_fit_index": "58",
-            "league_export_index": "70",
-            "home_region_fit_index": "60",
-            "notes": "High economy and improving elite talent."
-          },
-          {
-            "team": "Scotland",
-            "gdp_per_capita_index": "78",
-            "population_index": "30",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "58",
-            "league_export_index": "66",
-            "home_region_fit_index": "62",
-            "notes": "Historic football system",
-            "null": [
-              " limited population."
-            ]
-          },
-          {
-            "team": "Czech Republic",
-            "gdp_per_capita_index": "74",
-            "population_index": "38",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "66",
-            "league_export_index": "66",
-            "home_region_fit_index": "62",
-            "notes": "Stable Central European development."
-          },
-          {
-            "team": "Paraguay",
-            "gdp_per_capita_index": "42",
-            "population_index": "34",
-            "football_market_index": "62",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "80",
-            "league_export_index": "60",
-            "home_region_fit_index": "70",
-            "notes": "Football culture stronger than macro base."
-          },
-          {
-            "team": "Qatar",
-            "gdp_per_capita_index": "96",
-            "population_index": "25",
-            "football_market_index": "54",
-            "academy_pipeline_index": "60",
-            "climate_fit_index": "90",
-            "league_export_index": "56",
-            "home_region_fit_index": "82",
-            "notes": "Very high wealth and climate/region fit",
-            "null": [
-              " limited population."
-            ]
-          },
-          {
-            "team": "Saudi Arabia",
-            "gdp_per_capita_index": "74",
-            "population_index": "51",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "92",
-            "league_export_index": "64",
-            "home_region_fit_index": "82",
-            "notes": "High investment and region climate fit."
-          },
-          {
-            "team": "South Africa",
-            "gdp_per_capita_index": "43",
-            "population_index": "55",
-            "football_market_index": "56",
-            "academy_pipeline_index": "58",
-            "climate_fit_index": "78",
-            "league_export_index": "56",
-            "home_region_fit_index": "70",
-            "notes": "Large market but uneven football pipeline."
-          },
-          {
-            "team": "Tunisia",
-            "gdp_per_capita_index": "42",
-            "population_index": "40",
-            "football_market_index": "58",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "86",
-            "league_export_index": "58",
-            "home_region_fit_index": "74",
-            "notes": "North African climate fit and organized football base."
-          },
-          {
-            "team": "Egypt",
-            "gdp_per_capita_index": "36",
-            "population_index": "77",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "88",
-            "league_export_index": "60",
-            "home_region_fit_index": "78",
-            "notes": "Large population and strong football culture."
-          },
-          {
-            "team": "Iran",
-            "gdp_per_capita_index": "45",
-            "population_index": "69",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "84",
-            "league_export_index": "60",
-            "home_region_fit_index": "72",
-            "notes": "Large population and organized competitive base."
-          },
-          {
-            "team": "Iraq",
-            "gdp_per_capita_index": "32",
-            "population_index": "54",
-            "football_market_index": "52",
-            "academy_pipeline_index": "56",
-            "climate_fit_index": "88",
-            "league_export_index": "52",
-            "home_region_fit_index": "76",
-            "notes": "Strong culture",
-            "null": [
-              " limited infrastructure consistency."
-            ]
-          },
-          {
-            "team": "Jordan",
-            "gdp_per_capita_index": "43",
-            "population_index": "35",
-            "football_market_index": "46",
-            "academy_pipeline_index": "50",
-            "climate_fit_index": "88",
-            "league_export_index": "46",
-            "home_region_fit_index": "76",
-            "notes": "Regional fit",
-            "null": [
-              " smaller football economy."
-            ]
-          },
-          {
-            "team": "Algeria",
-            "gdp_per_capita_index": "46",
-            "population_index": "56",
-            "football_market_index": "64",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "86",
-            "league_export_index": "64",
-            "home_region_fit_index": "76",
-            "notes": "Strong diaspora and football culture."
-          },
-          {
-            "team": "Bosnia & Herzegovina",
-            "gdp_per_capita_index": "50",
-            "population_index": "27",
-            "football_market_index": "60",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "68",
-            "league_export_index": "62",
-            "home_region_fit_index": "64",
-            "notes": "Small population with export tradition."
-          },
-          {
-            "team": "New Zealand",
-            "gdp_per_capita_index": "82",
-            "population_index": "29",
-            "football_market_index": "42",
-            "academy_pipeline_index": "46",
-            "climate_fit_index": "64",
-            "league_export_index": "42",
-            "home_region_fit_index": "58",
-            "notes": "High economy",
-            "null": [
-              " limited football market depth."
-            ]
-          },
-          {
-            "team": "Panama",
-            "gdp_per_capita_index": "55",
-            "population_index": "28",
-            "football_market_index": "48",
-            "academy_pipeline_index": "52",
-            "climate_fit_index": "88",
-            "league_export_index": "48",
-            "home_region_fit_index": "76",
-            "notes": "Climate familiarity",
-            "null": [
-              " smaller football depth."
-            ]
-          },
-          {
-            "team": "Uzbekistan",
-            "gdp_per_capita_index": "34",
-            "population_index": "52",
-            "football_market_index": "48",
-            "academy_pipeline_index": "54",
-            "climate_fit_index": "76",
-            "league_export_index": "48",
-            "home_region_fit_index": "66",
-            "notes": "Rising football system",
-            "null": [
-              " modest macro base."
-            ]
-          },
-          {
-            "team": "DR Congo",
-            "gdp_per_capita_index": "22",
-            "population_index": "76",
-            "football_market_index": "54",
-            "academy_pipeline_index": "58",
-            "climate_fit_index": "86",
-            "league_export_index": "54",
-            "home_region_fit_index": "72",
-            "notes": "Large population and talent",
-            "null": [
-              " weak infrastructure."
-            ]
-          },
-          {
-            "team": "Haiti",
-            "gdp_per_capita_index": "18",
-            "population_index": "35",
-            "football_market_index": "42",
-            "academy_pipeline_index": "46",
-            "climate_fit_index": "86",
-            "league_export_index": "42",
-            "home_region_fit_index": "76",
-            "notes": "Low macro base",
-            "null": [
-              " diaspora/talent upside."
-            ]
-          },
-          {
-            "team": "Cape Verde",
-            "gdp_per_capita_index": "40",
-            "population_index": "23",
-            "football_market_index": "50",
-            "academy_pipeline_index": "54",
-            "climate_fit_index": "82",
-            "league_export_index": "50",
-            "home_region_fit_index": "72",
-            "notes": "Small population",
-            "null": [
-              " diaspora-driven football."
-            ]
-          },
-          {
-            "team": "Curaçao",
-            "gdp_per_capita_index": "55",
-            "population_index": "20",
-            "football_market_index": "46",
-            "academy_pipeline_index": "50",
-            "climate_fit_index": "84",
-            "league_export_index": "46",
-            "home_region_fit_index": "74",
-            "notes": "Small population",
-            "null": [
-              " diaspora-driven football."
-            ]
-          }
-        ],
         "calibration": {
-          "version": 40,
+          "version": 30,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3206,16 +2474,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3227,78 +2485,78 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.32154194948839826,
-          "draw": 0.26825531641424827,
-          "away_win": 0.4102027340973537
+          "home_win": 0.402225991865022,
+          "draw": 0.2454929324078522,
+          "away_win": 0.3522810757271263
         },
         "expected_goals": {
-          "home": 1.3205910320783172,
-          "away": 1.517597519310891
+          "home": 1.714070244394054,
+          "away": 1.5952568755682626
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.12669420205412354
-          },
-          {
-            "home_goals": 1,
-            "away_goals": 2,
-            "probability": 0.08901426238352346
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.07944626275058429
+            "probability": 0.10792271650813455
           },
           {
             "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.07745890141157123
+            "probability": 0.0856421838244298
           },
           {
-            "home_goals": 0,
+            "home_goals": 1,
+            "away_goals": 2,
+            "probability": 0.07970576645352132
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 2,
+            "probability": 0.06831064129230136
+          },
+          {
+            "home_goals": 1,
             "away_goals": 0,
-            "probability": 0.06791873281821409
+            "probability": 0.05464669666295504
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Colombia and Portugal.",
+      "summary": "Computed tournament form and prior-strength factors for Bosnia & Herzegovina and Qatar.",
       "warnings": [
         "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
       ],
       "payload": {
         "home_profile": {
-          "team": "Colombia",
+          "team": "Bosnia & Herzegovina",
           "matches": 2,
-          "wins": 2,
-          "draws": 0,
-          "losses": 0,
-          "goals_for": 4,
-          "goals_against": 1,
-          "goal_difference": 3,
-          "points": 6,
-          "points_per_match": 3.0,
-          "seed_rank": 12
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 2,
+          "goals_against": 5,
+          "goal_difference": -3,
+          "points": 1,
+          "points_per_match": 0.5,
+          "seed_rank": 62
         },
         "away_profile": {
-          "team": "Portugal",
+          "team": "Qatar",
           "matches": 2,
-          "wins": 1,
+          "wins": 0,
           "draws": 1,
-          "losses": 0,
-          "goals_for": 6,
-          "goals_against": 1,
-          "goal_difference": 5,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 6
+          "losses": 1,
+          "goals_for": 1,
+          "goals_against": 7,
+          "goal_difference": -6,
+          "points": 1,
+          "points_per_match": 0.5,
+          "seed_rank": 32
         },
         "home_advanced_profile": {
-          "team": "Colombia",
+          "team": "Bosnia & Herzegovina",
           "matches": 0,
           "shots": 0.0,
           "shots_on_target": 0.0,
@@ -3327,244 +2585,196 @@
           "attacking_pressure_index": 0.0
         },
         "away_advanced_profile": {
-          "team": "Portugal",
+          "team": "Qatar",
           "matches": 2,
-          "shots": 24.0,
-          "shots_on_target": 10.0,
-          "possession": 141.4,
+          "shots": 8.0,
+          "shots_on_target": 3.0,
+          "possession": 53.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 8.0,
-          "yellow_cards": 4.0,
-          "red_cards": 0.0,
+          "corners": 4.0,
+          "yellow_cards": 3.0,
+          "red_cards": 2.0,
           "passes_into_final_third": 0.0,
-          "fouls": 23.0,
-          "offsides": 5.0,
-          "saves": 3.0,
-          "accurate_passes": 1285.0,
-          "total_passes": 1407.0,
-          "pass_pct": 1.8,
-          "accurate_crosses": 11.0,
-          "total_crosses": 45.0,
-          "blocked_shots": 5.0,
-          "total_tackles": 26.0,
-          "interceptions": 8.0,
-          "clearances": 26.0,
+          "fouls": 22.0,
+          "offsides": 1.0,
+          "saves": 9.0,
+          "accurate_passes": 304.0,
+          "total_passes": 440.0,
+          "pass_pct": 1.2999999999999998,
+          "accurate_crosses": 2.0,
+          "total_crosses": 12.0,
+          "blocked_shots": 1.0,
+          "total_tackles": 30.0,
+          "interceptions": 21.0,
+          "clearances": 92.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 131.43,
-          "attacking_pressure_index": 118.44999999999999,
-          "shots_per_match": 12.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 70.7,
+          "dominance_index": 43.17,
+          "attacking_pressure_index": 30.57,
+          "shots_per_match": 4.0,
+          "shots_on_target_per_match": 1.5,
+          "possession_per_match": 26.5,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 4.0,
-          "yellow_cards_per_match": 2.0,
-          "red_cards_per_match": 0.0,
+          "corners_per_match": 2.0,
+          "yellow_cards_per_match": 1.5,
+          "red_cards_per_match": 1.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 11.5,
-          "offsides_per_match": 2.5,
-          "saves_per_match": 1.5,
-          "accurate_passes_per_match": 642.5,
-          "total_passes_per_match": 703.5,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 5.5,
-          "total_crosses_per_match": 22.5,
-          "blocked_shots_per_match": 2.5,
-          "total_tackles_per_match": 13.0,
-          "interceptions_per_match": 4.0,
-          "clearances_per_match": 13.0,
+          "fouls_per_match": 11.0,
+          "offsides_per_match": 0.5,
+          "saves_per_match": 4.5,
+          "accurate_passes_per_match": 152.0,
+          "total_passes_per_match": 220.0,
+          "pass_pct_per_match": 0.6499999999999999,
+          "accurate_crosses_per_match": 1.0,
+          "total_crosses_per_match": 6.0,
+          "blocked_shots_per_match": 0.5,
+          "total_tackles_per_match": 15.0,
+          "interceptions_per_match": 10.5,
+          "clearances_per_match": 46.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 65.715,
-          "attacking_pressure_index_per_match": 59.224999999999994
+          "dominance_index_per_match": 21.585,
+          "attacking_pressure_index_per_match": 15.285
         },
-        "home_factor_score": 0.27,
-        "away_factor_score": 0.3059275,
-        "probability_adjustment": -0.0359275,
+        "home_factor_score": -0.1565,
+        "away_factor_score": -0.41037250000000003,
+        "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 3.",
-            "impact": 0.083
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -3.",
+            "impact": -0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 12.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 62.",
+            "impact": -0.014
+          },
+          {
+            "side": "home",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 5 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 5.",
-            "impact": 0.11
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -6.",
+            "impact": -0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 6.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 32.",
+            "impact": 0.046
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 7 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 70.7%، ضغط هجومي 59.2.",
-            "impact": 0.031
+            "value": "xG 0.00، تسديدات على المرمى 1.5، استحواذ 26.5%، ضغط هجومي 15.3.",
+            "impact": -0.274
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 1 high-impact contextual cues.",
+      "summary": "Scored 0 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": -0.010201841168984304,
-        "events": [
-          {
-            "event_type": "favorite_pressure",
-            "description": "Portugal carries heavy favorite pressure in a decisive group fixture.",
-            "hours_to_kickoff": 109.5,
-            "time_weight": 0.416,
-            "signed_effect": 0.0102,
-            "benefits": "against_away"
-          }
-        ]
-      }
-    },
-    "economic_world": {
-      "status": "ok",
-      "summary": "Computed long-run country-strength layer: Colombia 66.7 vs Portugal 75.7.",
-      "warnings": [],
-      "payload": {
-        "home_profile": {
-          "team": "Colombia",
-          "found": true,
-          "notes": "Strong talent base and climate familiarity.",
-          "gdp_per_capita_index": 47.0,
-          "population_index": 57.0,
-          "football_market_index": 72.0,
-          "academy_pipeline_index": 72.0,
-          "climate_fit_index": 82.0,
-          "league_export_index": 70.0,
-          "home_region_fit_index": 74.0
-        },
-        "away_profile": {
-          "team": "Portugal",
-          "found": true,
-          "notes": "Small population but elite export model.",
-          "gdp_per_capita_index": 70.0,
-          "population_index": 36.0,
-          "football_market_index": 88.0,
-          "academy_pipeline_index": 84.0,
-          "climate_fit_index": 78.0,
-          "league_export_index": 88.0,
-          "home_region_fit_index": 66.0
-        },
-        "home_score": 66.65,
-        "away_score": 75.66,
-        "probability_adjustment": -0.00900999999999999,
-        "factors": [
-          {
-            "side": "home",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 66.7/100: دخل 47، سكان 57، سوق كرة 72، أكاديميات 72، مناخ 82.",
-            "impact": 0.017
-          },
-          {
-            "side": "away",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 75.7/100: دخل 70، سكان 36، سوق كرة 88، أكاديميات 84، مناخ 78.",
-            "impact": 0.026
-          }
-        ]
+        "away_adjustment": 0.0,
+        "events": []
       }
     },
     "critic_auditor": {
       "status": "reviewed",
-      "summary": "Devil's Advocate found 0 objections.",
+      "summary": "Devil's Advocate found 1 objections.",
       "warnings": [
+        "No butterfly events found for this match.",
         "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
       ],
       "payload": {
-        "favorite": "away_win",
-        "objections": [],
-        "confidence_penalty": 0.06
+        "favorite": "home_win",
+        "objections": [
+          "Baseline edge is narrow; avoid overconfident final probability."
+        ],
+        "confidence_penalty": 0.11
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: away_win.",
+      "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.279139836115129,
-        "draw": 0.2689198220886122,
-        "away_win": 0.4519403417962588,
-        "confidence_interval_width": 0.18,
+        "home_win": 0.5910259918650218,
+        "draw": 0.24549293240785208,
+        "away_win": 0.16348107572712622,
+        "confidence_interval_width": 0.22999999999999998,
         "expected_goals": {
-          "home": 1.3205910320783172,
-          "away": 1.517597519310891
+          "home": 1.714070244394054,
+          "away": 1.5952568755682626
         },
         "key_factors": [
           {
             "side": "home",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 66.7/100: دخل 47، سكان 57، سوق كرة 72، أكاديميات 72، مناخ 82.",
-            "impact": 0.017
-          },
-          {
-            "side": "away",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 75.7/100: دخل 70، سكان 36، سوق كرة 88، أكاديميات 84، مناخ 78.",
-            "impact": 0.026
-          },
-          {
-            "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 3.",
-            "impact": 0.083
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -3.",
+            "impact": -0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 12.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 62.",
+            "impact": -0.014
+          },
+          {
+            "side": "home",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 5 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 5.",
-            "impact": 0.11
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -6.",
+            "impact": -0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 6.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 32.",
+            "impact": 0.046
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 7 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 70.7%، ضغط هجومي 59.2.",
-            "impact": 0.031
-          },
-          {
-            "side": "home",
-            "label": "أثر فراشة",
-            "value": "Portugal carries heavy favorite pressure in a decisive group fixture.",
-            "impact": 0.0102
+            "value": "xG 0.00، تسديدات على المرمى 1.5، استحواذ 26.5%، ضغط هجومي 15.3.",
+            "impact": -0.274
           }
         ],
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 40,
-        "recommended_label": "away_win",
-        "explanation": "Colombia vs Portugal: baseline model favors away_win; butterfly cues: Portugal carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
+        "calibration_version": 30,
+        "recommended_label": "home_win",
+        "explanation": "Bosnia & Herzegovina vs Qatar: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
       }
     },
     "self_correction": {

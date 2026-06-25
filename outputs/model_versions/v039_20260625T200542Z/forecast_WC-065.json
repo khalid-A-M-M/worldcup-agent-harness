@@ -3171,7 +3171,7 @@
           }
         ],
         "calibration": {
-          "version": 40,
+          "version": 39,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3198,7 +3198,6 @@
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
             "Not enough completed forecasts for aggressive recalibration.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
@@ -3562,7 +3561,7 @@
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 40,
+        "calibration_version": 39,
         "recommended_label": "away_win",
         "explanation": "Colombia vs Portugal: baseline model favors away_win; butterfly cues: Portugal carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
