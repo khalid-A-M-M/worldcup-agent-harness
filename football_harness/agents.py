@@ -22,18 +22,21 @@ class DataCollectionAgent:
         team_priors_path: Path | None = None,
         advanced_stats_path: Path | None = None,
         calibration_path: Path | None = None,
+        economic_world_path: Path | None = None,
     ):
         self.historical_results_path = historical_results_path
         self.butterfly_events_path = butterfly_events_path
         self.team_priors_path = team_priors_path
         self.advanced_stats_path = advanced_stats_path
         self.calibration_path = calibration_path
+        self.economic_world_path = economic_world_path
 
     def run(self, state: PipelineState) -> AgentResult:
         results = load_results(self.historical_results_path)
         events = _read_csv(self.butterfly_events_path)
         team_priors = load_team_priors(self.team_priors_path) if self.team_priors_path else {}
         advanced_stats = _read_csv(self.advanced_stats_path) if self.advanced_stats_path and self.advanced_stats_path.exists() else []
+        economic_world = _read_csv(self.economic_world_path) if self.economic_world_path and self.economic_world_path.exists() else []
         calibration = _read_json(self.calibration_path) if self.calibration_path and self.calibration_path.exists() else {}
         match_events = [row for row in events if row["match_id"] == state.match.match_id]
 
@@ -48,7 +51,7 @@ class DataCollectionAgent:
             status="ok",
             summary=(
                 f"Loaded {len(results)} historical matches, {len(team_priors)} team priors, "
-                f"and {len(match_events)} live event cues."
+                f"{len(economic_world)} economic-world profiles, and {len(match_events)} live event cues."
             ),
             payload={
                 "historical_results": results,
@@ -56,6 +59,7 @@ class DataCollectionAgent:
                 "team_priors": team_priors,
                 "team_seed_ranks_path": str(self.team_priors_path) if self.team_priors_path else None,
                 "advanced_stats": advanced_stats,
+                "economic_world": economic_world,
                 "calibration": calibration,
             },
             warnings=warnings,
@@ -208,6 +212,88 @@ class ButterflyFactorsAgent:
         )
 
 
+class EconomicWorldAgent:
+    name = "economic_world"
+
+    columns = [
+        "gdp_per_capita_index",
+        "population_index",
+        "football_market_index",
+        "academy_pipeline_index",
+        "climate_fit_index",
+        "league_export_index",
+        "home_region_fit_index",
+    ]
+    weights = {
+        "gdp_per_capita_index": 0.16,
+        "population_index": 0.13,
+        "football_market_index": 0.23,
+        "academy_pipeline_index": 0.20,
+        "climate_fit_index": 0.08,
+        "league_export_index": 0.15,
+        "home_region_fit_index": 0.05,
+    }
+
+    def run(self, state: PipelineState) -> AgentResult:
+        rows = state.get_payload("data_collection").get("economic_world", [])
+        table = {row["team"]: row for row in rows}
+        home = self._profile(state.match.home_team, table)
+        away = self._profile(state.match.away_team, table)
+        home_score = self._score(home)
+        away_score = self._score(away)
+        diff = max(min((home_score - away_score) / 1000, 0.09), -0.09)
+        factors = self._factors(home, "home") + self._factors(away, "away")
+
+        warnings = []
+        if not home.get("found") or not away.get("found"):
+            warnings.append("Economic world profile is missing for at least one team; long-run country-strength layer is incomplete.")
+
+        return AgentResult(
+            agent_name=self.name,
+            status="ok",
+            summary=(
+                f"Computed long-run country-strength layer: "
+                f"{state.match.home_team} {home_score:.1f} vs {state.match.away_team} {away_score:.1f}."
+            ),
+            payload={
+                "home_profile": home,
+                "away_profile": away,
+                "home_score": home_score,
+                "away_score": away_score,
+                "probability_adjustment": diff,
+                "factors": factors,
+            },
+            warnings=warnings,
+        )
+
+    def _profile(self, team: str, table: Dict[str, Dict[str, str]]) -> Dict[str, Any]:
+        row = table.get(team)
+        if not row:
+            return {"team": team, "found": False, **{column: 50.0 for column in self.columns}, "notes": "missing"}
+        profile = {"team": team, "found": True, "notes": row.get("notes", "")}
+        for column in self.columns:
+            profile[column] = _safe_float(row.get(column), 50.0)
+        return profile
+
+    def _score(self, profile: Dict[str, Any]) -> float:
+        return sum(profile[column] * weight for column, weight in self.weights.items())
+
+    def _factors(self, profile: Dict[str, Any], side: str) -> List[Dict[str, Any]]:
+        score = self._score(profile)
+        return [
+            {
+                "side": side,
+                "label": "نموذج العالم الاقتصادي",
+                "value": (
+                    f"قوة بنيوية {score:.1f}/100: دخل {profile['gdp_per_capita_index']:.0f}، "
+                    f"سكان {profile['population_index']:.0f}، سوق كرة {profile['football_market_index']:.0f}، "
+                    f"أكاديميات {profile['academy_pipeline_index']:.0f}، مناخ {profile['climate_fit_index']:.0f}."
+                ),
+                "impact": round(max(min((score - 50) / 1000, 0.06), -0.06), 3),
+            }
+        ]
+
+
 class CriticAuditorAgent:
     name = "critic_auditor"
 
@@ -215,9 +301,11 @@ class CriticAuditorAgent:
         baseline = state.get_payload("specialist_analysis")["baseline_probabilities"]
         butterfly = state.get_payload("butterfly_factors")
         team_intel = state.get_payload("team_intelligence")
+        economic = state.get_payload("economic_world")
         data_result = state.results["data_collection"]
         warnings = list(data_result.warnings)
         warnings.extend(state.results["team_intelligence"].warnings)
+        warnings.extend(state.results.get("economic_world", AgentResult("economic_world", "missing", "")).warnings)
 
         favorite = max(baseline, key=baseline.get)
         objections = []
@@ -231,6 +319,10 @@ class CriticAuditorAgent:
             objections.append("Tournament form layer challenges the home-side baseline.")
         if favorite == "away_win" and team_intel["probability_adjustment"] > 0.05:
             objections.append("Tournament form layer challenges the away-side baseline.")
+        if favorite == "home_win" and economic.get("probability_adjustment", 0.0) < -0.04:
+            objections.append("Economic-world layer challenges the home-side baseline.")
+        if favorite == "away_win" and economic.get("probability_adjustment", 0.0) > 0.04:
+            objections.append("Economic-world layer challenges the away-side baseline.")
 
         confidence_penalty = 0.0
         if warnings:
@@ -258,6 +350,7 @@ class SynthesizerAgent:
         baseline = state.get_payload("specialist_analysis")["baseline_probabilities"]
         expected_goals = state.get_payload("specialist_analysis")["expected_goals"]
         team_intel = state.get_payload("team_intelligence")
+        economic = state.get_payload("economic_world")
         butterfly = state.get_payload("butterfly_factors")
         critic = state.get_payload("critic_auditor")
         calibration = state.get_payload("data_collection").get("calibration", {})
@@ -265,11 +358,13 @@ class SynthesizerAgent:
         team_weight = float(calibration.get("team_adjustment_weight", 1.0))
         butterfly_weight = float(calibration.get("butterfly_adjustment_weight", 1.0))
         confidence_weight = float(calibration.get("confidence_penalty_weight", 1.0))
+        economic_weight = float(calibration.get("economic_world_weight", 0.65))
         team_adjustment = team_intel["probability_adjustment"] * team_weight
+        economic_adjustment = economic.get("probability_adjustment", 0.0) * economic_weight
         home_butterfly = butterfly["home_adjustment"] * butterfly_weight
         away_butterfly = butterfly["away_adjustment"] * butterfly_weight
-        home = baseline["home_win"] + team_adjustment + home_butterfly - away_butterfly * 0.35
-        away = baseline["away_win"] - team_adjustment + away_butterfly - home_butterfly * 0.35
+        home = baseline["home_win"] + team_adjustment + economic_adjustment + home_butterfly - away_butterfly * 0.35
+        away = baseline["away_win"] - team_adjustment - economic_adjustment + away_butterfly - home_butterfly * 0.35
         draw = baseline["draw"] - abs(butterfly["home_adjustment"] - butterfly["away_adjustment"]) * 0.15
         home, draw, away = normalize_three_way(home, draw, away)
 
@@ -280,8 +375,8 @@ class SynthesizerAgent:
             "away_win": away,
             "confidence_interval_width": confidence_width,
             "expected_goals": expected_goals,
-            "key_factors": team_intel["factors"] + _butterfly_factor_cards(butterfly),
-            "data_quality_warnings": state.results["team_intelligence"].warnings,
+            "key_factors": economic.get("factors", []) + team_intel["factors"] + _butterfly_factor_cards(butterfly),
+            "data_quality_warnings": state.results["team_intelligence"].warnings + state.results.get("economic_world", AgentResult("economic_world", "missing", "")).warnings,
             "calibration_version": calibration.get("version", 1),
             "recommended_label": _label_for_probabilities(home, draw, away),
             "explanation": _build_explanation(state, home, draw, away),
@@ -343,6 +438,15 @@ def _read_csv(path: Path) -> List[Dict[str, str]]:
 
 def _read_json(path: Path) -> Dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _safe_float(value, default: float = 0.0) -> float:
+    if value in (None, ""):
+        return default
+    try:
+        return float(value)
+    except ValueError:
+        return default
 
 
 def _read_seed_ranks(path: str | None) -> Dict[str, int]:
