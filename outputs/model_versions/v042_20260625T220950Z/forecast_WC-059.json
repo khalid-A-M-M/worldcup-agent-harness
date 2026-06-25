@@ -10,7 +10,7 @@
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 56 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
     "team_intelligence: ok - Computed tournament form and prior-strength factors for Algeria and Austria.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
@@ -22,7 +22,7 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 56 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
       "warnings": [
         "No butterfly events found for this match."
       ],
@@ -183,18 +183,6 @@
             "away_team": "Curaçao",
             "home_goals": 0,
             "away_goals": 0
-          },
-          {
-            "home_team": "Curaçao",
-            "away_team": "Ivory Coast",
-            "home_goals": 0,
-            "away_goals": 2
-          },
-          {
-            "home_team": "Ecuador",
-            "away_team": "Germany",
-            "home_goals": 2,
-            "away_goals": 1
           },
           {
             "home_team": "Netherlands",
@@ -1361,130 +1349,6 @@
             "momentum_last_15": "",
             "dominance_index": "36.03",
             "attacking_pressure_index": "28.5",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-029",
-            "team": "Curaçao",
-            "shots": "11.0",
-            "shots_on_target": "2.0",
-            "possession": "36.6",
-            "xg": "",
-            "big_chances": "",
-            "corners": "4.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "1.0",
-            "accurate_passes": "295.0",
-            "total_passes": "354.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "5.0",
-            "total_crosses": "15.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "20.0",
-            "interceptions": "15.0",
-            "clearances": "17.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.09",
-            "attacking_pressure_index": "44.94",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-029",
-            "team": "Ivory Coast",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "63.4",
-            "xg": "",
-            "big_chances": "",
-            "corners": "6.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "6.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "558.0",
-            "total_passes": "623.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "3.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "17.0",
-            "interceptions": "12.0",
-            "clearances": "19.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.91",
-            "attacking_pressure_index": "55.06",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Ecuador",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "38.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "3.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "15.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "313.0",
-            "total_passes": "379.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "3.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "26.0",
-            "interceptions": "12.0",
-            "clearances": "29.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "41.15",
-            "attacking_pressure_index": "48.11",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Germany",
-            "shots": "11.0",
-            "shots_on_target": "3.0",
-            "possession": "61.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "1.0",
-            "accurate_passes": "517.0",
-            "total_passes": "592.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "5.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "20.0",
-            "interceptions": "4.0",
-            "clearances": "15.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "58.85",
-            "attacking_pressure_index": "51.89",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -3299,7 +3163,7 @@
           }
         ],
         "calibration": {
-          "version": 43,
+          "version": 42,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3346,7 +3210,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3358,39 +3221,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.29088385714128173,
-          "draw": 0.25352649932235716,
-          "away_win": 0.455589643536361
+          "home_win": 0.29117073182397757,
+          "draw": 0.25312948990696404,
+          "away_win": 0.4556997782690583
         },
         "expected_goals": {
-          "home": 1.335047236565309,
-          "away": 1.714500201218955
+          "home": 1.3390984740434015,
+          "away": 1.7185973417171487
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.11713707186227824
+            "probability": 0.11681772953696097
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09297756170281263
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.07256393955484801
+            "probability": 0.09294566641095091
           },
           {
             "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.07239977967087342
+            "probability": 0.07242150155748113
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 1,
+            "probability": 0.0721210023078167
           },
           {
             "home_goals": 0,
             "away_goals": 2,
-            "probability": 0.06964364942023851
+            "probability": 0.06940913473697113
           }
         ]
       }
@@ -3630,13 +3493,13 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.25562886714128175,
-        "draw": 0.2535264993223572,
-        "away_win": 0.4908446335363611,
+        "home_win": 0.2559157418239776,
+        "draw": 0.2531294899069641,
+        "away_win": 0.4909547682690584,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.335047236565309,
-          "away": 1.714500201218955
+          "home": 1.3390984740434015,
+          "away": 1.7185973417171487
         },
         "key_factors": [
           {
@@ -3691,7 +3554,7 @@
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 43,
+        "calibration_version": 42,
         "recommended_label": "away_win",
         "explanation": "Algeria vs Austria: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }

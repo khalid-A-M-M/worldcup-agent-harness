@@ -1,28 +1,28 @@
 {
   "match": {
-    "match_id": "WC-059",
-    "home_team": "Algeria",
-    "away_team": "Austria",
-    "kickoff_utc": "2026-06-28T02:00:00+00:00",
-    "group": "Group J",
-    "ground": "Kansas City",
-    "round": "Matchday 17",
+    "match_id": "WC-035",
+    "home_team": "Japan",
+    "away_team": "Sweden",
+    "kickoff_utc": "2026-06-25T23:00:00+00:00",
+    "group": "Group F",
+    "ground": "Dallas (Arlington)",
+    "round": "Matchday 15",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 56 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Algeria and Austria.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Japan and Sweden.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Algeria 63.2 vs Austria 67.5.",
+    "economic_world: ok - Computed long-run country-strength layer: Japan 74.2 vs Sweden 68.3.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: away_win.",
+    "synthesizer: ok - Final forecast: home_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 56 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
       "warnings": [
         "No butterfly events found for this match."
       ],
@@ -183,18 +183,6 @@
             "away_team": "Curaçao",
             "home_goals": 0,
             "away_goals": 0
-          },
-          {
-            "home_team": "Curaçao",
-            "away_team": "Ivory Coast",
-            "home_goals": 0,
-            "away_goals": 2
-          },
-          {
-            "home_team": "Ecuador",
-            "away_team": "Germany",
-            "home_goals": 2,
-            "away_goals": 1
           },
           {
             "home_team": "Netherlands",
@@ -1361,130 +1349,6 @@
             "momentum_last_15": "",
             "dominance_index": "36.03",
             "attacking_pressure_index": "28.5",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-029",
-            "team": "Curaçao",
-            "shots": "11.0",
-            "shots_on_target": "2.0",
-            "possession": "36.6",
-            "xg": "",
-            "big_chances": "",
-            "corners": "4.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "1.0",
-            "accurate_passes": "295.0",
-            "total_passes": "354.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "5.0",
-            "total_crosses": "15.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "20.0",
-            "interceptions": "15.0",
-            "clearances": "17.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.09",
-            "attacking_pressure_index": "44.94",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-029",
-            "team": "Ivory Coast",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "63.4",
-            "xg": "",
-            "big_chances": "",
-            "corners": "6.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "6.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "558.0",
-            "total_passes": "623.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "3.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "17.0",
-            "interceptions": "12.0",
-            "clearances": "19.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.91",
-            "attacking_pressure_index": "55.06",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Ecuador",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "38.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "3.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "15.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "313.0",
-            "total_passes": "379.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "3.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "26.0",
-            "interceptions": "12.0",
-            "clearances": "29.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "41.15",
-            "attacking_pressure_index": "48.11",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Germany",
-            "shots": "11.0",
-            "shots_on_target": "3.0",
-            "possession": "61.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "1.0",
-            "accurate_passes": "517.0",
-            "total_passes": "592.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "5.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "20.0",
-            "interceptions": "4.0",
-            "clearances": "15.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "58.85",
-            "attacking_pressure_index": "51.89",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -3299,7 +3163,7 @@
           }
         ],
         "calibration": {
-          "version": 43,
+          "version": 42,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3346,7 +3210,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3358,180 +3221,197 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.29088385714128173,
-          "draw": 0.25352649932235716,
-          "away_win": 0.455589643536361
+          "home_win": 0.5945159045373103,
+          "draw": 0.19068553813822,
+          "away_win": 0.21479855732446995
         },
         "expected_goals": {
-          "home": 1.335047236565309,
-          "away": 1.714500201218955
+          "home": 2.608804012984689,
+          "away": 1.5679854254530583
         },
         "top_scores": [
           {
-            "home_goals": 1,
+            "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.11713707186227824
+            "probability": 0.08201935539945784
+          },
+          {
+            "home_goals": 3,
+            "away_goals": 1,
+            "probability": 0.0713241411695077
           },
           {
             "home_goals": 1,
-            "away_goals": 2,
-            "probability": 0.09297756170281263
-          },
-          {
-            "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.07256393955484801
+            "probability": 0.06790920543706966
           },
           {
             "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.07239977967087342
+            "away_goals": 2,
+            "probability": 0.06430257693570224
           },
           {
-            "home_goals": 0,
+            "home_goals": 3,
             "away_goals": 2,
-            "probability": 0.06964364942023851
+            "probability": 0.05591760691837225
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Algeria and Austria.",
-      "warnings": [
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-      ],
+      "summary": "Computed tournament form and prior-strength factors for Japan and Sweden.",
+      "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Algeria",
+          "team": "Japan",
           "matches": 2,
           "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goals_for": 2,
-          "goals_against": 4,
-          "goal_difference": -2,
-          "points": 3,
-          "points_per_match": 1.5,
-          "seed_rank": 35
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 2,
+          "goal_difference": 4,
+          "points": 4,
+          "points_per_match": 2.0,
+          "seed_rank": 17
         },
         "away_profile": {
-          "team": "Austria",
+          "team": "Sweden",
           "matches": 2,
           "wins": 1,
           "draws": 0,
           "losses": 1,
-          "goals_for": 3,
-          "goals_against": 3,
+          "goals_for": 6,
+          "goals_against": 6,
           "goal_difference": 0,
           "points": 3,
           "points_per_match": 1.5,
-          "seed_rank": 22
+          "seed_rank": null
         },
         "home_advanced_profile": {
-          "team": "Algeria",
-          "matches": 0,
-          "shots": 0.0,
-          "shots_on_target": 0.0,
-          "possession": 0.0,
+          "team": "Japan",
+          "matches": 2,
+          "shots": 21.0,
+          "shots_on_target": 8.0,
+          "possession": 102.30000000000001,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 0.0,
+          "corners": 9.0,
           "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 0.0,
-          "offsides": 0.0,
-          "saves": 0.0,
-          "accurate_passes": 0.0,
-          "total_passes": 0.0,
-          "pass_pct": 0.0,
-          "accurate_crosses": 0.0,
-          "total_crosses": 0.0,
-          "blocked_shots": 0.0,
-          "total_tackles": 0.0,
-          "interceptions": 0.0,
-          "clearances": 0.0,
+          "fouls": 22.0,
+          "offsides": 1.0,
+          "saves": 4.0,
+          "accurate_passes": 807.0,
+          "total_passes": 924.0,
+          "pass_pct": 1.7000000000000002,
+          "accurate_crosses": 8.0,
+          "total_crosses": 34.0,
+          "blocked_shots": 4.0,
+          "total_tackles": 29.0,
+          "interceptions": 11.0,
+          "clearances": 57.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 0.0,
-          "attacking_pressure_index": 0.0
+          "dominance_index": 114.8,
+          "attacking_pressure_index": 125.27,
+          "shots_per_match": 10.5,
+          "shots_on_target_per_match": 4.0,
+          "possession_per_match": 51.150000000000006,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 4.5,
+          "yellow_cards_per_match": 0.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 11.0,
+          "offsides_per_match": 0.5,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 403.5,
+          "total_passes_per_match": 462.0,
+          "pass_pct_per_match": 0.8500000000000001,
+          "accurate_crosses_per_match": 4.0,
+          "total_crosses_per_match": 17.0,
+          "blocked_shots_per_match": 2.0,
+          "total_tackles_per_match": 14.5,
+          "interceptions_per_match": 5.5,
+          "clearances_per_match": 28.5,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 57.4,
+          "attacking_pressure_index_per_match": 62.635
         },
         "away_advanced_profile": {
-          "team": "Austria",
-          "matches": 2,
-          "shots": 17.0,
-          "shots_on_target": 5.0,
-          "possession": 109.6,
+          "team": "Sweden",
+          "matches": 1,
+          "shots": 16.0,
+          "shots_on_target": 8.0,
+          "possession": 49.1,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 7.0,
+          "corners": 5.0,
           "yellow_cards": 3.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 25.0,
+          "fouls": 12.0,
           "offsides": 3.0,
-          "saves": 5.0,
-          "accurate_passes": 888.0,
-          "total_passes": 1048.0,
-          "pass_pct": 1.7000000000000002,
-          "accurate_crosses": 6.0,
-          "total_crosses": 34.0,
-          "blocked_shots": 1.0,
-          "total_tackles": 29.0,
-          "interceptions": 24.0,
-          "clearances": 39.0,
+          "saves": 2.0,
+          "accurate_passes": 361.0,
+          "total_passes": 425.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 3.0,
+          "total_crosses": 21.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 18.0,
+          "interceptions": 5.0,
+          "clearances": 14.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 95.71000000000001,
-          "attacking_pressure_index": 88.22,
-          "shots_per_match": 8.5,
-          "shots_on_target_per_match": 2.5,
-          "possession_per_match": 54.8,
+          "dominance_index": 52.32,
+          "attacking_pressure_index": 58.58,
+          "shots_per_match": 16.0,
+          "shots_on_target_per_match": 8.0,
+          "possession_per_match": 49.1,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 3.5,
-          "yellow_cards_per_match": 1.5,
+          "corners_per_match": 5.0,
+          "yellow_cards_per_match": 3.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 12.5,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 2.5,
-          "accurate_passes_per_match": 444.0,
-          "total_passes_per_match": 524.0,
-          "pass_pct_per_match": 0.8500000000000001,
+          "fouls_per_match": 12.0,
+          "offsides_per_match": 3.0,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 361.0,
+          "total_passes_per_match": 425.0,
+          "pass_pct_per_match": 0.8,
           "accurate_crosses_per_match": 3.0,
-          "total_crosses_per_match": 17.0,
-          "blocked_shots_per_match": 0.5,
-          "total_tackles_per_match": 14.5,
-          "interceptions_per_match": 12.0,
-          "clearances_per_match": 19.5,
+          "total_crosses_per_match": 21.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 18.0,
+          "interceptions_per_match": 5.0,
+          "clearances_per_match": 14.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 47.855000000000004,
-          "attacking_pressure_index_per_match": 44.11
+          "dominance_index_per_match": 52.32,
+          "attacking_pressure_index_per_match": 58.58
         },
-        "home_factor_score": -0.0175,
-        "away_factor_score": 0.010030499999999998,
-        "probability_adjustment": -0.0275305,
+        "home_factor_score": 0.25489300000000004,
+        "away_factor_score": 0.031374000000000006,
+        "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 4.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 35.",
-            "impact": 0.04
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 4 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 17.",
+            "impact": 0.07
           },
           {
             "side": "away",
@@ -3541,15 +3421,21 @@
           },
           {
             "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 22.",
-            "impact": 0.066
+            "label": "إنذار دفاعي",
+            "value": "استقبل 6 أهداف في 2 مباراة.",
+            "impact": -0.045
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 51.2%، ضغط هجومي 62.6.",
+            "impact": -0.02
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 54.8%، ضغط هجومي 44.1.",
-            "impact": -0.078
+            "value": "xG 0.00، تسديدات على المرمى 8.0، استحواذ 49.1%، ضغط هجومي 58.6.",
+            "impact": 0.009
           }
         ]
       }
@@ -3566,47 +3452,47 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Algeria 63.2 vs Austria 67.5.",
+      "summary": "Computed long-run country-strength layer: Japan 74.2 vs Sweden 68.3.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Algeria",
+          "team": "Japan",
           "found": true,
-          "notes": "Strong diaspora and football culture.",
-          "gdp_per_capita_index": 46.0,
-          "population_index": 56.0,
-          "football_market_index": 64.0,
-          "academy_pipeline_index": 68.0,
-          "climate_fit_index": 86.0,
-          "league_export_index": 64.0,
-          "home_region_fit_index": 76.0
+          "notes": "High organization and technical development.",
+          "gdp_per_capita_index": 82.0,
+          "population_index": 76.0,
+          "football_market_index": 70.0,
+          "academy_pipeline_index": 76.0,
+          "climate_fit_index": 76.0,
+          "league_export_index": 72.0,
+          "home_region_fit_index": 60.0
         },
         "away_profile": {
-          "team": "Austria",
+          "team": "Sweden",
           "found": true,
-          "notes": "Strong Central European football infrastructure.",
-          "gdp_per_capita_index": 86.0,
-          "population_index": 34.0,
-          "football_market_index": 68.0,
-          "academy_pipeline_index": 72.0,
-          "climate_fit_index": 66.0,
-          "league_export_index": 72.0,
-          "home_region_fit_index": 64.0
+          "notes": "Stable development and exports.",
+          "gdp_per_capita_index": 82.0,
+          "population_index": 38.0,
+          "football_market_index": 70.0,
+          "academy_pipeline_index": 74.0,
+          "climate_fit_index": 64.0,
+          "league_export_index": 74.0,
+          "home_region_fit_index": 62.0
         },
-        "home_score": 63.24,
-        "away_score": 67.5,
-        "probability_adjustment": -0.004259999999999998,
+        "home_score": 74.18,
+        "away_score": 68.28,
+        "probability_adjustment": 0.005900000000000006,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.2/100: دخل 46، سكان 56، سوق كرة 64، أكاديميات 68، مناخ 86.",
-            "impact": 0.013
+            "value": "قوة بنيوية 74.2/100: دخل 82، سكان 76، سوق كرة 70، أكاديميات 76، مناخ 76.",
+            "impact": 0.024
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.5/100: دخل 86، سكان 34، سوق كرة 68، أكاديميات 72، مناخ 66.",
+            "value": "قوة بنيوية 68.3/100: دخل 82، سكان 38، سوق كرة 70، أكاديميات 74، مناخ 64.",
             "impact": 0.018
           }
         ]
@@ -3616,58 +3502,51 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "No butterfly events found for this match.",
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        "No butterfly events found for this match."
       ],
       "payload": {
-        "favorite": "away_win",
+        "favorite": "home_win",
         "objections": [],
         "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: away_win.",
+      "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.25562886714128175,
-        "draw": 0.2535264993223572,
-        "away_win": 0.4908446335363611,
+        "home_win": 0.7871509045373101,
+        "draw": 0.19068553813821995,
+        "away_win": 0.022163557324469948,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.335047236565309,
-          "away": 1.714500201218955
+          "home": 2.608804012984689,
+          "away": 1.5679854254530583
         },
         "key_factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.2/100: دخل 46، سكان 56، سوق كرة 64، أكاديميات 68، مناخ 86.",
-            "impact": 0.013
+            "value": "قوة بنيوية 74.2/100: دخل 82، سكان 76، سوق كرة 70، أكاديميات 76، مناخ 76.",
+            "impact": 0.024
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.5/100: دخل 86، سكان 34، سوق كرة 68، أكاديميات 72، مناخ 66.",
+            "value": "قوة بنيوية 68.3/100: دخل 82، سكان 38، سوق كرة 70، أكاديميات 74، مناخ 64.",
             "impact": 0.018
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 4.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 35.",
-            "impact": 0.04
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 4 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 17.",
+            "impact": 0.07
           },
           {
             "side": "away",
@@ -3677,23 +3556,27 @@
           },
           {
             "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 22.",
-            "impact": 0.066
+            "label": "إنذار دفاعي",
+            "value": "استقبل 6 أهداف في 2 مباراة.",
+            "impact": -0.045
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 51.2%، ضغط هجومي 62.6.",
+            "impact": -0.02
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 54.8%، ضغط هجومي 44.1.",
-            "impact": -0.078
+            "value": "xG 0.00، تسديدات على المرمى 8.0، استحواذ 49.1%، ضغط هجومي 58.6.",
+            "impact": 0.009
           }
         ],
-        "data_quality_warnings": [
-          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-        ],
-        "calibration_version": 43,
-        "recommended_label": "away_win",
-        "explanation": "Algeria vs Austria: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "data_quality_warnings": [],
+        "calibration_version": 42,
+        "recommended_label": "home_win",
+        "explanation": "Japan vs Sweden: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {
