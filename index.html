@@ -452,6 +452,85 @@
       font-size: 11px;
       direction: rtl;
     }
+    .accuracy-hero {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: minmax(180px, 260px) 1fr;
+      gap: 22px;
+      align-items: center;
+      border: 1px solid rgba(214,168,73,.32);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(34,197,94,.22), transparent 28%),
+        radial-gradient(circle at 84% 74%, rgba(239,68,68,.18), transparent 30%),
+        rgba(8, 24, 24, .82);
+      padding: 22px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.28);
+    }
+    .accuracy-donut {
+      --correct: 0deg;
+      width: min(240px, 58vw);
+      aspect-ratio: 1;
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin: auto;
+      border-radius: 50%;
+      background: conic-gradient(#22c55e 0 var(--correct), #ef4444 var(--correct) 360deg);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), 0 18px 42px rgba(0,0,0,.28);
+    }
+    .accuracy-donut::before {
+      content: "";
+      position: absolute;
+      inset: 22%;
+      border-radius: 50%;
+      background: #08211e;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
+    }
+    .accuracy-donut strong {
+      position: relative;
+      z-index: 1;
+      font-size: 34px;
+      color: #fff;
+      direction: ltr;
+    }
+    .accuracy-donut small {
+      position: relative;
+      z-index: 1;
+      display: block;
+      color: rgba(255,255,255,.68);
+      font-size: 12px;
+      text-align: center;
+    }
+    .accuracy-summary { display: grid; gap: 10px; }
+    .accuracy-summary h2 { margin: 0; font-size: 28px; }
+    .accuracy-legend { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .accuracy-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      padding: 6px 10px;
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+    }
+    .accuracy-legend i { width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
+    .accuracy-meter {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .accuracy-metric {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      background: rgba(0,0,0,.18);
+      padding: 12px;
+    }
+    .accuracy-metric b { display: block; color: #fff7cf; font-size: 20px; direction: ltr; }
+    .accuracy-metric span { color: rgba(255,255,255,.68); font-size: 12px; }
     .warnings {
       margin-top: 10px;
       color: #ffd9a3;
@@ -601,6 +680,7 @@
       .economic-card { grid-column: span 1; }
       .economic-match-head, .economic-scoreline { grid-template-columns: 1fr; text-align: center; }
       .economic-pillar { grid-template-columns: 1fr; }
+      .accuracy-hero { grid-column: span 1; grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1238,6 +1318,12 @@
         return `<article class="group-card"><h2>لا يوجد تقرير دقة بعد</h2><p class="note">شغّل <code>python .\\evolve_after_results.py</code> بعد ظهور نتائج جديدة.</p></article>`;
       }
       const m = report.metrics;
+      const evaluatedMatches = report.matches || [];
+      const totalEvaluated = evaluatedMatches.length || Number(m.completed_forecasts || 0);
+      const correctCount = evaluatedMatches.filter(row => row.correct).length;
+      const missedCount = Math.max(totalEvaluated - correctCount, 0);
+      const accuracyValue = totalEvaluated ? correctCount / totalEvaluated : Number(m.accuracy || 0);
+      const correctDeg = Math.max(0, Math.min(360, accuracyValue * 360));
       const outcomeText = (row, outcome) => {
         const home = visual(row.home_team).arabic_name;
         const away = visual(row.away_team).arabic_name;
@@ -1248,12 +1334,27 @@
         }[outcome] || outcome;
       };
       return `
-        <article class="group-card">
-          <h2>ملخص الدقة</h2>
-          <div class="standing-row"><span class="rank">#</span><strong>مباريات مقيّمة</strong><span>${m.completed_forecasts}</span></div>
-          <div class="standing-row"><span class="rank">%</span><strong>Accuracy</strong><span>${pct(m.accuracy || 0)}</span></div>
-          <div class="standing-row"><span class="rank">B</span><strong>Brier متوسط</strong><span>${m.mean_brier_score == null ? "—" : m.mean_brier_score.toFixed(3)}</span></div>
-          <div class="standing-row"><span class="rank">L</span><strong>Log Loss متوسط</strong><span>${m.mean_log_loss == null ? "—" : m.mean_log_loss.toFixed(3)}</span></div>
+        <article class="accuracy-hero">
+          <div class="accuracy-donut" style="--correct:${correctDeg}deg">
+            <div>
+              <strong>${pct(accuracyValue)}</strong>
+              <small>دقة النموذج</small>
+            </div>
+          </div>
+          <div class="accuracy-summary">
+            <h2>نبض دقة النموذج</h2>
+            <p class="note">هذه الدائرة تتحدث تلقائياً بعد كل مباراة مكتملة: الأخضر توقعات أصابها النموذج، والأحمر توقعات لم تتحقق.</p>
+            <div class="accuracy-legend">
+              <span style="color:#22c55e"><i></i>${correctCount} توقع صحيح</span>
+              <span style="color:#ef4444"><i></i>${missedCount} توقع لم يتحقق</span>
+              <span style="color:#d6a849"><i></i>${totalEvaluated} مباراة مقيّمة</span>
+            </div>
+            <div class="accuracy-meter">
+              <div class="accuracy-metric"><b>${pct(accuracyValue)}</b><span>نسبة الإصابة</span></div>
+              <div class="accuracy-metric"><b>${m.mean_brier_score == null ? "—" : m.mean_brier_score.toFixed(3)}</b><span>Brier متوسط</span></div>
+              <div class="accuracy-metric"><b>${m.mean_log_loss == null ? "—" : m.mean_log_loss.toFixed(3)}</b><span>Log Loss متوسط</span></div>
+            </div>
+          </div>
         </article>
         ${(report.matches || []).map(row => `
           <article class="pairing-card">
