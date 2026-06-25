@@ -1,7 +1,6 @@
 match_id,event_time_utc,event_type,description,impact,confidence,benefits
 WC-005,2026-06-23T10:00:00Z,altitude_heat_context,Mexico venue context may increase fatigue variance.,medium,low,against_away
 WC-006,2026-06-23T10:00:00Z,altitude_heat_context,Mexico venue context may increase fatigue variance.,medium,low,against_away
-WC-017,2026-06-23T10:00:00Z,favorite_pressure,Brazil carries heavy favorite pressure in a decisive group fixture.,medium,medium,against_away
 WC-048,2026-06-23T10:00:00Z,altitude_heat_context,Mexico venue context may increase fatigue variance.,medium,low,against_away
 WC-053,2026-06-23T10:00:00Z,favorite_pressure,France carries heavy favorite pressure in a decisive group fixture.,medium,medium,against_away
 WC-060,2026-06-23T10:00:00Z,favorite_pressure,Argentina carries heavy favorite pressure in a decisive group fixture.,medium,medium,against_away
