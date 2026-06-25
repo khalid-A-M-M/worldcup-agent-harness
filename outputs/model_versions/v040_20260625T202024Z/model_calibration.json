@@ -1,5 +1,5 @@
 {
-  "version": 41,
+  "version": 40,
   "team_adjustment_weight": 1.18,
   "butterfly_adjustment_weight": 1.0,
   "advanced_stats_weight": 1.0,
@@ -26,7 +26,6 @@
     "Not enough completed forecasts for aggressive recalibration.",
     "Not enough completed forecasts for aggressive recalibration.",
     "Not enough completed forecasts for aggressive recalibration.",
-    "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",

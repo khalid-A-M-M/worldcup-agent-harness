@@ -1,20 +1,20 @@
 {
   "match": {
-    "match_id": "WC-029",
-    "home_team": "Curaçao",
-    "away_team": "Ivory Coast",
-    "kickoff_utc": "2026-06-25T20:00:00+00:00",
-    "group": "Group E",
-    "ground": "Philadelphia",
-    "round": "Matchday 15",
+    "match_id": "WC-053",
+    "home_team": "Norway",
+    "away_team": "France",
+    "kickoff_utc": "2026-06-26T19:00:00+00:00",
+    "group": "Group I",
+    "ground": "Boston (Foxborough)",
+    "round": "Matchday 16",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Curaçao and Ivory Coast.",
-    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Curaçao 49.3 vs Ivory Coast 61.1.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Norway and France.",
+    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
+    "economic_world: ok - Computed long-run country-strength layer: Norway 67.0 vs France 86.2.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -22,10 +22,8 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
+      "warnings": [],
       "payload": {
         "historical_results": [
           {
@@ -353,7 +351,17 @@
             "away_goals": 1
           }
         ],
-        "butterfly_events": [],
+        "butterfly_events": [
+          {
+            "match_id": "WC-053",
+            "event_time_utc": "2026-06-23T10:00:00Z",
+            "event_type": "favorite_pressure",
+            "description": "France carries heavy favorite pressure in a decisive group fixture.",
+            "impact": "medium",
+            "confidence": "medium",
+            "benefits": "against_away"
+          }
+        ],
         "team_priors": {
           "France": [
             1.18,
@@ -3163,7 +3171,7 @@
           }
         ],
         "calibration": {
-          "version": 41,
+          "version": 40,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -3208,7 +3216,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -3220,285 +3227,288 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.1525948152052715,
-          "draw": 0.21641949666203814,
-          "away_win": 0.6309856881326906
+          "home_win": 0.30135319306432046,
+          "draw": 0.2320211926119153,
+          "away_win": 0.4666256143237641
         },
         "expected_goals": {
-          "home": 0.9422851775170614,
-          "away": 2.093074163535516
+          "home": 1.5595662855609231,
+          "away": 1.9665125522071416
         },
         "top_scores": [
           {
-            "home_goals": 0,
-            "away_goals": 2,
-            "probability": 0.1053035030846527
-          },
-          {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.10239866926077532
+            "probability": 0.09747095106340159
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09922593009729039
+            "probability": 0.08873974478784596
           },
           {
-            "home_goals": 0,
+            "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.09303581342039467
+            "probability": 0.07037611532409246
           },
           {
-            "home_goals": 0,
+            "home_goals": 2,
+            "away_goals": 2,
+            "probability": 0.06919775708020261
+          },
+          {
+            "home_goals": 1,
             "away_goals": 3,
-            "probability": 0.07346934721208968
+            "probability": 0.05816927400165246
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Curaçao and Ivory Coast.",
+      "summary": "Computed tournament form and prior-strength factors for Norway and France.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Curaçao",
+          "team": "Norway",
           "matches": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "goals_for": 1,
-          "goals_against": 7,
-          "goal_difference": -6,
-          "points": 1,
-          "points_per_match": 0.5,
-          "seed_rank": 80
+          "wins": 2,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 7,
+          "goals_against": 3,
+          "goal_difference": 4,
+          "points": 6,
+          "points_per_match": 3.0,
+          "seed_rank": 38
         },
         "away_profile": {
-          "team": "Ivory Coast",
+          "team": "France",
           "matches": 2,
-          "wins": 1,
+          "wins": 2,
           "draws": 0,
-          "losses": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_difference": 0,
-          "points": 3,
-          "points_per_match": 1.5,
-          "seed_rank": 33
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_difference": 5,
+          "points": 6,
+          "points_per_match": 3.0,
+          "seed_rank": 1
         },
         "home_advanced_profile": {
-          "team": "Curaçao",
+          "team": "Norway",
           "matches": 1,
-          "shots": 8.0,
-          "shots_on_target": 2.0,
-          "possession": 35.4,
+          "shots": 12.0,
+          "shots_on_target": 5.0,
+          "possession": 61.3,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 1.0,
+          "corners": 5.0,
           "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 11.0,
-          "offsides": 1.0,
-          "saves": 4.0,
-          "accurate_passes": 282.0,
-          "total_passes": 343.0,
-          "pass_pct": 0.8,
-          "accurate_crosses": 2.0,
-          "total_crosses": 7.0,
-          "blocked_shots": 0.0,
-          "total_tackles": 16.0,
-          "interceptions": 16.0,
-          "clearances": 25.0,
+          "fouls": 13.0,
+          "offsides": 0.0,
+          "saves": 0.0,
+          "accurate_passes": 477.0,
+          "total_passes": 537.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 7.0,
+          "total_crosses": 17.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 15.0,
+          "interceptions": 2.0,
+          "clearances": 22.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 28.7,
-          "attacking_pressure_index": 18.07,
-          "shots_per_match": 8.0,
-          "shots_on_target_per_match": 2.0,
-          "possession_per_match": 35.4,
+          "dominance_index": 63.97,
+          "attacking_pressure_index": 70.96,
+          "shots_per_match": 12.0,
+          "shots_on_target_per_match": 5.0,
+          "possession_per_match": 61.3,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 1.0,
+          "corners_per_match": 5.0,
           "yellow_cards_per_match": 0.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 11.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 4.0,
-          "accurate_passes_per_match": 282.0,
-          "total_passes_per_match": 343.0,
-          "pass_pct_per_match": 0.8,
-          "accurate_crosses_per_match": 2.0,
-          "total_crosses_per_match": 7.0,
-          "blocked_shots_per_match": 0.0,
-          "total_tackles_per_match": 16.0,
-          "interceptions_per_match": 16.0,
-          "clearances_per_match": 25.0,
+          "fouls_per_match": 13.0,
+          "offsides_per_match": 0.0,
+          "saves_per_match": 0.0,
+          "accurate_passes_per_match": 477.0,
+          "total_passes_per_match": 537.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 7.0,
+          "total_crosses_per_match": 17.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 15.0,
+          "interceptions_per_match": 2.0,
+          "clearances_per_match": 22.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 28.7,
-          "attacking_pressure_index_per_match": 18.07
+          "dominance_index_per_match": 63.97,
+          "attacking_pressure_index_per_match": 70.96
         },
         "away_advanced_profile": {
-          "team": "Ivory Coast",
+          "team": "France",
           "matches": 2,
-          "shots": 24.0,
-          "shots_on_target": 6.0,
-          "possession": 88.9,
+          "shots": 30.0,
+          "shots_on_target": 13.0,
+          "possession": 109.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 6.0,
-          "yellow_cards": 3.0,
+          "corners": 10.0,
+          "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 17.0,
-          "offsides": 1.0,
-          "saves": 6.0,
-          "accurate_passes": 764.0,
-          "total_passes": 901.0,
-          "pass_pct": 1.7000000000000002,
-          "accurate_crosses": 7.0,
-          "total_crosses": 17.0,
-          "blocked_shots": 8.0,
-          "total_tackles": 34.0,
-          "interceptions": 24.0,
-          "clearances": 55.0,
+          "fouls": 13.0,
+          "offsides": 2.0,
+          "saves": 2.0,
+          "accurate_passes": 1045.0,
+          "total_passes": 1178.0,
+          "pass_pct": 1.8,
+          "accurate_crosses": 2.0,
+          "total_crosses": 23.0,
+          "blocked_shots": 6.0,
+          "total_tackles": 33.0,
+          "interceptions": 12.0,
+          "clearances": 23.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 92.30000000000001,
-          "attacking_pressure_index": 89.9,
-          "shots_per_match": 12.0,
-          "shots_on_target_per_match": 3.0,
-          "possession_per_match": 44.45,
+          "dominance_index": 130.87,
+          "attacking_pressure_index": 154.07,
+          "shots_per_match": 15.0,
+          "shots_on_target_per_match": 6.5,
+          "possession_per_match": 54.5,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 3.0,
-          "yellow_cards_per_match": 1.5,
+          "corners_per_match": 5.0,
+          "yellow_cards_per_match": 0.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 8.5,
-          "offsides_per_match": 0.5,
-          "saves_per_match": 3.0,
-          "accurate_passes_per_match": 382.0,
-          "total_passes_per_match": 450.5,
-          "pass_pct_per_match": 0.8500000000000001,
-          "accurate_crosses_per_match": 3.5,
-          "total_crosses_per_match": 8.5,
-          "blocked_shots_per_match": 4.0,
-          "total_tackles_per_match": 17.0,
-          "interceptions_per_match": 12.0,
-          "clearances_per_match": 27.5,
+          "fouls_per_match": 6.5,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 522.5,
+          "total_passes_per_match": 589.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 1.0,
+          "total_crosses_per_match": 11.5,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 16.5,
+          "interceptions_per_match": 6.0,
+          "clearances_per_match": 11.5,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 46.150000000000006,
-          "attacking_pressure_index_per_match": 44.95
+          "dominance_index_per_match": 65.435,
+          "attacking_pressure_index_per_match": 77.035
         },
-        "home_factor_score": -0.4239,
-        "away_factor_score": -0.027714999999999962,
-        "probability_adjustment": -0.16,
+        "home_factor_score": 0.311033,
+        "away_factor_score": 0.3645655,
+        "probability_adjustment": -0.05353249999999998,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -6.",
-            "impact": -0.11
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 4.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 80.",
-            "impact": -0.05
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 7 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 38.",
+            "impact": 0.034
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 33.",
-            "impact": 0.044
+            "value": "Seed rank داخل النموذج: 1.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 35.4%، ضغط هجومي 18.1.",
-            "impact": -0.191
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.3%، ضغط هجومي 71.0.",
+            "impact": 0.037
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 44.5%، ضغط هجومي 45.0.",
-            "impact": -0.094
+            "value": "xG 0.00، تسديدات على المرمى 6.5، استحواذ 54.5%، ضغط هجومي 77.0.",
+            "impact": 0.055
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 0 high-impact contextual cues.",
+      "summary": "Scored 1 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "events": []
+        "away_adjustment": -0.011520828793523822,
+        "events": [
+          {
+            "event_type": "favorite_pressure",
+            "description": "France carries heavy favorite pressure in a decisive group fixture.",
+            "hours_to_kickoff": 81.0,
+            "time_weight": 0.47,
+            "signed_effect": 0.0115,
+            "benefits": "against_away"
+          }
+        ]
       }
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Curaçao 49.3 vs Ivory Coast 61.1.",
+      "summary": "Computed long-run country-strength layer: Norway 67.0 vs France 86.2.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Curaçao",
+          "team": "Norway",
           "found": true,
-          "notes": "Small population",
-          "gdp_per_capita_index": 55.0,
-          "population_index": 20.0,
-          "football_market_index": 46.0,
-          "academy_pipeline_index": 50.0,
-          "climate_fit_index": 84.0,
-          "league_export_index": 46.0,
-          "home_region_fit_index": 74.0
+          "notes": "High economy and improving elite talent.",
+          "gdp_per_capita_index": 96.0,
+          "population_index": 30.0,
+          "football_market_index": 68.0,
+          "academy_pipeline_index": 70.0,
+          "climate_fit_index": 58.0,
+          "league_export_index": 70.0,
+          "home_region_fit_index": 60.0
         },
         "away_profile": {
-          "team": "Ivory Coast",
+          "team": "France",
           "found": true,
-          "notes": "Strong exports and athletic profile.",
-          "gdp_per_capita_index": 36.0,
-          "population_index": 45.0,
-          "football_market_index": 68.0,
-          "academy_pipeline_index": 68.0,
-          "climate_fit_index": 84.0,
-          "league_export_index": 66.0,
+          "notes": "Elite economy-football pipeline with deep exports and academies.",
+          "gdp_per_capita_index": 82.0,
+          "population_index": 64.0,
+          "football_market_index": 95.0,
+          "academy_pipeline_index": 94.0,
+          "climate_fit_index": 78.0,
+          "league_export_index": 95.0,
           "home_region_fit_index": 72.0
         },
-        "home_score": 49.3,
-        "away_score": 61.07,
-        "probability_adjustment": -0.011770000000000003,
+        "home_score": 67.04,
+        "away_score": 86.18,
+        "probability_adjustment": -0.01914,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 49.3/100: دخل 55، سكان 20، سوق كرة 46، أكاديميات 50، مناخ 84.",
-            "impact": -0.001
+            "value": "قوة بنيوية 67.0/100: دخل 96، سكان 30، سوق كرة 68، أكاديميات 70، مناخ 58.",
+            "impact": 0.017
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 61.1/100: دخل 36، سكان 45، سوق كرة 68، أكاديميات 68، مناخ 84.",
-            "impact": 0.011
+            "value": "قوة بنيوية 86.2/100: دخل 82، سكان 64، سوق كرة 95، أكاديميات 94، مناخ 78.",
+            "impact": 0.036
           }
         ]
       }
@@ -3506,13 +3516,11 @@
     "critic_auditor": {
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "warnings": [],
       "payload": {
         "favorite": "away_win",
         "objections": [],
-        "confidence_penalty": 0.06
+        "confidence_penalty": 0.0
       }
     },
     "synthesizer": {
@@ -3520,74 +3528,74 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.0009570699710519917,
-        "draw": 0.20712860140542344,
-        "away_win": 0.7919143286235245,
-        "confidence_interval_width": 0.18,
+        "home_win": 0.23191360267106395,
+        "draw": 0.23243534655950712,
+        "away_win": 0.5356510507694289,
+        "confidence_interval_width": 0.12,
         "expected_goals": {
-          "home": 0.9422851775170614,
-          "away": 2.093074163535516
+          "home": 1.5595662855609231,
+          "away": 1.9665125522071416
         },
         "key_factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 49.3/100: دخل 55، سكان 20، سوق كرة 46، أكاديميات 50، مناخ 84.",
-            "impact": -0.001
+            "value": "قوة بنيوية 67.0/100: دخل 96، سكان 30، سوق كرة 68، أكاديميات 70، مناخ 58.",
+            "impact": 0.017
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 61.1/100: دخل 36، سكان 45، سوق كرة 68، أكاديميات 68، مناخ 84.",
-            "impact": 0.011
+            "value": "قوة بنيوية 86.2/100: دخل 82، سكان 64، سوق كرة 95، أكاديميات 94، مناخ 78.",
+            "impact": 0.036
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -6.",
-            "impact": -0.11
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 4.",
+            "impact": 0.11
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 80.",
-            "impact": -0.05
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 7 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 38.",
+            "impact": 0.034
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 33.",
-            "impact": 0.044
+            "value": "Seed rank داخل النموذج: 1.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 35.4%، ضغط هجومي 18.1.",
-            "impact": -0.191
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.3%، ضغط هجومي 71.0.",
+            "impact": 0.037
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 44.5%، ضغط هجومي 45.0.",
-            "impact": -0.094
+            "value": "xG 0.00، تسديدات على المرمى 6.5، استحواذ 54.5%، ضغط هجومي 77.0.",
+            "impact": 0.055
+          },
+          {
+            "side": "home",
+            "label": "أثر فراشة",
+            "value": "France carries heavy favorite pressure in a decisive group fixture.",
+            "impact": 0.0115
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 41,
+        "calibration_version": 40,
         "recommended_label": "away_win",
-        "explanation": "Curaçao vs Ivory Coast: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "explanation": "Norway vs France: baseline model favors away_win; butterfly cues: France carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
     },
     "self_correction": {
