@@ -3307,11 +3307,11 @@
           }
         ],
         "calibration": {
-          "version": 44,
-          "team_adjustment_weight": 1.1092,
-          "butterfly_adjustment_weight": 0.95,
+          "version": 43,
+          "team_adjustment_weight": 1.18,
+          "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
-          "confidence_penalty_weight": 1.05,
+          "confidence_penalty_weight": 1.0,
           "notes": [
             "Updated by evolve_after_results.py after completed matches are scored.",
             "Not enough completed forecasts for aggressive recalibration.",
@@ -3355,8 +3355,7 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy."
+            "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
       }
@@ -3641,10 +3640,10 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.28109437240208923,
-        "draw": 0.2693174125864609,
-        "away_win": 0.4495882150114498,
-        "confidence_interval_width": 0.183,
+        "home_win": 0.2788037423116328,
+        "draw": 0.2694074421983876,
+        "away_win": 0.4517888154899796,
+        "confidence_interval_width": 0.18,
         "expected_goals": {
           "home": 1.3161706762287246,
           "away": 1.5133155222795946
@@ -3702,7 +3701,7 @@
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 44,
+        "calibration_version": 43,
         "recommended_label": "away_win",
         "explanation": "Colombia vs Portugal: baseline model favors away_win; butterfly cues: Portugal carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
