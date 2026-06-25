@@ -953,7 +953,7 @@
     }
 
     function renderEconomicModel() {
-      const cards = allReports.map(renderEconomicCard).filter(Boolean);
+      const cards = chronologicalReports(allReports).map(renderEconomicCard).filter(Boolean);
       if (!cards.length) {
         return `<article class="group-card"><h2>النموذج الاقتصادي غير موجود في هذه النسخة</h2><p class="note">شغّل مسار التوقعات بعد إضافة EconomicWorldAgent حتى تظهر المؤشرات هنا.</p></article>`;
       }
@@ -1015,8 +1015,25 @@
       return manifest.files || fallbackFiles;
     }
 
+    function kickoffTime(report) {
+      const value = Date.parse(report.match?.kickoff_utc || "");
+      return Number.isFinite(value) ? value : Number.MAX_SAFE_INTEGER;
+    }
+
+    function matchNumber(report) {
+      const raw = String(report.match?.match_id || "").match(/\d+/);
+      return raw ? Number(raw[0]) : 9999;
+    }
+
+    function byKickoffThenMatch(a, b) {
+      return kickoffTime(a) - kickoffTime(b) || matchNumber(a) - matchNumber(b);
+    }
+
+    function chronologicalReports(reports) {
+      return [...reports].sort(byKickoffThenMatch);
+    }
     function applyFilter() {
-      const filtered = allReports.filter(report => {
+      const filtered = chronologicalReports(allReports).filter(report => {
         const final = report.agents.synthesizer.payload;
         if (currentFilter === "today") return report.match.kickoff_utc.startsWith("2026-06-23");
         if (currentFilter === "group") return (report.match.stage || "group") === "group";
@@ -1396,7 +1413,7 @@
         fetch(`outputs/accuracy_report.json${suffix}`).then(response => response.ok ? response.json() : null),
         fetch(`data/match_advanced_stats.csv${suffix}`).then(response => response.ok ? response.text() : "")
       ]);
-      allReports = reports;
+      allReports = chronologicalReports(reports);
       tournamentProjection = projection;
       accuracyReport = accuracy;
       advancedStats = statsCsv ? parseCsv(statsCsv) : [];
@@ -1414,7 +1431,7 @@
       fetch("outputs/accuracy_report.json").then(response => response.ok ? response.json() : null),
       fetch("data/match_advanced_stats.csv").then(response => response.ok ? response.text() : "")
     ])).then(([reports, projection, accuracy, statsCsv]) => {
-      allReports = reports;
+      allReports = chronologicalReports(reports);
       tournamentProjection = projection;
       accuracyReport = accuracy;
       advancedStats = statsCsv ? parseCsv(statsCsv) : [];
