@@ -1,18 +1,18 @@
 {
   "match": {
-    "match_id": "WC-042",
-    "home_team": "New Zealand",
-    "away_team": "Belgium",
-    "kickoff_utc": "2026-06-27T03:00:00+00:00",
-    "group": "Group G",
+    "match_id": "WC-011",
+    "home_team": "Switzerland",
+    "away_team": "Canada",
+    "kickoff_utc": "2026-06-24T19:00:00+00:00",
+    "group": "Group B",
     "ground": "Vancouver",
-    "round": "Matchday 16",
+    "round": "Matchday 14",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 54 historical matches, 47 team priors, and 0 live event cues.",
+    "data_collection: ok - Loaded 48 historical matches, 47 team priors, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for New Zealand and Belgium.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Switzerland and Canada.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
@@ -21,7 +21,7 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 54 historical matches, 47 team priors, and 0 live event cues.",
+      "summary": "Loaded 48 historical matches, 47 team priors, and 0 live event cues.",
       "warnings": [
         "No butterfly events found for this match."
       ],
@@ -52,18 +52,6 @@
             "away_goals": 0
           },
           {
-            "home_team": "Czech Republic",
-            "away_team": "Mexico",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "South Africa",
-            "away_team": "South Korea",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
             "home_team": "Canada",
             "away_team": "Bosnia & Herzegovina",
             "home_goals": 1,
@@ -88,18 +76,6 @@
             "away_goals": 0
           },
           {
-            "home_team": "Switzerland",
-            "away_team": "Canada",
-            "home_goals": 2,
-            "away_goals": 1
-          },
-          {
-            "home_team": "Bosnia & Herzegovina",
-            "away_team": "Qatar",
-            "home_goals": 3,
-            "away_goals": 1
-          },
-          {
             "home_team": "Brazil",
             "away_team": "Morocco",
             "home_goals": 1,
@@ -122,18 +98,6 @@
             "away_team": "Haiti",
             "home_goals": 3,
             "away_goals": 0
-          },
-          {
-            "home_team": "Scotland",
-            "away_team": "Brazil",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "Morocco",
-            "away_team": "Haiti",
-            "home_goals": 4,
-            "away_goals": 2
           },
           {
             "home_team": "USA",
@@ -794,68 +758,6 @@
             "source": "ESPN"
           },
           {
-            "match_id": "WC-011",
-            "team": "Canada",
-            "shots": "13.0",
-            "shots_on_target": "7.0",
-            "possession": "44.8",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "13.0",
-            "offsides": "3.0",
-            "saves": "2.0",
-            "accurate_passes": "271.0",
-            "total_passes": "339.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "6.0",
-            "total_crosses": "26.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "9.0",
-            "interceptions": "12.0",
-            "clearances": "19.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "52.96",
-            "attacking_pressure_index": "65.78",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-011",
-            "team": "Switzerland",
-            "shots": "6.0",
-            "shots_on_target": "4.0",
-            "possession": "55.2",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "19.0",
-            "offsides": "1.0",
-            "saves": "6.0",
-            "accurate_passes": "367.0",
-            "total_passes": "441.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "1.0",
-            "total_crosses": "6.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "15.0",
-            "interceptions": "5.0",
-            "clearances": "43.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "47.04",
-            "attacking_pressure_index": "34.22",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
             "match_id": "WC-013",
             "team": "Brazil",
             "shots": "12.0",
@@ -976,130 +878,6 @@
             "momentum_last_15": "",
             "dominance_index": "31.18",
             "attacking_pressure_index": "18.16",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-017",
-            "team": "Brazil",
-            "shots": "21.0",
-            "shots_on_target": "9.0",
-            "possession": "54.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "1.0",
-            "saves": "5.0",
-            "accurate_passes": "564.0",
-            "total_passes": "607.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "2.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "14.0",
-            "interceptions": "13.0",
-            "clearances": "23.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.5",
-            "attacking_pressure_index": "59.34",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-017",
-            "team": "Scotland",
-            "shots": "14.0",
-            "shots_on_target": "5.0",
-            "possession": "45.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "7.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "5.0",
-            "accurate_passes": "448.0",
-            "total_passes": "500.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "10.0",
-            "total_crosses": "23.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "11.0",
-            "interceptions": "2.0",
-            "clearances": "13.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.5",
-            "attacking_pressure_index": "40.66",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-018",
-            "team": "Haiti",
-            "shots": "9.0",
-            "shots_on_target": "2.0",
-            "possession": "31.0",
-            "xg": "",
-            "big_chances": "",
-            "corners": "1.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "18.0",
-            "offsides": "0.0",
-            "saves": "8.0",
-            "accurate_passes": "198.0",
-            "total_passes": "248.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "2.0",
-            "total_crosses": "3.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "25.0",
-            "interceptions": "14.0",
-            "clearances": "26.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "27.58",
-            "attacking_pressure_index": "19.28",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-018",
-            "team": "Morocco",
-            "shots": "22.0",
-            "shots_on_target": "11.0",
-            "possession": "69.0",
-            "xg": "",
-            "big_chances": "",
-            "corners": "9.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "5.0",
-            "saves": "1.0",
-            "accurate_passes": "479.0",
-            "total_passes": "542.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "7.0",
-            "total_crosses": "22.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "18.0",
-            "interceptions": "7.0",
-            "clearances": "14.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "72.42",
-            "attacking_pressure_index": "80.72",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -2593,8 +2371,8 @@
           }
         ],
         "calibration": {
-          "version": 35,
-          "team_adjustment_weight": 1.18,
+          "version": 29,
+          "team_adjustment_weight": 1.1716593810022657,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.0,
@@ -2627,12 +2405,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2644,198 +2416,221 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.22819114524024176,
-          "draw": 0.260018823496125,
-          "away_win": 0.511790031263633
+          "home_win": 0.31796253778703815,
+          "draw": 0.24762827933736492,
+          "away_win": 0.43440918287559666
         },
         "expected_goals": {
-          "home": 1.0554212123303426,
-          "away": 1.6851037185287425
+          "home": 1.4734812419056427,
+          "away": 1.7477327925531916
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.12396847276605182
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.09957526644218746
+            "probability": 0.11100351039880355
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09671284001777918
+            "probability": 0.08981688667245748
           },
           {
-            "home_goals": 0,
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.0757229584992199
+          },
+          {
+            "home_goals": 2,
             "away_goals": 2,
-            "probability": 0.09163435307903255
+            "probability": 0.0661717488591155
           },
           {
             "home_goals": 0,
-            "away_goals": 0,
-            "probability": 0.07372375321088315
+            "away_goals": 1,
+            "probability": 0.061531393959184895
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for New Zealand and Belgium.",
-      "warnings": [
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-      ],
+      "summary": "Computed tournament form and prior-strength factors for Switzerland and Canada.",
+      "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "New Zealand",
+          "team": "Switzerland",
           "matches": 2,
-          "wins": 0,
+          "wins": 1,
           "draws": 1,
-          "losses": 1,
-          "goals_for": 3,
-          "goals_against": 5,
-          "goal_difference": -2,
-          "points": 1,
-          "points_per_match": 0.5,
-          "seed_rank": 68
+          "losses": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "goal_difference": 3,
+          "points": 4,
+          "points_per_match": 2.0,
+          "seed_rank": 14
         },
         "away_profile": {
-          "team": "Belgium",
+          "team": "Canada",
           "matches": 2,
-          "wins": 0,
-          "draws": 2,
+          "wins": 1,
+          "draws": 1,
           "losses": 0,
-          "goals_for": 1,
+          "goals_for": 7,
           "goals_against": 1,
-          "goal_difference": 0,
-          "points": 2,
-          "points_per_match": 1.0,
-          "seed_rank": 8
+          "goal_difference": 6,
+          "points": 4,
+          "points_per_match": 2.0,
+          "seed_rank": 36
         },
         "home_advanced_profile": {
-          "team": "New Zealand",
-          "matches": 0,
-          "shots": 0.0,
-          "shots_on_target": 0.0,
-          "possession": 0.0,
+          "team": "Switzerland",
+          "matches": 1,
+          "shots": 26.0,
+          "shots_on_target": 7.0,
+          "possession": 68.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 0.0,
-          "yellow_cards": 0.0,
+          "corners": 10.0,
+          "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 0.0,
-          "offsides": 0.0,
-          "saves": 0.0,
-          "accurate_passes": 0.0,
-          "total_passes": 0.0,
-          "pass_pct": 0.0,
-          "accurate_crosses": 0.0,
-          "total_crosses": 0.0,
-          "blocked_shots": 0.0,
-          "total_tackles": 0.0,
-          "interceptions": 0.0,
-          "clearances": 0.0,
+          "fouls": 11.0,
+          "offsides": 1.0,
+          "saves": 3.0,
+          "accurate_passes": 527.0,
+          "total_passes": 576.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 6.0,
+          "total_crosses": 35.0,
+          "blocked_shots": 9.0,
+          "total_tackles": 8.0,
+          "interceptions": 7.0,
+          "clearances": 13.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 0.0,
-          "attacking_pressure_index": 0.0
-        },
-        "away_advanced_profile": {
-          "team": "Belgium",
-          "matches": 2,
-          "shots": 38.0,
-          "shots_on_target": 10.0,
-          "possession": 123.69999999999999,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 6.0,
-          "yellow_cards": 3.0,
-          "red_cards": 1.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 22.0,
-          "offsides": 3.0,
-          "saves": 5.0,
-          "accurate_passes": 924.0,
-          "total_passes": 1076.0,
-          "pass_pct": 1.8,
-          "accurate_crosses": 12.0,
-          "total_crosses": 48.0,
-          "blocked_shots": 11.0,
-          "total_tackles": 29.0,
-          "interceptions": 13.0,
-          "clearances": 36.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 123.73,
-          "attacking_pressure_index": 116.25,
-          "shots_per_match": 19.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 61.849999999999994,
+          "dominance_index": 70.91,
+          "attacking_pressure_index": 74.0,
+          "shots_per_match": 26.0,
+          "shots_on_target_per_match": 7.0,
+          "possession_per_match": 68.0,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 3.0,
-          "yellow_cards_per_match": 1.5,
-          "red_cards_per_match": 0.5,
+          "corners_per_match": 10.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
           "fouls_per_match": 11.0,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 2.5,
-          "accurate_passes_per_match": 462.0,
-          "total_passes_per_match": 538.0,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 3.0,
+          "accurate_passes_per_match": 527.0,
+          "total_passes_per_match": 576.0,
           "pass_pct_per_match": 0.9,
           "accurate_crosses_per_match": 6.0,
-          "total_crosses_per_match": 24.0,
-          "blocked_shots_per_match": 5.5,
-          "total_tackles_per_match": 14.5,
-          "interceptions_per_match": 6.5,
-          "clearances_per_match": 18.0,
+          "total_crosses_per_match": 35.0,
+          "blocked_shots_per_match": 9.0,
+          "total_tackles_per_match": 8.0,
+          "interceptions_per_match": 7.0,
+          "clearances_per_match": 13.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 61.865,
-          "attacking_pressure_index_per_match": 58.125
+          "dominance_index_per_match": 70.91,
+          "attacking_pressure_index_per_match": 74.0
         },
-        "home_factor_score": -0.1285,
-        "away_factor_score": 0.0518725,
-        "probability_adjustment": -0.16,
+        "away_advanced_profile": {
+          "team": "Canada",
+          "matches": 1,
+          "shots": 32.0,
+          "shots_on_target": 10.0,
+          "possession": 79.0,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 19.0,
+          "yellow_cards": 1.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 9.0,
+          "offsides": 1.0,
+          "saves": 0.0,
+          "accurate_passes": 515.0,
+          "total_passes": 567.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 13.0,
+          "total_crosses": 55.0,
+          "blocked_shots": 14.0,
+          "total_tackles": 9.0,
+          "interceptions": 6.0,
+          "clearances": 3.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 85.92,
+          "attacking_pressure_index": 95.43,
+          "shots_per_match": 32.0,
+          "shots_on_target_per_match": 10.0,
+          "possession_per_match": 79.0,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 19.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 9.0,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 0.0,
+          "accurate_passes_per_match": 515.0,
+          "total_passes_per_match": 567.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 13.0,
+          "total_crosses_per_match": 55.0,
+          "blocked_shots_per_match": 14.0,
+          "total_tackles_per_match": 9.0,
+          "interceptions_per_match": 6.0,
+          "clearances_per_match": 3.0,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 85.92,
+          "attacking_pressure_index_per_match": 95.43
+        },
+        "home_factor_score": 0.324315,
+        "away_factor_score": 0.36675,
+        "probability_adjustment": -0.042435,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 3.",
+            "impact": 0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 68.",
-            "impact": -0.026
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
-          },
-          {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 8.",
+            "value": "Seed rank داخل النموذج: 14.",
             "impact": 0.07
           },
           {
             "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 6.",
+            "impact": 0.11
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 36.",
+            "impact": 0.038
+          },
+          {
+            "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
-            "impact": -0.018
+            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 68.0%، ضغط هجومي 74.0.",
+            "impact": 0.089
+          },
+          {
+            "side": "away",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 10.0، استحواذ 79.0%، ضغط هجومي 95.4.",
+            "impact": 0.124
           }
         ]
       }
@@ -2854,8 +2649,7 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "No butterfly events found for this match.",
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        "No butterfly events found for this match."
       ],
       "payload": {
         "favorite": "away_win",
@@ -2868,58 +2662,56 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.03939114524024177,
-        "draw": 0.2600188234961251,
-        "away_win": 0.7005900312636332,
+        "home_win": 0.26824317195420705,
+        "draw": 0.24762827933736498,
+        "away_win": 0.4841285487084279,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.0554212123303426,
-          "away": 1.6851037185287425
+          "home": 1.4734812419056427,
+          "away": 1.7477327925531916
         },
         "key_factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 3.",
+            "impact": 0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 68.",
-            "impact": -0.026
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
-          },
-          {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 8.",
+            "value": "Seed rank داخل النموذج: 14.",
             "impact": 0.07
           },
           {
             "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 6.",
+            "impact": 0.11
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 36.",
+            "impact": 0.038
+          },
+          {
+            "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
-            "impact": -0.018
+            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 68.0%، ضغط هجومي 74.0.",
+            "impact": 0.089
+          },
+          {
+            "side": "away",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 10.0، استحواذ 79.0%، ضغط هجومي 95.4.",
+            "impact": 0.124
           }
         ],
-        "data_quality_warnings": [
-          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-        ],
-        "calibration_version": 35,
+        "data_quality_warnings": [],
+        "calibration_version": 29,
         "recommended_label": "away_win",
-        "explanation": "New Zealand vs Belgium: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "explanation": "Switzerland vs Canada: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {

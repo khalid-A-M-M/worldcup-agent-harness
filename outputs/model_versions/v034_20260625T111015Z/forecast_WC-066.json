@@ -1,21 +1,21 @@
 {
   "match": {
-    "match_id": "WC-042",
-    "home_team": "New Zealand",
-    "away_team": "Belgium",
-    "kickoff_utc": "2026-06-27T03:00:00+00:00",
-    "group": "Group G",
-    "ground": "Vancouver",
-    "round": "Matchday 16",
+    "match_id": "WC-066",
+    "home_team": "DR Congo",
+    "away_team": "Uzbekistan",
+    "kickoff_utc": "2026-06-27T23:30:00+00:00",
+    "group": "Group K",
+    "ground": "Atlanta",
+    "round": "Matchday 17",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 54 historical matches, 47 team priors, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for New Zealand and Belgium.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: away_win.",
+    "synthesizer: ok - Final forecast: home_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
@@ -2593,7 +2593,7 @@
           }
         ],
         "calibration": {
-          "version": 35,
+          "version": 34,
           "team_adjustment_weight": 1.18,
           "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
@@ -2632,7 +2632,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
@@ -2644,198 +2643,227 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.22819114524024176,
-          "draw": 0.260018823496125,
-          "away_win": 0.511790031263633
+          "home_win": 0.5238275359291006,
+          "draw": 0.25046790522344925,
+          "away_win": 0.22570455884745003
         },
         "expected_goals": {
-          "home": 1.0554212123303426,
-          "away": 1.6851037185287425
+          "home": 1.7826382409324437,
+          "away": 1.1038876466528638
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.12396847276605182
+            "probability": 0.1185372982689438
           },
           {
-            "home_goals": 0,
+            "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.09957526644218746
+            "probability": 0.09782829669955294
           },
           {
             "home_goals": 1,
-            "away_goals": 2,
-            "probability": 0.09671284001777918
+            "away_goals": 0,
+            "probability": 0.09064693100493396
           },
           {
-            "home_goals": 0,
-            "away_goals": 2,
-            "probability": 0.09163435307903255
+            "home_goals": 2,
+            "away_goals": 0,
+            "probability": 0.08862160655224427
           },
           {
             "home_goals": 0,
             "away_goals": 0,
-            "probability": 0.07372375321088315
+            "probability": 0.06455600269698127
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for New Zealand and Belgium.",
-      "warnings": [
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-      ],
+      "summary": "Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
+      "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "New Zealand",
+          "team": "DR Congo",
           "matches": 2,
           "wins": 0,
           "draws": 1,
           "losses": 1,
-          "goals_for": 3,
-          "goals_against": 5,
-          "goal_difference": -2,
+          "goals_for": 1,
+          "goals_against": 2,
+          "goal_difference": -1,
           "points": 1,
           "points_per_match": 0.5,
-          "seed_rank": 68
+          "seed_rank": 56
         },
         "away_profile": {
-          "team": "Belgium",
+          "team": "Uzbekistan",
           "matches": 2,
           "wins": 0,
-          "draws": 2,
-          "losses": 0,
+          "draws": 0,
+          "losses": 2,
           "goals_for": 1,
-          "goals_against": 1,
-          "goal_difference": 0,
-          "points": 2,
-          "points_per_match": 1.0,
-          "seed_rank": 8
+          "goals_against": 8,
+          "goal_difference": -7,
+          "points": 0,
+          "points_per_match": 0.0,
+          "seed_rank": 59
         },
         "home_advanced_profile": {
-          "team": "New Zealand",
-          "matches": 0,
-          "shots": 0.0,
-          "shots_on_target": 0.0,
-          "possession": 0.0,
+          "team": "DR Congo",
+          "matches": 1,
+          "shots": 8.0,
+          "shots_on_target": 2.0,
+          "possession": 24.6,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 0.0,
-          "yellow_cards": 0.0,
+          "corners": 4.0,
+          "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 0.0,
-          "offsides": 0.0,
+          "fouls": 10.0,
+          "offsides": 2.0,
           "saves": 0.0,
-          "accurate_passes": 0.0,
-          "total_passes": 0.0,
-          "pass_pct": 0.0,
-          "accurate_crosses": 0.0,
-          "total_crosses": 0.0,
-          "blocked_shots": 0.0,
-          "total_tackles": 0.0,
-          "interceptions": 0.0,
-          "clearances": 0.0,
+          "accurate_passes": 195.0,
+          "total_passes": 249.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 1.0,
+          "total_crosses": 10.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 17.0,
+          "interceptions": 5.0,
+          "clearances": 27.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 0.0,
-          "attacking_pressure_index": 0.0
-        },
-        "away_advanced_profile": {
-          "team": "Belgium",
-          "matches": 2,
-          "shots": 38.0,
-          "shots_on_target": 10.0,
-          "possession": 123.69999999999999,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 6.0,
-          "yellow_cards": 3.0,
-          "red_cards": 1.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 22.0,
-          "offsides": 3.0,
-          "saves": 5.0,
-          "accurate_passes": 924.0,
-          "total_passes": 1076.0,
-          "pass_pct": 1.8,
-          "accurate_crosses": 12.0,
-          "total_crosses": 48.0,
-          "blocked_shots": 11.0,
-          "total_tackles": 29.0,
-          "interceptions": 13.0,
-          "clearances": 36.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 123.73,
-          "attacking_pressure_index": 116.25,
-          "shots_per_match": 19.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 61.849999999999994,
+          "dominance_index": 38.64,
+          "attacking_pressure_index": 54.68,
+          "shots_per_match": 8.0,
+          "shots_on_target_per_match": 2.0,
+          "possession_per_match": 24.6,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 3.0,
-          "yellow_cards_per_match": 1.5,
-          "red_cards_per_match": 0.5,
+          "corners_per_match": 4.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 11.0,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 2.5,
-          "accurate_passes_per_match": 462.0,
-          "total_passes_per_match": 538.0,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 6.0,
-          "total_crosses_per_match": 24.0,
-          "blocked_shots_per_match": 5.5,
-          "total_tackles_per_match": 14.5,
-          "interceptions_per_match": 6.5,
-          "clearances_per_match": 18.0,
+          "fouls_per_match": 10.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 0.0,
+          "accurate_passes_per_match": 195.0,
+          "total_passes_per_match": 249.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 1.0,
+          "total_crosses_per_match": 10.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 17.0,
+          "interceptions_per_match": 5.0,
+          "clearances_per_match": 27.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 61.865,
-          "attacking_pressure_index_per_match": 58.125
+          "dominance_index_per_match": 38.64,
+          "attacking_pressure_index_per_match": 54.68
         },
-        "home_factor_score": -0.1285,
-        "away_factor_score": 0.0518725,
-        "probability_adjustment": -0.16,
+        "away_advanced_profile": {
+          "team": "Uzbekistan",
+          "matches": 1,
+          "shots": 7.0,
+          "shots_on_target": 2.0,
+          "possession": 34.0,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 2.0,
+          "yellow_cards": 1.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 15.0,
+          "offsides": 2.0,
+          "saves": 4.0,
+          "accurate_passes": 262.0,
+          "total_passes": 325.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 0.0,
+          "total_crosses": 8.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 18.0,
+          "interceptions": 14.0,
+          "clearances": 30.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 29.93,
+          "attacking_pressure_index": 26.87,
+          "shots_per_match": 7.0,
+          "shots_on_target_per_match": 2.0,
+          "possession_per_match": 34.0,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 2.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 15.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 4.0,
+          "accurate_passes_per_match": 262.0,
+          "total_passes_per_match": 325.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 0.0,
+          "total_crosses_per_match": 8.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 18.0,
+          "interceptions_per_match": 14.0,
+          "clearances_per_match": 30.0,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 29.93,
+          "attacking_pressure_index_per_match": 26.87
+        },
+        "home_factor_score": -0.18836599999999998,
+        "away_factor_score": -0.39698900000000004,
+        "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 68.",
-            "impact": -0.026
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 56.",
+            "impact": -0.002
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
+            "impact": -0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 8.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 59.",
+            "impact": -0.008
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "impact": -0.045
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 24.6%، ضغط هجومي 54.7.",
+            "impact": -0.124
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
-            "impact": -0.018
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
+            "impact": -0.184
           }
         ]
       }
@@ -2854,72 +2882,75 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "No butterfly events found for this match.",
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        "No butterfly events found for this match."
       ],
       "payload": {
-        "favorite": "away_win",
+        "favorite": "home_win",
         "objections": [],
         "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: away_win.",
+      "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.03939114524024177,
-        "draw": 0.2600188234961251,
-        "away_win": 0.7005900312636332,
+        "home_win": 0.7126275359291007,
+        "draw": 0.2504679052234493,
+        "away_win": 0.03690455884745004,
         "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.0554212123303426,
-          "away": 1.6851037185287425
+          "home": 1.7826382409324437,
+          "away": 1.1038876466528638
         },
         "key_factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 68.",
-            "impact": -0.026
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 56.",
+            "impact": -0.002
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -7.",
+            "impact": -0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 8.",
-            "impact": 0.07
+            "value": "Seed rank داخل النموذج: 59.",
+            "impact": -0.008
+          },
+          {
+            "side": "away",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 8 أهداف في 2 مباراة.",
+            "impact": -0.045
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 24.6%، ضغط هجومي 54.7.",
+            "impact": -0.124
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
-            "impact": -0.018
+            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 34.0%، ضغط هجومي 26.9.",
+            "impact": -0.184
           }
         ],
-        "data_quality_warnings": [
-          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-        ],
-        "calibration_version": 35,
-        "recommended_label": "away_win",
-        "explanation": "New Zealand vs Belgium: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "data_quality_warnings": [],
+        "calibration_version": 34,
+        "recommended_label": "home_win",
+        "explanation": "DR Congo vs Uzbekistan: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {
