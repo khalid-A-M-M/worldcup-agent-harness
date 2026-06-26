@@ -1,9 +1,9 @@
 {
-  "version": 48,
-  "team_adjustment_weight": 0.8660067464319996,
-  "butterfly_adjustment_weight": 0.7737809374999999,
+  "version": 47,
+  "team_adjustment_weight": 0.9212837727999996,
+  "butterfly_adjustment_weight": 0.8145062499999999,
   "advanced_stats_weight": 1.0,
-  "confidence_penalty_weight": 1.2762815625000004,
+  "confidence_penalty_weight": 1.2155062500000002,
   "notes": [
     "Updated by evolve_after_results.py after completed matches are scored.",
     "Not enough completed forecasts for aggressive recalibration.",
@@ -48,7 +48,6 @@
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-    "Reduced adjustment weights after weak completed-match accuracy.",
     "Reduced adjustment weights after weak completed-match accuracy.",
     "Reduced adjustment weights after weak completed-match accuracy.",
     "Reduced adjustment weights after weak completed-match accuracy.",
