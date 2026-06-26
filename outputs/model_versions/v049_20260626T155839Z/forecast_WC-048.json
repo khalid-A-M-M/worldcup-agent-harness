@@ -1,20 +1,20 @@
 {
   "match": {
-    "match_id": "WC-053",
-    "home_team": "Norway",
-    "away_team": "France",
-    "kickoff_utc": "2026-06-26T19:00:00+00:00",
-    "group": "Group I",
-    "ground": "Boston (Foxborough)",
+    "match_id": "WC-048",
+    "home_team": "Uruguay",
+    "away_team": "Spain",
+    "kickoff_utc": "2026-06-27T00:00:00+00:00",
+    "group": "Group H",
+    "ground": "Guadalajara (Zapopan)",
     "round": "Matchday 16",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Norway and France.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Uruguay and Spain.",
     "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Norway 67.0 vs France 86.2.",
+    "economic_world: ok - Computed long-run country-strength layer: Uruguay 67.7 vs Spain 83.3.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -515,12 +515,12 @@
         },
         "butterfly_events": [
           {
-            "match_id": "WC-053",
+            "match_id": "WC-048",
             "event_time_utc": "2026-06-23T10:00:00Z",
-            "event_type": "favorite_pressure",
-            "description": "France carries heavy favorite pressure in a decisive group fixture.",
+            "event_type": "altitude_heat_context",
+            "description": "Mexico venue context may increase fatigue variance.",
             "impact": "medium",
-            "confidence": "medium",
+            "confidence": "low",
             "benefits": "against_away"
           }
         ],
@@ -3581,11 +3581,11 @@
           }
         ],
         "calibration": {
-          "version": 50,
-          "team_adjustment_weight": 0.7652035611473148,
-          "butterfly_adjustment_weight": 0.7,
+          "version": 49,
+          "team_adjustment_weight": 0.8140463416460796,
+          "butterfly_adjustment_weight": 0.7350918906249998,
           "advanced_stats_weight": 1.0,
-          "confidence_penalty_weight": 1.35,
+          "confidence_penalty_weight": 1.3400956406250004,
           "notes": [
             "Updated by evolve_after_results.py after completed matches are scored.",
             "Not enough completed forecasts for aggressive recalibration.",
@@ -3635,7 +3635,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3647,39 +3646,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.3240756642124387,
-          "draw": 0.24672480828499135,
-          "away_win": 0.42919952750257034
+          "home_win": 0.3334293232099062,
+          "draw": 0.25990912522758214,
+          "away_win": 0.4066615515625115
         },
         "expected_goals": {
-          "home": 1.4548803562315094,
-          "away": 1.7000058102370503
+          "home": 1.3723164623915607,
+          "away": 1.5367590609079267
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.11167418369599663
+            "probability": 0.12175008263680172
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.08965801015384739
+            "probability": 0.08836106685739022
           },
           {
             "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.07673013643020953
+            "probability": 0.07890589342693521
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.0663060352203615
+            "probability": 0.077044027706909
           },
           {
-            "home_goals": 2,
-            "away_goals": 2,
-            "probability": 0.06522083887581887
+            "home_goals": 1,
+            "away_goals": 0,
+            "probability": 0.06807718731904899
           }
         ],
         "model_diagnostics": {
@@ -3691,182 +3690,182 @@
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Norway and France.",
+      "summary": "Computed tournament form and prior-strength factors for Uruguay and Spain.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Norway",
+          "team": "Uruguay",
           "matches": 2,
-          "wins": 2,
-          "draws": 0,
+          "wins": 0,
+          "draws": 2,
           "losses": 0,
-          "goals_for": 7,
+          "goals_for": 3,
           "goals_against": 3,
-          "goal_difference": 4,
-          "points": 6,
-          "points_per_match": 3.0,
-          "seed_rank": 38
+          "goal_difference": 0,
+          "points": 2,
+          "points_per_match": 1.0,
+          "seed_rank": 11
         },
         "away_profile": {
-          "team": "France",
+          "team": "Spain",
           "matches": 2,
-          "wins": 2,
-          "draws": 0,
+          "wins": 1,
+          "draws": 1,
           "losses": 0,
-          "goals_for": 6,
-          "goals_against": 1,
-          "goal_difference": 5,
-          "points": 6,
-          "points_per_match": 3.0,
-          "seed_rank": 1
+          "goals_for": 4,
+          "goals_against": 0,
+          "goal_difference": 4,
+          "points": 4,
+          "points_per_match": 2.0,
+          "seed_rank": 3
         },
         "home_advanced_profile": {
-          "team": "Norway",
-          "matches": 1,
-          "shots": 12.0,
-          "shots_on_target": 5.0,
-          "possession": 61.3,
+          "team": "Uruguay",
+          "matches": 2,
+          "shots": 44.0,
+          "shots_on_target": 12.0,
+          "possession": 132.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 5.0,
-          "yellow_cards": 0.0,
+          "corners": 25.0,
+          "yellow_cards": 2.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 13.0,
-          "offsides": 0.0,
-          "saves": 0.0,
-          "accurate_passes": 477.0,
-          "total_passes": 537.0,
-          "pass_pct": 0.9,
-          "accurate_crosses": 7.0,
-          "total_crosses": 17.0,
-          "blocked_shots": 3.0,
-          "total_tackles": 15.0,
-          "interceptions": 2.0,
-          "clearances": 22.0,
+          "fouls": 17.0,
+          "offsides": 9.0,
+          "saves": 4.0,
+          "accurate_passes": 960.0,
+          "total_passes": 1123.0,
+          "pass_pct": 1.7000000000000002,
+          "accurate_crosses": 20.0,
+          "total_crosses": 76.0,
+          "blocked_shots": 14.0,
+          "total_tackles": 19.0,
+          "interceptions": 17.0,
+          "clearances": 28.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 63.97,
-          "attacking_pressure_index": 70.96,
-          "shots_per_match": 12.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 61.3,
+          "dominance_index": 128.43,
+          "attacking_pressure_index": 127.54,
+          "shots_per_match": 22.0,
+          "shots_on_target_per_match": 6.0,
+          "possession_per_match": 66.0,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 5.0,
-          "yellow_cards_per_match": 0.0,
+          "corners_per_match": 12.5,
+          "yellow_cards_per_match": 1.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 13.0,
-          "offsides_per_match": 0.0,
-          "saves_per_match": 0.0,
-          "accurate_passes_per_match": 477.0,
-          "total_passes_per_match": 537.0,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 7.0,
-          "total_crosses_per_match": 17.0,
-          "blocked_shots_per_match": 3.0,
-          "total_tackles_per_match": 15.0,
-          "interceptions_per_match": 2.0,
-          "clearances_per_match": 22.0,
+          "fouls_per_match": 8.5,
+          "offsides_per_match": 4.5,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 480.0,
+          "total_passes_per_match": 561.5,
+          "pass_pct_per_match": 0.8500000000000001,
+          "accurate_crosses_per_match": 10.0,
+          "total_crosses_per_match": 38.0,
+          "blocked_shots_per_match": 7.0,
+          "total_tackles_per_match": 9.5,
+          "interceptions_per_match": 8.5,
+          "clearances_per_match": 14.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 63.97,
-          "attacking_pressure_index_per_match": 70.96
+          "dominance_index_per_match": 64.215,
+          "attacking_pressure_index_per_match": 63.77
         },
         "away_advanced_profile": {
-          "team": "France",
+          "team": "Spain",
           "matches": 2,
-          "shots": 30.0,
-          "shots_on_target": 13.0,
-          "possession": 109.0,
+          "shots": 49.0,
+          "shots_on_target": 15.0,
+          "possession": 141.39999999999998,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 10.0,
-          "yellow_cards": 0.0,
+          "corners": 17.0,
+          "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 13.0,
-          "offsides": 2.0,
+          "fouls": 20.0,
+          "offsides": 4.0,
           "saves": 2.0,
-          "accurate_passes": 1045.0,
-          "total_passes": 1178.0,
+          "accurate_passes": 1402.0,
+          "total_passes": 1526.0,
           "pass_pct": 1.8,
-          "accurate_crosses": 2.0,
-          "total_crosses": 23.0,
-          "blocked_shots": 6.0,
-          "total_tackles": 33.0,
-          "interceptions": 12.0,
-          "clearances": 23.0,
+          "accurate_crosses": 13.0,
+          "total_crosses": 61.0,
+          "blocked_shots": 10.0,
+          "total_tackles": 23.0,
+          "interceptions": 19.0,
+          "clearances": 24.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 130.87,
-          "attacking_pressure_index": 154.07,
-          "shots_per_match": 15.0,
-          "shots_on_target_per_match": 6.5,
-          "possession_per_match": 54.5,
+          "dominance_index": 153.93,
+          "attacking_pressure_index": 171.44,
+          "shots_per_match": 24.5,
+          "shots_on_target_per_match": 7.5,
+          "possession_per_match": 70.69999999999999,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 5.0,
-          "yellow_cards_per_match": 0.0,
+          "corners_per_match": 8.5,
+          "yellow_cards_per_match": 0.5,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 6.5,
-          "offsides_per_match": 1.0,
+          "fouls_per_match": 10.0,
+          "offsides_per_match": 2.0,
           "saves_per_match": 1.0,
-          "accurate_passes_per_match": 522.5,
-          "total_passes_per_match": 589.0,
+          "accurate_passes_per_match": 701.0,
+          "total_passes_per_match": 763.0,
           "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 1.0,
-          "total_crosses_per_match": 11.5,
-          "blocked_shots_per_match": 3.0,
-          "total_tackles_per_match": 16.5,
-          "interceptions_per_match": 6.0,
-          "clearances_per_match": 11.5,
+          "accurate_crosses_per_match": 6.5,
+          "total_crosses_per_match": 30.5,
+          "blocked_shots_per_match": 5.0,
+          "total_tackles_per_match": 11.5,
+          "interceptions_per_match": 9.5,
+          "clearances_per_match": 12.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 65.435,
-          "attacking_pressure_index_per_match": 77.035
+          "dominance_index_per_match": 76.965,
+          "attacking_pressure_index_per_match": 85.72
         },
-        "home_factor_score": 0.311033,
-        "away_factor_score": 0.3645655,
-        "probability_adjustment": -0.05353249999999998,
+        "home_factor_score": 0.11585850000000003,
+        "away_factor_score": 0.3861975,
+        "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 4.",
-            "impact": 0.11
+            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 38.",
-            "impact": 0.034
+            "value": "Seed rank داخل النموذج: 11.",
+            "impact": 0.07
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 4.",
             "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 1.",
+            "value": "Seed rank داخل النموذج: 3.",
             "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.3%، ضغط هجومي 71.0.",
-            "impact": 0.037
+            "value": "xG 0.00، تسديدات على المرمى 6.0، استحواذ 66.0%، ضغط هجومي 63.8.",
+            "impact": 0.046
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 6.5، استحواذ 54.5%، ضغط هجومي 77.0.",
-            "impact": 0.055
+            "value": "xG 0.00، تسديدات على المرمى 7.5، استحواذ 70.7%، ضغط هجومي 85.7.",
+            "impact": 0.111
           }
         ]
       }
@@ -3877,14 +3876,14 @@
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": -0.011520828793523822,
+        "away_adjustment": -0.007218908351717979,
         "events": [
           {
-            "event_type": "favorite_pressure",
-            "description": "France carries heavy favorite pressure in a decisive group fixture.",
-            "hours_to_kickoff": 81.0,
-            "time_weight": 0.47,
-            "signed_effect": 0.0115,
+            "event_type": "altitude_heat_context",
+            "description": "Mexico venue context may increase fatigue variance.",
+            "hours_to_kickoff": 86.0,
+            "time_weight": 0.458,
+            "signed_effect": 0.0072,
             "benefits": "against_away"
           }
         ]
@@ -3892,48 +3891,48 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Norway 67.0 vs France 86.2.",
+      "summary": "Computed long-run country-strength layer: Uruguay 67.7 vs Spain 83.3.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Norway",
+          "team": "Uruguay",
           "found": true,
-          "notes": "High economy and improving elite talent.",
-          "gdp_per_capita_index": 96.0,
-          "population_index": 30.0,
-          "football_market_index": 68.0,
-          "academy_pipeline_index": 70.0,
-          "climate_fit_index": 58.0,
-          "league_export_index": 70.0,
-          "home_region_fit_index": 60.0
+          "notes": "Small population but elite football identity.",
+          "gdp_per_capita_index": 61.0,
+          "population_index": 25.0,
+          "football_market_index": 78.0,
+          "academy_pipeline_index": 78.0,
+          "climate_fit_index": 78.0,
+          "league_export_index": 76.0,
+          "home_region_fit_index": 70.0
         },
         "away_profile": {
-          "team": "France",
+          "team": "Spain",
           "found": true,
-          "notes": "Elite economy-football pipeline with deep exports and academies.",
-          "gdp_per_capita_index": 82.0,
-          "population_index": 64.0,
-          "football_market_index": 95.0,
-          "academy_pipeline_index": 94.0,
-          "climate_fit_index": 78.0,
-          "league_export_index": 95.0,
-          "home_region_fit_index": 72.0
+          "notes": "Elite league and academy structure.",
+          "gdp_per_capita_index": 76.0,
+          "population_index": 55.0,
+          "football_market_index": 94.0,
+          "academy_pipeline_index": 92.0,
+          "climate_fit_index": 80.0,
+          "league_export_index": 94.0,
+          "home_region_fit_index": 70.0
         },
-        "home_score": 67.04,
-        "away_score": 86.18,
-        "probability_adjustment": -0.01914,
+        "home_score": 67.69,
+        "away_score": 83.33,
+        "probability_adjustment": -0.01564,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.0/100: دخل 96، سكان 30، سوق كرة 68، أكاديميات 70، مناخ 58.",
-            "impact": 0.017
+            "value": "قوة بنيوية 67.7/100: دخل 61، سكان 25، سوق كرة 78، أكاديميات 78، مناخ 78.",
+            "impact": 0.018
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 86.2/100: دخل 82، سكان 64، سوق كرة 95، أكاديميات 94، مناخ 78.",
-            "impact": 0.036
+            "value": "قوة بنيوية 83.3/100: دخل 76، سكان 55، سوق كرة 94، أكاديميات 92، مناخ 80.",
+            "impact": 0.033
           }
         ]
       }
@@ -3953,13 +3952,13 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.27541366883398305,
-        "draw": 0.24671632175055358,
-        "away_win": 0.4778700094154633,
+        "home_win": 0.19576041082567866,
+        "draw": 0.26000465631046904,
+        "away_win": 0.5442349328638523,
         "confidence_interval_width": 0.12,
         "expected_goals": {
-          "home": 1.4548803562315094,
-          "away": 1.7000058102370503
+          "home": 1.3723164623915607,
+          "away": 1.5367590609079267
         },
         "model_diagnostics": {
           "rho": -0.058727272727272704,
@@ -3970,62 +3969,62 @@
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.0/100: دخل 96، سكان 30، سوق كرة 68، أكاديميات 70، مناخ 58.",
-            "impact": 0.017
+            "value": "قوة بنيوية 67.7/100: دخل 61، سكان 25، سوق كرة 78، أكاديميات 78، مناخ 78.",
+            "impact": 0.018
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 86.2/100: دخل 82، سكان 64، سوق كرة 95، أكاديميات 94، مناخ 78.",
-            "impact": 0.036
+            "value": "قوة بنيوية 83.3/100: دخل 76، سكان 55، سوق كرة 94، أكاديميات 92، مناخ 80.",
+            "impact": 0.033
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 4.",
-            "impact": 0.11
+            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 38.",
-            "impact": 0.034
+            "value": "Seed rank داخل النموذج: 11.",
+            "impact": 0.07
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 4.",
             "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 1.",
+            "value": "Seed rank داخل النموذج: 3.",
             "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.3%، ضغط هجومي 71.0.",
-            "impact": 0.037
+            "value": "xG 0.00، تسديدات على المرمى 6.0، استحواذ 66.0%، ضغط هجومي 63.8.",
+            "impact": 0.046
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 6.5، استحواذ 54.5%، ضغط هجومي 77.0.",
-            "impact": 0.055
+            "value": "xG 0.00، تسديدات على المرمى 7.5، استحواذ 70.7%، ضغط هجومي 85.7.",
+            "impact": 0.111
           },
           {
             "side": "home",
             "label": "أثر فراشة",
-            "value": "France carries heavy favorite pressure in a decisive group fixture.",
-            "impact": 0.0115
+            "value": "Mexico venue context may increase fatigue variance.",
+            "impact": 0.0072
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 50,
+        "calibration_version": 49,
         "recommended_label": "away_win",
-        "explanation": "Norway vs France: baseline model favors away_win; butterfly cues: France carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
+        "explanation": "Uruguay vs Spain: baseline model favors away_win; butterfly cues: Mexico venue context may increase fatigue variance.; critic: no blocking objection."
       }
     },
     "self_correction": {
