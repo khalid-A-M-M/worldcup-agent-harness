@@ -198,6 +198,5 @@
       "log_loss": 0.399232120542577,
       "calibration_version": 3
     }
-  ],
-  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v053_20260626T180014Z"
+  ]
 }
