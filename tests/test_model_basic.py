@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import csv
 import unittest
 from datetime import date
+from pathlib import Path
 
 from football_harness.agents import _coerce_probability_map, _economic_probabilities_from_scores, _kliment_weight
 from football_harness.model import (
@@ -51,6 +53,18 @@ class ModelBasicsTest(unittest.TestCase):
         self.assertGreater(model.effective_matches, 0)
         self.assertGreaterEqual(model.rho, -0.20)
         self.assertLessEqual(model.rho, 0.0)
+
+
+class DataIntegrityTest(unittest.TestCase):
+    def test_historical_results_have_match_type(self) -> None:
+        path = Path(__file__).resolve().parent.parent / "data" / "historical_results.csv"
+        with path.open("r", encoding="utf-8", newline="") as f:
+            reader = csv.DictReader(f)
+            self.assertIn("match_type", reader.fieldnames or [])
+            rows = list(reader)
+        self.assertTrue(rows)
+        self.assertTrue(all(row.get("match_type") for row in rows))
+
 
 
 class AgentBlendTest(unittest.TestCase):
