@@ -1,20 +1,19 @@
 {
   "match": {
-    "match_id": "WC-059",
-    "home_team": "Algeria",
-    "away_team": "Austria",
-    "kickoff_utc": "2026-06-28T02:00:00+00:00",
-    "group": "Group J",
-    "ground": "Kansas City",
-    "round": "Matchday 17",
+    "match_id": "WC-006",
+    "home_team": "South Africa",
+    "away_team": "South Korea",
+    "kickoff_utc": "2026-06-25T01:00:00+00:00",
+    "group": "Group A",
+    "ground": "Monterrey (Guadalupe)",
+    "round": "Matchday 14",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 59 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "data_collection: ok - Loaded 52 historical matches, 47 team priors, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Algeria and Austria.",
-    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Algeria 63.2 vs Austria 67.5.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for South Africa and South Korea.",
+    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -22,10 +21,8 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 59 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "summary": "Loaded 52 historical matches, 47 team priors, and 1 live event cues.",
+      "warnings": [],
       "payload": {
         "historical_results": [
           {
@@ -48,18 +45,6 @@
           },
           {
             "home_team": "Mexico",
-            "away_team": "South Korea",
-            "home_goals": 1,
-            "away_goals": 0
-          },
-          {
-            "home_team": "Czech Republic",
-            "away_team": "Mexico",
-            "home_goals": 0,
-            "away_goals": 3
-          },
-          {
-            "home_team": "South Africa",
             "away_team": "South Korea",
             "home_goals": 1,
             "away_goals": 0
@@ -161,12 +146,6 @@
             "away_goals": 1
           },
           {
-            "home_team": "Paraguay",
-            "away_team": "Australia",
-            "home_goals": 0,
-            "away_goals": 0
-          },
-          {
             "home_team": "Germany",
             "away_team": "Curaçao",
             "home_goals": 7,
@@ -191,18 +170,6 @@
             "away_goals": 0
           },
           {
-            "home_team": "Curaçao",
-            "away_team": "Ivory Coast",
-            "home_goals": 0,
-            "away_goals": 2
-          },
-          {
-            "home_team": "Ecuador",
-            "away_team": "Germany",
-            "home_goals": 2,
-            "away_goals": 1
-          },
-          {
             "home_team": "Netherlands",
             "away_team": "Japan",
             "home_goals": 2,
@@ -225,18 +192,6 @@
             "away_team": "Japan",
             "home_goals": 0,
             "away_goals": 4
-          },
-          {
-            "home_team": "Japan",
-            "away_team": "Sweden",
-            "home_goals": 1,
-            "away_goals": 1
-          },
-          {
-            "home_team": "Tunisia",
-            "away_team": "Netherlands",
-            "home_goals": 1,
-            "away_goals": 3
           },
           {
             "home_team": "Belgium",
@@ -383,7 +338,17 @@
             "away_goals": 1
           }
         ],
-        "butterfly_events": [],
+        "butterfly_events": [
+          {
+            "match_id": "WC-006",
+            "event_time_utc": "2026-06-23T10:00:00Z",
+            "event_type": "altitude_heat_context",
+            "description": "Mexico venue context may increase fatigue variance.",
+            "impact": "medium",
+            "confidence": "low",
+            "benefits": "against_away"
+          }
+        ],
         "team_priors": {
           "France": [
             1.18,
@@ -1383,130 +1348,6 @@
             "source": "ESPN"
           },
           {
-            "match_id": "WC-029",
-            "team": "Curaçao",
-            "shots": "11.0",
-            "shots_on_target": "2.0",
-            "possession": "36.6",
-            "xg": "",
-            "big_chances": "",
-            "corners": "4.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "1.0",
-            "accurate_passes": "295.0",
-            "total_passes": "354.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "5.0",
-            "total_crosses": "15.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "20.0",
-            "interceptions": "15.0",
-            "clearances": "17.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.09",
-            "attacking_pressure_index": "44.94",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-029",
-            "team": "Ivory Coast",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "63.4",
-            "xg": "",
-            "big_chances": "",
-            "corners": "6.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "6.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "558.0",
-            "total_passes": "623.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "3.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "17.0",
-            "interceptions": "12.0",
-            "clearances": "19.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.91",
-            "attacking_pressure_index": "55.06",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Ecuador",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "38.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "3.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "15.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "313.0",
-            "total_passes": "379.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "3.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "26.0",
-            "interceptions": "12.0",
-            "clearances": "29.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "41.15",
-            "attacking_pressure_index": "48.11",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Germany",
-            "shots": "11.0",
-            "shots_on_target": "3.0",
-            "possession": "61.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "1.0",
-            "accurate_passes": "517.0",
-            "total_passes": "592.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "5.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "20.0",
-            "interceptions": "4.0",
-            "clearances": "15.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "58.85",
-            "attacking_pressure_index": "51.89",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
             "match_id": "WC-031",
             "team": "Japan",
             "shots": "10.0",
@@ -1689,130 +1530,6 @@
             "momentum_last_15": "",
             "dominance_index": "25.79",
             "attacking_pressure_index": "15.14",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-035",
-            "team": "Japan",
-            "shots": "8.0",
-            "shots_on_target": "3.0",
-            "possession": "52.3",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "20.0",
-            "offsides": "3.0",
-            "saves": "4.0",
-            "accurate_passes": "379.0",
-            "total_passes": "446.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "4.0",
-            "total_crosses": "13.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "13.0",
-            "interceptions": "4.0",
-            "clearances": "40.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "47.48",
-            "attacking_pressure_index": "36.63",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-035",
-            "team": "Sweden",
-            "shots": "11.0",
-            "shots_on_target": "5.0",
-            "possession": "47.7",
-            "xg": "",
-            "big_chances": "",
-            "corners": "8.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "2.0",
-            "accurate_passes": "312.0",
-            "total_passes": "395.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "4.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "6.0",
-            "interceptions": "5.0",
-            "clearances": "21.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "52.52",
-            "attacking_pressure_index": "63.37",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-036",
-            "team": "Netherlands",
-            "shots": "20.0",
-            "shots_on_target": "7.0",
-            "possession": "71.4",
-            "xg": "",
-            "big_chances": "",
-            "corners": "6.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "1.0",
-            "saves": "3.0",
-            "accurate_passes": "602.0",
-            "total_passes": "647.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "6.0",
-            "total_crosses": "27.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "8.0",
-            "interceptions": "10.0",
-            "clearances": "17.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "68.92",
-            "attacking_pressure_index": "64.44",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-036",
-            "team": "Tunisia",
-            "shots": "10.0",
-            "shots_on_target": "4.0",
-            "possession": "28.6",
-            "xg": "",
-            "big_chances": "",
-            "corners": "4.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "4.0",
-            "accurate_passes": "199.0",
-            "total_passes": "258.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "4.0",
-            "total_crosses": "13.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "17.0",
-            "interceptions": "8.0",
-            "clearances": "35.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "31.08",
-            "attacking_pressure_index": "35.56",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -2871,581 +2588,12 @@
             "source": "ESPN"
           }
         ],
-        "economic_world": [
-          {
-            "team": "France",
-            "gdp_per_capita_index": "82",
-            "population_index": "64",
-            "football_market_index": "95",
-            "academy_pipeline_index": "94",
-            "climate_fit_index": "78",
-            "league_export_index": "95",
-            "home_region_fit_index": "72",
-            "notes": "Elite economy-football pipeline with deep exports and academies."
-          },
-          {
-            "team": "Argentina",
-            "gdp_per_capita_index": "58",
-            "population_index": "54",
-            "football_market_index": "90",
-            "academy_pipeline_index": "88",
-            "climate_fit_index": "76",
-            "league_export_index": "86",
-            "home_region_fit_index": "70",
-            "notes": "Historic football culture offsets weaker macro economy."
-          },
-          {
-            "team": "Spain",
-            "gdp_per_capita_index": "76",
-            "population_index": "55",
-            "football_market_index": "94",
-            "academy_pipeline_index": "92",
-            "climate_fit_index": "80",
-            "league_export_index": "94",
-            "home_region_fit_index": "70",
-            "notes": "Elite league and academy structure."
-          },
-          {
-            "team": "England",
-            "gdp_per_capita_index": "84",
-            "population_index": "63",
-            "football_market_index": "96",
-            "academy_pipeline_index": "88",
-            "climate_fit_index": "72",
-            "league_export_index": "96",
-            "home_region_fit_index": "68",
-            "notes": "Very high market and league power."
-          },
-          {
-            "team": "Brazil",
-            "gdp_per_capita_index": "54",
-            "population_index": "92",
-            "football_market_index": "93",
-            "academy_pipeline_index": "90",
-            "climate_fit_index": "82",
-            "league_export_index": "88",
-            "home_region_fit_index": "74",
-            "notes": "Large population and extreme football culture."
-          },
-          {
-            "team": "Portugal",
-            "gdp_per_capita_index": "70",
-            "population_index": "36",
-            "football_market_index": "88",
-            "academy_pipeline_index": "84",
-            "climate_fit_index": "78",
-            "league_export_index": "88",
-            "home_region_fit_index": "66",
-            "notes": "Small population but elite export model."
-          },
-          {
-            "team": "Netherlands",
-            "gdp_per_capita_index": "84",
-            "population_index": "42",
-            "football_market_index": "86",
-            "academy_pipeline_index": "90",
-            "climate_fit_index": "74",
-            "league_export_index": "90",
-            "home_region_fit_index": "66",
-            "notes": "High academy efficiency and export pipeline."
-          },
-          {
-            "team": "Belgium",
-            "gdp_per_capita_index": "83",
-            "population_index": "38",
-            "football_market_index": "84",
-            "academy_pipeline_index": "82",
-            "climate_fit_index": "72",
-            "league_export_index": "84",
-            "home_region_fit_index": "66",
-            "notes": "Small population but strong modern pipeline."
-          },
-          {
-            "team": "Germany",
-            "gdp_per_capita_index": "86",
-            "population_index": "68",
-            "football_market_index": "92",
-            "academy_pipeline_index": "88",
-            "climate_fit_index": "72",
-            "league_export_index": "92",
-            "home_region_fit_index": "68",
-            "notes": "Large economy and deep league infrastructure."
-          },
-          {
-            "team": "Croatia",
-            "gdp_per_capita_index": "62",
-            "population_index": "28",
-            "football_market_index": "80",
-            "academy_pipeline_index": "82",
-            "climate_fit_index": "74",
-            "league_export_index": "80",
-            "home_region_fit_index": "66",
-            "notes": "Small country with exceptional talent conversion."
-          },
-          {
-            "team": "Uruguay",
-            "gdp_per_capita_index": "61",
-            "population_index": "25",
-            "football_market_index": "78",
-            "academy_pipeline_index": "78",
-            "climate_fit_index": "78",
-            "league_export_index": "76",
-            "home_region_fit_index": "70",
-            "notes": "Small population but elite football identity."
-          },
-          {
-            "team": "Mexico",
-            "gdp_per_capita_index": "60",
-            "population_index": "72",
-            "football_market_index": "76",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "82",
-            "league_export_index": "70",
-            "home_region_fit_index": "92",
-            "notes": "Host-region advantage and large football market."
-          },
-          {
-            "team": "USA",
-            "gdp_per_capita_index": "94",
-            "population_index": "96",
-            "football_market_index": "78",
-            "academy_pipeline_index": "74",
-            "climate_fit_index": "78",
-            "league_export_index": "74",
-            "home_region_fit_index": "95",
-            "notes": "Massive economy and host advantage",
-            "null": [
-              " developing football culture."
-            ]
-          },
-          {
-            "team": "Morocco",
-            "gdp_per_capita_index": "45",
-            "population_index": "52",
-            "football_market_index": "74",
-            "academy_pipeline_index": "76",
-            "climate_fit_index": "82",
-            "league_export_index": "72",
-            "home_region_fit_index": "72",
-            "notes": "Strong diaspora and rising academy/export model."
-          },
-          {
-            "team": "Switzerland",
-            "gdp_per_capita_index": "95",
-            "population_index": "34",
-            "football_market_index": "72",
-            "academy_pipeline_index": "76",
-            "climate_fit_index": "72",
-            "league_export_index": "76",
-            "home_region_fit_index": "66",
-            "notes": "High economy and stable development system."
-          },
-          {
-            "team": "Canada",
-            "gdp_per_capita_index": "88",
-            "population_index": "53",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "66",
-            "league_export_index": "64",
-            "home_region_fit_index": "94",
-            "notes": "Host advantage and improving pipeline."
-          },
-          {
-            "team": "Colombia",
-            "gdp_per_capita_index": "47",
-            "population_index": "57",
-            "football_market_index": "72",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "82",
-            "league_export_index": "70",
-            "home_region_fit_index": "74",
-            "notes": "Strong talent base and climate familiarity."
-          },
-          {
-            "team": "Japan",
-            "gdp_per_capita_index": "82",
-            "population_index": "76",
-            "football_market_index": "70",
-            "academy_pipeline_index": "76",
-            "climate_fit_index": "76",
-            "league_export_index": "72",
-            "home_region_fit_index": "60",
-            "notes": "High organization and technical development."
-          },
-          {
-            "team": "Sweden",
-            "gdp_per_capita_index": "82",
-            "population_index": "38",
-            "football_market_index": "70",
-            "academy_pipeline_index": "74",
-            "climate_fit_index": "64",
-            "league_export_index": "74",
-            "home_region_fit_index": "62",
-            "notes": "Stable development and exports."
-          },
-          {
-            "team": "Austria",
-            "gdp_per_capita_index": "86",
-            "population_index": "34",
-            "football_market_index": "68",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "66",
-            "league_export_index": "72",
-            "home_region_fit_index": "64",
-            "notes": "Strong Central European football infrastructure."
-          },
-          {
-            "team": "Turkey",
-            "gdp_per_capita_index": "54",
-            "population_index": "68",
-            "football_market_index": "72",
-            "academy_pipeline_index": "70",
-            "climate_fit_index": "76",
-            "league_export_index": "72",
-            "home_region_fit_index": "64",
-            "notes": "Large population and serious domestic league."
-          },
-          {
-            "team": "Ecuador",
-            "gdp_per_capita_index": "43",
-            "population_index": "46",
-            "football_market_index": "66",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "84",
-            "league_export_index": "64",
-            "home_region_fit_index": "72",
-            "notes": "Altitude/climate adaptation and strong recent pipeline."
-          },
-          {
-            "team": "Senegal",
-            "gdp_per_capita_index": "35",
-            "population_index": "47",
-            "football_market_index": "70",
-            "academy_pipeline_index": "72",
-            "climate_fit_index": "84",
-            "league_export_index": "68",
-            "home_region_fit_index": "72",
-            "notes": "Elite exports and strong athletic/talent conversion."
-          },
-          {
-            "team": "Ghana",
-            "gdp_per_capita_index": "34",
-            "population_index": "48",
-            "football_market_index": "66",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "84",
-            "league_export_index": "64",
-            "home_region_fit_index": "72",
-            "notes": "Strong talent identity with lower macro base."
-          },
-          {
-            "team": "Ivory Coast",
-            "gdp_per_capita_index": "36",
-            "population_index": "45",
-            "football_market_index": "68",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "84",
-            "league_export_index": "66",
-            "home_region_fit_index": "72",
-            "notes": "Strong exports and athletic profile."
-          },
-          {
-            "team": "South Korea",
-            "gdp_per_capita_index": "80",
-            "population_index": "57",
-            "football_market_index": "68",
-            "academy_pipeline_index": "74",
-            "climate_fit_index": "72",
-            "league_export_index": "70",
-            "home_region_fit_index": "58",
-            "notes": "Organized system and strong economy."
-          },
-          {
-            "team": "Australia",
-            "gdp_per_capita_index": "88",
-            "population_index": "50",
-            "football_market_index": "58",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "70",
-            "league_export_index": "60",
-            "home_region_fit_index": "58",
-            "notes": "High economy",
-            "null": [
-              " thinner football depth."
-            ]
-          },
-          {
-            "team": "Norway",
-            "gdp_per_capita_index": "96",
-            "population_index": "30",
-            "football_market_index": "68",
-            "academy_pipeline_index": "70",
-            "climate_fit_index": "58",
-            "league_export_index": "70",
-            "home_region_fit_index": "60",
-            "notes": "High economy and improving elite talent."
-          },
-          {
-            "team": "Scotland",
-            "gdp_per_capita_index": "78",
-            "population_index": "30",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "58",
-            "league_export_index": "66",
-            "home_region_fit_index": "62",
-            "notes": "Historic football system",
-            "null": [
-              " limited population."
-            ]
-          },
-          {
-            "team": "Czech Republic",
-            "gdp_per_capita_index": "74",
-            "population_index": "38",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "66",
-            "league_export_index": "66",
-            "home_region_fit_index": "62",
-            "notes": "Stable Central European development."
-          },
-          {
-            "team": "Paraguay",
-            "gdp_per_capita_index": "42",
-            "population_index": "34",
-            "football_market_index": "62",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "80",
-            "league_export_index": "60",
-            "home_region_fit_index": "70",
-            "notes": "Football culture stronger than macro base."
-          },
-          {
-            "team": "Qatar",
-            "gdp_per_capita_index": "96",
-            "population_index": "25",
-            "football_market_index": "54",
-            "academy_pipeline_index": "60",
-            "climate_fit_index": "90",
-            "league_export_index": "56",
-            "home_region_fit_index": "82",
-            "notes": "Very high wealth and climate/region fit",
-            "null": [
-              " limited population."
-            ]
-          },
-          {
-            "team": "Saudi Arabia",
-            "gdp_per_capita_index": "74",
-            "population_index": "51",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "92",
-            "league_export_index": "64",
-            "home_region_fit_index": "82",
-            "notes": "High investment and region climate fit."
-          },
-          {
-            "team": "South Africa",
-            "gdp_per_capita_index": "43",
-            "population_index": "55",
-            "football_market_index": "56",
-            "academy_pipeline_index": "58",
-            "climate_fit_index": "78",
-            "league_export_index": "56",
-            "home_region_fit_index": "70",
-            "notes": "Large market but uneven football pipeline."
-          },
-          {
-            "team": "Tunisia",
-            "gdp_per_capita_index": "42",
-            "population_index": "40",
-            "football_market_index": "58",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "86",
-            "league_export_index": "58",
-            "home_region_fit_index": "74",
-            "notes": "North African climate fit and organized football base."
-          },
-          {
-            "team": "Egypt",
-            "gdp_per_capita_index": "36",
-            "population_index": "77",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "88",
-            "league_export_index": "60",
-            "home_region_fit_index": "78",
-            "notes": "Large population and strong football culture."
-          },
-          {
-            "team": "Iran",
-            "gdp_per_capita_index": "45",
-            "population_index": "69",
-            "football_market_index": "62",
-            "academy_pipeline_index": "66",
-            "climate_fit_index": "84",
-            "league_export_index": "60",
-            "home_region_fit_index": "72",
-            "notes": "Large population and organized competitive base."
-          },
-          {
-            "team": "Iraq",
-            "gdp_per_capita_index": "32",
-            "population_index": "54",
-            "football_market_index": "52",
-            "academy_pipeline_index": "56",
-            "climate_fit_index": "88",
-            "league_export_index": "52",
-            "home_region_fit_index": "76",
-            "notes": "Strong culture",
-            "null": [
-              " limited infrastructure consistency."
-            ]
-          },
-          {
-            "team": "Jordan",
-            "gdp_per_capita_index": "43",
-            "population_index": "35",
-            "football_market_index": "46",
-            "academy_pipeline_index": "50",
-            "climate_fit_index": "88",
-            "league_export_index": "46",
-            "home_region_fit_index": "76",
-            "notes": "Regional fit",
-            "null": [
-              " smaller football economy."
-            ]
-          },
-          {
-            "team": "Algeria",
-            "gdp_per_capita_index": "46",
-            "population_index": "56",
-            "football_market_index": "64",
-            "academy_pipeline_index": "68",
-            "climate_fit_index": "86",
-            "league_export_index": "64",
-            "home_region_fit_index": "76",
-            "notes": "Strong diaspora and football culture."
-          },
-          {
-            "team": "Bosnia & Herzegovina",
-            "gdp_per_capita_index": "50",
-            "population_index": "27",
-            "football_market_index": "60",
-            "academy_pipeline_index": "62",
-            "climate_fit_index": "68",
-            "league_export_index": "62",
-            "home_region_fit_index": "64",
-            "notes": "Small population with export tradition."
-          },
-          {
-            "team": "New Zealand",
-            "gdp_per_capita_index": "82",
-            "population_index": "29",
-            "football_market_index": "42",
-            "academy_pipeline_index": "46",
-            "climate_fit_index": "64",
-            "league_export_index": "42",
-            "home_region_fit_index": "58",
-            "notes": "High economy",
-            "null": [
-              " limited football market depth."
-            ]
-          },
-          {
-            "team": "Panama",
-            "gdp_per_capita_index": "55",
-            "population_index": "28",
-            "football_market_index": "48",
-            "academy_pipeline_index": "52",
-            "climate_fit_index": "88",
-            "league_export_index": "48",
-            "home_region_fit_index": "76",
-            "notes": "Climate familiarity",
-            "null": [
-              " smaller football depth."
-            ]
-          },
-          {
-            "team": "Uzbekistan",
-            "gdp_per_capita_index": "34",
-            "population_index": "52",
-            "football_market_index": "48",
-            "academy_pipeline_index": "54",
-            "climate_fit_index": "76",
-            "league_export_index": "48",
-            "home_region_fit_index": "66",
-            "notes": "Rising football system",
-            "null": [
-              " modest macro base."
-            ]
-          },
-          {
-            "team": "DR Congo",
-            "gdp_per_capita_index": "22",
-            "population_index": "76",
-            "football_market_index": "54",
-            "academy_pipeline_index": "58",
-            "climate_fit_index": "86",
-            "league_export_index": "54",
-            "home_region_fit_index": "72",
-            "notes": "Large population and talent",
-            "null": [
-              " weak infrastructure."
-            ]
-          },
-          {
-            "team": "Haiti",
-            "gdp_per_capita_index": "18",
-            "population_index": "35",
-            "football_market_index": "42",
-            "academy_pipeline_index": "46",
-            "climate_fit_index": "86",
-            "league_export_index": "42",
-            "home_region_fit_index": "76",
-            "notes": "Low macro base",
-            "null": [
-              " diaspora/talent upside."
-            ]
-          },
-          {
-            "team": "Cape Verde",
-            "gdp_per_capita_index": "40",
-            "population_index": "23",
-            "football_market_index": "50",
-            "academy_pipeline_index": "54",
-            "climate_fit_index": "82",
-            "league_export_index": "50",
-            "home_region_fit_index": "72",
-            "notes": "Small population",
-            "null": [
-              " diaspora-driven football."
-            ]
-          },
-          {
-            "team": "Curaçao",
-            "gdp_per_capita_index": "55",
-            "population_index": "20",
-            "football_market_index": "46",
-            "academy_pipeline_index": "50",
-            "climate_fit_index": "84",
-            "league_export_index": "46",
-            "home_region_fit_index": "74",
-            "notes": "Small population",
-            "null": [
-              " diaspora-driven football."
-            ]
-          }
-        ],
         "calibration": {
-          "version": 45,
-          "team_adjustment_weight": 1.0426479999999998,
-          "butterfly_adjustment_weight": 0.9025,
+          "version": 32,
+          "team_adjustment_weight": 1.18,
+          "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
-          "confidence_penalty_weight": 1.1025,
+          "confidence_penalty_weight": 1.0,
           "notes": [
             "Updated by evolve_after_results.py after completed matches are scored.",
             "Not enough completed forecasts for aggressive recalibration.",
@@ -3478,20 +2626,7 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy."
+            "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
       }
@@ -3502,78 +2637,132 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.2900575786980066,
-          "draw": 0.25466207183261164,
-          "away_win": 0.4552803494693816
+          "home_win": 0.23873618535701677,
+          "draw": 0.2747322815228458,
+          "away_win": 0.48653153312013725
         },
         "expected_goals": {
-          "home": 1.3235225506941708,
-          "away": 1.702871515864719
+          "home": 1.0127015355502063,
+          "away": 1.5441478433655944
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.11803935560797096
+            "probability": 0.13097370324004057
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 1,
+            "probability": 0.11004917099512147
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09305826685918525
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.07383574517311939
-          },
-          {
-            "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.0723276615817398
+            "probability": 0.0936309080535713
           },
           {
             "home_goals": 0,
             "away_goals": 2,
-            "probability": 0.07031105500271027
+            "probability": 0.09245656767242988
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 0,
+            "probability": 0.08725322038179485
           }
         ]
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Algeria and Austria.",
+      "summary": "Computed tournament form and prior-strength factors for South Africa and South Korea.",
       "warnings": [
         "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
       ],
       "payload": {
         "home_profile": {
-          "team": "Algeria",
+          "team": "South Africa",
+          "matches": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 1,
+          "goals_against": 3,
+          "goal_difference": -2,
+          "points": 1,
+          "points_per_match": 0.5,
+          "seed_rank": 58
+        },
+        "away_profile": {
+          "team": "South Korea",
           "matches": 2,
           "wins": 1,
           "draws": 0,
           "losses": 1,
           "goals_for": 2,
-          "goals_against": 4,
-          "goal_difference": -2,
-          "points": 3,
-          "points_per_match": 1.5,
-          "seed_rank": 35
-        },
-        "away_profile": {
-          "team": "Austria",
-          "matches": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goals_for": 3,
-          "goals_against": 3,
+          "goals_against": 2,
           "goal_difference": 0,
           "points": 3,
           "points_per_match": 1.5,
-          "seed_rank": 22
+          "seed_rank": 23
         },
         "home_advanced_profile": {
-          "team": "Algeria",
+          "team": "South Africa",
+          "matches": 2,
+          "shots": 20.0,
+          "shots_on_target": 6.0,
+          "possession": 101.2,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 6.0,
+          "yellow_cards": 4.0,
+          "red_cards": 2.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 21.0,
+          "offsides": 4.0,
+          "saves": 4.0,
+          "accurate_passes": 780.0,
+          "total_passes": 897.0,
+          "pass_pct": 1.7000000000000002,
+          "accurate_crosses": 5.0,
+          "total_crosses": 25.0,
+          "blocked_shots": 8.0,
+          "total_tackles": 34.0,
+          "interceptions": 16.0,
+          "clearances": 41.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 92.99000000000001,
+          "attacking_pressure_index": 83.49000000000001,
+          "shots_per_match": 10.0,
+          "shots_on_target_per_match": 3.0,
+          "possession_per_match": 50.6,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 3.0,
+          "yellow_cards_per_match": 2.0,
+          "red_cards_per_match": 1.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 10.5,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 2.0,
+          "accurate_passes_per_match": 390.0,
+          "total_passes_per_match": 448.5,
+          "pass_pct_per_match": 0.8500000000000001,
+          "accurate_crosses_per_match": 2.5,
+          "total_crosses_per_match": 12.5,
+          "blocked_shots_per_match": 4.0,
+          "total_tackles_per_match": 17.0,
+          "interceptions_per_match": 8.0,
+          "clearances_per_match": 20.5,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 46.495000000000005,
+          "attacking_pressure_index_per_match": 41.745000000000005
+        },
+        "away_advanced_profile": {
+          "team": "South Korea",
           "matches": 0,
           "shots": 0.0,
           "shots_on_target": 0.0,
@@ -3601,81 +2790,21 @@
           "dominance_index": 0.0,
           "attacking_pressure_index": 0.0
         },
-        "away_advanced_profile": {
-          "team": "Austria",
-          "matches": 2,
-          "shots": 17.0,
-          "shots_on_target": 5.0,
-          "possession": 109.6,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 7.0,
-          "yellow_cards": 3.0,
-          "red_cards": 0.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 25.0,
-          "offsides": 3.0,
-          "saves": 5.0,
-          "accurate_passes": 888.0,
-          "total_passes": 1048.0,
-          "pass_pct": 1.7000000000000002,
-          "accurate_crosses": 6.0,
-          "total_crosses": 34.0,
-          "blocked_shots": 1.0,
-          "total_tackles": 29.0,
-          "interceptions": 24.0,
-          "clearances": 39.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 95.71000000000001,
-          "attacking_pressure_index": 88.22,
-          "shots_per_match": 8.5,
-          "shots_on_target_per_match": 2.5,
-          "possession_per_match": 54.8,
-          "xg_per_match": 0.0,
-          "big_chances_per_match": 0.0,
-          "corners_per_match": 3.5,
-          "yellow_cards_per_match": 1.5,
-          "red_cards_per_match": 0.0,
-          "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 12.5,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 2.5,
-          "accurate_passes_per_match": 444.0,
-          "total_passes_per_match": 524.0,
-          "pass_pct_per_match": 0.8500000000000001,
-          "accurate_crosses_per_match": 3.0,
-          "total_crosses_per_match": 17.0,
-          "blocked_shots_per_match": 0.5,
-          "total_tackles_per_match": 14.5,
-          "interceptions_per_match": 12.0,
-          "clearances_per_match": 19.5,
-          "match_momentum_per_match": 0.0,
-          "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 47.855000000000004,
-          "attacking_pressure_index_per_match": 44.11
-        },
-        "home_factor_score": -0.0175,
-        "away_factor_score": 0.010030499999999998,
-        "probability_adjustment": -0.0275305,
+        "home_factor_score": -0.25566649999999996,
+        "away_factor_score": 0.0865,
+        "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف -2.",
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
             "impact": -0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 35.",
-            "impact": 0.04
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 4 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 58.",
+            "impact": -0.006
           },
           {
             "side": "away",
@@ -3686,72 +2815,33 @@
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 22.",
-            "impact": 0.066
+            "value": "Seed rank داخل النموذج: 23.",
+            "impact": 0.064
           },
           {
-            "side": "away",
+            "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 54.8%، ضغط هجومي 44.1.",
-            "impact": -0.078
+            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 50.6%، ضغط هجومي 41.7.",
+            "impact": -0.147
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 0 high-impact contextual cues.",
+      "summary": "Scored 1 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "events": []
-      }
-    },
-    "economic_world": {
-      "status": "ok",
-      "summary": "Computed long-run country-strength layer: Algeria 63.2 vs Austria 67.5.",
-      "warnings": [],
-      "payload": {
-        "home_profile": {
-          "team": "Algeria",
-          "found": true,
-          "notes": "Strong diaspora and football culture.",
-          "gdp_per_capita_index": 46.0,
-          "population_index": 56.0,
-          "football_market_index": 64.0,
-          "academy_pipeline_index": 68.0,
-          "climate_fit_index": 86.0,
-          "league_export_index": 64.0,
-          "home_region_fit_index": 76.0
-        },
-        "away_profile": {
-          "team": "Austria",
-          "found": true,
-          "notes": "Strong Central European football infrastructure.",
-          "gdp_per_capita_index": 86.0,
-          "population_index": 34.0,
-          "football_market_index": 68.0,
-          "academy_pipeline_index": 72.0,
-          "climate_fit_index": 66.0,
-          "league_export_index": 72.0,
-          "home_region_fit_index": 64.0
-        },
-        "home_score": 63.24,
-        "away_score": 67.5,
-        "probability_adjustment": -0.004259999999999998,
-        "factors": [
+        "away_adjustment": -0.010055363086955057,
+        "events": [
           {
-            "side": "home",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.2/100: دخل 46، سكان 56، سوق كرة 64، أكاديميات 68، مناخ 86.",
-            "impact": 0.013
-          },
-          {
-            "side": "away",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.5/100: دخل 86، سكان 34، سوق كرة 68، أكاديميات 72، مناخ 66.",
-            "impact": 0.018
+            "event_type": "altitude_heat_context",
+            "description": "Mexico venue context may increase fatigue variance.",
+            "hours_to_kickoff": 39.0,
+            "time_weight": 0.638,
+            "signed_effect": 0.0101,
+            "benefits": "against_away"
           }
         ]
       }
@@ -3760,7 +2850,6 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "No butterfly events found for this match.",
         "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
       ],
       "payload": {
@@ -3774,44 +2863,26 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.2585839579340066,
-        "draw": 0.2546620718326117,
-        "away_win": 0.48675397023338174,
-        "confidence_interval_width": 0.18614999999999998,
+        "home_win": 0.05388906170292161,
+        "draw": 0.2754396939649041,
+        "away_win": 0.6706712443321743,
+        "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.3235225506941708,
-          "away": 1.702871515864719
+          "home": 1.0127015355502063,
+          "away": 1.5441478433655944
         },
         "key_factors": [
           {
             "side": "home",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.2/100: دخل 46، سكان 56، سوق كرة 64، أكاديميات 68، مناخ 86.",
-            "impact": 0.013
-          },
-          {
-            "side": "away",
-            "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.5/100: دخل 86، سكان 34، سوق كرة 68، أكاديميات 72، مناخ 66.",
-            "impact": 0.018
-          },
-          {
-            "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "3 نقطة من 2 مباراة، فارق أهداف -2.",
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
             "impact": -0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 35.",
-            "impact": 0.04
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 4 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 58.",
+            "impact": -0.006
           },
           {
             "side": "away",
@@ -3822,22 +2893,28 @@
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 22.",
-            "impact": 0.066
+            "value": "Seed rank داخل النموذج: 23.",
+            "impact": 0.064
           },
           {
-            "side": "away",
+            "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 54.8%، ضغط هجومي 44.1.",
-            "impact": -0.078
+            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 50.6%، ضغط هجومي 41.7.",
+            "impact": -0.147
+          },
+          {
+            "side": "home",
+            "label": "أثر فراشة",
+            "value": "Mexico venue context may increase fatigue variance.",
+            "impact": 0.0101
           }
         ],
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 45,
+        "calibration_version": 32,
         "recommended_label": "away_win",
-        "explanation": "Algeria vs Austria: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "explanation": "South Africa vs South Korea: baseline model favors away_win; butterfly cues: Mexico venue context may increase fatigue variance.; critic: no blocking objection."
       }
     },
     "self_correction": {
