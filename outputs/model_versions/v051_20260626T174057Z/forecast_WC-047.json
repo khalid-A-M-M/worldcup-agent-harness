@@ -706,7 +706,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -3573,7 +3573,7 @@
           }
         ],
         "calibration": {
-          "version": 52,
+          "version": 51,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3622,7 +3622,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
@@ -4040,7 +4039,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 52,
+        "calibration_version": 51,
         "recommended_label": "home_win",
         "explanation": "Cape Verde vs Saudi Arabia: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
       }

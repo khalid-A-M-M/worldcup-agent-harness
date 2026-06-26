@@ -1,22 +1,22 @@
 {
   "match": {
-    "match_id": "WC-047",
-    "home_team": "Cape Verde",
-    "away_team": "Saudi Arabia",
-    "kickoff_utc": "2026-06-27T00:00:00+00:00",
-    "group": "Group H",
-    "ground": "Houston",
+    "match_id": "WC-042",
+    "home_team": "New Zealand",
+    "away_team": "Belgium",
+    "kickoff_utc": "2026-06-27T03:00:00+00:00",
+    "group": "Group G",
+    "ground": "Vancouver",
     "round": "Matchday 16",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Cape Verde and Saudi Arabia.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for New Zealand and Belgium.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Cape Verde 49.4 vs Saudi Arabia 67.0.",
+    "economic_world: ok - Computed long-run country-strength layer: New Zealand 50.1 vs Belgium 75.6.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-    "synthesizer: ok - Final forecast: home_win.",
+    "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
@@ -706,7 +706,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -3573,7 +3573,7 @@
           }
         ],
         "calibration": {
-          "version": 52,
+          "version": 51,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3629,7 +3629,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3641,39 +3640,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.41111469920516347,
-          "draw": 0.26034598180214547,
-          "away_win": 0.32853931899269123
+          "home_win": 0.24240496689323823,
+          "draw": 0.2462718718862743,
+          "away_win": 0.511323161220488
         },
         "expected_goals": {
-          "home": 1.5404819523022015,
-          "away": 1.3553820786606587
+          "home": 1.1614006542824453,
+          "away": 1.7763699149144851
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.1221419791299448
-          },
-          {
-            "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.0888602378133983
-          },
-          {
-            "home_goals": 1,
-            "away_goals": 0,
-            "probability": 0.07834237213612602
+            "probability": 0.11574090344243487
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.07818304762208418
+            "probability": 0.09709708255202645
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.06811489256047605
+            "probability": 0.08770829336509134
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 2,
+            "probability": 0.08360343365917637
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.06348261939026863
           }
         ],
         "model_diagnostics": {
@@ -3685,188 +3684,159 @@
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Cape Verde and Saudi Arabia.",
-      "warnings": [],
+      "summary": "Computed tournament form and prior-strength factors for New Zealand and Belgium.",
+      "warnings": [
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
       "payload": {
         "home_profile": {
-          "team": "Cape Verde",
-          "matches": 2,
-          "wins": 0,
-          "draws": 2,
-          "losses": 0,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_difference": 0,
-          "points": 2,
-          "points_per_match": 1.0,
-          "seed_rank": 50
-        },
-        "away_profile": {
-          "team": "Saudi Arabia",
+          "team": "New Zealand",
           "matches": 2,
           "wins": 0,
           "draws": 1,
           "losses": 1,
-          "goals_for": 1,
+          "goals_for": 3,
           "goals_against": 5,
-          "goal_difference": -4,
+          "goal_difference": -2,
           "points": 1,
           "points_per_match": 0.5,
-          "seed_rank": 53
+          "seed_rank": 68
+        },
+        "away_profile": {
+          "team": "Belgium",
+          "matches": 2,
+          "wins": 0,
+          "draws": 2,
+          "losses": 0,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_difference": 0,
+          "points": 2,
+          "points_per_match": 1.0,
+          "seed_rank": 8
         },
         "home_advanced_profile": {
-          "team": "Cape Verde",
-          "matches": 2,
-          "shots": 18.0,
-          "shots_on_target": 5.0,
-          "possession": 60.5,
+          "team": "New Zealand",
+          "matches": 0,
+          "shots": 0.0,
+          "shots_on_target": 0.0,
+          "possession": 0.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 5.0,
-          "yellow_cards": 3.0,
+          "corners": 0.0,
+          "yellow_cards": 0.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 5.0,
-          "offsides": 3.0,
-          "saves": 7.0,
-          "accurate_passes": 410.0,
-          "total_passes": 556.0,
-          "pass_pct": 1.4,
-          "accurate_crosses": 3.0,
-          "total_crosses": 11.0,
-          "blocked_shots": 6.0,
-          "total_tackles": 34.0,
-          "interceptions": 28.0,
-          "clearances": 94.0,
+          "fouls": 0.0,
+          "offsides": 0.0,
+          "saves": 0.0,
+          "accurate_passes": 0.0,
+          "total_passes": 0.0,
+          "pass_pct": 0.0,
+          "accurate_crosses": 0.0,
+          "total_crosses": 0.0,
+          "blocked_shots": 0.0,
+          "total_tackles": 0.0,
+          "interceptions": 0.0,
+          "clearances": 0.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 64.18,
-          "attacking_pressure_index": 63.56999999999999,
-          "shots_per_match": 9.0,
-          "shots_on_target_per_match": 2.5,
-          "possession_per_match": 30.25,
-          "xg_per_match": 0.0,
-          "big_chances_per_match": 0.0,
-          "corners_per_match": 2.5,
-          "yellow_cards_per_match": 1.5,
-          "red_cards_per_match": 0.0,
-          "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 2.5,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 3.5,
-          "accurate_passes_per_match": 205.0,
-          "total_passes_per_match": 278.0,
-          "pass_pct_per_match": 0.7,
-          "accurate_crosses_per_match": 1.5,
-          "total_crosses_per_match": 5.5,
-          "blocked_shots_per_match": 3.0,
-          "total_tackles_per_match": 17.0,
-          "interceptions_per_match": 14.0,
-          "clearances_per_match": 47.0,
-          "match_momentum_per_match": 0.0,
-          "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 32.09,
-          "attacking_pressure_index_per_match": 31.784999999999997
+          "dominance_index": 0.0,
+          "attacking_pressure_index": 0.0
         },
         "away_advanced_profile": {
-          "team": "Saudi Arabia",
+          "team": "Belgium",
           "matches": 2,
-          "shots": 10.0,
-          "shots_on_target": 4.0,
-          "possession": 66.1,
+          "shots": 38.0,
+          "shots_on_target": 10.0,
+          "possession": 123.69999999999999,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 5.0,
+          "corners": 6.0,
           "yellow_cards": 3.0,
-          "red_cards": 0.0,
+          "red_cards": 1.0,
           "passes_into_final_third": 0.0,
-          "fouls": 13.0,
+          "fouls": 22.0,
           "offsides": 3.0,
-          "saves": 14.0,
-          "accurate_passes": 530.0,
-          "total_passes": 686.0,
-          "pass_pct": 1.5,
-          "accurate_crosses": 3.0,
-          "total_crosses": 11.0,
-          "blocked_shots": 2.0,
-          "total_tackles": 26.0,
-          "interceptions": 22.0,
-          "clearances": 78.0,
+          "saves": 5.0,
+          "accurate_passes": 924.0,
+          "total_passes": 1076.0,
+          "pass_pct": 1.8,
+          "accurate_crosses": 12.0,
+          "total_crosses": 48.0,
+          "blocked_shots": 11.0,
+          "total_tackles": 29.0,
+          "interceptions": 13.0,
+          "clearances": 36.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 53.459999999999994,
-          "attacking_pressure_index": 37.45,
-          "shots_per_match": 5.0,
-          "shots_on_target_per_match": 2.0,
-          "possession_per_match": 33.05,
+          "dominance_index": 123.73,
+          "attacking_pressure_index": 116.25,
+          "shots_per_match": 19.0,
+          "shots_on_target_per_match": 5.0,
+          "possession_per_match": 61.849999999999994,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.5,
+          "corners_per_match": 3.0,
           "yellow_cards_per_match": 1.5,
-          "red_cards_per_match": 0.0,
+          "red_cards_per_match": 0.5,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 6.5,
+          "fouls_per_match": 11.0,
           "offsides_per_match": 1.5,
-          "saves_per_match": 7.0,
-          "accurate_passes_per_match": 265.0,
-          "total_passes_per_match": 343.0,
-          "pass_pct_per_match": 0.75,
-          "accurate_crosses_per_match": 1.5,
-          "total_crosses_per_match": 5.5,
-          "blocked_shots_per_match": 1.0,
-          "total_tackles_per_match": 13.0,
-          "interceptions_per_match": 11.0,
-          "clearances_per_match": 39.0,
+          "saves_per_match": 2.5,
+          "accurate_passes_per_match": 462.0,
+          "total_passes_per_match": 538.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 6.0,
+          "total_crosses_per_match": 24.0,
+          "blocked_shots_per_match": 5.5,
+          "total_tackles_per_match": 14.5,
+          "interceptions_per_match": 6.5,
+          "clearances_per_match": 18.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 26.729999999999997,
-          "attacking_pressure_index_per_match": 18.725
+          "dominance_index_per_match": 61.865,
+          "attacking_pressure_index_per_match": 58.125
         },
-        "home_factor_score": -0.158902,
-        "away_factor_score": -0.377555,
-        "probability_adjustment": 0.16,
+        "home_factor_score": -0.1285,
+        "away_factor_score": 0.0518725,
+        "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
+            "impact": -0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 50.",
-            "impact": 0.01
+            "value": "Seed rank داخل النموذج: 68.",
+            "impact": -0.026
           },
           {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -4.",
-            "impact": -0.11
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 53.",
-            "impact": 0.004
-          },
-          {
-            "side": "away",
+            "side": "home",
             "label": "إنذار دفاعي",
             "value": "استقبل 5 أهداف في 2 مباراة.",
             "impact": -0.045
           },
           {
-            "side": "home",
-            "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 30.2%، ضغط هجومي 31.8.",
-            "impact": -0.169
+            "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 8.",
+            "impact": 0.07
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 33.0%، ضغط هجومي 18.7.",
-            "impact": -0.199
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
+            "impact": -0.018
           }
         ]
       }
@@ -3883,53 +3853,53 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Cape Verde 49.4 vs Saudi Arabia 67.0.",
+      "summary": "Computed long-run country-strength layer: New Zealand 50.1 vs Belgium 75.6.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Cape Verde",
+          "team": "New Zealand",
           "found": true,
-          "notes": "Small population",
-          "gdp_per_capita_index": 40.0,
-          "population_index": 23.0,
-          "football_market_index": 50.0,
-          "academy_pipeline_index": 54.0,
-          "climate_fit_index": 82.0,
-          "league_export_index": 50.0,
-          "home_region_fit_index": 72.0
+          "notes": "High economy",
+          "gdp_per_capita_index": 82.0,
+          "population_index": 29.0,
+          "football_market_index": 42.0,
+          "academy_pipeline_index": 46.0,
+          "climate_fit_index": 64.0,
+          "league_export_index": 42.0,
+          "home_region_fit_index": 58.0
         },
         "away_profile": {
-          "team": "Saudi Arabia",
+          "team": "Belgium",
           "found": true,
-          "notes": "High investment and region climate fit.",
-          "gdp_per_capita_index": 74.0,
-          "population_index": 51.0,
-          "football_market_index": 62.0,
-          "academy_pipeline_index": 66.0,
-          "climate_fit_index": 92.0,
-          "league_export_index": 64.0,
-          "home_region_fit_index": 82.0
+          "notes": "Small population but strong modern pipeline.",
+          "gdp_per_capita_index": 83.0,
+          "population_index": 38.0,
+          "football_market_index": 84.0,
+          "academy_pipeline_index": 82.0,
+          "climate_fit_index": 72.0,
+          "league_export_index": 84.0,
+          "home_region_fit_index": 66.0
         },
-        "home_score": 49.35,
-        "away_score": 66.99,
-        "probability_adjustment": -0.017639999999999992,
+        "home_score": 50.07,
+        "away_score": 75.60000000000001,
+        "probability_adjustment": -0.025530000000000008,
         "adjusted_probabilities": {
-          "home_win": 0.24326694720000003,
-          "draw": 0.24824800000000002,
-          "away_win": 0.5084850528
+          "home_win": 0.18742894379999994,
+          "draw": 0.234046,
+          "away_win": 0.5785250562
         },
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 49.4/100: دخل 40، سكان 23، سوق كرة 50، أكاديميات 54، مناخ 82.",
-            "impact": -0.001
+            "value": "قوة بنيوية 50.1/100: دخل 82، سكان 29، سوق كرة 42، أكاديميات 46، مناخ 64.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.0/100: دخل 74، سكان 51، سوق كرة 62، أكاديميات 66، مناخ 92.",
-            "impact": 0.017
+            "value": "قوة بنيوية 75.6/100: دخل 83، سكان 38، سوق كرة 84، أكاديميات 82، مناخ 72.",
+            "impact": 0.026
           }
         ]
       }
@@ -3938,36 +3908,37 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "No butterfly events found for this match."
+        "No butterfly events found for this match.",
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
       ],
       "payload": {
-        "favorite": "home_win",
+        "favorite": "away_win",
         "objections": [],
         "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: home_win.",
+      "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.38143386816247843,
-        "draw": 0.2540550312650298,
-        "away_win": 0.3645111005724918,
+        "home_win": 0.15621743488475429,
+        "draw": 0.2399144185054116,
+        "away_win": 0.6038681466098341,
         "confidence_interval_width": 0.201,
         "expected_goals": {
-          "home": 1.5404819523022015,
-          "away": 1.3553820786606587
+          "home": 1.1614006542824453,
+          "away": 1.7763699149144851
         },
         "dixon_probabilities": {
-          "home_win": 0.5311146992051634,
-          "draw": 0.26034598180214547,
-          "away_win": 0.20853931899269124
+          "home_win": 0.12240496689323815,
+          "draw": 0.24627187188627414,
+          "away_win": 0.6313231612204876
         },
         "economic_probabilities": {
-          "home_win": 0.24326694720000003,
-          "draw": 0.24824800000000002,
-          "away_win": 0.5084850528
+          "home_win": 0.18742894379999994,
+          "draw": 0.234046,
+          "away_win": 0.5785250562
         },
         "kliment_weight": 0.52,
         "dixon_weight": 0.48,
@@ -3987,62 +3958,58 @@
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 49.4/100: دخل 40، سكان 23، سوق كرة 50، أكاديميات 54، مناخ 82.",
-            "impact": -0.001
+            "value": "قوة بنيوية 50.1/100: دخل 82، سكان 29، سوق كرة 42، أكاديميات 46، مناخ 64.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.0/100: دخل 74، سكان 51، سوق كرة 62، أكاديميات 66، مناخ 92.",
-            "impact": 0.017
+            "value": "قوة بنيوية 75.6/100: دخل 83، سكان 38، سوق كرة 84، أكاديميات 82، مناخ 72.",
+            "impact": 0.026
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
+            "impact": -0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 50.",
-            "impact": 0.01
+            "value": "Seed rank داخل النموذج: 68.",
+            "impact": -0.026
           },
           {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -4.",
-            "impact": -0.11
-          },
-          {
-            "side": "away",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 53.",
-            "impact": 0.004
-          },
-          {
-            "side": "away",
+            "side": "home",
             "label": "إنذار دفاعي",
             "value": "استقبل 5 أهداف في 2 مباراة.",
             "impact": -0.045
           },
           {
-            "side": "home",
-            "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 30.2%، ضغط هجومي 31.8.",
-            "impact": -0.169
+            "side": "away",
+            "label": "أداء البطولة حتى الآن",
+            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
+          },
+          {
+            "side": "away",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 8.",
+            "impact": 0.07
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 33.0%، ضغط هجومي 18.7.",
-            "impact": -0.199
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
+            "impact": -0.018
           }
         ],
-        "data_quality_warnings": [],
-        "calibration_version": 52,
-        "recommended_label": "home_win",
-        "explanation": "Cape Verde vs Saudi Arabia: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "data_quality_warnings": [
+          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        ],
+        "calibration_version": 51,
+        "recommended_label": "away_win",
+        "explanation": "New Zealand vs Belgium: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {

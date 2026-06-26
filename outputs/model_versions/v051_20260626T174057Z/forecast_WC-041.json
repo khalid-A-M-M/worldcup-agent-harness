@@ -1,21 +1,21 @@
 {
   "match": {
-    "match_id": "WC-047",
-    "home_team": "Cape Verde",
-    "away_team": "Saudi Arabia",
-    "kickoff_utc": "2026-06-27T00:00:00+00:00",
-    "group": "Group H",
-    "ground": "Houston",
+    "match_id": "WC-041",
+    "home_team": "Egypt",
+    "away_team": "Iran",
+    "kickoff_utc": "2026-06-27T03:00:00+00:00",
+    "group": "Group G",
+    "ground": "Seattle",
     "round": "Matchday 16",
     "stage": "group"
   },
   "audit_log": [
     "data_collection: ok - Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Cape Verde and Saudi Arabia.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Egypt and Iran.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Cape Verde 49.4 vs Saudi Arabia 67.0.",
-    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
+    "economic_world: ok - Computed long-run country-strength layer: Egypt 63.2 vs Iran 63.0.",
+    "critic_auditor: reviewed - Devil's Advocate found 2 objections.",
     "synthesizer: ok - Final forecast: home_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
@@ -706,7 +706,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -3573,7 +3573,7 @@
           }
         ],
         "calibration": {
-          "version": 52,
+          "version": 51,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3629,7 +3629,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3641,39 +3640,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.41111469920516347,
-          "draw": 0.26034598180214547,
-          "away_win": 0.32853931899269123
+          "home_win": 0.3424856566301609,
+          "draw": 0.25991603627927784,
+          "away_win": 0.397598307090561
         },
         "expected_goals": {
-          "home": 1.5404819523022015,
-          "away": 1.3553820786606587
+          "home": 1.3965167700987813,
+          "away": 1.520362398015356
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.1221419791299448
-          },
-          {
-            "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.0888602378133983
-          },
-          {
-            "home_goals": 1,
-            "away_goals": 0,
-            "probability": 0.07834237213612602
+            "probability": 0.1216222809893482
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.07818304762208418
+            "probability": 0.08732652286397438
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.08021308196858151
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.06811489256047605
+            "probability": 0.07551254810775127
+          },
+          {
+            "home_goals": 1,
+            "away_goals": 0,
+            "probability": 0.06881190560549684
           }
         ],
         "model_diagnostics": {
@@ -3685,11 +3684,24 @@
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Cape Verde and Saudi Arabia.",
+      "summary": "Computed tournament form and prior-strength factors for Egypt and Iran.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Cape Verde",
+          "team": "Egypt",
+          "matches": 2,
+          "wins": 1,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_difference": 2,
+          "points": 4,
+          "points_per_match": 2.0,
+          "seed_rank": 39
+        },
+        "away_profile": {
+          "team": "Iran",
           "matches": 2,
           "wins": 0,
           "draws": 2,
@@ -3699,174 +3711,155 @@
           "goal_difference": 0,
           "points": 2,
           "points_per_match": 1.0,
-          "seed_rank": 50
-        },
-        "away_profile": {
-          "team": "Saudi Arabia",
-          "matches": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "goals_for": 1,
-          "goals_against": 5,
-          "goal_difference": -4,
-          "points": 1,
-          "points_per_match": 0.5,
-          "seed_rank": 53
+          "seed_rank": 20
         },
         "home_advanced_profile": {
-          "team": "Cape Verde",
-          "matches": 2,
-          "shots": 18.0,
-          "shots_on_target": 5.0,
-          "possession": 60.5,
+          "team": "Egypt",
+          "matches": 1,
+          "shots": 14.0,
+          "shots_on_target": 3.0,
+          "possession": 46.4,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 5.0,
-          "yellow_cards": 3.0,
+          "corners": 7.0,
+          "yellow_cards": 2.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 5.0,
-          "offsides": 3.0,
-          "saves": 7.0,
-          "accurate_passes": 410.0,
-          "total_passes": 556.0,
-          "pass_pct": 1.4,
-          "accurate_crosses": 3.0,
-          "total_crosses": 11.0,
-          "blocked_shots": 6.0,
-          "total_tackles": 34.0,
-          "interceptions": 28.0,
-          "clearances": 94.0,
+          "fouls": 15.0,
+          "offsides": 1.0,
+          "saves": 3.0,
+          "accurate_passes": 323.0,
+          "total_passes": 398.0,
+          "pass_pct": 0.8,
+          "accurate_crosses": 2.0,
+          "total_crosses": 13.0,
+          "blocked_shots": 7.0,
+          "total_tackles": 28.0,
+          "interceptions": 16.0,
+          "clearances": 17.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 64.18,
-          "attacking_pressure_index": 63.56999999999999,
-          "shots_per_match": 9.0,
-          "shots_on_target_per_match": 2.5,
-          "possession_per_match": 30.25,
+          "dominance_index": 47.56,
+          "attacking_pressure_index": 54.76,
+          "shots_per_match": 14.0,
+          "shots_on_target_per_match": 3.0,
+          "possession_per_match": 46.4,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.5,
-          "yellow_cards_per_match": 1.5,
+          "corners_per_match": 7.0,
+          "yellow_cards_per_match": 2.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 2.5,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 3.5,
-          "accurate_passes_per_match": 205.0,
-          "total_passes_per_match": 278.0,
-          "pass_pct_per_match": 0.7,
-          "accurate_crosses_per_match": 1.5,
-          "total_crosses_per_match": 5.5,
-          "blocked_shots_per_match": 3.0,
-          "total_tackles_per_match": 17.0,
-          "interceptions_per_match": 14.0,
-          "clearances_per_match": 47.0,
+          "fouls_per_match": 15.0,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 3.0,
+          "accurate_passes_per_match": 323.0,
+          "total_passes_per_match": 398.0,
+          "pass_pct_per_match": 0.8,
+          "accurate_crosses_per_match": 2.0,
+          "total_crosses_per_match": 13.0,
+          "blocked_shots_per_match": 7.0,
+          "total_tackles_per_match": 28.0,
+          "interceptions_per_match": 16.0,
+          "clearances_per_match": 17.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 32.09,
-          "attacking_pressure_index_per_match": 31.784999999999997
+          "dominance_index_per_match": 47.56,
+          "attacking_pressure_index_per_match": 54.76
         },
         "away_advanced_profile": {
-          "team": "Saudi Arabia",
-          "matches": 2,
-          "shots": 10.0,
-          "shots_on_target": 4.0,
-          "possession": 66.1,
+          "team": "Iran",
+          "matches": 1,
+          "shots": 7.0,
+          "shots_on_target": 3.0,
+          "possession": 29.9,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 5.0,
-          "yellow_cards": 3.0,
+          "corners": 2.0,
+          "yellow_cards": 1.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 13.0,
-          "offsides": 3.0,
-          "saves": 14.0,
-          "accurate_passes": 530.0,
-          "total_passes": 686.0,
-          "pass_pct": 1.5,
-          "accurate_crosses": 3.0,
-          "total_crosses": 11.0,
-          "blocked_shots": 2.0,
-          "total_tackles": 26.0,
-          "interceptions": 22.0,
-          "clearances": 78.0,
+          "fouls": 9.0,
+          "offsides": 4.0,
+          "saves": 7.0,
+          "accurate_passes": 198.0,
+          "total_passes": 270.0,
+          "pass_pct": 0.7,
+          "accurate_crosses": 2.0,
+          "total_crosses": 8.0,
+          "blocked_shots": 1.0,
+          "total_tackles": 19.0,
+          "interceptions": 12.0,
+          "clearances": 51.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 53.459999999999994,
-          "attacking_pressure_index": 37.45,
-          "shots_per_match": 5.0,
-          "shots_on_target_per_match": 2.0,
-          "possession_per_match": 33.05,
+          "dominance_index": 28.71,
+          "attacking_pressure_index": 28.99,
+          "shots_per_match": 7.0,
+          "shots_on_target_per_match": 3.0,
+          "possession_per_match": 29.9,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 2.5,
-          "yellow_cards_per_match": 1.5,
+          "corners_per_match": 2.0,
+          "yellow_cards_per_match": 1.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 6.5,
-          "offsides_per_match": 1.5,
+          "fouls_per_match": 9.0,
+          "offsides_per_match": 4.0,
           "saves_per_match": 7.0,
-          "accurate_passes_per_match": 265.0,
-          "total_passes_per_match": 343.0,
-          "pass_pct_per_match": 0.75,
-          "accurate_crosses_per_match": 1.5,
-          "total_crosses_per_match": 5.5,
+          "accurate_passes_per_match": 198.0,
+          "total_passes_per_match": 270.0,
+          "pass_pct_per_match": 0.7,
+          "accurate_crosses_per_match": 2.0,
+          "total_crosses_per_match": 8.0,
           "blocked_shots_per_match": 1.0,
-          "total_tackles_per_match": 13.0,
-          "interceptions_per_match": 11.0,
-          "clearances_per_match": 39.0,
+          "total_tackles_per_match": 19.0,
+          "interceptions_per_match": 12.0,
+          "clearances_per_match": 51.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 26.729999999999997,
-          "attacking_pressure_index_per_match": 18.725
+          "dominance_index_per_match": 28.71,
+          "attacking_pressure_index_per_match": 28.99
         },
-        "home_factor_score": -0.158902,
-        "away_factor_score": -0.377555,
+        "home_factor_score": 0.08645800000000001,
+        "away_factor_score": -0.10300300000000001,
         "probability_adjustment": 0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 2.",
+            "impact": 0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 50.",
-            "impact": 0.01
+            "value": "Seed rank داخل النموذج: 39.",
+            "impact": 0.032
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -4.",
-            "impact": -0.11
+            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 53.",
-            "impact": 0.004
-          },
-          {
-            "side": "away",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 20.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 30.2%، ضغط هجومي 31.8.",
-            "impact": -0.169
+            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 46.4%، ضغط هجومي 54.8.",
+            "impact": -0.071
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 33.0%، ضغط هجومي 18.7.",
-            "impact": -0.199
+            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 29.9%، ضغط هجومي 29.0.",
+            "impact": -0.173
           }
         ]
       }
@@ -3883,67 +3876,70 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Cape Verde 49.4 vs Saudi Arabia 67.0.",
+      "summary": "Computed long-run country-strength layer: Egypt 63.2 vs Iran 63.0.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Cape Verde",
+          "team": "Egypt",
           "found": true,
-          "notes": "Small population",
-          "gdp_per_capita_index": 40.0,
-          "population_index": 23.0,
-          "football_market_index": 50.0,
-          "academy_pipeline_index": 54.0,
-          "climate_fit_index": 82.0,
-          "league_export_index": 50.0,
-          "home_region_fit_index": 72.0
-        },
-        "away_profile": {
-          "team": "Saudi Arabia",
-          "found": true,
-          "notes": "High investment and region climate fit.",
-          "gdp_per_capita_index": 74.0,
-          "population_index": 51.0,
+          "notes": "Large population and strong football culture.",
+          "gdp_per_capita_index": 36.0,
+          "population_index": 77.0,
           "football_market_index": 62.0,
           "academy_pipeline_index": 66.0,
-          "climate_fit_index": 92.0,
-          "league_export_index": 64.0,
-          "home_region_fit_index": 82.0
+          "climate_fit_index": 88.0,
+          "league_export_index": 60.0,
+          "home_region_fit_index": 78.0
         },
-        "home_score": 49.35,
-        "away_score": 66.99,
-        "probability_adjustment": -0.017639999999999992,
+        "away_profile": {
+          "team": "Iran",
+          "found": true,
+          "notes": "Large population and organized competitive base.",
+          "gdp_per_capita_index": 45.0,
+          "population_index": 69.0,
+          "football_market_index": 62.0,
+          "academy_pipeline_index": 66.0,
+          "climate_fit_index": 84.0,
+          "league_export_index": 60.0,
+          "home_region_fit_index": 72.0
+        },
+        "home_score": 63.17,
+        "away_score": 62.95,
+        "probability_adjustment": 0.00021999999999999887,
         "adjusted_probabilities": {
-          "home_win": 0.24326694720000003,
-          "draw": 0.24824800000000002,
-          "away_win": 0.5084850528
+          "home_win": 0.3617828712,
+          "draw": 0.279604,
+          "away_win": 0.3586131288
         },
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 49.4/100: دخل 40، سكان 23، سوق كرة 50، أكاديميات 54، مناخ 82.",
-            "impact": -0.001
+            "value": "قوة بنيوية 63.2/100: دخل 36، سكان 77، سوق كرة 62، أكاديميات 66، مناخ 88.",
+            "impact": 0.013
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.0/100: دخل 74، سكان 51، سوق كرة 62، أكاديميات 66، مناخ 92.",
-            "impact": 0.017
+            "value": "قوة بنيوية 63.0/100: دخل 45، سكان 69، سوق كرة 62، أكاديميات 66، مناخ 84.",
+            "impact": 0.013
           }
         ]
       }
     },
     "critic_auditor": {
       "status": "reviewed",
-      "summary": "Devil's Advocate found 0 objections.",
+      "summary": "Devil's Advocate found 2 objections.",
       "warnings": [
         "No butterfly events found for this match."
       ],
       "payload": {
-        "favorite": "home_win",
-        "objections": [],
-        "confidence_penalty": 0.06
+        "favorite": "away_win",
+        "objections": [
+          "Baseline edge is narrow; avoid overconfident final probability.",
+          "Tournament form layer challenges the away-side baseline."
+        ],
+        "confidence_penalty": 0.11
       }
     },
     "synthesizer": {
@@ -3951,23 +3947,23 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.38143386816247843,
-        "draw": 0.2540550312650298,
-        "away_win": 0.3645111005724918,
-        "confidence_interval_width": 0.201,
+        "home_win": 0.4101202082064773,
+        "draw": 0.2701537774140534,
+        "away_win": 0.31972601437946935,
+        "confidence_interval_width": 0.2685,
         "expected_goals": {
-          "home": 1.5404819523022015,
-          "away": 1.3553820786606587
+          "home": 1.3965167700987813,
+          "away": 1.520362398015356
         },
         "dixon_probabilities": {
-          "home_win": 0.5311146992051634,
-          "draw": 0.26034598180214547,
-          "away_win": 0.20853931899269124
+          "home_win": 0.462485656630161,
+          "draw": 0.2599160362792779,
+          "away_win": 0.27759830709056105
         },
         "economic_probabilities": {
-          "home_win": 0.24326694720000003,
-          "draw": 0.24824800000000002,
-          "away_win": 0.5084850528
+          "home_win": 0.3617828712,
+          "draw": 0.279604,
+          "away_win": 0.3586131288
         },
         "kliment_weight": 0.52,
         "dixon_weight": 0.48,
@@ -3987,62 +3983,56 @@
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 49.4/100: دخل 40، سكان 23، سوق كرة 50، أكاديميات 54، مناخ 82.",
-            "impact": -0.001
+            "value": "قوة بنيوية 63.2/100: دخل 36، سكان 77، سوق كرة 62، أكاديميات 66، مناخ 88.",
+            "impact": 0.013
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 67.0/100: دخل 74، سكان 51، سوق كرة 62، أكاديميات 66، مناخ 92.",
-            "impact": 0.017
+            "value": "قوة بنيوية 63.0/100: دخل 45، سكان 69، سوق كرة 62، أكاديميات 66، مناخ 84.",
+            "impact": 0.013
           },
           {
             "side": "home",
+            "label": "أداء البطولة حتى الآن",
+            "value": "4 نقطة من 2 مباراة، فارق أهداف 2.",
+            "impact": 0.055
+          },
+          {
+            "side": "home",
+            "label": "قوة المنتخب قبل المباراة",
+            "value": "Seed rank داخل النموذج: 39.",
+            "impact": 0.032
+          },
+          {
+            "side": "away",
             "label": "أداء البطولة حتى الآن",
             "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
             "impact": 0.0
           },
           {
-            "side": "home",
-            "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 50.",
-            "impact": 0.01
-          },
-          {
-            "side": "away",
-            "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -4.",
-            "impact": -0.11
-          },
-          {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 53.",
-            "impact": 0.004
-          },
-          {
-            "side": "away",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 20.",
+            "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 30.2%، ضغط هجومي 31.8.",
-            "impact": -0.169
+            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 46.4%، ضغط هجومي 54.8.",
+            "impact": -0.071
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.0، استحواذ 33.0%، ضغط هجومي 18.7.",
-            "impact": -0.199
+            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 29.9%، ضغط هجومي 29.0.",
+            "impact": -0.173
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 52,
+        "calibration_version": 51,
         "recommended_label": "home_win",
-        "explanation": "Cape Verde vs Saudi Arabia: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "explanation": "Egypt vs Iran: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the away-side baseline.."
       }
     },
     "self_correction": {
