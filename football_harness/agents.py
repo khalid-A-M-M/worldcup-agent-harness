@@ -249,7 +249,7 @@ class EconomicWorldAgent:
         home_score = self._score(home)
         away_score = self._score(away)
         diff = max(min((home_score - away_score) / 1000, 0.09), -0.09)
-        economic_home, economic_draw, economic_away = _economic_probabilities_from_scores(home_score, away_score)
+        economic_probabilities = _economic_probabilities_from_scores(home_score, away_score)
         factors = self._factors(home, "home") + self._factors(away, "away")
 
         warnings = []
@@ -269,11 +269,7 @@ class EconomicWorldAgent:
                 "home_score": home_score,
                 "away_score": away_score,
                 "probability_adjustment": diff,
-                "adjusted_probabilities": {
-                    "home_win": economic_home,
-                    "draw": economic_draw,
-                    "away_win": economic_away,
-                },
+                "adjusted_probabilities": economic_probabilities,
                 "factors": factors,
             },
             warnings=warnings,

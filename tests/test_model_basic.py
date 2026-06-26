@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from datetime import date
 
-from football_harness.agents import _coerce_probability_map, _kliment_weight
+from football_harness.agents import _coerce_probability_map, _economic_probabilities_from_scores, _kliment_weight
 from football_harness.model import (
     DixonColesLiteModel,
     MatchResult,
@@ -62,6 +62,12 @@ class AgentBlendTest(unittest.TestCase):
 
     def test_probability_map_coerces_string_values(self) -> None:
         values = _coerce_probability_map({"home_win": "0.50", "draw": "0.25", "away_win": "0.25"})
+        self.assertLess(abs(sum(values.values()) - 1.0), 1e-9)
+        self.assertGreater(values["home_win"], values["away_win"])
+
+    def test_economic_probabilities_are_numeric(self) -> None:
+        values = _economic_probabilities_from_scores(70.0, 55.0)
+        self.assertTrue(all(isinstance(value, float) for value in values.values()))
         self.assertLess(abs(sum(values.values()) - 1.0), 1e-9)
         self.assertGreater(values["home_win"], values["away_win"])
 
