@@ -3581,11 +3581,11 @@
           }
         ],
         "calibration": {
-          "version": 49,
-          "team_adjustment_weight": 0.8140463416460796,
-          "butterfly_adjustment_weight": 0.7350918906249998,
+          "version": 48,
+          "team_adjustment_weight": 0.8660067464319996,
+          "butterfly_adjustment_weight": 0.7737809374999999,
           "advanced_stats_weight": 1.0,
-          "confidence_penalty_weight": 1.3400956406250004,
+          "confidence_penalty_weight": 1.2762815625000004,
           "notes": [
             "Updated by evolve_after_results.py after completed matches are scored.",
             "Not enough completed forecasts for aggressive recalibration.",
@@ -3630,7 +3630,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
@@ -3952,9 +3951,9 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.27299537726296524,
-        "draw": 0.24678162794043024,
-        "away_win": 0.4802229947966045,
+        "home_win": 0.27042960446706277,
+        "draw": 0.24685366853931795,
+        "away_win": 0.4827167269936193,
         "confidence_interval_width": 0.12,
         "expected_goals": {
           "home": 1.4548803562315094,
@@ -4022,7 +4021,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 49,
+        "calibration_version": 48,
         "recommended_label": "away_win",
         "explanation": "Norway vs France: baseline model favors away_win; butterfly cues: France carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
