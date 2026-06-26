@@ -706,7 +706,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -3573,8 +3573,8 @@
           }
         ],
         "calibration": {
-          "version": 51,
-          "team_adjustment_weight": 0.75,
+          "version": 50,
+          "team_adjustment_weight": 0.7652035611473148,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.35,
@@ -3622,7 +3622,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
@@ -3947,18 +3946,18 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.41007822156545604,
+        "home_win": 0.4112458550615698,
         "draw": 0.26858948464809596,
-        "away_win": 0.321332293786448,
+        "away_win": 0.32016466029033425,
         "confidence_interval_width": 0.2685,
         "expected_goals": {
           "home": 1.3965167700987813,
           "away": 1.520362398015356
         },
         "dixon_probabilities": {
-          "home_win": 0.462485656630161,
+          "home_win": 0.4649182264137314,
           "draw": 0.2599160362792779,
-          "away_win": 0.27759830709056105
+          "away_win": 0.2751657373069907
         },
         "economic_probabilities": {
           "home_win": 0.3617021276595745,
@@ -4030,7 +4029,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 51,
+        "calibration_version": 50,
         "recommended_label": "home_win",
         "explanation": "Egypt vs Iran: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the away-side baseline.."
       }

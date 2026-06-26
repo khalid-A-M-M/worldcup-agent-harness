@@ -1,31 +1,29 @@
 {
   "match": {
-    "match_id": "WC-041",
-    "home_team": "Egypt",
-    "away_team": "Iran",
-    "kickoff_utc": "2026-06-27T03:00:00+00:00",
-    "group": "Group G",
-    "ground": "Seattle",
-    "round": "Matchday 16",
+    "match_id": "WC-060",
+    "home_team": "Jordan",
+    "away_team": "Argentina",
+    "kickoff_utc": "2026-06-28T02:00:00+00:00",
+    "group": "Group J",
+    "ground": "Dallas (Arlington)",
+    "round": "Matchday 17",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "data_collection: ok - Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Egypt and Iran.",
-    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Egypt 63.2 vs Iran 63.0.",
-    "critic_auditor: reviewed - Devil's Advocate found 2 objections.",
-    "synthesizer: ok - Final forecast: home_win.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Jordan and Argentina.",
+    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
+    "economic_world: ok - Computed long-run country-strength layer: Jordan 49.8 vs Argentina 77.1.",
+    "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
+    "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
   ],
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "summary": "Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
+      "warnings": [],
       "payload": {
         "historical_results": [
           {
@@ -515,7 +513,17 @@
           "min_weight": 0.334599118641585,
           "max_weight": 0.34895157342618055
         },
-        "butterfly_events": [],
+        "butterfly_events": [
+          {
+            "match_id": "WC-060",
+            "event_time_utc": "2026-06-23T10:00:00Z",
+            "event_type": "favorite_pressure",
+            "description": "Argentina carries heavy favorite pressure in a decisive group fixture.",
+            "impact": "medium",
+            "confidence": "medium",
+            "benefits": "against_away"
+          }
+        ],
         "team_priors": {
           "France": [
             1.18,
@@ -706,7 +714,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -3573,8 +3581,8 @@
           }
         ],
         "calibration": {
-          "version": 51,
-          "team_adjustment_weight": 0.75,
+          "version": 50,
+          "team_adjustment_weight": 0.7652035611473148,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
           "confidence_penalty_weight": 1.35,
@@ -3628,7 +3636,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3640,39 +3647,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.3424856566301609,
-          "draw": 0.25991603627927784,
-          "away_win": 0.397598307090561
+          "home_win": 0.18699459744420677,
+          "draw": 0.22481173533384072,
+          "away_win": 0.588193667221952
         },
         "expected_goals": {
-          "home": 1.3965167700987813,
-          "away": 1.520362398015356
+          "home": 1.046915753094171,
+          "away": 1.9979457448226856
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.1216222809893482
+            "probability": 0.10544258809581798
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.08732652286397438
+            "probability": 0.09949142505153863
           },
           {
-            "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.08021308196858151
+            "home_goals": 0,
+            "away_goals": 2,
+            "probability": 0.09503288565244207
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.07551254810775127
+            "probability": 0.08928172932676989
           },
           {
             "home_goals": 1,
-            "away_goals": 0,
-            "probability": 0.06881190560549684
+            "away_goals": 3,
+            "probability": 0.06625948977602224
           }
         ],
         "model_diagnostics": {
@@ -3684,228 +3691,243 @@
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Egypt and Iran.",
+      "summary": "Computed tournament form and prior-strength factors for Jordan and Argentina.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Egypt",
-          "matches": 2,
-          "wins": 1,
-          "draws": 1,
-          "losses": 0,
-          "goals_for": 4,
-          "goals_against": 2,
-          "goal_difference": 2,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 39
-        },
-        "away_profile": {
-          "team": "Iran",
+          "team": "Jordan",
           "matches": 2,
           "wins": 0,
-          "draws": 2,
-          "losses": 0,
+          "draws": 0,
+          "losses": 2,
           "goals_for": 2,
-          "goals_against": 2,
-          "goal_difference": 0,
-          "points": 2,
-          "points_per_match": 1.0,
-          "seed_rank": 20
+          "goals_against": 5,
+          "goal_difference": -3,
+          "points": 0,
+          "points_per_match": 0.0,
+          "seed_rank": 77
+        },
+        "away_profile": {
+          "team": "Argentina",
+          "matches": 2,
+          "wins": 2,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 5,
+          "goals_against": 0,
+          "goal_difference": 5,
+          "points": 6,
+          "points_per_match": 3.0,
+          "seed_rank": 2
         },
         "home_advanced_profile": {
-          "team": "Egypt",
+          "team": "Jordan",
           "matches": 1,
-          "shots": 14.0,
-          "shots_on_target": 3.0,
-          "possession": 46.4,
+          "shots": 11.0,
+          "shots_on_target": 4.0,
+          "possession": 36.8,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 7.0,
+          "corners": 3.0,
+          "yellow_cards": 0.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 7.0,
+          "offsides": 1.0,
+          "saves": 1.0,
+          "accurate_passes": 241.0,
+          "total_passes": 332.0,
+          "pass_pct": 0.7,
+          "accurate_crosses": 3.0,
+          "total_crosses": 15.0,
+          "blocked_shots": 2.0,
+          "total_tackles": 15.0,
+          "interceptions": 12.0,
+          "clearances": 39.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 41.98,
+          "attacking_pressure_index": 47.25,
+          "shots_per_match": 11.0,
+          "shots_on_target_per_match": 4.0,
+          "possession_per_match": 36.8,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 3.0,
+          "yellow_cards_per_match": 0.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 7.0,
+          "offsides_per_match": 1.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 241.0,
+          "total_passes_per_match": 332.0,
+          "pass_pct_per_match": 0.7,
+          "accurate_crosses_per_match": 3.0,
+          "total_crosses_per_match": 15.0,
+          "blocked_shots_per_match": 2.0,
+          "total_tackles_per_match": 15.0,
+          "interceptions_per_match": 12.0,
+          "clearances_per_match": 39.0,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 41.98,
+          "attacking_pressure_index_per_match": 47.25
+        },
+        "away_advanced_profile": {
+          "team": "Argentina",
+          "matches": 1,
+          "shots": 12.0,
+          "shots_on_target": 5.0,
+          "possession": 53.6,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 1.0,
           "yellow_cards": 2.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 15.0,
-          "offsides": 1.0,
-          "saves": 3.0,
-          "accurate_passes": 323.0,
-          "total_passes": 398.0,
-          "pass_pct": 0.8,
-          "accurate_crosses": 2.0,
-          "total_crosses": 13.0,
-          "blocked_shots": 7.0,
-          "total_tackles": 28.0,
-          "interceptions": 16.0,
-          "clearances": 17.0,
+          "fouls": 13.0,
+          "offsides": 2.0,
+          "saves": 1.0,
+          "accurate_passes": 494.0,
+          "total_passes": 554.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 1.0,
+          "total_crosses": 4.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 21.0,
+          "interceptions": 8.0,
+          "clearances": 35.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 47.56,
-          "attacking_pressure_index": 54.76,
-          "shots_per_match": 14.0,
-          "shots_on_target_per_match": 3.0,
-          "possession_per_match": 46.4,
+          "dominance_index": 62.31,
+          "attacking_pressure_index": 64.53,
+          "shots_per_match": 12.0,
+          "shots_on_target_per_match": 5.0,
+          "possession_per_match": 53.6,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 7.0,
+          "corners_per_match": 1.0,
           "yellow_cards_per_match": 2.0,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 15.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 3.0,
-          "accurate_passes_per_match": 323.0,
-          "total_passes_per_match": 398.0,
-          "pass_pct_per_match": 0.8,
-          "accurate_crosses_per_match": 2.0,
-          "total_crosses_per_match": 13.0,
-          "blocked_shots_per_match": 7.0,
-          "total_tackles_per_match": 28.0,
-          "interceptions_per_match": 16.0,
-          "clearances_per_match": 17.0,
+          "fouls_per_match": 13.0,
+          "offsides_per_match": 2.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 494.0,
+          "total_passes_per_match": 554.0,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 1.0,
+          "total_crosses_per_match": 4.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 21.0,
+          "interceptions_per_match": 8.0,
+          "clearances_per_match": 35.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 47.56,
-          "attacking_pressure_index_per_match": 54.76
+          "dominance_index_per_match": 62.31,
+          "attacking_pressure_index_per_match": 64.53
         },
-        "away_advanced_profile": {
-          "team": "Iran",
-          "matches": 1,
-          "shots": 7.0,
-          "shots_on_target": 3.0,
-          "possession": 29.9,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 2.0,
-          "yellow_cards": 1.0,
-          "red_cards": 0.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 9.0,
-          "offsides": 4.0,
-          "saves": 7.0,
-          "accurate_passes": 198.0,
-          "total_passes": 270.0,
-          "pass_pct": 0.7,
-          "accurate_crosses": 2.0,
-          "total_crosses": 8.0,
-          "blocked_shots": 1.0,
-          "total_tackles": 19.0,
-          "interceptions": 12.0,
-          "clearances": 51.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 28.71,
-          "attacking_pressure_index": 28.99,
-          "shots_per_match": 7.0,
-          "shots_on_target_per_match": 3.0,
-          "possession_per_match": 29.9,
-          "xg_per_match": 0.0,
-          "big_chances_per_match": 0.0,
-          "corners_per_match": 2.0,
-          "yellow_cards_per_match": 1.0,
-          "red_cards_per_match": 0.0,
-          "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 9.0,
-          "offsides_per_match": 4.0,
-          "saves_per_match": 7.0,
-          "accurate_passes_per_match": 198.0,
-          "total_passes_per_match": 270.0,
-          "pass_pct_per_match": 0.7,
-          "accurate_crosses_per_match": 2.0,
-          "total_crosses_per_match": 8.0,
-          "blocked_shots_per_match": 1.0,
-          "total_tackles_per_match": 19.0,
-          "interceptions_per_match": 12.0,
-          "clearances_per_match": 51.0,
-          "match_momentum_per_match": 0.0,
-          "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 28.71,
-          "attacking_pressure_index_per_match": 28.99
-        },
-        "home_factor_score": 0.08645800000000001,
-        "away_factor_score": -0.10300300000000001,
-        "probability_adjustment": 0.16,
+        "home_factor_score": -0.30862999999999996,
+        "away_factor_score": 0.317569,
+        "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 2.",
-            "impact": 0.055
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -3.",
+            "impact": -0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 39.",
-            "impact": 0.032
+            "value": "Seed rank داخل النموذج: 77.",
+            "impact": -0.044
+          },
+          {
+            "side": "home",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 5 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 20.",
+            "value": "Seed rank داخل النموذج: 2.",
             "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 46.4%، ضغط هجومي 54.8.",
-            "impact": -0.071
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 36.8%، ضغط هجومي 47.2.",
+            "impact": -0.1
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 29.9%، ضغط هجومي 29.0.",
-            "impact": -0.173
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 53.6%، ضغط هجومي 64.5.",
+            "impact": 0.008
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 0 high-impact contextual cues.",
+      "summary": "Scored 1 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "events": []
+        "away_adjustment": -0.010119278588240651,
+        "events": [
+          {
+            "event_type": "favorite_pressure",
+            "description": "Argentina carries heavy favorite pressure in a decisive group fixture.",
+            "hours_to_kickoff": 112.0,
+            "time_weight": 0.413,
+            "signed_effect": 0.0101,
+            "benefits": "against_away"
+          }
+        ]
       }
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Egypt 63.2 vs Iran 63.0.",
+      "summary": "Computed long-run country-strength layer: Jordan 49.8 vs Argentina 77.1.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Egypt",
+          "team": "Jordan",
           "found": true,
-          "notes": "Large population and strong football culture.",
-          "gdp_per_capita_index": 36.0,
-          "population_index": 77.0,
-          "football_market_index": 62.0,
-          "academy_pipeline_index": 66.0,
+          "notes": "Regional fit",
+          "gdp_per_capita_index": 43.0,
+          "population_index": 35.0,
+          "football_market_index": 46.0,
+          "academy_pipeline_index": 50.0,
           "climate_fit_index": 88.0,
-          "league_export_index": 60.0,
-          "home_region_fit_index": 78.0
+          "league_export_index": 46.0,
+          "home_region_fit_index": 76.0
         },
         "away_profile": {
-          "team": "Iran",
+          "team": "Argentina",
           "found": true,
-          "notes": "Large population and organized competitive base.",
-          "gdp_per_capita_index": 45.0,
-          "population_index": 69.0,
-          "football_market_index": 62.0,
-          "academy_pipeline_index": 66.0,
-          "climate_fit_index": 84.0,
-          "league_export_index": 60.0,
-          "home_region_fit_index": 72.0
+          "notes": "Historic football culture offsets weaker macro economy.",
+          "gdp_per_capita_index": 58.0,
+          "population_index": 54.0,
+          "football_market_index": 90.0,
+          "academy_pipeline_index": 88.0,
+          "climate_fit_index": 76.0,
+          "league_export_index": 86.0,
+          "home_region_fit_index": 70.0
         },
-        "home_score": 63.17,
-        "away_score": 62.95,
-        "probability_adjustment": 0.00021999999999999887,
+        "home_score": 49.75,
+        "away_score": 77.08,
+        "probability_adjustment": -0.027329999999999997,
         "adjusted_probabilities": {
           "home_win": "home_win",
           "draw": "draw",
@@ -3915,50 +3937,45 @@
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.2/100: دخل 36، سكان 77، سوق كرة 62، أكاديميات 66، مناخ 88.",
-            "impact": 0.013
+            "value": "قوة بنيوية 49.8/100: دخل 43، سكان 35، سوق كرة 46، أكاديميات 50، مناخ 88.",
+            "impact": -0.0
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.0/100: دخل 45، سكان 69، سوق كرة 62، أكاديميات 66، مناخ 84.",
-            "impact": 0.013
+            "value": "قوة بنيوية 77.1/100: دخل 58، سكان 54، سوق كرة 90، أكاديميات 88، مناخ 76.",
+            "impact": 0.027
           }
         ]
       }
     },
     "critic_auditor": {
       "status": "reviewed",
-      "summary": "Devil's Advocate found 2 objections.",
-      "warnings": [
-        "No butterfly events found for this match."
-      ],
+      "summary": "Devil's Advocate found 0 objections.",
+      "warnings": [],
       "payload": {
         "favorite": "away_win",
-        "objections": [
-          "Baseline edge is narrow; avoid overconfident final probability.",
-          "Tournament form layer challenges the away-side baseline."
-        ],
-        "confidence_penalty": 0.11
+        "objections": [],
+        "confidence_penalty": 0.0
       }
     },
     "synthesizer": {
       "status": "ok",
-      "summary": "Final forecast: home_win.",
+      "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.41007822156545604,
-        "draw": 0.26858948464809596,
-        "away_win": 0.321332293786448,
-        "confidence_interval_width": 0.2685,
+        "home_win": 0.22291884856256367,
+        "draw": 0.2517628618208978,
+        "away_win": 0.5253182896165385,
+        "confidence_interval_width": 0.12,
         "expected_goals": {
-          "home": 1.3965167700987813,
-          "away": 1.520362398015356
+          "home": 1.046915753094171,
+          "away": 1.9979457448226856
         },
         "dixon_probabilities": {
-          "home_win": 0.462485656630161,
-          "draw": 0.2599160362792779,
-          "away_win": 0.27759830709056105
+          "home_win": 0.06456202766063644,
+          "draw": 0.22481173533384083,
+          "away_win": 0.7106262370055227
         },
         "economic_probabilities": {
           "home_win": 0.3617021276595745,
@@ -3983,56 +4000,68 @@
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.2/100: دخل 36، سكان 77، سوق كرة 62، أكاديميات 66، مناخ 88.",
-            "impact": 0.013
+            "value": "قوة بنيوية 49.8/100: دخل 43، سكان 35، سوق كرة 46، أكاديميات 50، مناخ 88.",
+            "impact": -0.0
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 63.0/100: دخل 45، سكان 69، سوق كرة 62، أكاديميات 66، مناخ 84.",
-            "impact": 0.013
+            "value": "قوة بنيوية 77.1/100: دخل 58، سكان 54، سوق كرة 90، أكاديميات 88، مناخ 76.",
+            "impact": 0.027
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 2.",
-            "impact": 0.055
+            "value": "0 نقطة من 2 مباراة، فارق أهداف -3.",
+            "impact": -0.083
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 39.",
-            "impact": 0.032
+            "value": "Seed rank داخل النموذج: 77.",
+            "impact": -0.044
+          },
+          {
+            "side": "home",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 5 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 5.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 20.",
+            "value": "Seed rank داخل النموذج: 2.",
             "impact": 0.07
           },
           {
             "side": "home",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 46.4%، ضغط هجومي 54.8.",
-            "impact": -0.071
+            "value": "xG 0.00، تسديدات على المرمى 4.0، استحواذ 36.8%، ضغط هجومي 47.2.",
+            "impact": -0.1
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 3.0، استحواذ 29.9%، ضغط هجومي 29.0.",
-            "impact": -0.173
+            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 53.6%، ضغط هجومي 64.5.",
+            "impact": 0.008
+          },
+          {
+            "side": "home",
+            "label": "أثر فراشة",
+            "value": "Argentina carries heavy favorite pressure in a decisive group fixture.",
+            "impact": 0.0101
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 51,
-        "recommended_label": "home_win",
-        "explanation": "Egypt vs Iran: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the away-side baseline.."
+        "calibration_version": 50,
+        "recommended_label": "away_win",
+        "explanation": "Jordan vs Argentina: baseline model favors away_win; butterfly cues: Argentina carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
     },
     "self_correction": {
