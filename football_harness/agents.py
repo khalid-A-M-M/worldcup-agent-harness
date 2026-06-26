@@ -249,6 +249,7 @@ class EconomicWorldAgent:
         home_score = self._score(home)
         away_score = self._score(away)
         diff = max(min((home_score - away_score) / 1000, 0.09), -0.09)
+        economic_home, economic_draw, economic_away = _economic_probabilities_from_scores(home_score, away_score)
         factors = self._factors(home, "home") + self._factors(away, "away")
 
         warnings = []
@@ -268,6 +269,11 @@ class EconomicWorldAgent:
                 "home_score": home_score,
                 "away_score": away_score,
                 "probability_adjustment": diff,
+                "adjusted_probabilities": {
+                    "home_win": economic_home,
+                    "draw": economic_draw,
+                    "away_win": economic_away,
+                },
                 "factors": factors,
             },
             warnings=warnings,
@@ -365,14 +371,37 @@ class SynthesizerAgent:
         team_weight = float(calibration.get("team_adjustment_weight", 1.0))
         butterfly_weight = float(calibration.get("butterfly_adjustment_weight", 1.0))
         confidence_weight = float(calibration.get("confidence_penalty_weight", 1.0))
-        economic_weight = float(calibration.get("economic_world_weight", 0.65))
         team_adjustment = team_intel["probability_adjustment"] * team_weight
-        economic_adjustment = economic.get("probability_adjustment", 0.0) * economic_weight
         home_butterfly = butterfly["home_adjustment"] * butterfly_weight
         away_butterfly = butterfly["away_adjustment"] * butterfly_weight
-        home = baseline["home_win"] + team_adjustment + economic_adjustment + home_butterfly - away_butterfly * 0.35
-        away = baseline["away_win"] - team_adjustment - economic_adjustment + away_butterfly - home_butterfly * 0.35
-        draw = baseline["draw"] - abs(butterfly["home_adjustment"] - butterfly["away_adjustment"]) * 0.15
+
+        dixon_home = baseline["home_win"] + team_adjustment
+        dixon_away = baseline["away_win"] - team_adjustment
+        dixon_draw = baseline["draw"]
+        dixon_home, dixon_draw, dixon_away = normalize_three_way(dixon_home, dixon_draw, dixon_away)
+        dixon_probabilities = {
+            "home_win": dixon_home,
+            "draw": dixon_draw,
+            "away_win": dixon_away,
+        }
+
+        economic_probabilities = economic.get("adjusted_probabilities") or _economic_probabilities_from_scores(
+            economic.get("home_score", 50.0), economic.get("away_score", 50.0)
+        )
+        economic_probabilities = _coerce_probability_map(economic_probabilities)
+        home_matches = float(team_intel.get("home_profile", {}).get("matches", 0))
+        away_matches = float(team_intel.get("away_profile", {}).get("matches", 0))
+        tournament_match_sample = (home_matches + away_matches) / 2.0
+        kliment_weight = _kliment_weight(tournament_match_sample)
+        dixon_weight = 1.0 - kliment_weight
+
+        home = dixon_home * dixon_weight + economic_probabilities["home_win"] * kliment_weight
+        draw = dixon_draw * dixon_weight + economic_probabilities["draw"] * kliment_weight
+        away = dixon_away * dixon_weight + economic_probabilities["away_win"] * kliment_weight
+
+        home += home_butterfly - away_butterfly * 0.35
+        away += away_butterfly - home_butterfly * 0.35
+        draw -= abs(butterfly["home_adjustment"] - butterfly["away_adjustment"]) * 0.15
         home, draw, away = normalize_three_way(home, draw, away)
 
         confidence_width = min(0.38, 0.12 + critic["confidence_penalty"] * confidence_weight)
@@ -382,6 +411,17 @@ class SynthesizerAgent:
             "away_win": away,
             "confidence_interval_width": confidence_width,
             "expected_goals": expected_goals,
+            "dixon_probabilities": dixon_probabilities,
+            "economic_probabilities": economic_probabilities,
+            "kliment_weight": round(kliment_weight, 3),
+            "dixon_weight": round(dixon_weight, 3),
+            "matches_in_tournament": round(tournament_match_sample, 2),
+            "econ_model_active": bool(economic.get("home_profile") and economic.get("away_profile")),
+            "blend_weights": {
+                "agent_harness_dixon_coles": round(dixon_weight, 3),
+                "economic_world_kliment": round(kliment_weight, 3),
+                "tournament_match_sample": round(tournament_match_sample, 2),
+            },
             "model_diagnostics": state.get_payload("specialist_analysis").get("model_diagnostics", {}),
             "key_factors": economic.get("factors", []) + team_intel["factors"] + _butterfly_factor_cards(butterfly),
             "data_quality_warnings": state.results["team_intelligence"].warnings + state.results.get("economic_world", AgentResult("economic_world", "missing", "")).warnings,
@@ -680,6 +720,30 @@ def _parse_datetime(value: str) -> datetime:
 
 def _recency_weight(hours_to_kickoff: float) -> float:
     return 0.35 + 0.65 * math.exp(-hours_to_kickoff / 48)
+
+
+def _coerce_probability_map(probabilities: Dict[str, Any]) -> Dict[str, float]:
+    home, draw, away = normalize_three_way(
+        _safe_float(probabilities.get("home_win"), 0.34),
+        _safe_float(probabilities.get("draw"), 0.26),
+        _safe_float(probabilities.get("away_win"), 0.34),
+    )
+    return {"home_win": home, "draw": draw, "away_win": away}
+
+
+def _economic_probabilities_from_scores(home_score: float, away_score: float) -> Dict[str, float]:
+    edge = max(min((float(home_score) - float(away_score)) / 100.0, 0.35), -0.35)
+    draw = max(0.18, min(0.30, 0.28 - abs(edge) * 0.18))
+    remaining = 1.0 - draw
+    home = remaining * (0.5 + edge)
+    away = remaining - home
+    home, draw, away = normalize_three_way(home, draw, away)
+    return {"home_win": home, "draw": draw, "away_win": away}
+
+
+def _kliment_weight(avg_matches: float) -> float:
+    sample = max(float(avg_matches), 0.0)
+    return max(0.15, min(0.70, 0.70 - 0.09 * sample))
 
 
 def _label_for_probabilities(home: float, draw: float, away: float) -> str:

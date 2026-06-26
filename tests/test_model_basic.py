@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 from datetime import date
 
+from football_harness.agents import _coerce_probability_map, _kliment_weight
 from football_harness.model import (
     DixonColesLiteModel,
     MatchResult,
@@ -50,6 +51,19 @@ class ModelBasicsTest(unittest.TestCase):
         self.assertGreater(model.effective_matches, 0)
         self.assertGreaterEqual(model.rho, -0.20)
         self.assertLessEqual(model.rho, 0.0)
+
+
+class AgentBlendTest(unittest.TestCase):
+    def test_kliment_weight_decays_with_tournament_sample(self) -> None:
+        self.assertAlmostEqual(_kliment_weight(0), 0.70)
+        self.assertGreater(_kliment_weight(3), _kliment_weight(6))
+        self.assertAlmostEqual(_kliment_weight(6), 0.16)
+        self.assertEqual(_kliment_weight(20), 0.15)
+
+    def test_probability_map_coerces_string_values(self) -> None:
+        values = _coerce_probability_map({"home_win": "0.50", "draw": "0.25", "away_win": "0.25"})
+        self.assertLess(abs(sum(values.values()) - 1.0), 1e-9)
+        self.assertGreater(values["home_win"], values["away_win"])
 
 
 if __name__ == "__main__":

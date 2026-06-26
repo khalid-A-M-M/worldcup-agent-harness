@@ -372,6 +372,30 @@
       color: rgba(255,255,255,.76);
       font-size: 11px;
     }
+    .blend-meter {
+      margin-top: 10px;
+      display: grid;
+      gap: 6px;
+    }
+    .blend-meter-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: rgba(255,255,255,.72);
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .blend-track {
+      display: flex;
+      height: 13px;
+      overflow: hidden;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+      direction: ltr;
+    }
+    .blend-track span:first-child { background: #d6a849; }
+    .blend-track span:last-child { background: linear-gradient(90deg, var(--team-a), var(--team-b)); }
     .economic-card {
       grid-column: span 2;
       border: 1px solid rgba(214,168,73,.32);
@@ -876,6 +900,26 @@
       return `${number >= 0 ? "+" : ""}${(number * 100).toFixed(1)}%`;
     }
 
+    function renderBlendMeter(final) {
+      const weights = final.blend_weights || {};
+      const econ = Number(weights.economic_world_kliment || final.kliment_weight || 0);
+      const dixon = Number(weights.agent_harness_dixon_coles || final.dixon_weight || (1 - econ));
+      if (!Number.isFinite(econ) || econ <= 0) return "";
+      const sample = Number(weights.tournament_match_sample || final.matches_in_tournament || 0);
+      return `
+        <div class="blend-meter">
+          <div class="blend-meter-head">
+            <span>النموذج الاقتصادي ${pct(econ)}</span>
+            <span>Agent Harness / Dixon ${pct(dixon)}</span>
+          </div>
+          <div class="blend-track" title="عينة البطولة حتى الآن: ${sample.toFixed(1)} مباراة لكل منتخب تقريباً">
+            <span style="width:${pct(econ)}"></span>
+            <span style="width:${pct(dixon)}"></span>
+          </div>
+        </div>
+      `;
+    }
+
     function renderEconomicStrip(report, teamA, teamB) {
       const economic = economicPayload(report);
       if (!economic || !economic.home_profile || !economic.away_profile) return "";
@@ -899,6 +943,7 @@
             <span>${teamB.arabic_name}<b>${scoreText(economic.away_score)}</b></span>
           </div>
           <div class="economic-pills">${pillars}</div>
+          ${renderBlendMeter(report.agents.synthesizer.payload)}
         </div>
       `;
     }
@@ -944,6 +989,7 @@
             <strong>القوة البنيوية</strong>
             <span>${teamB.arabic_name}<b>${scoreText(economic.away_score)}/100</b></span>
           </div>
+          ${renderBlendMeter(report.agents.synthesizer.payload)}
           <div class="economic-pillars">
             ${economicLabels.map(([key, label]) => renderEconomicPillar(label, key, economic, teamA, teamB)).join("")}
           </div>

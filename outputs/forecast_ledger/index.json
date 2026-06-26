@@ -5439,6 +5439,102 @@
       "calibration_version": 50,
       "created_at_utc": "20260626T155840Z",
       "path": "outputs/forecast_ledger/WC-072_v050_20260626T155840Z.json"
+    },
+    {
+      "match_id": "WC-041",
+      "home_team": "Egypt",
+      "away_team": "Iran",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173117Z",
+      "path": "outputs/forecast_ledger/WC-041_v050_20260626T173117Z.json"
+    },
+    {
+      "match_id": "WC-042",
+      "home_team": "New Zealand",
+      "away_team": "Belgium",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173117Z",
+      "path": "outputs/forecast_ledger/WC-042_v050_20260626T173117Z.json"
+    },
+    {
+      "match_id": "WC-047",
+      "home_team": "Cape Verde",
+      "away_team": "Saudi Arabia",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173118Z",
+      "path": "outputs/forecast_ledger/WC-047_v050_20260626T173118Z.json"
+    },
+    {
+      "match_id": "WC-048",
+      "home_team": "Uruguay",
+      "away_team": "Spain",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173119Z",
+      "path": "outputs/forecast_ledger/WC-048_v050_20260626T173119Z.json"
+    },
+    {
+      "match_id": "WC-053",
+      "home_team": "Norway",
+      "away_team": "France",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173120Z",
+      "path": "outputs/forecast_ledger/WC-053_v050_20260626T173120Z.json"
+    },
+    {
+      "match_id": "WC-054",
+      "home_team": "Senegal",
+      "away_team": "Iraq",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173121Z",
+      "path": "outputs/forecast_ledger/WC-054_v050_20260626T173121Z.json"
+    },
+    {
+      "match_id": "WC-059",
+      "home_team": "Algeria",
+      "away_team": "Austria",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173122Z",
+      "path": "outputs/forecast_ledger/WC-059_v050_20260626T173122Z.json"
+    },
+    {
+      "match_id": "WC-060",
+      "home_team": "Jordan",
+      "away_team": "Argentina",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173123Z",
+      "path": "outputs/forecast_ledger/WC-060_v050_20260626T173123Z.json"
+    },
+    {
+      "match_id": "WC-065",
+      "home_team": "Colombia",
+      "away_team": "Portugal",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173124Z",
+      "path": "outputs/forecast_ledger/WC-065_v050_20260626T173124Z.json"
+    },
+    {
+      "match_id": "WC-066",
+      "home_team": "DR Congo",
+      "away_team": "Uzbekistan",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173125Z",
+      "path": "outputs/forecast_ledger/WC-066_v050_20260626T173125Z.json"
+    },
+    {
+      "match_id": "WC-071",
+      "home_team": "Panama",
+      "away_team": "England",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173126Z",
+      "path": "outputs/forecast_ledger/WC-071_v050_20260626T173126Z.json"
+    },
+    {
+      "match_id": "WC-072",
+      "home_team": "Croatia",
+      "away_team": "Ghana",
+      "calibration_version": 50,
+      "created_at_utc": "20260626T173128Z",
+      "path": "outputs/forecast_ledger/WC-072_v050_20260626T173128Z.json"
     }
   ]
 }
