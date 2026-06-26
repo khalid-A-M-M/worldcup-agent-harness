@@ -50,7 +50,7 @@ def main() -> None:
 
     _write_csv(
         DATA / "historical_results.csv",
-        ["date", "home_team", "away_team", "home_goals", "away_goals"],
+        ["date", "home_team", "away_team", "home_goals", "away_goals", "match_type"],
         [
             {
                 "date": m["date"],
@@ -58,6 +58,7 @@ def main() -> None:
                 "away_team": m["team2"],
                 "home_goals": m["score"]["ft"][0],
                 "away_goals": m["score"]["ft"][1],
+                "match_type": "wc_2026",
             }
             for m in completed
         ],
