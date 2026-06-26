@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from .core import AgentResult, PipelineState
-from .model import DixonColesLiteModel, load_results, load_team_priors, normalize_three_way
+from .model import DixonColesLiteModel, load_results, load_results_weighted, load_team_priors, normalize_three_way
 
 
 class DataCollectionAgent:
@@ -33,6 +33,7 @@ class DataCollectionAgent:
 
     def run(self, state: PipelineState) -> AgentResult:
         results = load_results(self.historical_results_path)
+        weighted_results = load_results_weighted(self.historical_results_path)
         events = _read_csv(self.butterfly_events_path)
         team_priors = load_team_priors(self.team_priors_path) if self.team_priors_path else {}
         advanced_stats = _read_csv(self.advanced_stats_path) if self.advanced_stats_path and self.advanced_stats_path.exists() else []
@@ -55,6 +56,7 @@ class DataCollectionAgent:
             ),
             payload={
                 "historical_results": results,
+                "historical_results_weighted": weighted_results,
                 "butterfly_events": match_events,
                 "team_priors": team_priors,
                 "team_seed_ranks_path": str(self.team_priors_path) if self.team_priors_path else None,
@@ -71,7 +73,7 @@ class SpecialistAnalysisAgent:
 
     def run(self, state: PipelineState) -> AgentResult:
         data = state.get_payload("data_collection")
-        model = DixonColesLiteModel(team_priors=data.get("team_priors", {})).fit(data["historical_results"])
+        model = DixonColesLiteModel(team_priors=data.get("team_priors", {})).fit(data.get("historical_results_weighted", data["historical_results"]))
         prediction = model.predict(
             state.match.home_team,
             state.match.away_team,
@@ -90,11 +92,16 @@ class SpecialistAnalysisAgent:
                 "away": prediction.expected_away_goals,
             },
             "top_scores": [asdict(score) for score in top_scores],
+            "model_diagnostics": {
+                "rho": model.rho,
+                "effective_matches": model.effective_matches,
+                "raw_matches": len(data["historical_results"]),
+            },
         }
         return AgentResult(
             agent_name=self.name,
             status="ok",
-            summary="Produced Dixon-Coles-lite baseline probabilities.",
+            summary=f"Produced Dixon-Coles-lite baseline probabilities with rho={model.rho:.3f}.",
             payload=payload,
         )
 
@@ -375,6 +382,7 @@ class SynthesizerAgent:
             "away_win": away,
             "confidence_interval_width": confidence_width,
             "expected_goals": expected_goals,
+            "model_diagnostics": state.get_payload("specialist_analysis").get("model_diagnostics", {}),
             "key_factors": economic.get("factors", []) + team_intel["factors"] + _butterfly_factor_cards(butterfly),
             "data_quality_warnings": state.results["team_intelligence"].warnings + state.results.get("economic_world", AgentResult("economic_world", "missing", "")).warnings,
             "calibration_version": calibration.get("version", 1),

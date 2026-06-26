@@ -4,8 +4,9 @@ import csv
 import math
 from collections import defaultdict
 from dataclasses import dataclass
+from datetime import date as Date
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 
 @dataclass
@@ -14,6 +15,8 @@ class MatchResult:
     away_team: str
     home_goals: int
     away_goals: int
+    match_date: str = ""
+    match_type: str = "default"
 
 
 @dataclass
@@ -33,18 +36,67 @@ class ModelPrediction:
     score_matrix: List[ScoreProbability]
 
 
+MATCH_TYPE_WEIGHTS: Dict[str, float] = {
+    "wc_2026": 1.00,
+    "qualifier": 0.65,
+    "cup_2022": 0.22,
+    "cup_2018": 0.10,
+    "friendly": 0.18,
+    "default": 0.35,
+}
+
+TAU = 0.003
+
+
 def load_results(path: Path) -> List[MatchResult]:
+    return [match for match, _weight in load_results_weighted(path)]
+
+
+def load_results_weighted(path: Path) -> List[Tuple[MatchResult, float]]:
+    weighted: List[Tuple[MatchResult, float]] = []
     with path.open("r", encoding="utf-8", newline="") as f:
-        rows = csv.DictReader(f)
-        return [
-            MatchResult(
+        for row in csv.DictReader(f):
+            match = MatchResult(
                 home_team=row["home_team"],
                 away_team=row["away_team"],
                 home_goals=int(row["home_goals"]),
                 away_goals=int(row["away_goals"]),
+                match_date=row.get("date", ""),
+                match_type=row.get("match_type") or "default",
             )
-            for row in rows
-        ]
+            weighted.append((match, compute_match_weight(match.match_date, match.match_type)))
+    return weighted
+
+
+def compute_match_weight(match_date: str | Date, match_type: str, today: Date | None = None) -> float:
+    today = today or Date.today()
+    parsed_date = _parse_match_date(match_date)
+    days_ago = max(0, (today - parsed_date).days) if parsed_date else 0
+    time_weight = math.exp(-TAU * days_ago)
+    type_weight = MATCH_TYPE_WEIGHTS.get(match_type, MATCH_TYPE_WEIGHTS["default"])
+    return time_weight * type_weight
+
+
+def _parse_match_date(value: str | Date) -> Date | None:
+    if isinstance(value, Date):
+        return value
+    if not value:
+        return None
+    try:
+        return Date.fromisoformat(str(value)[:10])
+    except ValueError:
+        return None
+
+
+def _estimate_rho(matches: List[MatchResult]) -> float:
+    if len(matches) < 12:
+        return -0.08
+    low_score = sum(1 for m in matches if m.home_goals <= 1 and m.away_goals <= 1)
+    draws_00_11 = sum(1 for m in matches if (m.home_goals, m.away_goals) in {(0, 0), (1, 1)})
+    low_ratio = low_score / len(matches)
+    draw_low_ratio = draws_00_11 / max(low_score, 1)
+    rho = -0.04 - 0.18 * low_ratio + 0.08 * draw_low_ratio
+    return max(-0.20, min(0.0, rho))
 
 
 class DixonColesLiteModel:
@@ -64,31 +116,36 @@ class DixonColesLiteModel:
         self.defense: Dict[str, float] = {}
         self.global_home_goals = 1.35
         self.global_away_goals = 1.05
+        self.effective_matches = 0.0
 
-    def fit(self, results: Iterable[MatchResult]) -> "DixonColesLiteModel":
-        matches = list(results)
-        if not matches:
+    def fit(self, results: Iterable[Any]) -> "DixonColesLiteModel":
+        weighted_matches = [_coerce_weighted_result(item) for item in results]
+        if not weighted_matches:
             raise ValueError("Cannot fit model without historical results.")
+        matches = [match for match, _weight in weighted_matches]
+        total_weight = max(sum(weight for _match, weight in weighted_matches), 0.001)
+        self.effective_matches = total_weight
+        self.rho = _estimate_rho(matches)
 
         teams = sorted({m.home_team for m in matches} | {m.away_team for m in matches})
         goals_for = defaultdict(float)
         goals_against = defaultdict(float)
         games = defaultdict(float)
-        home_goals = sum(m.home_goals for m in matches)
-        away_goals = sum(m.away_goals for m in matches)
+        home_goals = sum(m.home_goals * weight for m, weight in weighted_matches)
+        away_goals = sum(m.away_goals * weight for m, weight in weighted_matches)
 
-        self.global_home_goals = max(home_goals / len(matches), 0.2)
-        self.global_away_goals = max(away_goals / len(matches), 0.2)
+        self.global_home_goals = max(home_goals / total_weight, 0.2)
+        self.global_away_goals = max(away_goals / total_weight, 0.2)
         league_avg = (self.global_home_goals + self.global_away_goals) / 2
         self.home_advantage = max(self.global_home_goals / self.global_away_goals, 0.75)
 
-        for match in matches:
-            goals_for[match.home_team] += match.home_goals
-            goals_against[match.home_team] += match.away_goals
-            games[match.home_team] += 1
-            goals_for[match.away_team] += match.away_goals
-            goals_against[match.away_team] += match.home_goals
-            games[match.away_team] += 1
+        for match, weight in weighted_matches:
+            goals_for[match.home_team] += match.home_goals * weight
+            goals_against[match.home_team] += match.away_goals * weight
+            games[match.home_team] += weight
+            goals_for[match.away_team] += match.away_goals * weight
+            goals_against[match.away_team] += match.home_goals * weight
+            games[match.away_team] += weight
 
         for team in teams:
             attack_rate = (goals_for[team] + league_avg) / (games[team] + 1)
@@ -154,6 +211,14 @@ class DixonColesLiteModel:
         if home_goals == 1 and away_goals == 1:
             return max(0.01, 1 - self.rho)
         return 1.0
+
+
+def _coerce_weighted_result(item: Any) -> Tuple[MatchResult, float]:
+    if isinstance(item, tuple) and len(item) == 2 and isinstance(item[0], MatchResult):
+        return item[0], max(float(item[1]), 0.001)
+    if isinstance(item, MatchResult):
+        return item, 1.0
+    raise TypeError(f"Unsupported match result item: {type(item)!r}")
 
 
 def _poisson_pmf(k: int, rate: float) -> float:

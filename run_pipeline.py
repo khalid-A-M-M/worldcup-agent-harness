@@ -118,8 +118,20 @@ def _parse_datetime(value: str) -> datetime:
 
 def _json_safe(value):
     if isinstance(value, dict):
-        return {key: _json_safe(item) for key, item in value.items()}
-    if isinstance(value, list):
+        safe = {}
+        for key, item in value.items():
+            if key == "historical_results_weighted":
+                weights = [float(row[1]) for row in item]
+                safe[key + "_summary"] = {
+                    "matches": len(weights),
+                    "effective_matches": sum(weights),
+                    "min_weight": min(weights) if weights else 0.0,
+                    "max_weight": max(weights) if weights else 0.0,
+                }
+            else:
+                safe[key] = _json_safe(item)
+        return safe
+    if isinstance(value, (list, tuple)):
         return [_json_safe(item) for item in value]
     if hasattr(value, "__dict__"):
         return _json_safe(value.__dict__)
