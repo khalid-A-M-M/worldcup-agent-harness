@@ -1,20 +1,20 @@
 {
   "match": {
-    "match_id": "WC-042",
-    "home_team": "New Zealand",
-    "away_team": "Belgium",
-    "kickoff_utc": "2026-06-27T03:00:00+00:00",
-    "group": "Group G",
-    "ground": "Vancouver",
-    "round": "Matchday 16",
+    "match_id": "WC-030",
+    "home_team": "Ecuador",
+    "away_team": "Germany",
+    "kickoff_utc": "2026-06-25T20:00:00+00:00",
+    "group": "Group E",
+    "ground": "New York/New Jersey (East Rutherford)",
+    "round": "Matchday 15",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
-    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for New Zealand and Belgium.",
+    "data_collection: ok - Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.063.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Ecuador and Germany.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: New Zealand 50.1 vs Belgium 75.6.",
+    "economic_world: ok - Computed long-run country-strength layer: Ecuador 61.6 vs Germany 84.3.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -22,7 +22,7 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 60 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+      "summary": "Loaded 54 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
       "warnings": [
         "No butterfly events found for this match."
       ],
@@ -34,7 +34,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-11",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "South Korea",
@@ -42,7 +42,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-11",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Czech Republic",
@@ -50,7 +50,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Mexico",
@@ -58,7 +58,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Czech Republic",
@@ -66,7 +66,7 @@
             "home_goals": 0,
             "away_goals": 3,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "South Africa",
@@ -74,7 +74,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Canada",
@@ -82,7 +82,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-12",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Qatar",
@@ -90,7 +90,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Switzerland",
@@ -98,7 +98,7 @@
             "home_goals": 4,
             "away_goals": 1,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Canada",
@@ -106,7 +106,7 @@
             "home_goals": 6,
             "away_goals": 0,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Switzerland",
@@ -114,7 +114,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Bosnia & Herzegovina",
@@ -122,7 +122,7 @@
             "home_goals": 3,
             "away_goals": 1,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Brazil",
@@ -130,7 +130,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Haiti",
@@ -138,7 +138,7 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Scotland",
@@ -146,7 +146,7 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Brazil",
@@ -154,7 +154,7 @@
             "home_goals": 3,
             "away_goals": 0,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Scotland",
@@ -162,7 +162,7 @@
             "home_goals": 0,
             "away_goals": 3,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Morocco",
@@ -170,7 +170,7 @@
             "home_goals": 4,
             "away_goals": 2,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "USA",
@@ -178,7 +178,7 @@
             "home_goals": 4,
             "away_goals": 1,
             "match_date": "2026-06-12",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Australia",
@@ -186,7 +186,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "USA",
@@ -194,7 +194,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Turkey",
@@ -202,23 +202,7 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-19",
-            "match_type": "default"
-          },
-          {
-            "home_team": "Turkey",
-            "away_team": "USA",
-            "home_goals": 3,
-            "away_goals": 2,
-            "match_date": "2026-06-25",
-            "match_type": "default"
-          },
-          {
-            "home_team": "Paraguay",
-            "away_team": "Australia",
-            "home_goals": 0,
-            "away_goals": 0,
-            "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Germany",
@@ -226,7 +210,7 @@
             "home_goals": 7,
             "away_goals": 1,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ivory Coast",
@@ -234,7 +218,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Germany",
@@ -242,7 +226,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-20",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ecuador",
@@ -250,23 +234,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-20",
-            "match_type": "default"
-          },
-          {
-            "home_team": "Curaçao",
-            "away_team": "Ivory Coast",
-            "home_goals": 0,
-            "away_goals": 2,
-            "match_date": "2026-06-25",
-            "match_type": "default"
-          },
-          {
-            "home_team": "Ecuador",
-            "away_team": "Germany",
-            "home_goals": 2,
-            "away_goals": 1,
-            "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Netherlands",
@@ -274,7 +242,7 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Sweden",
@@ -282,7 +250,7 @@
             "home_goals": 5,
             "away_goals": 1,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Netherlands",
@@ -290,7 +258,7 @@
             "home_goals": 5,
             "away_goals": 1,
             "match_date": "2026-06-20",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Tunisia",
@@ -298,23 +266,7 @@
             "home_goals": 0,
             "away_goals": 4,
             "match_date": "2026-06-20",
-            "match_type": "default"
-          },
-          {
-            "home_team": "Japan",
-            "away_team": "Sweden",
-            "home_goals": 1,
-            "away_goals": 1,
-            "match_date": "2026-06-25",
-            "match_type": "default"
-          },
-          {
-            "home_team": "Tunisia",
-            "away_team": "Netherlands",
-            "home_goals": 1,
-            "away_goals": 3,
-            "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Belgium",
@@ -322,7 +274,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Iran",
@@ -330,7 +282,7 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Belgium",
@@ -338,7 +290,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "New Zealand",
@@ -346,7 +298,7 @@
             "home_goals": 1,
             "away_goals": 3,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Spain",
@@ -354,7 +306,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Saudi Arabia",
@@ -362,7 +314,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Spain",
@@ -370,7 +322,7 @@
             "home_goals": 4,
             "away_goals": 0,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Uruguay",
@@ -378,7 +330,7 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "France",
@@ -386,7 +338,7 @@
             "home_goals": 3,
             "away_goals": 1,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Iraq",
@@ -394,7 +346,7 @@
             "home_goals": 1,
             "away_goals": 4,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "France",
@@ -402,7 +354,7 @@
             "home_goals": 3,
             "away_goals": 0,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Norway",
@@ -410,7 +362,7 @@
             "home_goals": 3,
             "away_goals": 2,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Argentina",
@@ -418,7 +370,7 @@
             "home_goals": 3,
             "away_goals": 0,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Austria",
@@ -426,7 +378,7 @@
             "home_goals": 3,
             "away_goals": 1,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Argentina",
@@ -434,7 +386,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Jordan",
@@ -442,7 +394,7 @@
             "home_goals": 1,
             "away_goals": 2,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Portugal",
@@ -450,7 +402,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Uzbekistan",
@@ -458,7 +410,7 @@
             "home_goals": 1,
             "away_goals": 3,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Portugal",
@@ -466,7 +418,7 @@
             "home_goals": 5,
             "away_goals": 0,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Colombia",
@@ -474,7 +426,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "England",
@@ -482,7 +434,7 @@
             "home_goals": 4,
             "away_goals": 2,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ghana",
@@ -490,7 +442,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "England",
@@ -498,7 +450,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Panama",
@@ -506,14 +458,14 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           }
         ],
         "historical_results_weighted_summary": {
-          "matches": 60,
-          "effective_matches": 20.557030754055134,
-          "min_weight": 0.334599118641585,
-          "max_weight": 0.34895157342618055
+          "matches": 54,
+          "effective_matches": 52.75234660999443,
+          "min_weight": 0.9559974818331,
+          "max_weight": 0.9940179640539353
         },
         "butterfly_events": [],
         "team_priors": {
@@ -706,7 +658,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -1515,130 +1467,6 @@
             "source": "ESPN"
           },
           {
-            "match_id": "WC-029",
-            "team": "Curaçao",
-            "shots": "11.0",
-            "shots_on_target": "2.0",
-            "possession": "36.6",
-            "xg": "",
-            "big_chances": "",
-            "corners": "4.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "1.0",
-            "accurate_passes": "295.0",
-            "total_passes": "354.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "5.0",
-            "total_crosses": "15.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "20.0",
-            "interceptions": "15.0",
-            "clearances": "17.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "42.09",
-            "attacking_pressure_index": "44.94",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-029",
-            "team": "Ivory Coast",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "63.4",
-            "xg": "",
-            "big_chances": "",
-            "corners": "6.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "6.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "558.0",
-            "total_passes": "623.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "3.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "17.0",
-            "interceptions": "12.0",
-            "clearances": "19.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "57.91",
-            "attacking_pressure_index": "55.06",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Ecuador",
-            "shots": "7.0",
-            "shots_on_target": "3.0",
-            "possession": "38.9",
-            "xg": "",
-            "big_chances": "",
-            "corners": "3.0",
-            "yellow_cards": "3.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "15.0",
-            "offsides": "1.0",
-            "saves": "2.0",
-            "accurate_passes": "313.0",
-            "total_passes": "379.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "3.0",
-            "total_crosses": "12.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "26.0",
-            "interceptions": "12.0",
-            "clearances": "29.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "41.15",
-            "attacking_pressure_index": "48.11",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-030",
-            "team": "Germany",
-            "shots": "11.0",
-            "shots_on_target": "3.0",
-            "possession": "61.1",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "0.0",
-            "saves": "1.0",
-            "accurate_passes": "517.0",
-            "total_passes": "592.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "5.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "20.0",
-            "interceptions": "4.0",
-            "clearances": "15.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "58.85",
-            "attacking_pressure_index": "51.89",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
             "match_id": "WC-031",
             "team": "Japan",
             "shots": "10.0",
@@ -1821,130 +1649,6 @@
             "momentum_last_15": "",
             "dominance_index": "25.79",
             "attacking_pressure_index": "15.14",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-035",
-            "team": "Japan",
-            "shots": "8.0",
-            "shots_on_target": "3.0",
-            "possession": "52.3",
-            "xg": "",
-            "big_chances": "",
-            "corners": "2.0",
-            "yellow_cards": "1.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "20.0",
-            "offsides": "3.0",
-            "saves": "4.0",
-            "accurate_passes": "379.0",
-            "total_passes": "446.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "4.0",
-            "total_crosses": "13.0",
-            "blocked_shots": "2.0",
-            "total_tackles": "13.0",
-            "interceptions": "4.0",
-            "clearances": "40.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "47.48",
-            "attacking_pressure_index": "36.63",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-035",
-            "team": "Sweden",
-            "shots": "11.0",
-            "shots_on_target": "5.0",
-            "possession": "47.7",
-            "xg": "",
-            "big_chances": "",
-            "corners": "8.0",
-            "yellow_cards": "2.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "2.0",
-            "accurate_passes": "312.0",
-            "total_passes": "395.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "4.0",
-            "total_crosses": "16.0",
-            "blocked_shots": "3.0",
-            "total_tackles": "6.0",
-            "interceptions": "5.0",
-            "clearances": "21.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "52.52",
-            "attacking_pressure_index": "63.37",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-036",
-            "team": "Netherlands",
-            "shots": "20.0",
-            "shots_on_target": "7.0",
-            "possession": "71.4",
-            "xg": "",
-            "big_chances": "",
-            "corners": "6.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "10.0",
-            "offsides": "1.0",
-            "saves": "3.0",
-            "accurate_passes": "602.0",
-            "total_passes": "647.0",
-            "pass_pct": "0.9",
-            "accurate_crosses": "6.0",
-            "total_crosses": "27.0",
-            "blocked_shots": "5.0",
-            "total_tackles": "8.0",
-            "interceptions": "10.0",
-            "clearances": "17.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "68.92",
-            "attacking_pressure_index": "64.44",
-            "data_completeness": "partial_no_timeline_momentum_no_xg",
-            "source": "ESPN"
-          },
-          {
-            "match_id": "WC-036",
-            "team": "Tunisia",
-            "shots": "10.0",
-            "shots_on_target": "4.0",
-            "possession": "28.6",
-            "xg": "",
-            "big_chances": "",
-            "corners": "4.0",
-            "yellow_cards": "0.0",
-            "red_cards": "0.0",
-            "passes_into_final_third": "",
-            "fouls": "11.0",
-            "offsides": "2.0",
-            "saves": "4.0",
-            "accurate_passes": "199.0",
-            "total_passes": "258.0",
-            "pass_pct": "0.8",
-            "accurate_crosses": "4.0",
-            "total_crosses": "13.0",
-            "blocked_shots": "1.0",
-            "total_tackles": "17.0",
-            "interceptions": "8.0",
-            "clearances": "35.0",
-            "match_momentum": "",
-            "momentum_last_15": "",
-            "dominance_index": "31.08",
-            "attacking_pressure_index": "35.56",
             "data_completeness": "partial_no_timeline_momentum_no_xg",
             "source": "ESPN"
           },
@@ -3573,11 +3277,11 @@
           }
         ],
         "calibration": {
-          "version": 47,
-          "team_adjustment_weight": 0.9212837727999996,
-          "butterfly_adjustment_weight": 0.8145062499999999,
+          "version": 42,
+          "team_adjustment_weight": 1.18,
+          "butterfly_adjustment_weight": 1.0,
           "advanced_stats_weight": 1.0,
-          "confidence_penalty_weight": 1.2155062500000002,
+          "confidence_penalty_weight": 1.0,
           "notes": [
             "Updated by evolve_after_results.py after completed matches are scored.",
             "Not enough completed forecasts for aggressive recalibration.",
@@ -3620,219 +3324,237 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy."
+            "Slightly reinforced team-intelligence layer after acceptable accuracy."
           ]
         }
       }
     },
     "specialist_analysis": {
       "status": "ok",
-      "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
+      "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.063.",
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.24240496689323823,
-          "draw": 0.2462718718862743,
-          "away_win": 0.511323161220488
+          "home_win": 0.20457215612628352,
+          "draw": 0.2417988086002424,
+          "away_win": 0.553629035273474
         },
         "expected_goals": {
-          "home": 1.1614006542824453,
-          "away": 1.7763699149144851
+          "home": 1.0315636001454835,
+          "away": 1.8286658631171853
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.11574090344243487
+            "probability": 0.11478886314480838
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09709708255202645
+            "probability": 0.09876590754341663
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.08770829336509134
+            "probability": 0.09794523692421413
           },
           {
             "home_goals": 0,
             "away_goals": 2,
-            "probability": 0.08360343365917637
+            "probability": 0.09574388581517172
           },
           {
-            "home_goals": 2,
-            "away_goals": 1,
-            "probability": 0.06348261939026863
+            "home_goals": 0,
+            "away_goals": 0,
+            "probability": 0.06403199732738121
           }
         ],
         "model_diagnostics": {
-          "rho": -0.058727272727272704,
-          "effective_matches": 20.557030754055134,
-          "raw_matches": 60
+          "rho": -0.06266666666666665,
+          "effective_matches": 52.75234660999443,
+          "raw_matches": 54
         }
       }
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for New Zealand and Belgium.",
-      "warnings": [
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-      ],
+      "summary": "Computed tournament form and prior-strength factors for Ecuador and Germany.",
+      "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "New Zealand",
+          "team": "Ecuador",
           "matches": 2,
           "wins": 0,
           "draws": 1,
           "losses": 1,
-          "goals_for": 3,
-          "goals_against": 5,
-          "goal_difference": -2,
+          "goals_for": 0,
+          "goals_against": 1,
+          "goal_difference": -1,
           "points": 1,
           "points_per_match": 0.5,
-          "seed_rank": 68
+          "seed_rank": 27
         },
         "away_profile": {
-          "team": "Belgium",
+          "team": "Germany",
           "matches": 2,
-          "wins": 0,
-          "draws": 2,
+          "wins": 2,
+          "draws": 0,
           "losses": 0,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_difference": 0,
-          "points": 2,
-          "points_per_match": 1.0,
-          "seed_rank": 8
+          "goals_for": 9,
+          "goals_against": 2,
+          "goal_difference": 7,
+          "points": 6,
+          "points_per_match": 3.0,
+          "seed_rank": 9
         },
         "home_advanced_profile": {
-          "team": "New Zealand",
-          "matches": 0,
-          "shots": 0.0,
-          "shots_on_target": 0.0,
-          "possession": 0.0,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 0.0,
-          "yellow_cards": 0.0,
-          "red_cards": 0.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 0.0,
-          "offsides": 0.0,
-          "saves": 0.0,
-          "accurate_passes": 0.0,
-          "total_passes": 0.0,
-          "pass_pct": 0.0,
-          "accurate_crosses": 0.0,
-          "total_crosses": 0.0,
-          "blocked_shots": 0.0,
-          "total_tackles": 0.0,
-          "interceptions": 0.0,
-          "clearances": 0.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 0.0,
-          "attacking_pressure_index": 0.0
-        },
-        "away_advanced_profile": {
-          "team": "Belgium",
-          "matches": 2,
-          "shots": 38.0,
-          "shots_on_target": 10.0,
-          "possession": 123.69999999999999,
+          "team": "Ecuador",
+          "matches": 1,
+          "shots": 12.0,
+          "shots_on_target": 1.0,
+          "possession": 51.6,
           "xg": 0.0,
           "big_chances": 0.0,
           "corners": 6.0,
-          "yellow_cards": 3.0,
-          "red_cards": 1.0,
+          "yellow_cards": 1.0,
+          "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 22.0,
-          "offsides": 3.0,
-          "saves": 5.0,
-          "accurate_passes": 924.0,
-          "total_passes": 1076.0,
-          "pass_pct": 1.8,
-          "accurate_crosses": 12.0,
-          "total_crosses": 48.0,
-          "blocked_shots": 11.0,
-          "total_tackles": 29.0,
+          "fouls": 13.0,
+          "offsides": 0.0,
+          "saves": 3.0,
+          "accurate_passes": 419.0,
+          "total_passes": 492.0,
+          "pass_pct": 0.9,
+          "accurate_crosses": 4.0,
+          "total_crosses": 14.0,
+          "blocked_shots": 3.0,
+          "total_tackles": 21.0,
           "interceptions": 13.0,
-          "clearances": 36.0,
+          "clearances": 18.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 123.73,
-          "attacking_pressure_index": 116.25,
-          "shots_per_match": 19.0,
-          "shots_on_target_per_match": 5.0,
-          "possession_per_match": 61.849999999999994,
+          "dominance_index": 43.73,
+          "attacking_pressure_index": 38.6,
+          "shots_per_match": 12.0,
+          "shots_on_target_per_match": 1.0,
+          "possession_per_match": 51.6,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 3.0,
-          "yellow_cards_per_match": 1.5,
-          "red_cards_per_match": 0.5,
+          "corners_per_match": 6.0,
+          "yellow_cards_per_match": 1.0,
+          "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 11.0,
-          "offsides_per_match": 1.5,
-          "saves_per_match": 2.5,
-          "accurate_passes_per_match": 462.0,
-          "total_passes_per_match": 538.0,
+          "fouls_per_match": 13.0,
+          "offsides_per_match": 0.0,
+          "saves_per_match": 3.0,
+          "accurate_passes_per_match": 419.0,
+          "total_passes_per_match": 492.0,
           "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 6.0,
-          "total_crosses_per_match": 24.0,
-          "blocked_shots_per_match": 5.5,
-          "total_tackles_per_match": 14.5,
-          "interceptions_per_match": 6.5,
+          "accurate_crosses_per_match": 4.0,
+          "total_crosses_per_match": 14.0,
+          "blocked_shots_per_match": 3.0,
+          "total_tackles_per_match": 21.0,
+          "interceptions_per_match": 13.0,
           "clearances_per_match": 18.0,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 61.865,
-          "attacking_pressure_index_per_match": 58.125
+          "dominance_index_per_match": 43.73,
+          "attacking_pressure_index_per_match": 38.6
         },
-        "home_factor_score": -0.1285,
-        "away_factor_score": 0.0518725,
+        "away_advanced_profile": {
+          "team": "Germany",
+          "matches": 2,
+          "shots": 42.0,
+          "shots_on_target": 19.0,
+          "possession": 124.1,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 16.0,
+          "yellow_cards": 0.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 23.0,
+          "offsides": 0.0,
+          "saves": 2.0,
+          "accurate_passes": 1109.0,
+          "total_passes": 1261.0,
+          "pass_pct": 1.8,
+          "accurate_crosses": 10.0,
+          "total_crosses": 33.0,
+          "blocked_shots": 12.0,
+          "total_tackles": 45.0,
+          "interceptions": 20.0,
+          "clearances": 22.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 135.26999999999998,
+          "attacking_pressure_index": 153.43,
+          "shots_per_match": 21.0,
+          "shots_on_target_per_match": 9.5,
+          "possession_per_match": 62.05,
+          "xg_per_match": 0.0,
+          "big_chances_per_match": 0.0,
+          "corners_per_match": 8.0,
+          "yellow_cards_per_match": 0.0,
+          "red_cards_per_match": 0.0,
+          "passes_into_final_third_per_match": 0.0,
+          "fouls_per_match": 11.5,
+          "offsides_per_match": 0.0,
+          "saves_per_match": 1.0,
+          "accurate_passes_per_match": 554.5,
+          "total_passes_per_match": 630.5,
+          "pass_pct_per_match": 0.9,
+          "accurate_crosses_per_match": 5.0,
+          "total_crosses_per_match": 16.5,
+          "blocked_shots_per_match": 6.0,
+          "total_tackles_per_match": 22.5,
+          "interceptions_per_match": 10.0,
+          "clearances_per_match": 11.0,
+          "match_momentum_per_match": 0.0,
+          "momentum_last_15_per_match": 0.0,
+          "dominance_index_per_match": 67.63499999999999,
+          "attacking_pressure_index_per_match": 76.715
+        },
+        "home_factor_score": -0.125475,
+        "away_factor_score": 0.4023895,
         "probability_adjustment": -0.16,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 68.",
-            "impact": -0.026
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 27.",
+            "impact": 0.056
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 7.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 8.",
+            "value": "Seed rank داخل النموذج: 9.",
             "impact": 0.07
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 1.0، استحواذ 51.6%، ضغط هجومي 38.6.",
+            "impact": -0.119
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
-            "impact": -0.018
+            "value": "xG 0.00، تسديدات على المرمى 9.5، استحواذ 62.0%، ضغط هجومي 76.7.",
+            "impact": 0.092
           }
         ]
       }
@@ -3849,48 +3571,48 @@
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: New Zealand 50.1 vs Belgium 75.6.",
+      "summary": "Computed long-run country-strength layer: Ecuador 61.6 vs Germany 84.3.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "New Zealand",
+          "team": "Ecuador",
           "found": true,
-          "notes": "High economy",
-          "gdp_per_capita_index": 82.0,
-          "population_index": 29.0,
-          "football_market_index": 42.0,
-          "academy_pipeline_index": 46.0,
-          "climate_fit_index": 64.0,
-          "league_export_index": 42.0,
-          "home_region_fit_index": 58.0
+          "notes": "Altitude/climate adaptation and strong recent pipeline.",
+          "gdp_per_capita_index": 43.0,
+          "population_index": 46.0,
+          "football_market_index": 66.0,
+          "academy_pipeline_index": 68.0,
+          "climate_fit_index": 84.0,
+          "league_export_index": 64.0,
+          "home_region_fit_index": 72.0
         },
         "away_profile": {
-          "team": "Belgium",
+          "team": "Germany",
           "found": true,
-          "notes": "Small population but strong modern pipeline.",
-          "gdp_per_capita_index": 83.0,
-          "population_index": 38.0,
-          "football_market_index": 84.0,
-          "academy_pipeline_index": 82.0,
+          "notes": "Large economy and deep league infrastructure.",
+          "gdp_per_capita_index": 86.0,
+          "population_index": 68.0,
+          "football_market_index": 92.0,
+          "academy_pipeline_index": 88.0,
           "climate_fit_index": 72.0,
-          "league_export_index": 84.0,
-          "home_region_fit_index": 66.0
+          "league_export_index": 92.0,
+          "home_region_fit_index": 68.0
         },
-        "home_score": 50.07,
-        "away_score": 75.60000000000001,
-        "probability_adjustment": -0.025530000000000008,
+        "home_score": 61.56,
+        "away_score": 84.32,
+        "probability_adjustment": -0.022759999999999992,
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 50.1/100: دخل 82، سكان 29، سوق كرة 42، أكاديميات 46، مناخ 64.",
-            "impact": 0.0
+            "value": "قوة بنيوية 61.6/100: دخل 43، سكان 46، سوق كرة 66، أكاديميات 68، مناخ 84.",
+            "impact": 0.012
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 75.6/100: دخل 83، سكان 38، سوق كرة 84، أكاديميات 82، مناخ 72.",
-            "impact": 0.026
+            "value": "قوة بنيوية 84.3/100: دخل 86، سكان 68، سوق كرة 92، أكاديميات 88، مناخ 72.",
+            "impact": 0.034
           }
         ]
       }
@@ -3899,8 +3621,7 @@
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
       "warnings": [
-        "No butterfly events found for this match.",
-        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        "No butterfly events found for this match."
       ],
       "payload": {
         "favorite": "away_win",
@@ -3913,75 +3634,73 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.07840506324523823,
-        "draw": 0.2462718718862742,
-        "away_win": 0.6753230648684876,
-        "confidence_interval_width": 0.192930375,
+        "home_win": 0.000999978156603428,
+        "draw": 0.24179352689297554,
+        "away_win": 0.757206494950421,
+        "confidence_interval_width": 0.18,
         "expected_goals": {
-          "home": 1.1614006542824453,
-          "away": 1.7763699149144851
+          "home": 1.0315636001454835,
+          "away": 1.8286658631171853
         },
         "model_diagnostics": {
-          "rho": -0.058727272727272704,
-          "effective_matches": 20.557030754055134,
-          "raw_matches": 60
+          "rho": -0.06266666666666665,
+          "effective_matches": 52.75234660999443,
+          "raw_matches": 54
         },
         "key_factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 50.1/100: دخل 82، سكان 29، سوق كرة 42، أكاديميات 46، مناخ 64.",
-            "impact": 0.0
+            "value": "قوة بنيوية 61.6/100: دخل 43، سكان 46، سوق كرة 66، أكاديميات 68، مناخ 84.",
+            "impact": 0.012
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 75.6/100: دخل 83، سكان 38، سوق كرة 84، أكاديميات 82، مناخ 72.",
-            "impact": 0.026
+            "value": "قوة بنيوية 84.3/100: دخل 86، سكان 68، سوق كرة 92، أكاديميات 88، مناخ 72.",
+            "impact": 0.034
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "1 نقطة من 2 مباراة، فارق أهداف -2.",
-            "impact": -0.055
+            "value": "1 نقطة من 2 مباراة، فارق أهداف -1.",
+            "impact": -0.028
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 68.",
-            "impact": -0.026
-          },
-          {
-            "side": "home",
-            "label": "إنذار دفاعي",
-            "value": "استقبل 5 أهداف في 2 مباراة.",
-            "impact": -0.045
+            "value": "Seed rank داخل النموذج: 27.",
+            "impact": 0.056
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "2 نقطة من 2 مباراة، فارق أهداف 0.",
-            "impact": 0.0
+            "value": "6 نقطة من 2 مباراة، فارق أهداف 7.",
+            "impact": 0.11
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 8.",
+            "value": "Seed rank داخل النموذج: 9.",
             "impact": 0.07
+          },
+          {
+            "side": "home",
+            "label": "إحصاءات أداء متقدمة",
+            "value": "xG 0.00، تسديدات على المرمى 1.0، استحواذ 51.6%، ضغط هجومي 38.6.",
+            "impact": -0.119
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 5.0، استحواذ 61.8%، ضغط هجومي 58.1.",
-            "impact": -0.018
+            "value": "xG 0.00، تسديدات على المرمى 9.5، استحواذ 62.0%، ضغط هجومي 76.7.",
+            "impact": 0.092
           }
         ],
-        "data_quality_warnings": [
-          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-        ],
-        "calibration_version": 47,
+        "data_quality_warnings": [],
+        "calibration_version": 42,
         "recommended_label": "away_win",
-        "explanation": "New Zealand vs Belgium: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+        "explanation": "Ecuador vs Germany: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {
