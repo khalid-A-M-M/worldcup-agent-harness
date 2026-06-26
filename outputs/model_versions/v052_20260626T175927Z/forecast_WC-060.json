@@ -32,7 +32,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-11",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "South Korea",
@@ -40,7 +40,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-11",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Czech Republic",
@@ -48,7 +48,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Mexico",
@@ -56,7 +56,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Czech Republic",
@@ -64,7 +64,7 @@
             "home_goals": 0,
             "away_goals": 3,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "South Africa",
@@ -72,7 +72,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Canada",
@@ -80,7 +80,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-12",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Qatar",
@@ -88,7 +88,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Switzerland",
@@ -96,7 +96,7 @@
             "home_goals": 4,
             "away_goals": 1,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Canada",
@@ -104,7 +104,7 @@
             "home_goals": 6,
             "away_goals": 0,
             "match_date": "2026-06-18",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Switzerland",
@@ -112,7 +112,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Bosnia & Herzegovina",
@@ -120,7 +120,7 @@
             "home_goals": 3,
             "away_goals": 1,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Brazil",
@@ -128,7 +128,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Haiti",
@@ -136,7 +136,7 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Scotland",
@@ -144,7 +144,7 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Brazil",
@@ -152,7 +152,7 @@
             "home_goals": 3,
             "away_goals": 0,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Scotland",
@@ -160,7 +160,7 @@
             "home_goals": 0,
             "away_goals": 3,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Morocco",
@@ -168,7 +168,7 @@
             "home_goals": 4,
             "away_goals": 2,
             "match_date": "2026-06-24",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "USA",
@@ -176,7 +176,7 @@
             "home_goals": 4,
             "away_goals": 1,
             "match_date": "2026-06-12",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Australia",
@@ -184,7 +184,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-13",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "USA",
@@ -192,7 +192,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Turkey",
@@ -200,7 +200,7 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-19",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Turkey",
@@ -208,7 +208,7 @@
             "home_goals": 3,
             "away_goals": 2,
             "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Paraguay",
@@ -216,7 +216,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Germany",
@@ -224,7 +224,7 @@
             "home_goals": 7,
             "away_goals": 1,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ivory Coast",
@@ -232,7 +232,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Germany",
@@ -240,7 +240,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-20",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ecuador",
@@ -248,7 +248,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-20",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Curaçao",
@@ -256,7 +256,7 @@
             "home_goals": 0,
             "away_goals": 2,
             "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ecuador",
@@ -264,7 +264,7 @@
             "home_goals": 2,
             "away_goals": 1,
             "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Netherlands",
@@ -272,7 +272,7 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Sweden",
@@ -280,7 +280,7 @@
             "home_goals": 5,
             "away_goals": 1,
             "match_date": "2026-06-14",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Netherlands",
@@ -288,7 +288,7 @@
             "home_goals": 5,
             "away_goals": 1,
             "match_date": "2026-06-20",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Tunisia",
@@ -296,7 +296,7 @@
             "home_goals": 0,
             "away_goals": 4,
             "match_date": "2026-06-20",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Japan",
@@ -304,7 +304,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Tunisia",
@@ -312,7 +312,7 @@
             "home_goals": 1,
             "away_goals": 3,
             "match_date": "2026-06-25",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Belgium",
@@ -320,7 +320,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Iran",
@@ -328,7 +328,7 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Belgium",
@@ -336,7 +336,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "New Zealand",
@@ -344,7 +344,7 @@
             "home_goals": 1,
             "away_goals": 3,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Spain",
@@ -352,7 +352,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Saudi Arabia",
@@ -360,7 +360,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-15",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Spain",
@@ -368,7 +368,7 @@
             "home_goals": 4,
             "away_goals": 0,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Uruguay",
@@ -376,7 +376,7 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-21",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "France",
@@ -384,7 +384,7 @@
             "home_goals": 3,
             "away_goals": 1,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Iraq",
@@ -392,7 +392,7 @@
             "home_goals": 1,
             "away_goals": 4,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "France",
@@ -400,7 +400,7 @@
             "home_goals": 3,
             "away_goals": 0,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Norway",
@@ -408,7 +408,7 @@
             "home_goals": 3,
             "away_goals": 2,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Argentina",
@@ -416,7 +416,7 @@
             "home_goals": 3,
             "away_goals": 0,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Austria",
@@ -424,7 +424,7 @@
             "home_goals": 3,
             "away_goals": 1,
             "match_date": "2026-06-16",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Argentina",
@@ -432,7 +432,7 @@
             "home_goals": 2,
             "away_goals": 0,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Jordan",
@@ -440,7 +440,7 @@
             "home_goals": 1,
             "away_goals": 2,
             "match_date": "2026-06-22",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Portugal",
@@ -448,7 +448,7 @@
             "home_goals": 1,
             "away_goals": 1,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Uzbekistan",
@@ -456,7 +456,7 @@
             "home_goals": 1,
             "away_goals": 3,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Portugal",
@@ -464,7 +464,7 @@
             "home_goals": 5,
             "away_goals": 0,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Colombia",
@@ -472,7 +472,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "England",
@@ -480,7 +480,7 @@
             "home_goals": 4,
             "away_goals": 2,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Ghana",
@@ -488,7 +488,7 @@
             "home_goals": 1,
             "away_goals": 0,
             "match_date": "2026-06-17",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "England",
@@ -496,7 +496,7 @@
             "home_goals": 0,
             "away_goals": 0,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           },
           {
             "home_team": "Panama",
@@ -504,14 +504,14 @@
             "home_goals": 0,
             "away_goals": 1,
             "match_date": "2026-06-23",
-            "match_type": "default"
+            "match_type": "wc_2026"
           }
         ],
         "historical_results_weighted_summary": {
           "matches": 60,
-          "effective_matches": 20.557030754055134,
-          "min_weight": 0.334599118641585,
-          "max_weight": 0.34895157342618055
+          "effective_matches": 58.73437358301467,
+          "min_weight": 0.9559974818331,
+          "max_weight": 0.997004495503373
         },
         "butterfly_events": [
           {
@@ -714,7 +714,7 @@
             1.108695652173913
           ]
         },
-        "team_seed_ranks_path": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/data/team_seed_ranks.csv",
+        "team_seed_ranks_path": "C:\\Users\\Yasser\\Documents\\GitHub\\worldcup-agent-harness\\data\\team_seed_ranks.csv",
         "advanced_stats": [
           {
             "match_id": "WC-001",
@@ -3581,7 +3581,7 @@
           }
         ],
         "calibration": {
-          "version": 53,
+          "version": 52,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3638,7 +3638,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3650,44 +3649,44 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.18699459744420677,
-          "draw": 0.22481173533384072,
-          "away_win": 0.588193667221952
+          "home_win": 0.10673797016276503,
+          "draw": 0.17988249631644848,
+          "away_win": 0.7133795335207858
         },
         "expected_goals": {
-          "home": 1.046915753094171,
-          "away": 1.9979457448226856
+          "home": 0.8116257739862427,
+          "away": 2.356461139466134
         },
         "top_scores": [
           {
-            "home_goals": 1,
-            "away_goals": 1,
-            "probability": 0.10544258809581798
+            "home_goals": 0,
+            "away_goals": 2,
+            "probability": 0.11693323357945715
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09949142505153863
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 2,
-            "probability": 0.09503288565244207
+            "probability": 0.09490602620864101
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.08928172932676989
+            "probability": 0.09451432033381173
           },
           {
-            "home_goals": 1,
+            "home_goals": 0,
             "away_goals": 3,
-            "probability": 0.06625948977602224
+            "probability": 0.09184954028070239
+          },
+          {
+            "home_goals": 1,
+            "away_goals": 1,
+            "probability": 0.08528008088944901
           }
         ],
         "model_diagnostics": {
           "rho": -0.058727272727272704,
-          "effective_matches": 20.557030754055134,
+          "effective_matches": 58.73437358301467,
           "raw_matches": 60
         }
       }
@@ -3967,18 +3966,18 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.12608420363856626,
-        "draw": 0.2278055238456467,
-        "away_win": 0.646110272515787,
+        "home_win": 0.09420487690075323,
+        "draw": 0.20488504703933727,
+        "away_win": 0.7009100760599095,
         "confidence_interval_width": 0.12,
         "expected_goals": {
-          "home": 1.046915753094171,
-          "away": 1.9979457448226856
+          "home": 0.8116257739862427,
+          "away": 2.356461139466134
         },
         "dixon_probabilities": {
-          "home_win": 0.06699459744420681,
-          "draw": 0.22481173533384083,
-          "away_win": 0.7081936672219524
+          "home_win": 0.0009859385154746226,
+          "draw": 0.17735308137810846,
+          "away_win": 0.8216609801064169
         },
         "economic_probabilities": {
           "home_win": 0.1743762798,
@@ -3996,7 +3995,7 @@
         },
         "model_diagnostics": {
           "rho": -0.058727272727272704,
-          "effective_matches": 20.557030754055134,
+          "effective_matches": 58.73437358301467,
           "raw_matches": 60
         },
         "key_factors": [
@@ -4062,7 +4061,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 53,
+        "calibration_version": 52,
         "recommended_label": "away_win",
         "explanation": "Jordan vs Argentina: baseline model favors away_win; butterfly cues: Argentina carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
