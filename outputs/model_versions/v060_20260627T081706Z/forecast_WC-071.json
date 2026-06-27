@@ -3753,7 +3753,7 @@
           }
         ],
         "calibration": {
-          "version": 61,
+          "version": 60,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3802,7 +3802,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
@@ -4230,7 +4229,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 61,
+        "calibration_version": 60,
         "recommended_label": "away_win",
         "explanation": "Panama vs England: baseline model favors away_win; butterfly cues: England carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }

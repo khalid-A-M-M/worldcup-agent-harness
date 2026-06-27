@@ -1,20 +1,20 @@
 {
   "match": {
-    "match_id": "WC-071",
-    "home_team": "Panama",
-    "away_team": "England",
-    "kickoff_utc": "2026-06-27T21:00:00+00:00",
-    "group": "Group L",
-    "ground": "New York/New Jersey (East Rutherford)",
+    "match_id": "WC-059",
+    "home_team": "Algeria",
+    "away_team": "Austria",
+    "kickoff_utc": "2026-06-28T02:00:00+00:00",
+    "group": "Group J",
+    "ground": "Kansas City",
     "round": "Matchday 17",
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 66 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
+    "data_collection: ok - Loaded 66 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
     "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.060.",
-    "team_intelligence: ok - Computed tournament form and prior-strength factors for Panama and England.",
-    "butterfly_factors: ok - Scored 1 high-impact contextual cues.",
-    "economic_world: ok - Computed long-run country-strength layer: Panama 51.9 vs England 84.9.",
+    "team_intelligence: ok - Computed tournament form and prior-strength factors for Algeria and Austria.",
+    "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
+    "economic_world: ok - Computed long-run country-strength layer: Algeria 63.2 vs Austria 67.5.",
     "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
     "synthesizer: ok - Final forecast: away_win.",
     "self_correction: pending - Actual result is not available yet; calibration update skipped."
@@ -22,8 +22,10 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 66 historical matches, 47 team priors, 48 economic-world profiles, and 1 live event cues.",
-      "warnings": [],
+      "summary": "Loaded 66 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+      "warnings": [
+        "No butterfly events found for this match."
+      ],
       "payload": {
         "historical_results": [
           {
@@ -561,17 +563,7 @@
           "min_weight": 0.9531337870775047,
           "max_weight": 0.997004495503373
         },
-        "butterfly_events": [
-          {
-            "match_id": "WC-071",
-            "event_time_utc": "2026-06-23T10:00:00Z",
-            "event_type": "favorite_pressure",
-            "description": "England carries heavy favorite pressure in a decisive group fixture.",
-            "impact": "medium",
-            "confidence": "medium",
-            "benefits": "against_away"
-          }
-        ],
+        "butterfly_events": [],
         "team_priors": {
           "France": [
             1.18,
@@ -3753,7 +3745,7 @@
           }
         ],
         "calibration": {
-          "version": 61,
+          "version": 60,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3818,7 +3810,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3830,39 +3821,39 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.2148554808094999,
-          "draw": 0.2654545648767886,
-          "away_win": 0.5196899543137116
+          "home_win": 0.2959326568644865,
+          "draw": 0.24964027397560676,
+          "away_win": 0.4544270691599068
         },
         "expected_goals": {
-          "home": 0.9371294200272104,
-          "away": 1.5919783866156434
+          "home": 1.3417286274046847,
+          "away": 1.7066572650678529
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.12611268862116579
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 1,
-            "probability": 0.11977540362132073
-          },
-          {
-            "home_goals": 0,
-            "away_goals": 2,
-            "probability": 0.10103830036577877
+            "probability": 0.11516786471745881
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.09468596382231735
+            "probability": 0.0926973419330488
           },
           {
             "home_goals": 0,
-            "away_goals": 0,
-            "probability": 0.08689251658190239
+            "away_goals": 1,
+            "probability": 0.07442537249822188
+          },
+          {
+            "home_goals": 2,
+            "away_goals": 1,
+            "probability": 0.07287618896987347
+          },
+          {
+            "home_goals": 0,
+            "away_goals": 2,
+            "probability": 0.06908799591788835
           }
         ],
         "model_diagnostics": {
@@ -3874,254 +3865,222 @@
     },
     "team_intelligence": {
       "status": "ok",
-      "summary": "Computed tournament form and prior-strength factors for Panama and England.",
-      "warnings": [],
+      "summary": "Computed tournament form and prior-strength factors for Algeria and Austria.",
+      "warnings": [
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
       "payload": {
         "home_profile": {
-          "team": "Panama",
-          "matches": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goals_for": 0,
-          "goals_against": 2,
-          "goal_difference": -2,
-          "points": 0,
-          "points_per_match": 0.0,
-          "seed_rank": 48
-        },
-        "away_profile": {
-          "team": "England",
+          "team": "Algeria",
           "matches": 2,
           "wins": 1,
-          "draws": 1,
-          "losses": 0,
-          "goals_for": 4,
-          "goals_against": 2,
-          "goal_difference": 2,
-          "points": 4,
-          "points_per_match": 2.0,
-          "seed_rank": 4
+          "draws": 0,
+          "losses": 1,
+          "goals_for": 2,
+          "goals_against": 4,
+          "goal_difference": -2,
+          "points": 3,
+          "points_per_match": 1.5,
+          "seed_rank": 35
+        },
+        "away_profile": {
+          "team": "Austria",
+          "matches": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "goals_for": 3,
+          "goals_against": 3,
+          "goal_difference": 0,
+          "points": 3,
+          "points_per_match": 1.5,
+          "seed_rank": 22
         },
         "home_advanced_profile": {
-          "team": "Panama",
-          "matches": 2,
-          "shots": 19.0,
-          "shots_on_target": 5.0,
-          "possession": 104.0,
+          "team": "Algeria",
+          "matches": 0,
+          "shots": 0.0,
+          "shots_on_target": 0.0,
+          "possession": 0.0,
           "xg": 0.0,
           "big_chances": 0.0,
-          "corners": 9.0,
+          "corners": 0.0,
+          "yellow_cards": 0.0,
+          "red_cards": 0.0,
+          "passes_into_final_third": 0.0,
+          "fouls": 0.0,
+          "offsides": 0.0,
+          "saves": 0.0,
+          "accurate_passes": 0.0,
+          "total_passes": 0.0,
+          "pass_pct": 0.0,
+          "accurate_crosses": 0.0,
+          "total_crosses": 0.0,
+          "blocked_shots": 0.0,
+          "total_tackles": 0.0,
+          "interceptions": 0.0,
+          "clearances": 0.0,
+          "match_momentum": 0.0,
+          "momentum_last_15": 0.0,
+          "dominance_index": 0.0,
+          "attacking_pressure_index": 0.0
+        },
+        "away_advanced_profile": {
+          "team": "Austria",
+          "matches": 2,
+          "shots": 17.0,
+          "shots_on_target": 5.0,
+          "possession": 109.6,
+          "xg": 0.0,
+          "big_chances": 0.0,
+          "corners": 7.0,
           "yellow_cards": 3.0,
           "red_cards": 0.0,
           "passes_into_final_third": 0.0,
-          "fouls": 30.0,
-          "offsides": 2.0,
-          "saves": 3.0,
-          "accurate_passes": 780.0,
-          "total_passes": 935.0,
+          "fouls": 25.0,
+          "offsides": 3.0,
+          "saves": 5.0,
+          "accurate_passes": 888.0,
+          "total_passes": 1048.0,
           "pass_pct": 1.7000000000000002,
-          "accurate_crosses": 10.0,
-          "total_crosses": 52.0,
-          "blocked_shots": 4.0,
-          "total_tackles": 39.0,
-          "interceptions": 10.0,
-          "clearances": 46.0,
+          "accurate_crosses": 6.0,
+          "total_crosses": 34.0,
+          "blocked_shots": 1.0,
+          "total_tackles": 29.0,
+          "interceptions": 24.0,
+          "clearances": 39.0,
           "match_momentum": 0.0,
           "momentum_last_15": 0.0,
-          "dominance_index": 105.82,
-          "attacking_pressure_index": 110.52,
-          "shots_per_match": 9.5,
+          "dominance_index": 95.71000000000001,
+          "attacking_pressure_index": 88.22,
+          "shots_per_match": 8.5,
           "shots_on_target_per_match": 2.5,
-          "possession_per_match": 52.0,
+          "possession_per_match": 54.8,
           "xg_per_match": 0.0,
           "big_chances_per_match": 0.0,
-          "corners_per_match": 4.5,
+          "corners_per_match": 3.5,
           "yellow_cards_per_match": 1.5,
           "red_cards_per_match": 0.0,
           "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 15.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 1.5,
-          "accurate_passes_per_match": 390.0,
-          "total_passes_per_match": 467.5,
+          "fouls_per_match": 12.5,
+          "offsides_per_match": 1.5,
+          "saves_per_match": 2.5,
+          "accurate_passes_per_match": 444.0,
+          "total_passes_per_match": 524.0,
           "pass_pct_per_match": 0.8500000000000001,
-          "accurate_crosses_per_match": 5.0,
-          "total_crosses_per_match": 26.0,
-          "blocked_shots_per_match": 2.0,
-          "total_tackles_per_match": 19.5,
-          "interceptions_per_match": 5.0,
-          "clearances_per_match": 23.0,
+          "accurate_crosses_per_match": 3.0,
+          "total_crosses_per_match": 17.0,
+          "blocked_shots_per_match": 0.5,
+          "total_tackles_per_match": 14.5,
+          "interceptions_per_match": 12.0,
+          "clearances_per_match": 19.5,
           "match_momentum_per_match": 0.0,
           "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 52.91,
-          "attacking_pressure_index_per_match": 55.26
+          "dominance_index_per_match": 47.855000000000004,
+          "attacking_pressure_index_per_match": 44.11
         },
-        "away_advanced_profile": {
-          "team": "England",
-          "matches": 2,
-          "shots": 41.0,
-          "shots_on_target": 14.0,
-          "possession": 130.60000000000002,
-          "xg": 0.0,
-          "big_chances": 0.0,
-          "corners": 17.0,
-          "yellow_cards": 1.0,
-          "red_cards": 0.0,
-          "passes_into_final_third": 0.0,
-          "fouls": 24.0,
-          "offsides": 2.0,
-          "saves": 3.0,
-          "accurate_passes": 992.0,
-          "total_passes": 1107.0,
-          "pass_pct": 1.8,
-          "accurate_crosses": 13.0,
-          "total_crosses": 43.0,
-          "blocked_shots": 11.0,
-          "total_tackles": 23.0,
-          "interceptions": 8.0,
-          "clearances": 22.0,
-          "match_momentum": 0.0,
-          "momentum_last_15": 0.0,
-          "dominance_index": 138.89000000000001,
-          "attacking_pressure_index": 149.92000000000002,
-          "shots_per_match": 20.5,
-          "shots_on_target_per_match": 7.0,
-          "possession_per_match": 65.30000000000001,
-          "xg_per_match": 0.0,
-          "big_chances_per_match": 0.0,
-          "corners_per_match": 8.5,
-          "yellow_cards_per_match": 0.5,
-          "red_cards_per_match": 0.0,
-          "passes_into_final_third_per_match": 0.0,
-          "fouls_per_match": 12.0,
-          "offsides_per_match": 1.0,
-          "saves_per_match": 1.5,
-          "accurate_passes_per_match": 496.0,
-          "total_passes_per_match": 553.5,
-          "pass_pct_per_match": 0.9,
-          "accurate_crosses_per_match": 6.5,
-          "total_crosses_per_match": 21.5,
-          "blocked_shots_per_match": 5.5,
-          "total_tackles_per_match": 11.5,
-          "interceptions_per_match": 4.0,
-          "clearances_per_match": 11.0,
-          "match_momentum_per_match": 0.0,
-          "momentum_last_15_per_match": 0.0,
-          "dominance_index_per_match": 69.44500000000001,
-          "attacking_pressure_index_per_match": 74.96000000000001
-        },
-        "home_factor_score": -0.16741699999999998,
-        "away_factor_score": 0.27944550000000007,
-        "probability_adjustment": -0.16,
+        "home_factor_score": -0.0175,
+        "away_factor_score": 0.010030499999999998,
+        "probability_adjustment": -0.0275305,
         "factors": [
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -2.",
+            "value": "3 نقطة من 2 مباراة، فارق أهداف -2.",
             "impact": -0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 48.",
-            "impact": 0.014
+            "value": "Seed rank داخل النموذج: 35.",
+            "impact": 0.04
+          },
+          {
+            "side": "home",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 4 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 2.",
-            "impact": 0.055
+            "value": "3 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 4.",
-            "impact": 0.07
-          },
-          {
-            "side": "home",
-            "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 52.0%، ضغط هجومي 55.3.",
-            "impact": -0.056
+            "value": "Seed rank داخل النموذج: 22.",
+            "impact": 0.066
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 65.3%، ضغط هجومي 75.0.",
-            "impact": 0.084
+            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 54.8%، ضغط هجومي 44.1.",
+            "impact": -0.078
           }
         ]
       }
     },
     "butterfly_factors": {
       "status": "ok",
-      "summary": "Scored 1 high-impact contextual cues.",
+      "summary": "Scored 0 high-impact contextual cues.",
       "warnings": [],
       "payload": {
         "home_adjustment": 0.0,
-        "away_adjustment": -0.010288817836532606,
-        "events": [
-          {
-            "event_type": "favorite_pressure",
-            "description": "England carries heavy favorite pressure in a decisive group fixture.",
-            "hours_to_kickoff": 107.0,
-            "time_weight": 0.42,
-            "signed_effect": 0.0103,
-            "benefits": "against_away"
-          }
-        ]
+        "away_adjustment": 0.0,
+        "events": []
       }
     },
     "economic_world": {
       "status": "ok",
-      "summary": "Computed long-run country-strength layer: Panama 51.9 vs England 84.9.",
+      "summary": "Computed long-run country-strength layer: Algeria 63.2 vs Austria 67.5.",
       "warnings": [],
       "payload": {
         "home_profile": {
-          "team": "Panama",
+          "team": "Algeria",
           "found": true,
-          "notes": "Climate familiarity",
-          "gdp_per_capita_index": 55.0,
-          "population_index": 28.0,
-          "football_market_index": 48.0,
-          "academy_pipeline_index": 52.0,
-          "climate_fit_index": 88.0,
-          "league_export_index": 48.0,
+          "notes": "Strong diaspora and football culture.",
+          "gdp_per_capita_index": 46.0,
+          "population_index": 56.0,
+          "football_market_index": 64.0,
+          "academy_pipeline_index": 68.0,
+          "climate_fit_index": 86.0,
+          "league_export_index": 64.0,
           "home_region_fit_index": 76.0
         },
         "away_profile": {
-          "team": "England",
+          "team": "Austria",
           "found": true,
-          "notes": "Very high market and league power.",
-          "gdp_per_capita_index": 84.0,
-          "population_index": 63.0,
-          "football_market_index": 96.0,
-          "academy_pipeline_index": 88.0,
-          "climate_fit_index": 72.0,
-          "league_export_index": 96.0,
-          "home_region_fit_index": 68.0
+          "notes": "Strong Central European football infrastructure.",
+          "gdp_per_capita_index": 86.0,
+          "population_index": 34.0,
+          "football_market_index": 68.0,
+          "academy_pipeline_index": 72.0,
+          "climate_fit_index": 66.0,
+          "league_export_index": 72.0,
+          "home_region_fit_index": 64.0
         },
-        "home_score": 51.92,
-        "away_score": 84.87,
-        "probability_adjustment": -0.03295,
+        "home_score": 63.24,
+        "away_score": 67.5,
+        "probability_adjustment": -0.004259999999999998,
         "adjusted_probabilities": {
-          "home_win": 0.13287235499999997,
-          "draw": 0.22069000000000003,
-          "away_win": 0.646437645
+          "home_win": 0.3328353432,
+          "draw": 0.272332,
+          "away_win": 0.39483265679999996
         },
         "factors": [
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 51.9/100: دخل 55، سكان 28، سوق كرة 48، أكاديميات 52، مناخ 88.",
-            "impact": 0.002
+            "value": "قوة بنيوية 63.2/100: دخل 46، سكان 56، سوق كرة 64، أكاديميات 68، مناخ 86.",
+            "impact": 0.013
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 84.9/100: دخل 84، سكان 63، سوق كرة 96، أكاديميات 88، مناخ 72.",
-            "impact": 0.035
+            "value": "قوة بنيوية 67.5/100: دخل 86، سكان 34، سوق كرة 68، أكاديميات 72، مناخ 66.",
+            "impact": 0.018
           }
         ]
       }
@@ -4129,11 +4088,14 @@
     "critic_auditor": {
       "status": "reviewed",
       "summary": "Devil's Advocate found 0 objections.",
-      "warnings": [],
+      "warnings": [
+        "No butterfly events found for this match.",
+        "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+      ],
       "payload": {
         "favorite": "away_win",
         "objections": [],
-        "confidence_penalty": 0.0
+        "confidence_penalty": 0.06
       }
     },
     "synthesizer": {
@@ -4141,23 +4103,23 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.1178787799008922,
-        "draw": 0.242140931546325,
-        "away_win": 0.6399802885527829,
-        "confidence_interval_width": 0.12,
+        "home_win": 0.3052110737589535,
+        "draw": 0.26143997150829124,
+        "away_win": 0.43334895473275525,
+        "confidence_interval_width": 0.201,
         "expected_goals": {
-          "home": 0.9371294200272104,
-          "away": 1.5919783866156434
+          "home": 1.3417286274046847,
+          "away": 1.7066572650678529
         },
         "dixon_probabilities": {
-          "home_win": 0.0948554808094999,
-          "draw": 0.2654545648767886,
-          "away_win": 0.6396899543137116
+          "home_win": 0.2752847818644865,
+          "draw": 0.24964027397560676,
+          "away_win": 0.4750749441599068
         },
         "economic_probabilities": {
-          "home_win": 0.13287235499999997,
-          "draw": 0.22069000000000003,
-          "away_win": 0.646437645
+          "home_win": 0.3328353432,
+          "draw": 0.272332,
+          "away_win": 0.39483265679999996
         },
         "kliment_weight": 0.52,
         "dixon_weight": 0.48,
@@ -4177,62 +4139,58 @@
           {
             "side": "home",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 51.9/100: دخل 55، سكان 28، سوق كرة 48، أكاديميات 52، مناخ 88.",
-            "impact": 0.002
+            "value": "قوة بنيوية 63.2/100: دخل 46، سكان 56، سوق كرة 64، أكاديميات 68، مناخ 86.",
+            "impact": 0.013
           },
           {
             "side": "away",
             "label": "نموذج العالم الاقتصادي",
-            "value": "قوة بنيوية 84.9/100: دخل 84، سكان 63، سوق كرة 96، أكاديميات 88، مناخ 72.",
-            "impact": 0.035
+            "value": "قوة بنيوية 67.5/100: دخل 86، سكان 34، سوق كرة 68، أكاديميات 72، مناخ 66.",
+            "impact": 0.018
           },
           {
             "side": "home",
             "label": "أداء البطولة حتى الآن",
-            "value": "0 نقطة من 2 مباراة، فارق أهداف -2.",
+            "value": "3 نقطة من 2 مباراة، فارق أهداف -2.",
             "impact": -0.055
           },
           {
             "side": "home",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 48.",
-            "impact": 0.014
+            "value": "Seed rank داخل النموذج: 35.",
+            "impact": 0.04
+          },
+          {
+            "side": "home",
+            "label": "إنذار دفاعي",
+            "value": "استقبل 4 أهداف في 2 مباراة.",
+            "impact": -0.045
           },
           {
             "side": "away",
             "label": "أداء البطولة حتى الآن",
-            "value": "4 نقطة من 2 مباراة، فارق أهداف 2.",
-            "impact": 0.055
+            "value": "3 نقطة من 2 مباراة، فارق أهداف 0.",
+            "impact": 0.0
           },
           {
             "side": "away",
             "label": "قوة المنتخب قبل المباراة",
-            "value": "Seed rank داخل النموذج: 4.",
-            "impact": 0.07
-          },
-          {
-            "side": "home",
-            "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 52.0%، ضغط هجومي 55.3.",
-            "impact": -0.056
+            "value": "Seed rank داخل النموذج: 22.",
+            "impact": 0.066
           },
           {
             "side": "away",
             "label": "إحصاءات أداء متقدمة",
-            "value": "xG 0.00، تسديدات على المرمى 7.0، استحواذ 65.3%، ضغط هجومي 75.0.",
-            "impact": 0.084
-          },
-          {
-            "side": "home",
-            "label": "أثر فراشة",
-            "value": "England carries heavy favorite pressure in a decisive group fixture.",
-            "impact": 0.0103
+            "value": "xG 0.00، تسديدات على المرمى 2.5، استحواذ 54.8%، ضغط هجومي 44.1.",
+            "impact": -0.078
           }
         ],
-        "data_quality_warnings": [],
-        "calibration_version": 61,
+        "data_quality_warnings": [
+          "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+        ],
+        "calibration_version": 60,
         "recommended_label": "away_win",
-        "explanation": "Panama vs England: baseline model favors away_win; butterfly cues: England carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
+        "explanation": "Algeria vs Austria: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
     },
     "self_correction": {
