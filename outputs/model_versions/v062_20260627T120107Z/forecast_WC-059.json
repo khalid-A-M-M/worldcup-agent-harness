@@ -3745,7 +3745,7 @@
           }
         ],
         "calibration": {
-          "version": 63,
+          "version": 62,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3794,7 +3794,6 @@
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
             "Slightly reinforced team-intelligence layer after acceptable accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
@@ -4191,7 +4190,7 @@
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 63,
+        "calibration_version": 62,
         "recommended_label": "away_win",
         "explanation": "Algeria vs Austria: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
