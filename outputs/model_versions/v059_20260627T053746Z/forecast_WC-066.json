@@ -10,8 +10,8 @@
     "stage": "group"
   },
   "audit_log": [
-    "data_collection: ok - Loaded 66 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
-    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.060.",
+    "data_collection: ok - Loaded 62 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+    "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.057.",
     "team_intelligence: ok - Computed tournament form and prior-strength factors for DR Congo and Uzbekistan.",
     "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
     "economic_world: ok - Computed long-run country-strength layer: DR Congo 56.0 vs Uzbekistan 50.6.",
@@ -22,7 +22,7 @@
   "agents": {
     "data_collection": {
       "status": "ok",
-      "summary": "Loaded 66 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
+      "summary": "Loaded 62 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
       "warnings": [
         "No butterfly events found for this match."
       ],
@@ -349,22 +349,6 @@
             "match_type": "wc_2026"
           },
           {
-            "home_team": "Egypt",
-            "away_team": "Iran",
-            "home_goals": 1,
-            "away_goals": 1,
-            "match_date": "2026-06-26",
-            "match_type": "wc_2026"
-          },
-          {
-            "home_team": "New Zealand",
-            "away_team": "Belgium",
-            "home_goals": 1,
-            "away_goals": 5,
-            "match_date": "2026-06-26",
-            "match_type": "wc_2026"
-          },
-          {
             "home_team": "Spain",
             "away_team": "Cape Verde",
             "home_goals": 0,
@@ -394,22 +378,6 @@
             "home_goals": 2,
             "away_goals": 2,
             "match_date": "2026-06-21",
-            "match_type": "wc_2026"
-          },
-          {
-            "home_team": "Cape Verde",
-            "away_team": "Saudi Arabia",
-            "home_goals": 0,
-            "away_goals": 0,
-            "match_date": "2026-06-26",
-            "match_type": "wc_2026"
-          },
-          {
-            "home_team": "Uruguay",
-            "away_team": "Spain",
-            "home_goals": 0,
-            "away_goals": 1,
-            "match_date": "2026-06-26",
             "match_type": "wc_2026"
           },
           {
@@ -558,8 +526,8 @@
           }
         ],
         "historical_results_weighted_summary": {
-          "matches": 66,
-          "effective_matches": 64.54046147586041,
+          "matches": 62,
+          "effective_matches": 60.55244349384692,
           "min_weight": 0.9531337870775047,
           "max_weight": 0.997004495503373
         },
@@ -3745,7 +3713,7 @@
           }
         ],
         "calibration": {
-          "version": 60,
+          "version": 59,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3809,7 +3777,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3817,49 +3784,49 @@
     },
     "specialist_analysis": {
       "status": "ok",
-      "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.060.",
+      "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.057.",
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.52404609332462,
-          "draw": 0.24667446448075006,
-          "away_win": 0.22927944219463017
+          "home_win": 0.5242797874921847,
+          "draw": 0.24482385646119842,
+          "away_win": 0.230896356046617
         },
         "expected_goals": {
-          "home": 1.776659315315245,
-          "away": 1.1062182819201714
+          "home": 1.7882623215511424,
+          "away": 1.1185849848483571
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.11664117217214091
+            "probability": 0.11551249437501285
           },
           {
             "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.09773400257152111
+            "probability": 0.09775079753468678
           },
           {
             "home_goals": 1,
             "away_goals": 0,
-            "probability": 0.092834730238358
+            "probability": 0.09154739783268236
           },
           {
             "home_goals": 2,
             "away_goals": 0,
-            "probability": 0.08834965410431893
+            "probability": 0.08738790423504438
           },
           {
-            "home_goals": 0,
-            "away_goals": 0,
-            "probability": 0.0626003821192833
+            "home_goals": 1,
+            "away_goals": 2,
+            "probability": 0.0611445944263974
           }
         ],
         "model_diagnostics": {
-          "rho": -0.060181818181818184,
-          "effective_matches": 64.54046147586041,
-          "raw_matches": 66
+          "rho": -0.056598240469208215,
+          "effective_matches": 60.55244349384692,
+          "raw_matches": 62
         }
       }
     },
@@ -4131,18 +4098,18 @@
       "summary": "Final forecast: home_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.5192736043798175,
-        "draw": 0.25896806295076,
-        "away_win": 0.2217583326694225,
+        "home_win": 0.5193857775802486,
+        "draw": 0.25807977110137525,
+        "away_win": 0.22253445131837618,
         "confidence_interval_width": 0.201,
         "expected_goals": {
-          "home": 1.776659315315245,
-          "away": 1.1062182819201714
+          "home": 1.7882623215511424,
+          "away": 1.1185849848483571
         },
         "dixon_probabilities": {
-          "home_win": 0.6440460933246199,
-          "draw": 0.24667446448075,
-          "away_win": 0.10927944219463015
+          "home_win": 0.6442797874921846,
+          "draw": 0.24482385646119836,
+          "away_win": 0.11089635604661699
         },
         "economic_probabilities": {
           "home_win": 0.4040989992,
@@ -4159,9 +4126,9 @@
           "tournament_match_sample": 2.0
         },
         "model_diagnostics": {
-          "rho": -0.060181818181818184,
-          "effective_matches": 64.54046147586041,
-          "raw_matches": 66
+          "rho": -0.056598240469208215,
+          "effective_matches": 60.55244349384692,
+          "raw_matches": 62
         },
         "key_factors": [
           {
@@ -4220,7 +4187,7 @@
           }
         ],
         "data_quality_warnings": [],
-        "calibration_version": 60,
+        "calibration_version": 59,
         "recommended_label": "home_win",
         "explanation": "DR Congo vs Uzbekistan: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
       }
