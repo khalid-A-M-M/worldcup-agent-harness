@@ -525,9 +525,9 @@
         ],
         "historical_results_weighted_summary": {
           "matches": 62,
-          "effective_matches": 60.55244349384692,
-          "min_weight": 0.9531337870775047,
-          "max_weight": 0.997004495503373
+          "effective_matches": 60.73437358301467,
+          "min_weight": 0.9559974818331,
+          "max_weight": 1.0
         },
         "butterfly_events": [
           {
@@ -3721,7 +3721,7 @@
           }
         ],
         "calibration": {
-          "version": 59,
+          "version": 58,
           "team_adjustment_weight": 0.75,
           "butterfly_adjustment_weight": 0.7,
           "advanced_stats_weight": 1.0,
@@ -3784,7 +3784,6 @@
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy.",
-            "Reduced adjustment weights after weak completed-match accuracy.",
             "Reduced adjustment weights after weak completed-match accuracy."
           ]
         }
@@ -3796,44 +3795,44 @@
       "warnings": [],
       "payload": {
         "baseline_probabilities": {
-          "home_win": 0.32466124165212873,
-          "draw": 0.2615828975259264,
-          "away_win": 0.4137558608219447
+          "home_win": 0.3245380902223901,
+          "draw": 0.2616153875856156,
+          "away_win": 0.413846522191994
         },
         "expected_goals": {
-          "home": 1.3305430145807715,
-          "away": 1.5291846297716565
+          "home": 1.3299498608978508,
+          "away": 1.5290470170432822
         },
         "top_scores": [
           {
             "home_goals": 1,
             "away_goals": 1,
-            "probability": 0.12315541482072215
+            "probability": 0.12317940950689654
           },
           {
             "home_goals": 1,
             "away_goals": 2,
-            "probability": 0.08911966734554155
+            "probability": 0.08912900923629825
           },
           {
             "home_goals": 0,
             "away_goals": 1,
-            "probability": 0.08100513756113925
+            "probability": 0.08105999790590912
           },
           {
             "home_goals": 2,
             "away_goals": 1,
-            "probability": 0.07754299156543239
+            "probability": 0.07752352420463389
           },
           {
             "home_goals": 1,
             "away_goals": 0,
-            "probability": 0.06962558928136328
+            "probability": 0.06964601590871919
           }
         ],
         "model_diagnostics": {
           "rho": -0.056598240469208215,
-          "effective_matches": 60.55244349384692,
+          "effective_matches": 60.73437358301467,
           "raw_matches": 62
         }
       }
@@ -4080,18 +4079,18 @@
       "summary": "Final forecast: away_win.",
       "warnings": [],
       "payload": {
-        "home_win": 0.3042039226047674,
-        "draw": 0.26281829911614785,
-        "away_win": 0.43297777827908474,
+        "home_win": 0.3041444428023774,
+        "draw": 0.262833991198116,
+        "away_win": 0.43302156599950653,
         "confidence_interval_width": 0.201,
         "expected_goals": {
-          "home": 1.3305430145807715,
-          "away": 1.5291846297716565
+          "home": 1.3299498608978508,
+          "away": 1.5290470170432822
         },
         "dixon_probabilities": {
-          "home_win": 0.2977156166521288,
-          "draw": 0.26158289752592645,
-          "away_win": 0.4407014858219448
+          "home_win": 0.2975924652223902,
+          "draw": 0.26161538758561564,
+          "away_win": 0.4407921471919941
         },
         "economic_probabilities": {
           "home_win": 0.3017757582,
@@ -4109,7 +4108,7 @@
         },
         "model_diagnostics": {
           "rho": -0.056598240469208215,
-          "effective_matches": 60.55244349384692,
+          "effective_matches": 60.73437358301467,
           "raw_matches": 62
         },
         "key_factors": [
@@ -4165,7 +4164,7 @@
         "data_quality_warnings": [
           "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
         ],
-        "calibration_version": 59,
+        "calibration_version": 58,
         "recommended_label": "away_win",
         "explanation": "Colombia vs Portugal: baseline model favors away_win; butterfly cues: Portugal carries heavy favorite pressure in a decisive group fixture.; critic: no blocking objection."
       }
