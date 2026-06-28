@@ -1232,11 +1232,33 @@
       const learning = prediction.learning_summary?.summary || {};
       const lessons = prediction.learning_summary?.lessons || [];
       const champion = visual(prediction.champion);
+      const scenarioCards = (prediction.scenarios || []).map(scenario => {
+        const champ = visual(scenario.champion);
+        const final = scenario.final || {};
+        const finalHome = visual(final.home_team || "");
+        const finalAway = visual(final.away_team || "");
+        return `
+          <article class="group-card" style="border-color:rgba(214,168,73,.34);background:linear-gradient(135deg,rgba(214,168,73,.12),rgba(8,24,24,.78))">
+            <h2>${scenario.arabic_name}</h2>
+            <p class="note">${scenario.description}</p>
+            <div class="accuracy-meter">
+              <div class="accuracy-metric"><b>${pct(scenario.estimated_accuracy || 0)}</b><span>دقة متوقعة للمسار</span></div>
+              <div class="accuracy-metric"><b>${scenario.confidence_grade || "—"}</b><span>درجة الثقة</span></div>
+              <div class="accuracy-metric"><b>${scenario.high_risk_matches || 0}</b><span>مباريات عالية الخطر</span></div>
+            </div>
+            <div class="pairing" style="margin-top:12px">
+              <strong style="color:${finalHome.primary_color}">${finalHome.arabic_name || "—"}</strong>
+              <span class="versus" style="width:44px;height:44px">نهائي</span>
+              <strong style="text-align:left;color:${finalAway.primary_color}">${finalAway.arabic_name || "—"}</strong>
+            </div>
+            <p class="note">البطل في هذا المسار: <b style="color:${champ.primary_color}">${champ.arabic_name}</b> · متوسط هامش الثقة ${pct(scenario.average_confidence_margin || 0)} · متوسط خطر الترجيح ${pct(scenario.average_penalty_probability || 0)}</p>
+          </article>`;
+      }).join("");
       const hero = `
         <article class="accuracy-hero">
           <div class="accuracy-summary">
-            <h2>البطل المتوقع: <span style="color:${champion.primary_color}">${champion.arabic_name}</span></h2>
-            <p class="note">هذا المسار لا يسمح بالتعادل: كل مباراة تتحول إلى فائز وخاسر، مع تقدير مستقل لاحتمال الحسم بركلات الترجيح عند تقارب الفريقين.</p>
+            <h2>البطل الرسمي في المسار ب: <span style="color:${champion.primary_color}">${champion.arabic_name}</span></h2>
+            <p class="note">اللوحة الآن تعرض ثلاثة مسارات احتمالية كاملة من دور 32 إلى النهائي. كل مسار يتعلم من أخطاء المجموعات، ويضيف أثر اللاعبين كأفراد، أرقام المنتخب في البطولة، وزمن الأهداف أو بديل الزخم المتأخر عندما لا تصل دقائق الأهداف بعد.</p>
             <div class="accuracy-meter">
               <div class="accuracy-metric"><b>${pct(learning.accuracy || 0)}</b><span>دقة المجموعات التي تعلم منها</span></div>
               <div class="accuracy-metric"><b>${learning.missed || 0}</b><span>أخطاء تم تحليلها</span></div>
@@ -1244,7 +1266,7 @@
             </div>
             <p class="note">${lessons.join(" · ")}</p>
           </div>
-        </article>`;
+        </article>${scenarioCards}`;
       const rounds = prediction.rounds.map(round => `
         <article class="group-card">
           <h2>${round.round}</h2>
@@ -1263,12 +1285,14 @@
                 <div style="text-align:left"><strong style="color:${away.primary_color}">${away.arabic_name}</strong><div class="team-original">${awayPct}</div></div>
               </div>
               <p class="note">الفائز المتوقع: <b style="color:${winner.primary_color}">${winner.arabic_name}</b> · ${method} · احتمال الترجيح ${penaltyPct} · هامش الثقة ${pct(match.confidence_margin || 0)}</p>
+              <p class="note">أثر اللاعبين ${Number(match.player_impact || 0).toFixed(3)} · أرقام المنتخب ${Number(match.team_stat_impact || 0).toFixed(3)} · زمن الأهداف/الزخم ${Number(match.goal_timing_impact || 0).toFixed(3)}</p>
             `;
           }).join("")}
         </article>
       `).join("");
       return hero + rounds;
     }
+
 
     function switchView(view) {
       currentView = view;

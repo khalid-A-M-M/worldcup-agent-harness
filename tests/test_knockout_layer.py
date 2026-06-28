@@ -31,6 +31,22 @@ class KnockoutLayerTest(unittest.TestCase):
         self.assertEqual(sum(len(round_["matches"]) for round_ in data["rounds"]), 31)
         self.assertTrue(data["champion"])
 
+    def test_knockout_scenarios_are_generated_if_present(self) -> None:
+        path = ROOT / "outputs" / "knockout_bracket_prediction.json"
+        if not path.exists():
+            self.skipTest("knockout prediction has not been generated")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        scenarios = data.get("scenarios", [])
+        self.assertEqual([item["scenario_id"] for item in scenarios], ["A", "B", "C"])
+        for scenario in scenarios:
+            self.assertTrue(scenario["champion"])
+            self.assertGreater(scenario["estimated_accuracy"], 0.0)
+            self.assertEqual(sum(len(round_["matches"]) for round_ in scenario["rounds"]), 31)
+            sample = scenario["rounds"][0]["matches"][0]
+            self.assertIn("player_impact", sample)
+            self.assertIn("team_stat_impact", sample)
+            self.assertIn("goal_timing_impact", sample)
+
 
 if __name__ == "__main__":
     unittest.main()

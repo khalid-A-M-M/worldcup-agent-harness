@@ -24,10 +24,75 @@ OUTPUTS = ROOT / "outputs"
 
 ROUND_NAMES = ["Round of 32", "Round of 16", "Quarterfinals", "Semifinals", "Final"]
 
+SCENARIOS = [
+    {
+        "id": "A",
+        "arabic_name": "المسار أ: العقل البارد",
+        "description": "يعطي وزناً أعلى للمرشح الأقوى، يقلل الفوضى، ولا يقلب مباراة إلا عند وجود هامش واضح.",
+        "favorite_shrink_delta": -0.018,
+        "upset_floor_delta": -0.025,
+        "penalty_multiplier": 0.88,
+        "player_weight": 0.55,
+        "team_stats_weight": 0.70,
+        "goal_timing_weight": 0.55,
+        "chaos_weight": 0.35,
+    },
+    {
+        "id": "B",
+        "arabic_name": "المسار ب: النموذج المتوازن",
+        "description": "النسخة الرسمية الحالية: تمزج Agent Harness مع النموذج الاقتصادي وإحصاءات البطولة والتعلم من الأخطاء.",
+        "favorite_shrink_delta": 0.0,
+        "upset_floor_delta": 0.0,
+        "penalty_multiplier": 1.0,
+        "player_weight": 0.75,
+        "team_stats_weight": 0.85,
+        "goal_timing_weight": 0.75,
+        "chaos_weight": 0.60,
+    },
+    {
+        "id": "C",
+        "arabic_name": "المسار ج: جنون الاحتمالات",
+        "description": "يعظم أثر الفراشة: ركلات الترجيح، اللاعب الحاسم، الزخم المتأخر، والمفاجآت القريبة.",
+        "favorite_shrink_delta": 0.035,
+        "upset_floor_delta": 0.045,
+        "penalty_multiplier": 1.24,
+        "player_weight": 1.05,
+        "team_stats_weight": 1.0,
+        "goal_timing_weight": 1.15,
+        "chaos_weight": 1.0,
+    },
+]
+
 
 def main() -> None:
     learning = _load_learning()
     fixtures = _read_csv(DATA / "knockout_fixtures.csv")
+    scenarios = [_project_scenario(fixtures, learning, scenario) for scenario in SCENARIOS]
+    official = next(item for item in scenarios if item["scenario_id"] == "B")
+    rounds = official["rounds"]
+    champion = official["champion"]
+    scenario_summaries = [_scenario_summary(item) for item in scenarios]
+    payload = {
+        "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + penalty shootout model. No draw is allowed in knockout outputs.",
+        "learning_summary": learning,
+        "champion": champion,
+        "rounds": rounds,
+        "scenarios": scenario_summaries,
+        "sources": [
+            "Local audited group-stage forecast ledger and accuracy_report.json",
+            "data/match_advanced_stats.csv from ESPN-derived open match statistics where available",
+            "data/player_performance_indicators.csv open-source-ready player-impact layer",
+            "data/goal_timing_events.csv optional goal-minute layer; falls back to late-momentum indicators when minutes are not available",
+            "Published Round-of-32 pairings from FIFA/beIN/Yallakora text supplied with this run",
+        ],
+    }
+    OUTPUTS.mkdir(exist_ok=True)
+    (OUTPUTS / "knockout_bracket_prediction.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Projected 3 knockout paths through final. Official champion={champion}")
+
+
+def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     rounds: list[dict[str, Any]] = []
     current = [_fixture_to_match(row) for row in fixtures]
     round_index = 0
@@ -37,8 +102,8 @@ def main() -> None:
         round_name = ROUND_NAMES[round_index]
         matches = []
         winners = []
-        for idx, fixture in enumerate(current, start=1):
-            prediction = _predict_knockout_match(fixture, round_name, learning)
+        for fixture in current:
+            prediction = _predict_knockout_match(fixture, round_name, learning, scenario)
             matches.append(prediction)
             winners.append(prediction["winner"])
         rounds.append({"round": round_name, "matches": matches})
@@ -56,29 +121,67 @@ def main() -> None:
                     "round": ROUND_NAMES[round_index + 1],
                     "stage": "knockout",
                     "bracket_slot": f"{ROUND_NAMES[round_index + 1]}-{i//2 + 1}",
-                    "source_note": "Projected by Agent Harness knockout simulator",
+                    "source_note": f"Projected by Agent Harness knockout simulator scenario {scenario['id']}",
                 }
             )
             next_match_number += 1
         round_index += 1
 
     champion = rounds[-1]["matches"][0]["winner"] if rounds and rounds[-1]["matches"] else "TBD"
-    payload = {
-        "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "method": "Agent Harness knockout simulator: group-error learning + Dixon/ economic blend + advanced stats + penalty shootout model. No draw is allowed in knockout outputs.",
-        "learning_summary": learning,
+    reliability = _scenario_reliability(rounds, learning, scenario)
+    return {
+        "scenario_id": scenario["id"],
+        "arabic_name": scenario["arabic_name"],
+        "description": scenario["description"],
+        "estimated_accuracy": reliability["estimated_accuracy"],
+        "confidence_grade": reliability["confidence_grade"],
+        "high_risk_matches": reliability["high_risk_matches"],
+        "average_confidence_margin": reliability["average_confidence_margin"],
+        "average_penalty_probability": reliability["average_penalty_probability"],
         "champion": champion,
+        "final": rounds[-1]["matches"][0] if rounds and rounds[-1]["matches"] else None,
         "rounds": rounds,
-        "sources": [
-            "Local audited group-stage forecast ledger and accuracy_report.json",
-            "data/match_advanced_stats.csv from ESPN-derived open match statistics where available",
-            "Published Round-of-32 pairings from FIFA/beIN/Yallakora text supplied with this run",
+    }
+
+
+def _scenario_summary(scenario: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "scenario_id": scenario["scenario_id"],
+        "arabic_name": scenario["arabic_name"],
+        "description": scenario["description"],
+        "estimated_accuracy": scenario["estimated_accuracy"],
+        "confidence_grade": scenario["confidence_grade"],
+        "high_risk_matches": scenario["high_risk_matches"],
+        "average_confidence_margin": scenario["average_confidence_margin"],
+        "average_penalty_probability": scenario["average_penalty_probability"],
+        "champion": scenario["champion"],
+        "final": _compact_match_for_scenario(scenario["final"]) if scenario.get("final") else None,
+        "rounds": [
+            {"round": round_item["round"], "matches": [_compact_match_for_scenario(match) for match in round_item["matches"]]}
+            for round_item in scenario["rounds"]
         ],
     }
-    OUTPUTS.mkdir(exist_ok=True)
-    (OUTPUTS / "knockout_bracket_prediction.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Projected knockout bracket through final. Champion={champion}")
 
+
+def _compact_match_for_scenario(match: dict[str, Any]) -> dict[str, Any]:
+    keys = [
+        "match_id",
+        "round",
+        "home_team",
+        "away_team",
+        "winner",
+        "winner_method",
+        "home_advance_probability",
+        "away_advance_probability",
+        "penalty_shootout",
+        "upset_risk",
+        "confidence_margin",
+        "player_impact",
+        "team_stat_impact",
+        "goal_timing_impact",
+        "scenario",
+    ]
+    return {key: match.get(key) for key in keys if key in match}
 
 def _load_learning() -> dict[str, Any]:
     path = OUTPUTS / "group_learning_report.json"
@@ -118,7 +221,7 @@ def _harness() -> AgentHarness:
     )
 
 
-def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: dict[str, Any]) -> dict[str, Any]:
+def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     state = _harness().run_match(
         MatchContext(
             match_id=fixture["match_id"],
@@ -138,13 +241,16 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
     final = state.get_payload("synthesizer")
     home, draw, away = float(final["home_win"]), float(final["draw"]), float(final["away_win"])
     adjustments = learning.get("learned_knockout_adjustments", {})
-    shrink = float(adjustments.get("favorite_shrink", 0.08))
-    upset_floor = float(adjustments.get("upset_floor", 0.14))
-    penalty_sensitivity = float(adjustments.get("penalty_sensitivity", 1.0))
+    shrink = max(0.0, float(adjustments.get("favorite_shrink", 0.08)) + float(scenario.get("favorite_shrink_delta", 0.0)))
+    upset_floor = max(0.05, min(0.30, float(adjustments.get("upset_floor", 0.14)) + float(scenario.get("upset_floor_delta", 0.0))))
+    penalty_sensitivity = float(adjustments.get("penalty_sensitivity", 1.0)) * float(scenario.get("penalty_multiplier", 1.0))
 
+    influence = _scenario_influence(fixture["home_team"], fixture["away_team"], scenario)
+    home += influence["home_probability_delta"]
+    away += influence["away_probability_delta"]
     home, away = _shrink_two_way(home, away, shrink, upset_floor)
-    draw = max(0.05, min(0.42, draw * penalty_sensitivity))
-    penalty_home = _penalty_edge(fixture["home_team"], fixture["away_team"])
+    draw = max(0.05, min(0.46, (draw + influence["draw_delta"]) * penalty_sensitivity))
+    penalty_home = _penalty_edge(fixture["home_team"], fixture["away_team"], scenario)
     home_direct = home
     away_direct = away
     home_penalty = draw * penalty_home
@@ -174,7 +280,11 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
         "upset_risk": risk,
         "confidence_margin": confidence,
         "baseline_three_way": {"home_win": final["home_win"], "draw": final["draw"], "away_win": final["away_win"]},
-        "key_factors": final.get("key_factors", [])[:6],
+        "key_factors": (final.get("key_factors", [])[:6] + influence["key_factors"]),
+        "scenario": {"id": scenario["id"], "arabic_name": scenario["arabic_name"]},
+        "player_impact": influence["player_impact"],
+        "team_stat_impact": influence["team_stat_impact"],
+        "goal_timing_impact": influence["goal_timing_impact"],
         "model_diagnostics": final.get("model_diagnostics", {}),
         "blend_weights": final.get("blend_weights", {}),
         "audit_log": state.audit_log,
@@ -276,16 +386,144 @@ def _seed_ranks() -> dict[str, float]:
     return {row["team"]: float(row.get("seed_rank") or 50) for row in rows}
 
 
-def _penalty_edge(home: str, away: str) -> float:
+def _penalty_edge(home: str, away: str, scenario: dict[str, Any] | None = None) -> float:
     stats = _team_stats()
     ranks = _seed_ranks()
+    scenario = scenario or {}
+    players = _player_indicators()
     h, a = stats.get(home, {}), stats.get(away, {})
+    hp, ap = players.get(home, {}), players.get(away, {})
     rank_edge = (ranks.get(away, 48) - ranks.get(home, 48)) / 120.0
     keeper_edge = (h.get("saves", 1.5) - a.get("saves", 1.5)) * 0.025
     shot_edge = (h.get("shots_on_target", 3.0) - a.get("shots_on_target", 3.0)) * 0.012
     pressure_edge = (h.get("attacking_pressure_index", 45.0) - a.get("attacking_pressure_index", 45.0)) * 0.002
     discipline_edge = ((a.get("yellow_cards", 1.0) + 2 * a.get("red_cards", 0.0)) - (h.get("yellow_cards", 1.0) + 2 * h.get("red_cards", 0.0))) * 0.012
-    return max(0.35, min(0.65, 0.50 + rank_edge + keeper_edge + shot_edge + pressure_edge + discipline_edge))
+    player_weight = float(scenario.get("player_weight", 0.75))
+    player_keeper_edge = (hp.get("goalkeeper_penalty_index", 50.0) - ap.get("goalkeeper_penalty_index", 50.0)) * 0.0012 * player_weight
+    taker_edge = (hp.get("penalty_taker_index", 50.0) - ap.get("penalty_taker_index", 50.0)) * 0.0010 * player_weight
+    return max(0.33, min(0.67, 0.50 + rank_edge + keeper_edge + shot_edge + pressure_edge + discipline_edge + player_keeper_edge + taker_edge))
+
+
+def _player_indicators() -> dict[str, dict[str, float]]:
+    path = DATA / "player_performance_indicators.csv"
+    if not path.exists():
+        return {}
+    rows = _read_csv(path)
+    numeric_fields = [
+        "attacking_star_index",
+        "goalkeeper_penalty_index",
+        "penalty_taker_index",
+        "defensive_leader_index",
+        "bench_depth_index",
+        "availability_index",
+    ]
+    out: dict[str, dict[str, float]] = {}
+    for row in rows:
+        team = row.get("team", "")
+        if not team:
+            continue
+        out[team] = {}
+        for field in numeric_fields:
+            try:
+                out[team][field] = float(row.get(field) or 50)
+            except ValueError:
+                out[team][field] = 50.0
+    return out
+
+
+def _goal_timing_profile() -> dict[str, dict[str, float]]:
+    stats = _team_stats()
+    timing: dict[str, dict[str, float]] = {}
+    path = DATA / "goal_timing_events.csv"
+    if path.exists():
+        for row in _read_csv(path):
+            team = row.get("team", "")
+            if not team:
+                continue
+            minute = _safe_float(row.get("minute"), 45.0)
+            timing.setdefault(team, {"early_goals": 0.0, "late_goals": 0.0, "comeback_goals": 0.0})
+            if minute <= 20:
+                timing[team]["early_goals"] += 1.0
+            if minute >= 70:
+                timing[team]["late_goals"] += 1.0
+            if row.get("state", "").lower() in {"equalizer", "winner", "comeback"}:
+                timing[team]["comeback_goals"] += 1.0
+    for team, values in stats.items():
+        timing.setdefault(team, {"early_goals": 0.0, "late_goals": 0.0, "comeback_goals": 0.0})
+        timing[team]["late_momentum_proxy"] = values.get("momentum_last_15", 0.0) or values.get("attacking_pressure_index", 45.0)
+    return timing
+
+
+def _scenario_influence(home: str, away: str, scenario: dict[str, Any]) -> dict[str, Any]:
+    players = _player_indicators()
+    stats = _team_stats()
+    timing = _goal_timing_profile()
+    hp, ap = players.get(home, {}), players.get(away, {})
+    hs, away_stats = stats.get(home, {}), stats.get(away, {})
+    ht, at = timing.get(home, {}), timing.get(away, {})
+
+    player_edge = (
+        (hp.get("attacking_star_index", 50) - ap.get("attacking_star_index", 50)) * 0.0017
+        + (hp.get("availability_index", 50) - ap.get("availability_index", 50)) * 0.0012
+        + (hp.get("bench_depth_index", 50) - ap.get("bench_depth_index", 50)) * 0.0010
+        + (hp.get("defensive_leader_index", 50) - ap.get("defensive_leader_index", 50)) * 0.0008
+    ) * float(scenario.get("player_weight", 0.75))
+    team_edge = (
+        (hs.get("dominance_index", 50) - away_stats.get("dominance_index", 50)) * 0.0009
+        + (hs.get("attacking_pressure_index", 45) - away_stats.get("attacking_pressure_index", 45)) * 0.0009
+        + (hs.get("shots_on_target", 3) - away_stats.get("shots_on_target", 3)) * 0.006
+        + (hs.get("pass_pct", 0.82) - away_stats.get("pass_pct", 0.82)) * 0.08
+    ) * float(scenario.get("team_stats_weight", 0.85))
+    timing_edge = (
+        (ht.get("late_goals", 0) - at.get("late_goals", 0)) * 0.010
+        + (ht.get("comeback_goals", 0) - at.get("comeback_goals", 0)) * 0.012
+        + (ht.get("late_momentum_proxy", 45) - at.get("late_momentum_proxy", 45)) * 0.0006
+    ) * float(scenario.get("goal_timing_weight", 0.75))
+    total_edge = max(-0.12, min(0.12, player_edge + team_edge + timing_edge))
+    draw_delta = abs(total_edge) * -0.10 + float(scenario.get("chaos_weight", 0.6)) * 0.015
+    return {
+        "home_probability_delta": total_edge,
+        "away_probability_delta": -total_edge,
+        "draw_delta": draw_delta,
+        "player_impact": round(player_edge, 4),
+        "team_stat_impact": round(team_edge, 4),
+        "goal_timing_impact": round(timing_edge, 4),
+        "key_factors": [
+            {"side": "home" if player_edge >= 0 else "away", "label": "أثر اللاعبين كأفراد", "value": f"فرق مؤشرات النجوم والحارس والمسددين: {player_edge:+.3f}", "impact": round(player_edge, 4)},
+            {"side": "home" if team_edge >= 0 else "away", "label": "أرقام المنتخب في البطولة", "value": f"ضغط هجومي، تسديدات على المرمى، سيطرة وتمرير: {team_edge:+.3f}", "impact": round(team_edge, 4)},
+            {"side": "home" if timing_edge >= 0 else "away", "label": "زمن تسجيل الأهداف", "value": f"زخم متأخر/أهداف عودة/حسم: {timing_edge:+.3f}", "impact": round(timing_edge, 4)},
+        ],
+    }
+
+
+def _scenario_reliability(rounds: list[dict[str, Any]], learning: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
+    matches = [match for round_item in rounds for match in round_item["matches"]]
+    if not matches:
+        return {"estimated_accuracy": 0.0, "confidence_grade": "??? ?????", "high_risk_matches": 0, "average_confidence_margin": 0.0, "average_penalty_probability": 0.0}
+    base_accuracy = float(learning.get("summary", {}).get("accuracy", 0.50))
+    margins = [float(match.get("confidence_margin", 0)) for match in matches]
+    penalties = [float(match.get("penalty_shootout", {}).get("probability", 0)) for match in matches]
+    high_risk = sum(1 for match in matches if match.get("upset_risk") == "high")
+    avg_margin = sum(margins) / len(margins)
+    avg_penalty = sum(penalties) / len(penalties)
+    scenario_bonus = {"A": 0.035, "B": 0.015, "C": -0.015}.get(str(scenario.get("id")), 0.0)
+    reliability = base_accuracy + scenario_bonus + avg_margin * 0.28 - avg_penalty * 0.10 - (high_risk / len(matches)) * 0.12
+    reliability = max(0.42, min(0.82, reliability))
+    grade = "عالية" if reliability >= 0.68 else "متوسطة" if reliability >= 0.57 else "تجريبية"
+    return {
+        "estimated_accuracy": reliability,
+        "confidence_grade": grade,
+        "high_risk_matches": high_risk,
+        "average_confidence_margin": avg_margin,
+        "average_penalty_probability": avg_penalty,
+    }
+
+
+def _safe_float(value: Any, default: float = 0.0) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
 
 
 if __name__ == "__main__":
