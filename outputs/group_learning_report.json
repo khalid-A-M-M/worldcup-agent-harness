@@ -4,8 +4,8 @@
     "correct": 16,
     "missed": 12,
     "accuracy": 0.5714285714285714,
-    "mean_brier_score": 0.5884012837970843,
-    "mean_log_loss": 1.0776978151773027
+    "mean_brier_score": 0.574080092515412,
+    "mean_log_loss": 1.290490434044192
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
@@ -13,8 +13,9 @@
       "home_win": 5
     },
     "misses_by_actual_label": {
-      "home_win": 5,
-      "draw": 7
+      "home_win": 4,
+      "draw": 7,
+      "away_win": 1
     },
     "severe_log_loss_match_ids": [
       "WC-006",
@@ -27,20 +28,18 @@
       "WC-047",
       "WC-059",
       "WC-065",
-      "WC-069",
-      "WC-072"
+      "WC-069"
     ],
     "shock_match_ids": [
       "WC-006",
       "WC-023",
-      "WC-030",
-      "WC-072"
+      "WC-030"
     ]
   },
   "learned_knockout_adjustments": {
-    "uncertainty_multiplier": 1.1011,
+    "uncertainty_multiplier": 1.1139,
     "favorite_shrink": 0.0419,
-    "upset_floor": 0.16,
+    "upset_floor": 0.145,
     "penalty_sensitivity": 1.0857,
     "target_accuracy_note": "90% is an ambition target, not a guaranteed property; the model now reports confidence and penalty risk instead of pretending certainty."
   },
