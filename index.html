@@ -635,6 +635,132 @@
       gap: 16px;
     }
     .projection-grid.hidden { display: none; }
+    .bracket-shell {
+      grid-column: 1 / -1;
+      overflow-x: auto;
+      border: 1px solid rgba(214,168,73,.32);
+      border-radius: 18px;
+      background:
+        linear-gradient(90deg, rgba(56,189,248,.08), transparent 22%, rgba(214,168,73,.10) 50%, transparent 78%, rgba(239,68,68,.08)),
+        rgba(8, 24, 24, .80);
+      padding: 16px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.26);
+    }
+    .bracket-head {
+      direction: rtl;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+      margin-bottom: 14px;
+    }
+    .bracket-head h2 { margin: 0; font-size: 24px; }
+    .bracket-head p { margin: 6px 0 0; color: rgba(255,255,255,.70); font-size: 13px; }
+    .bracket-badges { display: flex; flex-wrap: wrap; gap: 7px; }
+    .bracket-badges span {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      color: #fff7cf;
+      padding: 6px 9px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .bracket-board {
+      direction: ltr;
+      min-width: 1220px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr .95fr .9fr 1.15fr .9fr .95fr 1fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .bracket-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 12px;
+      min-height: 230px;
+    }
+    .bracket-column[data-count="8"] { min-height: 740px; }
+    .bracket-column[data-count="4"] { min-height: 560px; }
+    .bracket-column[data-count="2"] { min-height: 390px; }
+    .bracket-column[data-count="1"] { min-height: 250px; }
+    .bracket-stage-title {
+      direction: rtl;
+      text-align: center;
+      color: rgba(255,255,255,.62);
+      font-size: 11px;
+      margin-bottom: 8px;
+      min-height: 14px;
+    }
+    .bracket-match {
+      position: relative;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 12px;
+      background: rgba(0,0,0,.26);
+      padding: 9px;
+      min-height: 76px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+    }
+    .bracket-left .bracket-match::after,
+    .bracket-right .bracket-match::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 1px;
+      background: rgba(214,168,73,.62);
+    }
+    .bracket-left .bracket-match::after { right: -19px; }
+    .bracket-right .bracket-match::after { left: -19px; }
+    .bracket-final .bracket-match::after { display: none; }
+    .bracket-team {
+      direction: rtl;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      padding: 5px 6px;
+      border-radius: 9px;
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+    }
+    .bracket-team strong { overflow-wrap: anywhere; }
+    .bracket-team b { direction: ltr; font-size: 11px; color: rgba(255,255,255,.66); }
+    .bracket-team.winner {
+      color: #fff;
+      background: linear-gradient(90deg, rgba(214,168,73,.24), rgba(255,255,255,.06));
+      box-shadow: inset 3px 0 0 var(--winner-color, #d6a849);
+      font-weight: 900;
+    }
+    .bracket-method {
+      direction: rtl;
+      margin-top: 5px;
+      color: rgba(255,255,255,.58);
+      font-size: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .bracket-center {
+      display: grid;
+      align-content: center;
+      min-height: 740px;
+    }
+    .bracket-center .bracket-match {
+      border-color: rgba(214,168,73,.50);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(214,168,73,.28), transparent 58%),
+        rgba(0,0,0,.30);
+      transform: scale(1.02);
+    }
+    @media (max-width: 700px) {
+      .bracket-shell { padding: 12px; }
+      .bracket-board { min-width: 1060px; gap: 14px; }
+      .bracket-column[data-count="8"] { min-height: 680px; }
+      .bracket-head h2 { font-size: 20px; }
+    }
     .group-card, .pairing-card {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -1225,6 +1351,95 @@
       `).join("");
     }
 
+    function roundTitle(name) {
+      return {
+        "Round of 32": "دور 32",
+        "Round of 16": "دور 16",
+        "Quarterfinals": "ربع النهائي",
+        "Semifinals": "نصف النهائي",
+        "Final": "النهائي"
+      }[name] || name;
+    }
+
+    function bracketProbability(match, team) {
+      if (!match) return 0;
+      return team === match.home_team ? match.home_advance_probability || 0 : match.away_advance_probability || 0;
+    }
+
+    function renderBracketMatch(match, side = "left") {
+      if (!match) return `<div class="bracket-match"></div>`;
+      const home = visual(match.home_team);
+      const away = visual(match.away_team);
+      const winner = visual(match.winner);
+      const homeWinner = match.winner === match.home_team;
+      const awayWinner = match.winner === match.away_team;
+      const method = match.winner_method === "penalties" ? "حسم محتمل بالترجيح" : "حسم قبل الترجيح غالباً";
+      return `
+        <div class="bracket-match" style="--winner-color:${winner.primary_color}">
+          <div class="bracket-team ${homeWinner ? "winner" : ""}">
+            <strong style="color:${homeWinner ? home.primary_color : "inherit"}">${home.arabic_name}</strong>
+            <b>${pct(bracketProbability(match, match.home_team))}</b>
+          </div>
+          <div class="bracket-team ${awayWinner ? "winner" : ""}">
+            <strong style="color:${awayWinner ? away.primary_color : "inherit"}">${away.arabic_name}</strong>
+            <b>${pct(bracketProbability(match, match.away_team))}</b>
+          </div>
+          <div class="bracket-method">${method} · ${match.upset_risk === "high" ? "خطر عال" : "هامش " + pct(match.confidence_margin || 0)}</div>
+        </div>`;
+    }
+
+    function renderBracketColumn(title, matches, side) {
+      return `
+        <div class="bracket-column bracket-${side}" data-count="${matches.length}">
+          <div class="bracket-stage-title">${title}</div>
+          ${matches.map(match => renderBracketMatch(match, side)).join("")}
+        </div>`;
+    }
+
+    function scenarioRound(scenario, index) {
+      return scenario.rounds?.[index]?.matches || [];
+    }
+
+    function renderScenarioBracket(scenario) {
+      const r32 = scenarioRound(scenario, 0);
+      const r16 = scenarioRound(scenario, 1);
+      const qf = scenarioRound(scenario, 2);
+      const sf = scenarioRound(scenario, 3);
+      const finalMatch = scenarioRound(scenario, 4)[0];
+      const champion = visual(scenario.champion);
+      const finalHome = visual(finalMatch?.home_team || "");
+      const finalAway = visual(finalMatch?.away_team || "");
+      return `
+        <article class="bracket-shell">
+          <div class="bracket-head">
+            <div>
+              <h2>${scenario.arabic_name}</h2>
+              <p>${scenario.description}</p>
+            </div>
+            <div class="bracket-badges">
+              <span>البطل: <b style="color:${champion.primary_color}">${champion.arabic_name}</b></span>
+              <span>دقة متوقعة ${pct(scenario.estimated_accuracy || 0)}</span>
+              <span>${scenario.high_risk_matches || 0} مباريات خطر</span>
+              <span>نهائي: ${finalHome.arabic_name || "—"} ضد ${finalAway.arabic_name || "—"}</span>
+            </div>
+          </div>
+          <div class="bracket-board">
+            ${renderBracketColumn("دور 32", r32.slice(0, 8), "left")}
+            ${renderBracketColumn("دور 16", r16.slice(0, 4), "left")}
+            ${renderBracketColumn("ربع النهائي", qf.slice(0, 2), "left")}
+            ${renderBracketColumn("نصف النهائي", sf.slice(0, 1), "left")}
+            <div class="bracket-column bracket-final bracket-center" data-count="1">
+              <div class="bracket-stage-title">النهائي</div>
+              ${renderBracketMatch(finalMatch, "final")}
+            </div>
+            ${renderBracketColumn("نصف النهائي", sf.slice(1, 2), "right")}
+            ${renderBracketColumn("ربع النهائي", qf.slice(2, 4), "right")}
+            ${renderBracketColumn("دور 16", r16.slice(4, 8), "right")}
+            ${renderBracketColumn("دور 32", r32.slice(8, 16), "right")}
+          </div>
+        </article>`;
+    }
+
     function renderKnockout(prediction) {
       if (!prediction || !prediction.rounds) {
         return `<article class="group-card"><h2>لم يتم توليد مسار خروج المغلوب بعد</h2><p class="note">شغّل <code>python predict_knockout_bracket.py</code> لتوليد توقعات دور 32 حتى النهائي.</p></article>`;
@@ -1254,11 +1469,12 @@
             <p class="note">البطل في هذا المسار: <b style="color:${champ.primary_color}">${champ.arabic_name}</b> · متوسط هامش الثقة ${pct(scenario.average_confidence_margin || 0)} · متوسط خطر الترجيح ${pct(scenario.average_penalty_probability || 0)}</p>
           </article>`;
       }).join("");
+      const bracketBoards = (prediction.scenarios || []).map(renderScenarioBracket).join("");
       const hero = `
         <article class="accuracy-hero">
           <div class="accuracy-summary">
             <h2>البطل الرسمي في المسار ب: <span style="color:${champion.primary_color}">${champion.arabic_name}</span></h2>
-            <p class="note">اللوحة الآن تعرض ثلاثة مسارات احتمالية كاملة من دور 32 إلى النهائي. كل مسار يتعلم من أخطاء المجموعات، ويضيف أثر اللاعبين كأفراد، أرقام المنتخب في البطولة، وزمن الأهداف أو بديل الزخم المتأخر عندما لا تصل دقائق الأهداف بعد.</p>
+            <p class="note">المسارات الآن مرسومة كشجرة خروج مغلوب: جناح من اليسار وجناح من اليمين، والفائزون يتصاعدون مرحلة بعد مرحلة حتى النهائي. اسحب أفقياً على الهاتف لرؤية الشجرة كاملة.</p>
             <div class="accuracy-meter">
               <div class="accuracy-metric"><b>${pct(learning.accuracy || 0)}</b><span>دقة المجموعات التي تعلم منها</span></div>
               <div class="accuracy-metric"><b>${learning.missed || 0}</b><span>أخطاء تم تحليلها</span></div>
@@ -1266,10 +1482,10 @@
             </div>
             <p class="note">${lessons.join(" · ")}</p>
           </div>
-        </article>${scenarioCards}`;
+        </article>${scenarioCards}${bracketBoards}`;
       const rounds = prediction.rounds.map(round => `
         <article class="group-card">
-          <h2>${round.round}</h2>
+          <h2>${roundTitle(round.round)} · تفاصيل رقمية</h2>
           ${round.matches.map(match => {
             const home = visual(match.home_team);
             const away = visual(match.away_team);
