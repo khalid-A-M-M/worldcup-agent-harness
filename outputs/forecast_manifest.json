@@ -241,5 +241,7 @@
       "primary_color": "#002b7f",
       "secondary_color": "#f9e814"
     }
-  }
+  },
+  "knockout_bracket": "outputs/knockout_bracket_prediction.json",
+  "learning_report": "outputs/group_learning_report.json"
 }

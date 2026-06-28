@@ -46,10 +46,31 @@ def main() -> None:
         check=True,
         stdout=subprocess.DEVNULL,
     )
+    subprocess.run(
+        [sys.executable, str(ROOT / "learn_from_group_errors.py")],
+        cwd=ROOT,
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+    subprocess.run(
+        [sys.executable, str(ROOT / "predict_knockout_bracket.py")],
+        cwd=ROOT,
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
 
     OUTPUTS.mkdir(exist_ok=True)
     (OUTPUTS / "forecast_manifest.json").write_text(
-        json.dumps({"files": manifest, "team_visuals": visuals}, ensure_ascii=False, indent=2),
+        json.dumps(
+            {
+                "files": manifest,
+                "team_visuals": visuals,
+                "knockout_bracket": "outputs/knockout_bracket_prediction.json",
+                "learning_report": "outputs/group_learning_report.json",
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
         encoding="utf-8",
     )
     print(f"Generated {len(manifest)} World Cup forecasts.")

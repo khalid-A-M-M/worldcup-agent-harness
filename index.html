@@ -727,6 +727,7 @@
       <button class="active" data-view="matches">المباريات والتوقعات</button>
       <button data-view="paths">المجموعات والمسارات</button>
       <button data-view="pairings">مواجهات محتملة</button>
+      <button data-view="knockout">خروج المغلوب</button>
       <button data-view="economic">النموذج الاقتصادي</button>
       <button data-view="accuracy">دقة النموذج</button>
       <button data-view="completed">المباريات المكتملة</button>
@@ -740,6 +741,7 @@
     <section class="grid" id="cards"></section>
     <section class="projection-grid hidden" id="paths"></section>
     <section class="projection-grid hidden" id="pairings"></section>
+    <section class="projection-grid hidden" id="knockout"></section>
     <section class="projection-grid hidden" id="economic"></section>
     <section class="projection-grid hidden" id="accuracy"></section>
     <section class="projection-grid hidden" id="completed"></section>
@@ -769,6 +771,7 @@
     let teamVisuals = {};
     let allReports = [];
     let tournamentProjection = null;
+    let knockoutPrediction = null;
     let accuracyReport = null;
     let advancedStats = [];
     let currentFilter = "all";
@@ -1222,12 +1225,58 @@
       `).join("");
     }
 
+    function renderKnockout(prediction) {
+      if (!prediction || !prediction.rounds) {
+        return `<article class="group-card"><h2>لم يتم توليد مسار خروج المغلوب بعد</h2><p class="note">شغّل <code>python predict_knockout_bracket.py</code> لتوليد توقعات دور 32 حتى النهائي.</p></article>`;
+      }
+      const learning = prediction.learning_summary?.summary || {};
+      const lessons = prediction.learning_summary?.lessons || [];
+      const champion = visual(prediction.champion);
+      const hero = `
+        <article class="accuracy-hero">
+          <div class="accuracy-summary">
+            <h2>البطل المتوقع: <span style="color:${champion.primary_color}">${champion.arabic_name}</span></h2>
+            <p class="note">هذا المسار لا يسمح بالتعادل: كل مباراة تتحول إلى فائز وخاسر، مع تقدير مستقل لاحتمال الحسم بركلات الترجيح عند تقارب الفريقين.</p>
+            <div class="accuracy-meter">
+              <div class="accuracy-metric"><b>${pct(learning.accuracy || 0)}</b><span>دقة المجموعات التي تعلم منها</span></div>
+              <div class="accuracy-metric"><b>${learning.missed || 0}</b><span>أخطاء تم تحليلها</span></div>
+              <div class="accuracy-metric"><b>${learning.mean_log_loss == null ? "—" : Number(learning.mean_log_loss).toFixed(3)}</b><span>Log Loss قبل التحسين</span></div>
+            </div>
+            <p class="note">${lessons.join(" · ")}</p>
+          </div>
+        </article>`;
+      const rounds = prediction.rounds.map(round => `
+        <article class="group-card">
+          <h2>${round.round}</h2>
+          ${round.matches.map(match => {
+            const home = visual(match.home_team);
+            const away = visual(match.away_team);
+            const winner = visual(match.winner);
+            const homePct = pct(match.home_advance_probability || 0);
+            const awayPct = pct(match.away_advance_probability || 0);
+            const penaltyPct = pct(match.penalty_shootout?.probability || 0);
+            const method = match.winner_method === "penalties" ? "مرشح عبر ركلات الترجيح" : "مرشح للحسم قبل الترجيح";
+            return `
+              <div class="standing-row" style="grid-template-columns:1fr auto 1fr;align-items:center">
+                <div><strong style="color:${home.primary_color}">${home.arabic_name}</strong><div class="team-original">${homePct}</div></div>
+                <span class="versus" style="width:44px;height:44px">${match.upset_risk === "high" ? "خطر" : "ضد"}</span>
+                <div style="text-align:left"><strong style="color:${away.primary_color}">${away.arabic_name}</strong><div class="team-original">${awayPct}</div></div>
+              </div>
+              <p class="note">الفائز المتوقع: <b style="color:${winner.primary_color}">${winner.arabic_name}</b> · ${method} · احتمال الترجيح ${penaltyPct} · هامش الثقة ${pct(match.confidence_margin || 0)}</p>
+            `;
+          }).join("")}
+        </article>
+      `).join("");
+      return hero + rounds;
+    }
+
     function switchView(view) {
       currentView = view;
       document.getElementById("cards").classList.toggle("hidden", view !== "matches");
       document.getElementById("filters").classList.toggle("hidden", view !== "matches");
       document.getElementById("paths").classList.toggle("hidden", view !== "paths");
       document.getElementById("pairings").classList.toggle("hidden", view !== "pairings");
+      document.getElementById("knockout").classList.toggle("hidden", view !== "knockout");
       document.getElementById("economic").classList.toggle("hidden", view !== "economic");
       document.getElementById("accuracy").classList.toggle("hidden", view !== "accuracy");
       document.getElementById("completed").classList.toggle("hidden", view !== "completed");
@@ -1238,6 +1287,9 @@
       } else if (view === "pairings") {
         document.getElementById("pairings").innerHTML = renderPairings(tournamentProjection);
         document.getElementById("count").textContent = "مواجهات محتملة لدور الـ32";
+      } else if (view === "knockout") {
+        document.getElementById("knockout").innerHTML = renderKnockout(knockoutPrediction);
+        document.getElementById("count").textContent = "توقع كامل من دور 32 حتى النهائي";
       } else if (view === "economic") {
         document.getElementById("economic").innerHTML = renderEconomicModel();
         document.getElementById("count").textContent = "مؤشرات نموذج العالم الاقتصادي داخل التوقع";
@@ -1450,17 +1502,19 @@
     async function refreshDashboard(cacheBust = false) {
       const suffix = cacheBust ? `?t=${Date.now()}` : "";
       const files = await loadFiles();
-      const [reports, projection, accuracy, statsCsv] = await Promise.all([
+      const [reports, projection, knockout, accuracy, statsCsv] = await Promise.all([
         Promise.all(files.map(file => fetch(`${file}${suffix}`).then(response => {
           if (!response.ok) throw new Error(file);
           return response.json();
         }))),
         fetch(`outputs/tournament_projection.json${suffix}`).then(response => response.ok ? response.json() : null),
+        fetch(`outputs/knockout_bracket_prediction.json${suffix}`).then(response => response.ok ? response.json() : null),
         fetch(`outputs/accuracy_report.json${suffix}`).then(response => response.ok ? response.json() : null),
         fetch(`data/match_advanced_stats.csv${suffix}`).then(response => response.ok ? response.text() : "")
       ]);
       allReports = chronologicalReports(reports);
       tournamentProjection = projection;
+      knockoutPrediction = knockout;
       accuracyReport = accuracy;
       advancedStats = statsCsv ? parseCsv(statsCsv) : [];
       const active = document.querySelector("#tabs button.active");
@@ -1479,6 +1533,7 @@
     ])).then(([reports, projection, accuracy, statsCsv]) => {
       allReports = chronologicalReports(reports);
       tournamentProjection = projection;
+      knockoutPrediction = knockout;
       accuracyReport = accuracy;
       advancedStats = statsCsv ? parseCsv(statsCsv) : [];
       switchView("matches");
