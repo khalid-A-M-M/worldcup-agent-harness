@@ -635,17 +635,63 @@
       gap: 16px;
     }
     .projection-grid.hidden { display: none; }
+    .scenario-tabs {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 2px 0 4px;
+    }
+    .scenario-tab {
+      cursor: pointer;
+      text-align: right;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 16px;
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--tab-a, #d6a849) 32%, transparent), transparent 44%),
+        linear-gradient(315deg, color-mix(in srgb, var(--tab-b, #38bdf8) 28%, transparent), transparent 46%),
+        rgba(8, 24, 24, .82);
+      color: var(--ink);
+      padding: 13px;
+      font: inherit;
+      min-height: 118px;
+      box-shadow: 0 18px 48px rgba(0,0,0,.22);
+    }
+    .scenario-tab.active {
+      border-color: rgba(255,247,207,.72);
+      box-shadow: 0 0 0 2px rgba(214,168,73,.22), 0 22px 60px rgba(0,0,0,.30);
+    }
+    .scenario-tab strong { display: block; font-size: 17px; margin-bottom: 7px; color: #fff7cf; }
+    .scenario-tab span { display: inline-flex; margin: 5px 0 0 5px; font-size: 12px; color: rgba(255,255,255,.76); }
     .bracket-shell {
       grid-column: 1 / -1;
-      overflow-x: auto;
+      position: relative;
+      overflow-x: visible;
       border: 1px solid rgba(214,168,73,.32);
       border-radius: 18px;
       background:
-        linear-gradient(90deg, rgba(56,189,248,.08), transparent 22%, rgba(214,168,73,.10) 50%, transparent 78%, rgba(239,68,68,.08)),
-        rgba(8, 24, 24, .80);
+        radial-gradient(circle at 50% -10%, color-mix(in srgb, var(--champion-color, #d6a849) 28%, transparent), transparent 38%),
+        linear-gradient(90deg, color-mix(in srgb, var(--left-final-color, #38bdf8) 20%, transparent), transparent 24%, rgba(214,168,73,.11) 50%, transparent 76%, color-mix(in srgb, var(--right-final-color, #ef4444) 20%, transparent)),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.18)),
+        rgba(8, 24, 24, .88);
       padding: 16px;
       box-shadow: 0 24px 70px rgba(0,0,0,.26);
     }
+    .bracket-shell::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      pointer-events: none;
+      opacity: .18;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 50% 50%, transparent 0 7.5%, rgba(255,255,255,.55) 7.8% 8.1%, transparent 8.5%),
+        linear-gradient(90deg, transparent 49.8%, rgba(255,255,255,.48) 50%, transparent 50.2%),
+        linear-gradient(0deg, transparent 11%, rgba(255,255,255,.22) 11.2%, transparent 11.5%, transparent 88.5%, rgba(255,255,255,.22) 88.8%, transparent 89%);
+    }
+    .bracket-shell > * { position: relative; z-index: 1; }
+    .bracket-shell.hidden { display: none; }
     .bracket-head {
       direction: rtl;
       display: flex;
@@ -667,78 +713,97 @@
       font-size: 12px;
       white-space: nowrap;
     }
+    .bracket-viewport { width: 100%; overflow: visible; }
     .bracket-board {
       direction: ltr;
-      min-width: 1220px;
+      width: 100%;
       display: grid;
-      grid-template-columns: 1.1fr 1fr .95fr .9fr 1.15fr .9fr .95fr 1fr 1.1fr;
-      gap: 18px;
+      grid-template-columns: 1.12fr .98fr .88fr .80fr 1.02fr .80fr .88fr .98fr 1.12fr;
+      gap: clamp(6px, .9vw, 12px);
       align-items: stretch;
     }
     .bracket-column {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      gap: 12px;
-      min-height: 230px;
+      gap: 9px;
+      min-height: 210px;
+      min-width: 0;
     }
-    .bracket-column[data-count="8"] { min-height: 740px; }
-    .bracket-column[data-count="4"] { min-height: 560px; }
-    .bracket-column[data-count="2"] { min-height: 390px; }
-    .bracket-column[data-count="1"] { min-height: 250px; }
+    .bracket-column[data-count="8"] { min-height: 690px; }
+    .bracket-column[data-count="4"] { min-height: 520px; }
+    .bracket-column[data-count="2"] { min-height: 360px; }
+    .bracket-column[data-count="1"] { min-height: 230px; }
     .bracket-stage-title {
       direction: rtl;
       text-align: center;
-      color: rgba(255,255,255,.62);
+      color: rgba(255,255,255,.68);
       font-size: 11px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       min-height: 14px;
     }
     .bracket-match {
       position: relative;
-      border: 1px solid rgba(255,255,255,.14);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.16);
       border-radius: 12px;
-      background: rgba(0,0,0,.26);
-      padding: 9px;
-      min-height: 76px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 28%, transparent), transparent 48%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 28%, transparent), transparent 48%),
+        rgba(0,0,0,.30);
+      padding: 8px;
+      min-height: 74px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 10px 24px rgba(0,0,0,.18);
+    }
+    .bracket-match::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(255,255,255,.07), transparent 42%, rgba(255,255,255,.04));
     }
     .bracket-left .bracket-match::after,
     .bracket-right .bracket-match::after {
       content: "";
       position: absolute;
       top: 50%;
-      width: 18px;
+      width: clamp(6px, .9vw, 12px);
       height: 1px;
-      background: rgba(214,168,73,.62);
+      background: color-mix(in srgb, var(--winner-color, #d6a849) 70%, white 10%);
+      z-index: 1;
     }
-    .bracket-left .bracket-match::after { right: -19px; }
-    .bracket-right .bracket-match::after { left: -19px; }
+    .bracket-left .bracket-match::after { right: calc(clamp(6px, .9vw, 12px) * -1 - 1px); }
+    .bracket-right .bracket-match::after { left: calc(clamp(6px, .9vw, 12px) * -1 - 1px); }
     .bracket-final .bracket-match::after { display: none; }
     .bracket-team {
+      position: relative;
+      z-index: 1;
       direction: rtl;
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 8px;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 6px;
       align-items: center;
       padding: 5px 6px;
       border-radius: 9px;
-      color: rgba(255,255,255,.72);
-      font-size: 12px;
+      color: rgba(255,255,255,.76);
+      font-size: clamp(10px, .82vw, 12px);
+      min-width: 0;
     }
-    .bracket-team strong { overflow-wrap: anywhere; }
-    .bracket-team b { direction: ltr; font-size: 11px; color: rgba(255,255,255,.66); }
+    .bracket-team strong { overflow-wrap: anywhere; line-height: 1.2; }
+    .bracket-team b { direction: ltr; font-size: 10px; color: rgba(255,255,255,.70); }
     .bracket-team.winner {
       color: #fff;
-      background: linear-gradient(90deg, rgba(214,168,73,.24), rgba(255,255,255,.06));
+      background: linear-gradient(90deg, color-mix(in srgb, var(--winner-color, #d6a849) 24%, rgba(255,255,255,.08)), rgba(255,255,255,.07));
       box-shadow: inset 3px 0 0 var(--winner-color, #d6a849);
       font-weight: 900;
     }
     .bracket-method {
+      position: relative;
+      z-index: 1;
       direction: rtl;
       margin-top: 5px;
-      color: rgba(255,255,255,.58);
-      font-size: 11px;
+      color: rgba(255,255,255,.62);
+      font-size: 10px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -746,18 +811,22 @@
     .bracket-center {
       display: grid;
       align-content: center;
-      min-height: 740px;
+      min-height: 690px;
     }
     .bracket-center .bracket-match {
-      border-color: rgba(214,168,73,.50);
+      border-color: rgba(214,168,73,.58);
       background:
-        radial-gradient(circle at 50% 0%, rgba(214,168,73,.28), transparent 58%),
-        rgba(0,0,0,.30);
-      transform: scale(1.02);
+        radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--winner-color, #d6a849) 34%, transparent), transparent 58%),
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 26%, transparent), transparent 44%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 26%, transparent), transparent 44%),
+        rgba(0,0,0,.34);
+      transform: scale(1.01);
     }
-    @media (max-width: 700px) {
-      .bracket-shell { padding: 12px; }
-      .bracket-board { min-width: 1060px; gap: 14px; }
+    @media (max-width: 900px) {
+      .scenario-tabs { grid-template-columns: 1fr; }
+      .bracket-shell { overflow-x: auto; padding: 12px; }
+      .bracket-viewport { min-width: 1040px; }
+      .bracket-board { gap: 10px; }
       .bracket-column[data-count="8"] { min-height: 680px; }
       .bracket-head h2 { font-size: 20px; }
     }
@@ -1373,9 +1442,9 @@
       const winner = visual(match.winner);
       const homeWinner = match.winner === match.home_team;
       const awayWinner = match.winner === match.away_team;
-      const method = match.winner_method === "penalties" ? "حسم محتمل بالترجيح" : "حسم قبل الترجيح غالباً";
+      const method = match.winner_method === "penalties" ? "ترجيح" : "قبل الترجيح";
       return `
-        <div class="bracket-match" style="--winner-color:${winner.primary_color}">
+        <div class="bracket-match" style="--winner-color:${winner.primary_color};--home-color:${home.primary_color};--away-color:${away.primary_color}">
           <div class="bracket-team ${homeWinner ? "winner" : ""}">
             <strong style="color:${homeWinner ? home.primary_color : "inherit"}">${home.arabic_name}</strong>
             <b>${pct(bracketProbability(match, match.home_team))}</b>
@@ -1384,7 +1453,7 @@
             <strong style="color:${awayWinner ? away.primary_color : "inherit"}">${away.arabic_name}</strong>
             <b>${pct(bracketProbability(match, match.away_team))}</b>
           </div>
-          <div class="bracket-method">${method} · ${match.upset_risk === "high" ? "خطر عال" : "هامش " + pct(match.confidence_margin || 0)}</div>
+          <div class="bracket-method">${method} · ${match.upset_risk === "high" ? "خطر" : pct(match.confidence_margin || 0)}</div>
         </div>`;
     }
 
@@ -1400,7 +1469,28 @@
       return scenario.rounds?.[index]?.matches || [];
     }
 
-    function renderScenarioBracket(scenario) {
+    function scenarioColors(scenario) {
+      const final = scenario.final || scenarioRound(scenario, 4)[0] || {};
+      return {
+        champion: visual(scenario.champion).primary_color,
+        left: visual(final.home_team || "").primary_color || "#38bdf8",
+        right: visual(final.away_team || "").primary_color || "#ef4444"
+      };
+    }
+
+    function renderScenarioTab(scenario, activeId) {
+      const colors = scenarioColors(scenario);
+      const champ = visual(scenario.champion);
+      return `
+        <button class="scenario-tab ${scenario.scenario_id === activeId ? "active" : ""}" data-scenario-id="${scenario.scenario_id}" style="--tab-a:${colors.left};--tab-b:${colors.right}">
+          <strong>${scenario.arabic_name}</strong>
+          <span>البطل: <b style="color:${champ.primary_color};margin-inline-start:4px">${champ.arabic_name}</b></span>
+          <span>الدقة ${pct(scenario.estimated_accuracy || 0)}</span>
+          <span>${scenario.high_risk_matches || 0} خطر</span>
+        </button>`;
+    }
+
+    function renderScenarioBracket(scenario, activeId) {
       const r32 = scenarioRound(scenario, 0);
       const r16 = scenarioRound(scenario, 1);
       const qf = scenarioRound(scenario, 2);
@@ -1409,8 +1499,9 @@
       const champion = visual(scenario.champion);
       const finalHome = visual(finalMatch?.home_team || "");
       const finalAway = visual(finalMatch?.away_team || "");
+      const colors = scenarioColors(scenario);
       return `
-        <article class="bracket-shell">
+        <article class="bracket-shell scenario-bracket ${scenario.scenario_id === activeId ? "" : "hidden"}" data-scenario-id="${scenario.scenario_id}" style="--champion-color:${colors.champion};--left-final-color:${colors.left};--right-final-color:${colors.right}">
           <div class="bracket-head">
             <div>
               <h2>${scenario.arabic_name}</h2>
@@ -1423,22 +1514,29 @@
               <span>نهائي: ${finalHome.arabic_name || "—"} ضد ${finalAway.arabic_name || "—"}</span>
             </div>
           </div>
-          <div class="bracket-board">
-            ${renderBracketColumn("دور 32", r32.slice(0, 8), "left")}
-            ${renderBracketColumn("دور 16", r16.slice(0, 4), "left")}
-            ${renderBracketColumn("ربع النهائي", qf.slice(0, 2), "left")}
-            ${renderBracketColumn("نصف النهائي", sf.slice(0, 1), "left")}
-            <div class="bracket-column bracket-final bracket-center" data-count="1">
-              <div class="bracket-stage-title">النهائي</div>
-              ${renderBracketMatch(finalMatch, "final")}
+          <div class="bracket-viewport">
+            <div class="bracket-board">
+              ${renderBracketColumn("دور 32", r32.slice(0, 8), "left")}
+              ${renderBracketColumn("دور 16", r16.slice(0, 4), "left")}
+              ${renderBracketColumn("ربع النهائي", qf.slice(0, 2), "left")}
+              ${renderBracketColumn("نصف النهائي", sf.slice(0, 1), "left")}
+              <div class="bracket-column bracket-final bracket-center" data-count="1">
+                <div class="bracket-stage-title">النهائي</div>
+                ${renderBracketMatch(finalMatch, "final")}
+              </div>
+              ${renderBracketColumn("نصف النهائي", sf.slice(1, 2), "right")}
+              ${renderBracketColumn("ربع النهائي", qf.slice(2, 4), "right")}
+              ${renderBracketColumn("دور 16", r16.slice(4, 8), "right")}
+              ${renderBracketColumn("دور 32", r32.slice(8, 16), "right")}
             </div>
-            ${renderBracketColumn("نصف النهائي", sf.slice(1, 2), "right")}
-            ${renderBracketColumn("ربع النهائي", qf.slice(2, 4), "right")}
-            ${renderBracketColumn("دور 16", r16.slice(4, 8), "right")}
-            ${renderBracketColumn("دور 32", r32.slice(8, 16), "right")}
           </div>
         </article>`;
     }
+
+    window.showKnockoutScenario = function showKnockoutScenario(id) {
+      document.querySelectorAll(".scenario-tab").forEach(button => button.classList.toggle("active", button.dataset.scenarioId === id));
+      document.querySelectorAll(".scenario-bracket").forEach(board => board.classList.toggle("hidden", board.dataset.scenarioId !== id));
+    };
 
     function renderKnockout(prediction) {
       if (!prediction || !prediction.rounds) {
@@ -1447,34 +1545,15 @@
       const learning = prediction.learning_summary?.summary || {};
       const lessons = prediction.learning_summary?.lessons || [];
       const champion = visual(prediction.champion);
-      const scenarioCards = (prediction.scenarios || []).map(scenario => {
-        const champ = visual(scenario.champion);
-        const final = scenario.final || {};
-        const finalHome = visual(final.home_team || "");
-        const finalAway = visual(final.away_team || "");
-        return `
-          <article class="group-card" style="border-color:rgba(214,168,73,.34);background:linear-gradient(135deg,rgba(214,168,73,.12),rgba(8,24,24,.78))">
-            <h2>${scenario.arabic_name}</h2>
-            <p class="note">${scenario.description}</p>
-            <div class="accuracy-meter">
-              <div class="accuracy-metric"><b>${pct(scenario.estimated_accuracy || 0)}</b><span>دقة متوقعة للمسار</span></div>
-              <div class="accuracy-metric"><b>${scenario.confidence_grade || "—"}</b><span>درجة الثقة</span></div>
-              <div class="accuracy-metric"><b>${scenario.high_risk_matches || 0}</b><span>مباريات عالية الخطر</span></div>
-            </div>
-            <div class="pairing" style="margin-top:12px">
-              <strong style="color:${finalHome.primary_color}">${finalHome.arabic_name || "—"}</strong>
-              <span class="versus" style="width:44px;height:44px">نهائي</span>
-              <strong style="text-align:left;color:${finalAway.primary_color}">${finalAway.arabic_name || "—"}</strong>
-            </div>
-            <p class="note">البطل في هذا المسار: <b style="color:${champ.primary_color}">${champ.arabic_name}</b> · متوسط هامش الثقة ${pct(scenario.average_confidence_margin || 0)} · متوسط خطر الترجيح ${pct(scenario.average_penalty_probability || 0)}</p>
-          </article>`;
-      }).join("");
-      const bracketBoards = (prediction.scenarios || []).map(renderScenarioBracket).join("");
+      const scenarios = prediction.scenarios || [];
+      const activeScenario = (scenarios.find(item => item.scenario_id === "B") || scenarios[0] || {}).scenario_id || "B";
+      const scenarioTabs = `<div class="scenario-tabs" id="scenarioTabs">${scenarios.map(scenario => renderScenarioTab(scenario, activeScenario)).join("")}</div>`;
+      const bracketBoards = scenarios.map(scenario => renderScenarioBracket(scenario, activeScenario)).join("");
       const hero = `
         <article class="accuracy-hero">
           <div class="accuracy-summary">
             <h2>البطل الرسمي في المسار ب: <span style="color:${champion.primary_color}">${champion.arabic_name}</span></h2>
-            <p class="note">المسارات الآن مرسومة كشجرة خروج مغلوب: جناح من اليسار وجناح من اليمين، والفائزون يتصاعدون مرحلة بعد مرحلة حتى النهائي. اسحب أفقياً على الهاتف لرؤية الشجرة كاملة.</p>
+            <p class="note">كل مسار أصبح تبويباً مستقلاً. الرسم يعتمد ألوان المنتخبات كخلفية للمواجهات، ويعرض الشجرة كاملة على الشاشة الواسعة مع تمرير أفقي فقط عند ضيق الشاشة.</p>
             <div class="accuracy-meter">
               <div class="accuracy-metric"><b>${pct(learning.accuracy || 0)}</b><span>دقة المجموعات التي تعلم منها</span></div>
               <div class="accuracy-metric"><b>${learning.missed || 0}</b><span>أخطاء تم تحليلها</span></div>
@@ -1482,7 +1561,7 @@
             </div>
             <p class="note">${lessons.join(" · ")}</p>
           </div>
-        </article>${scenarioCards}${bracketBoards}`;
+        </article>${scenarioTabs}${bracketBoards}`;
       const rounds = prediction.rounds.map(round => `
         <article class="group-card">
           <h2>${roundTitle(round.round)} · تفاصيل رقمية</h2>
@@ -1737,6 +1816,12 @@
       const button = event.target.closest("button[data-view]");
       if (!button) return;
       switchView(button.dataset.view);
+    });
+
+    document.getElementById("knockout").addEventListener("click", event => {
+      const button = event.target.closest("button[data-scenario-id]");
+      if (!button) return;
+      window.showKnockoutScenario(button.dataset.scenarioId);
     });
 
     async function refreshDashboard(cacheBust = false) {
