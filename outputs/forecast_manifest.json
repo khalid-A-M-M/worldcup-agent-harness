@@ -243,5 +243,6 @@
     }
   },
   "knockout_bracket": "outputs/knockout_bracket_prediction.json",
-  "learning_report": "outputs/group_learning_report.json"
+  "learning_report": "outputs/group_learning_report.json",
+  "equation_learning": "data/equation_learning.json"
 }

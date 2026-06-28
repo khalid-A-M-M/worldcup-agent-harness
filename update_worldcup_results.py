@@ -52,24 +52,33 @@ def _download_with_retry(target: Path, attempts: int = 3) -> None:
 
 
 def _refresh_due_espn_matches(buffer_minutes: int = 110, stats_lookback_hours: int = 36) -> None:
-    fixtures_path = DATA / "all_group_fixtures.csv"
-    if not fixtures_path.exists():
+    fixtures_paths = [DATA / "all_group_fixtures.csv", DATA / "knockout_fixtures.csv"]
+    fixtures = []
+    for fixtures_path in fixtures_paths:
+        if fixtures_path.exists():
+            with fixtures_path.open("r", encoding="utf-8", newline="") as f:
+                fixtures.extend(csv.DictReader(f))
+    if not fixtures:
         return
     now = datetime.now(timezone.utc)
     actuals = _load_actual_match_ids()
     stats = _load_advanced_stat_match_ids()
     due = []
-    with fixtures_path.open("r", encoding="utf-8", newline="") as f:
-        for row in csv.DictReader(f):
-            kickoff_raw = row.get("kickoff_utc")
-            if not kickoff_raw:
-                continue
-            kickoff = datetime.fromisoformat(kickoff_raw.replace("Z", "+00:00")).astimezone(timezone.utc)
-            needs_result = row["match_id"] not in actuals
-            recently_finished = now - kickoff <= timedelta(hours=stats_lookback_hours)
-            needs_stats = row["match_id"] not in stats and recently_finished
-            if now >= kickoff + timedelta(minutes=buffer_minutes) and (needs_result or needs_stats):
-                due.append(row["match_id"])
+    seen = set()
+    for row in fixtures:
+        match_id = row.get("match_id", "")
+        if not match_id or match_id in seen:
+            continue
+        seen.add(match_id)
+        kickoff_raw = row.get("kickoff_utc")
+        if not kickoff_raw:
+            continue
+        kickoff = datetime.fromisoformat(kickoff_raw.replace("Z", "+00:00")).astimezone(timezone.utc)
+        needs_result = match_id not in actuals
+        recently_finished = now - kickoff <= timedelta(hours=stats_lookback_hours)
+        needs_stats = match_id not in stats and recently_finished
+        if now >= kickoff + timedelta(minutes=buffer_minutes) and (needs_result or needs_stats):
+            due.append(match_id)
     if not due:
         print("No due ESPN result/stat refresh needed.")
         return

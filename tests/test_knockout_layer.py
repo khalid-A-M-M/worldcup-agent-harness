@@ -47,6 +47,18 @@ class KnockoutLayerTest(unittest.TestCase):
             self.assertIn("team_stat_impact", sample)
             self.assertIn("goal_timing_impact", sample)
 
+    def test_knockout_prediction_contains_equation_learning_if_present(self) -> None:
+        path = ROOT / "outputs" / "knockout_bracket_prediction.json"
+        if not path.exists():
+            self.skipTest("knockout prediction has not been generated")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        equation = data.get("equation_learning", {})
+        self.assertIn("coefficients", equation)
+        self.assertIn("formula", equation)
+        self.assertIn("favorite_temperature", equation["coefficients"])
+        self.assertIn("two_way_logit", equation["formula"])
+        self.assertIn("equation_version", data["rounds"][-1]["matches"][0])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -65,6 +65,7 @@ def main() -> None:
         json.dumps({"metrics": metrics, "matches": scored, "snapshot": str(version_dir)}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    subprocess.run([sys.executable, str(ROOT / "learn_equation_parameters.py")], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / "run_worldcup_batch.py")], cwd=ROOT, check=True)
     print(f"Scored {len(scored)} completed forecasts.")
     brier = "n/a" if metrics["mean_brier_score"] is None else f"{metrics['mean_brier_score']:.3f}"
@@ -120,6 +121,8 @@ def _snapshot_version(scored: list[dict], metrics: dict) -> Path:
         shutil.copy2(path, version_dir / path.name)
     if (OUTPUTS / "tournament_projection.json").exists():
         shutil.copy2(OUTPUTS / "tournament_projection.json", version_dir / "tournament_projection.json")
+    if (DATA / "equation_learning.json").exists():
+        shutil.copy2(DATA / "equation_learning.json", version_dir / "equation_learning.json")
     (version_dir / "accuracy_report.json").write_text(
         json.dumps({"metrics": metrics, "matches": scored}, ensure_ascii=False, indent=2),
         encoding="utf-8",

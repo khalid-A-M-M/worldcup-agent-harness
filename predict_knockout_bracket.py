@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
@@ -66,8 +67,9 @@ SCENARIOS = [
 
 def main() -> None:
     learning = _load_learning()
+    equation = _load_equation_learning()
     fixtures = _read_csv(DATA / "knockout_fixtures.csv")
-    scenarios = [_project_scenario(fixtures, learning, scenario) for scenario in SCENARIOS]
+    scenarios = [_project_scenario(fixtures, learning, equation, scenario) for scenario in SCENARIOS]
     official = next(item for item in scenarios if item["scenario_id"] == "B")
     rounds = official["rounds"]
     champion = official["champion"]
@@ -76,6 +78,7 @@ def main() -> None:
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + penalty shootout model. No draw is allowed in knockout outputs.",
         "learning_summary": learning,
+        "equation_learning": equation,
         "champion": champion,
         "rounds": rounds,
         "scenarios": scenario_summaries,
@@ -84,6 +87,7 @@ def main() -> None:
             "data/match_advanced_stats.csv from ESPN-derived open match statistics where available",
             "data/player_performance_indicators.csv open-source-ready player-impact layer",
             "data/goal_timing_events.csv optional goal-minute layer; falls back to late-momentum indicators when minutes are not available",
+            "data/equation_learning.json learned equation parameters after every completed-match audit",
             "Published Round-of-32 pairings from FIFA/beIN/Yallakora text supplied with this run",
         ],
     }
@@ -92,7 +96,7 @@ def main() -> None:
     print(f"Projected 3 knockout paths through final. Official champion={champion}")
 
 
-def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
+def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], equation: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     rounds: list[dict[str, Any]] = []
     current = [_fixture_to_match(row) for row in fixtures]
     round_index = 0
@@ -103,7 +107,7 @@ def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], 
         matches = []
         winners = []
         for fixture in current:
-            prediction = _predict_knockout_match(fixture, round_name, learning, scenario)
+            prediction = _predict_knockout_match(fixture, round_name, learning, equation, scenario)
             matches.append(prediction)
             winners.append(prediction["winner"])
         rounds.append({"round": round_name, "matches": matches})
@@ -183,6 +187,14 @@ def _compact_match_for_scenario(match: dict[str, Any]) -> dict[str, Any]:
     ]
     return {key: match.get(key) for key in keys if key in match}
 
+
+def _load_equation_learning() -> dict[str, Any]:
+    path = DATA / "equation_learning.json"
+    if not path.exists():
+        import subprocess, sys
+        subprocess.run([sys.executable, str(ROOT / "learn_equation_parameters.py")], cwd=ROOT, check=True)
+    return json.loads(path.read_text(encoding="utf-8"))
+
 def _load_learning() -> dict[str, Any]:
     path = OUTPUTS / "group_learning_report.json"
     if not path.exists():
@@ -221,7 +233,7 @@ def _harness() -> AgentHarness:
     )
 
 
-def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
+def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: dict[str, Any], equation: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     state = _harness().run_match(
         MatchContext(
             match_id=fixture["match_id"],
@@ -241,16 +253,18 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
     final = state.get_payload("synthesizer")
     home, draw, away = float(final["home_win"]), float(final["draw"]), float(final["away_win"])
     adjustments = learning.get("learned_knockout_adjustments", {})
-    shrink = max(0.0, float(adjustments.get("favorite_shrink", 0.08)) + float(scenario.get("favorite_shrink_delta", 0.0)))
-    upset_floor = max(0.05, min(0.30, float(adjustments.get("upset_floor", 0.14)) + float(scenario.get("upset_floor_delta", 0.0))))
-    penalty_sensitivity = float(adjustments.get("penalty_sensitivity", 1.0)) * float(scenario.get("penalty_multiplier", 1.0))
+    coefficients = equation.get("coefficients", {})
+    shrink = max(0.0, float(adjustments.get("favorite_shrink", 0.08)) + float(coefficients.get("upset_curve", 0.14)) * 0.18 + float(scenario.get("favorite_shrink_delta", 0.0)))
+    upset_floor = max(0.05, min(0.34, float(adjustments.get("upset_floor", 0.14)) + float(coefficients.get("upset_curve", 0.14)) * 0.20 + float(scenario.get("upset_floor_delta", 0.0))))
+    penalty_sensitivity = float(adjustments.get("penalty_sensitivity", 1.0)) * float(coefficients.get("penalty_logit_gain", 1.0)) * float(scenario.get("penalty_multiplier", 1.0))
 
-    influence = _scenario_influence(fixture["home_team"], fixture["away_team"], scenario)
+    influence = _scenario_influence(fixture["home_team"], fixture["away_team"], scenario, coefficients)
     home += influence["home_probability_delta"]
     away += influence["away_probability_delta"]
+    home, away = _apply_equation_two_way(home, away, coefficients)
     home, away = _shrink_two_way(home, away, shrink, upset_floor)
-    draw = max(0.05, min(0.46, (draw + influence["draw_delta"]) * penalty_sensitivity))
-    penalty_home = _penalty_edge(fixture["home_team"], fixture["away_team"], scenario)
+    draw = max(0.05, min(0.48, (draw * float(coefficients.get("draw_temperature", 1.0)) + float(coefficients.get("draw_intercept", 0.0)) + influence["draw_delta"]) * penalty_sensitivity))
+    penalty_home = _penalty_edge(fixture["home_team"], fixture["away_team"], scenario, coefficients)
     home_direct = home
     away_direct = away
     home_penalty = draw * penalty_home
@@ -287,6 +301,8 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
         "goal_timing_impact": influence["goal_timing_impact"],
         "model_diagnostics": final.get("model_diagnostics", {}),
         "blend_weights": final.get("blend_weights", {}),
+        "equation_version": equation.get("equation_version"),
+        "equation_coefficients": coefficients,
         "audit_log": state.audit_log,
         "agents": _compact_agents(state),
     }
@@ -344,6 +360,18 @@ def _parse_dt(value: str) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
 
 
+
+def _apply_equation_two_way(home: float, away: float, coefficients: dict[str, Any]) -> tuple[float, float]:
+    total = max(home + away, 1e-9)
+    h = home / total
+    a = away / total
+    temperature = float(coefficients.get("favorite_temperature", 1.0))
+    bias = float(coefficients.get("home_bias_delta", 0.0))
+    logit = math.log(max(h, 1e-9) / max(a, 1e-9))
+    adjusted = logit * temperature + bias
+    h2 = 1 / (1 + math.exp(-adjusted))
+    return h2, 1 - h2
+
 def _shrink_two_way(home: float, away: float, shrink: float, floor: float) -> tuple[float, float]:
     total = max(home + away, 1e-9)
     h = home / total
@@ -386,10 +414,12 @@ def _seed_ranks() -> dict[str, float]:
     return {row["team"]: float(row.get("seed_rank") or 50) for row in rows}
 
 
-def _penalty_edge(home: str, away: str, scenario: dict[str, Any] | None = None) -> float:
+def _penalty_edge(home: str, away: str, scenario: dict[str, Any] | None = None, coefficients: dict[str, Any] | None = None) -> float:
     stats = _team_stats()
     ranks = _seed_ranks()
     scenario = scenario or {}
+    coefficients = coefficients or {}
+    coefficients = coefficients or {}
     players = _player_indicators()
     h, a = stats.get(home, {}), stats.get(away, {})
     hp, ap = players.get(home, {}), players.get(away, {})
@@ -398,7 +428,7 @@ def _penalty_edge(home: str, away: str, scenario: dict[str, Any] | None = None) 
     shot_edge = (h.get("shots_on_target", 3.0) - a.get("shots_on_target", 3.0)) * 0.012
     pressure_edge = (h.get("attacking_pressure_index", 45.0) - a.get("attacking_pressure_index", 45.0)) * 0.002
     discipline_edge = ((a.get("yellow_cards", 1.0) + 2 * a.get("red_cards", 0.0)) - (h.get("yellow_cards", 1.0) + 2 * h.get("red_cards", 0.0))) * 0.012
-    player_weight = float(scenario.get("player_weight", 0.75))
+    player_weight = float(scenario.get("player_weight", 0.75)) * float(coefficients.get("player_signal_gain", 1.0))
     player_keeper_edge = (hp.get("goalkeeper_penalty_index", 50.0) - ap.get("goalkeeper_penalty_index", 50.0)) * 0.0012 * player_weight
     taker_edge = (hp.get("penalty_taker_index", 50.0) - ap.get("penalty_taker_index", 50.0)) * 0.0010 * player_weight
     return max(0.33, min(0.67, 0.50 + rank_edge + keeper_edge + shot_edge + pressure_edge + discipline_edge + player_keeper_edge + taker_edge))
@@ -454,7 +484,7 @@ def _goal_timing_profile() -> dict[str, dict[str, float]]:
     return timing
 
 
-def _scenario_influence(home: str, away: str, scenario: dict[str, Any]) -> dict[str, Any]:
+def _scenario_influence(home: str, away: str, scenario: dict[str, Any], coefficients: dict[str, Any] | None = None) -> dict[str, Any]:
     players = _player_indicators()
     stats = _team_stats()
     timing = _goal_timing_profile()
@@ -467,19 +497,19 @@ def _scenario_influence(home: str, away: str, scenario: dict[str, Any]) -> dict[
         + (hp.get("availability_index", 50) - ap.get("availability_index", 50)) * 0.0012
         + (hp.get("bench_depth_index", 50) - ap.get("bench_depth_index", 50)) * 0.0010
         + (hp.get("defensive_leader_index", 50) - ap.get("defensive_leader_index", 50)) * 0.0008
-    ) * float(scenario.get("player_weight", 0.75))
+    ) * float(scenario.get("player_weight", 0.75)) * float(coefficients.get("player_signal_gain", 1.0))
     team_edge = (
         (hs.get("dominance_index", 50) - away_stats.get("dominance_index", 50)) * 0.0009
         + (hs.get("attacking_pressure_index", 45) - away_stats.get("attacking_pressure_index", 45)) * 0.0009
         + (hs.get("shots_on_target", 3) - away_stats.get("shots_on_target", 3)) * 0.006
         + (hs.get("pass_pct", 0.82) - away_stats.get("pass_pct", 0.82)) * 0.08
-    ) * float(scenario.get("team_stats_weight", 0.85))
+    ) * float(scenario.get("team_stats_weight", 0.85)) * float(coefficients.get("stat_signal_gain", 1.0))
     timing_edge = (
         (ht.get("late_goals", 0) - at.get("late_goals", 0)) * 0.010
         + (ht.get("comeback_goals", 0) - at.get("comeback_goals", 0)) * 0.012
         + (ht.get("late_momentum_proxy", 45) - at.get("late_momentum_proxy", 45)) * 0.0006
-    ) * float(scenario.get("goal_timing_weight", 0.75))
-    total_edge = max(-0.12, min(0.12, player_edge + team_edge + timing_edge))
+    ) * float(scenario.get("goal_timing_weight", 0.75)) * float(coefficients.get("timing_signal_gain", 1.0))
+    total_edge = max(-0.16, min(0.16, player_edge + team_edge + timing_edge + float(coefficients.get("home_bias_delta", 0.0))))
     draw_delta = abs(total_edge) * -0.10 + float(scenario.get("chaos_weight", 0.6)) * 0.015
     return {
         "home_probability_delta": total_edge,

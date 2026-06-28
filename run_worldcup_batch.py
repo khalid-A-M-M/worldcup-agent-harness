@@ -53,6 +53,12 @@ def main() -> None:
         stdout=subprocess.DEVNULL,
     )
     subprocess.run(
+        [sys.executable, str(ROOT / "learn_equation_parameters.py")],
+        cwd=ROOT,
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+    subprocess.run(
         [sys.executable, str(ROOT / "predict_knockout_bracket.py")],
         cwd=ROOT,
         check=True,
@@ -67,6 +73,7 @@ def main() -> None:
                 "team_visuals": visuals,
                 "knockout_bracket": "outputs/knockout_bracket_prediction.json",
                 "learning_report": "outputs/group_learning_report.json",
+                "equation_learning": "data/equation_learning.json",
             },
             ensure_ascii=False,
             indent=2,

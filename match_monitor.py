@@ -35,10 +35,10 @@ def main() -> None:
 
 
 def _due_matches(buffer_minutes: int) -> list[dict]:
-    fixtures_path = DATA / "all_group_fixtures.csv"
-    if not fixtures_path.exists():
-        fixtures_path = DATA / "fixtures.csv"
-    fixtures = _read_csv(fixtures_path)
+    fixtures = []
+    for fixtures_path in (DATA / "all_group_fixtures.csv", DATA / "fixtures.csv", DATA / "knockout_fixtures.csv"):
+        if fixtures_path.exists():
+            fixtures.extend(_read_csv(fixtures_path))
     state = _load_state()
     checked = set(state.get("checked_match_ids", []))
     actuals = _load_actual_match_ids()
