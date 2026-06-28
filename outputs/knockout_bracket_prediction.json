@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-28T21:35:38.905249Z",
+  "generated_at_utc": "2026-06-28T21:40:57.620236Z",
   "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + penalty shootout model. No draw is allowed in knockout outputs.",
   "learning_summary": {
     "summary": {
@@ -7,8 +7,8 @@
       "correct": 16,
       "missed": 12,
       "accuracy": 0.5714285714285714,
-      "mean_brier_score": 0.5690390615491535,
-      "mean_log_loss": 1.2795825225514281
+      "mean_brier_score": 0.574080092515412,
+      "mean_log_loss": 1.290490434044192
     },
     "miss_patterns": {
       "misses_by_predicted_label": {
@@ -40,7 +40,7 @@
       ]
     },
     "learned_knockout_adjustments": {
-      "uncertainty_multiplier": 1.1132,
+      "uncertainty_multiplier": 1.1139,
       "favorite_shrink": 0.0419,
       "upset_floor": 0.145,
       "penalty_sensitivity": 1.0857,
@@ -55,8 +55,8 @@
     "source": "Derived from outputs/accuracy_report.json completed group-stage forecast audit."
   },
   "equation_learning": {
-    "equation_version": 3,
-    "generated_at_utc": "2026-06-28T21:35:00.953175Z",
+    "equation_version": 5,
+    "generated_at_utc": "2026-06-28T21:40:57.038204Z",
     "formula": {
       "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
       "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -193,7 +193,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -426,7 +426,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -659,7 +659,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -895,7 +895,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -1128,7 +1128,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -1361,7 +1361,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -1594,7 +1594,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -1830,7 +1830,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -2065,7 +2065,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -2298,7 +2298,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -2531,7 +2531,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -2764,7 +2764,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -2997,7 +2997,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -3230,7 +3230,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -3463,7 +3463,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -3696,7 +3696,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -3934,7 +3934,7 @@
             "economic_world_kliment": 0.385,
             "tournament_match_sample": 3.5
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -4167,7 +4167,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -4402,7 +4402,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -4635,7 +4635,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -4868,7 +4868,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -5104,7 +5104,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -5340,7 +5340,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -5573,7 +5573,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -5811,7 +5811,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -6044,7 +6044,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -6277,7 +6277,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -6510,7 +6510,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -6750,7 +6750,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -6906,7 +6906,7 @@
           "upset_risk": "high",
           "confidence_margin": 0.0460624588152212,
           "baseline_three_way": {
-            "home_win": 0.40536760091811336,
+            "home_win": 0.4053676009181134,
             "draw": 0.2917319817856301,
             "away_win": 0.30290041729625655
           },
@@ -6983,7 +6983,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
@@ -7018,7 +7018,7 @@
               "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
               "payload": {
                 "baseline_probabilities": {
-                  "home_win": 0.40097491377563743,
+                  "home_win": 0.4009749137756375,
                   "draw": 0.30267358208005263,
                   "away_win": 0.2963515041443096
                 },
@@ -7108,7 +7108,7 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.40536760091811336,
+                "home_win": 0.4053676009181134,
                 "draw": 0.2917319817856301,
                 "away_win": 0.30290041729625655,
                 "recommended_label": "home_win",
@@ -7221,7 +7221,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.004821428571428571,
