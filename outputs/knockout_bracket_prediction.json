@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-29T09:06:36.006203Z",
+  "generated_at_utc": "2026-06-29T09:14:00.809733Z",
   "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + TimesFM-inspired time-series agent + penalty shootout model. No draw is allowed in knockout outputs.",
   "learning_summary": {
     "summary": {
@@ -56,8 +56,8 @@
     "source": "Derived from outputs/accuracy_report.json completed group-stage forecast audit."
   },
   "equation_learning": {
-    "equation_version": 3,
-    "generated_at_utc": "2026-06-29T09:06:35.355926Z",
+    "equation_version": 5,
+    "generated_at_utc": "2026-06-29T09:14:00.133046Z",
     "formula": {
       "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
       "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -92,7 +92,7 @@
     ]
   },
   "time_series_forecast": {
-    "generated_at_utc": "2026-06-29T09:06:35.391380Z",
+    "generated_at_utc": "2026-06-29T09:14:00.169924Z",
     "agent": "time_series_agent",
     "inspired_by": {
       "project": "google-research/timesfm",
@@ -1030,11 +1030,11 @@
           "away_team": "Canada",
           "winner": "Canada",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.14000042485978534,
-          "away_advance_probability": 0.8599995751402147,
+          "home_advance_probability": 0.14000042470060994,
+          "away_advance_probability": 0.85999957529939,
           "regulation_or_extra_time": {
-            "home": 0.07687155925436562,
-            "away": 0.9231284407456344
+            "home": 0.07687155904230292,
+            "away": 0.9231284409576971
           },
           "penalty_shootout": {
             "probability": 0.33225793036027734,
@@ -1042,11 +1042,11 @@
             "away_win_if_shootout": 0.6699999999999999
           },
           "upset_risk": "low",
-          "confidence_margin": 0.7199991502804294,
+          "confidence_margin": 0.7199991505987801,
           "baseline_three_way": {
-            "home_win": 0.12749118707715176,
+            "home_win": 0.12587550707715178,
             "draw": 0.26010653306231896,
-            "away_win": 0.6124022798605293
+            "away_win": 0.6140179598605293
           },
           "key_factors": [
             {
@@ -1138,7 +1138,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -1263,9 +1263,9 @@
               "status": "ok",
               "summary": "Final forecast: away_win.",
               "payload": {
-                "home_win": 0.12749118707715176,
+                "home_win": 0.12587550707715178,
                 "draw": 0.26010653306231896,
-                "away_win": 0.6124022798605293,
+                "away_win": 0.6140179598605293,
                 "recommended_label": "away_win",
                 "explanation": "South Africa vs Canada: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -1280,23 +1280,23 @@
           "away_team": "Japan",
           "winner": "Brazil",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.7146114096251311,
-          "away_advance_probability": 0.28538859037486897,
+          "home_advance_probability": 0.7158580110452675,
+          "away_advance_probability": 0.2841419889547325,
           "regulation_or_extra_time": {
-            "home": 0.7308890809833536,
-            "away": 0.2691109190166464
+            "home": 0.7325556499553716,
+            "away": 0.2674443500446284
           },
           "penalty_shootout": {
-            "probability": 0.33688999956030286,
+            "probability": 0.3368899995603029,
             "home_win_if_shootout": 0.6662939428571428,
             "away_win_if_shootout": 0.33370605714285717
           },
           "upset_risk": "low",
-          "confidence_margin": 0.4292228192502622,
+          "confidence_margin": 0.43171602209053495,
           "baseline_three_way": {
-            "home_win": 0.4990778660294334,
-            "draw": 0.2631111361490068,
-            "away_win": 0.23781099782155976
+            "home_win": 0.5002749555479334,
+            "draw": 0.26311113614900683,
+            "away_win": 0.23661390830305984
           },
           "key_factors": [
             {
@@ -1388,7 +1388,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -1513,9 +1513,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.4990778660294334,
-                "draw": 0.2631111361490068,
-                "away_win": 0.23781099782155976,
+                "home_win": 0.5002749555479334,
+                "draw": 0.26311113614900683,
+                "away_win": 0.23661390830305984,
                 "recommended_label": "home_win",
                 "explanation": "Brazil vs Japan: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -1530,11 +1530,11 @@
           "away_team": "Paraguay",
           "winner": "Germany",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8673993206249248,
-          "away_advance_probability": 0.13260067937507525,
+          "home_advance_probability": 0.8673993207622336,
+          "away_advance_probability": 0.13260067923776653,
           "regulation_or_extra_time": {
-            "home": 0.9231284408837367,
-            "away": 0.07687155911626331
+            "home": 0.92312844105981,
+            "away": 0.07687155894019004
           },
           "penalty_shootout": {
             "probability": 0.28231667709080904,
@@ -1542,11 +1542,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.7347986412498495,
+          "confidence_margin": 0.734798641524467,
           "baseline_three_way": {
-            "home_win": 0.6883554224754647,
-            "draw": 0.21570326609001259,
-            "away_win": 0.09594131143452284
+            "home_win": 0.6897507824754646,
+            "draw": 0.2157032660900126,
+            "away_win": 0.09454595143452284
           },
           "key_factors": [
             {
@@ -1638,7 +1638,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -1766,9 +1766,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.6883554224754647,
-                "draw": 0.21570326609001259,
-                "away_win": 0.09594131143452284,
+                "home_win": 0.6897507824754646,
+                "draw": 0.2157032660900126,
+                "away_win": 0.09454595143452284,
                 "recommended_label": "home_win",
                 "explanation": "Germany vs Paraguay: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -1783,11 +1783,11 @@
           "away_team": "Morocco",
           "winner": "Netherlands",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5501438900171821,
-          "away_advance_probability": 0.44985610998281794,
+          "home_advance_probability": 0.5506295668272573,
+          "away_advance_probability": 0.4493704331727427,
           "regulation_or_extra_time": {
-            "home": 0.530046624979735,
-            "away": 0.469953375020265
+            "home": 0.5306916702735818,
+            "away": 0.4693083297264182
           },
           "penalty_shootout": {
             "probability": 0.32813690187699396,
@@ -1795,11 +1795,11 @@
             "away_win_if_shootout": 0.38860952380952374
           },
           "upset_risk": "medium",
-          "confidence_margin": 0.10028778003436417,
+          "confidence_margin": 0.10125913365451455,
           "baseline_three_way": {
-            "home_win": 0.47745346172797554,
+            "home_win": 0.47807280389197554,
             "draw": 0.2436744988524836,
-            "away_win": 0.27887203941954086
+            "away_win": 0.2782526972555409
           },
           "key_factors": [
             {
@@ -1891,7 +1891,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -2016,9 +2016,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.47745346172797554,
+                "home_win": 0.47807280389197554,
                 "draw": 0.2436744988524836,
-                "away_win": 0.27887203941954086,
+                "away_win": 0.2782526972555409,
                 "recommended_label": "home_win",
                 "explanation": "Netherlands vs Morocco: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -2033,11 +2033,11 @@
           "away_team": "Norway",
           "winner": "Ivory Coast",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5334673588766624,
-          "away_advance_probability": 0.46653264112333764,
+          "home_advance_probability": 0.5334965290604085,
+          "away_advance_probability": 0.4665034709395916,
           "regulation_or_extra_time": {
-            "home": 0.5417339865847185,
-            "away": 0.4582660134152815
+            "home": 0.5417727621208467,
+            "away": 0.4582272378791533
           },
           "penalty_shootout": {
             "probability": 0.32928666016539987,
@@ -2045,11 +2045,11 @@
             "away_win_if_shootout": 0.4916372952380953
           },
           "upset_risk": "high",
-          "confidence_margin": 0.06693471775332477,
+          "confidence_margin": 0.06699305812081685,
           "baseline_three_way": {
-            "home_win": 0.393257629042042,
+            "home_win": 0.3932941482295419,
             "draw": 0.252769883384651,
-            "away_win": 0.35397248757330707
+            "away_win": 0.3539359683858071
           },
           "key_factors": [
             {
@@ -2141,7 +2141,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -2266,9 +2266,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.393257629042042,
+                "home_win": 0.3932941482295419,
                 "draw": 0.252769883384651,
-                "away_win": 0.35397248757330707,
+                "away_win": 0.3539359683858071,
                 "recommended_label": "home_win",
                 "explanation": "Ivory Coast vs Norway: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -2283,23 +2283,23 @@
           "away_team": "Sweden",
           "winner": "France",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8713985577006957,
-          "away_advance_probability": 0.1286014422993042,
+          "home_advance_probability": 0.8713985578233225,
+          "away_advance_probability": 0.12860144217667757,
           "regulation_or_extra_time": {
-            "home": 0.9231284473065924,
-            "away": 0.07687155269340762
+            "home": 0.9231284474607161,
+            "away": 0.0768715525392839
           },
           "penalty_shootout": {
-            "probability": 0.2568533270370976,
+            "probability": 0.2568533270370977,
             "home_win_if_shootout": 0.67,
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.7427971154013915,
+          "confidence_margin": 0.742797115646645,
           "baseline_three_way": {
-            "home_win": 0.6776266698039113,
-            "draw": 0.20241182903841098,
-            "away_win": 0.11996150115767767
+            "home_win": 0.6790220298039114,
+            "draw": 0.202411829038411,
+            "away_win": 0.1185661411576777
           },
           "key_factors": [
             {
@@ -2391,7 +2391,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -2516,9 +2516,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.6776266698039113,
-                "draw": 0.20241182903841098,
-                "away_win": 0.11996150115767767,
+                "home_win": 0.6790220298039114,
+                "draw": 0.202411829038411,
+                "away_win": 0.1185661411576777,
                 "recommended_label": "home_win",
                 "explanation": "France vs Sweden: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -2533,11 +2533,11 @@
           "away_team": "Bosnia & Herzegovina",
           "winner": "USA",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.7046319661513906,
-          "away_advance_probability": 0.2953680338486093,
+          "home_advance_probability": 0.7059962953738124,
+          "away_advance_probability": 0.29400370462618763,
           "regulation_or_extra_time": {
-            "home": 0.714752006045854,
-            "away": 0.285247993954146
+            "home": 0.7165150150919892,
+            "away": 0.2834849849080108
           },
           "penalty_shootout": {
             "probability": 0.29221672977573604,
@@ -2545,11 +2545,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.40926393230278124,
+          "confidence_margin": 0.41199259074762473,
           "baseline_three_way": {
-            "home_win": 0.6577605121110428,
+            "home_win": 0.6591558721110429,
             "draw": 0.2152940578467265,
-            "away_win": 0.12694543004223063
+            "away_win": 0.12555007004223065
           },
           "key_factors": [
             {
@@ -2641,7 +2641,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -2769,9 +2769,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.6577605121110428,
+                "home_win": 0.6591558721110429,
                 "draw": 0.2152940578467265,
-                "away_win": 0.12694543004223063,
+                "away_win": 0.12555007004223065,
                 "recommended_label": "home_win",
                 "explanation": "USA vs Bosnia & Herzegovina: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -2786,11 +2786,11 @@
           "away_team": "Egypt",
           "winner": "Egypt",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.4745337990607704,
-          "away_advance_probability": 0.5254662009392295,
+          "home_advance_probability": 0.4737934191311491,
+          "away_advance_probability": 0.5262065808688509,
           "regulation_or_extra_time": {
-            "home": 0.46265556382276984,
-            "away": 0.5373444361772302
+            "home": 0.46163265636088,
+            "away": 0.53836734363912
           },
           "penalty_shootout": {
             "probability": 0.38159804306549183,
@@ -2798,11 +2798,11 @@
             "away_win_if_shootout": 0.49433859047619055
           },
           "upset_risk": "high",
-          "confidence_margin": 0.050932401878459044,
+          "confidence_margin": 0.052413161737701774,
           "baseline_three_way": {
-            "home_win": 0.29939156928814725,
+            "home_win": 0.2984809195611473,
             "draw": 0.2910659602689858,
-            "away_win": 0.40954247044286696
+            "away_win": 0.4104531201698669
           },
           "key_factors": [
             {
@@ -2894,7 +2894,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -3021,9 +3021,9 @@
               "status": "ok",
               "summary": "Final forecast: away_win.",
               "payload": {
-                "home_win": 0.29939156928814725,
+                "home_win": 0.2984809195611473,
                 "draw": 0.2910659602689858,
-                "away_win": 0.40954247044286696,
+                "away_win": 0.4104531201698669,
                 "recommended_label": "away_win",
                 "explanation": "Australia vs Egypt: baseline model favors away_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
               },
@@ -3038,11 +3038,11 @@
           "away_team": "Cape Verde",
           "winner": "Argentina",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8627440574831851,
-          "away_advance_probability": 0.13725594251681494,
+          "home_advance_probability": 0.8627440576019608,
+          "away_advance_probability": 0.13725594239803918,
           "regulation_or_extra_time": {
-            "home": 0.923128449786047,
-            "away": 0.07687155021395298
+            "home": 0.9231284499420338,
+            "away": 0.0768715500579662
           },
           "penalty_shootout": {
             "probability": 0.31328795860868436,
@@ -3050,11 +3050,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.7254881149663701,
+          "confidence_margin": 0.7254881152039216,
           "baseline_three_way": {
-            "home_win": 0.6504183978482272,
-            "draw": 0.24783792841828656,
-            "away_win": 0.10174367373348626
+            "home_win": 0.6518137578482271,
+            "draw": 0.24783792841828658,
+            "away_win": 0.10034831373348627
           },
           "key_factors": [
             {
@@ -3146,7 +3146,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -3271,9 +3271,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.6504183978482272,
-                "draw": 0.24783792841828656,
-                "away_win": 0.10174367373348626,
+                "home_win": 0.6518137578482271,
+                "draw": 0.24783792841828658,
+                "away_win": 0.10034831373348627,
                 "recommended_label": "home_win",
                 "explanation": "Argentina vs Cape Verde: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -3288,11 +3288,11 @@
           "away_team": "Austria",
           "winner": "Spain",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8627782619297043,
-          "away_advance_probability": 0.13722173807029575,
+          "home_advance_probability": 0.8627782620639735,
+          "away_advance_probability": 0.1372217379360266,
           "regulation_or_extra_time": {
-            "home": 0.9231284431404853,
-            "away": 0.07687155685951474
+            "home": 0.923128443316788,
+            "away": 0.076871556683212
           },
           "penalty_shootout": {
             "probability": 0.313054908819478,
@@ -3300,11 +3300,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.7255565238594086,
+          "confidence_margin": 0.7255565241279469,
           "baseline_three_way": {
-            "home_win": 0.5947824563838153,
-            "draw": 0.24765033894370092,
-            "away_win": 0.15756720467248372
+            "home_win": 0.5961778163838153,
+            "draw": 0.24765033894370095,
+            "away_win": 0.15617184467248374
           },
           "key_factors": [
             {
@@ -3396,7 +3396,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -3521,9 +3521,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5947824563838153,
-                "draw": 0.24765033894370092,
-                "away_win": 0.15756720467248372,
+                "home_win": 0.5961778163838153,
+                "draw": 0.24765033894370095,
+                "away_win": 0.15617184467248374,
                 "recommended_label": "home_win",
                 "explanation": "Spain vs Austria: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -3538,11 +3538,11 @@
           "away_team": "Senegal",
           "winner": "Belgium",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5495568964434833,
-          "away_advance_probability": 0.45044310355651684,
+          "home_advance_probability": 0.5498623826236606,
+          "away_advance_probability": 0.45013761737633945,
           "regulation_or_extra_time": {
-            "home": 0.5526262451448463,
-            "away": 0.44737375485515374
+            "home": 0.5530313002583959,
+            "away": 0.44696869974160414
           },
           "penalty_shootout": {
             "probability": 0.32593596644659295,
@@ -3550,11 +3550,11 @@
             "away_win_if_shootout": 0.4598601333333333
           },
           "upset_risk": "high",
-          "confidence_margin": 0.09911379288696642,
+          "confidence_margin": 0.09972476524732116,
           "baseline_three_way": {
-            "home_win": 0.48788426082443725,
+            "home_win": 0.4882677653459373,
             "draw": 0.24295970009756016,
-            "away_win": 0.26915603907800256
+            "away_win": 0.2687725345565025
           },
           "key_factors": [
             {
@@ -3646,7 +3646,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -3771,9 +3771,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.48788426082443725,
+                "home_win": 0.4882677653459373,
                 "draw": 0.24295970009756016,
-                "away_win": 0.26915603907800256,
+                "away_win": 0.2687725345565025,
                 "recommended_label": "home_win",
                 "explanation": "Belgium vs Senegal: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -3788,11 +3788,11 @@
           "away_team": "Ghana",
           "winner": "Colombia",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8089978872527456,
-          "away_advance_probability": 0.19100211274725448,
+          "home_advance_probability": 0.8113645492792555,
+          "away_advance_probability": 0.1886354507207446,
           "regulation_or_extra_time": {
-            "home": 0.8606981698723459,
-            "away": 0.13930183012765407
+            "home": 0.8639451121538582,
+            "away": 0.13605488784614184
           },
           "penalty_shootout": {
             "probability": 0.3719501327785775,
@@ -3800,11 +3800,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.6179957745054911,
+          "confidence_margin": 0.6227290985585109,
           "baseline_three_way": {
-            "home_win": 0.5049561772745899,
+            "home_win": 0.5063515372745898,
             "draw": 0.2950570504267447,
-            "away_win": 0.19998677229866552
+            "away_win": 0.19859141229866553
           },
           "key_factors": [
             {
@@ -3896,7 +3896,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -4021,9 +4021,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5049561772745899,
+                "home_win": 0.5063515372745898,
                 "draw": 0.2950570504267447,
-                "away_win": 0.19998677229866552,
+                "away_win": 0.19859141229866553,
                 "recommended_label": "home_win",
                 "explanation": "Colombia vs Ghana: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -4038,11 +4038,11 @@
           "away_team": "DR Congo",
           "winner": "England",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8495575462371313,
-          "away_advance_probability": 0.1504424537628686,
+          "home_advance_probability": 0.8534818810351317,
+          "away_advance_probability": 0.1465181189648683,
           "regulation_or_extra_time": {
-            "home": 0.9070280694054924,
-            "away": 0.09297193059450759
+            "home": 0.9122084559743887,
+            "away": 0.08779154402561129
           },
           "penalty_shootout": {
             "probability": 0.3200674344951396,
@@ -4050,11 +4050,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.6991150924742627,
+          "confidence_margin": 0.7069637620702633,
           "baseline_three_way": {
-            "home_win": 0.6145193278750103,
+            "home_win": 0.6159146878750104,
             "draw": 0.24900278427415967,
-            "away_win": 0.13647788785083004
+            "away_win": 0.13508252785083008
           },
           "key_factors": [
             {
@@ -4146,7 +4146,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -4271,9 +4271,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.6145193278750103,
+                "home_win": 0.6159146878750104,
                 "draw": 0.24900278427415967,
-                "away_win": 0.13647788785083004,
+                "away_win": 0.13508252785083008,
                 "recommended_label": "home_win",
                 "explanation": "England vs DR Congo: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -4288,11 +4288,11 @@
           "away_team": "Ecuador",
           "winner": "Mexico",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.8108377417266905,
-          "away_advance_probability": 0.18916225827330946,
+          "home_advance_probability": 0.8132591551553161,
+          "away_advance_probability": 0.18674084484468392,
           "regulation_or_extra_time": {
-            "home": 0.8655430602945433,
-            "away": 0.1344569397054567
+            "home": 0.8688356051979659,
+            "away": 0.13116439480203412
           },
           "penalty_shootout": {
             "probability": 0.35976156095390044,
@@ -4300,11 +4300,11 @@
             "away_win_if_shootout": 0.3412221904761905
           },
           "upset_risk": "low",
-          "confidence_margin": 0.6216754834533811,
+          "confidence_margin": 0.6265183103106322,
           "baseline_three_way": {
-            "home_win": 0.549930277155873,
+            "home_win": 0.5513256371558729,
             "draw": 0.28245008577979863,
-            "away_win": 0.1676196370643285
+            "away_win": 0.16622427706432852
           },
           "key_factors": [
             {
@@ -4396,7 +4396,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -4521,9 +4521,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.549930277155873,
+                "home_win": 0.5513256371558729,
                 "draw": 0.28245008577979863,
-                "away_win": 0.1676196370643285,
+                "away_win": 0.16622427706432852,
                 "recommended_label": "home_win",
                 "explanation": "Mexico vs Ecuador: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -4538,11 +4538,11 @@
           "away_team": "Croatia",
           "winner": "Portugal",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5615742277964314,
-          "away_advance_probability": 0.4384257722035687,
+          "home_advance_probability": 0.5626121925308513,
+          "away_advance_probability": 0.43738780746914885,
           "regulation_or_extra_time": {
-            "home": 0.568471337974739,
-            "away": 0.43152866202526097
+            "home": 0.569864241711013,
+            "away": 0.430135758288987
           },
           "penalty_shootout": {
             "probability": 0.3419567063157595,
@@ -4550,11 +4550,11 @@
             "away_win_if_shootout": 0.45859531428571443
           },
           "upset_risk": "medium",
-          "confidence_margin": 0.1231484555928627,
+          "confidence_margin": 0.12522438506170241,
           "baseline_three_way": {
-            "home_win": 0.5394501152002837,
+            "home_win": 0.5407273201852837,
             "draw": 0.25734250057124747,
-            "away_win": 0.20320738422846887
+            "away_win": 0.2019301792434689
           },
           "key_factors": [
             {
@@ -4646,7 +4646,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -4771,9 +4771,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5394501152002837,
+                "home_win": 0.5407273201852837,
                 "draw": 0.25734250057124747,
-                "away_win": 0.20320738422846887,
+                "away_win": 0.2019301792434689,
                 "recommended_label": "home_win",
                 "explanation": "Portugal vs Croatia: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -4788,11 +4788,11 @@
           "away_team": "Uruguay",
           "winner": "Switzerland",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.6377031195903449,
-          "away_advance_probability": 0.3622968804096552,
+          "home_advance_probability": 0.6390099721718773,
+          "away_advance_probability": 0.3609900278281228,
           "regulation_or_extra_time": {
-            "home": 0.6792064809947709,
-            "away": 0.3207935190052291
+            "home": 0.6809580864773025,
+            "away": 0.3190419135226975
           },
           "penalty_shootout": {
             "probability": 0.34032369624866204,
@@ -4800,11 +4800,11 @@
             "away_win_if_shootout": 0.4842494857142857
           },
           "upset_risk": "low",
-          "confidence_margin": 0.2754062391806897,
+          "confidence_margin": 0.2780199443437545,
           "baseline_three_way": {
-            "home_win": 0.5229709217643295,
+            "home_win": 0.5243662817643294,
             "draw": 0.2603209176774569,
-            "away_win": 0.21670816055821368
+            "away_win": 0.21531280055821367
           },
           "key_factors": [
             {
@@ -4896,7 +4896,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -5021,9 +5021,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5229709217643295,
+                "home_win": 0.5243662817643294,
                 "draw": 0.2603209176774569,
-                "away_win": 0.21670816055821368,
+                "away_win": 0.21531280055821367,
                 "recommended_label": "home_win",
                 "explanation": "Switzerland vs Uruguay: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -5043,11 +5043,11 @@
           "away_team": "Brazil",
           "winner": "Brazil",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.39787248906600403,
-          "away_advance_probability": 0.602127510933996,
+          "home_advance_probability": 0.397781964630814,
+          "away_advance_probability": 0.602218035369186,
           "regulation_or_extra_time": {
-            "home": 0.4214977646628796,
-            "away": 0.5785022353371204
+            "home": 0.421375730189395,
+            "away": 0.578624269810605
           },
           "penalty_shootout": {
             "probability": 0.3480832355197799,
@@ -5055,11 +5055,11 @@
             "away_win_if_shootout": 0.6699999999999999
           },
           "upset_risk": "medium",
-          "confidence_margin": 0.20425502186799194,
+          "confidence_margin": 0.20443607073837206,
           "baseline_three_way": {
-            "home_win": 0.286454095781696,
+            "home_win": 0.286345241980946,
             "draw": 0.2655034188157913,
-            "away_win": 0.4480424854025127
+            "away_win": 0.44815133920326267
           },
           "key_factors": [
             {
@@ -5151,7 +5151,7 @@
             "economic_world_kliment": 0.385,
             "tournament_match_sample": 3.5
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -5276,9 +5276,9 @@
               "status": "ok",
               "summary": "Final forecast: away_win.",
               "payload": {
-                "home_win": 0.286454095781696,
+                "home_win": 0.286345241980946,
                 "draw": 0.2655034188157913,
-                "away_win": 0.4480424854025127,
+                "away_win": 0.44815133920326267,
                 "recommended_label": "away_win",
                 "explanation": "Canada vs Brazil: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -5293,11 +5293,11 @@
           "away_team": "Netherlands",
           "winner": "Germany",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5178991090604007,
-          "away_advance_probability": 0.48210089093959935,
+          "home_advance_probability": 0.5180867746522362,
+          "away_advance_probability": 0.48191322534776376,
           "regulation_or_extra_time": {
-            "home": 0.5384067232956564,
-            "away": 0.4615932767043436
+            "home": 0.5386533116838633,
+            "away": 0.4613466883161367
           },
           "penalty_shootout": {
             "probability": 0.3139776226158648,
@@ -5305,11 +5305,11 @@
             "away_win_if_shootout": 0.5474164190476191
           },
           "upset_risk": "high",
-          "confidence_margin": 0.03579821812080136,
+          "confidence_margin": 0.03617354930447242,
           "baseline_three_way": {
-            "home_win": 0.4065675677045134,
+            "home_win": 0.4068121365215134,
             "draw": 0.237966585369365,
-            "away_win": 0.3554658469261216
+            "away_win": 0.35522127810912163
           },
           "key_factors": [
             {
@@ -5401,7 +5401,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -5528,9 +5528,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.4065675677045134,
+                "home_win": 0.4068121365215134,
                 "draw": 0.237966585369365,
-                "away_win": 0.3554658469261216,
+                "away_win": 0.35522127810912163,
                 "recommended_label": "home_win",
                 "explanation": "Germany vs Netherlands: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
               },
@@ -5545,11 +5545,11 @@
           "away_team": "France",
           "winner": "France",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.13700722962222092,
-          "away_advance_probability": 0.862992770377779,
+          "home_advance_probability": 0.13700722948179833,
+          "away_advance_probability": 0.8629927705182017,
           "regulation_or_extra_time": {
-            "home": 0.07687156076851387,
-            "away": 0.9231284392314861
+            "home": 0.0768715605843362,
+            "away": 0.9231284394156638
           },
           "penalty_shootout": {
             "probability": 0.3115954485548492,
@@ -5557,11 +5557,11 @@
             "away_win_if_shootout": 0.6699999999999999
           },
           "upset_risk": "low",
-          "confidence_margin": 0.7259855407555581,
+          "confidence_margin": 0.7259855410364033,
           "baseline_three_way": {
-            "home_win": 0.1469175064500769,
+            "home_win": 0.1455221464500769,
             "draw": 0.24422728337628957,
-            "away_win": 0.6088552101736335
+            "away_win": 0.6102505701736335
           },
           "key_factors": [
             {
@@ -5653,7 +5653,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -5778,9 +5778,9 @@
               "status": "ok",
               "summary": "Final forecast: away_win.",
               "payload": {
-                "home_win": 0.1469175064500769,
+                "home_win": 0.1455221464500769,
                 "draw": 0.24422728337628957,
-                "away_win": 0.6088552101736335,
+                "away_win": 0.6102505701736335,
                 "recommended_label": "away_win",
                 "explanation": "Ivory Coast vs France: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -5795,11 +5795,11 @@
           "away_team": "Egypt",
           "winner": "USA",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.6222150382443749,
-          "away_advance_probability": 0.3777849617556252,
+          "home_advance_probability": 0.6233180452217594,
+          "away_advance_probability": 0.3766819547782406,
           "regulation_or_extra_time": {
-            "home": 0.6064776704512153,
-            "away": 0.39352232954878474
+            "home": 0.6079439387108897,
+            "away": 0.3920560612891103
           },
           "penalty_shootout": {
             "probability": 0.3293372478488368,
@@ -5807,11 +5807,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.24443007648874965,
+          "confidence_margin": 0.24663609044351875,
           "baseline_three_way": {
-            "home_win": 0.5397347692718348,
+            "home_win": 0.5410516780628348,
             "draw": 0.24535468481529737,
-            "away_win": 0.21491054591286785
+            "away_win": 0.21359363712186785
           },
           "key_factors": [
             {
@@ -5903,7 +5903,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -6028,9 +6028,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5397347692718348,
+                "home_win": 0.5410516780628348,
                 "draw": 0.24535468481529737,
-                "away_win": 0.21491054591286785,
+                "away_win": 0.21359363712186785,
                 "recommended_label": "home_win",
                 "explanation": "USA vs Egypt: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -6045,11 +6045,11 @@
           "away_team": "Spain",
           "winner": "Spain",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.47836857394425664,
-          "away_advance_probability": 0.5216314260557434,
+          "home_advance_probability": 0.47797491421576016,
+          "away_advance_probability": 0.5220250857842399,
           "regulation_or_extra_time": {
-            "home": 0.5027401304779632,
-            "away": 0.4972598695220368
+            "home": 0.5021966283154112,
+            "away": 0.49780337168458877
           },
           "penalty_shootout": {
             "probability": 0.380639479247214,
@@ -6057,11 +6057,11 @@
             "away_win_if_shootout": 0.5856593523809525
           },
           "upset_risk": "high",
-          "confidence_margin": 0.04326285211148678,
+          "confidence_margin": 0.044050171568479735,
           "baseline_three_way": {
-            "home_win": 0.32027480213737575,
+            "home_win": 0.3197780379888757,
             "draw": 0.2888188252085508,
-            "away_win": 0.3909063726540734
+            "away_win": 0.39140313680257344
           },
           "key_factors": [
             {
@@ -6153,7 +6153,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -6281,9 +6281,9 @@
               "status": "ok",
               "summary": "Final forecast: away_win.",
               "payload": {
-                "home_win": 0.32027480213737575,
+                "home_win": 0.3197780379888757,
                 "draw": 0.2888188252085508,
-                "away_win": 0.3909063726540734,
+                "away_win": 0.39140313680257344,
                 "recommended_label": "away_win",
                 "explanation": "Argentina vs Spain: baseline model favors away_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the home-side baseline.."
               },
@@ -6298,11 +6298,11 @@
           "away_team": "Colombia",
           "winner": "Belgium",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.500883586736083,
-          "away_advance_probability": 0.4991164132639169,
+          "home_advance_probability": 0.500537559927099,
+          "away_advance_probability": 0.49946244007290097,
           "regulation_or_extra_time": {
-            "home": 0.5031474848278525,
-            "away": 0.49685251517214746
+            "home": 0.5026726899221404,
+            "away": 0.4973273100778596
           },
           "penalty_shootout": {
             "probability": 0.3721332954119062,
@@ -6310,11 +6310,11 @@
             "away_win_if_shootout": 0.5051999809523811
           },
           "upset_risk": "high",
-          "confidence_margin": 0.0017671734721660948,
+          "confidence_margin": 0.0010751198541980589,
           "baseline_three_way": {
-            "home_win": 0.36908535742579807,
+            "home_win": 0.3686478786352981,
             "draw": 0.28437312368027085,
-            "away_win": 0.34654151889393114
+            "away_win": 0.34697899768443113
           },
           "key_factors": [
             {
@@ -6406,7 +6406,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -6534,9 +6534,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.36908535742579807,
+                "home_win": 0.3686478786352981,
                 "draw": 0.28437312368027085,
-                "away_win": 0.34654151889393114,
+                "away_win": 0.34697899768443113,
                 "recommended_label": "home_win",
                 "explanation": "Belgium vs Colombia: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.; Tournament form layer challenges the home-side baseline.."
               },
@@ -6551,11 +6551,11 @@
           "away_team": "Mexico",
           "winner": "England",
           "winner_method": "penalties",
-          "home_advance_probability": 0.5151221077399294,
-          "away_advance_probability": 0.48487789226007066,
+          "home_advance_probability": 0.5153511178072514,
+          "away_advance_probability": 0.4846488821927486,
           "regulation_or_extra_time": {
-            "home": 0.460386341855185,
-            "away": 0.539613658144815
+            "home": 0.4606998854638187,
+            "away": 0.5393001145361813
           },
           "penalty_shootout": {
             "probability": 0.36912587424710175,
@@ -6563,11 +6563,11 @@
             "away_win_if_shootout": 0.33659306666666655
           },
           "upset_risk": "high",
-          "confidence_margin": 0.030244215479858727,
+          "confidence_margin": 0.030702235614502804,
           "baseline_three_way": {
-            "home_win": 0.3742390844132125,
+            "home_win": 0.3745343280542125,
             "draw": 0.27816630640705065,
-            "away_win": 0.34759460917973684
+            "away_win": 0.34729936553873686
           },
           "key_factors": [
             {
@@ -6659,7 +6659,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -6784,9 +6784,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.3742390844132125,
+                "home_win": 0.3745343280542125,
                 "draw": 0.27816630640705065,
-                "away_win": 0.34759460917973684,
+                "away_win": 0.34729936553873686,
                 "recommended_label": "home_win",
                 "explanation": "England vs Mexico: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -6801,11 +6801,11 @@
           "away_team": "Switzerland",
           "winner": "Portugal",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5442325815920869,
-          "away_advance_probability": 0.45576741840791307,
+          "home_advance_probability": 0.5440212693716202,
+          "away_advance_probability": 0.45597873062837985,
           "regulation_or_extra_time": {
-            "home": 0.5614110206508229,
-            "away": 0.43858897934917707
+            "home": 0.5611239873594406,
+            "away": 0.4388760126405594
           },
           "penalty_shootout": {
             "probability": 0.3583373964286316,
@@ -6813,11 +6813,11 @@
             "away_win_if_shootout": 0.5037067047619048
           },
           "upset_risk": "high",
-          "confidence_margin": 0.0884651631841738,
+          "confidence_margin": 0.08804253874324036,
           "baseline_three_way": {
-            "home_win": 0.39189287998310474,
+            "home_win": 0.3916196815766047,
             "draw": 0.2717152399721166,
-            "away_win": 0.3363918800447787
+            "away_win": 0.3366650784512787
           },
           "key_factors": [
             {
@@ -6909,7 +6909,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -7034,9 +7034,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.39189287998310474,
+                "home_win": 0.3916196815766047,
                 "draw": 0.2717152399721166,
-                "away_win": 0.3363918800447787,
+                "away_win": 0.3366650784512787,
                 "recommended_label": "home_win",
                 "explanation": "Portugal vs Switzerland: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -7056,11 +7056,11 @@
           "away_team": "Germany",
           "winner": "Brazil",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5378279428829873,
-          "away_advance_probability": 0.4621720571170127,
+          "home_advance_probability": 0.5375685371046205,
+          "away_advance_probability": 0.4624314628953795,
           "regulation_or_extra_time": {
-            "home": 0.5297727957128766,
-            "away": 0.4702272042871234
+            "home": 0.5294257490054655,
+            "away": 0.47057425099453454
           },
           "penalty_shootout": {
             "probability": 0.3378526476787597,
@@ -7068,11 +7068,11 @@
             "away_win_if_shootout": 0.43832986666666673
           },
           "upset_risk": "high",
-          "confidence_margin": 0.0756558857659746,
+          "confidence_margin": 0.07513707420924098,
           "baseline_three_way": {
-            "home_win": 0.38264980712850977,
+            "home_win": 0.38232329143500976,
             "draw": 0.2592261645531877,
-            "away_win": 0.35812402831830253
+            "away_win": 0.35845054401180254
           },
           "key_factors": [
             {
@@ -7164,7 +7164,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -7289,9 +7289,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.38264980712850977,
+                "home_win": 0.38232329143500976,
                 "draw": 0.2592261645531877,
-                "away_win": 0.35812402831830253,
+                "away_win": 0.35845054401180254,
                 "recommended_label": "home_win",
                 "explanation": "Brazil vs Germany: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -7306,11 +7306,11 @@
           "away_team": "USA",
           "winner": "France",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.7746960176733152,
-          "away_advance_probability": 0.22530398232668483,
+          "home_advance_probability": 0.776492217855163,
+          "away_advance_probability": 0.22350778214483705,
           "regulation_or_extra_time": {
-            "home": 0.8070827045413361,
-            "away": 0.19291729545866387
+            "home": 0.8094345416436187,
+            "away": 0.19056545835638128
           },
           "penalty_shootout": {
             "probability": 0.3093401982974916,
@@ -7318,11 +7318,11 @@
             "away_win_if_shootout": 0.32999999999999996
           },
           "upset_risk": "low",
-          "confidence_margin": 0.5493920353466304,
+          "confidence_margin": 0.552984435710326,
           "baseline_three_way": {
-            "home_win": 0.5253142194658647,
+            "home_win": 0.5267095794658646,
             "draw": 0.24466024572186124,
-            "away_win": 0.2300255348122741
+            "away_win": 0.2286301748122741
           },
           "key_factors": [
             {
@@ -7414,7 +7414,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -7539,9 +7539,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5253142194658647,
+                "home_win": 0.5267095794658646,
                 "draw": 0.24466024572186124,
-                "away_win": 0.2300255348122741,
+                "away_win": 0.2286301748122741,
                 "recommended_label": "home_win",
                 "explanation": "France vs USA: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -7556,11 +7556,11 @@
           "away_team": "Belgium",
           "winner": "Spain",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.6364993432856811,
-          "away_advance_probability": 0.36350065671431897,
+          "home_advance_probability": 0.6377522519859612,
+          "away_advance_probability": 0.3622477480140388,
           "regulation_or_extra_time": {
-            "home": 0.6439495051362728,
-            "away": 0.3560504948637272
+            "home": 0.6456702621989863,
+            "away": 0.35432973780101373
           },
           "penalty_shootout": {
             "probability": 0.37340978024075944,
@@ -7568,11 +7568,11 @@
             "away_win_if_shootout": 0.38345236190476195
           },
           "upset_risk": "low",
-          "confidence_margin": 0.27299868657136217,
+          "confidence_margin": 0.2755045039719224,
           "baseline_three_way": {
-            "home_win": 0.4804695209147467,
+            "home_win": 0.4818648809147468,
             "draw": 0.286353749781761,
-            "away_win": 0.23317672930349226
+            "away_win": 0.23178136930349225
           },
           "key_factors": [
             {
@@ -7664,7 +7664,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -7789,9 +7789,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.4804695209147467,
+                "home_win": 0.4818648809147468,
                 "draw": 0.286353749781761,
-                "away_win": 0.23317672930349226,
+                "away_win": 0.23178136930349225,
                 "recommended_label": "home_win",
                 "explanation": "Spain vs Belgium: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -7806,11 +7806,11 @@
           "away_team": "Portugal",
           "winner": "England",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.6159134615059068,
-          "away_advance_probability": 0.38408653849409335,
+          "home_advance_probability": 0.616699673036594,
+          "away_advance_probability": 0.38330032696340605,
           "regulation_or_extra_time": {
-            "home": 0.631257994457728,
-            "away": 0.368742005542272
+            "home": 0.632322780413525,
+            "away": 0.36767721958647503
           },
           "penalty_shootout": {
             "probability": 0.354325031160661,
@@ -7818,11 +7818,11 @@
             "away_win_if_shootout": 0.42739291428571413
           },
           "upset_risk": "low",
-          "confidence_margin": 0.2318269230118134,
+          "confidence_margin": 0.23339934607318796,
           "baseline_three_way": {
-            "home_win": 0.4148161303744049,
+            "home_win": 0.41570644563640485,
             "draw": 0.2767075034113693,
-            "away_win": 0.3084763662142258
+            "away_win": 0.3075860509522258
           },
           "key_factors": [
             {
@@ -7914,7 +7914,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -8041,9 +8041,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.4148161303744049,
+                "home_win": 0.41570644563640485,
                 "draw": 0.2767075034113693,
-                "away_win": 0.3084763662142258,
+                "away_win": 0.3075860509522258,
                 "recommended_label": "home_win",
                 "explanation": "England vs Portugal: baseline model favors home_win; butterfly cues: no major late cue; critic: Tournament form layer challenges the away-side baseline.."
               },
@@ -8063,11 +8063,11 @@
           "away_team": "France",
           "winner": "France",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.49169215409152545,
-          "away_advance_probability": 0.5083078459084746,
+          "home_advance_probability": 0.4912409380282044,
+          "away_advance_probability": 0.5087590619717957,
           "regulation_or_extra_time": {
-            "home": 0.5016272196855368,
-            "away": 0.4983727803144632
+            "home": 0.501015646183931,
+            "away": 0.498984353816069
           },
           "penalty_shootout": {
             "probability": 0.35538947151916084,
@@ -8075,11 +8075,11 @@
             "away_win_if_shootout": 0.5362632761904762
           },
           "upset_risk": "high",
-          "confidence_margin": 0.016615691816949107,
+          "confidence_margin": 0.017518123943591257,
           "baseline_three_way": {
-            "home_win": 0.31910439173119276,
+            "home_win": 0.31852912114069276,
             "draw": 0.2677100210118698,
-            "away_win": 0.41318558725693744
+            "away_win": 0.41376085784743744
           },
           "key_factors": [
             {
@@ -8171,7 +8171,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -8298,9 +8298,9 @@
               "status": "ok",
               "summary": "Final forecast: away_win.",
               "payload": {
-                "home_win": 0.31910439173119276,
+                "home_win": 0.31852912114069276,
                 "draw": 0.2677100210118698,
-                "away_win": 0.41318558725693744,
+                "away_win": 0.41376085784743744,
                 "recommended_label": "away_win",
                 "explanation": "Brazil vs France: baseline model favors away_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
               },
@@ -8315,11 +8315,11 @@
           "away_team": "England",
           "winner": "Spain",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.5319849083450627,
-          "away_advance_probability": 0.46801509165493715,
+          "home_advance_probability": 0.532415538815912,
+          "away_advance_probability": 0.4675844611840879,
           "regulation_or_extra_time": {
-            "home": 0.532990514444044,
-            "away": 0.467009485555956
+            "home": 0.5335859836960521,
+            "away": 0.46641401630394785
           },
           "penalty_shootout": {
             "probability": 0.38278475936419853,
@@ -8327,11 +8327,11 @@
             "away_win_if_shootout": 0.47064217142857157
           },
           "upset_risk": "high",
-          "confidence_margin": 0.06396981669012558,
+          "confidence_margin": 0.06483107763182405,
           "baseline_three_way": {
-            "home_win": 0.40583944683987666,
+            "home_win": 0.40637397001137665,
             "draw": 0.29165732143503936,
-            "away_win": 0.302503231725084
+            "away_win": 0.30196870855358393
           },
           "key_factors": [
             {
@@ -8423,7 +8423,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -8548,9 +8548,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.40583944683987666,
+                "home_win": 0.40637397001137665,
                 "draw": 0.29165732143503936,
-                "away_win": 0.302503231725084,
+                "away_win": 0.30196870855358393,
                 "recommended_label": "home_win",
                 "explanation": "Spain vs England: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
@@ -8570,11 +8570,11 @@
           "away_team": "Spain",
           "winner": "Spain",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.4554232534566584,
-          "away_advance_probability": 0.5445767465433416,
+          "home_advance_probability": 0.4553656795551306,
+          "away_advance_probability": 0.5446343204448694,
           "regulation_or_extra_time": {
-            "home": 0.4352435144188713,
-            "away": 0.5647564855811287
+            "home": 0.4351644476346036,
+            "away": 0.5648355523653964
           },
           "penalty_shootout": {
             "probability": 0.37330947129887404,
@@ -8582,11 +8582,11 @@
             "away_win_if_shootout": 0.4905204190476189
           },
           "upset_risk": "high",
-          "confidence_margin": 0.08915349308668324,
+          "confidence_margin": 0.08926864088973879,
           "baseline_three_way": {
-            "home_win": 0.373959929865754,
+            "home_win": 0.373885465607254,
             "draw": 0.28012412053700075,
-            "away_win": 0.3459159495972453
+            "away_win": 0.3459904138557453
           },
           "key_factors": [
             {
@@ -8678,7 +8678,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 3,
+          "equation_version": 5,
           "equation_coefficients": {
             "favorite_temperature": 0.7642857142857142,
             "home_bias_delta": 0.008035714285714285,
@@ -8805,9 +8805,9 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.373959929865754,
+                "home_win": 0.373885465607254,
                 "draw": 0.28012412053700075,
-                "away_win": 0.3459159495972453,
+                "away_win": 0.3459904138557453,
                 "recommended_label": "home_win",
                 "explanation": "France vs Spain: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
               },
@@ -8823,11 +8823,11 @@
       "scenario_id": "A",
       "arabic_name": "المسار أ: العقل البارد",
       "description": "يعطي وزناً أعلى للمرشح الأقوى، يقلل الفوضى، ولا يقلب مباراة إلا عند وجود هامش واضح.",
-      "estimated_accuracy": 0.6316267144973635,
+      "estimated_accuracy": 0.6331124791051052,
       "confidence_grade": "متوسطة",
       "high_risk_matches": 9,
-      "average_confidence_margin": 0.31985098385125776,
-      "average_penalty_probability": 0.2952142273214079,
+      "average_confidence_margin": 0.3252058534628396,
+      "average_penalty_probability": 0.29535021615642054,
       "champion": "Spain",
       "final": {
         "match_id": "KO-103",
@@ -8836,15 +8836,15 @@
         "away_team": "Spain",
         "winner": "Spain",
         "winner_method": "direct_or_extra_time",
-        "home_advance_probability": 0.4683111895647882,
-        "away_advance_probability": 0.5316888104352119,
+        "home_advance_probability": 0.46825150881267286,
+        "away_advance_probability": 0.5317484911873271,
         "penalty_shootout": {
           "probability": 0.32494508688754853,
           "home_win_if_shootout": 0.5088948038095239,
           "away_win_if_shootout": 0.4911051961904761
         },
         "upset_risk": "high",
-        "confidence_margin": 0.0633776208704237,
+        "confidence_margin": 0.06349698237465429,
         "player_impact": 0.0019,
         "team_stat_impact": -0.0228,
         "goal_timing_impact": -0.004,
@@ -8865,15 +8865,15 @@
               "away_team": "Canada",
               "winner": "Canada",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.15726083439659563,
-              "away_advance_probability": 0.8427391656034043,
+              "home_advance_probability": 0.15411747913633353,
+              "away_advance_probability": 0.8458825208636664,
               "penalty_shootout": {
                 "probability": 0.29204062389551294,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6854783312068087,
+              "confidence_margin": 0.6917650417273329,
               "player_impact": -0.0347,
               "team_stat_impact": -0.0826,
               "goal_timing_impact": -0.0119,
@@ -8890,15 +8890,15 @@
               "away_team": "Japan",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6958725880820188,
-              "away_advance_probability": 0.30412741191798115,
+              "home_advance_probability": 0.697053438881641,
+              "away_advance_probability": 0.302946561118359,
               "penalty_shootout": {
-                "probability": 0.29595903671458046,
+                "probability": 0.2959590367145805,
                 "home_win_if_shootout": 0.6624928914285715,
                 "away_win_if_shootout": 0.3375071085714285
               },
               "upset_risk": "low",
-              "confidence_margin": 0.39174517616403765,
+              "confidence_margin": 0.39410687776328196,
               "player_impact": 0.0169,
               "team_stat_impact": 0.0266,
               "goal_timing_impact": 0.0017,
@@ -8915,15 +8915,15 @@
               "away_team": "Paraguay",
               "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8534025626136756,
-              "away_advance_probability": 0.14659743738632441,
+              "home_advance_probability": 0.8561181038011564,
+              "away_advance_probability": 0.14388189619884356,
               "penalty_shootout": {
-                "probability": 0.24653217649403303,
+                "probability": 0.24653217649403306,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7068051252273513,
+              "confidence_margin": 0.7122362076023128,
               "player_impact": 0.0547,
               "team_stat_impact": 0.0622,
               "goal_timing_impact": 0.0072,
@@ -8940,15 +8940,15 @@
               "away_team": "Morocco",
               "winner": "Netherlands",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5612239860056774,
-              "away_advance_probability": 0.4387760139943227,
+              "home_advance_probability": 0.5617258793547003,
+              "away_advance_probability": 0.43827412064529975,
               "penalty_shootout": {
                 "probability": 0.2850395045169775,
                 "home_win_if_shootout": 0.6082979047619048,
                 "away_win_if_shootout": 0.3917020952380952
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.12244797201135466,
+              "confidence_margin": 0.12345175870940056,
               "player_impact": 0.0083,
               "team_stat_impact": -0.0065,
               "goal_timing_impact": -0.0038,
@@ -8965,15 +8965,15 @@
               "away_team": "Norway",
               "winner": "Ivory Coast",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5504317800287838,
-              "away_advance_probability": 0.4495682199712161,
+              "home_advance_probability": 0.5504619942671375,
+              "away_advance_probability": 0.44953800573286246,
               "penalty_shootout": {
                 "probability": 0.28576678250946524,
                 "home_win_if_shootout": 0.5081415390476189,
                 "away_win_if_shootout": 0.49185846095238106
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.10086356005756769,
+              "confidence_margin": 0.10092398853427503,
               "player_impact": 0.0019,
               "team_stat_impact": -0.0127,
               "goal_timing_impact": -0.0016,
@@ -8990,15 +8990,15 @@
               "away_team": "Sweden",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8918206292049536,
-              "away_advance_probability": 0.10817937079504643,
+              "home_advance_probability": 0.8918206293310481,
+              "away_advance_probability": 0.1081793706689519,
               "penalty_shootout": {
-                "probability": 0.2222868913426459,
+                "probability": 0.22228689134264593,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7836412584099072,
+              "confidence_margin": 0.7836412586620962,
               "player_impact": 0.0459,
               "team_stat_impact": 0.0316,
               "goal_timing_impact": 0.0036,
@@ -9015,15 +9015,15 @@
               "away_team": "Bosnia & Herzegovina",
               "winner": "USA",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7223580976000651,
-              "away_advance_probability": 0.2776419023999349,
+              "home_advance_probability": 0.7237731980925269,
+              "away_advance_probability": 0.276226801907473,
               "penalty_shootout": {
                 "probability": 0.2531807691990468,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.44471619520013017,
+              "confidence_margin": 0.44754639618505393,
               "player_impact": 0.0439,
               "team_stat_impact": 0.0129,
               "goal_timing_impact": 0.004,
@@ -9040,15 +9040,15 @@
               "away_team": "Egypt",
               "winner": "Egypt",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.4700396709046056,
-              "away_advance_probability": 0.5299603290953944,
+              "home_advance_probability": 0.4692792422826784,
+              "away_advance_probability": 0.5307207577173215,
               "penalty_shootout": {
                 "probability": 0.33327448901392737,
                 "home_win_if_shootout": 0.505481478095238,
                 "away_win_if_shootout": 0.494518521904762
               },
               "upset_risk": "high",
-              "confidence_margin": 0.05992065819078879,
+              "confidence_margin": 0.0614415154346431,
               "player_impact": 0.0095,
               "team_stat_impact": -0.0307,
               "goal_timing_impact": -0.0039,
@@ -9065,15 +9065,15 @@
               "away_team": "Cape Verde",
               "winner": "Argentina",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8831597819799577,
-              "away_advance_probability": 0.11684021802004234,
+              "home_advance_probability": 0.8831597821025937,
+              "away_advance_probability": 0.11684021789740634,
               "penalty_shootout": {
                 "probability": 0.27194936712564227,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7663195639599154,
+              "confidence_margin": 0.7663195642051874,
               "player_impact": 0.0601,
               "team_stat_impact": 0.0817,
               "goal_timing_impact": 0.01,
@@ -9090,15 +9090,15 @@
               "away_team": "Austria",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8831941512916177,
-              "away_advance_probability": 0.11680584870838225,
+              "home_advance_probability": 0.8831941514302484,
+              "away_advance_probability": 0.11680584856975158,
               "penalty_shootout": {
                 "probability": 0.27174428331114064,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7663883025832354,
+              "confidence_margin": 0.7663883028604968,
               "player_impact": 0.0257,
               "team_stat_impact": 0.091,
               "goal_timing_impact": 0.0127,
@@ -9115,15 +9115,15 @@
               "away_team": "Senegal",
               "winner": "Belgium",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5624182251343425,
-              "away_advance_probability": 0.4375817748656576,
+              "home_advance_probability": 0.5627334769437695,
+              "away_advance_probability": 0.4372665230562304,
               "penalty_shootout": {
                 "probability": 0.2832429824505008,
                 "home_win_if_shootout": 0.5395363466666667,
                 "away_win_if_shootout": 0.4604636533333333
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.1248364502686849,
+              "confidence_margin": 0.1254669538875391,
               "player_impact": 0.0088,
               "team_stat_impact": -0.0074,
               "goal_timing_impact": 0.0001,
@@ -9140,15 +9140,15 @@
               "away_team": "Ghana",
               "winner": "Colombia",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8276779783765459,
-              "away_advance_probability": 0.17232202162345417,
+              "home_advance_probability": 0.8301311445694614,
+              "away_advance_probability": 0.16986885543053865,
               "penalty_shootout": {
                 "probability": 0.32357208039514823,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6553559567530918,
+              "confidence_margin": 0.6602622891389227,
               "player_impact": 0.052,
               "team_stat_impact": 0.0906,
               "goal_timing_impact": 0.0121,
@@ -9165,15 +9165,15 @@
               "away_team": "DR Congo",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8175700131347838,
-              "away_advance_probability": 0.1824299868652161,
+              "home_advance_probability": 0.8197009198660308,
+              "away_advance_probability": 0.1802990801339693,
               "penalty_shootout": {
                 "probability": 0.28065670182104807,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6351400262695677,
+              "confidence_margin": 0.6394018397320614,
               "player_impact": 0.0546,
               "team_stat_impact": 0.0496,
               "goal_timing_impact": 0.0032,
@@ -9190,15 +9190,15 @@
               "away_team": "Ecuador",
               "winner": "Mexico",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7815380300128058,
-              "away_advance_probability": 0.2184619699871942,
+              "home_advance_probability": 0.7833936299425773,
+              "away_advance_probability": 0.21660637005742267,
               "penalty_shootout": {
                 "probability": 0.31599214808232523,
                 "home_win_if_shootout": 0.6560788380952381,
                 "away_win_if_shootout": 0.34392116190476185
               },
               "upset_risk": "low",
-              "confidence_margin": 0.5630760600256115,
+              "confidence_margin": 0.5667872598851547,
               "player_impact": 0.0217,
               "team_stat_impact": 0.0593,
               "goal_timing_impact": 0.0088,
@@ -9215,15 +9215,15 @@
               "away_team": "Croatia",
               "winner": "Portugal",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5852439814600132,
-              "away_advance_probability": 0.4147560185399868,
+              "home_advance_probability": 0.5863284120119788,
+              "away_advance_probability": 0.4136715879880211,
               "penalty_shootout": {
                 "probability": 0.298287361537511,
                 "home_win_if_shootout": 0.5403101028571428,
                 "away_win_if_shootout": 0.45968989714285724
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.17048796292002644,
+              "confidence_margin": 0.1726568240239577,
               "player_impact": 0.005,
               "team_stat_impact": 0.0077,
               "goal_timing_impact": -0.0001,
@@ -9240,15 +9240,15 @@
               "away_team": "Uruguay",
               "winner": "Switzerland",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6538689520957031,
-              "away_advance_probability": 0.346131047904297,
+              "home_advance_probability": 0.6552156817144945,
+              "away_advance_probability": 0.34478431828550543,
               "penalty_shootout": {
                 "probability": 0.2959151256387,
                 "home_win_if_shootout": 0.514798377142857,
                 "away_win_if_shootout": 0.48520162285714297
               },
               "upset_risk": "low",
-              "confidence_margin": 0.30773790419140606,
+              "confidence_margin": 0.3104313634289891,
               "player_impact": -0.0052,
               "team_stat_impact": -0.0153,
               "goal_timing_impact": -0.003,
@@ -9270,15 +9270,15 @@
               "away_team": "Brazil",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.406068950066474,
-              "away_advance_probability": 0.5939310499335261,
+              "home_advance_probability": 0.40597750039732755,
+              "away_advance_probability": 0.5940224996026724,
               "penalty_shootout": {
                 "probability": 0.30489050052335515,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.1878620998670521,
+              "confidence_margin": 0.18804499920534484,
               "player_impact": -0.0249,
               "team_stat_impact": 0.0344,
               "goal_timing_impact": 0.0064,
@@ -9295,15 +9295,15 @@
               "away_team": "Netherlands",
               "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5024850827525659,
-              "away_advance_probability": 0.497514917247434,
+              "home_advance_probability": 0.5026791732090932,
+              "away_advance_probability": 0.4973208267909067,
               "penalty_shootout": {
                 "probability": 0.27207850219191554,
                 "home_win_if_shootout": 0.45436040380952386,
                 "away_win_if_shootout": 0.5456395961904761
               },
               "upset_risk": "high",
-              "confidence_margin": 0.004970165505131852,
+              "confidence_margin": 0.005358346418186444,
               "player_impact": -0.0027,
               "team_stat_impact": 0.0199,
               "goal_timing_impact": 0.0041,
@@ -9320,15 +9320,15 @@
               "away_team": "France",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.17822980457050713,
-              "away_advance_probability": 0.8217701954294929,
+              "home_advance_probability": 0.1760106582944255,
+              "away_advance_probability": 0.8239893417055745,
               "penalty_shootout": {
                 "probability": 0.27413088695741933,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6435403908589858,
+              "confidence_margin": 0.647978683411149,
               "player_impact": -0.0378,
               "team_stat_impact": -0.0588,
               "goal_timing_impact": -0.0075,
@@ -9345,15 +9345,15 @@
               "away_team": "Egypt",
               "winner": "USA",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6344490140639695,
-              "away_advance_probability": 0.3655509859360306,
+              "home_advance_probability": 0.6355888621622814,
+              "away_advance_probability": 0.3644111378377187,
               "penalty_shootout": {
                 "probability": 0.2860906437565648,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.2688980281279389,
+              "confidence_margin": 0.27117772432456266,
               "player_impact": 0.0271,
               "team_stat_impact": 0.0082,
               "goal_timing_impact": 0.001,
@@ -9370,15 +9370,15 @@
               "away_team": "Spain",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.47367347331564713,
-              "away_advance_probability": 0.5263265266843529,
+              "home_advance_probability": 0.47326689012883716,
+              "away_advance_probability": 0.5267331098711628,
               "penalty_shootout": {
                 "probability": 0.3319785776672151,
                 "home_win_if_shootout": 0.4153040304761904,
                 "away_win_if_shootout": 0.5846959695238096
               },
               "upset_risk": "high",
-              "confidence_margin": 0.05265305336870574,
+              "confidence_margin": 0.05346621974232568,
               "player_impact": 0.0012,
               "team_stat_impact": -0.044,
               "goal_timing_impact": -0.0065,
@@ -9393,17 +9393,17 @@
               "round": "Round of 16",
               "home_team": "Belgium",
               "away_team": "Colombia",
-              "winner": "Belgium",
+              "winner": "Colombia",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5001623446273791,
-              "away_advance_probability": 0.49983765537262104,
+              "home_advance_probability": 0.499806702481963,
+              "away_advance_probability": 0.5001932975180371,
               "penalty_shootout": {
                 "probability": 0.32549260145894915,
                 "home_win_if_shootout": 0.4942302361904761,
                 "away_win_if_shootout": 0.5057697638095239
               },
               "upset_risk": "high",
-              "confidence_margin": 0.0003246892547580371,
+              "confidence_margin": 0.00038659503607407775,
               "player_impact": 0.0009,
               "team_stat_impact": -0.0145,
               "goal_timing_impact": -0.0035,
@@ -9420,15 +9420,15 @@
               "away_team": "Mexico",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5217868388420119,
-              "away_advance_probability": 0.478213161157988,
+              "home_advance_probability": 0.5220241034961559,
+              "away_advance_probability": 0.4779758965038442,
               "penalty_shootout": {
                 "probability": 0.3212006393700069,
                 "home_win_if_shootout": 0.6606779733333333,
                 "away_win_if_shootout": 0.33932202666666667
               },
               "upset_risk": "high",
-              "confidence_margin": 0.043573677684023926,
+              "confidence_margin": 0.04404820699231171,
               "player_impact": 0.0107,
               "team_stat_impact": 0.0172,
               "goal_timing_impact": 0.0002,
@@ -9445,15 +9445,15 @@
               "away_team": "Switzerland",
               "winner": "Portugal",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5421634660194489,
-              "away_advance_probability": 0.45783653398055124,
+              "home_advance_probability": 0.5419450530112665,
+              "away_advance_probability": 0.45805494698873356,
               "penalty_shootout": {
                 "probability": 0.3128242850114541,
                 "home_win_if_shootout": 0.4967768609523809,
                 "away_win_if_shootout": 0.5032231390476192
               },
               "upset_risk": "high",
-              "confidence_margin": 0.08432693203889763,
+              "confidence_margin": 0.08389010602253294,
               "player_impact": 0.0045,
               "team_stat_impact": -0.0102,
               "goal_timing_impact": -0.0014,
@@ -9475,15 +9475,15 @@
               "away_team": "Germany",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5532513630846831,
-              "away_advance_probability": 0.44674863691531685,
+              "home_advance_probability": 0.5529824225800499,
+              "away_advance_probability": 0.44701757741994996,
               "penalty_shootout": {
                 "probability": 0.2932283038188274,
                 "home_win_if_shootout": 0.5596496533333333,
                 "away_win_if_shootout": 0.4403503466666667
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.10650272616936629,
+              "confidence_margin": 0.10596484516009996,
               "player_impact": 0.0037,
               "team_stat_impact": -0.0174,
               "goal_timing_impact": -0.0027,
@@ -9500,15 +9500,15 @@
               "away_team": "USA",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7868140539579848,
-              "away_advance_probability": 0.21318594604201518,
+              "home_advance_probability": 0.7886231345363102,
+              "away_advance_probability": 0.2113768654636898,
               "penalty_shootout": {
                 "probability": 0.26888830867395214,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.5736281079159695,
+              "confidence_margin": 0.5772462690726203,
               "player_impact": 0.0155,
               "team_stat_impact": 0.0522,
               "goal_timing_impact": 0.0045,
@@ -9522,22 +9522,22 @@
               "match_id": "KO-099",
               "round": "Quarterfinals",
               "home_team": "Spain",
-              "away_team": "Belgium",
+              "away_team": "Colombia",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6402215477893356,
-              "away_advance_probability": 0.35977845221066446,
+              "home_advance_probability": 0.6968964380744221,
+              "away_advance_probability": 0.3031035619255778,
               "penalty_shootout": {
-                "probability": 0.3259799895790808,
-                "home_win_if_shootout": 0.6156967123809524,
-                "away_win_if_shootout": 0.38430328761904764
+                "probability": 0.3301956434644734,
+                "home_win_if_shootout": 0.6099269485714286,
+                "away_win_if_shootout": 0.3900730514285714
               },
               "upset_risk": "low",
-              "confidence_margin": 0.28044309557867114,
-              "player_impact": 0.003,
-              "team_stat_impact": 0.0498,
-              "goal_timing_impact": 0.0084,
-              "time_series_impact": -0.0087,
+              "confidence_margin": 0.39379287614884434,
+              "player_impact": 0.0039,
+              "team_stat_impact": 0.0353,
+              "goal_timing_impact": 0.0049,
+              "time_series_impact": 0.0443,
               "scenario": {
                 "id": "A",
                 "arabic_name": "المسار أ: العقل البارد"
@@ -9550,15 +9550,15 @@
               "away_team": "Portugal",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6057049917499757,
-              "away_advance_probability": 0.39429500825002417,
+              "home_advance_probability": 0.6064868812034466,
+              "away_advance_probability": 0.39351311879655326,
               "penalty_shootout": {
                 "probability": 0.3108767899586241,
                 "home_win_if_shootout": 0.571879862857143,
                 "away_win_if_shootout": 0.428120137142857
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.21140998349995155,
+              "confidence_margin": 0.21297376240689336,
               "player_impact": 0.0045,
               "team_stat_impact": 0.0442,
               "goal_timing_impact": 0.0071,
@@ -9580,15 +9580,15 @@
               "away_team": "France",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.48382278025505426,
-              "away_advance_probability": 0.5161772197449458,
+              "home_advance_probability": 0.48335714181548506,
+              "away_advance_probability": 0.5166428581845149,
               "penalty_shootout": {
                 "probability": 0.3096136491711201,
                 "home_win_if_shootout": 0.4633393752380952,
                 "away_win_if_shootout": 0.5366606247619048
               },
               "upset_risk": "high",
-              "confidence_margin": 0.03235443948989153,
+              "confidence_margin": 0.03328571636902988,
               "player_impact": -0.0009,
               "team_stat_impact": -0.0203,
               "goal_timing_impact": -0.004,
@@ -9605,15 +9605,15 @@
               "away_team": "England",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5382774928598691,
-              "away_advance_probability": 0.4617225071401309,
+              "home_advance_probability": 0.5387213414413454,
+              "away_advance_probability": 0.46127865855865463,
               "penalty_shootout": {
                 "probability": 0.33398195788940654,
                 "home_win_if_shootout": 0.5293690742857142,
                 "away_win_if_shootout": 0.4706309257142858
               },
               "upset_risk": "high",
-              "confidence_margin": 0.07655498571973823,
+              "confidence_margin": 0.0774426828826908,
               "player_impact": -0.0002,
               "team_stat_impact": 0.0225,
               "goal_timing_impact": 0.0039,
@@ -9635,15 +9635,15 @@
               "away_team": "Spain",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.4683111895647882,
-              "away_advance_probability": 0.5316888104352119,
+              "home_advance_probability": 0.46825150881267286,
+              "away_advance_probability": 0.5317484911873271,
               "penalty_shootout": {
                 "probability": 0.32494508688754853,
                 "home_win_if_shootout": 0.5088948038095239,
                 "away_win_if_shootout": 0.4911051961904761
               },
               "upset_risk": "high",
-              "confidence_margin": 0.0633776208704237,
+              "confidence_margin": 0.06349698237465429,
               "player_impact": 0.0019,
               "team_stat_impact": -0.0228,
               "goal_timing_impact": -0.004,
@@ -9661,10 +9661,10 @@
       "scenario_id": "B",
       "arabic_name": "المسار ب: النموذج المتوازن",
       "description": "النسخة الرسمية الحالية: تمزج Agent Harness مع النموذج الاقتصادي وإحصاءات البطولة والتعلم من الأخطاء واتجاهات السلاسل الزمنية.",
-      "estimated_accuracy": 0.5947770344212189,
+      "estimated_accuracy": 0.5951598347948484,
       "confidence_grade": "متوسطة",
       "high_risk_matches": 12,
-      "average_confidence_margin": 0.3166308654464716,
+      "average_confidence_margin": 0.31799800963800506,
       "average_penalty_probability": 0.33856566429138685,
       "champion": "Spain",
       "final": {
@@ -9674,15 +9674,15 @@
         "away_team": "Spain",
         "winner": "Spain",
         "winner_method": "direct_or_extra_time",
-        "home_advance_probability": 0.4554232534566584,
-        "away_advance_probability": 0.5445767465433416,
+        "home_advance_probability": 0.4553656795551306,
+        "away_advance_probability": 0.5446343204448694,
         "penalty_shootout": {
           "probability": 0.37330947129887404,
           "home_win_if_shootout": 0.5094795809523811,
           "away_win_if_shootout": 0.4905204190476189
         },
         "upset_risk": "high",
-        "confidence_margin": 0.08915349308668324,
+        "confidence_margin": 0.08926864088973879,
         "player_impact": 0.0026,
         "team_stat_impact": -0.0277,
         "goal_timing_impact": -0.0054,
@@ -9703,15 +9703,15 @@
               "away_team": "Canada",
               "winner": "Canada",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.14000042485978534,
-              "away_advance_probability": 0.8599995751402147,
+              "home_advance_probability": 0.14000042470060994,
+              "away_advance_probability": 0.85999957529939,
               "penalty_shootout": {
                 "probability": 0.33225793036027734,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7199991502804294,
+              "confidence_margin": 0.7199991505987801,
               "player_impact": -0.0473,
               "team_stat_impact": -0.1003,
               "goal_timing_impact": -0.0162,
@@ -9728,15 +9728,15 @@
               "away_team": "Japan",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7146114096251311,
-              "away_advance_probability": 0.28538859037486897,
+              "home_advance_probability": 0.7158580110452675,
+              "away_advance_probability": 0.2841419889547325,
               "penalty_shootout": {
-                "probability": 0.33688999956030286,
+                "probability": 0.3368899995603029,
                 "home_win_if_shootout": 0.6662939428571428,
                 "away_win_if_shootout": 0.33370605714285717
               },
               "upset_risk": "low",
-              "confidence_margin": 0.4292228192502622,
+              "confidence_margin": 0.43171602209053495,
               "player_impact": 0.023,
               "team_stat_impact": 0.0323,
               "goal_timing_impact": 0.0023,
@@ -9753,15 +9753,15 @@
               "away_team": "Paraguay",
               "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8673993206249248,
-              "away_advance_probability": 0.13260067937507525,
+              "home_advance_probability": 0.8673993207622336,
+              "away_advance_probability": 0.13260067923776653,
               "penalty_shootout": {
                 "probability": 0.28231667709080904,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7347986412498495,
+              "confidence_margin": 0.734798641524467,
               "player_impact": 0.0746,
               "team_stat_impact": 0.0755,
               "goal_timing_impact": 0.0098,
@@ -9778,15 +9778,15 @@
               "away_team": "Morocco",
               "winner": "Netherlands",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5501438900171821,
-              "away_advance_probability": 0.44985610998281794,
+              "home_advance_probability": 0.5506295668272573,
+              "away_advance_probability": 0.4493704331727427,
               "penalty_shootout": {
                 "probability": 0.32813690187699396,
                 "home_win_if_shootout": 0.6113904761904763,
                 "away_win_if_shootout": 0.38860952380952374
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.10028778003436417,
+              "confidence_margin": 0.10125913365451455,
               "player_impact": 0.0113,
               "team_stat_impact": -0.0079,
               "goal_timing_impact": -0.0052,
@@ -9803,15 +9803,15 @@
               "away_team": "Norway",
               "winner": "Ivory Coast",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5334673588766624,
-              "away_advance_probability": 0.46653264112333764,
+              "home_advance_probability": 0.5334965290604085,
+              "away_advance_probability": 0.4665034709395916,
               "penalty_shootout": {
                 "probability": 0.32928666016539987,
                 "home_win_if_shootout": 0.5083627047619047,
                 "away_win_if_shootout": 0.4916372952380953
               },
               "upset_risk": "high",
-              "confidence_margin": 0.06693471775332477,
+              "confidence_margin": 0.06699305812081685,
               "player_impact": 0.0026,
               "team_stat_impact": -0.0154,
               "goal_timing_impact": -0.0022,
@@ -9828,15 +9828,15 @@
               "away_team": "Sweden",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8713985577006957,
-              "away_advance_probability": 0.1286014422993042,
+              "home_advance_probability": 0.8713985578233225,
+              "away_advance_probability": 0.12860144217667757,
               "penalty_shootout": {
-                "probability": 0.2568533270370976,
+                "probability": 0.2568533270370977,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7427971154013915,
+              "confidence_margin": 0.742797115646645,
               "player_impact": 0.0625,
               "team_stat_impact": 0.0383,
               "goal_timing_impact": 0.0049,
@@ -9853,15 +9853,15 @@
               "away_team": "Bosnia & Herzegovina",
               "winner": "USA",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7046319661513906,
-              "away_advance_probability": 0.2953680338486093,
+              "home_advance_probability": 0.7059962953738124,
+              "away_advance_probability": 0.29400370462618763,
               "penalty_shootout": {
                 "probability": 0.29221672977573604,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.40926393230278124,
+              "confidence_margin": 0.41199259074762473,
               "player_impact": 0.0598,
               "team_stat_impact": 0.0156,
               "goal_timing_impact": 0.0055,
@@ -9878,15 +9878,15 @@
               "away_team": "Egypt",
               "winner": "Egypt",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.4745337990607704,
-              "away_advance_probability": 0.5254662009392295,
+              "home_advance_probability": 0.4737934191311491,
+              "away_advance_probability": 0.5262065808688509,
               "penalty_shootout": {
                 "probability": 0.38159804306549183,
                 "home_win_if_shootout": 0.5056614095238094,
                 "away_win_if_shootout": 0.49433859047619055
               },
               "upset_risk": "high",
-              "confidence_margin": 0.050932401878459044,
+              "confidence_margin": 0.052413161737701774,
               "player_impact": 0.013,
               "team_stat_impact": -0.0373,
               "goal_timing_impact": -0.0054,
@@ -9903,15 +9903,15 @@
               "away_team": "Cape Verde",
               "winner": "Argentina",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8627440574831851,
-              "away_advance_probability": 0.13725594251681494,
+              "home_advance_probability": 0.8627440576019608,
+              "away_advance_probability": 0.13725594239803918,
               "penalty_shootout": {
                 "probability": 0.31328795860868436,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7254881149663701,
+              "confidence_margin": 0.7254881152039216,
               "player_impact": 0.082,
               "team_stat_impact": 0.0992,
               "goal_timing_impact": 0.0137,
@@ -9928,15 +9928,15 @@
               "away_team": "Austria",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8627782619297043,
-              "away_advance_probability": 0.13722173807029575,
+              "home_advance_probability": 0.8627782620639735,
+              "away_advance_probability": 0.1372217379360266,
               "penalty_shootout": {
                 "probability": 0.313054908819478,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7255565238594086,
+              "confidence_margin": 0.7255565241279469,
               "player_impact": 0.0351,
               "team_stat_impact": 0.1105,
               "goal_timing_impact": 0.0174,
@@ -9953,15 +9953,15 @@
               "away_team": "Senegal",
               "winner": "Belgium",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5495568964434833,
-              "away_advance_probability": 0.45044310355651684,
+              "home_advance_probability": 0.5498623826236606,
+              "away_advance_probability": 0.45013761737633945,
               "penalty_shootout": {
                 "probability": 0.32593596644659295,
                 "home_win_if_shootout": 0.5401398666666667,
                 "away_win_if_shootout": 0.4598601333333333
               },
               "upset_risk": "high",
-              "confidence_margin": 0.09911379288696642,
+              "confidence_margin": 0.09972476524732116,
               "player_impact": 0.0119,
               "team_stat_impact": -0.009,
               "goal_timing_impact": 0.0001,
@@ -9978,15 +9978,15 @@
               "away_team": "Ghana",
               "winner": "Colombia",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8089978872527456,
-              "away_advance_probability": 0.19100211274725448,
+              "home_advance_probability": 0.8113645492792555,
+              "away_advance_probability": 0.1886354507207446,
               "penalty_shootout": {
                 "probability": 0.3719501327785775,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6179957745054911,
+              "confidence_margin": 0.6227290985585109,
               "player_impact": 0.0709,
               "team_stat_impact": 0.11,
               "goal_timing_impact": 0.0165,
@@ -10003,15 +10003,15 @@
               "away_team": "DR Congo",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8495575462371313,
-              "away_advance_probability": 0.1504424537628686,
+              "home_advance_probability": 0.8534818810351317,
+              "away_advance_probability": 0.1465181189648683,
               "penalty_shootout": {
                 "probability": 0.3200674344951396,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6991150924742627,
+              "confidence_margin": 0.7069637620702633,
               "player_impact": 0.0744,
               "team_stat_impact": 0.0602,
               "goal_timing_impact": 0.0044,
@@ -10028,15 +10028,15 @@
               "away_team": "Ecuador",
               "winner": "Mexico",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8108377417266905,
-              "away_advance_probability": 0.18916225827330946,
+              "home_advance_probability": 0.8132591551553161,
+              "away_advance_probability": 0.18674084484468392,
               "penalty_shootout": {
                 "probability": 0.35976156095390044,
                 "home_win_if_shootout": 0.6587778095238095,
                 "away_win_if_shootout": 0.3412221904761905
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6216754834533811,
+              "confidence_margin": 0.6265183103106322,
               "player_impact": 0.0297,
               "team_stat_impact": 0.072,
               "goal_timing_impact": 0.012,
@@ -10053,15 +10053,15 @@
               "away_team": "Croatia",
               "winner": "Portugal",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5615742277964314,
-              "away_advance_probability": 0.4384257722035687,
+              "home_advance_probability": 0.5626121925308513,
+              "away_advance_probability": 0.43738780746914885,
               "penalty_shootout": {
                 "probability": 0.3419567063157595,
                 "home_win_if_shootout": 0.5414046857142856,
                 "away_win_if_shootout": 0.45859531428571443
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.1231484555928627,
+              "confidence_margin": 0.12522438506170241,
               "player_impact": 0.0068,
               "team_stat_impact": 0.0094,
               "goal_timing_impact": -0.0001,
@@ -10078,15 +10078,15 @@
               "away_team": "Uruguay",
               "winner": "Switzerland",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6377031195903449,
-              "away_advance_probability": 0.3622968804096552,
+              "home_advance_probability": 0.6390099721718773,
+              "away_advance_probability": 0.3609900278281228,
               "penalty_shootout": {
                 "probability": 0.34032369624866204,
                 "home_win_if_shootout": 0.5157505142857143,
                 "away_win_if_shootout": 0.4842494857142857
               },
               "upset_risk": "low",
-              "confidence_margin": 0.2754062391806897,
+              "confidence_margin": 0.2780199443437545,
               "player_impact": -0.007,
               "team_stat_impact": -0.0186,
               "goal_timing_impact": -0.004,
@@ -10108,15 +10108,15 @@
               "away_team": "Brazil",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.39787248906600403,
-              "away_advance_probability": 0.602127510933996,
+              "home_advance_probability": 0.397781964630814,
+              "away_advance_probability": 0.602218035369186,
               "penalty_shootout": {
                 "probability": 0.3480832355197799,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.20425502186799194,
+              "confidence_margin": 0.20443607073837206,
               "player_impact": -0.0339,
               "team_stat_impact": 0.0418,
               "goal_timing_impact": 0.0088,
@@ -10133,15 +10133,15 @@
               "away_team": "Netherlands",
               "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5178991090604007,
-              "away_advance_probability": 0.48210089093959935,
+              "home_advance_probability": 0.5180867746522362,
+              "away_advance_probability": 0.48191322534776376,
               "penalty_shootout": {
                 "probability": 0.3139776226158648,
                 "home_win_if_shootout": 0.45258358095238094,
                 "away_win_if_shootout": 0.5474164190476191
               },
               "upset_risk": "high",
-              "confidence_margin": 0.03579821812080136,
+              "confidence_margin": 0.03617354930447242,
               "player_impact": -0.0036,
               "team_stat_impact": 0.0242,
               "goal_timing_impact": 0.0055,
@@ -10158,15 +10158,15 @@
               "away_team": "France",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.13700722962222092,
-              "away_advance_probability": 0.862992770377779,
+              "home_advance_probability": 0.13700722948179833,
+              "away_advance_probability": 0.8629927705182017,
               "penalty_shootout": {
                 "probability": 0.3115954485548492,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "low",
-              "confidence_margin": 0.7259855407555581,
+              "confidence_margin": 0.7259855410364033,
               "player_impact": -0.0515,
               "team_stat_impact": -0.0714,
               "goal_timing_impact": -0.0102,
@@ -10183,15 +10183,15 @@
               "away_team": "Egypt",
               "winner": "USA",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6222150382443749,
-              "away_advance_probability": 0.3777849617556252,
+              "home_advance_probability": 0.6233180452217594,
+              "away_advance_probability": 0.3766819547782406,
               "penalty_shootout": {
                 "probability": 0.3293372478488368,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.24443007648874965,
+              "confidence_margin": 0.24663609044351875,
               "player_impact": 0.0369,
               "team_stat_impact": 0.01,
               "goal_timing_impact": 0.0014,
@@ -10208,15 +10208,15 @@
               "away_team": "Spain",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.47836857394425664,
-              "away_advance_probability": 0.5216314260557434,
+              "home_advance_probability": 0.47797491421576016,
+              "away_advance_probability": 0.5220250857842399,
               "penalty_shootout": {
                 "probability": 0.380639479247214,
                 "home_win_if_shootout": 0.41434064761904754,
                 "away_win_if_shootout": 0.5856593523809525
               },
               "upset_risk": "high",
-              "confidence_margin": 0.04326285211148678,
+              "confidence_margin": 0.044050171568479735,
               "player_impact": 0.0017,
               "team_stat_impact": -0.0535,
               "goal_timing_impact": -0.0088,
@@ -10233,15 +10233,15 @@
               "away_team": "Colombia",
               "winner": "Belgium",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.500883586736083,
-              "away_advance_probability": 0.4991164132639169,
+              "home_advance_probability": 0.500537559927099,
+              "away_advance_probability": 0.49946244007290097,
               "penalty_shootout": {
                 "probability": 0.3721332954119062,
                 "home_win_if_shootout": 0.49480001904761894,
                 "away_win_if_shootout": 0.5051999809523811
               },
               "upset_risk": "high",
-              "confidence_margin": 0.0017671734721660948,
+              "confidence_margin": 0.0010751198541980589,
               "player_impact": 0.0012,
               "team_stat_impact": -0.0176,
               "goal_timing_impact": -0.0048,
@@ -10258,15 +10258,15 @@
               "away_team": "Mexico",
               "winner": "England",
               "winner_method": "penalties",
-              "home_advance_probability": 0.5151221077399294,
-              "away_advance_probability": 0.48487789226007066,
+              "home_advance_probability": 0.5153511178072514,
+              "away_advance_probability": 0.4846488821927486,
               "penalty_shootout": {
                 "probability": 0.36912587424710175,
                 "home_win_if_shootout": 0.6634069333333334,
                 "away_win_if_shootout": 0.33659306666666655
               },
               "upset_risk": "high",
-              "confidence_margin": 0.030244215479858727,
+              "confidence_margin": 0.030702235614502804,
               "player_impact": 0.0146,
               "team_stat_impact": 0.0209,
               "goal_timing_impact": 0.0003,
@@ -10283,15 +10283,15 @@
               "away_team": "Switzerland",
               "winner": "Portugal",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5442325815920869,
-              "away_advance_probability": 0.45576741840791307,
+              "home_advance_probability": 0.5440212693716202,
+              "away_advance_probability": 0.45597873062837985,
               "penalty_shootout": {
                 "probability": 0.3583373964286316,
                 "home_win_if_shootout": 0.4962932952380951,
                 "away_win_if_shootout": 0.5037067047619048
               },
               "upset_risk": "high",
-              "confidence_margin": 0.0884651631841738,
+              "confidence_margin": 0.08804253874324036,
               "player_impact": 0.0061,
               "team_stat_impact": -0.0124,
               "goal_timing_impact": -0.0019,
@@ -10313,15 +10313,15 @@
               "away_team": "Germany",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5378279428829873,
-              "away_advance_probability": 0.4621720571170127,
+              "home_advance_probability": 0.5375685371046205,
+              "away_advance_probability": 0.4624314628953795,
               "penalty_shootout": {
                 "probability": 0.3378526476787597,
                 "home_win_if_shootout": 0.5616701333333333,
                 "away_win_if_shootout": 0.43832986666666673
               },
               "upset_risk": "high",
-              "confidence_margin": 0.0756558857659746,
+              "confidence_margin": 0.07513707420924098,
               "player_impact": 0.005,
               "team_stat_impact": -0.0211,
               "goal_timing_impact": -0.0037,
@@ -10338,15 +10338,15 @@
               "away_team": "USA",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7746960176733152,
-              "away_advance_probability": 0.22530398232668483,
+              "home_advance_probability": 0.776492217855163,
+              "away_advance_probability": 0.22350778214483705,
               "penalty_shootout": {
                 "probability": 0.3093401982974916,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.5493920353466304,
+              "confidence_margin": 0.552984435710326,
               "player_impact": 0.0211,
               "team_stat_impact": 0.0634,
               "goal_timing_impact": 0.0061,
@@ -10363,15 +10363,15 @@
               "away_team": "Belgium",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6364993432856811,
-              "away_advance_probability": 0.36350065671431897,
+              "home_advance_probability": 0.6377522519859612,
+              "away_advance_probability": 0.3622477480140388,
               "penalty_shootout": {
                 "probability": 0.37340978024075944,
                 "home_win_if_shootout": 0.616547638095238,
                 "away_win_if_shootout": 0.38345236190476195
               },
               "upset_risk": "low",
-              "confidence_margin": 0.27299868657136217,
+              "confidence_margin": 0.2755045039719224,
               "player_impact": 0.0041,
               "team_stat_impact": 0.0605,
               "goal_timing_impact": 0.0115,
@@ -10388,15 +10388,15 @@
               "away_team": "Portugal",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6159134615059068,
-              "away_advance_probability": 0.38408653849409335,
+              "home_advance_probability": 0.616699673036594,
+              "away_advance_probability": 0.38330032696340605,
               "penalty_shootout": {
                 "probability": 0.354325031160661,
                 "home_win_if_shootout": 0.5726070857142859,
                 "away_win_if_shootout": 0.42739291428571413
               },
               "upset_risk": "low",
-              "confidence_margin": 0.2318269230118134,
+              "confidence_margin": 0.23339934607318796,
               "player_impact": 0.0061,
               "team_stat_impact": 0.0537,
               "goal_timing_impact": 0.0097,
@@ -10418,15 +10418,15 @@
               "away_team": "France",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.49169215409152545,
-              "away_advance_probability": 0.5083078459084746,
+              "home_advance_probability": 0.4912409380282044,
+              "away_advance_probability": 0.5087590619717957,
               "penalty_shootout": {
                 "probability": 0.35538947151916084,
                 "home_win_if_shootout": 0.4637367238095238,
                 "away_win_if_shootout": 0.5362632761904762
               },
               "upset_risk": "high",
-              "confidence_margin": 0.016615691816949107,
+              "confidence_margin": 0.017518123943591257,
               "player_impact": -0.0013,
               "team_stat_impact": -0.0247,
               "goal_timing_impact": -0.0055,
@@ -10443,15 +10443,15 @@
               "away_team": "England",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5319849083450627,
-              "away_advance_probability": 0.46801509165493715,
+              "home_advance_probability": 0.532415538815912,
+              "away_advance_probability": 0.4675844611840879,
               "penalty_shootout": {
                 "probability": 0.38278475936419853,
                 "home_win_if_shootout": 0.5293578285714284,
                 "away_win_if_shootout": 0.47064217142857157
               },
               "upset_risk": "high",
-              "confidence_margin": 0.06396981669012558,
+              "confidence_margin": 0.06483107763182405,
               "player_impact": -0.0003,
               "team_stat_impact": 0.0273,
               "goal_timing_impact": 0.0054,
@@ -10473,15 +10473,15 @@
               "away_team": "Spain",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.4554232534566584,
-              "away_advance_probability": 0.5445767465433416,
+              "home_advance_probability": 0.4553656795551306,
+              "away_advance_probability": 0.5446343204448694,
               "penalty_shootout": {
                 "probability": 0.37330947129887404,
                 "home_win_if_shootout": 0.5094795809523811,
                 "away_win_if_shootout": 0.4905204190476189
               },
               "upset_risk": "high",
-              "confidence_margin": 0.08915349308668324,
+              "confidence_margin": 0.08926864088973879,
               "player_impact": 0.0026,
               "team_stat_impact": -0.0277,
               "goal_timing_impact": -0.0054,
@@ -10499,10 +10499,10 @@
       "scenario_id": "C",
       "arabic_name": "المسار ج: جنون الاحتمالات",
       "description": "يعظم أثر الفراشة: ركلات الترجيح، اللاعب الحاسم، الزخم المتأخر، اتجاه السلسلة الزمنية، والمفاجآت القريبة.",
-      "estimated_accuracy": 0.5436845159828743,
+      "estimated_accuracy": 0.543933053980805,
       "confidence_grade": "تجريبية",
       "high_risk_matches": 13,
-      "average_confidence_margin": 0.286691095807917,
+      "average_confidence_margin": 0.2875787315148126,
       "average_penalty_probability": 0.4269498162675267,
       "champion": "Brazil",
       "final": {
@@ -10512,15 +10512,15 @@
         "away_team": "Spain",
         "winner": "Brazil",
         "winner_method": "direct_or_extra_time",
-        "home_advance_probability": 0.5083287334706729,
-        "away_advance_probability": 0.49167126652932713,
+        "home_advance_probability": 0.5078397071564049,
+        "away_advance_probability": 0.4921602928435951,
         "penalty_shootout": {
           "probability": 0.48,
           "home_win_if_shootout": 0.4746894933333334,
           "away_win_if_shootout": 0.5253105066666666
         },
         "upset_risk": "high",
-        "confidence_margin": 0.016657466941345733,
+        "confidence_margin": 0.015679414312809836,
         "player_impact": 0.0018,
         "team_stat_impact": -0.0616,
         "goal_timing_impact": -0.0167,
@@ -10541,15 +10541,15 @@
               "away_team": "Canada",
               "winner": "Canada",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.17593468201560608,
-              "away_advance_probability": 0.824065317984394,
+              "home_advance_probability": 0.17593468187659864,
+              "away_advance_probability": 0.8240653181234013,
               "penalty_shootout": {
                 "probability": 0.41581796449640135,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "low",
-              "confidence_margin": 0.648130635968788,
+              "confidence_margin": 0.6481306362468027,
               "player_impact": -0.0662,
               "team_stat_impact": -0.118,
               "goal_timing_impact": -0.0249,
@@ -10566,15 +10566,15 @@
               "away_team": "Japan",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7312387268131314,
-              "away_advance_probability": 0.26876127318686854,
+              "home_advance_probability": 0.7326206794093052,
+              "away_advance_probability": 0.26737932059069475,
               "penalty_shootout": {
-                "probability": 0.4204465580022987,
+                "probability": 0.42044655800229874,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.46247745362626286,
+              "confidence_margin": 0.46524135881861045,
               "player_impact": 0.0322,
               "team_stat_impact": 0.038,
               "goal_timing_impact": 0.0036,
@@ -10591,15 +10591,15 @@
               "away_team": "Paraguay",
               "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8309639523598543,
-              "away_advance_probability": 0.16903604764014565,
+              "home_advance_probability": 0.8309639524831053,
+              "away_advance_probability": 0.16903604751689466,
               "penalty_shootout": {
-                "probability": 0.35513846820284056,
+                "probability": 0.3551384682028407,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6619279047197086,
+              "confidence_margin": 0.6619279049662106,
               "player_impact": 0.1045,
               "team_stat_impact": 0.0888,
               "goal_timing_impact": 0.015,
@@ -10616,15 +10616,15 @@
               "away_team": "Morocco",
               "winner": "Netherlands",
               "winner_method": "penalties",
-              "home_advance_probability": 0.530805411054395,
-              "away_advance_probability": 0.469194588945605,
+              "home_advance_probability": 0.531261282866006,
+              "away_advance_probability": 0.468738717133994,
               "penalty_shootout": {
                 "probability": 0.4152812960431859,
                 "home_win_if_shootout": 0.6160293333333333,
                 "away_win_if_shootout": 0.3839706666666667
               },
               "upset_risk": "high",
-              "confidence_margin": 0.06161082210879004,
+              "confidence_margin": 0.06252256573201204,
               "player_impact": 0.0158,
               "team_stat_impact": -0.0093,
               "goal_timing_impact": -0.008,
@@ -10641,15 +10641,15 @@
               "away_team": "Norway",
               "winner": "Ivory Coast",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.505176551264115,
-              "away_advance_probability": 0.49482344873588496,
+              "home_advance_probability": 0.505203858399959,
+              "away_advance_probability": 0.49479614160004104,
               "penalty_shootout": {
                 "probability": 0.41715776685685174,
                 "home_win_if_shootout": 0.5086944533333332,
                 "away_win_if_shootout": 0.4913055466666668
               },
               "upset_risk": "high",
-              "confidence_margin": 0.010353102528230018,
+              "confidence_margin": 0.010407716799917921,
               "player_impact": 0.0036,
               "team_stat_impact": -0.0182,
               "goal_timing_impact": -0.0033,
@@ -10666,15 +10666,15 @@
               "away_team": "Sweden",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8343846553416547,
-              "away_advance_probability": 0.16561534465834524,
+              "home_advance_probability": 0.8343846554578044,
+              "away_advance_probability": 0.16561534454219554,
               "penalty_shootout": {
                 "probability": 0.3269392258860011,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6687693106833095,
+              "confidence_margin": 0.6687693109156089,
               "player_impact": 0.0876,
               "team_stat_impact": 0.0451,
               "goal_timing_impact": 0.0075,
@@ -10691,15 +10691,15 @@
               "away_team": "Bosnia & Herzegovina",
               "winner": "USA",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6856825969345614,
-              "away_advance_probability": 0.31431740306543865,
+              "home_advance_probability": 0.6870020249366219,
+              "away_advance_probability": 0.3129979750633782,
               "penalty_shootout": {
                 "probability": 0.36949762766600625,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.3713651938691227,
+              "confidence_margin": 0.3740040498732437,
               "player_impact": 0.0838,
               "team_stat_impact": 0.0184,
               "goal_timing_impact": 0.0084,
@@ -10716,15 +10716,15 @@
               "away_team": "Egypt",
               "winner": "Egypt",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.48897892148363725,
-              "away_advance_probability": 0.5110210785163628,
+              "home_advance_probability": 0.48827880738551954,
+              "away_advance_probability": 0.5117211926144805,
               "penalty_shootout": {
                 "probability": 0.47952987636141353,
                 "home_win_if_shootout": 0.5059313066666665,
                 "away_win_if_shootout": 0.4940686933333335
               },
               "upset_risk": "high",
-              "confidence_margin": 0.02204215703272555,
+              "confidence_margin": 0.023442385228960916,
               "player_impact": 0.0182,
               "team_stat_impact": -0.0439,
               "goal_timing_impact": -0.0082,
@@ -10741,15 +10741,15 @@
               "away_team": "Cape Verde",
               "winner": "Argentina",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8261497692715728,
-              "away_advance_probability": 0.17385023072842715,
+              "home_advance_probability": 0.8261497693832378,
+              "away_advance_probability": 0.1738502306167622,
               "penalty_shootout": {
                 "probability": 0.3969181690347686,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6522995385431456,
+              "confidence_margin": 0.6522995387664756,
               "player_impact": 0.1148,
               "team_stat_impact": 0.1167,
               "goal_timing_impact": 0.021,
@@ -10766,15 +10766,15 @@
               "away_team": "Austria",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8261820740427012,
-              "away_advance_probability": 0.17381792595729886,
+              "home_advance_probability": 0.8261820741689356,
+              "away_advance_probability": 0.1738179258310644,
               "penalty_shootout": {
                 "probability": 0.39662918729615276,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6523641480854023,
+              "confidence_margin": 0.6523641483378713,
               "player_impact": 0.0491,
               "team_stat_impact": 0.13,
               "goal_timing_impact": 0.0266,
@@ -10791,15 +10791,15 @@
               "away_team": "Senegal",
               "winner": "Belgium",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5269089328002082,
-              "away_advance_probability": 0.4730910671997918,
+              "home_advance_probability": 0.5271965112990195,
+              "away_advance_probability": 0.4728034887009806,
               "penalty_shootout": {
                 "probability": 0.4121418056593016,
                 "home_win_if_shootout": 0.5410451466666667,
                 "away_win_if_shootout": 0.4589548533333333
               },
               "upset_risk": "high",
-              "confidence_margin": 0.053817865600416404,
+              "confidence_margin": 0.054393022598038854,
               "player_impact": 0.0167,
               "team_stat_impact": -0.0106,
               "goal_timing_impact": 0.0002,
@@ -10816,15 +10816,15 @@
               "away_team": "Ghana",
               "winner": "Colombia",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7759416788501449,
-              "away_advance_probability": 0.22405832114985502,
+              "home_advance_probability": 0.778150995226278,
+              "away_advance_probability": 0.2218490047737219,
               "penalty_shootout": {
                 "probability": 0.46965926500543614,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.5518833577002898,
+              "confidence_margin": 0.556301990452556,
               "player_impact": 0.0993,
               "team_stat_impact": 0.1294,
               "goal_timing_impact": 0.0254,
@@ -10841,15 +10841,15 @@
               "away_team": "DR Congo",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8257908160875314,
-              "away_advance_probability": 0.1742091839124686,
+              "home_advance_probability": 0.8257908162105725,
+              "away_advance_probability": 0.17420918378942746,
               "penalty_shootout": {
                 "probability": 0.4001367346075208,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6515816321750627,
+              "confidence_margin": 0.651581632421145,
               "player_impact": 0.1042,
               "team_stat_impact": 0.0708,
               "goal_timing_impact": 0.0067,
@@ -10866,15 +10866,15 @@
               "away_team": "Ecuador",
               "winner": "Mexico",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.8181815533186172,
-              "away_advance_probability": 0.18181844668138272,
+              "home_advance_probability": 0.818181553448859,
+              "away_advance_probability": 0.18181844655114096,
               "penalty_shootout": {
                 "probability": 0.45023822568331473,
                 "home_win_if_shootout": 0.6628262666666667,
                 "away_win_if_shootout": 0.33717373333333334
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6363631066372345,
+              "confidence_margin": 0.636363106897718,
               "player_impact": 0.0415,
               "team_stat_impact": 0.0847,
               "goal_timing_impact": 0.0184,
@@ -10891,15 +10891,15 @@
               "away_team": "Croatia",
               "winner": "Portugal",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5242048165214391,
-              "away_advance_probability": 0.47579518347856087,
+              "home_advance_probability": 0.5251655514266668,
+              "away_advance_probability": 0.47483444857333323,
               "penalty_shootout": {
                 "probability": 0.4302094655681318,
                 "home_win_if_shootout": 0.5430465599999998,
                 "away_win_if_shootout": 0.45695344000000016
               },
               "upset_risk": "high",
-              "confidence_margin": 0.048409633042878264,
+              "confidence_margin": 0.05033110285333353,
               "player_impact": 0.0096,
               "team_stat_impact": 0.011,
               "goal_timing_impact": -0.0001,
@@ -10916,15 +10916,15 @@
               "away_team": "Uruguay",
               "winner": "Switzerland",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5987530521115998,
-              "away_advance_probability": 0.4012469478884001,
+              "home_advance_probability": 0.5999563345305237,
+              "away_advance_probability": 0.40004366546947623,
               "penalty_shootout": {
                 "probability": 0.4316021073641657,
                 "home_win_if_shootout": 0.51717872,
                 "away_win_if_shootout": 0.48282128
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.1975061042231997,
+              "confidence_margin": 0.19991266906104743,
               "player_impact": -0.0098,
               "team_stat_impact": -0.0218,
               "goal_timing_impact": -0.0062,
@@ -10946,15 +10946,15 @@
               "away_team": "Brazil",
               "winner": "Brazil",
               "winner_method": "penalties",
-              "home_advance_probability": 0.409976258800969,
-              "away_advance_probability": 0.5900237411990311,
+              "home_advance_probability": 0.4098904664094333,
+              "away_advance_probability": 0.5901095335905668,
               "penalty_shootout": {
                 "probability": 0.43863648997848087,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.18004748239806212,
+              "confidence_margin": 0.18021906718113356,
               "player_impact": -0.0475,
               "team_stat_impact": 0.0491,
               "goal_timing_impact": 0.0135,
@@ -10971,15 +10971,15 @@
               "away_team": "Netherlands",
               "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5423786658254401,
-              "away_advance_probability": 0.4576213341745599,
+              "home_advance_probability": 0.5425547426899139,
+              "away_advance_probability": 0.4574452573100861,
               "penalty_shootout": {
                 "probability": 0.3985867204345098,
                 "home_win_if_shootout": 0.4499183466666667,
                 "away_win_if_shootout": 0.5500816533333333
               },
               "upset_risk": "high",
-              "confidence_margin": 0.08475733165088023,
+              "confidence_margin": 0.08510948537982777,
               "player_impact": -0.0051,
               "team_stat_impact": 0.0285,
               "goal_timing_impact": 0.0085,
@@ -10996,15 +10996,15 @@
               "away_team": "France",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.17322599858924775,
-              "away_advance_probability": 0.8267740014107522,
+              "home_advance_probability": 0.17322599846406994,
+              "away_advance_probability": 0.8267740015359301,
               "penalty_shootout": {
                 "probability": 0.3913559674023691,
                 "home_win_if_shootout": 0.33,
                 "away_win_if_shootout": 0.6699999999999999
               },
               "upset_risk": "low",
-              "confidence_margin": 0.6535480028215044,
+              "confidence_margin": 0.6535480030718601,
               "player_impact": -0.0721,
               "team_stat_impact": -0.084,
               "goal_timing_impact": -0.0156,
@@ -11021,15 +11021,15 @@
               "away_team": "Egypt",
               "winner": "USA",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.601049335657678,
-              "away_advance_probability": 0.3989506643423219,
+              "home_advance_probability": 0.6020852692076641,
+              "away_advance_probability": 0.3979147307923358,
               "penalty_shootout": {
                 "probability": 0.41671323867180554,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.20209867131535614,
+              "confidence_margin": 0.20417053841532834,
               "player_impact": 0.0517,
               "team_stat_impact": 0.0117,
               "goal_timing_impact": 0.0021,
@@ -11046,15 +11046,15 @@
               "away_team": "Spain",
               "winner": "Spain",
               "winner_method": "penalties",
-              "home_advance_probability": 0.4911768738290462,
-              "away_advance_probability": 0.5088231261709539,
+              "home_advance_probability": 0.4908078584210301,
+              "away_advance_probability": 0.50919214157897,
               "penalty_shootout": {
                 "probability": 0.4792733014309053,
                 "home_win_if_shootout": 0.4128955733333333,
                 "away_win_if_shootout": 0.5871044266666667
               },
               "upset_risk": "high",
-              "confidence_margin": 0.017646252341907753,
+              "confidence_margin": 0.018384283157939885,
               "player_impact": 0.0023,
               "team_stat_impact": -0.0629,
               "goal_timing_impact": -0.0136,
@@ -11071,15 +11071,15 @@
               "away_team": "Colombia",
               "winner": "Colombia",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.4919735755953777,
-              "away_advance_probability": 0.5080264244046223,
+              "home_advance_probability": 0.4916463497292982,
+              "away_advance_probability": 0.5083536502707018,
               "penalty_shootout": {
                 "probability": 0.46703608397001267,
                 "home_win_if_shootout": 0.49565469333333323,
                 "away_win_if_shootout": 0.5043453066666668
               },
               "upset_risk": "high",
-              "confidence_margin": 0.016052848809244624,
+              "confidence_margin": 0.01670730054140357,
               "player_impact": 0.0017,
               "team_stat_impact": -0.0207,
               "goal_timing_impact": -0.0074,
@@ -11096,15 +11096,15 @@
               "away_team": "Mexico",
               "winner": "England",
               "winner_method": "penalties",
-              "home_advance_probability": 0.5027632113661815,
-              "away_advance_probability": 0.4972367886338185,
+              "home_advance_probability": 0.5029771008848789,
+              "away_advance_probability": 0.49702289911512104,
               "penalty_shootout": {
                 "probability": 0.4660781691751349,
                 "home_win_if_shootout": 0.6675003733333335,
                 "away_win_if_shootout": 0.33249962666666655
               },
               "upset_risk": "high",
-              "confidence_margin": 0.005526422732363034,
+              "confidence_margin": 0.005954201769757861,
               "player_impact": 0.0204,
               "team_stat_impact": 0.0246,
               "goal_timing_impact": 0.0005,
@@ -11121,15 +11121,15 @@
               "away_team": "Switzerland",
               "winner": "Portugal",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5531051109251022,
-              "away_advance_probability": 0.4468948890748979,
+              "home_advance_probability": 0.5529066468508481,
+              "away_advance_probability": 0.44709335314915194,
               "penalty_shootout": {
                 "probability": 0.45045410797745644,
                 "home_win_if_shootout": 0.4955679466666666,
                 "away_win_if_shootout": 0.5044320533333334
               },
               "upset_risk": "medium",
-              "confidence_margin": 0.10621022185020429,
+              "confidence_margin": 0.10581329370169618,
               "player_impact": 0.0086,
               "team_stat_impact": -0.0146,
               "goal_timing_impact": -0.0029,
@@ -11151,15 +11151,15 @@
               "away_team": "Germany",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5129727228632162,
-              "away_advance_probability": 0.48702727713678373,
+              "home_advance_probability": 0.5127302300637931,
+              "away_advance_probability": 0.4872697699362068,
               "penalty_shootout": {
                 "probability": 0.4278997122913081,
                 "home_win_if_shootout": 0.5647008533333333,
                 "away_win_if_shootout": 0.4352991466666667
               },
               "upset_risk": "high",
-              "confidence_margin": 0.025945445726432426,
+              "confidence_margin": 0.02546046012758635,
               "player_impact": 0.007,
               "team_stat_impact": -0.0249,
               "goal_timing_impact": -0.0057,
@@ -11176,15 +11176,15 @@
               "away_team": "USA",
               "winner": "France",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7433340673847513,
-              "away_advance_probability": 0.25666593261524867,
+              "home_advance_probability": 0.7450235776824228,
+              "away_advance_probability": 0.2549764223175771,
               "penalty_shootout": {
                 "probability": 0.3920229462488896,
                 "home_win_if_shootout": 0.67,
                 "away_win_if_shootout": 0.32999999999999996
               },
               "upset_risk": "low",
-              "confidence_margin": 0.4866681347695026,
+              "confidence_margin": 0.49004715536484567,
               "player_impact": 0.0295,
               "team_stat_impact": 0.0746,
               "goal_timing_impact": 0.0094,
@@ -11201,15 +11201,15 @@
               "away_team": "Colombia",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.7242126040862661,
-              "away_advance_probability": 0.27578739591373386,
+              "home_advance_probability": 0.725686788250165,
+              "away_advance_probability": 0.2743132117498351,
               "penalty_shootout": {
-                "probability": 0.46947311132252506,
+                "probability": 0.46947311132252517,
                 "home_win_if_shootout": 0.61347872,
                 "away_win_if_shootout": 0.38652127999999997
               },
               "upset_risk": "low",
-              "confidence_margin": 0.44842520817253223,
+              "confidence_margin": 0.4513735765003299,
               "player_impact": 0.0075,
               "team_stat_impact": 0.0505,
               "goal_timing_impact": 0.0102,
@@ -11226,15 +11226,15 @@
               "away_team": "Portugal",
               "winner": "England",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6213238142459826,
-              "away_advance_probability": 0.3786761857540174,
+              "home_advance_probability": 0.6221133446064512,
+              "away_advance_probability": 0.37788665539354876,
               "penalty_shootout": {
                 "probability": 0.44254306660738907,
                 "home_win_if_shootout": 0.5736979200000002,
                 "away_win_if_shootout": 0.4263020799999998
               },
               "upset_risk": "low",
-              "confidence_margin": 0.2426476284919652,
+              "confidence_margin": 0.24422668921290241,
               "player_impact": 0.0086,
               "team_stat_impact": 0.0632,
               "goal_timing_impact": 0.0149,
@@ -11256,15 +11256,15 @@
               "away_team": "France",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5085267670136454,
-              "away_advance_probability": 0.4914732329863545,
+              "home_advance_probability": 0.5081027101310243,
+              "away_advance_probability": 0.49189728986897563,
               "penalty_shootout": {
                 "probability": 0.4480276450487504,
                 "home_win_if_shootout": 0.46433274666666663,
                 "away_win_if_shootout": 0.5356672533333333
               },
               "upset_risk": "high",
-              "confidence_margin": 0.01705353402729093,
+              "confidence_margin": 0.01620542026204863,
               "player_impact": -0.0018,
               "team_stat_impact": -0.029,
               "goal_timing_impact": -0.0084,
@@ -11281,15 +11281,15 @@
               "away_team": "England",
               "winner": "Spain",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5166186757261348,
-              "away_advance_probability": 0.4833813242738651,
+              "home_advance_probability": 0.5170243239950842,
+              "away_advance_probability": 0.48297567600491575,
               "penalty_shootout": {
                 "probability": 0.48,
                 "home_win_if_shootout": 0.5293409599999999,
                 "away_win_if_shootout": 0.47065904000000014
               },
               "upset_risk": "high",
-              "confidence_margin": 0.03323735145226975,
+              "confidence_margin": 0.03404864799016849,
               "player_impact": -0.0004,
               "team_stat_impact": 0.0322,
               "goal_timing_impact": 0.0082,
@@ -11311,15 +11311,15 @@
               "away_team": "Spain",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.5083287334706729,
-              "away_advance_probability": 0.49167126652932713,
+              "home_advance_probability": 0.5078397071564049,
+              "away_advance_probability": 0.4921602928435951,
               "penalty_shootout": {
                 "probability": 0.48,
                 "home_win_if_shootout": 0.4746894933333334,
                 "away_win_if_shootout": 0.5253105066666666
               },
               "upset_risk": "high",
-              "confidence_margin": 0.016657466941345733,
+              "confidence_margin": 0.015679414312809836,
               "player_impact": 0.0018,
               "team_stat_impact": -0.0616,
               "goal_timing_impact": -0.0167,
