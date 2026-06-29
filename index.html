@@ -1756,6 +1756,8 @@
       const totalEvaluated = evaluatedMatches.length || Number(m.completed_forecasts || 0);
       const correctCount = evaluatedMatches.filter(row => row.correct).length;
       const missedCount = Math.max(totalEvaluated - correctCount, 0);
+      const groupCount = Number(m.group_completed_forecasts || evaluatedMatches.filter(row => row.stage === "group").length || 0);
+      const knockoutCount = Number(m.knockout_completed_forecasts || evaluatedMatches.filter(row => row.stage === "knockout").length || 0);
       const accuracyValue = totalEvaluated ? correctCount / totalEvaluated : Number(m.accuracy || 0);
       const correctDeg = Math.max(0, Math.min(360, accuracyValue * 360));
       const outcomeText = (row, outcome) => {

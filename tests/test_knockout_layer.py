@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from predict_knockout_bracket import _shrink_two_way
+from evolve_after_results import _actual_id_for_match
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -16,6 +17,10 @@ class KnockoutLayerTest(unittest.TestCase):
             rows = list(csv.DictReader(f))
         self.assertEqual(len(rows), 16)
         self.assertTrue(all(row["stage"] == "knockout" for row in rows))
+
+    def test_knockout_actual_id_alias_maps_wc_to_ko(self) -> None:
+        actuals = {"WC-073": {"home_goals": 0, "away_goals": 1}}
+        self.assertEqual(_actual_id_for_match("KO-073", actuals), "WC-073")
 
     def test_two_way_shrink_keeps_no_draw_output(self) -> None:
         home, away = _shrink_two_way(0.70, 0.20, 0.08, 0.14)

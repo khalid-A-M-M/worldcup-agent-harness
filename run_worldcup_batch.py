@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from forecast_ledger import archive_forecast
+from forecast_ledger import archive_forecast, archive_knockout_predictions
 
 
 ROOT = Path(__file__).resolve().parent
@@ -70,6 +70,7 @@ def main() -> None:
         check=True,
         stdout=subprocess.DEVNULL,
     )
+    archive_knockout_predictions(OUTPUTS / "knockout_bracket_prediction.json")
 
     OUTPUTS.mkdir(exist_ok=True)
     (OUTPUTS / "forecast_manifest.json").write_text(
