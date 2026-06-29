@@ -1,6 +1,6 @@
 {
-  "equation_version": 21,
-  "generated_at_utc": "2026-06-29T13:41:27.098212Z",
+  "equation_version": 19,
+  "generated_at_utc": "2026-06-29T13:23:27.908822Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
