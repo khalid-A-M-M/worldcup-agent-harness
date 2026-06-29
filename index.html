@@ -834,43 +834,42 @@
     .orbit-arena {
       grid-column: 1 / -1;
       position: relative;
-      min-height: min(86vw, 860px);
+      min-height: min(86vw, 900px);
       overflow: hidden;
-      border: 1px solid rgba(214,168,73,.34);
-      border-radius: 18px;
+      border: 1px solid rgba(232,190,89,.52);
+      border-radius: 16px;
       background:
-        radial-gradient(circle at 50% 50%, rgba(255,214,102,.20) 0 8%, rgba(255,214,102,.08) 9%, transparent 25%),
-        radial-gradient(ellipse at 50% 50%, transparent 0 34%, rgba(255,255,255,.10) 34.2% 34.7%, transparent 35%),
-        linear-gradient(90deg, transparent 49.85%, rgba(255,255,255,.10) 50%, transparent 50.15%),
-        linear-gradient(0deg, transparent 49.85%, rgba(255,255,255,.08) 50%, transparent 50.15%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 80px),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0 1px, transparent 1px 80px),
-        linear-gradient(135deg, color-mix(in srgb, var(--left-final-color, #0ea5e9) 20%, transparent), transparent 33%, rgba(3,18,13,.92) 50%, transparent 68%, color-mix(in srgb, var(--right-final-color, #ef4444) 20%, transparent)),
-        #07130f;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 28px 80px rgba(0,0,0,.34);
+        radial-gradient(circle at 50% 50%, rgba(255,221,128,.24) 0 7%, rgba(255,221,128,.09) 8%, transparent 22%),
+        radial-gradient(ellipse at 50% 50%, transparent 0 18%, rgba(255,255,255,.18) 18.2% 18.6%, transparent 19%),
+        radial-gradient(ellipse at 50% 50%, transparent 0 43%, rgba(255,255,255,.13) 43.2% 43.6%, transparent 44%),
+        linear-gradient(90deg, transparent 49.85%, rgba(255,255,255,.16) 50%, transparent 50.15%),
+        linear-gradient(0deg, transparent 49.85%, rgba(255,255,255,.10) 50%, transparent 50.15%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 72px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 72px),
+        linear-gradient(135deg, #0f5f32, #0b3f24 44%, #082d1c 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), inset 0 0 80px rgba(0,0,0,.32), 0 28px 80px rgba(0,0,0,.34);
       isolation: isolate;
     }
     .orbit-arena::before {
       content: "";
       position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 14px;
+      inset: 22px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 12px;
       background:
-        radial-gradient(ellipse at 50% 50%, transparent 0 16%, rgba(255,255,255,.18) 16.2% 16.6%, transparent 17%),
-        radial-gradient(ellipse at 50% 50%, transparent 0 44%, rgba(255,255,255,.14) 44.2% 44.6%, transparent 45%),
-        linear-gradient(90deg, transparent 6%, rgba(255,255,255,.18) 6.2%, transparent 6.5%, transparent 93.5%, rgba(255,255,255,.18) 93.8%, transparent 94%);
-      opacity: .58;
+        linear-gradient(90deg, transparent 7%, rgba(255,255,255,.20) 7.15%, transparent 7.35%, transparent 92.65%, rgba(255,255,255,.20) 92.85%, transparent 93%),
+        radial-gradient(circle at 50% 50%, transparent 0 9.5%, rgba(255,255,255,.22) 9.7% 10.1%, transparent 10.4%);
+      opacity: .72;
       pointer-events: none;
       z-index: 0;
     }
     .orbit-arena::after {
       content: "";
       position: absolute;
-      inset: -20%;
-      background: conic-gradient(from 0deg, color-mix(in srgb, var(--champion-color, #d6a849) 18%, transparent), transparent 12%, color-mix(in srgb, var(--left-final-color, #38bdf8) 14%, transparent), transparent 30%, color-mix(in srgb, var(--right-final-color, #ef4444) 14%, transparent), transparent 52%, color-mix(in srgb, var(--champion-color, #d6a849) 14%, transparent), transparent 74%, color-mix(in srgb, var(--left-final-color, #38bdf8) 12%, transparent), transparent);
-      filter: blur(42px);
-      opacity: .40;
+      inset: 9%;
+      border-radius: 50%;
+      border: 1px solid rgba(232,190,89,.28);
+      box-shadow: 0 0 80px rgba(232,190,89,.18), inset 0 0 90px rgba(232,190,89,.10);
       pointer-events: none;
       z-index: 0;
     }
@@ -884,74 +883,115 @@
     }
     .orbit-svg path {
       fill: none;
-      stroke: rgba(255,232,166,.26);
-      stroke-width: 1.2;
+      stroke: rgba(232,190,89,.54);
+      stroke-width: 1.45;
       stroke-linecap: round;
       vector-effect: non-scaling-stroke;
+      filter: drop-shadow(0 0 4px rgba(232,190,89,.32));
     }
-    .orbit-svg path.risk-high { stroke: rgba(248,113,113,.50); stroke-dasharray: 4 6; }
-    .orbit-svg path.risk-medium { stroke: rgba(250,204,21,.42); }
+    .orbit-svg path.risk-high { stroke: rgba(255,231,150,.66); stroke-dasharray: 3 5; }
+    .orbit-svg path.risk-medium { stroke: rgba(250,210,94,.58); }
     .orbit-node {
       position: absolute;
       z-index: 2;
-      width: clamp(74px, 7.2vw, 118px);
-      min-height: 58px;
+      width: clamp(70px, 6.5vw, 104px);
+      aspect-ratio: 1;
       transform: translate(-50%, -50%);
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 14px;
+      border: 1px solid rgba(255,236,176,.50);
+      border-radius: 50%;
       background:
-        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 34%, rgba(255,255,255,.04)), transparent 46%),
-        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 34%, rgba(255,255,255,.03)), transparent 48%),
-        rgba(2,10,8,.78);
-      box-shadow: 0 12px 34px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.08);
-      padding: 7px;
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.20), transparent 34%),
+        conic-gradient(from -40deg, color-mix(in srgb, var(--home-color, #38bdf8) 78%, #fff 4%), rgba(255,255,255,.10), color-mix(in srgb, var(--away-color, #ef4444) 78%, #fff 4%), rgba(232,190,89,.32), color-mix(in srgb, var(--home-color, #38bdf8) 78%, #fff 4%)),
+        rgba(5,18,11,.88);
+      box-shadow: 0 12px 28px rgba(0,0,0,.40), 0 0 0 4px rgba(232,190,89,.07), inset 0 1px 0 rgba(255,255,255,.22);
       color: #fff;
       direction: rtl;
       overflow: hidden;
+      cursor: default;
     }
     .orbit-node::before {
       content: "";
       position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, color-mix(in srgb, var(--winner-color, #d6a849) 18%, transparent) var(--win-pct, 54%), transparent var(--win-pct, 54%));
-      opacity: .55;
+      inset: 6px;
+      border-radius: 50%;
+      background: rgba(3,18,10,.80);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
       pointer-events: none;
     }
+    .orbit-node::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius: 50%;
+      border: 3px solid color-mix(in srgb, var(--winner-color, #d6a849) 82%, #fff 8%);
+      opacity: .88;
+      pointer-events: none;
+      filter: drop-shadow(0 0 7px color-mix(in srgb, var(--winner-color, #d6a849) 50%, transparent));
+    }
     .orbit-node > * { position: relative; z-index: 1; }
-    .orbit-node .orb-teams {
+    .orb-flags {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      gap: 5px;
-      font-size: clamp(10px, .82vw, 12px);
-      line-height: 1.15;
-      min-width: 0;
+      gap: 2px;
+      padding-top: 8px;
+      direction: ltr;
     }
-    .orbit-node .orb-teams span { overflow-wrap: anywhere; max-width: 45%; }
+    .orb-flag {
+      width: clamp(24px, 2.35vw, 34px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,236,176,.72);
+      box-shadow: 0 3px 8px rgba(0,0,0,.28);
+      font-size: clamp(16px, 1.5vw, 23px);
+      line-height: 1;
+    }
+    .orb-flag.winner {
+      transform: translateY(-2px) scale(1.08);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--winner-color, #d6a849) 60%, #fff 10%), 0 6px 14px rgba(0,0,0,.35);
+    }
     .orbit-node .orb-winner {
-      margin-top: 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 6px;
-      font-size: clamp(11px, .95vw, 13px);
+      margin: 4px auto 0;
+      width: calc(100% - 16px);
+      display: grid;
+      place-items: center;
+      gap: 1px;
+      font-size: clamp(9px, .74vw, 11px);
       font-weight: 900;
+      line-height: 1.05;
+      text-align: center;
     }
-    .orbit-node .orb-winner b { direction: ltr; color: #fff7cf; }
+    .orbit-node .orb-winner span {
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #fff7cf !important;
+      text-shadow: 0 1px 5px rgba(0,0,0,.7);
+    }
+    .orbit-node .orb-winner b { direction: ltr; color: #f8d36c; font-size: 10px; }
     .orbit-node .orb-meta {
-      margin-top: 4px;
+      margin: 2px auto 0;
+      max-width: calc(100% - 18px);
       color: rgba(255,255,255,.68);
-      font-size: 10px;
+      font-size: 8.5px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-align: center;
     }
     .orbit-node.round-4 {
-      width: clamp(128px, 13vw, 180px);
-      min-height: 82px;
-      border-color: rgba(255,232,166,.62);
-      box-shadow: 0 0 0 1px color-mix(in srgb, var(--winner-color, #d6a849) 45%, transparent), 0 22px 70px rgba(0,0,0,.42), 0 0 45px color-mix(in srgb, var(--winner-color, #d6a849) 24%, transparent);
+      width: clamp(116px, 12vw, 172px);
+      border-color: rgba(255,236,176,.86);
+      box-shadow: 0 0 0 1px rgba(255,236,176,.38), 0 22px 70px rgba(0,0,0,.46), 0 0 58px color-mix(in srgb, var(--winner-color, #d6a849) 34%, transparent);
     }
+    .orbit-node.round-4 .orb-flags { padding-top: 15px; gap: 6px; }
+    .orbit-node.round-4 .orb-flag { width: clamp(34px, 3.4vw, 50px); font-size: clamp(22px, 2.2vw, 34px); }
+    .orbit-node.round-4 .orb-winner { margin-top: 7px; font-size: clamp(13px, 1.25vw, 18px); }
+    .orbit-node.round-4 .orb-winner b { font-size: clamp(12px, 1vw, 15px); }
     .orbit-center {
       position: absolute;
       z-index: 3;
@@ -964,13 +1004,13 @@
       place-items: center;
       text-align: center;
       border-radius: 50%;
-      border: 1px solid rgba(255,232,166,.42);
+      border: 1px solid rgba(255,236,176,.68);
       background:
-        radial-gradient(circle, rgba(255,236,170,.28), rgba(214,168,73,.12) 42%, rgba(0,0,0,.50) 70%),
-        color-mix(in srgb, var(--champion-color, #d6a849) 18%, rgba(0,0,0,.30));
-      box-shadow: 0 0 70px color-mix(in srgb, var(--champion-color, #d6a849) 38%, transparent), inset 0 1px 0 rgba(255,255,255,.22);
+        radial-gradient(circle, rgba(255,236,176,.36), rgba(232,190,89,.18) 42%, rgba(0,0,0,.54) 72%),
+        color-mix(in srgb, var(--champion-color, #d6a849) 20%, rgba(0,0,0,.34));
+      box-shadow: 0 0 78px rgba(232,190,89,.42), inset 0 1px 0 rgba(255,255,255,.24);
     }
-    .orbit-center .cup { font-size: clamp(42px, 7vw, 82px); filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
+    .orbit-center .cup { font-size: clamp(46px, 7vw, 86px); filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
     .orbit-center strong { display: block; margin-top: -6px; color: #fff7cf; font-size: clamp(13px, 1.4vw, 20px); }
     .orbit-center span { display: block; color: rgba(255,255,255,.76); font-size: 11px; margin-top: 3px; }
     .orbit-legend {
@@ -985,11 +1025,11 @@
       max-width: min(760px, calc(100% - 32px));
     }
     .orbit-legend span {
-      border: 1px solid rgba(255,255,255,.14);
+      border: 1px solid rgba(232,190,89,.28);
       border-radius: 999px;
       padding: 6px 9px;
       background: rgba(0,0,0,.32);
-      color: rgba(255,255,255,.78);
+      color: rgba(255,247,207,.88);
       font-size: 11px;
     }
     @media (max-width: 900px) {
@@ -1147,6 +1187,23 @@
 
     function pct(value) {
       return `${Math.round(value * 1000) / 10}%`;
+    }
+
+
+    const teamFlags = {
+      "France": "\u{1F1EB}\u{1F1F7}", "Argentina": "\u{1F1E6}\u{1F1F7}", "Spain": "\u{1F1EA}\u{1F1F8}", "England": "\u{1F3F4}", "Brazil": "\u{1F1E7}\u{1F1F7}",
+      "Portugal": "\u{1F1F5}\u{1F1F9}", "Netherlands": "\u{1F1F3}\u{1F1F1}", "Belgium": "\u{1F1E7}\u{1F1EA}", "Germany": "\u{1F1E9}\u{1F1EA}", "Croatia": "\u{1F1ED}\u{1F1F7}",
+      "Uruguay": "\u{1F1FA}\u{1F1FE}", "Colombia": "\u{1F1E8}\u{1F1F4}", "USA": "\u{1F1FA}\u{1F1F8}", "Switzerland": "\u{1F1E8}\u{1F1ED}", "Morocco": "\u{1F1F2}\u{1F1E6}",
+      "Mexico": "\u{1F1F2}\u{1F1FD}", "Japan": "\u{1F1EF}\u{1F1F5}", "Sweden": "\u{1F1F8}\u{1F1EA}", "Senegal": "\u{1F1F8}\u{1F1F3}", "Ghana": "\u{1F1EC}\u{1F1ED}",
+      "Egypt": "\u{1F1EA}\u{1F1EC}", "Australia": "\u{1F1E6}\u{1F1FA}", "Canada": "\u{1F1E8}\u{1F1E6}", "Paraguay": "\u{1F1F5}\u{1F1FE}", "Ecuador": "\u{1F1EA}\u{1F1E8}",
+      "Ivory Coast": "\u{1F1E8}\u{1F1EE}", "South Africa": "\u{1F1FF}\u{1F1E6}", "Bosnia & Herzegovina": "\u{1F1E7}\u{1F1E6}", "Austria": "\u{1F1E6}\u{1F1F9}", "Norway": "\u{1F1F3}\u{1F1F4}",
+      "DR Congo": "\u{1F1E8}\u{1F1E9}", "Congo DR": "\u{1F1E8}\u{1F1E9}", "Cape Verde": "\u{1F1E8}\u{1F1FB}", "Qatar": "\u{1F1F6}\u{1F1E6}", "Turkey": "\u{1F1F9}\u{1F1F7}",
+      "Scotland": "\u{1F3F4}", "Czech Republic": "\u{1F1E8}\u{1F1FF}", "South Korea": "\u{1F1F0}\u{1F1F7}", "Jordan": "\u{1F1EF}\u{1F1F4}", "Haiti": "\u{1F1ED}\u{1F1F9}",
+      "Cura\u00e7ao": "\u{1F1E8}\u{1F1FC}", "Curacao": "\u{1F1E8}\u{1F1FC}"
+    };
+
+    function flagFor(team) {
+      return teamFlags[team] || "\u26BD";
     }
 
     function visual(team) {
@@ -1677,6 +1734,10 @@
       }).join("");
     }
 
+    function homeWinnerClass(match, team) {
+      return match.winner === team ? "winner" : "";
+    }
+
     function renderOrbitNode(node) {
       const match = node.match;
       if (!match) return "";
@@ -1684,13 +1745,16 @@
       const away = visual(match.away_team);
       const winner = visual(match.winner);
       const winnerProb = bracketProbability(match, match.winner);
-      const method = match.winner_method === "penalties" ? "ترجيح" : "ثقة";
-      const risk = match.upset_risk === "high" ? "خطر عال" : match.upset_risk === "medium" ? "خطر متوسط" : "ثقة";
+      const method = match.winner_method === "penalties" ? "\u062a\u0631\u062c\u064a\u062d" : "\u062d\u0633\u0645";
+      const risk = match.upset_risk === "high" ? "\u062e\u0637\u0631 \u0639\u0627\u0644" : match.upset_risk === "medium" ? "\u062e\u0637\u0631 \u0645\u062a\u0648\u0633\u0637" : "\u062b\u0642\u0629";
       const point = node.point;
       return `
-        <button class="orbit-node round-${node.roundIndex}" type="button" title="${home.arabic_name} ضد ${away.arabic_name}" style="left:${point.x}%;top:${point.y}%;--home-color:${home.primary_color};--away-color:${away.primary_color};--winner-color:${winner.primary_color};--win-pct:${Math.round(winnerProb * 100)}%">
-          <div class="orb-teams"><span>${home.arabic_name}</span><span>${away.arabic_name}</span></div>
-          <div class="orb-winner"><span style="color:${winner.primary_color}">${winner.arabic_name}</span><b>${pct(winnerProb)}</b></div>
+        <button class="orbit-node round-${node.roundIndex}" type="button" title="${home.arabic_name} ?? ${away.arabic_name}" style="left:${point.x}%;top:${point.y}%;--home-color:${home.primary_color};--away-color:${away.primary_color};--winner-color:${winner.primary_color};--win-pct:${Math.round(winnerProb * 100)}%">
+          <div class="orb-flags">
+            <span class="orb-flag ${homeWinnerClass(match, match.home_team)}" title="${home.arabic_name}">${flagFor(match.home_team)}</span>
+            <span class="orb-flag ${homeWinnerClass(match, match.away_team)}" title="${away.arabic_name}">${flagFor(match.away_team)}</span>
+          </div>
+          <div class="orb-winner"><span>${winner.arabic_name}</span><b>${pct(winnerProb)}</b></div>
           <div class="orb-meta">${roundTitle(match.round)} ? ${method} ? ${risk}</div>
         </button>`;
     }
