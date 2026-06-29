@@ -1604,6 +1604,32 @@
     }
 
 
+
+    function scenarioRound(scenario, index) {
+      return scenario.rounds?.[index]?.matches || [];
+    }
+
+    function scenarioColors(scenario) {
+      const final = scenario.final || scenarioRound(scenario, 4)[0] || {};
+      return {
+        champion: visual(scenario.champion).primary_color,
+        left: visual(final.home_team || "").primary_color || "#38bdf8",
+        right: visual(final.away_team || "").primary_color || "#ef4444"
+      };
+    }
+
+    function renderScenarioTab(scenario, activeId) {
+      const colors = scenarioColors(scenario);
+      const champ = visual(scenario.champion);
+      return `
+        <button class="scenario-tab ${scenario.scenario_id === activeId ? "active" : ""}" data-scenario-id="${scenario.scenario_id}" style="--tab-a:${colors.left};--tab-b:${colors.right}">
+          <strong>${scenario.arabic_name}</strong>
+          <span>البطل: <b style="color:${champ.primary_color};margin-inline-start:4px">${champ.arabic_name}</b></span>
+          <span>الدقة ${pct(scenario.estimated_accuracy || 0)}</span>
+          <span>${scenario.high_risk_matches || 0} خطر</span>
+        </button>`;
+    }
+
     function orbitPoint(angleDeg, radiusPct) {
       const angle = (angleDeg - 90) * Math.PI / 180;
       return {
@@ -1684,10 +1710,10 @@
               <p>${scenario.description}</p>
             </div>
             <div class="bracket-badges">
-              <span>?????: <b style="color:${champion.primary_color}">${champion.arabic_name}</b></span>
-              <span>??? ?????? ${pct(scenario.estimated_accuracy || 0)}</span>
-              <span>${scenario.high_risk_matches || 0} ??????? ???</span>
-              <span>?????: ${finalHome.arabic_name || "?"} ?? ${finalAway.arabic_name || "?"}</span>
+              <span>البطل: <b style="color:${champion.primary_color}">${champion.arabic_name}</b></span>
+              <span>دقة متوقعة ${pct(scenario.estimated_accuracy || 0)}</span>
+              <span>${scenario.high_risk_matches || 0} مباريات خطر</span>
+              <span>نهائي: ${finalHome.arabic_name || "?"} ضد ${finalAway.arabic_name || "?"}</span>
             </div>
           </div>
           <div class="orbit-arena" aria-label="مدار احتمالات ${scenario.arabic_name}">
