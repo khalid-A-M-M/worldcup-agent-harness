@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-29T19:06:25.685815Z",
+  "generated_at_utc": "2026-06-29T16:43:52.277392Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -126,22 +126,22 @@
       ]
     },
     "Brazil": {
-      "sample_size": 7,
-      "momentum_index": 8.6392,
+      "sample_size": 6,
+      "momentum_index": 10.0,
       "stat_trend_index": 1.7534,
-      "volatility_index": 2.6694,
+      "volatility_index": 3.1113,
       "time_series_edge": 0.14,
-      "confidence": 0.7083,
-      "point_momentum": 2.9739,
-      "goal_difference_momentum": 1.8008,
-      "scoring_form": 2.3939,
-      "defensive_form": 0.5931,
+      "confidence": 0.6422,
+      "point_momentum": 2.9378,
+      "goal_difference_momentum": 2.9066,
+      "scoring_form": 2.9378,
+      "defensive_form": 0.0311,
       "last_dates": [
+        "2026-06-13",
         "2026-06-19",
         "2026-06-20",
         "2026-06-24",
-        "2026-06-24",
-        "2026-06-29"
+        "2026-06-24"
       ]
     },
     "Canada": {
@@ -468,22 +468,22 @@
       ]
     },
     "Japan": {
-      "sample_size": 7,
-      "momentum_index": -2.5389,
+      "sample_size": 6,
+      "momentum_index": 1.5502,
       "stat_trend_index": 1.2411,
-      "volatility_index": 4.4757,
-      "time_series_edge": -0.0601,
-      "confidence": 0.6881,
-      "point_momentum": 0.542,
-      "goal_difference_momentum": -0.3359,
-      "scoring_form": 1.1961,
-      "defensive_form": 1.5321,
+      "volatility_index": 4.1484,
+      "time_series_edge": 0.0154,
+      "confidence": 0.6413,
+      "point_momentum": 1.2906,
+      "goal_difference_momentum": 0.5811,
+      "scoring_form": 1.467,
+      "defensive_form": 0.8858,
       "last_dates": [
+        "2026-06-14",
         "2026-06-20",
         "2026-06-21",
         "2026-06-25",
-        "2026-06-25",
-        "2026-06-29"
+        "2026-06-25"
       ]
     },
     "Jordan": {

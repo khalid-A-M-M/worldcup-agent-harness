@@ -1,6 +1,5 @@
 {
   "system_start_utc": "2026-06-23T00:00:00Z",
-  "update_policy": "GitHub Actions checks every 20 minutes; completed matches are refreshed after kickoff + 110 minutes, which approximates 20 minutes after full time for open sources to publish results and stats.",
   "metrics": {
     "completed_forecasts": 30,
     "accuracy": 0.6,
@@ -552,6 +551,5 @@
       "kickoff_utc": "2026-06-29T20:00:00Z",
       "model_family": "Agent Harness knockout path model"
     }
-  ],
-  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v102_20260629T190625Z"
+  ]
 }
