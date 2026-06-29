@@ -123,6 +123,8 @@ def _snapshot_version(scored: list[dict], metrics: dict) -> Path:
         shutil.copy2(OUTPUTS / "tournament_projection.json", version_dir / "tournament_projection.json")
     if (DATA / "equation_learning.json").exists():
         shutil.copy2(DATA / "equation_learning.json", version_dir / "equation_learning.json")
+    if (DATA / "time_series_forecast.json").exists():
+        shutil.copy2(DATA / "time_series_forecast.json", version_dir / "time_series_forecast.json")
     (version_dir / "accuracy_report.json").write_text(
         json.dumps({"metrics": metrics, "matches": scored}, ensure_ascii=False, indent=2),
         encoding="utf-8",

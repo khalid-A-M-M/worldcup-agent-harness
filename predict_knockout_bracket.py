@@ -36,30 +36,33 @@ SCENARIOS = [
         "player_weight": 0.55,
         "team_stats_weight": 0.70,
         "goal_timing_weight": 0.55,
+        "time_series_weight": 0.65,
         "chaos_weight": 0.35,
     },
     {
         "id": "B",
         "arabic_name": "المسار ب: النموذج المتوازن",
-        "description": "النسخة الرسمية الحالية: تمزج Agent Harness مع النموذج الاقتصادي وإحصاءات البطولة والتعلم من الأخطاء.",
+        "description": "النسخة الرسمية الحالية: تمزج Agent Harness مع النموذج الاقتصادي وإحصاءات البطولة والتعلم من الأخطاء واتجاهات السلاسل الزمنية.",
         "favorite_shrink_delta": 0.0,
         "upset_floor_delta": 0.0,
         "penalty_multiplier": 1.0,
         "player_weight": 0.75,
         "team_stats_weight": 0.85,
         "goal_timing_weight": 0.75,
+        "time_series_weight": 0.90,
         "chaos_weight": 0.60,
     },
     {
         "id": "C",
         "arabic_name": "المسار ج: جنون الاحتمالات",
-        "description": "يعظم أثر الفراشة: ركلات الترجيح، اللاعب الحاسم، الزخم المتأخر، والمفاجآت القريبة.",
+        "description": "يعظم أثر الفراشة: ركلات الترجيح، اللاعب الحاسم، الزخم المتأخر، اتجاه السلسلة الزمنية، والمفاجآت القريبة.",
         "favorite_shrink_delta": 0.035,
         "upset_floor_delta": 0.045,
         "penalty_multiplier": 1.24,
         "player_weight": 1.05,
         "team_stats_weight": 1.0,
         "goal_timing_weight": 1.15,
+        "time_series_weight": 1.25,
         "chaos_weight": 1.0,
     },
 ]
@@ -68,17 +71,19 @@ SCENARIOS = [
 def main() -> None:
     learning = _load_learning()
     equation = _load_equation_learning()
+    time_series = _load_time_series_forecast()
     fixtures = _read_csv(DATA / "knockout_fixtures.csv")
-    scenarios = [_project_scenario(fixtures, learning, equation, scenario) for scenario in SCENARIOS]
+    scenarios = [_project_scenario(fixtures, learning, equation, time_series, scenario) for scenario in SCENARIOS]
     official = next(item for item in scenarios if item["scenario_id"] == "B")
     rounds = official["rounds"]
     champion = official["champion"]
     scenario_summaries = [_scenario_summary(item) for item in scenarios]
     payload = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + penalty shootout model. No draw is allowed in knockout outputs.",
+        "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + TimesFM-inspired time-series agent + penalty shootout model. No draw is allowed in knockout outputs.",
         "learning_summary": learning,
         "equation_learning": equation,
+        "time_series_forecast": time_series,
         "champion": champion,
         "rounds": rounds,
         "scenarios": scenario_summaries,
@@ -88,6 +93,8 @@ def main() -> None:
             "data/player_performance_indicators.csv open-source-ready player-impact layer",
             "data/goal_timing_events.csv optional goal-minute layer; falls back to late-momentum indicators when minutes are not available",
             "data/equation_learning.json learned equation parameters after every completed-match audit",
+            "data/time_series_forecast.json TimesFM-inspired sequence trend layer for team momentum and volatility",
+            "google-research/timesfm design idea: sequence-first forecasting; implemented here as a stable free fallback for GitHub Actions",
             "Published Round-of-32 pairings from FIFA/beIN/Yallakora text supplied with this run",
         ],
     }
@@ -96,7 +103,7 @@ def main() -> None:
     print(f"Projected 3 knockout paths through final. Official champion={champion}")
 
 
-def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], equation: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
+def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], equation: dict[str, Any], time_series: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     rounds: list[dict[str, Any]] = []
     current = [_fixture_to_match(row) for row in fixtures]
     round_index = 0
@@ -107,7 +114,7 @@ def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], 
         matches = []
         winners = []
         for fixture in current:
-            prediction = _predict_knockout_match(fixture, round_name, learning, equation, scenario)
+            prediction = _predict_knockout_match(fixture, round_name, learning, equation, time_series, scenario)
             matches.append(prediction)
             winners.append(prediction["winner"])
         rounds.append({"round": round_name, "matches": matches})
@@ -183,6 +190,7 @@ def _compact_match_for_scenario(match: dict[str, Any]) -> dict[str, Any]:
         "player_impact",
         "team_stat_impact",
         "goal_timing_impact",
+        "time_series_impact",
         "scenario",
     ]
     return {key: match.get(key) for key in keys if key in match}
@@ -194,6 +202,14 @@ def _load_equation_learning() -> dict[str, Any]:
         import subprocess, sys
         subprocess.run([sys.executable, str(ROOT / "learn_equation_parameters.py")], cwd=ROOT, check=True)
     return json.loads(path.read_text(encoding="utf-8"))
+
+def _load_time_series_forecast() -> dict[str, Any]:
+    path = DATA / "time_series_forecast.json"
+    if not path.exists():
+        import subprocess, sys
+        subprocess.run([sys.executable, str(ROOT / "time_series_forecaster.py")], cwd=ROOT, check=True)
+    return json.loads(path.read_text(encoding="utf-8"))
+
 
 def _load_learning() -> dict[str, Any]:
     path = OUTPUTS / "group_learning_report.json"
@@ -233,7 +249,7 @@ def _harness() -> AgentHarness:
     )
 
 
-def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: dict[str, Any], equation: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
+def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: dict[str, Any], equation: dict[str, Any], time_series: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     state = _harness().run_match(
         MatchContext(
             match_id=fixture["match_id"],
@@ -258,7 +274,7 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
     upset_floor = max(0.05, min(0.34, float(adjustments.get("upset_floor", 0.14)) + float(coefficients.get("upset_curve", 0.14)) * 0.20 + float(scenario.get("upset_floor_delta", 0.0))))
     penalty_sensitivity = float(adjustments.get("penalty_sensitivity", 1.0)) * float(coefficients.get("penalty_logit_gain", 1.0)) * float(scenario.get("penalty_multiplier", 1.0))
 
-    influence = _scenario_influence(fixture["home_team"], fixture["away_team"], scenario, coefficients)
+    influence = _scenario_influence(fixture["home_team"], fixture["away_team"], scenario, coefficients, time_series)
     home += influence["home_probability_delta"]
     away += influence["away_probability_delta"]
     home, away = _apply_equation_two_way(home, away, coefficients)
@@ -299,6 +315,8 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
         "player_impact": influence["player_impact"],
         "team_stat_impact": influence["team_stat_impact"],
         "goal_timing_impact": influence["goal_timing_impact"],
+        "time_series_impact": influence["time_series_impact"],
+        "time_series_profile": influence["time_series_profile"],
         "model_diagnostics": final.get("model_diagnostics", {}),
         "blend_weights": final.get("blend_weights", {}),
         "equation_version": equation.get("equation_version"),
@@ -484,13 +502,14 @@ def _goal_timing_profile() -> dict[str, dict[str, float]]:
     return timing
 
 
-def _scenario_influence(home: str, away: str, scenario: dict[str, Any], coefficients: dict[str, Any] | None = None) -> dict[str, Any]:
+def _scenario_influence(home: str, away: str, scenario: dict[str, Any], coefficients: dict[str, Any] | None = None, time_series: dict[str, Any] | None = None) -> dict[str, Any]:
     players = _player_indicators()
     stats = _team_stats()
     timing = _goal_timing_profile()
     hp, ap = players.get(home, {}), players.get(away, {})
     hs, away_stats = stats.get(home, {}), stats.get(away, {})
     ht, at = timing.get(home, {}), timing.get(away, {})
+    ts = _time_series_edge(home, away, scenario, time_series or {})
 
     player_edge = (
         (hp.get("attacking_star_index", 50) - ap.get("attacking_star_index", 50)) * 0.0017
@@ -509,7 +528,8 @@ def _scenario_influence(home: str, away: str, scenario: dict[str, Any], coeffici
         + (ht.get("comeback_goals", 0) - at.get("comeback_goals", 0)) * 0.012
         + (ht.get("late_momentum_proxy", 45) - at.get("late_momentum_proxy", 45)) * 0.0006
     ) * float(scenario.get("goal_timing_weight", 0.75)) * float(coefficients.get("timing_signal_gain", 1.0))
-    total_edge = max(-0.16, min(0.16, player_edge + team_edge + timing_edge + float(coefficients.get("home_bias_delta", 0.0))))
+    time_series_edge = ts["edge"]
+    total_edge = max(-0.18, min(0.18, player_edge + team_edge + timing_edge + time_series_edge + float(coefficients.get("home_bias_delta", 0.0))))
     draw_delta = abs(total_edge) * -0.10 + float(scenario.get("chaos_weight", 0.6)) * 0.015
     return {
         "home_probability_delta": total_edge,
@@ -518,18 +538,43 @@ def _scenario_influence(home: str, away: str, scenario: dict[str, Any], coeffici
         "player_impact": round(player_edge, 4),
         "team_stat_impact": round(team_edge, 4),
         "goal_timing_impact": round(timing_edge, 4),
+        "time_series_impact": round(time_series_edge, 4),
+        "time_series_profile": ts,
         "key_factors": [
             {"side": "home" if player_edge >= 0 else "away", "label": "أثر اللاعبين كأفراد", "value": f"فرق مؤشرات النجوم والحارس والمسددين: {player_edge:+.3f}", "impact": round(player_edge, 4)},
             {"side": "home" if team_edge >= 0 else "away", "label": "أرقام المنتخب في البطولة", "value": f"ضغط هجومي، تسديدات على المرمى، سيطرة وتمرير: {team_edge:+.3f}", "impact": round(team_edge, 4)},
             {"side": "home" if timing_edge >= 0 else "away", "label": "زمن تسجيل الأهداف", "value": f"زخم متأخر/أهداف عودة/حسم: {timing_edge:+.3f}", "impact": round(timing_edge, 4)},
+            {"side": "home" if time_series_edge >= 0 else "away", "label": "اتجاه السلسلة الزمنية", "value": f"زخم آخر المباريات مع عقوبة التذبذب: {time_series_edge:+.3f}", "impact": round(time_series_edge, 4)},
         ],
+    }
+
+
+def _time_series_edge(home: str, away: str, scenario: dict[str, Any], time_series: dict[str, Any]) -> dict[str, Any]:
+    teams = time_series.get("teams", {}) if isinstance(time_series, dict) else {}
+    hp = teams.get(home, {})
+    ap = teams.get(away, {})
+    weight = float(scenario.get("time_series_weight", 0.9))
+    home_edge = float(hp.get("time_series_edge", 0.0))
+    away_edge = float(ap.get("time_series_edge", 0.0))
+    confidence = (float(hp.get("confidence", 0.25)) + float(ap.get("confidence", 0.25))) / 2
+    volatility_gap = float(hp.get("volatility_index", 0.0)) - float(ap.get("volatility_index", 0.0))
+    edge = (home_edge - away_edge) * weight * max(0.35, min(1.0, confidence)) - volatility_gap * 0.0015
+    return {
+        "edge": max(-0.10, min(0.10, edge)),
+        "home_momentum_index": hp.get("momentum_index"),
+        "away_momentum_index": ap.get("momentum_index"),
+        "home_stat_trend_index": hp.get("stat_trend_index"),
+        "away_stat_trend_index": ap.get("stat_trend_index"),
+        "home_volatility_index": hp.get("volatility_index"),
+        "away_volatility_index": ap.get("volatility_index"),
+        "confidence": round(confidence, 4),
     }
 
 
 def _scenario_reliability(rounds: list[dict[str, Any]], learning: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     matches = [match for round_item in rounds for match in round_item["matches"]]
     if not matches:
-        return {"estimated_accuracy": 0.0, "confidence_grade": "??? ?????", "high_risk_matches": 0, "average_confidence_margin": 0.0, "average_penalty_probability": 0.0}
+        return {"estimated_accuracy": 0.0, "confidence_grade": "غير كافية", "high_risk_matches": 0, "average_confidence_margin": 0.0, "average_penalty_probability": 0.0}
     base_accuracy = float(learning.get("summary", {}).get("accuracy", 0.50))
     margins = [float(match.get("confidence_margin", 0)) for match in matches]
     penalties = [float(match.get("penalty_shootout", {}).get("probability", 0)) for match in matches]

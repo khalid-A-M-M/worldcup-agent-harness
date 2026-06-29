@@ -47,6 +47,18 @@ class KnockoutLayerTest(unittest.TestCase):
             self.assertIn("team_stat_impact", sample)
             self.assertIn("goal_timing_impact", sample)
 
+    def test_knockout_prediction_contains_time_series_layer_if_present(self) -> None:
+        path = ROOT / "outputs" / "knockout_bracket_prediction.json"
+        if not path.exists():
+            self.skipTest("knockout prediction has not been generated")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        time_series = data.get("time_series_forecast", {})
+        self.assertEqual(time_series.get("agent"), "time_series_agent")
+        self.assertIn("teams", time_series)
+        sample = data["rounds"][0]["matches"][0]
+        self.assertIn("time_series_impact", sample)
+        self.assertIn("time_series_profile", sample)
+
     def test_knockout_prediction_contains_equation_learning_if_present(self) -> None:
         path = ROOT / "outputs" / "knockout_bracket_prediction.json"
         if not path.exists():

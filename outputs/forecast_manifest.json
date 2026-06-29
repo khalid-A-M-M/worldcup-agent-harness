@@ -244,5 +244,6 @@
   },
   "knockout_bracket": "outputs/knockout_bracket_prediction.json",
   "learning_report": "outputs/group_learning_report.json",
-  "equation_learning": "data/equation_learning.json"
+  "equation_learning": "data/equation_learning.json",
+  "time_series_forecast": "data/time_series_forecast.json"
 }
