@@ -104,7 +104,9 @@ def archive_knockout_predictions(bracket_path: Path) -> Path:
                     "away_advance_probability": match.get("away_advance_probability"),
                     "round": match.get("round"),
                     "scenario_id": "B",
-                    "created_at_utc": stamp,
+                    "created_at_utc": _created_at_for_knockout_match(match, stamp),
+                    "archived_at_utc": stamp,
+                    "kickoff_utc": match.get("kickoff_utc"),
                     "path": str(target.relative_to(ROOT)).replace("\\", "/"),
                 }
             )
@@ -121,12 +123,40 @@ def load_latest_pre_match_knockout_predictions(fixtures: dict[str, dict]) -> dic
         if not fixture:
             continue
         kickoff = fixture.get("kickoff_utc", "")
-        if kickoff and _stamp_to_iso(entry.get("created_at_utc", "")) >= kickoff:
+        created_at = entry.get("created_at_utc", "")
+        if kickoff and _to_utc_datetime(created_at) >= _to_utc_datetime(kickoff):
             continue
         current = latest.get(match_id)
-        if current is None or entry.get("created_at_utc", "") > current.get("created_at_utc", ""):
+        if current is None or _to_utc_datetime(created_at) > _to_utc_datetime(current.get("created_at_utc", "")):
             latest[match_id] = entry
     return latest
+
+
+
+
+def _created_at_for_knockout_match(match: dict, fallback_stamp: str) -> str:
+    generated = match.get("generated_at_utc")
+    if generated:
+        return _normalize_created_at(generated)
+    return fallback_stamp
+
+
+def _normalize_created_at(value: str) -> str:
+    parsed = _to_utc_datetime(value)
+    if parsed == datetime.min.replace(tzinfo=timezone.utc):
+        return value
+    return parsed.isoformat().replace("+00:00", "Z")
+
+
+def _to_utc_datetime(value: str) -> datetime:
+    if not value:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    try:
+        if "T" in value and (value.endswith("Z") or "+" in value):
+            return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+        return datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return datetime.min.replace(tzinfo=timezone.utc)
 
 
 def _load_knockout_index() -> dict:

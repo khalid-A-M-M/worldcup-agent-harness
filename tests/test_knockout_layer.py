@@ -7,6 +7,7 @@ from pathlib import Path
 
 from predict_knockout_bracket import _shrink_two_way
 from evolve_after_results import _actual_id_for_match
+from forecast_ledger import load_latest_pre_match_knockout_predictions
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -21,6 +22,36 @@ class KnockoutLayerTest(unittest.TestCase):
     def test_knockout_actual_id_alias_maps_wc_to_ko(self) -> None:
         actuals = {"WC-073": {"home_goals": 0, "away_goals": 1}}
         self.assertEqual(_actual_id_for_match("KO-073", actuals), "WC-073")
+
+
+    def test_knockout_pre_match_snapshot_uses_generated_time(self) -> None:
+        from unittest.mock import patch
+
+        fixtures = {
+            "KO-073": {
+                "match_id": "KO-073",
+                "kickoff_utc": "2026-06-28T17:00:00Z",
+            }
+        }
+        fake_index = {
+            "entries": [
+                {
+                    "match_id": "KO-073",
+                    "winner": "Canada",
+                    "created_at_utc": "2026-06-28T10:00:00Z",
+                    "archived_at_utc": "20260629T091541Z",
+                },
+                {
+                    "match_id": "KO-073",
+                    "winner": "South Africa",
+                    "created_at_utc": "2026-06-28T18:00:00Z",
+                    "archived_at_utc": "20260629T091802Z",
+                },
+            ]
+        }
+        with patch("forecast_ledger._load_knockout_index", return_value=fake_index):
+            latest = load_latest_pre_match_knockout_predictions(fixtures)
+        self.assertEqual(latest["KO-073"]["winner"], "Canada")
 
     def test_two_way_shrink_keeps_no_draw_output(self) -> None:
         home, away = _shrink_two_way(0.70, 0.20, 0.08, 0.14)

@@ -192,6 +192,8 @@ def _compact_match_for_scenario(match: dict[str, Any]) -> dict[str, Any]:
         "goal_timing_impact",
         "time_series_impact",
         "scenario",
+        "kickoff_utc",
+        "generated_at_utc",
     ]
     return {key: match.get(key) for key in keys if key in match}
 
@@ -299,6 +301,8 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
     return {
         "match_id": fixture["match_id"],
         "round": round_name,
+        "kickoff_utc": fixture.get("kickoff_utc"),
+        "generated_at_utc": fixture.get("generated_at_utc"),
         "home_team": fixture["home_team"],
         "away_team": fixture["away_team"],
         "winner": winner,

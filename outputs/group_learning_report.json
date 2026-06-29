@@ -1,11 +1,11 @@
 {
   "summary": {
-    "completed_forecasts": 28,
-    "correct": 16,
+    "completed_forecasts": 29,
+    "correct": 17,
     "missed": 12,
-    "accuracy": 0.5714285714285714,
-    "mean_brier_score": 0.574080092515412,
-    "mean_log_loss": 1.290490434044192
+    "accuracy": 0.5862068965517241,
+    "mean_brier_score": 0.5556349551943955,
+    "mean_log_loss": 1.2511894843655649
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
@@ -37,10 +37,10 @@
     ]
   },
   "learned_knockout_adjustments": {
-    "uncertainty_multiplier": 1.1139,
-    "favorite_shrink": 0.0419,
+    "uncertainty_multiplier": 1.1004,
+    "favorite_shrink": 0.04,
     "upset_floor": 0.145,
-    "penalty_sensitivity": 1.0857,
+    "penalty_sensitivity": 1.0776,
     "target_accuracy_note": "90% is an ambition target, not a guaranteed property; the model now reports confidence and penalty risk instead of pretending certainty."
   },
   "lessons": [
