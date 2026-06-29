@@ -830,6 +830,174 @@
       .bracket-column[data-count="8"] { min-height: 680px; }
       .bracket-head h2 { font-size: 20px; }
     }
+
+    .orbit-arena {
+      grid-column: 1 / -1;
+      position: relative;
+      min-height: min(86vw, 860px);
+      overflow: hidden;
+      border: 1px solid rgba(214,168,73,.34);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,214,102,.20) 0 8%, rgba(255,214,102,.08) 9%, transparent 25%),
+        radial-gradient(ellipse at 50% 50%, transparent 0 34%, rgba(255,255,255,.10) 34.2% 34.7%, transparent 35%),
+        linear-gradient(90deg, transparent 49.85%, rgba(255,255,255,.10) 50%, transparent 50.15%),
+        linear-gradient(0deg, transparent 49.85%, rgba(255,255,255,.08) 50%, transparent 50.15%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 80px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0 1px, transparent 1px 80px),
+        linear-gradient(135deg, color-mix(in srgb, var(--left-final-color, #0ea5e9) 20%, transparent), transparent 33%, rgba(3,18,13,.92) 50%, transparent 68%, color-mix(in srgb, var(--right-final-color, #ef4444) 20%, transparent)),
+        #07130f;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 28px 80px rgba(0,0,0,.34);
+      isolation: isolate;
+    }
+    .orbit-arena::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      background:
+        radial-gradient(ellipse at 50% 50%, transparent 0 16%, rgba(255,255,255,.18) 16.2% 16.6%, transparent 17%),
+        radial-gradient(ellipse at 50% 50%, transparent 0 44%, rgba(255,255,255,.14) 44.2% 44.6%, transparent 45%),
+        linear-gradient(90deg, transparent 6%, rgba(255,255,255,.18) 6.2%, transparent 6.5%, transparent 93.5%, rgba(255,255,255,.18) 93.8%, transparent 94%);
+      opacity: .58;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orbit-arena::after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: conic-gradient(from 0deg, color-mix(in srgb, var(--champion-color, #d6a849) 18%, transparent), transparent 12%, color-mix(in srgb, var(--left-final-color, #38bdf8) 14%, transparent), transparent 30%, color-mix(in srgb, var(--right-final-color, #ef4444) 14%, transparent), transparent 52%, color-mix(in srgb, var(--champion-color, #d6a849) 14%, transparent), transparent 74%, color-mix(in srgb, var(--left-final-color, #38bdf8) 12%, transparent), transparent);
+      filter: blur(42px);
+      opacity: .40;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orbit-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .orbit-svg path {
+      fill: none;
+      stroke: rgba(255,232,166,.26);
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+    }
+    .orbit-svg path.risk-high { stroke: rgba(248,113,113,.50); stroke-dasharray: 4 6; }
+    .orbit-svg path.risk-medium { stroke: rgba(250,204,21,.42); }
+    .orbit-node {
+      position: absolute;
+      z-index: 2;
+      width: clamp(74px, 7.2vw, 118px);
+      min-height: 58px;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 34%, rgba(255,255,255,.04)), transparent 46%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 34%, rgba(255,255,255,.03)), transparent 48%),
+        rgba(2,10,8,.78);
+      box-shadow: 0 12px 34px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.08);
+      padding: 7px;
+      color: #fff;
+      direction: rtl;
+      overflow: hidden;
+    }
+    .orbit-node::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, color-mix(in srgb, var(--winner-color, #d6a849) 18%, transparent) var(--win-pct, 54%), transparent var(--win-pct, 54%));
+      opacity: .55;
+      pointer-events: none;
+    }
+    .orbit-node > * { position: relative; z-index: 1; }
+    .orbit-node .orb-teams {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      font-size: clamp(10px, .82vw, 12px);
+      line-height: 1.15;
+      min-width: 0;
+    }
+    .orbit-node .orb-teams span { overflow-wrap: anywhere; max-width: 45%; }
+    .orbit-node .orb-winner {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      font-size: clamp(11px, .95vw, 13px);
+      font-weight: 900;
+    }
+    .orbit-node .orb-winner b { direction: ltr; color: #fff7cf; }
+    .orbit-node .orb-meta {
+      margin-top: 4px;
+      color: rgba(255,255,255,.68);
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .orbit-node.round-4 {
+      width: clamp(128px, 13vw, 180px);
+      min-height: 82px;
+      border-color: rgba(255,232,166,.62);
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--winner-color, #d6a849) 45%, transparent), 0 22px 70px rgba(0,0,0,.42), 0 0 45px color-mix(in srgb, var(--winner-color, #d6a849) 24%, transparent);
+    }
+    .orbit-center {
+      position: absolute;
+      z-index: 3;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(118px, 15vw, 188px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid rgba(255,232,166,.42);
+      background:
+        radial-gradient(circle, rgba(255,236,170,.28), rgba(214,168,73,.12) 42%, rgba(0,0,0,.50) 70%),
+        color-mix(in srgb, var(--champion-color, #d6a849) 18%, rgba(0,0,0,.30));
+      box-shadow: 0 0 70px color-mix(in srgb, var(--champion-color, #d6a849) 38%, transparent), inset 0 1px 0 rgba(255,255,255,.22);
+    }
+    .orbit-center .cup { font-size: clamp(42px, 7vw, 82px); filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
+    .orbit-center strong { display: block; margin-top: -6px; color: #fff7cf; font-size: clamp(13px, 1.4vw, 20px); }
+    .orbit-center span { display: block; color: rgba(255,255,255,.76); font-size: 11px; margin-top: 3px; }
+    .orbit-legend {
+      position: absolute;
+      z-index: 4;
+      left: 16px;
+      bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      direction: rtl;
+      max-width: min(760px, calc(100% - 32px));
+    }
+    .orbit-legend span {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      padding: 6px 9px;
+      background: rgba(0,0,0,.32);
+      color: rgba(255,255,255,.78);
+      font-size: 11px;
+    }
+    @media (max-width: 900px) {
+      .orbit-arena { min-height: 1180px; overflow-x: auto; }
+      .orbit-node { width: 96px; }
+      .orbit-node.round-4 { width: 150px; }
+    }
+
     .group-card, .pairing-card {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -1435,71 +1603,79 @@
       return team === match.home_team ? match.home_advance_probability || 0 : match.away_advance_probability || 0;
     }
 
-    function renderBracketMatch(match, side = "left") {
-      if (!match) return `<div class="bracket-match"></div>`;
-      const home = visual(match.home_team);
-      const away = visual(match.away_team);
-      const winner = visual(match.winner);
-      const homeWinner = match.winner === match.home_team;
-      const awayWinner = match.winner === match.away_team;
-      const method = match.winner_method === "penalties" ? "ترجيح" : "قبل الترجيح";
-      return `
-        <div class="bracket-match" style="--winner-color:${winner.primary_color};--home-color:${home.primary_color};--away-color:${away.primary_color}">
-          <div class="bracket-team ${homeWinner ? "winner" : ""}">
-            <strong style="color:${homeWinner ? home.primary_color : "inherit"}">${home.arabic_name}</strong>
-            <b>${pct(bracketProbability(match, match.home_team))}</b>
-          </div>
-          <div class="bracket-team ${awayWinner ? "winner" : ""}">
-            <strong style="color:${awayWinner ? away.primary_color : "inherit"}">${away.arabic_name}</strong>
-            <b>${pct(bracketProbability(match, match.away_team))}</b>
-          </div>
-          <div class="bracket-method">${method} · ${match.upset_risk === "high" ? "خطر" : pct(match.confidence_margin || 0)}</div>
-        </div>`;
-    }
 
-    function renderBracketColumn(title, matches, side) {
-      return `
-        <div class="bracket-column bracket-${side}" data-count="${matches.length}">
-          <div class="bracket-stage-title">${title}</div>
-          ${matches.map(match => renderBracketMatch(match, side)).join("")}
-        </div>`;
-    }
-
-    function scenarioRound(scenario, index) {
-      return scenario.rounds?.[index]?.matches || [];
-    }
-
-    function scenarioColors(scenario) {
-      const final = scenario.final || scenarioRound(scenario, 4)[0] || {};
+    function orbitPoint(angleDeg, radiusPct) {
+      const angle = (angleDeg - 90) * Math.PI / 180;
       return {
-        champion: visual(scenario.champion).primary_color,
-        left: visual(final.home_team || "").primary_color || "#38bdf8",
-        right: visual(final.away_team || "").primary_color || "#ef4444"
+        x: 50 + Math.cos(angle) * radiusPct,
+        y: 50 + Math.sin(angle) * radiusPct
       };
     }
 
-    function renderScenarioTab(scenario, activeId) {
-      const colors = scenarioColors(scenario);
-      const champ = visual(scenario.champion);
+    function orbitLayout(scenario) {
+      const rounds = [0, 1, 2, 3, 4].map(index => scenarioRound(scenario, index));
+      const radii = [43, 34, 25, 16, 8];
+      const spans = [330, 292, 234, 160, 0];
+      const start = -165;
+      const nodes = [];
+      const byRound = [];
+      rounds.forEach((matches, roundIndex) => {
+        const radius = radii[roundIndex];
+        const span = spans[roundIndex];
+        const list = matches.map((match, index) => {
+          const angle = matches.length <= 1 ? 0 : start + (span * index / Math.max(matches.length - 1, 1));
+          const point = orbitPoint(angle, radius);
+          const node = { match, roundIndex, index, angle, radius, point };
+          nodes.push(node);
+          return node;
+        });
+        byRound.push(list);
+      });
+      const links = [];
+      for (let r = 0; r < byRound.length - 1; r++) {
+        byRound[r].forEach((node, index) => {
+          const parent = byRound[r + 1][Math.floor(index / 2)];
+          if (parent) links.push({ from: node, to: parent, risk: node.match?.upset_risk || "low" });
+        });
+      }
+      return { nodes, links };
+    }
+
+    function renderOrbitLinks(layout) {
+      return layout.links.map(link => {
+        const a = link.from.point;
+        const b = link.to.point;
+        const mx = (a.x + b.x) / 2;
+        const my = (a.y + b.y) / 2;
+        return `<path class="risk-${link.risk}" d="M ${a.x.toFixed(2)} ${a.y.toFixed(2)} Q ${mx.toFixed(2)} ${my.toFixed(2)} ${b.x.toFixed(2)} ${b.y.toFixed(2)}" />`;
+      }).join("");
+    }
+
+    function renderOrbitNode(node) {
+      const match = node.match;
+      if (!match) return "";
+      const home = visual(match.home_team);
+      const away = visual(match.away_team);
+      const winner = visual(match.winner);
+      const winnerProb = bracketProbability(match, match.winner);
+      const method = match.winner_method === "penalties" ? "ترجيح" : "ثقة";
+      const risk = match.upset_risk === "high" ? "خطر عال" : match.upset_risk === "medium" ? "خطر متوسط" : "ثقة";
+      const point = node.point;
       return `
-        <button class="scenario-tab ${scenario.scenario_id === activeId ? "active" : ""}" data-scenario-id="${scenario.scenario_id}" style="--tab-a:${colors.left};--tab-b:${colors.right}">
-          <strong>${scenario.arabic_name}</strong>
-          <span>البطل: <b style="color:${champ.primary_color};margin-inline-start:4px">${champ.arabic_name}</b></span>
-          <span>الدقة ${pct(scenario.estimated_accuracy || 0)}</span>
-          <span>${scenario.high_risk_matches || 0} خطر</span>
+        <button class="orbit-node round-${node.roundIndex}" type="button" title="${home.arabic_name} ضد ${away.arabic_name}" style="left:${point.x}%;top:${point.y}%;--home-color:${home.primary_color};--away-color:${away.primary_color};--winner-color:${winner.primary_color};--win-pct:${Math.round(winnerProb * 100)}%">
+          <div class="orb-teams"><span>${home.arabic_name}</span><span>${away.arabic_name}</span></div>
+          <div class="orb-winner"><span style="color:${winner.primary_color}">${winner.arabic_name}</span><b>${pct(winnerProb)}</b></div>
+          <div class="orb-meta">${roundTitle(match.round)} ? ${method} ? ${risk}</div>
         </button>`;
     }
 
     function renderScenarioBracket(scenario, activeId) {
-      const r32 = scenarioRound(scenario, 0);
-      const r16 = scenarioRound(scenario, 1);
-      const qf = scenarioRound(scenario, 2);
-      const sf = scenarioRound(scenario, 3);
       const finalMatch = scenarioRound(scenario, 4)[0];
       const champion = visual(scenario.champion);
       const finalHome = visual(finalMatch?.home_team || "");
       const finalAway = visual(finalMatch?.away_team || "");
       const colors = scenarioColors(scenario);
+      const layout = orbitLayout(scenario);
       return `
         <article class="bracket-shell scenario-bracket ${scenario.scenario_id === activeId ? "" : "hidden"}" data-scenario-id="${scenario.scenario_id}" style="--champion-color:${colors.champion};--left-final-color:${colors.left};--right-final-color:${colors.right}">
           <div class="bracket-head">
@@ -1508,26 +1684,29 @@
               <p>${scenario.description}</p>
             </div>
             <div class="bracket-badges">
-              <span>البطل: <b style="color:${champion.primary_color}">${champion.arabic_name}</b></span>
-              <span>دقة متوقعة ${pct(scenario.estimated_accuracy || 0)}</span>
-              <span>${scenario.high_risk_matches || 0} مباريات خطر</span>
-              <span>نهائي: ${finalHome.arabic_name || "—"} ضد ${finalAway.arabic_name || "—"}</span>
+              <span>?????: <b style="color:${champion.primary_color}">${champion.arabic_name}</b></span>
+              <span>??? ?????? ${pct(scenario.estimated_accuracy || 0)}</span>
+              <span>${scenario.high_risk_matches || 0} ??????? ???</span>
+              <span>?????: ${finalHome.arabic_name || "?"} ?? ${finalAway.arabic_name || "?"}</span>
             </div>
           </div>
-          <div class="bracket-viewport">
-            <div class="bracket-board">
-              ${renderBracketColumn("دور 32", r32.slice(0, 8), "left")}
-              ${renderBracketColumn("دور 16", r16.slice(0, 4), "left")}
-              ${renderBracketColumn("ربع النهائي", qf.slice(0, 2), "left")}
-              ${renderBracketColumn("نصف النهائي", sf.slice(0, 1), "left")}
-              <div class="bracket-column bracket-final bracket-center" data-count="1">
-                <div class="bracket-stage-title">النهائي</div>
-                ${renderBracketMatch(finalMatch, "final")}
+          <div class="orbit-arena" aria-label="مدار احتمالات ${scenario.arabic_name}">
+            <svg class="orbit-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              ${renderOrbitLinks(layout)}
+            </svg>
+            ${layout.nodes.map(renderOrbitNode).join("")}
+            <div class="orbit-center">
+              <div>
+                <div class="cup">&#127942;</div>
+                <strong style="color:${champion.primary_color}">${champion.arabic_name}</strong>
+                <span>${pct(scenario.estimated_accuracy || 0)} ? ${scenario.confidence_grade || ""}</span>
               </div>
-              ${renderBracketColumn("نصف النهائي", sf.slice(1, 2), "right")}
-              ${renderBracketColumn("ربع النهائي", qf.slice(2, 4), "right")}
-              ${renderBracketColumn("دور 16", r16.slice(4, 8), "right")}
-              ${renderBracketColumn("دور 32", r32.slice(8, 16), "right")}
+            </div>
+            <div class="orbit-legend">
+              <span>الحلقة الخارجية: دور 32</span>
+              <span>كل حلقة للداخل تعني تأهلاً جديداً</span>
+              <span>لون العقدة من ألوان المنتخبين</span>
+              <span>الخط المتقطع = خطر مفاجأة مرتفع</span>
             </div>
           </div>
         </article>`;
