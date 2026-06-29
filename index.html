@@ -834,42 +834,40 @@
     .orbit-arena {
       grid-column: 1 / -1;
       position: relative;
-      min-height: min(86vw, 900px);
+      min-height: min(92vw, 980px);
       overflow: hidden;
-      border: 1px solid rgba(232,190,89,.52);
-      border-radius: 16px;
+      border: 1px solid rgba(204,160,72,.34);
+      border-radius: 8px;
       background:
-        radial-gradient(circle at 50% 50%, rgba(255,221,128,.24) 0 7%, rgba(255,221,128,.09) 8%, transparent 22%),
-        radial-gradient(ellipse at 50% 50%, transparent 0 18%, rgba(255,255,255,.18) 18.2% 18.6%, transparent 19%),
-        radial-gradient(ellipse at 50% 50%, transparent 0 43%, rgba(255,255,255,.13) 43.2% 43.6%, transparent 44%),
-        linear-gradient(90deg, transparent 49.85%, rgba(255,255,255,.16) 50%, transparent 50.15%),
-        linear-gradient(0deg, transparent 49.85%, rgba(255,255,255,.10) 50%, transparent 50.15%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 72px),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 72px),
-        linear-gradient(135deg, #0f5f32, #0b3f24 44%, #082d1c 100%);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), inset 0 0 80px rgba(0,0,0,.32), 0 28px 80px rgba(0,0,0,.34);
+        radial-gradient(circle at 50% 50%, rgba(239,190,89,.28) 0 4.8%, rgba(239,190,89,.12) 5.8%, transparent 17%),
+        radial-gradient(circle at 50% 50%, transparent 0 18%, rgba(204,160,72,.26) 18.15% 18.35%, transparent 18.55%),
+        radial-gradient(circle at 50% 50%, transparent 0 31%, rgba(204,160,72,.20) 31.1% 31.3%, transparent 31.5%),
+        radial-gradient(circle at 50% 50%, transparent 0 43%, rgba(204,160,72,.16) 43.1% 43.25%, transparent 43.5%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.035), transparent 48%),
+        #171715;
+      box-shadow: inset 0 0 120px rgba(0,0,0,.82), 0 30px 90px rgba(0,0,0,.38);
       isolation: isolate;
     }
     .orbit-arena::before {
       content: "";
       position: absolute;
-      inset: 22px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 12px;
-      background:
-        linear-gradient(90deg, transparent 7%, rgba(255,255,255,.20) 7.15%, transparent 7.35%, transparent 92.65%, rgba(255,255,255,.20) 92.85%, transparent 93%),
-        radial-gradient(circle at 50% 50%, transparent 0 9.5%, rgba(255,255,255,.22) 9.7% 10.1%, transparent 10.4%);
-      opacity: .72;
+      inset: 0;
       pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,220,140,.15), transparent 8%),
+        repeating-radial-gradient(circle at 50% 50%, transparent 0 78px, rgba(255,255,255,.018) 79px 80px),
+        linear-gradient(90deg, transparent 49.95%, rgba(255,255,255,.035) 50%, transparent 50.05%),
+        linear-gradient(0deg, transparent 49.95%, rgba(255,255,255,.026) 50%, transparent 50.05%);
+      opacity: .82;
       z-index: 0;
     }
     .orbit-arena::after {
       content: "";
       position: absolute;
-      inset: 9%;
+      inset: 11%;
       border-radius: 50%;
-      border: 1px solid rgba(232,190,89,.28);
-      box-shadow: 0 0 80px rgba(232,190,89,.18), inset 0 0 90px rgba(232,190,89,.10);
+      border: 1px solid rgba(204,160,72,.20);
+      box-shadow: 0 0 90px rgba(204,160,72,.13), inset 0 0 80px rgba(204,160,72,.08);
       pointer-events: none;
       z-index: 0;
     }
@@ -883,155 +881,143 @@
     }
     .orbit-svg path {
       fill: none;
-      stroke: rgba(232,190,89,.54);
-      stroke-width: 1.45;
+      stroke: rgba(126,126,116,.72);
+      stroke-width: 1.1;
       stroke-linecap: round;
+      stroke-linejoin: round;
       vector-effect: non-scaling-stroke;
-      filter: drop-shadow(0 0 4px rgba(232,190,89,.32));
+      filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
     }
-    .orbit-svg path.risk-high { stroke: rgba(255,231,150,.66); stroke-dasharray: 3 5; }
-    .orbit-svg path.risk-medium { stroke: rgba(250,210,94,.58); }
+    .orbit-svg path.risk-high { stroke: rgba(224,182,96,.82); stroke-dasharray: 3 5; }
+    .orbit-svg path.risk-medium { stroke: rgba(180,150,88,.74); }
     .orbit-node {
       position: absolute;
       z-index: 2;
-      width: clamp(70px, 6.5vw, 104px);
+      width: clamp(42px, 4.8vw, 62px);
       aspect-ratio: 1;
       transform: translate(-50%, -50%);
-      border: 1px solid rgba(255,236,176,.50);
+      border: 1px solid rgba(255,255,255,.28);
       border-radius: 50%;
       background:
-        radial-gradient(circle at 50% 36%, rgba(255,255,255,.20), transparent 34%),
-        conic-gradient(from -40deg, color-mix(in srgb, var(--home-color, #38bdf8) 78%, #fff 4%), rgba(255,255,255,.10), color-mix(in srgb, var(--away-color, #ef4444) 78%, #fff 4%), rgba(232,190,89,.32), color-mix(in srgb, var(--home-color, #38bdf8) 78%, #fff 4%)),
-        rgba(5,18,11,.88);
-      box-shadow: 0 12px 28px rgba(0,0,0,.40), 0 0 0 4px rgba(232,190,89,.07), inset 0 1px 0 rgba(255,255,255,.22);
+        radial-gradient(circle at 50% 42%, rgba(255,255,255,.22), transparent 30%),
+        color-mix(in srgb, var(--winner-color, #d6a849) 34%, #1d1d1a 66%);
+      box-shadow: 0 8px 18px rgba(0,0,0,.56), 0 0 0 2px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.18);
       color: #fff;
       direction: rtl;
-      overflow: hidden;
+      overflow: visible;
       cursor: default;
     }
     .orbit-node::before {
       content: "";
       position: absolute;
-      inset: 6px;
+      inset: 3px;
       border-radius: 50%;
-      background: rgba(3,18,10,.80);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
+      background: rgba(18,18,16,.72);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.09);
       pointer-events: none;
     }
     .orbit-node::after {
       content: "";
       position: absolute;
-      inset: 2px;
+      inset: -3px;
       border-radius: 50%;
-      border: 3px solid color-mix(in srgb, var(--winner-color, #d6a849) 82%, #fff 8%);
-      opacity: .88;
+      border: 2px solid color-mix(in srgb, var(--winner-color, #d6a849) 72%, #f8e5a6 10%);
+      opacity: .72;
       pointer-events: none;
-      filter: drop-shadow(0 0 7px color-mix(in srgb, var(--winner-color, #d6a849) 50%, transparent));
+      filter: drop-shadow(0 0 4px rgba(204,160,72,.28));
     }
     .orbit-node > * { position: relative; z-index: 1; }
     .orb-flags {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2px;
-      padding-top: 8px;
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
       direction: ltr;
     }
     .orb-flag {
-      width: clamp(24px, 2.35vw, 34px);
+      position: absolute;
+      width: 72%;
       aspect-ratio: 1;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(255,236,176,.72);
-      box-shadow: 0 3px 8px rgba(0,0,0,.28);
-      font-size: clamp(16px, 1.5vw, 23px);
+      background: rgba(255,255,255,.94);
+      border: 1px solid rgba(255,255,255,.72);
+      box-shadow: 0 4px 10px rgba(0,0,0,.38);
+      font-size: clamp(22px, 2.7vw, 34px);
       line-height: 1;
+      transition: transform .18s ease;
     }
+    .orb-flag:first-child { transform: translate(-22%, -9%) scale(.74); opacity: .82; }
+    .orb-flag:nth-child(2) { transform: translate(22%, 9%) scale(.74); opacity: .82; }
     .orb-flag.winner {
-      transform: translateY(-2px) scale(1.08);
-      box-shadow: 0 0 0 2px color-mix(in srgb, var(--winner-color, #d6a849) 60%, #fff 10%), 0 6px 14px rgba(0,0,0,.35);
+      transform: translate(0, 0) scale(1.02);
+      z-index: 2;
+      opacity: 1;
+      border-color: rgba(244,205,116,.9);
+      box-shadow: 0 0 0 2px rgba(204,160,72,.34), 0 8px 16px rgba(0,0,0,.44);
     }
     .orbit-node .orb-winner {
-      margin: 4px auto 0;
-      width: calc(100% - 16px);
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
       display: grid;
       place-items: center;
-      gap: 1px;
-      font-size: clamp(9px, .74vw, 11px);
-      font-weight: 900;
-      line-height: 1.05;
+      width: 84px;
       text-align: center;
+      font-size: 9px;
+      line-height: 1.05;
+      color: rgba(255,242,190,.92);
+      text-shadow: 0 1px 4px #000;
+      pointer-events: none;
     }
     .orbit-node .orb-winner span {
       max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #fff7cf !important;
-      text-shadow: 0 1px 5px rgba(0,0,0,.7);
     }
-    .orbit-node .orb-winner b { direction: ltr; color: #f8d36c; font-size: 10px; }
-    .orbit-node .orb-meta {
-      margin: 2px auto 0;
-      max-width: calc(100% - 18px);
-      color: rgba(255,255,255,.68);
-      font-size: 8.5px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: center;
-    }
+    .orbit-node .orb-winner b { direction: ltr; color: #e7bd62; font-size: 9px; }
+    .orbit-node .orb-meta { display: none; }
+    .orbit-node.round-1 { width: clamp(34px, 3.7vw, 50px); opacity: .92; }
+    .orbit-node.round-1 .orb-winner { display: none; }
+    .orbit-node.round-2 { width: clamp(28px, 3.1vw, 42px); opacity: .86; }
+    .orbit-node.round-2 .orb-winner { display: none; }
+    .orbit-node.round-3 { width: clamp(22px, 2.5vw, 34px); opacity: .78; }
+    .orbit-node.round-3 .orb-winner { display: none; }
     .orbit-node.round-4 {
-      width: clamp(116px, 12vw, 172px);
-      border-color: rgba(255,236,176,.86);
-      box-shadow: 0 0 0 1px rgba(255,236,176,.38), 0 22px 70px rgba(0,0,0,.46), 0 0 58px color-mix(in srgb, var(--winner-color, #d6a849) 34%, transparent);
+      width: clamp(68px, 7vw, 92px);
+      border-color: rgba(244,205,116,.88);
+      box-shadow: 0 0 0 1px rgba(244,205,116,.32), 0 16px 44px rgba(0,0,0,.55), 0 0 32px rgba(204,160,72,.30);
     }
-    .orbit-node.round-4 .orb-flags { padding-top: 15px; gap: 6px; }
-    .orbit-node.round-4 .orb-flag { width: clamp(34px, 3.4vw, 50px); font-size: clamp(22px, 2.2vw, 34px); }
-    .orbit-node.round-4 .orb-winner { margin-top: 7px; font-size: clamp(13px, 1.25vw, 18px); }
-    .orbit-node.round-4 .orb-winner b { font-size: clamp(12px, 1vw, 15px); }
+    .orbit-node.round-4 .orb-winner {
+      display: grid;
+      top: calc(100% + 6px);
+      width: 120px;
+      font-size: 12px;
+      color: #f8df9a;
+    }
     .orbit-center {
       position: absolute;
-      z-index: 3;
+      z-index: 4;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: clamp(118px, 15vw, 188px);
+      width: clamp(118px, 13vw, 176px);
       aspect-ratio: 1;
       display: grid;
       place-items: center;
       text-align: center;
       border-radius: 50%;
-      border: 1px solid rgba(255,236,176,.68);
-      background:
-        radial-gradient(circle, rgba(255,236,176,.36), rgba(232,190,89,.18) 42%, rgba(0,0,0,.54) 72%),
-        color-mix(in srgb, var(--champion-color, #d6a849) 20%, rgba(0,0,0,.34));
-      box-shadow: 0 0 78px rgba(232,190,89,.42), inset 0 1px 0 rgba(255,255,255,.24);
+      border: 1px solid rgba(244,205,116,.54);
+      background: radial-gradient(circle, rgba(244,205,116,.34), rgba(204,160,72,.13) 42%, rgba(0,0,0,.42) 72%);
+      box-shadow: 0 0 74px rgba(204,160,72,.38), inset 0 1px 0 rgba(255,255,255,.18);
     }
-    .orbit-center .cup { font-size: clamp(46px, 7vw, 86px); filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
-    .orbit-center strong { display: block; margin-top: -6px; color: #fff7cf; font-size: clamp(13px, 1.4vw, 20px); }
-    .orbit-center span { display: block; color: rgba(255,255,255,.76); font-size: 11px; margin-top: 3px; }
-    .orbit-legend {
-      position: absolute;
-      z-index: 4;
-      left: 16px;
-      bottom: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      direction: rtl;
-      max-width: min(760px, calc(100% - 32px));
-    }
-    .orbit-legend span {
-      border: 1px solid rgba(232,190,89,.28);
-      border-radius: 999px;
-      padding: 6px 9px;
-      background: rgba(0,0,0,.32);
-      color: rgba(255,247,207,.88);
-      font-size: 11px;
-    }
+    .orbit-center .cup { font-size: clamp(48px, 7vw, 90px); filter: drop-shadow(0 9px 20px rgba(0,0,0,.62)); }
+    .orbit-center strong { display: block; margin-top: -6px; color: #f8df9a; font-size: clamp(13px, 1.4vw, 20px); }
+    .orbit-center span { display: block; color: rgba(255,255,255,.70); font-size: 11px; margin-top: 3px; }
+    .orbit-legend { display: none; }
     @media (max-width: 900px) {
       .orbit-arena { min-height: 1180px; overflow-x: auto; }
       .orbit-node { width: 96px; }
@@ -1697,16 +1683,14 @@
 
     function orbitLayout(scenario) {
       const rounds = [0, 1, 2, 3, 4].map(index => scenarioRound(scenario, index));
-      const radii = [43, 34, 25, 16, 8];
-      const spans = [330, 292, 234, 160, 0];
-      const start = -165;
+      const radii = [43, 31, 21, 12, 4];
+      const start = -90;
       const nodes = [];
       const byRound = [];
       rounds.forEach((matches, roundIndex) => {
         const radius = radii[roundIndex];
-        const span = spans[roundIndex];
         const list = matches.map((match, index) => {
-          const angle = matches.length <= 1 ? 0 : start + (span * index / Math.max(matches.length - 1, 1));
+          const angle = matches.length <= 1 ? 0 : start + (360 * index / matches.length);
           const point = orbitPoint(angle, radius);
           const node = { match, roundIndex, index, angle, radius, point };
           nodes.push(node);
