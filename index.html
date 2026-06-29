@@ -639,56 +639,62 @@
       grid-column: 1 / -1;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 2px 0 4px;
+      gap: 12px;
+      margin: 2px 0 8px;
     }
     .scenario-tab {
       cursor: pointer;
       text-align: right;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 16px;
+      border: 1px solid rgba(228,190,94,.28);
+      border-radius: 14px;
       background:
-        linear-gradient(135deg, color-mix(in srgb, var(--tab-a, #d6a849) 32%, transparent), transparent 44%),
-        linear-gradient(315deg, color-mix(in srgb, var(--tab-b, #38bdf8) 28%, transparent), transparent 46%),
-        rgba(8, 24, 24, .82);
+        linear-gradient(135deg, color-mix(in srgb, var(--tab-a, #d6a849) 22%, transparent), transparent 46%),
+        linear-gradient(315deg, color-mix(in srgb, var(--tab-b, #38bdf8) 18%, transparent), transparent 48%),
+        rgba(8, 20, 18, .88);
       color: var(--ink);
-      padding: 13px;
+      padding: 14px;
       font: inherit;
-      min-height: 118px;
-      box-shadow: 0 18px 48px rgba(0,0,0,.22);
+      min-height: 104px;
+      box-shadow: 0 14px 36px rgba(0,0,0,.22);
     }
     .scenario-tab.active {
-      border-color: rgba(255,247,207,.72);
-      box-shadow: 0 0 0 2px rgba(214,168,73,.22), 0 22px 60px rgba(0,0,0,.30);
+      border-color: rgba(255,223,145,.78);
+      box-shadow: 0 0 0 2px rgba(214,168,73,.22), 0 20px 50px rgba(0,0,0,.28);
     }
     .scenario-tab strong { display: block; font-size: 17px; margin-bottom: 7px; color: #fff7cf; }
-    .scenario-tab span { display: inline-flex; margin: 5px 0 0 5px; font-size: 12px; color: rgba(255,255,255,.76); }
+    .scenario-tab span {
+      display: inline-flex;
+      margin: 5px 0 0 5px;
+      font-size: 12px;
+      color: rgba(255,255,255,.80);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 999px;
+      padding: 4px 7px;
+      background: rgba(0,0,0,.18);
+    }
     .bracket-shell {
       grid-column: 1 / -1;
       position: relative;
-      overflow-x: visible;
-      border: 1px solid rgba(214,168,73,.32);
+      overflow: hidden;
+      border: 1px solid rgba(214,168,73,.36);
       border-radius: 18px;
       background:
-        radial-gradient(circle at 50% -10%, color-mix(in srgb, var(--champion-color, #d6a849) 28%, transparent), transparent 38%),
-        linear-gradient(90deg, color-mix(in srgb, var(--left-final-color, #38bdf8) 20%, transparent), transparent 24%, rgba(214,168,73,.11) 50%, transparent 76%, color-mix(in srgb, var(--right-final-color, #ef4444) 20%, transparent)),
-        linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.18)),
-        rgba(8, 24, 24, .88);
-      padding: 16px;
-      box-shadow: 0 24px 70px rgba(0,0,0,.26);
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.08) 0 9%, transparent 9.4%),
+        linear-gradient(90deg, transparent 49.85%, rgba(255,255,255,.12) 50%, transparent 50.15%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 112px),
+        linear-gradient(135deg, rgba(11,56,40,.94), rgba(8,24,21,.96) 48%, rgba(5,18,17,.98));
+      padding: 18px;
+      box-shadow: 0 28px 80px rgba(0,0,0,.30), inset 0 0 80px rgba(214,168,73,.06);
     }
     .bracket-shell::before {
       content: "";
       position: absolute;
-      inset: 16px;
+      inset: 18px;
       pointer-events: none;
-      opacity: .18;
-      border: 1px solid rgba(255,255,255,.32);
+      border: 1px solid rgba(255,255,255,.16);
       border-radius: 14px;
-      background:
-        radial-gradient(circle at 50% 50%, transparent 0 7.5%, rgba(255,255,255,.55) 7.8% 8.1%, transparent 8.5%),
-        linear-gradient(90deg, transparent 49.8%, rgba(255,255,255,.48) 50%, transparent 50.2%),
-        linear-gradient(0deg, transparent 11%, rgba(255,255,255,.22) 11.2%, transparent 11.5%, transparent 88.5%, rgba(255,255,255,.22) 88.8%, transparent 89%);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.20);
+      opacity: .78;
     }
     .bracket-shell > * { position: relative; z-index: 1; }
     .bracket-shell.hidden { display: none; }
@@ -697,83 +703,93 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       align-items: start;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
-    .bracket-head h2 { margin: 0; font-size: 24px; }
-    .bracket-head p { margin: 6px 0 0; color: rgba(255,255,255,.70); font-size: 13px; }
-    .bracket-badges { display: flex; flex-wrap: wrap; gap: 7px; }
+    .bracket-head h2 { margin: 0; font-size: clamp(22px, 2.4vw, 34px); color: #fff; }
+    .bracket-head p { margin: 7px 0 0; color: rgba(255,255,255,.76); font-size: 13px; max-width: 780px; }
+    .bracket-badges { display: flex; flex-wrap: wrap; gap: 7px; justify-content: flex-end; }
     .bracket-badges span {
       border: 1px solid rgba(255,255,255,.14);
       border-radius: 999px;
-      background: rgba(0,0,0,.22);
+      background: rgba(0,0,0,.26);
       color: #fff7cf;
-      padding: 6px 9px;
+      padding: 7px 10px;
       font-size: 12px;
       white-space: nowrap;
     }
-    .bracket-viewport { width: 100%; overflow: visible; }
+    .bracket-viewport {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 4px 2px 12px;
+      scrollbar-color: rgba(214,168,73,.75) rgba(255,255,255,.10);
+    }
     .bracket-board {
       direction: ltr;
-      width: 100%;
+      width: min(100%, 1380px);
+      min-width: 1180px;
+      margin-inline: auto;
       display: grid;
-      grid-template-columns: 1.12fr .98fr .88fr .80fr 1.02fr .80fr .88fr .98fr 1.12fr;
-      gap: clamp(6px, .9vw, 12px);
+      grid-template-columns: 148px 138px 132px 128px 154px 128px 132px 138px 148px;
+      gap: 10px;
       align-items: stretch;
     }
     .bracket-column {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      gap: 9px;
+      gap: 10px;
       min-height: 210px;
       min-width: 0;
     }
-    .bracket-column[data-count="8"] { min-height: 690px; }
-    .bracket-column[data-count="4"] { min-height: 520px; }
-    .bracket-column[data-count="2"] { min-height: 360px; }
-    .bracket-column[data-count="1"] { min-height: 230px; }
+    .bracket-column[data-count="8"] { min-height: 700px; }
+    .bracket-column[data-count="4"] { min-height: 540px; }
+    .bracket-column[data-count="2"] { min-height: 380px; }
+    .bracket-column[data-count="1"] { min-height: 245px; }
     .bracket-stage-title {
       direction: rtl;
       text-align: center;
-      color: rgba(255,255,255,.68);
-      font-size: 11px;
-      margin-bottom: 6px;
-      min-height: 14px;
+      color: rgba(255,245,210,.82);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 7px;
+      min-height: 15px;
     }
     .bracket-match {
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      cursor: pointer;
       border: 1px solid rgba(255,255,255,.16);
       border-radius: 12px;
       background:
-        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 28%, transparent), transparent 48%),
-        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 28%, transparent), transparent 48%),
-        rgba(0,0,0,.30);
-      padding: 8px;
-      min-height: 74px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 10px 24px rgba(0,0,0,.18);
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 23%, transparent), transparent 54%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 23%, transparent), transparent 54%),
+        rgba(6, 17, 18, .78);
+      padding: 7px;
+      min-height: 82px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 12px 26px rgba(0,0,0,.22);
+      transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
     }
-    .bracket-match::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(90deg, rgba(255,255,255,.07), transparent 42%, rgba(255,255,255,.04));
+    .bracket-match:hover {
+      transform: translateY(-2px);
+      border-color: rgba(244,205,116,.50);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 16px 34px rgba(0,0,0,.30);
     }
     .bracket-left .bracket-match::after,
     .bracket-right .bracket-match::after {
       content: "";
       position: absolute;
       top: 50%;
-      width: clamp(6px, .9vw, 12px);
-      height: 1px;
-      background: color-mix(in srgb, var(--winner-color, #d6a849) 70%, white 10%);
+      width: 10px;
+      height: 2px;
+      background: color-mix(in srgb, var(--winner-color, #d6a849) 74%, white 8%);
+      opacity: .72;
       z-index: 1;
     }
-    .bracket-left .bracket-match::after { right: calc(clamp(6px, .9vw, 12px) * -1 - 1px); }
-    .bracket-right .bracket-match::after { left: calc(clamp(6px, .9vw, 12px) * -1 - 1px); }
+    .bracket-left .bracket-match::after { right: -11px; }
+    .bracket-right .bracket-match::after { left: -11px; }
     .bracket-final .bracket-match::after { display: none; }
     .bracket-team {
       position: relative;
@@ -781,68 +797,81 @@
       direction: rtl;
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) auto;
-      gap: 7px;
+      gap: 6px;
       align-items: center;
-      padding: 6px 7px;
+      padding: 6px;
       border-radius: 9px;
-      color: rgba(255,255,255,.78);
-      font-size: clamp(10px, .82vw, 12px);
+      color: rgba(255,255,255,.82);
+      font-size: 11.5px;
       min-width: 0;
     }
     .team-flag {
       direction: ltr;
-      width: 25px;
-      height: 25px;
+      width: 24px;
+      height: 24px;
       display: inline-grid;
       place-items: center;
       border-radius: 50%;
-      background: rgba(255,255,255,.94);
-      border: 1px solid rgba(255,255,255,.75);
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.78);
       box-shadow: 0 4px 10px rgba(0,0,0,.30);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1;
       flex: 0 0 auto;
     }
-    .bracket-team strong { overflow-wrap: anywhere; line-height: 1.2; min-width: 0; }
-    .bracket-team b { direction: ltr; font-size: 10px; color: rgba(255,255,255,.72); }
+    .bracket-team .team-name {
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+    .bracket-team b {
+      direction: ltr;
+      min-width: 34px;
+      text-align: left;
+      font-size: 10.5px;
+      color: rgba(255,255,255,.78);
+    }
     .bracket-team.winner {
       color: #fff;
-      background: linear-gradient(90deg, color-mix(in srgb, var(--winner-color, #d6a849) 24%, rgba(255,255,255,.08)), rgba(255,255,255,.07));
-      box-shadow: inset 3px 0 0 var(--winner-color, #d6a849);
+      background: linear-gradient(90deg, color-mix(in srgb, var(--winner-color, #d6a849) 30%, rgba(255,255,255,.08)), rgba(255,255,255,.07));
+      box-shadow: inset 3px 0 0 var(--winner-color, #d6a849), 0 4px 12px rgba(0,0,0,.16);
       font-weight: 900;
     }
     .bracket-method {
       position: relative;
       z-index: 1;
       direction: rtl;
-      margin-top: 5px;
-      color: rgba(255,255,255,.62);
+      margin-top: 6px;
+      color: rgba(255,255,255,.66);
       font-size: 10px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      padding-inline: 2px;
     }
     .bracket-center {
       display: grid;
       align-content: center;
-      min-height: 690px;
+      min-height: 700px;
     }
+    .bracket-center .bracket-stage-title { color: #ffe7a6; font-size: 13px; }
     .bracket-center .bracket-match {
-      border-color: rgba(214,168,73,.58);
+      border-color: rgba(244,205,116,.70);
       background:
-        radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--winner-color, #d6a849) 34%, transparent), transparent 58%),
-        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 26%, transparent), transparent 44%),
-        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 26%, transparent), transparent 44%),
-        rgba(0,0,0,.34);
-      transform: scale(1.01);
+        radial-gradient(circle at 50% -8%, rgba(244,205,116,.25), transparent 58%),
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 24%, transparent), transparent 48%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 24%, transparent), transparent 48%),
+        rgba(7, 18, 18, .88);
+      box-shadow: 0 0 0 1px rgba(244,205,116,.20), 0 18px 44px rgba(0,0,0,.34);
     }
     @media (max-width: 900px) {
       .scenario-tabs { grid-template-columns: 1fr; }
-      .bracket-shell { overflow-x: auto; padding: 12px; }
-      .bracket-viewport { min-width: 1040px; }
-      .bracket-board { gap: 10px; }
-      .bracket-column[data-count="8"] { min-height: 680px; }
-      .bracket-head h2 { font-size: 20px; }
+      .bracket-shell { padding: 12px; }
+      .bracket-head h2 { font-size: 21px; }
+      .bracket-board { min-width: 1180px; }
     }
     .group-card, .pairing-card {
       border: 1px solid var(--line);
@@ -1499,7 +1528,7 @@
       return `
         <div class="bracket-team ${isWinner ? "winner" : ""}">
           <span class="team-flag" title="${info.arabic_name}">${flagFor(team)}</span>
-          <strong style="color:${isWinner ? info.primary_color : "rgba(255,255,255,.88)"}">${info.arabic_name}</strong>
+          <strong class="team-name" title="${info.arabic_name}" style="color:${isWinner ? info.primary_color : "rgba(255,255,255,.90)"}">${info.arabic_name}</strong>
           <b>${pct(bracketProbability(match, team))}</b>
         </div>`;
     }
@@ -1512,7 +1541,7 @@
       const method = match.winner_method === "penalties" ? "\u064a\u0641\u0648\u0632 \u0628\u0631\u0643\u0644\u0627\u062a \u0627\u0644\u062a\u0631\u062c\u064a\u062d" : "\u064a\u0641\u0648\u0632 \u0645\u0628\u0627\u0634\u0631\u0629";
       const risk = match.upset_risk === "high" ? "\u062e\u0637\u0631 \u0645\u0641\u0627\u062c\u0623\u0629" : match.upset_risk === "medium" ? "\u062e\u0637\u0631 \u0645\u062a\u0648\u0633\u0637" : "\u062b\u0642\u0629";
       return `
-        <div class="bracket-match" style="--home-color:${home.primary_color};--away-color:${away.primary_color};--winner-color:${winner.primary_color}">
+        <div class="bracket-match" data-knockout-match-id="${match.match_id}" title="اضغط لرؤية تفاصيل المباراة" style="--home-color:${home.primary_color};--away-color:${away.primary_color};--winner-color:${winner.primary_color}">
           ${renderTeamLine(match, match.home_team)}
           ${renderTeamLine(match, match.away_team)}
           <div class="bracket-method">${winner.arabic_name} - ${method} - ${risk}</div>
@@ -1565,6 +1594,102 @@
             </div>
           </div>
         </article>`;
+    }
+
+
+    function knockoutAccuracyRow(matchId) {
+      const alias = matchId && matchId.startsWith("KO-") ? "WC-" + matchId.split("-")[1] : matchId;
+      return (accuracyReport?.matches || []).find(row => row.match_id === matchId || row.source_actual_match_id === matchId || row.source_actual_match_id === alias);
+    }
+
+    function findKnockoutMatch(matchId) {
+      const scenarios = knockoutPrediction?.scenarios || [];
+      for (const scenario of scenarios) {
+        for (const round of scenario.rounds || []) {
+          const match = (round.matches || []).find(item => item.match_id === matchId);
+          if (match) return match;
+        }
+      }
+      for (const round of knockoutPrediction?.rounds || []) {
+        const match = (round.matches || []).find(item => item.match_id === matchId);
+        if (match) return match;
+      }
+      return null;
+    }
+
+    function twoWayBar(match, teamA, teamB) {
+      const home = Number(match.home_advance_probability || 0);
+      const away = Number(match.away_advance_probability || 0);
+      const total = Math.max(home + away, 0.0001);
+      const hp = home / total * 100;
+      const ap = 100 - hp;
+      return `
+        <div class="stack">
+          <div class="stack-row" style="width:${hp}%;background:${teamA.primary_color}">${pct(home)}</div>
+          <div class="stack-row" style="width:${ap}%;background:${teamB.primary_color}">${pct(away)}</div>
+        </div>
+        <div class="prob-labels"><span>${teamA.arabic_name}</span><span>${teamB.arabic_name}</span></div>`;
+    }
+
+    function knockoutOutcomeText(row, outcome) {
+      const home = visual(row.home_team).arabic_name;
+      const away = visual(row.away_team).arabic_name;
+      return {
+        home_win: `\u0641\u0648\u0632 ${home}`,
+        draw: "\u062a\u0639\u0627\u062f\u0644",
+        away_win: `\u0641\u0648\u0632 ${away}`
+      }[outcome] || outcome;
+    }
+
+    function renderKnockoutFactors(match) {
+      const factors = [
+        [`\u0623\u062b\u0631 \u0627\u0644\u0644\u0627\u0639\u0628\u064a\u0646`, match.player_impact],
+        [`\u0623\u0631\u0642\u0627\u0645 \u0627\u0644\u0645\u0646\u062a\u062e\u0628`, match.team_stat_impact],
+        [`\u0632\u062e\u0645 \u062a\u0648\u0642\u064a\u062a \u0627\u0644\u0623\u0647\u062f\u0627\u0641`, match.goal_timing_impact],
+        [`\u0627\u062a\u062c\u0627\u0647 \u0627\u0644\u0633\u0644\u0633\u0644\u0629 \u0627\u0644\u0632\u0645\u0646\u064a\u0629`, match.time_series_impact],
+      ];
+      return factors.map(([label, value]) => `<div class="standing-row"><span class="rank">${Number(value || 0).toFixed(2)}</span><strong>${label}</strong><span>${Number(value || 0) >= 0 ? "+" : ""}${Number(value || 0).toFixed(3)}</span></div>`).join("");
+    }
+
+    function openKnockoutDetails(matchId) {
+      const match = findKnockoutMatch(matchId);
+      if (!match) return;
+      const teamA = visual(match.home_team);
+      const teamB = visual(match.away_team);
+      const winner = visual(match.winner);
+      const accuracy = knockoutAccuracyRow(matchId);
+      const penalty = match.penalty_shootout || {};
+      const actual = accuracy
+        ? `<p class="note">\u0627\u0644\u062a\u0648\u0642\u0639: ${knockoutOutcomeText(accuracy, accuracy.predicted)} ? \u0627\u0644\u0641\u0639\u0644\u064a: ${knockoutOutcomeText(accuracy, accuracy.actual)} ? ${accuracy.correct ? "\u0627\u0644\u0646\u0645\u0648\u0630\u062c \u0623\u0635\u0627\u0628" : "\u0627\u0644\u0646\u0645\u0648\u0630\u062c \u0623\u062e\u0637\u0623"} ? Brier ${accuracy.brier_score.toFixed(3)} ? LogLoss ${accuracy.log_loss.toFixed(3)}</p>`
+        : `<p class="note">\u0644\u0645 \u062a\u0635\u0644 \u0646\u062a\u064a\u062c\u0629 \u0647\u0630\u0647 \u0627\u0644\u0645\u0628\u0627\u0631\u0627\u0629 \u0628\u0639\u062f. \u0639\u0646\u062f \u0627\u0646\u062a\u0647\u0627\u0626\u0647\u0627 \u0633\u062a\u0638\u0647\u0631 \u0647\u0646\u0627 \u062f\u0642\u0629 \u0627\u0644\u062a\u0648\u0642\u0639 \u0648\u0625\u062d\u0635\u0627\u0621\u0627\u062a \u0627\u0644\u0645\u0628\u0627\u0631\u0627\u0629.</p>`;
+      const statsHtml = accuracy
+        ? renderCompletedStats(accuracy, teamA, teamB)
+        : `<p class="warnings">\u0627\u0644\u0625\u062d\u0635\u0627\u0621\u0627\u062a \u062a\u0638\u0647\u0631 \u0628\u0639\u062f \u0627\u0646\u062a\u0647\u0627\u0621 \u0627\u0644\u0645\u0628\u0627\u0631\u0627\u0629 \u0648\u062a\u062d\u062f\u064a\u062b \u0645\u0635\u0627\u062f\u0631 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a.</p>`;
+      document.getElementById("modalTitle").textContent = `${teamA.arabic_name} \u0636\u062f ${teamB.arabic_name}`;
+      document.getElementById("modalBody").innerHTML = `
+        <div class="detail-grid">
+          <section class="detail-box" style="--team-a:${teamA.primary_color};--team-b:${teamB.primary_color}">
+            <h3>\u062a\u0648\u0642\u0639 \u0627\u0644\u062a\u0623\u0647\u0644</h3>
+            ${twoWayBar(match, teamA, teamB)}
+            <p class="note">\u0627\u0644\u0645\u062a\u0623\u0647\u0644 \u0627\u0644\u0645\u062a\u0648\u0642\u0639: <b style="color:${winner.primary_color}">${winner.arabic_name}</b> ? ${match.winner_method === "penalties" ? "\u0628\u0631\u0643\u0644\u0627\u062a \u0627\u0644\u062a\u0631\u062c\u064a\u062d" : "\u0645\u0628\u0627\u0634\u0631\u0629/\u0648\u0642\u062a \u0625\u0636\u0627\u0641\u064a"}</p>
+            ${actual}
+          </section>
+          <section class="detail-box">
+            <h3>\u062f\u0642\u0629 \u0627\u0644\u0645\u0628\u0627\u0631\u0627\u0629</h3>
+            ${accuracy ? `<div class="standing-row"><span class="rank">B</span><strong>Brier Score</strong><span>${accuracy.brier_score.toFixed(3)}</span></div><div class="standing-row"><span class="rank">L</span><strong>Log Loss</strong><span>${accuracy.log_loss.toFixed(3)}</span></div><div class="standing-row"><span class="rank">P</span><strong>\u0627\u062d\u062a\u0645\u0627\u0644 \u0627\u0644\u0646\u062a\u064a\u062c\u0629 \u0627\u0644\u0641\u0639\u0644\u064a\u0629</strong><span>${pct(accuracy.probability_actual || 0)}</span></div>` : `<p class="note">\u062a\u0646\u062a\u0638\u0631 \u0627\u0644\u0646\u062a\u064a\u062c\u0629 \u0627\u0644\u0641\u0639\u0644\u064a\u0629.</p>`}
+          </section>
+          <section class="detail-box" style="--team-a:${teamA.primary_color};--team-b:${teamB.primary_color}">
+            <h3>\u0625\u062d\u0635\u0627\u0621\u0627\u062a \u0627\u0644\u0645\u0628\u0627\u0631\u0627\u0629</h3>
+            ${statsHtml}
+          </section>
+          <section class="detail-box">
+            <h3>\u0627\u0644\u0639\u0648\u0627\u0645\u0644 \u0627\u0644\u0645\u0624\u062b\u0631\u0629</h3>
+            ${renderKnockoutFactors(match)}
+            <p class="note">\u0627\u062d\u062a\u0645\u0627\u0644 \u0631\u0643\u0644\u0627\u062a \u0627\u0644\u062a\u0631\u062c\u064a\u062d: ${pct(penalty.probability || 0)} ? \u0647\u0627\u0645\u0634 \u0627\u0644\u062b\u0642\u0629: ${pct(match.confidence_margin || 0)}</p>
+          </section>
+        </div>`;
+      document.getElementById("matchModal").classList.add("open");
+      document.getElementById("matchModal").setAttribute("aria-hidden", "false");
     }
 
     window.showKnockoutScenario = function showKnockoutScenario(id) {
@@ -1718,7 +1843,8 @@
     }
 
     function renderCompletedStats(row, teamA, teamB) {
-      const stats = statsForCompletedMatch(row.match_id, row.home_team, row.away_team);
+      const statsMatchId = row.source_actual_match_id || row.match_id;
+      const stats = statsForCompletedMatch(statsMatchId, row.home_team, row.away_team);
       if (!stats.hasStats) {
         return `<p class="warnings">لم تصل إحصاءات المباراة التفصيلية بعد. سيحاول وكيل المراقبة جلبها تلقائياً من ESPN.</p>`;
       }
@@ -1855,6 +1981,11 @@
     });
 
     document.getElementById("knockout").addEventListener("click", event => {
+      const matchCard = event.target.closest(".bracket-match[data-knockout-match-id]");
+      if (matchCard) {
+        openKnockoutDetails(matchCard.dataset.knockoutMatchId);
+        return;
+      }
       const button = event.target.closest("button[data-scenario-id]");
       if (!button) return;
       window.showKnockoutScenario(button.dataset.scenarioId);
