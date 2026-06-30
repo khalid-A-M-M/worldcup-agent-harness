@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-30T20:31:06.938066Z",
+  "generated_at_utc": "2026-06-30T20:17:44.016304Z",
   "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + TimesFM-inspired time-series agent + penalty shootout model. No draw is allowed in knockout outputs.",
   "learning_summary": {
     "summary": {
@@ -56,8 +56,8 @@
     "source": "Derived from outputs/accuracy_report.json completed group-stage forecast audit."
   },
   "equation_learning": {
-    "equation_version": 40,
-    "generated_at_utc": "2026-06-30T20:30:32.062541Z",
+    "equation_version": 38,
+    "generated_at_utc": "2026-06-30T20:17:42.183819Z",
     "formula": {
       "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
       "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -92,7 +92,7 @@
     ]
   },
   "time_series_forecast": {
-    "generated_at_utc": "2026-06-30T20:30:32.189180Z",
+    "generated_at_utc": "2026-06-30T20:17:42.349902Z",
     "agent": "time_series_agent",
     "inspired_by": {
       "project": "google-research/timesfm",
@@ -1031,7 +1031,7 @@
           "home_team": "South Africa",
           "away_team": "Canada",
           "winner": "Canada",
-          "winner_method": "direct",
+          "winner_method": "direct_or_extra_time",
           "home_advance_probability": 0.14035042152279578,
           "away_advance_probability": 0.8596495784772042,
           "regulation_or_extra_time": {
@@ -1110,8 +1110,7 @@
               "label": "اتجاه السلسلة الزمنية",
               "value": "زخم آخر المباريات مع عقوبة التذبذب: +0.009",
               "impact": 0.0086
-            },
-            "Actual completed result lock: Canada advanced via direct."
+            }
           ],
           "scenario": {
             "id": "B",
@@ -1141,7 +1140,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -1274,9 +1273,7 @@
               },
               "warnings": []
             }
-          },
-          "actual_result_locked": true,
-          "predicted_winner_before_actual": "Canada"
+          }
         },
         {
           "match_id": "KO-074",
@@ -1286,7 +1283,7 @@
           "home_team": "Brazil",
           "away_team": "Japan",
           "winner": "Brazil",
-          "winner_method": "penalties",
+          "winner_method": "direct_or_extra_time",
           "home_advance_probability": 0.7913255407746254,
           "away_advance_probability": 0.2086744592253747,
           "regulation_or_extra_time": {
@@ -1365,8 +1362,7 @@
               "label": "اتجاه السلسلة الزمنية",
               "value": "زخم آخر المباريات مع عقوبة التذبذب: +0.100",
               "impact": 0.1
-            },
-            "Actual completed result lock: Brazil advanced via penalties."
+            }
           ],
           "scenario": {
             "id": "B",
@@ -1396,7 +1392,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -1529,9 +1525,7 @@
               },
               "warnings": []
             }
-          },
-          "actual_result_locked": true,
-          "predicted_winner_before_actual": "Brazil"
+          }
         },
         {
           "match_id": "KO-075",
@@ -1540,8 +1534,8 @@
           "generated_at_utc": "2026-06-28T10:00:00Z",
           "home_team": "Germany",
           "away_team": "Paraguay",
-          "winner": "Paraguay",
-          "winner_method": "penalties",
+          "winner": "Germany",
+          "winner_method": "direct_or_extra_time",
           "home_advance_probability": 0.8650822375143493,
           "away_advance_probability": 0.13491776248565068,
           "regulation_or_extra_time": {
@@ -1620,8 +1614,7 @@
               "label": "اتجاه السلسلة الزمنية",
               "value": "زخم آخر المباريات مع عقوبة التذبذب: -0.059",
               "impact": -0.0594
-            },
-            "Actual completed result lock: Paraguay advanced via penalties."
+            }
           ],
           "scenario": {
             "id": "B",
@@ -1651,7 +1644,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -1787,9 +1780,7 @@
               },
               "warnings": []
             }
-          },
-          "actual_result_locked": true,
-          "predicted_winner_before_actual": "Germany"
+          }
         },
         {
           "match_id": "KO-076",
@@ -1798,8 +1789,8 @@
           "generated_at_utc": "2026-06-28T10:00:00Z",
           "home_team": "Netherlands",
           "away_team": "Morocco",
-          "winner": "Morocco",
-          "winner_method": "penalties",
+          "winner": "Netherlands",
+          "winner_method": "direct_or_extra_time",
           "home_advance_probability": 0.5071518834322415,
           "away_advance_probability": 0.49284811656775857,
           "regulation_or_extra_time": {
@@ -1878,8 +1869,7 @@
               "label": "اتجاه السلسلة الزمنية",
               "value": "زخم آخر المباريات مع عقوبة التذبذب: -0.036",
               "impact": -0.0363
-            },
-            "Actual completed result lock: Morocco advanced via penalties."
+            }
           ],
           "scenario": {
             "id": "B",
@@ -1909,7 +1899,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -2042,9 +2032,7 @@
               },
               "warnings": []
             }
-          },
-          "actual_result_locked": true,
-          "predicted_winner_before_actual": "Netherlands"
+          }
         },
         {
           "match_id": "KO-077",
@@ -2163,7 +2151,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -2415,7 +2403,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -2667,7 +2655,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -2922,7 +2910,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -3176,7 +3164,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -3428,7 +3416,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -3680,7 +3668,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -3932,7 +3920,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -4184,7 +4172,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -4436,7 +4424,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -4688,7 +4676,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -4940,7 +4928,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -5084,7 +5072,7 @@
           "match_id": "KO-089",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-06T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "Canada",
           "away_team": "Brazil",
           "winner": "Brazil",
@@ -5197,7 +5185,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -5336,53 +5324,53 @@
           "match_id": "KO-090",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-07T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
-          "home_team": "Paraguay",
-          "away_team": "Morocco",
-          "winner": "Morocco",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
+          "home_team": "Germany",
+          "away_team": "Netherlands",
+          "winner": "Germany",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.14040586090823023,
-          "away_advance_probability": 0.8595941390917698,
+          "home_advance_probability": 0.5136634107206887,
+          "away_advance_probability": 0.4863365892793112,
           "regulation_or_extra_time": {
-            "home": 0.07912514289108286,
-            "away": 0.9208748571089171
+            "home": 0.5324406014243873,
+            "away": 0.4675593985756127
           },
           "penalty_shootout": {
-            "probability": 0.32322052944624774,
-            "home_win_if_shootout": 0.33,
-            "away_win_if_shootout": 0.6699999999999999
+            "probability": 0.307586717779384,
+            "home_win_if_shootout": 0.4526165916666667,
+            "away_win_if_shootout": 0.5473834083333333
           },
-          "upset_risk": "low",
-          "confidence_margin": 0.7191882781835396,
+          "upset_risk": "high",
+          "confidence_margin": 0.027326821441377436,
           "baseline_three_way": {
-            "home_win": 0.15447106493850654,
-            "draw": 0.2630174638039078,
-            "away_win": 0.5825114712575856
+            "home_win": 0.4055709314447062,
+            "draw": 0.2402490873406054,
+            "away_win": 0.35417998121468847
           },
           "key_factors": [
             {
               "side": "home",
               "label": "نموذج العالم الاقتصادي",
-              "value": "قوة بنيوية 56.7/100: دخل 42، سكان 34، سوق كرة 62، أكاديميات 62، مناخ 80.",
-              "impact": 0.007
+              "value": "قوة بنيوية 84.3/100: دخل 86، سكان 68، سوق كرة 92، أكاديميات 88، مناخ 72.",
+              "impact": 0.034
             },
             {
               "side": "away",
               "label": "نموذج العالم الاقتصادي",
-              "value": "قوة بنيوية 67.1/100: دخل 45، سكان 52، سوق كرة 74، أكاديميات 76، مناخ 82.",
-              "impact": 0.017
+              "value": "قوة بنيوية 79.4/100: دخل 84، سكان 42، سوق كرة 86، أكاديميات 90، مناخ 74.",
+              "impact": 0.029
             },
             {
               "side": "home",
               "label": "أداء البطولة حتى الآن",
-              "value": "5 نقطة من 4 مباراة، فارق أهداف -2.",
-              "impact": -0.028
+              "value": "7 نقطة من 4 مباراة، فارق أهداف 6.",
+              "impact": 0.083
             },
             {
               "side": "home",
               "label": "قوة المنتخب قبل المباراة",
-              "value": "Seed rank داخل النموذج: 60.",
-              "impact": -0.01
+              "value": "Seed rank داخل النموذج: 9.",
+              "impact": 0.07
             },
             {
               "side": "home",
@@ -5393,51 +5381,51 @@
             {
               "side": "away",
               "label": "أداء البطولة حتى الآن",
-              "value": "8 نقطة من 4 مباراة، فارق أهداف 3.",
-              "impact": 0.041
+              "value": "8 نقطة من 4 مباراة، فارق أهداف 6.",
+              "impact": 0.083
             },
             {
               "side": "away",
               "label": "أثر اللاعبين كأفراد",
-              "value": "فرق مؤشرات النجوم والحارس والمسددين: -0.067",
-              "impact": -0.0666
+              "value": "فرق مؤشرات النجوم والحارس والمسددين: -0.004",
+              "impact": -0.0036
             },
             {
-              "side": "away",
+              "side": "home",
               "label": "أرقام المنتخب في البطولة",
-              "value": "ضغط هجومي، تسديدات على المرمى، سيطرة وتمرير: -0.059",
-              "impact": -0.0589
+              "value": "ضغط هجومي، تسديدات على المرمى، سيطرة وتمرير: +0.024",
+              "impact": 0.0241
             },
             {
-              "side": "away",
+              "side": "home",
               "label": "زمن تسجيل الأهداف",
-              "value": "زخم متأخر/أهداف عودة/حسم: -0.009",
-              "impact": -0.0093
+              "value": "زخم متأخر/أهداف عودة/حسم: +0.005",
+              "impact": 0.0055
             },
             {
               "side": "away",
               "label": "اتجاه السلسلة الزمنية",
-              "value": "زخم آخر المباريات مع عقوبة التذبذب: -0.081",
-              "impact": -0.081
+              "value": "زخم آخر المباريات مع عقوبة التذبذب: -0.100",
+              "impact": -0.1
             }
           ],
           "scenario": {
             "id": "B",
             "arabic_name": "المسار ب: النموذج المتوازن"
           },
-          "player_impact": -0.0666,
-          "team_stat_impact": -0.0589,
-          "goal_timing_impact": -0.0093,
-          "time_series_impact": -0.081,
+          "player_impact": -0.0036,
+          "team_stat_impact": 0.0241,
+          "goal_timing_impact": 0.0055,
+          "time_series_impact": -0.1,
           "time_series_profile": {
-            "edge": -0.08096515800000001,
-            "home_momentum_index": -0.2839,
-            "away_momentum_index": 3.2354,
-            "home_stat_trend_index": 0.0,
-            "away_stat_trend_index": 5.4948,
-            "home_volatility_index": 2.9562,
-            "away_volatility_index": 1.7963,
-            "confidence": 0.7031
+            "edge": -0.1,
+            "home_momentum_index": -1.5908,
+            "away_momentum_index": 3.693,
+            "home_stat_trend_index": -5.7083,
+            "away_stat_trend_index": 0.6618,
+            "home_volatility_index": 5.237,
+            "away_volatility_index": 3.5926,
+            "confidence": 0.6897
           },
           "model_diagnostics": {
             "rho": -0.05902903811252269,
@@ -5449,7 +5437,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -5464,11 +5452,11 @@
           "audit_log": [
             "data_collection: ok - Loaded 76 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
             "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-            "team_intelligence: ok - Computed tournament form and prior-strength factors for Paraguay and Morocco.",
+            "team_intelligence: ok - Computed tournament form and prior-strength factors for Germany and Netherlands.",
             "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-            "economic_world: ok - Computed long-run country-strength layer: Paraguay 56.7 vs Morocco 67.1.",
-            "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
-            "synthesizer: ok - Final forecast: away_win."
+            "economic_world: ok - Computed long-run country-strength layer: Germany 84.3 vs Netherlands 79.4.",
+            "critic_auditor: reviewed - Devil's Advocate found 1 objections.",
+            "synthesizer: ok - Final forecast: home_win."
           ],
           "agents": {
             "data_collection": {
@@ -5484,13 +5472,13 @@
               "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
               "payload": {
                 "baseline_probabilities": {
-                  "home_win": 0.20348573601591902,
-                  "draw": 0.2639496118241026,
-                  "away_win": 0.5325646521599781
+                  "home_win": 0.38444733829803956,
+                  "draw": 0.2243335262736444,
+                  "away_win": 0.3912191354283156
                 },
                 "expected_goals": {
-                  "home": 0.8971307438446984,
-                  "away": 1.6026870828243585
+                  "home": 1.8656894372363921,
+                  "away": 1.8827453205111082
                 },
                 "model_diagnostics": {
                   "rho": -0.05902903811252269,
@@ -5502,39 +5490,37 @@
             },
             "team_intelligence": {
               "status": "ok",
-              "summary": "Computed tournament form and prior-strength factors for Paraguay and Morocco.",
+              "summary": "Computed tournament form and prior-strength factors for Germany and Netherlands.",
               "payload": {
-                "probability_adjustment": -0.16,
+                "probability_adjustment": 0.031793666666666665,
                 "home_profile": {
-                  "team": "Paraguay",
+                  "team": "Germany",
                   "matches": 4,
-                  "wins": 1,
-                  "draws": 2,
+                  "wins": 2,
+                  "draws": 1,
                   "losses": 1,
-                  "goals_for": 3,
+                  "goals_for": 11,
                   "goals_against": 5,
-                  "goal_difference": -2,
-                  "points": 5,
-                  "points_per_match": 1.25,
-                  "seed_rank": 60
+                  "goal_difference": 6,
+                  "points": 7,
+                  "points_per_match": 1.75,
+                  "seed_rank": 9
                 },
                 "away_profile": {
-                  "team": "Morocco",
+                  "team": "Netherlands",
                   "matches": 4,
                   "wins": 2,
                   "draws": 2,
                   "losses": 0,
-                  "goals_for": 7,
-                  "goals_against": 4,
-                  "goal_difference": 3,
+                  "goals_for": 11,
+                  "goals_against": 5,
+                  "goal_difference": 6,
                   "points": 8,
                   "points_per_match": 2.0,
-                  "seed_rank": 15
+                  "seed_rank": 7
                 }
               },
-              "warnings": [
-                "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
-              ]
+              "warnings": []
             },
             "butterfly_factors": {
               "status": "ok",
@@ -5548,40 +5534,41 @@
             },
             "economic_world": {
               "status": "ok",
-              "summary": "Computed long-run country-strength layer: Paraguay 56.7 vs Morocco 67.1.",
+              "summary": "Computed long-run country-strength layer: Germany 84.3 vs Netherlands 79.4.",
               "payload": {
-                "home_score": 56.7,
-                "away_score": 67.14,
+                "home_score": 84.32,
+                "away_score": 79.4,
                 "adjusted_probabilities": {
-                  "home_win": 0.29226611519999995,
-                  "draw": 0.26120800000000005,
-                  "away_win": 0.44652588479999994
+                  "home_win": 0.4002877151999999,
+                  "draw": 0.27114400000000005,
+                  "away_win": 0.32856828480000005
                 }
               },
               "warnings": []
             },
             "critic_auditor": {
               "status": "reviewed",
-              "summary": "Devil's Advocate found 0 objections.",
+              "summary": "Devil's Advocate found 1 objections.",
               "payload": {
                 "favorite": "away_win",
-                "objections": [],
-                "confidence_penalty": 0.06
+                "objections": [
+                  "Baseline edge is narrow; avoid overconfident final probability."
+                ],
+                "confidence_penalty": 0.11
               },
               "warnings": [
-                "No butterfly events found for this match.",
-                "FIFA/beIN advanced match stats are not connected yet for both teams; using scores, group form, priors, and butterfly cues."
+                "No butterfly events found for this match."
               ]
             },
             "synthesizer": {
               "status": "ok",
-              "summary": "Final forecast: away_win.",
+              "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.15447106493850654,
-                "draw": 0.2630174638039078,
-                "away_win": 0.5825114712575856,
-                "recommended_label": "away_win",
-                "explanation": "Paraguay vs Morocco: baseline model favors away_win; butterfly cues: no major late cue; critic: no blocking objection."
+                "home_win": 0.4055709314447062,
+                "draw": 0.2402490873406054,
+                "away_win": 0.35417998121468847,
+                "recommended_label": "home_win",
+                "explanation": "Germany vs Netherlands: baseline model favors home_win; butterfly cues: no major late cue; critic: Baseline edge is narrow; avoid overconfident final probability.."
               },
               "warnings": []
             }
@@ -5591,7 +5578,7 @@
           "match_id": "KO-091",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-08T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "Ivory Coast",
           "away_team": "France",
           "winner": "France",
@@ -5704,7 +5691,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -5843,7 +5830,7 @@
           "match_id": "KO-092",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-09T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "USA",
           "away_team": "Egypt",
           "winner": "USA",
@@ -5956,7 +5943,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -6095,7 +6082,7 @@
           "match_id": "KO-093",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-10T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "Argentina",
           "away_team": "Spain",
           "winner": "Spain",
@@ -6208,7 +6195,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -6350,7 +6337,7 @@
           "match_id": "KO-094",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-11T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "Belgium",
           "away_team": "Colombia",
           "winner": "Colombia",
@@ -6463,7 +6450,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -6605,7 +6592,7 @@
           "match_id": "KO-095",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-12T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "England",
           "away_team": "Mexico",
           "winner": "England",
@@ -6718,7 +6705,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -6857,7 +6844,7 @@
           "match_id": "KO-096",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-13T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:17:43.472425Z",
           "home_team": "Portugal",
           "away_team": "Switzerland",
           "winner": "Portugal",
@@ -6970,7 +6957,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -7114,28 +7101,28 @@
           "match_id": "KO-097",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-09T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:17:43.574337Z",
           "home_team": "Brazil",
-          "away_team": "Morocco",
+          "away_team": "Germany",
           "winner": "Brazil",
           "winner_method": "direct_or_extra_time",
-          "home_advance_probability": 0.6164855703842074,
-          "away_advance_probability": 0.3835144296157927,
+          "home_advance_probability": 0.5542141827039067,
+          "away_advance_probability": 0.44578581729609346,
           "regulation_or_extra_time": {
-            "home": 0.6134009268949023,
-            "away": 0.38659907310509767
+            "home": 0.5517672215834489,
+            "away": 0.44823277841655107
           },
           "penalty_shootout": {
-            "probability": 0.3390970935147948,
-            "home_win_if_shootout": 0.6255822083333333,
-            "away_win_if_shootout": 0.37441779166666667
+            "probability": 0.3298496697024494,
+            "home_win_if_shootout": 0.5616325958333332,
+            "away_win_if_shootout": 0.43836740416666675
           },
-          "upset_risk": "low",
-          "confidence_margin": 0.2329711407684147,
+          "upset_risk": "medium",
+          "confidence_margin": 0.1084283654078132,
           "baseline_three_way": {
-            "home_win": 0.5196810942512713,
-            "draw": 0.2621647743751893,
-            "away_win": 0.21815413137353948
+            "home_win": 0.41382894100851014,
+            "draw": 0.25939368307807864,
+            "away_win": 0.32677737591341116
           },
           "key_factors": [
             {
@@ -7147,8 +7134,8 @@
             {
               "side": "away",
               "label": "نموذج العالم الاقتصادي",
-              "value": "قوة بنيوية 67.1/100: دخل 45، سكان 52، سوق كرة 74، أكاديميات 76، مناخ 82.",
-              "impact": 0.017
+              "value": "قوة بنيوية 84.3/100: دخل 86، سكان 68، سوق كرة 92، أكاديميات 88، مناخ 72.",
+              "impact": 0.034
             },
             {
               "side": "home",
@@ -7165,57 +7152,57 @@
             {
               "side": "away",
               "label": "أداء البطولة حتى الآن",
-              "value": "8 نقطة من 4 مباراة، فارق أهداف 3.",
-              "impact": 0.041
+              "value": "7 نقطة من 4 مباراة، فارق أهداف 6.",
+              "impact": 0.083
             },
             {
               "side": "away",
               "label": "قوة المنتخب قبل المباراة",
-              "value": "Seed rank داخل النموذج: 15.",
+              "value": "Seed rank داخل النموذج: 9.",
               "impact": 0.07
             },
             {
               "side": "home",
               "label": "أثر اللاعبين كأفراد",
-              "value": "فرق مؤشرات النجوم والحارس والمسددين: +0.013",
-              "impact": 0.0126
+              "value": "فرق مؤشرات النجوم والحارس والمسددين: +0.005",
+              "impact": 0.005
             },
             {
               "side": "away",
               "label": "أرقام المنتخب في البطولة",
-              "value": "ضغط هجومي، تسديدات على المرمى، سيطرة وتمرير: -0.005",
-              "impact": -0.0048
+              "value": "ضغط هجومي، تسديدات على المرمى، سيطرة وتمرير: -0.021",
+              "impact": -0.021
             },
             {
               "side": "away",
               "label": "زمن تسجيل الأهداف",
-              "value": "زخم متأخر/أهداف عودة/حسم: -0.003",
-              "impact": -0.0033
+              "value": "زخم متأخر/أهداف عودة/حسم: -0.004",
+              "impact": -0.0037
             },
             {
               "side": "home",
               "label": "اتجاه السلسلة الزمنية",
-              "value": "زخم آخر المباريات مع عقوبة التذبذب: +0.023",
-              "impact": 0.0235
+              "value": "زخم آخر المباريات مع عقوبة التذبذب: +0.100",
+              "impact": 0.1
             }
           ],
           "scenario": {
             "id": "B",
             "arabic_name": "المسار ب: النموذج المتوازن"
           },
-          "player_impact": 0.0126,
-          "team_stat_impact": -0.0048,
-          "goal_timing_impact": -0.0033,
-          "time_series_impact": 0.0235,
+          "player_impact": 0.005,
+          "team_stat_impact": -0.021,
+          "goal_timing_impact": -0.0037,
+          "time_series_impact": 0.1,
           "time_series_profile": {
-            "edge": 0.023451078000000007,
+            "edge": 0.1,
             "home_momentum_index": 8.6392,
-            "away_momentum_index": 3.2354,
+            "away_momentum_index": -1.5908,
             "home_stat_trend_index": 1.7534,
-            "away_stat_trend_index": 5.4948,
+            "away_stat_trend_index": -5.7083,
             "home_volatility_index": 2.6694,
-            "away_volatility_index": 1.7963,
-            "confidence": 0.7317
+            "away_volatility_index": 5.237,
+            "confidence": 0.6887
           },
           "model_diagnostics": {
             "rho": -0.05902903811252269,
@@ -7227,7 +7214,7 @@
             "economic_world_kliment": 0.34,
             "tournament_match_sample": 4.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -7242,9 +7229,9 @@
           "audit_log": [
             "data_collection: ok - Loaded 76 historical matches, 47 team priors, 48 economic-world profiles, and 0 live event cues.",
             "specialist_analysis: ok - Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
-            "team_intelligence: ok - Computed tournament form and prior-strength factors for Brazil and Morocco.",
+            "team_intelligence: ok - Computed tournament form and prior-strength factors for Brazil and Germany.",
             "butterfly_factors: ok - Scored 0 high-impact contextual cues.",
-            "economic_world: ok - Computed long-run country-strength layer: Brazil 83.5 vs Morocco 67.1.",
+            "economic_world: ok - Computed long-run country-strength layer: Brazil 83.5 vs Germany 84.3.",
             "critic_auditor: reviewed - Devil's Advocate found 0 objections.",
             "synthesizer: ok - Final forecast: home_win."
           ],
@@ -7262,13 +7249,13 @@
               "summary": "Produced Dixon-Coles-lite baseline probabilities with rho=-0.059.",
               "payload": {
                 "baseline_probabilities": {
-                  "home_win": 0.46832655033222914,
-                  "draw": 0.2681007490533171,
-                  "away_win": 0.26357270061445376
+                  "home_win": 0.44340719050986377,
+                  "draw": 0.24958503496678572,
+                  "away_win": 0.3070077745233503
                 },
                 "expected_goals": {
-                  "home": 1.5438218518800173,
-                  "away": 1.099921613026092
+                  "home": 1.691328264065172,
+                  "away": 1.3767790333193473
                 },
                 "model_diagnostics": {
                   "rho": -0.05902903811252269,
@@ -7280,9 +7267,9 @@
             },
             "team_intelligence": {
               "status": "ok",
-              "summary": "Computed tournament form and prior-strength factors for Brazil and Morocco.",
+              "summary": "Computed tournament form and prior-strength factors for Brazil and Germany.",
               "payload": {
-                "probability_adjustment": 0.08412083333333337,
+                "probability_adjustment": 0.0013098333333333434,
                 "home_profile": {
                   "team": "Brazil",
                   "matches": 4,
@@ -7297,17 +7284,17 @@
                   "seed_rank": 5
                 },
                 "away_profile": {
-                  "team": "Morocco",
+                  "team": "Germany",
                   "matches": 4,
                   "wins": 2,
-                  "draws": 2,
-                  "losses": 0,
-                  "goals_for": 7,
-                  "goals_against": 4,
-                  "goal_difference": 3,
-                  "points": 8,
-                  "points_per_match": 2.0,
-                  "seed_rank": 15
+                  "draws": 1,
+                  "losses": 1,
+                  "goals_for": 11,
+                  "goals_against": 5,
+                  "goal_difference": 6,
+                  "points": 7,
+                  "points_per_match": 1.75,
+                  "seed_rank": 9
                 }
               },
               "warnings": []
@@ -7324,14 +7311,14 @@
             },
             "economic_world": {
               "status": "ok",
-              "summary": "Computed long-run country-strength layer: Brazil 83.5 vs Morocco 67.1.",
+              "summary": "Computed long-run country-strength layer: Brazil 83.5 vs Germany 84.3.",
               "payload": {
                 "home_score": 83.45,
-                "away_score": 67.14,
+                "away_score": 84.32,
                 "adjusted_probabilities": {
-                  "home_win": 0.4968992898,
-                  "draw": 0.25064200000000003,
-                  "away_win": 0.2524587102
+                  "home_win": 0.3545053758,
+                  "draw": 0.27843400000000007,
+                  "away_win": 0.3670606241999999
                 }
               },
               "warnings": []
@@ -7352,11 +7339,11 @@
               "status": "ok",
               "summary": "Final forecast: home_win.",
               "payload": {
-                "home_win": 0.5196810942512713,
-                "draw": 0.2621647743751893,
-                "away_win": 0.21815413137353948,
+                "home_win": 0.41382894100851014,
+                "draw": 0.25939368307807864,
+                "away_win": 0.32677737591341116,
                 "recommended_label": "home_win",
-                "explanation": "Brazil vs Morocco: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
+                "explanation": "Brazil vs Germany: baseline model favors home_win; butterfly cues: no major late cue; critic: no blocking objection."
               },
               "warnings": []
             }
@@ -7366,7 +7353,7 @@
           "match_id": "KO-098",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-10T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:17:43.574337Z",
           "home_team": "France",
           "away_team": "USA",
           "winner": "France",
@@ -7479,7 +7466,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -7618,7 +7605,7 @@
           "match_id": "KO-099",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-11T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:17:43.574337Z",
           "home_team": "Spain",
           "away_team": "Colombia",
           "winner": "Spain",
@@ -7731,7 +7718,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -7870,7 +7857,7 @@
           "match_id": "KO-100",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-12T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:17:43.574337Z",
           "home_team": "England",
           "away_team": "Portugal",
           "winner": "England",
@@ -7983,7 +7970,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -8129,7 +8116,7 @@
           "match_id": "KO-101",
           "round": "Semifinals",
           "kickoff_utc": "2026-07-12T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.517803Z",
+          "generated_at_utc": "2026-06-30T20:17:43.630079Z",
           "home_team": "Brazil",
           "away_team": "France",
           "winner": "France",
@@ -8242,7 +8229,7 @@
             "economic_world_kliment": 0.385,
             "tournament_match_sample": 3.5
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -8383,7 +8370,7 @@
           "match_id": "KO-102",
           "round": "Semifinals",
           "kickoff_utc": "2026-07-13T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.517803Z",
+          "generated_at_utc": "2026-06-30T20:17:43.630079Z",
           "home_team": "Spain",
           "away_team": "England",
           "winner": "Spain",
@@ -8496,7 +8483,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -8640,7 +8627,7 @@
           "match_id": "KO-103",
           "round": "Final",
           "kickoff_utc": "2026-07-15T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.547006Z",
+          "generated_at_utc": "2026-06-30T20:17:43.645310Z",
           "home_team": "France",
           "away_team": "Spain",
           "winner": "Spain",
@@ -8753,7 +8740,7 @@
             "economic_world_kliment": 0.43,
             "tournament_match_sample": 3.0
           },
-          "equation_version": 40,
+          "equation_version": 38,
           "equation_coefficients": {
             "favorite_temperature": 0.7593749999999999,
             "home_bias_delta": 0.00140625,
@@ -8898,11 +8885,11 @@
       "scenario_id": "A",
       "arabic_name": "المسار أ: العقل البارد",
       "description": "يعطي وزناً أعلى للمرشح الأقوى، يقلل الفوضى، ولا يقلب مباراة إلا عند وجود هامش واضح.",
-      "estimated_accuracy": 0.6274864840244538,
+      "estimated_accuracy": 0.6161794901505425,
       "confidence_grade": "متوسطة",
-      "high_risk_matches": 10,
-      "average_confidence_margin": 0.348487631066325,
-      "average_penalty_probability": 0.2888037525476243,
+      "high_risk_matches": 11,
+      "average_confidence_margin": 0.32166344681608444,
+      "average_penalty_probability": 0.2880562979667077,
       "champion": "Spain",
       "final": {
         "match_id": "KO-103",
@@ -8929,7 +8916,7 @@
           "arabic_name": "المسار أ: العقل البارد"
         },
         "kickoff_utc": "2026-07-15T19:00:00Z",
-        "generated_at_utc": "2026-06-30T20:31:06.260662Z"
+        "generated_at_utc": "2026-06-30T20:17:43.238778Z"
       },
       "rounds": [
         {
@@ -8941,7 +8928,7 @@
               "home_team": "South Africa",
               "away_team": "Canada",
               "winner": "Canada",
-              "winner_method": "direct",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.1492674194713858,
               "away_advance_probability": 0.8507325805286141,
               "penalty_shootout": {
@@ -8960,9 +8947,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-06-28T17:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Canada"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-074",
@@ -8970,7 +8955,7 @@
               "home_team": "Brazil",
               "away_team": "Japan",
               "winner": "Brazil",
-              "winner_method": "penalties",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.7819543838976213,
               "away_advance_probability": 0.21804561610237885,
               "penalty_shootout": {
@@ -8989,17 +8974,15 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-06-28T20:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Brazil"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-075",
               "round": "Round of 32",
               "home_team": "Germany",
               "away_team": "Paraguay",
-              "winner": "Paraguay",
-              "winner_method": "penalties",
+              "winner": "Germany",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.851876199809262,
               "away_advance_probability": 0.1481238001907381,
               "penalty_shootout": {
@@ -9018,17 +9001,15 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-06-29T17:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Germany"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-076",
               "round": "Round of 32",
               "home_team": "Netherlands",
               "away_team": "Morocco",
-              "winner": "Morocco",
-              "winner_method": "penalties",
+              "winner": "Netherlands",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.5243915853369218,
               "away_advance_probability": 0.4756084146630782,
               "penalty_shootout": {
@@ -9047,9 +9028,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-06-29T20:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Netherlands"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-077",
@@ -9405,34 +9384,34 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-06T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-090",
               "round": "Round of 16",
-              "home_team": "Paraguay",
-              "away_team": "Morocco",
-              "winner": "Morocco",
+              "home_team": "Germany",
+              "away_team": "Netherlands",
+              "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.12035632299501592,
-              "away_advance_probability": 0.8796436770049841,
+              "home_advance_probability": 0.5153406655924232,
+              "away_advance_probability": 0.48465933440757686,
               "penalty_shootout": {
-                "probability": 0.2825326205718427,
-                "home_win_if_shootout": 0.33,
-                "away_win_if_shootout": 0.6699999999999999
+                "probability": 0.268671615406071,
+                "home_win_if_shootout": 0.4543846116666667,
+                "away_win_if_shootout": 0.5456153883333332
               },
-              "upset_risk": "low",
-              "confidence_margin": 0.7592873540099683,
-              "player_impact": -0.0489,
-              "team_stat_impact": -0.0485,
-              "goal_timing_impact": -0.0068,
-              "time_series_impact": -0.059,
+              "upset_risk": "high",
+              "confidence_margin": 0.03068133118484634,
+              "player_impact": -0.0026,
+              "team_stat_impact": 0.0198,
+              "goal_timing_impact": 0.004,
+              "time_series_impact": -0.078,
               "scenario": {
                 "id": "A",
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-07T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-091",
@@ -9459,7 +9438,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-08T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-092",
@@ -9486,7 +9465,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-093",
@@ -9513,7 +9492,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-094",
@@ -9540,7 +9519,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-095",
@@ -9567,7 +9546,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             },
             {
               "match_id": "KO-096",
@@ -9594,7 +9573,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:17:42.983011Z"
             }
           ]
         },
@@ -9605,28 +9584,28 @@
               "match_id": "KO-097",
               "round": "Quarterfinals",
               "home_team": "Brazil",
-              "away_team": "Morocco",
+              "away_team": "Germany",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6218009452327584,
-              "away_advance_probability": 0.3781990547672416,
+              "home_advance_probability": 0.5703291007665906,
+              "away_advance_probability": 0.4296708992334094,
               "penalty_shootout": {
-                "probability": 0.29554134778783187,
-                "home_win_if_shootout": 0.6222625083333333,
-                "away_win_if_shootout": 0.3777374916666667
+                "probability": 0.28623126094518747,
+                "home_win_if_shootout": 0.5596221258333334,
+                "away_win_if_shootout": 0.4403778741666666
               },
-              "upset_risk": "low",
-              "confidence_margin": 0.24360189046551683,
-              "player_impact": 0.0092,
-              "team_stat_impact": -0.004,
-              "goal_timing_impact": -0.0024,
-              "time_series_impact": 0.0166,
+              "upset_risk": "medium",
+              "confidence_margin": 0.1406582015331812,
+              "player_impact": 0.0037,
+              "team_stat_impact": -0.0173,
+              "goal_timing_impact": -0.0027,
+              "time_series_impact": 0.1,
               "scenario": {
                 "id": "A",
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:17:43.125675Z"
             },
             {
               "match_id": "KO-098",
@@ -9653,7 +9632,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:17:43.125675Z"
             },
             {
               "match_id": "KO-099",
@@ -9680,7 +9659,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:17:43.125675Z"
             },
             {
               "match_id": "KO-100",
@@ -9707,7 +9686,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:17:43.125675Z"
             }
           ]
         },
@@ -9739,7 +9718,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.243948Z"
+              "generated_at_utc": "2026-06-30T20:17:43.207379Z"
             },
             {
               "match_id": "KO-102",
@@ -9766,7 +9745,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.243948Z"
+              "generated_at_utc": "2026-06-30T20:17:43.207379Z"
             }
           ]
         },
@@ -9798,7 +9777,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-15T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.260662Z"
+              "generated_at_utc": "2026-06-30T20:17:43.238778Z"
             }
           ]
         }
@@ -9808,11 +9787,11 @@
       "scenario_id": "B",
       "arabic_name": "المسار ب: النموذج المتوازن",
       "description": "النسخة الرسمية الحالية: تمزج Agent Harness مع النموذج الاقتصادي وإحصاءات البطولة والتعلم من الأخطاء واتجاهات السلاسل الزمنية.",
-      "estimated_accuracy": 0.6016980011707839,
+      "estimated_accuracy": 0.5905333217694658,
       "confidence_grade": "متوسطة",
-      "high_risk_matches": 10,
-      "average_confidence_margin": 0.3429000527160856,
-      "average_penalty_probability": 0.33104336170365395,
+      "high_risk_matches": 11,
+      "average_confidence_margin": 0.3165644323256739,
+      "average_penalty_probability": 0.33024074120432456,
       "champion": "Spain",
       "final": {
         "match_id": "KO-103",
@@ -9839,7 +9818,7 @@
           "arabic_name": "المسار ب: النموذج المتوازن"
         },
         "kickoff_utc": "2026-07-15T19:00:00Z",
-        "generated_at_utc": "2026-06-30T20:31:06.547006Z"
+        "generated_at_utc": "2026-06-30T20:17:43.645310Z"
       },
       "rounds": [
         {
@@ -9851,7 +9830,7 @@
               "home_team": "South Africa",
               "away_team": "Canada",
               "winner": "Canada",
-              "winner_method": "direct",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.14035042152279578,
               "away_advance_probability": 0.8596495784772042,
               "penalty_shootout": {
@@ -9870,9 +9849,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-06-28T17:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Canada"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-074",
@@ -9880,7 +9857,7 @@
               "home_team": "Brazil",
               "away_team": "Japan",
               "winner": "Brazil",
-              "winner_method": "penalties",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.7913255407746254,
               "away_advance_probability": 0.2086744592253747,
               "penalty_shootout": {
@@ -9899,17 +9876,15 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-06-28T20:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Brazil"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-075",
               "round": "Round of 32",
               "home_team": "Germany",
               "away_team": "Paraguay",
-              "winner": "Paraguay",
-              "winner_method": "penalties",
+              "winner": "Germany",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.8650822375143493,
               "away_advance_probability": 0.13491776248565068,
               "penalty_shootout": {
@@ -9928,17 +9903,15 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-06-29T17:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Germany"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-076",
               "round": "Round of 32",
               "home_team": "Netherlands",
               "away_team": "Morocco",
-              "winner": "Morocco",
-              "winner_method": "penalties",
+              "winner": "Netherlands",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.5071518834322415,
               "away_advance_probability": 0.49284811656775857,
               "penalty_shootout": {
@@ -9957,9 +9930,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-06-29T20:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Netherlands"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-077",
@@ -10315,34 +10286,34 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-06T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-090",
               "round": "Round of 16",
-              "home_team": "Paraguay",
-              "away_team": "Morocco",
-              "winner": "Morocco",
+              "home_team": "Germany",
+              "away_team": "Netherlands",
+              "winner": "Germany",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.14040586090823023,
-              "away_advance_probability": 0.8595941390917698,
+              "home_advance_probability": 0.5136634107206887,
+              "away_advance_probability": 0.4863365892793112,
               "penalty_shootout": {
-                "probability": 0.32322052944624774,
-                "home_win_if_shootout": 0.33,
-                "away_win_if_shootout": 0.6699999999999999
+                "probability": 0.307586717779384,
+                "home_win_if_shootout": 0.4526165916666667,
+                "away_win_if_shootout": 0.5473834083333333
               },
-              "upset_risk": "low",
-              "confidence_margin": 0.7191882781835396,
-              "player_impact": -0.0666,
-              "team_stat_impact": -0.0589,
-              "goal_timing_impact": -0.0093,
-              "time_series_impact": -0.081,
+              "upset_risk": "high",
+              "confidence_margin": 0.027326821441377436,
+              "player_impact": -0.0036,
+              "team_stat_impact": 0.0241,
+              "goal_timing_impact": 0.0055,
+              "time_series_impact": -0.1,
               "scenario": {
                 "id": "B",
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-07T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-091",
@@ -10369,7 +10340,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-08T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-092",
@@ -10396,7 +10367,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-093",
@@ -10423,7 +10394,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-094",
@@ -10450,7 +10421,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-095",
@@ -10477,7 +10448,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             },
             {
               "match_id": "KO-096",
@@ -10504,7 +10475,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:17:43.472425Z"
             }
           ]
         },
@@ -10515,28 +10486,28 @@
               "match_id": "KO-097",
               "round": "Quarterfinals",
               "home_team": "Brazil",
-              "away_team": "Morocco",
+              "away_team": "Germany",
               "winner": "Brazil",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.6164855703842074,
-              "away_advance_probability": 0.3835144296157927,
+              "home_advance_probability": 0.5542141827039067,
+              "away_advance_probability": 0.44578581729609346,
               "penalty_shootout": {
-                "probability": 0.3390970935147948,
-                "home_win_if_shootout": 0.6255822083333333,
-                "away_win_if_shootout": 0.37441779166666667
+                "probability": 0.3298496697024494,
+                "home_win_if_shootout": 0.5616325958333332,
+                "away_win_if_shootout": 0.43836740416666675
               },
-              "upset_risk": "low",
-              "confidence_margin": 0.2329711407684147,
-              "player_impact": 0.0126,
-              "team_stat_impact": -0.0048,
-              "goal_timing_impact": -0.0033,
-              "time_series_impact": 0.0235,
+              "upset_risk": "medium",
+              "confidence_margin": 0.1084283654078132,
+              "player_impact": 0.005,
+              "team_stat_impact": -0.021,
+              "goal_timing_impact": -0.0037,
+              "time_series_impact": 0.1,
               "scenario": {
                 "id": "B",
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:17:43.574337Z"
             },
             {
               "match_id": "KO-098",
@@ -10563,7 +10534,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:17:43.574337Z"
             },
             {
               "match_id": "KO-099",
@@ -10590,7 +10561,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:17:43.574337Z"
             },
             {
               "match_id": "KO-100",
@@ -10617,7 +10588,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:17:43.574337Z"
             }
           ]
         },
@@ -10649,7 +10620,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.517803Z"
+              "generated_at_utc": "2026-06-30T20:17:43.630079Z"
             },
             {
               "match_id": "KO-102",
@@ -10676,7 +10647,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.517803Z"
+              "generated_at_utc": "2026-06-30T20:17:43.630079Z"
             }
           ]
         },
@@ -10708,7 +10679,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-15T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.547006Z"
+              "generated_at_utc": "2026-06-30T20:17:43.645310Z"
             }
           ]
         }
@@ -10718,11 +10689,11 @@
       "scenario_id": "C",
       "arabic_name": "المسار ج: جنون الاحتمالات",
       "description": "يعظم أثر الفراشة: ركلات الترجيح، اللاعب الحاسم، الزخم المتأخر، اتجاه السلسلة الزمنية، والمفاجآت القريبة.",
-      "estimated_accuracy": 0.5452367610769009,
+      "estimated_accuracy": 0.5360800337986811,
       "confidence_grade": "تجريبية",
-      "high_risk_matches": 12,
-      "average_confidence_margin": 0.3068491333072073,
-      "average_penalty_probability": 0.4172938334589129,
+      "high_risk_matches": 13,
+      "average_confidence_margin": 0.2878624509769773,
+      "average_penalty_probability": 0.41698871829711265,
       "champion": "Brazil",
       "final": {
         "match_id": "KO-103",
@@ -10749,7 +10720,7 @@
           "arabic_name": "المسار ج: جنون الاحتمالات"
         },
         "kickoff_utc": "2026-07-15T19:00:00Z",
-        "generated_at_utc": "2026-06-30T20:31:06.926676Z"
+        "generated_at_utc": "2026-06-30T20:17:44.006348Z"
       },
       "rounds": [
         {
@@ -10761,7 +10732,7 @@
               "home_team": "South Africa",
               "away_team": "Canada",
               "winner": "Canada",
-              "winner_method": "direct",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.1763386787100768,
               "away_advance_probability": 0.8236613212899232,
               "penalty_shootout": {
@@ -10780,9 +10751,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-06-28T17:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Canada"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-074",
@@ -10790,7 +10759,7 @@
               "home_team": "Brazil",
               "away_team": "Japan",
               "winner": "Brazil",
-              "winner_method": "penalties",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.7842153383951482,
               "away_advance_probability": 0.21578466160485177,
               "penalty_shootout": {
@@ -10809,17 +10778,15 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-06-28T20:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Brazil"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-075",
               "round": "Round of 32",
               "home_team": "Germany",
               "away_team": "Paraguay",
-              "winner": "Paraguay",
-              "winner_method": "penalties",
+              "winner": "Germany",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.8288107075725897,
               "away_advance_probability": 0.17118929242741038,
               "penalty_shootout": {
@@ -10838,9 +10805,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-06-29T17:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Germany"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-076",
@@ -10848,7 +10813,7 @@
               "home_team": "Netherlands",
               "away_team": "Morocco",
               "winner": "Morocco",
-              "winner_method": "penalties",
+              "winner_method": "direct_or_extra_time",
               "home_advance_probability": 0.48064694919245976,
               "away_advance_probability": 0.5193530508075401,
               "penalty_shootout": {
@@ -10867,9 +10832,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-06-29T20:00:00Z",
-              "generated_at_utc": "2026-06-28T10:00:00Z",
-              "actual_result_locked": true,
-              "predicted_winner_before_actual": "Morocco"
+              "generated_at_utc": "2026-06-28T10:00:00Z"
             },
             {
               "match_id": "KO-077",
@@ -11225,34 +11188,34 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-06T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-090",
               "round": "Round of 16",
-              "home_team": "Paraguay",
+              "home_team": "Germany",
               "away_team": "Morocco",
               "winner": "Morocco",
               "winner_method": "direct_or_extra_time",
-              "home_advance_probability": 0.17680446394541013,
-              "away_advance_probability": 0.8231955360545898,
+              "home_advance_probability": 0.47109804006397543,
+              "away_advance_probability": 0.5289019599360246,
               "penalty_shootout": {
-                "probability": 0.4091458711433472,
-                "home_win_if_shootout": 0.33,
-                "away_win_if_shootout": 0.6699999999999999
+                "probability": 0.39968730112754003,
+                "home_win_if_shootout": 0.5659134575,
+                "away_win_if_shootout": 0.4340865425
               },
-              "upset_risk": "low",
-              "confidence_margin": 0.6463910721091797,
-              "player_impact": -0.0933,
-              "team_stat_impact": -0.0693,
-              "goal_timing_impact": -0.0143,
+              "upset_risk": "high",
+              "confidence_margin": 0.05780391987204919,
+              "player_impact": 0.0107,
+              "team_stat_impact": 0.0191,
+              "goal_timing_impact": 0.0005,
               "time_series_impact": -0.1,
               "scenario": {
                 "id": "C",
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-07T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-091",
@@ -11279,7 +11242,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-08T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-092",
@@ -11306,7 +11269,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-093",
@@ -11333,7 +11296,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-094",
@@ -11360,7 +11323,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-095",
@@ -11387,7 +11350,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             },
             {
               "match_id": "KO-096",
@@ -11414,7 +11377,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:17:43.854084Z"
             }
           ]
         },
@@ -11446,7 +11409,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:17:43.936553Z"
             },
             {
               "match_id": "KO-098",
@@ -11473,7 +11436,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:17:43.936553Z"
             },
             {
               "match_id": "KO-099",
@@ -11500,7 +11463,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:17:43.936553Z"
             },
             {
               "match_id": "KO-100",
@@ -11527,7 +11490,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:17:43.936553Z"
             }
           ]
         },
@@ -11559,7 +11522,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.902362Z"
+              "generated_at_utc": "2026-06-30T20:17:43.978142Z"
             },
             {
               "match_id": "KO-102",
@@ -11586,7 +11549,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.902362Z"
+              "generated_at_utc": "2026-06-30T20:17:43.978142Z"
             }
           ]
         },
@@ -11618,7 +11581,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-15T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.926676Z"
+              "generated_at_utc": "2026-06-30T20:17:44.006348Z"
             }
           ]
         }

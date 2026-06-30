@@ -5,7 +5,7 @@ import json
 import unittest
 from pathlib import Path
 
-from predict_knockout_bracket import _shrink_two_way
+from predict_knockout_bracket import _apply_actual_winner_lock, _shrink_two_way
 from evolve_after_results import _actual_id_for_match, _actual_knockout_outcome
 from forecast_ledger import load_latest_pre_match_knockout_predictions
 
@@ -65,6 +65,21 @@ class KnockoutLayerTest(unittest.TestCase):
         home, away = _shrink_two_way(0.70, 0.20, 0.08, 0.14)
         self.assertLess(abs(home + away - 1.0), 1e-9)
         self.assertGreaterEqual(min(home, away), 0.14)
+
+    def test_completed_knockout_result_overrides_projected_winner(self) -> None:
+        prediction = {
+            "match_id": "KO-076",
+            "home_team": "Netherlands",
+            "away_team": "Morocco",
+            "winner": "Netherlands",
+            "winner_method": "direct_or_extra_time",
+            "key_factors": [],
+        }
+        locked = _apply_actual_winner_lock(prediction, {"winner": "Morocco", "method": "penalties"})
+        self.assertEqual(locked["winner"], "Morocco")
+        self.assertEqual(locked["winner_method"], "penalties")
+        self.assertTrue(locked["actual_result_locked"])
+        self.assertEqual(locked["predicted_winner_before_actual"], "Netherlands")
 
     def test_knockout_prediction_shape_if_present(self) -> None:
         path = ROOT / "outputs" / "knockout_bracket_prediction.json"

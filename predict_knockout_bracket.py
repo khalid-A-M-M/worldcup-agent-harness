@@ -73,7 +73,8 @@ def main() -> None:
     equation = _load_equation_learning()
     time_series = _load_time_series_forecast()
     fixtures = _read_csv(DATA / "knockout_fixtures.csv")
-    scenarios = [_project_scenario(fixtures, learning, equation, time_series, scenario) for scenario in SCENARIOS]
+    actual_winners = _load_knockout_actual_winners()
+    scenarios = [_project_scenario(fixtures, learning, equation, time_series, scenario, actual_winners) for scenario in SCENARIOS]
     official = next(item for item in scenarios if item["scenario_id"] == "B")
     rounds = official["rounds"]
     champion = official["champion"]
@@ -103,7 +104,8 @@ def main() -> None:
     print(f"Projected 3 knockout paths through final. Official champion={champion}")
 
 
-def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], equation: dict[str, Any], time_series: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
+def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], equation: dict[str, Any], time_series: dict[str, Any], scenario: dict[str, Any], actual_winners: dict[str, dict[str, str]] | None = None) -> dict[str, Any]:
+    actual_winners = actual_winners or {}
     rounds: list[dict[str, Any]] = []
     current = [_fixture_to_match(row) for row in fixtures]
     round_index = 0
@@ -115,6 +117,7 @@ def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], 
         winners = []
         for fixture in current:
             prediction = _predict_knockout_match(fixture, round_name, learning, equation, time_series, scenario)
+            prediction = _apply_actual_winner_lock(prediction, actual_winners.get(fixture.get("match_id", "")) or actual_winners.get(fixture.get("source_actual_match_id", "")))
             matches.append(prediction)
             winners.append(prediction["winner"])
         rounds.append({"round": round_name, "matches": matches})
@@ -194,6 +197,8 @@ def _compact_match_for_scenario(match: dict[str, Any]) -> dict[str, Any]:
         "scenario",
         "kickoff_utc",
         "generated_at_utc",
+        "actual_result_locked",
+        "predicted_winner_before_actual",
     ]
     return {key: match.get(key) for key in keys if key in match}
 
@@ -224,6 +229,37 @@ def _load_learning() -> dict[str, Any]:
 def _read_csv(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
+
+
+def _load_knockout_actual_winners() -> dict[str, dict[str, str]]:
+    path = DATA / "knockout_actual_winners.csv"
+    if not path.exists():
+        return {}
+    winners: dict[str, dict[str, str]] = {}
+    for row in _read_csv(path):
+        if row.get("match_id"):
+            winners[row["match_id"]] = row
+        if row.get("source_actual_match_id"):
+            winners[row["source_actual_match_id"]] = row
+    return winners
+
+
+def _apply_actual_winner_lock(prediction: dict[str, Any], winner_row: dict[str, str] | None) -> dict[str, Any]:
+    if not winner_row or not winner_row.get("winner"):
+        return prediction
+    actual_winner = winner_row["winner"]
+    if actual_winner not in {prediction.get("home_team"), prediction.get("away_team")}:
+        return prediction
+    original_winner = prediction.get("winner")
+    prediction = dict(prediction)
+    prediction["winner"] = actual_winner
+    prediction["winner_method"] = winner_row.get("method") or prediction.get("winner_method")
+    prediction["actual_result_locked"] = True
+    prediction["predicted_winner_before_actual"] = original_winner
+    prediction["key_factors"] = list(prediction.get("key_factors", [])) + [
+        f"Actual completed result lock: {actual_winner} advanced via {prediction['winner_method']}."
+    ]
+    return prediction
 
 
 def _fixture_to_match(row: dict[str, str]) -> dict[str, str]:

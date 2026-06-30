@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-30T20:31:06.938066Z",
+  "generated_at_utc": "2026-06-30T20:30:34.164389Z",
   "method": "Agent Harness knockout simulator: three scenario paths + group-error learning + Dixon/economic blend + advanced stats + player-impact proxies + goal-timing layer + TimesFM-inspired time-series agent + penalty shootout model. No draw is allowed in knockout outputs.",
   "learning_summary": {
     "summary": {
@@ -5084,7 +5084,7 @@
           "match_id": "KO-089",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-06T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "Canada",
           "away_team": "Brazil",
           "winner": "Brazil",
@@ -5336,7 +5336,7 @@
           "match_id": "KO-090",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-07T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "Paraguay",
           "away_team": "Morocco",
           "winner": "Morocco",
@@ -5591,7 +5591,7 @@
           "match_id": "KO-091",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-08T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "Ivory Coast",
           "away_team": "France",
           "winner": "France",
@@ -5843,7 +5843,7 @@
           "match_id": "KO-092",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-09T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "USA",
           "away_team": "Egypt",
           "winner": "USA",
@@ -6095,7 +6095,7 @@
           "match_id": "KO-093",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-10T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "Argentina",
           "away_team": "Spain",
           "winner": "Spain",
@@ -6350,7 +6350,7 @@
           "match_id": "KO-094",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-11T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "Belgium",
           "away_team": "Colombia",
           "winner": "Colombia",
@@ -6605,7 +6605,7 @@
           "match_id": "KO-095",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-12T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "England",
           "away_team": "Mexico",
           "winner": "England",
@@ -6857,7 +6857,7 @@
           "match_id": "KO-096",
           "round": "Round of 16",
           "kickoff_utc": "2026-07-13T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.413789Z",
+          "generated_at_utc": "2026-06-30T20:30:33.236802Z",
           "home_team": "Portugal",
           "away_team": "Switzerland",
           "winner": "Portugal",
@@ -7114,7 +7114,7 @@
           "match_id": "KO-097",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-09T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:30:33.387353Z",
           "home_team": "Brazil",
           "away_team": "Morocco",
           "winner": "Brazil",
@@ -7366,7 +7366,7 @@
           "match_id": "KO-098",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-10T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:30:33.387353Z",
           "home_team": "France",
           "away_team": "USA",
           "winner": "France",
@@ -7618,7 +7618,7 @@
           "match_id": "KO-099",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-11T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:30:33.387353Z",
           "home_team": "Spain",
           "away_team": "Colombia",
           "winner": "Spain",
@@ -7870,7 +7870,7 @@
           "match_id": "KO-100",
           "round": "Quarterfinals",
           "kickoff_utc": "2026-07-12T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.480268Z",
+          "generated_at_utc": "2026-06-30T20:30:33.387353Z",
           "home_team": "England",
           "away_team": "Portugal",
           "winner": "England",
@@ -8129,7 +8129,7 @@
           "match_id": "KO-101",
           "round": "Semifinals",
           "kickoff_utc": "2026-07-12T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.517803Z",
+          "generated_at_utc": "2026-06-30T20:30:33.458174Z",
           "home_team": "Brazil",
           "away_team": "France",
           "winner": "France",
@@ -8383,7 +8383,7 @@
           "match_id": "KO-102",
           "round": "Semifinals",
           "kickoff_utc": "2026-07-13T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.517803Z",
+          "generated_at_utc": "2026-06-30T20:30:33.458174Z",
           "home_team": "Spain",
           "away_team": "England",
           "winner": "Spain",
@@ -8640,7 +8640,7 @@
           "match_id": "KO-103",
           "round": "Final",
           "kickoff_utc": "2026-07-15T19:00:00Z",
-          "generated_at_utc": "2026-06-30T20:31:06.547006Z",
+          "generated_at_utc": "2026-06-30T20:30:33.503128Z",
           "home_team": "France",
           "away_team": "Spain",
           "winner": "Spain",
@@ -8929,7 +8929,7 @@
           "arabic_name": "المسار أ: العقل البارد"
         },
         "kickoff_utc": "2026-07-15T19:00:00Z",
-        "generated_at_utc": "2026-06-30T20:31:06.260662Z"
+        "generated_at_utc": "2026-06-30T20:30:32.984841Z"
       },
       "rounds": [
         {
@@ -9405,7 +9405,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-06T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-090",
@@ -9432,7 +9432,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-07T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-091",
@@ -9459,7 +9459,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-08T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-092",
@@ -9486,7 +9486,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-093",
@@ -9513,7 +9513,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-094",
@@ -9540,7 +9540,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-095",
@@ -9567,7 +9567,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             },
             {
               "match_id": "KO-096",
@@ -9594,7 +9594,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.131833Z"
+              "generated_at_utc": "2026-06-30T20:30:32.770871Z"
             }
           ]
         },
@@ -9626,7 +9626,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:30:32.885263Z"
             },
             {
               "match_id": "KO-098",
@@ -9653,7 +9653,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:30:32.885263Z"
             },
             {
               "match_id": "KO-099",
@@ -9680,7 +9680,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:30:32.885263Z"
             },
             {
               "match_id": "KO-100",
@@ -9707,7 +9707,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.194044Z"
+              "generated_at_utc": "2026-06-30T20:30:32.885263Z"
             }
           ]
         },
@@ -9739,7 +9739,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.243948Z"
+              "generated_at_utc": "2026-06-30T20:30:32.943887Z"
             },
             {
               "match_id": "KO-102",
@@ -9766,7 +9766,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.243948Z"
+              "generated_at_utc": "2026-06-30T20:30:32.943887Z"
             }
           ]
         },
@@ -9798,7 +9798,7 @@
                 "arabic_name": "المسار أ: العقل البارد"
               },
               "kickoff_utc": "2026-07-15T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.260662Z"
+              "generated_at_utc": "2026-06-30T20:30:32.984841Z"
             }
           ]
         }
@@ -9839,7 +9839,7 @@
           "arabic_name": "المسار ب: النموذج المتوازن"
         },
         "kickoff_utc": "2026-07-15T19:00:00Z",
-        "generated_at_utc": "2026-06-30T20:31:06.547006Z"
+        "generated_at_utc": "2026-06-30T20:30:33.503128Z"
       },
       "rounds": [
         {
@@ -10315,7 +10315,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-06T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-090",
@@ -10342,7 +10342,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-07T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-091",
@@ -10369,7 +10369,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-08T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-092",
@@ -10396,7 +10396,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-093",
@@ -10423,7 +10423,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-094",
@@ -10450,7 +10450,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-095",
@@ -10477,7 +10477,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             },
             {
               "match_id": "KO-096",
@@ -10504,7 +10504,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.413789Z"
+              "generated_at_utc": "2026-06-30T20:30:33.236802Z"
             }
           ]
         },
@@ -10536,7 +10536,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:30:33.387353Z"
             },
             {
               "match_id": "KO-098",
@@ -10563,7 +10563,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:30:33.387353Z"
             },
             {
               "match_id": "KO-099",
@@ -10590,7 +10590,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:30:33.387353Z"
             },
             {
               "match_id": "KO-100",
@@ -10617,7 +10617,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.480268Z"
+              "generated_at_utc": "2026-06-30T20:30:33.387353Z"
             }
           ]
         },
@@ -10649,7 +10649,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.517803Z"
+              "generated_at_utc": "2026-06-30T20:30:33.458174Z"
             },
             {
               "match_id": "KO-102",
@@ -10676,7 +10676,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.517803Z"
+              "generated_at_utc": "2026-06-30T20:30:33.458174Z"
             }
           ]
         },
@@ -10708,7 +10708,7 @@
                 "arabic_name": "المسار ب: النموذج المتوازن"
               },
               "kickoff_utc": "2026-07-15T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.547006Z"
+              "generated_at_utc": "2026-06-30T20:30:33.503128Z"
             }
           ]
         }
@@ -10749,7 +10749,7 @@
           "arabic_name": "المسار ج: جنون الاحتمالات"
         },
         "kickoff_utc": "2026-07-15T19:00:00Z",
-        "generated_at_utc": "2026-06-30T20:31:06.926676Z"
+        "generated_at_utc": "2026-06-30T20:30:34.127700Z"
       },
       "rounds": [
         {
@@ -11225,7 +11225,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-06T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-090",
@@ -11252,7 +11252,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-07T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-091",
@@ -11279,7 +11279,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-08T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-092",
@@ -11306,7 +11306,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-093",
@@ -11333,7 +11333,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-094",
@@ -11360,7 +11360,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-095",
@@ -11387,7 +11387,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             },
             {
               "match_id": "KO-096",
@@ -11414,7 +11414,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.755055Z"
+              "generated_at_utc": "2026-06-30T20:30:33.747515Z"
             }
           ]
         },
@@ -11446,7 +11446,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-09T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:30:33.928977Z"
             },
             {
               "match_id": "KO-098",
@@ -11473,7 +11473,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-10T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:30:33.928977Z"
             },
             {
               "match_id": "KO-099",
@@ -11500,7 +11500,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-11T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:30:33.928977Z"
             },
             {
               "match_id": "KO-100",
@@ -11527,7 +11527,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.863040Z"
+              "generated_at_utc": "2026-06-30T20:30:33.928977Z"
             }
           ]
         },
@@ -11559,7 +11559,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-12T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.902362Z"
+              "generated_at_utc": "2026-06-30T20:30:34.042509Z"
             },
             {
               "match_id": "KO-102",
@@ -11586,7 +11586,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-13T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.902362Z"
+              "generated_at_utc": "2026-06-30T20:30:34.042509Z"
             }
           ]
         },
@@ -11618,7 +11618,7 @@
                 "arabic_name": "المسار ج: جنون الاحتمالات"
               },
               "kickoff_utc": "2026-07-15T19:00:00Z",
-              "generated_at_utc": "2026-06-30T20:31:06.926676Z"
+              "generated_at_utc": "2026-06-30T20:30:34.127700Z"
             }
           ]
         }
