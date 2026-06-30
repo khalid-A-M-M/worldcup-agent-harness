@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from predict_knockout_bracket import _shrink_two_way
-from evolve_after_results import _actual_id_for_match
+from evolve_after_results import _actual_id_for_match, _actual_knockout_outcome
 from forecast_ledger import load_latest_pre_match_knockout_predictions
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,6 +23,14 @@ class KnockoutLayerTest(unittest.TestCase):
         actuals = {"WC-073": {"home_goals": 0, "away_goals": 1}}
         self.assertEqual(_actual_id_for_match("KO-073", actuals), "WC-073")
 
+
+
+    def test_knockout_draw_uses_penalty_winner(self) -> None:
+        actual = _actual_knockout_outcome(1, 1, "Germany", "Paraguay", {"winner": "Paraguay"})
+        self.assertEqual(actual, "away_win")
+
+    def test_knockout_draw_without_winner_is_not_scored(self) -> None:
+        self.assertIsNone(_actual_knockout_outcome(1, 1, "Germany", "Paraguay"))
 
     def test_knockout_pre_match_snapshot_uses_generated_time(self) -> None:
         from unittest.mock import patch

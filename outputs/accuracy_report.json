@@ -3,13 +3,13 @@
   "update_policy": "GitHub Actions checks every 20 minutes; completed matches are refreshed after kickoff + 110 minutes, which approximates 20 minutes after full time for open sources to publish results and stats.",
   "metrics": {
     "completed_forecasts": 32,
-    "accuracy": 0.625,
-    "mean_brier_score": 0.5227604989674337,
-    "mean_log_loss": 1.1679314202309659,
+    "accuracy": 0.59375,
+    "mean_brier_score": 0.5686783986276035,
+    "mean_log_loss": 1.226608588374241,
     "group_completed_forecasts": 28,
     "knockout_completed_forecasts": 4,
-    "correct": 20,
-    "missed": 12
+    "correct": 19,
+    "missed": 13
   },
   "matches": [
     {
@@ -560,11 +560,11 @@
       "home_team": "Germany",
       "away_team": "Paraguay",
       "predicted": "home_win",
-      "actual": "home_win",
-      "correct": true,
-      "probability_actual": 0.8673431972813586,
-      "brier_score": 0.03519565461506511,
-      "log_loss": 0.14232053591222854,
+      "actual": "away_win",
+      "correct": false,
+      "probability_actual": 0.13265680271864144,
+      "brier_score": 1.5045684437404994,
+      "log_loss": 2.019989916497033,
       "calibration_version": null,
       "forecast_created_at": "20260629T132328Z",
       "kickoff_utc": "2026-06-29T17:00:00Z",
@@ -589,5 +589,5 @@
       "model_family": "Agent Harness knockout path model"
     }
   ],
-  "snapshot": "/home/runner/work/worldcup-agent-harness/worldcup-agent-harness/outputs/model_versions/v111_20260630T170758Z"
+  "snapshot": "outputs/model_versions/v103_20260630T180742Z"
 }

@@ -728,12 +728,12 @@
     }
     .bracket-board {
       direction: ltr;
-      width: min(100%, 1380px);
-      min-width: 1180px;
+      width: min(100%, 1720px);
+      min-width: 1580px;
       margin-inline: auto;
       display: grid;
-      grid-template-columns: 148px 138px 132px 128px 154px 128px 132px 138px 148px;
-      gap: 10px;
+      grid-template-columns: 214px 190px 174px 160px 206px 160px 174px 190px 214px;
+      gap: 14px;
       align-items: stretch;
     }
     .bracket-column {
@@ -796,40 +796,54 @@
       z-index: 1;
       direction: rtl;
       display: grid;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      gap: 6px;
+      grid-template-columns: 42px minmax(0, 1fr) 42px;
+      gap: 9px;
       align-items: center;
-      padding: 6px;
+      padding: 8px;
       border-radius: 9px;
       color: rgba(255,255,255,.82);
-      font-size: 11.5px;
+      font-size: 12.5px;
       min-width: 0;
     }
     .team-flag {
       direction: ltr;
-      width: 24px;
-      height: 24px;
+      width: 42px;
+      height: 30px;
       display: inline-grid;
       place-items: center;
-      border-radius: 50%;
+      border-radius: 5px;
       background: rgba(255,255,255,.96);
       border: 1px solid rgba(255,255,255,.78);
       box-shadow: 0 4px 10px rgba(0,0,0,.30);
-      font-size: 16px;
-      line-height: 1;
+      overflow: hidden;
       flex: 0 0 auto;
+    }
+    .team-flag img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .flag-fallback {
+      color: #10201c;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0;
     }
     .bracket-team .team-name {
       min-width: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      line-height: 1.15;
+      line-height: 1.22;
       font-weight: 900;
+      word-break: normal;
+      overflow-wrap: normal;
+      display: block;
     }
     .bracket-team b {
       direction: ltr;
-      min-width: 34px;
+      min-width: 42px;
       text-align: left;
       font-size: 10.5px;
       color: rgba(255,255,255,.78);
@@ -871,8 +885,64 @@
       .scenario-tabs { grid-template-columns: 1fr; }
       .bracket-shell { padding: 12px; }
       .bracket-head h2 { font-size: 21px; }
-      .bracket-board { min-width: 1180px; }
+      .bracket-board { min-width: 1580px; }
     }
+
+    .completed-path {
+      margin-bottom: 16px;
+      border-color: rgba(214,168,73,.28);
+    }
+    .completed-path-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .completed-path-card {
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 20%, transparent), transparent 60%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 20%, transparent), transparent 60%),
+        rgba(4,16,15,.82);
+      padding: 12px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+    }
+    .completed-path-card:hover {
+      transform: translateY(-1px);
+      border-color: rgba(244,205,116,.50);
+    }
+    .completed-path-teams {
+      display: grid;
+      gap: 7px;
+      margin: 10px 0;
+    }
+    .completed-path-row {
+      direction: rtl;
+      display: grid;
+      grid-template-columns: 42px 1fr auto;
+      gap: 9px;
+      align-items: center;
+      min-width: 0;
+    }
+    .completed-path-row strong {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .path-status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .path-status.correct { color: #86efac; background: rgba(34,197,94,.14); border: 1px solid rgba(34,197,94,.30); }
+    .path-status.missed { color: #fecaca; background: rgba(239,68,68,.14); border: 1px solid rgba(239,68,68,.30); }
+
     .group-card, .pairing-card {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -1037,8 +1107,27 @@
       "Cura\u00e7ao": "\u{1F1E8}\u{1F1FC}", "Curacao": "\u{1F1E8}\u{1F1FC}"
     };
 
+    const teamFlagCodes = {
+      "France": "fr", "Argentina": "ar", "Spain": "es", "England": "gb-eng", "Brazil": "br",
+      "Portugal": "pt", "Netherlands": "nl", "Belgium": "be", "Germany": "de", "Croatia": "hr",
+      "Uruguay": "uy", "Colombia": "co", "USA": "us", "Switzerland": "ch", "Morocco": "ma",
+      "Mexico": "mx", "Japan": "jp", "Sweden": "se", "Senegal": "sn", "Ghana": "gh",
+      "Egypt": "eg", "Australia": "au", "Canada": "ca", "Paraguay": "py", "Ecuador": "ec",
+      "Ivory Coast": "ci", "South Africa": "za", "Bosnia & Herzegovina": "ba", "Austria": "at", "Norway": "no",
+      "DR Congo": "cd", "Congo DR": "cd", "Cape Verde": "cv", "Qatar": "qa", "Turkey": "tr",
+      "Scotland": "gb-sct", "Czech Republic": "cz", "South Korea": "kr", "Jordan": "jo", "Haiti": "ht",
+      "Cura\u00e7ao": "cw", "Curacao": "cw"
+    };
+
     function flagFor(team) {
       return teamFlags[team] || "\u26BD";
+    }
+
+    function flagMarkup(team) {
+      const code = teamFlagCodes[team];
+      const label = flagFor(team);
+      if (!code) return `<span class="flag-fallback">${label}</span>`;
+      return `<img src="https://flagcdn.com/w80/${code}.png" alt="${team}" loading="lazy" onerror="this.replaceWith(document.createTextNode('${label}'))">`;
     }
 
     function visual(team) {
@@ -1527,7 +1616,7 @@
       const isWinner = match.winner === team;
       return `
         <div class="bracket-team ${isWinner ? "winner" : ""}">
-          <span class="team-flag" title="${info.arabic_name}">${flagFor(team)}</span>
+          <span class="team-flag" title="${info.arabic_name}">${flagMarkup(team)}</span>
           <strong class="team-name" title="${info.arabic_name}" style="color:${isWinner ? info.primary_color : "rgba(255,255,255,.90)"}">${info.arabic_name}</strong>
           <b>${pct(bracketProbability(match, team))}</b>
         </div>`;
@@ -1862,12 +1951,44 @@
       `;
     }
 
+
+    function renderCompletedKnockoutPath(matches) {
+      const knockoutRows = matches.filter(row => row.stage === "knockout");
+      if (!knockoutRows.length) return "";
+      const outcomeLabel = (row, outcome) => knockoutOutcomeText(row, outcome);
+      return `
+        <article class="pairing-card completed-path">
+          <h2>\u0645\u0633\u0627\u0631 \u0627\u0644\u0645\u0628\u0627\u0631\u064a\u0627\u062a \u0627\u0644\u0625\u0642\u0635\u0627\u0626\u064a\u0629 \u0627\u0644\u0645\u0643\u062a\u0645\u0644\u0629</h2>
+          <p class="note">\u0643\u0644 \u0628\u0637\u0627\u0642\u0629 \u0647\u0646\u0627 \u0647\u064a \u0645\u0628\u0627\u0631\u0627\u0629 \u0627\u0646\u062a\u0647\u062a \u0641\u0639\u0644\u064a\u0627\u064b: \u0627\u0644\u0623\u062e\u0636\u0631 \u062a\u0648\u0642\u0639 \u0635\u062d\u064a\u062d\u060c \u0648\u0627\u0644\u0623\u062d\u0645\u0631 \u062a\u0648\u0642\u0639 \u062e\u0627\u0637\u0626. \u0627\u0636\u063a\u0637 \u0639\u0644\u0649 \u0623\u064a \u0645\u0628\u0627\u0631\u0627\u0629 \u0644\u0641\u062a\u062d \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644.</p>
+          <div class="completed-path-grid">
+            ${knockoutRows.map(row => {
+              const teamA = visual(row.home_team);
+              const teamB = visual(row.away_team);
+              const statusClass = row.correct ? "correct" : "missed";
+              const statusText = row.correct ? "\u0635\u062d" : "\u062e\u0637\u0623";
+              const matchId = row.match_id || row.source_actual_match_id;
+              return `
+                <section class="completed-path-card" data-knockout-match-id="${matchId}" style="--home-color:${teamA.primary_color};--away-color:${teamB.primary_color}">
+                  <span class="path-status ${statusClass}">${statusText}</span>
+                  <div class="completed-path-teams">
+                    <div class="completed-path-row"><span class="team-flag">${flagMarkup(row.home_team)}</span><strong title="${teamA.arabic_name}">${teamA.arabic_name}</strong><b>${row.predicted === "home_win" ? "\u062a\u0648\u0642\u0639" : ""}</b></div>
+                    <div class="completed-path-row"><span class="team-flag">${flagMarkup(row.away_team)}</span><strong title="${teamB.arabic_name}">${teamB.arabic_name}</strong><b>${row.predicted === "away_win" ? "\u062a\u0648\u0642\u0639" : ""}</b></div>
+                  </div>
+                  <p class="note">\u0627\u0644\u062a\u0648\u0642\u0639: ${outcomeLabel(row, row.predicted)} \u00b7 \u0627\u0644\u0641\u0639\u0644\u064a: ${outcomeLabel(row, row.actual)}</p>
+                  <p class="note">Brier ${Number(row.brier_score || 0).toFixed(3)} \u00b7 LogLoss ${Number(row.log_loss || 0).toFixed(3)}</p>
+                </section>`;
+            }).join("")}
+          </div>
+        </article>`;
+    }
+
     function renderCompletedMatches() {
       const matches = accuracyReport?.matches || [];
       if (!matches.length) {
         return `<article class="group-card"><h2>لا توجد مباريات مكتملة بعد</h2><p class="note">عند انتهاء مباراة وتشغيل وكيل المراقبة ستظهر هنا.</p></article>`;
       }
-      return matches.map(row => {
+      const completedPath = renderCompletedKnockoutPath(matches);
+      return completedPath + matches.map(row => {
         const isCorrect = row.correct;
         const teamA = visual(row.home_team);
         const teamB = visual(row.away_team);
@@ -1989,6 +2110,13 @@
       const button = event.target.closest("button[data-scenario-id]");
       if (!button) return;
       window.showKnockoutScenario(button.dataset.scenarioId);
+    });
+
+
+    document.getElementById("completed").addEventListener("click", event => {
+      const matchCard = event.target.closest(".completed-path-card[data-knockout-match-id]");
+      if (!matchCard) return;
+      openKnockoutDetails(matchCard.dataset.knockoutMatchId);
     });
 
     async function refreshDashboard(cacheBust = false) {

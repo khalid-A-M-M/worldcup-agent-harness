@@ -22,9 +22,10 @@ SYSTEM_START_UTC = "2026-06-23T00:00:00Z"
 
 def main() -> None:
     actuals = _load_actuals()
+    knockout_winners = _load_knockout_actual_winners()
     scored = []
     scored.extend(_score_group_forecasts(actuals))
-    scored.extend(_score_knockout_forecasts(actuals))
+    scored.extend(_score_knockout_forecasts(actuals, knockout_winners))
     scored.sort(key=lambda row: (row.get("kickoff_utc", ""), row.get("match_id", "")))
 
     metrics = _aggregate_metrics(scored)
@@ -34,7 +35,7 @@ def main() -> None:
     CALIBRATION.write_text(json.dumps(updated, ensure_ascii=False, indent=2), encoding="utf-8")
 
     (OUTPUTS / "accuracy_report.json").write_text(
-        json.dumps({"system_start_utc": SYSTEM_START_UTC, "update_policy": "GitHub Actions checks every 20 minutes; completed matches are refreshed after kickoff + 110 minutes, which approximates 20 minutes after full time for open sources to publish results and stats.", "metrics": metrics, "matches": scored, "snapshot": str(version_dir)}, ensure_ascii=False, indent=2),
+        json.dumps({"system_start_utc": SYSTEM_START_UTC, "update_policy": "GitHub Actions checks every 20 minutes; completed matches are refreshed after kickoff + 110 minutes, which approximates 20 minutes after full time for open sources to publish results and stats.", "metrics": metrics, "matches": scored, "snapshot": _relative_snapshot_path(version_dir)}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
     subprocess.run([sys.executable, str(ROOT / "learn_equation_parameters.py")], cwd=ROOT, check=True)
@@ -45,6 +46,13 @@ def main() -> None:
     print(f"Accuracy: {metrics['accuracy']:.3f}, Brier: {brier}, LogLoss: {log_loss}")
     print(f"Saved model snapshot: {version_dir}")
     print(f"New calibration version: {updated['version']}")
+
+
+def _relative_snapshot_path(path: Path) -> str:
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def _score_group_forecasts(actuals: dict[str, dict[str, int]]) -> list[dict]:
@@ -83,7 +91,7 @@ def _score_group_forecasts(actuals: dict[str, dict[str, int]]) -> list[dict]:
     return scored
 
 
-def _score_knockout_forecasts(actuals: dict[str, dict[str, int]]) -> list[dict]:
+def _score_knockout_forecasts(actuals: dict[str, dict[str, int]], knockout_winners: dict[str, dict[str, str]]) -> list[dict]:
     fixtures = _load_knockout_fixtures()
     predictions = load_latest_pre_match_knockout_predictions(fixtures)
     scored = []
@@ -91,9 +99,17 @@ def _score_knockout_forecasts(actuals: dict[str, dict[str, int]]) -> list[dict]:
         actual_id = _actual_id_for_match(match_id, actuals)
         if not actual_id:
             continue
-        actual = _actual_knockout_outcome(actuals[actual_id]["home_goals"], actuals[actual_id]["away_goals"])
         home_team = prediction.get("home_team", "")
         away_team = prediction.get("away_team", "")
+        actual = _actual_knockout_outcome(
+            actuals[actual_id]["home_goals"],
+            actuals[actual_id]["away_goals"],
+            home_team,
+            away_team,
+            knockout_winners.get(match_id) or knockout_winners.get(actual_id),
+        )
+        if actual is None:
+            continue
         probs = {
             "home_win": float(prediction.get("home_advance_probability") or 0.5),
             "away_win": float(prediction.get("away_advance_probability") or 0.5),
@@ -166,8 +182,34 @@ def _actual_id_for_match(match_id: str, actuals: dict[str, dict[str, int]]) -> s
     return None
 
 
-def _actual_knockout_outcome(home_goals: int, away_goals: int) -> str:
-    return "home_win" if home_goals >= away_goals else "away_win"
+def _actual_knockout_outcome(home_goals: int, away_goals: int, home_team: str, away_team: str, winner_row: dict[str, str] | None = None) -> str | None:
+    if winner_row and winner_row.get("winner"):
+        winner = winner_row["winner"]
+        if winner == home_team:
+            return "home_win"
+        if winner == away_team:
+            return "away_win"
+    if home_goals > away_goals:
+        return "home_win"
+    if home_goals < away_goals:
+        return "away_win"
+    return None
+
+
+
+
+def _load_knockout_actual_winners() -> dict[str, dict[str, str]]:
+    path = DATA / "knockout_actual_winners.csv"
+    if not path.exists():
+        return {}
+    winners: dict[str, dict[str, str]] = {}
+    with path.open("r", encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            if row.get("match_id"):
+                winners[row["match_id"]] = row
+            if row.get("source_actual_match_id"):
+                winners[row["source_actual_match_id"]] = row
+    return winners
 
 
 def _load_actuals() -> dict[str, dict[str, int]]:
