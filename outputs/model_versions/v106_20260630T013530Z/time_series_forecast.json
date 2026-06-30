@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-30T01:35:30.300068Z",
+  "generated_at_utc": "2026-06-29T23:29:59.898224Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -354,22 +354,22 @@
       ]
     },
     "Germany": {
-      "sample_size": 7,
-      "momentum_index": -1.5908,
+      "sample_size": 6,
+      "momentum_index": -2.959,
       "stat_trend_index": -5.7083,
-      "volatility_index": 5.237,
-      "time_series_edge": -0.1171,
-      "confidence": 0.6691,
-      "point_momentum": 0.8023,
-      "goal_difference_momentum": -0.2065,
-      "scoring_form": 1.1394,
-      "defensive_form": 1.3459,
+      "volatility_index": 6.4766,
+      "time_series_edge": -0.14,
+      "confidence": 0.5831,
+      "point_momentum": 0.5292,
+      "goal_difference_momentum": -0.4916,
+      "scoring_form": 1.332,
+      "defensive_form": 1.8236,
       "last_dates": [
+        "2026-06-14",
         "2026-06-20",
         "2026-06-20",
         "2026-06-25",
-        "2026-06-25",
-        "2026-06-29"
+        "2026-06-25"
       ]
     },
     "Ghana": {
@@ -620,22 +620,22 @@
       ]
     },
     "Paraguay": {
-      "sample_size": 7,
-      "momentum_index": -0.2839,
+      "sample_size": 6,
+      "momentum_index": 0.1525,
       "stat_trend_index": 0.0,
-      "volatility_index": 2.9562,
-      "time_series_edge": -0.0228,
-      "confidence": 0.6511,
-      "point_momentum": 1.109,
-      "goal_difference_momentum": 0.0218,
-      "scoring_form": 0.6541,
-      "defensive_form": 0.6323,
+      "volatility_index": 3.7393,
+      "time_series_edge": -0.0197,
+      "confidence": 0.5765,
+      "point_momentum": 1.2594,
+      "goal_difference_momentum": 0.0519,
+      "scoring_form": 0.1764,
+      "defensive_form": 0.1245,
       "last_dates": [
+        "2026-06-13",
         "2026-06-19",
         "2026-06-20",
         "2026-06-25",
-        "2026-06-26",
-        "2026-06-29"
+        "2026-06-26"
       ]
     },
     "Portugal": {

@@ -1,6 +1,6 @@
 {
-  "equation_version": 40,
-  "generated_at_utc": "2026-06-30T01:35:30.262964Z",
+  "equation_version": 38,
+  "generated_at_utc": "2026-06-29T23:29:59.860664Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -8,24 +8,24 @@
     "upset_floor": "base_upset_floor + upset_curve when favorite errors rise"
   },
   "coefficients": {
-    "favorite_temperature": 0.7870967741935484,
-    "home_bias_delta": 0.004354838709677419,
-    "draw_intercept": 0.012419354838709677,
-    "draw_temperature": 1.0858064516129031,
-    "stat_signal_gain": 1.3175,
-    "player_signal_gain": 0.9587096774193548,
-    "timing_signal_gain": 0.9135483870967742,
-    "penalty_logit_gain": 1.0329032258064517,
-    "upset_curve": 0.18516129032258066
+    "favorite_temperature": 0.78,
+    "home_bias_delta": 0.0045,
+    "draw_intercept": 0.012833333333333334,
+    "draw_temperature": 1.0886666666666667,
+    "stat_signal_gain": 1.3104347826086955,
+    "player_signal_gain": 0.9520000000000001,
+    "timing_signal_gain": 0.918,
+    "penalty_logit_gain": 1.0366666666666666,
+    "upset_curve": 0.188
   },
   "training_summary": {
-    "completed_matches": 31,
-    "correct": 19,
-    "accuracy": 0.6129032258064516,
+    "completed_matches": 30,
+    "correct": 18,
+    "accuracy": 0.6,
     "misses": 12,
-    "favorite_error_rate": 0.3870967741935484,
-    "draw_error_rate": 0.22580645161290322,
-    "stat_alignment": 0.7916666666666666,
+    "favorite_error_rate": 0.4,
+    "draw_error_rate": 0.23333333333333334,
+    "stat_alignment": 0.782608695652174,
     "home_miss_actuals": 4,
     "away_miss_actuals": 1
   },
