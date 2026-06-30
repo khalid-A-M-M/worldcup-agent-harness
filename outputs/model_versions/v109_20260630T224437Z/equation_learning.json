@@ -1,6 +1,6 @@
 {
-  "equation_version": 46,
-  "generated_at_utc": "2026-06-30T22:44:37.913888Z",
+  "equation_version": 44,
+  "generated_at_utc": "2026-06-30T21:09:32.761574Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -9,7 +9,7 @@
   },
   "coefficients": {
     "favorite_temperature": 0.75,
-    "home_bias_delta": 0.002727272727272727,
+    "home_bias_delta": 0.0,
     "draw_intercept": 0.011666666666666667,
     "draw_temperature": 1.0806060606060606,
     "stat_signal_gain": 1.3,
@@ -26,8 +26,8 @@
     "favorite_error_rate": 0.45454545454545453,
     "draw_error_rate": 0.21212121212121213,
     "stat_alignment": 0.7692307692307693,
-    "home_miss_actuals": 5,
-    "away_miss_actuals": 3
+    "home_miss_actuals": 4,
+    "away_miss_actuals": 4
   },
   "notes": [
     "هذه الطبقة تتعلم معاملات معادلة تصحيحية من أخطاء المباريات المكتملة بدلاً من الاكتفاء بتغيير أوزان عامة.",
