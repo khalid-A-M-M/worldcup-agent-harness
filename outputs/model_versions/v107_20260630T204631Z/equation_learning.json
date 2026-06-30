@@ -1,6 +1,6 @@
 {
-  "equation_version": 42,
-  "generated_at_utc": "2026-06-30T20:46:31.912317Z",
+  "equation_version": 40,
+  "generated_at_utc": "2026-06-30T20:30:32.062541Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -8,26 +8,26 @@
     "upset_floor": "base_upset_floor + upset_curve when favorite errors rise"
   },
   "coefficients": {
-    "favorite_temperature": 0.75,
-    "home_bias_delta": 0.0,
-    "draw_intercept": 0.011666666666666667,
-    "draw_temperature": 1.0806060606060606,
-    "stat_signal_gain": 1.3,
-    "player_signal_gain": 0.9236363636363636,
-    "timing_signal_gain": 0.9145454545454546,
-    "penalty_logit_gain": 1.0260606060606061,
-    "upset_curve": 0.2
+    "favorite_temperature": 0.7593749999999999,
+    "home_bias_delta": 0.00140625,
+    "draw_intercept": 0.01203125,
+    "draw_temperature": 1.083125,
+    "stat_signal_gain": 1.324,
+    "player_signal_gain": 0.9325,
+    "timing_signal_gain": 0.915625,
+    "penalty_logit_gain": 1.029375,
+    "upset_curve": 0.19625
   },
   "training_summary": {
-    "completed_matches": 33,
+    "completed_matches": 32,
     "correct": 18,
-    "accuracy": 0.5454545454545454,
-    "misses": 15,
-    "favorite_error_rate": 0.45454545454545453,
-    "draw_error_rate": 0.21212121212121213,
-    "stat_alignment": 0.7692307692307693,
+    "accuracy": 0.5625,
+    "misses": 14,
+    "favorite_error_rate": 0.4375,
+    "draw_error_rate": 0.21875,
+    "stat_alignment": 0.8,
     "home_miss_actuals": 4,
-    "away_miss_actuals": 4
+    "away_miss_actuals": 3
   },
   "notes": [
     "هذه الطبقة تتعلم معاملات معادلة تصحيحية من أخطاء المباريات المكتملة بدلاً من الاكتفاء بتغيير أوزان عامة.",
