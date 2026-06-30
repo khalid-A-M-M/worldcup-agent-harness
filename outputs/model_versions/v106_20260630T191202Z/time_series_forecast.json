@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-30T19:12:03.148277Z",
+  "generated_at_utc": "2026-06-30T19:00:30.589545Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -449,22 +449,22 @@
       ]
     },
     "Ivory Coast": {
-      "sample_size": 7,
-      "momentum_index": -0.2557,
+      "sample_size": 6,
+      "momentum_index": 6.9865,
       "stat_trend_index": -1.3641,
-      "volatility_index": 3.0236,
-      "time_series_edge": -0.0364,
-      "confidence": 0.7244,
-      "point_momentum": 1.0769,
-      "goal_difference_momentum": 0.0639,
-      "scoring_form": 1.3459,
-      "defensive_form": 1.282,
+      "volatility_index": 2.7439,
+      "time_series_edge": 0.0957,
+      "confidence": 0.6764,
+      "point_momentum": 2.5642,
+      "goal_difference_momentum": 1.533,
+      "scoring_form": 1.8236,
+      "defensive_form": 0.2906,
       "last_dates": [
+        "2026-06-14",
         "2026-06-20",
         "2026-06-20",
         "2026-06-25",
-        "2026-06-25",
-        "2026-06-30"
+        "2026-06-25"
       ]
     },
     "Japan": {
@@ -582,22 +582,22 @@
       ]
     },
     "Norway": {
-      "sample_size": 7,
-      "momentum_index": 0.8157,
+      "sample_size": 6,
+      "momentum_index": -7.3103,
       "stat_trend_index": -2.0396,
-      "volatility_index": 4.9193,
-      "time_series_edge": -0.0352,
-      "confidence": 0.652,
-      "point_momentum": 1.9623,
-      "goal_difference_momentum": -0.3575,
-      "scoring_form": 1.7412,
-      "defensive_form": 2.0988,
+      "volatility_index": 5.4878,
+      "time_series_edge": -0.14,
+      "confidence": 0.5828,
+      "point_momentum": 0.5292,
+      "goal_difference_momentum": -2.2322,
+      "scoring_form": 1.3839,
+      "defensive_form": 3.6161,
       "last_dates": [
+        "2026-06-16",
         "2026-06-22",
         "2026-06-23",
         "2026-06-26",
-        "2026-06-26",
-        "2026-06-30"
+        "2026-06-26"
       ]
     },
     "Panama": {
