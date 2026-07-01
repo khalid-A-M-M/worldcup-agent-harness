@@ -4,8 +4,8 @@
     "correct": 19,
     "missed": 15,
     "accuracy": 0.5588235294117647,
-    "mean_brier_score": 0.5585814894326356,
-    "mean_log_loss": 1.1866638809423715
+    "mean_brier_score": 0.558567541205199,
+    "mean_log_loss": 1.1866403148216462
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
