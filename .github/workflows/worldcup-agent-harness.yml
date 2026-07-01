@@ -35,6 +35,9 @@ jobs:
       - name: Run autonomous result/stat refresh and model evolution
         run: python update_worldcup_results.py
 
+      - name: Verify agent harness contract
+        run: python -m unittest discover -s tests -v
+
       - name: Mark dashboard as GitHub Pages friendly
         run: touch .nojekyll
 

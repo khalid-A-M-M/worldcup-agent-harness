@@ -25,6 +25,32 @@ OUTPUTS = ROOT / "outputs"
 
 ROUND_NAMES = ["Round of 32", "Round of 16", "Quarterfinals", "Semifinals", "Final"]
 
+
+VISUAL_R32_ORDER = [
+    "KO-074", "KO-077", "KO-086", "KO-085", "KO-081", "KO-080", "KO-088", "KO-084",
+    "KO-075", "KO-078", "KO-073", "KO-076", "KO-087", "KO-082", "KO-079", "KO-083",
+]
+
+# Fixed FIFA/beIN knockout path from the published route-to-final bracket. Do not
+# pair adjacent winners: the World Cup bracket is pre-wired.
+OFFICIAL_KNOCKOUT_PATH = [
+    {"match_id": "KO-089", "round": "Round of 16", "home_source": "KO-074", "away_source": "KO-077", "kickoff_utc": "2026-07-04T21:00:00Z", "bracket_slot": "L-R16-1"},
+    {"match_id": "KO-091", "round": "Round of 16", "home_source": "KO-086", "away_source": "KO-085", "kickoff_utc": "2026-07-06T00:00:00Z", "bracket_slot": "L-R16-2"},
+    {"match_id": "KO-093", "round": "Round of 16", "home_source": "KO-081", "away_source": "KO-080", "kickoff_utc": "2026-07-07T00:00:00Z", "bracket_slot": "L-R16-3"},
+    {"match_id": "KO-095", "round": "Round of 16", "home_source": "KO-088", "away_source": "KO-084", "kickoff_utc": "2026-07-07T16:00:00Z", "bracket_slot": "L-R16-4"},
+    {"match_id": "KO-090", "round": "Round of 16", "home_source": "KO-075", "away_source": "KO-078", "kickoff_utc": "2026-07-05T20:00:00Z", "bracket_slot": "R-R16-1"},
+    {"match_id": "KO-092", "round": "Round of 16", "home_source": "KO-073", "away_source": "KO-076", "kickoff_utc": "2026-07-04T17:00:00Z", "bracket_slot": "R-R16-2"},
+    {"match_id": "KO-094", "round": "Round of 16", "home_source": "KO-087", "away_source": "KO-082", "kickoff_utc": "2026-07-06T21:00:00Z", "bracket_slot": "R-R16-3"},
+    {"match_id": "KO-096", "round": "Round of 16", "home_source": "KO-079", "away_source": "KO-083", "kickoff_utc": "2026-07-07T20:00:00Z", "bracket_slot": "R-R16-4"},
+    {"match_id": "KO-097", "round": "Quarterfinals", "home_source": "KO-089", "away_source": "KO-091", "kickoff_utc": "2026-07-12T00:00:00Z", "bracket_slot": "L-QF-1"},
+    {"match_id": "KO-098", "round": "Quarterfinals", "home_source": "KO-093", "away_source": "KO-095", "kickoff_utc": "2026-07-12T20:00:00Z", "bracket_slot": "L-QF-2"},
+    {"match_id": "KO-099", "round": "Quarterfinals", "home_source": "KO-090", "away_source": "KO-092", "kickoff_utc": "2026-07-09T20:00:00Z", "bracket_slot": "R-QF-1"},
+    {"match_id": "KO-100", "round": "Quarterfinals", "home_source": "KO-094", "away_source": "KO-096", "kickoff_utc": "2026-07-10T20:00:00Z", "bracket_slot": "R-QF-2"},
+    {"match_id": "KO-101", "round": "Semifinals", "home_source": "KO-097", "away_source": "KO-098", "kickoff_utc": "2026-07-15T20:00:00Z", "bracket_slot": "L-SF"},
+    {"match_id": "KO-102", "round": "Semifinals", "home_source": "KO-099", "away_source": "KO-100", "kickoff_utc": "2026-07-14T20:00:00Z", "bracket_slot": "R-SF"},
+    {"match_id": "KO-104", "round": "Final", "home_source": "KO-101", "away_source": "KO-102", "kickoff_utc": "2026-07-19T19:00:00Z", "bracket_slot": "FINAL"},
+]
+
 SCENARIOS = [
     {
         "id": "A",
@@ -106,42 +132,38 @@ def main() -> None:
 
 def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], equation: dict[str, Any], time_series: dict[str, Any], scenario: dict[str, Any], actual_winners: dict[str, dict[str, str]] | None = None) -> dict[str, Any]:
     actual_winners = actual_winners or {}
-    rounds: list[dict[str, Any]] = []
-    current = [_fixture_to_match(row) for row in fixtures]
-    round_index = 0
-    next_match_number = 89
+    fixtures_by_id = {row["match_id"]: _fixture_to_match(row) for row in fixtures}
+    generated_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    predictions_by_id: dict[str, dict[str, Any]] = {}
+    rounds_by_name: dict[str, list[dict[str, Any]]] = {name: [] for name in ROUND_NAMES}
 
-    while current:
-        round_name = ROUND_NAMES[round_index]
-        matches = []
-        winners = []
-        for fixture in current:
-            prediction = _predict_knockout_match(fixture, round_name, learning, equation, time_series, scenario)
-            prediction = _apply_actual_winner_lock(prediction, actual_winners.get(fixture.get("match_id", "")) or actual_winners.get(fixture.get("source_actual_match_id", "")))
-            matches.append(prediction)
-            winners.append(prediction["winner"])
-        rounds.append({"round": round_name, "matches": matches})
-        if len(winners) == 1:
-            break
-        current = []
-        for i in range(0, len(winners), 2):
-            current.append(
-                {
-                    "match_id": f"KO-{next_match_number:03d}",
-                    "home_team": winners[i],
-                    "away_team": winners[i + 1],
-                    "kickoff_utc": (datetime(2026, 7, 6, 19, tzinfo=timezone.utc) + timedelta(days=round_index * 3 + i // 2)).isoformat().replace("+00:00", "Z"),
-                    "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-                    "round": ROUND_NAMES[round_index + 1],
-                    "stage": "knockout",
-                    "bracket_slot": f"{ROUND_NAMES[round_index + 1]}-{i//2 + 1}",
-                    "source_note": f"Projected by Agent Harness knockout simulator scenario {scenario['id']}",
-                }
-            )
-            next_match_number += 1
-        round_index += 1
+    for match_id in VISUAL_R32_ORDER:
+        fixture = fixtures_by_id[match_id]
+        prediction = _predict_and_lock(fixture, "Round of 32", learning, equation, time_series, scenario, actual_winners)
+        predictions_by_id[match_id] = prediction
+        rounds_by_name["Round of 32"].append(prediction)
 
-    champion = rounds[-1]["matches"][0]["winner"] if rounds and rounds[-1]["matches"] else "TBD"
+    for definition in OFFICIAL_KNOCKOUT_PATH:
+        home_source = definition["home_source"]
+        away_source = definition["away_source"]
+        fixture = {
+            "match_id": definition["match_id"],
+            "home_team": predictions_by_id[home_source]["winner"],
+            "away_team": predictions_by_id[away_source]["winner"],
+            "kickoff_utc": definition["kickoff_utc"],
+            "generated_at_utc": generated_at,
+            "round": definition["round"],
+            "stage": "knockout",
+            "bracket_slot": definition["bracket_slot"],
+            "source_match_ids": [home_source, away_source],
+            "source_note": f"Official FIFA/beIN path: winner of {home_source} vs winner of {away_source}; scenario {scenario['id']}",
+        }
+        prediction = _predict_and_lock(fixture, definition["round"], learning, equation, time_series, scenario, actual_winners)
+        predictions_by_id[definition["match_id"]] = prediction
+        rounds_by_name[definition["round"]].append(prediction)
+
+    rounds = [{"round": name, "matches": rounds_by_name[name]} for name in ROUND_NAMES]
+    champion = rounds_by_name["Final"][0]["winner"] if rounds_by_name["Final"] else "TBD"
     reliability = _scenario_reliability(rounds, learning, scenario)
     return {
         "scenario_id": scenario["id"],
@@ -156,6 +178,14 @@ def _project_scenario(fixtures: list[dict[str, str]], learning: dict[str, Any], 
         "final": rounds[-1]["matches"][0] if rounds and rounds[-1]["matches"] else None,
         "rounds": rounds,
     }
+
+
+def _predict_and_lock(fixture: dict[str, Any], round_name: str, learning: dict[str, Any], equation: dict[str, Any], time_series: dict[str, Any], scenario: dict[str, Any], actual_winners: dict[str, dict[str, str]]) -> dict[str, Any]:
+    prediction = _predict_knockout_match(fixture, round_name, learning, equation, time_series, scenario)
+    return _apply_actual_winner_lock(
+        prediction,
+        actual_winners.get(fixture.get("match_id", "")) or actual_winners.get(fixture.get("source_actual_match_id", "")),
+    )
 
 
 def _scenario_summary(scenario: dict[str, Any]) -> dict[str, Any]:
@@ -197,6 +227,8 @@ def _compact_match_for_scenario(match: dict[str, Any]) -> dict[str, Any]:
         "scenario",
         "kickoff_utc",
         "generated_at_utc",
+        "bracket_slot",
+        "source_match_ids",
         "actual_result_locked",
         "predicted_winner_before_actual",
     ]
@@ -339,6 +371,8 @@ def _predict_knockout_match(fixture: dict[str, str], round_name: str, learning: 
         "round": round_name,
         "kickoff_utc": fixture.get("kickoff_utc"),
         "generated_at_utc": fixture.get("generated_at_utc"),
+        "bracket_slot": fixture.get("bracket_slot"),
+        "source_match_ids": fixture.get("source_match_ids"),
         "home_team": fixture["home_team"],
         "away_team": fixture["away_team"],
         "winner": winner,

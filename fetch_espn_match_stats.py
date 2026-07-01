@@ -52,6 +52,11 @@ ADVANCED_FIELDS = [
 
 ESPN_TO_INTERNAL = {
     "Congo DR": "DR Congo",
+    "Bosnia and Herzegovina": "Bosnia & Herzegovina",
+    "C?te d'Ivoire": "Ivory Coast",
+    "Ivory Coast": "Ivory Coast",
+    "Cabo Verde": "Cape Verde",
+    "Cape Verde Islands": "Cape Verde",
     "Czechia": "Czech Republic",
     "United States": "USA",
     "Korea Republic": "South Korea",
@@ -65,8 +70,7 @@ def main() -> None:
     args = parser.parse_args()
 
     CACHE.mkdir(parents=True, exist_ok=True)
-    registry = DATA / "all_group_fixtures.csv"
-    fixtures = _read_csv(registry if registry.exists() else DATA / "fixtures.csv")
+    fixtures = _load_fixture_registry()
     if args.match_id:
         fixtures = [row for row in fixtures if row["match_id"] == args.match_id]
     if args.date:
@@ -76,6 +80,7 @@ def main() -> None:
             if datetime.fromisoformat(row["kickoff_utc"].replace("Z", "+00:00")).strftime("%Y%m%d") == args.date
         ]
     actuals = _read_actual_results()
+    knockout_winners = _read_knockout_winners()
     advanced_rows = _read_advanced_rows()
 
     updated_results = 0
@@ -99,6 +104,10 @@ def main() -> None:
         if scores and fixture["match_id"] not in actuals:
             actuals[fixture["match_id"]] = scores
             updated_results += 1
+        if scores and fixture["match_id"].startswith("KO-") and fixture["match_id"] not in knockout_winners:
+            winner_row = _knockout_winner_from_event(fixture, event, scores)
+            if winner_row:
+                knockout_winners[fixture["match_id"]] = winner_row
 
         try:
             summary = _load_json_from_url(SUMMARY_URL.format(event_id=event_id), CACHE / f"summary_{event_id}.json")
@@ -115,8 +124,52 @@ def main() -> None:
                 advanced_rows[key] = {**advanced_rows[key], **row}
 
     _write_actual_results(actuals)
+    _write_knockout_winners(knockout_winners)
     _write_advanced_rows(advanced_rows)
     print(f"ESPN refresh complete: {updated_results} result(s), {updated_stats} team-stat row(s) added.")
+
+
+def _load_fixture_registry() -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for path in [DATA / "all_group_fixtures.csv", DATA / "knockout_fixtures.csv", DATA / "fixtures.csv"]:
+        if not path.exists():
+            continue
+        for row in _read_csv(path):
+            match_id = row.get("match_id")
+            if match_id and match_id not in seen:
+                rows.append(row)
+                seen.add(match_id)
+    return rows
+
+
+def _knockout_winner_from_event(fixture: dict[str, str], event: dict, scores: dict[str, int]) -> dict[str, str] | None:
+    home_team = fixture["home_team"]
+    away_team = fixture["away_team"]
+    if scores["home_goals"] > scores["away_goals"]:
+        winner = home_team
+        method = "direct"
+    elif scores["away_goals"] > scores["home_goals"]:
+        winner = away_team
+        method = "direct"
+    else:
+        winner = _event_winner_name(event)
+        method = "penalties"
+    if not winner:
+        return None
+    return {
+        "match_id": fixture["match_id"],
+        "source_actual_match_id": fixture["match_id"],
+        "winner": winner,
+        "method": method,
+    }
+
+
+def _event_winner_name(event: dict) -> str | None:
+    for competitor in event.get("competitions", [{}])[0].get("competitors", []):
+        if competitor.get("winner") is True:
+            return _normalize_team(competitor["team"]["displayName"])
+    return None
 
 
 def _load_json_from_url(url: str, path: Path) -> dict:
@@ -294,6 +347,28 @@ def _write_actual_results(rows: dict[str, dict[str, int]]) -> None:
         writer.writeheader()
         for match_id, row in sorted(rows.items()):
             writer.writerow({"match_id": match_id, **row})
+
+
+def _read_knockout_winners() -> dict[str, dict[str, str]]:
+    path = DATA / "knockout_actual_winners.csv"
+    if not path.exists():
+        return {}
+    with path.open("r", encoding="utf-8", newline="") as f:
+        return {row["match_id"]: row for row in csv.DictReader(f) if row.get("match_id")}
+
+
+def _write_knockout_winners(rows: dict[str, dict[str, str]]) -> None:
+    path = DATA / "knockout_actual_winners.csv"
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["match_id", "source_actual_match_id", "winner", "method"])
+        writer.writeheader()
+        for match_id, row in sorted(rows.items()):
+            writer.writerow({
+                "match_id": match_id,
+                "source_actual_match_id": row.get("source_actual_match_id") or match_id,
+                "winner": row.get("winner", ""),
+                "method": row.get("method", "direct"),
+            })
 
 
 def _read_advanced_rows() -> dict[tuple[str, str], dict]:

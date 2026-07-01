@@ -104,7 +104,7 @@ def main() -> None:
 
     actual_rows = _existing_actual_results()
     for idx, match in enumerate(matches, start=1):
-        if "score" in match and "ft" in match["score"]:
+        if match.get("group") and "score" in match and "ft" in match["score"]:
             actual_rows[f"WC-{idx:03d}"] = {
                 "match_id": f"WC-{idx:03d}",
                 "home_goals": match["score"]["ft"][0],

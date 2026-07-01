@@ -34,6 +34,7 @@ def main() -> None:
     )
     _refresh_due_espn_matches()
     subprocess.run([sys.executable, str(ROOT / "evolve_after_results.py")], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / "predict_knockout_bracket.py")], cwd=ROOT, check=True)
     print("Dashboard data refreshed.")
 
 
@@ -95,8 +96,16 @@ def _load_actual_match_ids() -> set[str]:
     path = DATA / "actual_results.csv"
     if not path.exists():
         return set()
+    ids: set[str] = set()
     with path.open("r", encoding="utf-8", newline="") as f:
-        return {row["match_id"] for row in csv.DictReader(f)}
+        for row in csv.DictReader(f):
+            match_id = row["match_id"]
+            ids.add(match_id)
+            if match_id.startswith("WC-"):
+                ids.add("KO-" + match_id.split("-", 1)[1])
+            elif match_id.startswith("KO-"):
+                ids.add("WC-" + match_id.split("-", 1)[1])
+    return ids
 
 
 def _load_advanced_stat_match_ids() -> set[str]:

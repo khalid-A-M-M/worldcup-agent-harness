@@ -5,7 +5,7 @@ import json
 import unittest
 from pathlib import Path
 
-from predict_knockout_bracket import _apply_actual_winner_lock, _shrink_two_way
+from predict_knockout_bracket import OFFICIAL_KNOCKOUT_PATH, VISUAL_R32_ORDER, _apply_actual_winner_lock, _shrink_two_way
 from evolve_after_results import _actual_id_for_match, _actual_knockout_outcome
 from forecast_ledger import load_latest_pre_match_knockout_predictions
 
@@ -19,6 +19,14 @@ class KnockoutLayerTest(unittest.TestCase):
         self.assertEqual(len(rows), 16)
         self.assertTrue(all(row["stage"] == "knockout" for row in rows))
 
+    def test_official_fifa_path_is_not_adjacent_pairing(self) -> None:
+        r16 = {item["match_id"]: (item["home_source"], item["away_source"]) for item in OFFICIAL_KNOCKOUT_PATH if item["round"] == "Round of 16"}
+        self.assertEqual(r16["KO-089"], ("KO-074", "KO-077"))
+        self.assertEqual(r16["KO-090"], ("KO-075", "KO-078"))
+        self.assertEqual(r16["KO-092"], ("KO-073", "KO-076"))
+        self.assertEqual(VISUAL_R32_ORDER[:2], ["KO-074", "KO-077"])
+        self.assertIn("KO-083", VISUAL_R32_ORDER[-2:])
+
     def test_knockout_actual_id_alias_maps_wc_to_ko(self) -> None:
         actuals = {"WC-073": {"home_goals": 0, "away_goals": 1}}
         self.assertEqual(_actual_id_for_match("KO-073", actuals), "WC-073")
@@ -31,6 +39,11 @@ class KnockoutLayerTest(unittest.TestCase):
 
     def test_knockout_draw_without_winner_is_not_scored(self) -> None:
         self.assertIsNone(_actual_knockout_outcome(1, 1, "Germany", "Paraguay"))
+
+    def test_knockout_fixture_uses_algeria_not_uruguay(self) -> None:
+        with (ROOT / "data" / "knockout_fixtures.csv").open("r", encoding="utf-8", newline="") as f:
+            rows = {row["match_id"]: row for row in csv.DictReader(f)}
+        self.assertEqual(rows["KO-088"]["away_team"], "Algeria")
 
     def test_knockout_pre_match_snapshot_uses_generated_time(self) -> None:
         from unittest.mock import patch
