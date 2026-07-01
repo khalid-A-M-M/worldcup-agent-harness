@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-01T19:23:11.238385Z",
+  "generated_at_utc": "2026-07-01T17:25:29.902736Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -259,22 +259,22 @@
       ]
     },
     "DR Congo": {
-      "sample_size": 7,
-      "momentum_index": -0.3511,
+      "sample_size": 6,
+      "momentum_index": 6.7594,
       "stat_trend_index": 2.0932,
-      "volatility_index": 2.9562,
-      "time_series_edge": -0.0031,
-      "confidence": 0.7011,
-      "point_momentum": 1.0508,
-      "goal_difference_momentum": 0.0508,
-      "scoring_form": 1.6308,
-      "defensive_form": 1.58,
+      "volatility_index": 2.7439,
+      "time_series_edge": 0.1261,
+      "confidence": 0.6514,
+      "point_momentum": 2.5019,
+      "goal_difference_momentum": 1.5019,
+      "scoring_form": 2.5019,
+      "defensive_form": 1.0,
       "last_dates": [
+        "2026-06-17",
         "2026-06-23",
         "2026-06-24",
         "2026-06-27",
-        "2026-06-27",
-        "2026-07-01"
+        "2026-06-27"
       ]
     },
     "Ecuador": {
@@ -316,22 +316,22 @@
       ]
     },
     "England": {
-      "sample_size": 7,
-      "momentum_index": 7.152,
+      "sample_size": 6,
+      "momentum_index": 7.7762,
       "stat_trend_index": -2.6373,
-      "volatility_index": 1.9746,
-      "time_series_edge": 0.0905,
-      "confidence": 0.7506,
-      "point_momentum": 2.878,
-      "goal_difference_momentum": 1.298,
-      "scoring_form": 1.9041,
-      "defensive_form": 0.6061,
+      "volatility_index": 2.0742,
+      "time_series_edge": 0.1012,
+      "confidence": 0.6931,
+      "point_momentum": 2.7094,
+      "goal_difference_momentum": 1.7094,
+      "scoring_form": 1.7717,
+      "defensive_form": 0.0622,
       "last_dates": [
+        "2026-06-17",
         "2026-06-23",
         "2026-06-23",
         "2026-06-27",
-        "2026-06-27",
-        "2026-07-01"
+        "2026-06-27"
       ]
     },
     "France": {
