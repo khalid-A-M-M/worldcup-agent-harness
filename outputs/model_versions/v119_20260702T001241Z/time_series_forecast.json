@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-02T00:12:41.306867Z",
+  "generated_at_utc": "2026-07-01T22:43:21.414217Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -88,22 +88,22 @@
       ]
     },
     "Belgium": {
-      "sample_size": 7,
-      "momentum_index": 4.5195,
+      "sample_size": 6,
+      "momentum_index": 10.0,
       "stat_trend_index": 2.8354,
       "volatility_index": 4.1484,
-      "time_series_edge": 0.0848,
-      "confidence": 0.6713,
-      "point_momentum": 1.6918,
-      "goal_difference_momentum": 1.3836,
-      "scoring_form": 2.9026,
-      "defensive_form": 1.519,
+      "time_series_edge": 0.14,
+      "confidence": 0.6163,
+      "point_momentum": 2.6472,
+      "goal_difference_momentum": 3.2944,
+      "scoring_form": 4.1491,
+      "defensive_form": 0.8547,
       "last_dates": [
+        "2026-06-15",
         "2026-06-21",
         "2026-06-21",
         "2026-06-26",
-        "2026-06-27",
-        "2026-07-01"
+        "2026-06-27"
       ]
     },
     "Bosnia & Herzegovina": {
@@ -715,22 +715,22 @@
       ]
     },
     "Senegal": {
-      "sample_size": 7,
-      "momentum_index": 4.9886,
+      "sample_size": 6,
+      "momentum_index": 10.0,
       "stat_trend_index": 6.5436,
-      "volatility_index": 6.3509,
-      "time_series_edge": 0.1171,
-      "confidence": 0.6162,
-      "point_momentum": 1.6177,
-      "goal_difference_momentum": 1.6424,
-      "scoring_form": 3.0247,
-      "defensive_form": 1.3823,
+      "volatility_index": 6.8007,
+      "time_series_edge": 0.14,
+      "confidence": 0.55,
+      "point_momentum": 2.4708,
+      "goal_difference_momentum": 3.9105,
+      "scoring_form": 4.4397,
+      "defensive_form": 0.5292,
       "last_dates": [
+        "2026-06-16",
         "2026-06-22",
         "2026-06-23",
         "2026-06-26",
-        "2026-06-26",
-        "2026-07-01"
+        "2026-06-26"
       ]
     },
     "South Africa": {
