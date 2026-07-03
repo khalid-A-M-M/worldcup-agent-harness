@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-03T05:01:46.702699Z",
+  "generated_at_utc": "2026-07-03T01:06:04.039827Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -202,22 +202,22 @@
       ]
     },
     "Croatia": {
-      "sample_size": 7,
-      "momentum_index": -0.5681,
+      "sample_size": 6,
+      "momentum_index": 6.2426,
       "stat_trend_index": 0.9839,
-      "volatility_index": 2.6694,
-      "time_series_edge": -0.0164,
-      "confidence": 0.7333,
-      "point_momentum": 1.2208,
-      "goal_difference_momentum": -0.1992,
-      "scoring_form": 1.359,
-      "defensive_form": 1.5582,
+      "volatility_index": 3.1113,
+      "time_series_edge": 0.1035,
+      "confidence": 0.6672,
+      "point_momentum": 2.9066,
+      "goal_difference_momentum": 0.9066,
+      "scoring_form": 1.8547,
+      "defensive_form": 0.9481,
       "last_dates": [
+        "2026-06-17",
         "2026-06-23",
         "2026-06-23",
         "2026-06-27",
-        "2026-06-27",
-        "2026-07-02"
+        "2026-06-27"
       ]
     },
     "Curaçao": {
@@ -639,22 +639,22 @@
       ]
     },
     "Portugal": {
-      "sample_size": 7,
-      "momentum_index": 4.6896,
+      "sample_size": 6,
+      "momentum_index": 1.9134,
       "stat_trend_index": 0.9316,
-      "volatility_index": 4.9872,
-      "time_series_edge": 0.0638,
-      "confidence": 0.6753,
-      "point_momentum": 2.282,
-      "goal_difference_momentum": 0.8851,
-      "scoring_form": 1.4782,
-      "defensive_form": 0.5931,
+      "volatility_index": 5.1854,
+      "time_series_edge": 0.0126,
+      "confidence": 0.6154,
+      "point_momentum": 1.2906,
+      "goal_difference_momentum": 0.7264,
+      "scoring_form": 0.7575,
+      "defensive_form": 0.0311,
       "last_dates": [
+        "2026-06-17",
         "2026-06-23",
         "2026-06-23",
         "2026-06-27",
-        "2026-06-27",
-        "2026-07-02"
+        "2026-06-27"
       ]
     },
     "Qatar": {
