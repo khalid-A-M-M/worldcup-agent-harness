@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-03T21:36:04.852764Z",
+  "generated_at_utc": "2026-07-03T20:17:34.518939Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -50,22 +50,22 @@
       ]
     },
     "Australia": {
-      "sample_size": 7,
-      "momentum_index": -0.9235,
+      "sample_size": 6,
+      "momentum_index": -1.3701,
       "stat_trend_index": 0.0,
-      "volatility_index": 3.0236,
-      "time_series_edge": -0.0348,
-      "confidence": 0.6744,
-      "point_momentum": 0.9651,
-      "goal_difference_momentum": -0.0959,
-      "scoring_form": 0.6061,
-      "defensive_form": 0.702,
+      "volatility_index": 3.5926,
+      "time_series_edge": -0.0462,
+      "confidence": 0.6052,
+      "point_momentum": 0.917,
+      "goal_difference_momentum": -0.2283,
+      "scoring_form": 0.0622,
+      "defensive_form": 0.2906,
       "last_dates": [
+        "2026-06-14",
         "2026-06-19",
         "2026-06-19",
         "2026-06-25",
-        "2026-06-26",
-        "2026-07-03"
+        "2026-06-26"
       ]
     },
     "Austria": {
@@ -297,22 +297,22 @@
       ]
     },
     "Egypt": {
-      "sample_size": 7,
-      "momentum_index": -0.002,
+      "sample_size": 6,
+      "momentum_index": 0.8238,
       "stat_trend_index": 0.0,
       "volatility_index": 2.0742,
-      "time_series_edge": -0.0125,
-      "confidence": 0.6981,
-      "point_momentum": 1.122,
-      "goal_difference_momentum": 0.122,
-      "scoring_form": 1.122,
+      "time_series_edge": 0.0024,
+      "confidence": 0.6431,
+      "point_momentum": 1.2906,
+      "goal_difference_momentum": 0.2906,
+      "scoring_form": 1.2906,
       "defensive_form": 1.0,
       "last_dates": [
+        "2026-06-15",
         "2026-06-21",
         "2026-06-22",
         "2026-06-26",
-        "2026-06-27",
-        "2026-07-03"
+        "2026-06-27"
       ]
     },
     "England": {
