@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-04T04:06:40.808915Z",
+  "generated_at_utc": "2026-07-04T00:08:59.746720Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -31,22 +31,22 @@
       ]
     },
     "Argentina": {
-      "sample_size": 7,
-      "momentum_index": 3.5487,
+      "sample_size": 6,
+      "momentum_index": 9.2778,
       "stat_trend_index": 0.0,
-      "volatility_index": 1.9746,
-      "time_series_edge": 0.052,
-      "confidence": 0.7006,
-      "point_momentum": 1.84,
-      "goal_difference_momentum": 0.8531,
-      "scoring_form": 1.779,
-      "defensive_form": 0.9259,
+      "volatility_index": 1.0371,
+      "time_series_edge": 0.14,
+      "confidence": 0.6691,
+      "point_momentum": 3.0,
+      "goal_difference_momentum": 2.0311,
+      "scoring_form": 2.8547,
+      "defensive_form": 0.8236,
       "last_dates": [
+        "2026-06-17",
         "2026-06-22",
         "2026-06-22",
         "2026-06-27",
-        "2026-06-28",
-        "2026-07-03"
+        "2026-06-28"
       ]
     },
     "Australia": {
@@ -164,41 +164,41 @@
       ]
     },
     "Cape Verde": {
-      "sample_size": 7,
+      "sample_size": 6,
       "momentum_index": -0.6,
       "stat_trend_index": 2.7224,
       "volatility_index": 0.0,
       "time_series_edge": 0.0164,
-      "confidence": 0.775,
+      "confidence": 0.72,
       "point_momentum": 1.0,
       "goal_difference_momentum": 0.0,
-      "scoring_form": 0.702,
-      "defensive_form": 0.702,
+      "scoring_form": 0.2906,
+      "defensive_form": 0.2906,
       "last_dates": [
+        "2026-06-15",
         "2026-06-21",
         "2026-06-21",
         "2026-06-26",
-        "2026-06-27",
-        "2026-07-03"
+        "2026-06-27"
       ]
     },
     "Colombia": {
-      "sample_size": 8,
-      "momentum_index": 5.6532,
-      "stat_trend_index": -1.3897,
-      "volatility_index": 1.0371,
-      "time_series_edge": 0.0816,
-      "confidence": 0.8041,
-      "point_momentum": 2.7094,
-      "goal_difference_momentum": 0.8602,
-      "scoring_form": 0.8657,
-      "defensive_form": 0.0055,
+      "sample_size": 6,
+      "momentum_index": 0.7655,
+      "stat_trend_index": 0.0,
+      "volatility_index": 1.7963,
+      "time_series_edge": 0.003,
+      "confidence": 0.6501,
+      "point_momentum": 1.3528,
+      "goal_difference_momentum": 0.2075,
+      "scoring_form": 0.2386,
+      "defensive_form": 0.0311,
       "last_dates": [
+        "2026-06-18",
+        "2026-06-23",
         "2026-06-24",
         "2026-06-27",
-        "2026-06-27",
-        "2026-07-03",
-        "2026-07-03"
+        "2026-06-27"
       ]
     },
     "Croatia": {
@@ -373,22 +373,22 @@
       ]
     },
     "Ghana": {
-      "sample_size": 8,
-      "momentum_index": -5.3075,
-      "stat_trend_index": 0.1098,
-      "volatility_index": 1.0371,
-      "time_series_edge": -0.1007,
-      "confidence": 0.8541,
-      "point_momentum": 0.0421,
-      "goal_difference_momentum": -0.9634,
-      "scoring_form": 0.1508,
-      "defensive_form": 1.1142,
+      "sample_size": 6,
+      "momentum_index": -4.4085,
+      "stat_trend_index": -0.9902,
+      "volatility_index": 1.7963,
+      "time_series_edge": -0.1,
+      "confidence": 0.7001,
+      "point_momentum": 0.2386,
+      "goal_difference_momentum": -0.7925,
+      "scoring_form": 0.8547,
+      "defensive_form": 1.6472,
       "last_dates": [
+        "2026-06-17",
+        "2026-06-23",
         "2026-06-23",
         "2026-06-27",
-        "2026-06-27",
-        "2026-07-03",
-        "2026-07-03"
+        "2026-06-27"
       ]
     },
     "Haiti": {

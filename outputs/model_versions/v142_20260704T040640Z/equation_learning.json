@@ -1,6 +1,6 @@
 {
-  "equation_version": 112,
-  "generated_at_utc": "2026-07-04T04:06:40.772401Z",
+  "equation_version": 110,
+  "generated_at_utc": "2026-07-04T00:08:59.707582Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -8,26 +8,26 @@
     "upset_floor": "base_upset_floor + upset_curve when favorite errors rise"
   },
   "coefficients": {
-    "favorite_temperature": 0.7708333333333333,
-    "home_bias_delta": 0.0024999999999999996,
-    "draw_intercept": 0.010694444444444444,
-    "draw_temperature": 1.073888888888889,
-    "stat_signal_gain": 1.3455172413793104,
-    "player_signal_gain": 0.9433333333333334,
-    "timing_signal_gain": 0.9033333333333333,
-    "penalty_logit_gain": 1.0172222222222222,
-    "upset_curve": 0.19166666666666668
+    "favorite_temperature": 0.7642857142857142,
+    "home_bias_delta": 0.0,
+    "draw_intercept": 0.011000000000000001,
+    "draw_temperature": 1.076,
+    "stat_signal_gain": 1.3407142857142857,
+    "player_signal_gain": 0.937142857142857,
+    "timing_signal_gain": 0.9068571428571428,
+    "penalty_logit_gain": 1.02,
+    "upset_curve": 0.19428571428571428
   },
   "training_summary": {
-    "completed_matches": 36,
-    "correct": 21,
-    "accuracy": 0.5833333333333334,
+    "completed_matches": 35,
+    "correct": 20,
+    "accuracy": 0.5714285714285714,
     "misses": 15,
-    "favorite_error_rate": 0.4166666666666667,
-    "draw_error_rate": 0.19444444444444445,
-    "stat_alignment": 0.8275862068965517,
-    "home_miss_actuals": 5,
-    "away_miss_actuals": 3
+    "favorite_error_rate": 0.42857142857142855,
+    "draw_error_rate": 0.2,
+    "stat_alignment": 0.8214285714285714,
+    "home_miss_actuals": 4,
+    "away_miss_actuals": 4
   },
   "notes": [
     "هذه الطبقة تتعلم معاملات معادلة تصحيحية من أخطاء المباريات المكتملة بدلاً من الاكتفاء بتغيير أوزان عامة.",
