@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-04T19:20:05.410510Z",
+  "generated_at_utc": "2026-07-04T17:46:20.767755Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -145,22 +145,22 @@
       ]
     },
     "Canada": {
-      "sample_size": 9,
-      "momentum_index": -3.9027,
+      "sample_size": 8,
+      "momentum_index": 5.2078,
       "stat_trend_index": 0.6597,
-      "volatility_index": 6.19,
-      "time_series_edge": -0.1008,
-      "confidence": 0.7552,
-      "point_momentum": 1.0723,
-      "goal_difference_momentum": -1.3905,
-      "scoring_form": 0.4738,
-      "defensive_form": 1.8643,
+      "volatility_index": 6.4766,
+      "time_series_edge": 0.0615,
+      "confidence": 0.6931,
+      "point_momentum": 2.5532,
+      "goal_difference_momentum": 0.8321,
+      "scoring_form": 1.1281,
+      "defensive_form": 0.2961,
       "last_dates": [
+        "2026-06-18",
         "2026-06-24",
         "2026-06-24",
         "2026-06-28",
-        "2026-06-28",
-        "2026-07-04"
+        "2026-06-28"
       ]
     },
     "Cape Verde": {
@@ -525,22 +525,22 @@
       ]
     },
     "Morocco": {
-      "sample_size": 9,
-      "momentum_index": 7.2106,
+      "sample_size": 8,
+      "momentum_index": 1.0109,
       "stat_trend_index": 3.94,
-      "volatility_index": 2.4322,
-      "time_series_edge": 0.14,
-      "confidence": 0.8742,
-      "point_momentum": 2.3036,
-      "goal_difference_momentum": 1.8728,
-      "scoring_form": 2.3431,
-      "defensive_form": 0.4703,
+      "volatility_index": 1.7963,
+      "time_series_edge": 0.0468,
+      "confidence": 0.8351,
+      "point_momentum": 1.3418,
+      "goal_difference_momentum": 0.3162,
+      "scoring_form": 1.4358,
+      "defensive_form": 1.1197,
       "last_dates": [
+        "2026-06-19",
         "2026-06-24",
         "2026-06-24",
         "2026-06-29",
-        "2026-06-29",
-        "2026-07-04"
+        "2026-06-29"
       ]
     },
     "Netherlands": {
