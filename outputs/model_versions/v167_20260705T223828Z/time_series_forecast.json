@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T22:38:28.595930Z",
+  "generated_at_utc": "2026-07-05T21:30:45.884874Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -126,22 +126,22 @@
       ]
     },
     "Brazil": {
-      "sample_size": 8,
-      "momentum_index": 0.4385,
+      "sample_size": 7,
+      "momentum_index": 8.6392,
       "stat_trend_index": 1.7534,
-      "volatility_index": 3.3606,
-      "time_series_edge": 0.0053,
-      "confidence": 0.746,
-      "point_momentum": 1.249,
-      "goal_difference_momentum": 0.1763,
-      "scoring_form": 1.5854,
-      "defensive_form": 1.4091,
+      "volatility_index": 2.6694,
+      "time_series_edge": 0.14,
+      "confidence": 0.7083,
+      "point_momentum": 2.9739,
+      "goal_difference_momentum": 1.8008,
+      "scoring_form": 2.3939,
+      "defensive_form": 0.5931,
       "last_dates": [
+        "2026-06-19",
         "2026-06-20",
         "2026-06-24",
         "2026-06-24",
-        "2026-06-29",
-        "2026-07-05"
+        "2026-06-29"
       ]
     },
     "Canada": {
@@ -582,22 +582,22 @@
       ]
     },
     "Norway": {
-      "sample_size": 9,
-      "momentum_index": 5.662,
+      "sample_size": 8,
+      "momentum_index": 4.2286,
       "stat_trend_index": 0.2747,
       "volatility_index": 4.1484,
-      "time_series_edge": 0.0798,
-      "confidence": 0.8063,
-      "point_momentum": 2.8169,
-      "goal_difference_momentum": 0.7605,
-      "scoring_form": 1.9544,
-      "defensive_form": 1.1938,
+      "time_series_edge": 0.054,
+      "confidence": 0.7513,
+      "point_momentum": 2.5642,
+      "goal_difference_momentum": 0.4298,
+      "scoring_form": 1.8913,
+      "defensive_form": 1.4615,
       "last_dates": [
+        "2026-06-23",
         "2026-06-26",
         "2026-06-26",
         "2026-06-30",
-        "2026-06-30",
-        "2026-07-05"
+        "2026-06-30"
       ]
     },
     "Panama": {
