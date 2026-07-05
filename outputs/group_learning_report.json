@@ -1,21 +1,21 @@
 {
   "summary": {
     "completed_forecasts": 36,
-    "correct": 21,
-    "missed": 15,
-    "accuracy": 0.5833333333333334,
-    "mean_brier_score": 0.5306605417523896,
-    "mean_log_loss": 1.1307867193268855
+    "correct": 22,
+    "missed": 14,
+    "accuracy": 0.6111111111111112,
+    "mean_brier_score": 0.5137184285581187,
+    "mean_log_loss": 1.005364003627867
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
-      "home_win": 8,
+      "home_win": 7,
       "away_win": 7
     },
     "misses_by_actual_label": {
       "draw": 7,
-      "away_win": 4,
-      "home_win": 4
+      "home_win": 4,
+      "away_win": 3
     },
     "severe_log_loss_match_ids": [
       "WC-069",
@@ -39,14 +39,13 @@
     ]
   },
   "learned_knockout_adjustments": {
-    "uncertainty_multiplier": 1.0953,
+    "uncertainty_multiplier": 1.067,
     "favorite_shrink": 0.04,
     "upset_floor": 0.16,
-    "penalty_sensitivity": 1.0792,
+    "penalty_sensitivity": 1.0639,
     "target_accuracy_note": "90% is an ambition target, not a guaranteed property; the model now reports confidence and penalty risk instead of pretending certainty."
   },
   "lessons": [
-    "Low group-stage hit rate: shrink overconfident favorites and increase upset sensitivity.",
     "Draw outcomes hurt the group model; knockout conversion must treat draw mass as extra-time/penalty risk, not discard it.",
     "Several misses assigned very low probability to the actual outcome; widen uncertainty bands before elimination matches."
   ],
