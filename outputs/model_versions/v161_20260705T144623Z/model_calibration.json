@@ -1,6 +1,6 @@
 {
-  "version": 162,
-  "team_adjustment_weight": 1.114460546983766,
+  "version": 161,
+  "team_adjustment_weight": 1.092608379395849,
   "butterfly_adjustment_weight": 0.7,
   "advanced_stats_weight": 1.0,
   "confidence_penalty_weight": 1.35,
@@ -147,7 +147,6 @@
     "Reduced adjustment weights after weak completed-match accuracy.",
     "Reduced adjustment weights after weak completed-match accuracy.",
     "Reduced adjustment weights after weak completed-match accuracy.",
-    "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
     "Slightly reinforced team-intelligence layer after acceptable accuracy.",
