@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-07T05:50:06.101704Z",
+  "generated_at_utc": "2026-07-07T01:22:06.553681Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -88,22 +88,22 @@
       ]
     },
     "Belgium": {
-      "sample_size": 8,
-      "momentum_index": 8.6842,
+      "sample_size": 7,
+      "momentum_index": 4.5195,
       "stat_trend_index": 2.8354,
-      "volatility_index": 4.0995,
-      "time_series_edge": 0.14,
-      "confidence": 0.7275,
-      "point_momentum": 2.4506,
-      "goal_difference_momentum": 2.3211,
-      "scoring_form": 3.5391,
-      "defensive_form": 1.218,
+      "volatility_index": 4.1484,
+      "time_series_edge": 0.0848,
+      "confidence": 0.6713,
+      "point_momentum": 1.6918,
+      "goal_difference_momentum": 1.3836,
+      "scoring_form": 2.9026,
+      "defensive_form": 1.519,
       "last_dates": [
+        "2026-06-21",
         "2026-06-21",
         "2026-06-26",
         "2026-06-27",
-        "2026-07-01",
-        "2026-07-06"
+        "2026-07-01"
       ]
     },
     "Bosnia & Herzegovina": {
@@ -867,22 +867,22 @@
       ]
     },
     "USA": {
-      "sample_size": 8,
-      "momentum_index": -4.3479,
+      "sample_size": 7,
+      "momentum_index": 4.1478,
       "stat_trend_index": 0.0,
-      "volatility_index": 4.2917,
-      "time_series_edge": -0.104,
-      "confidence": 0.6977,
-      "point_momentum": 0.8242,
-      "goal_difference_momentum": -1.3304,
-      "scoring_form": 1.431,
-      "defensive_form": 2.7613,
+      "volatility_index": 3.4591,
+      "time_series_edge": 0.0539,
+      "confidence": 0.6635,
+      "point_momentum": 1.9623,
+      "goal_difference_momentum": 0.9753,
+      "scoring_form": 2.0261,
+      "defensive_form": 1.0508,
       "last_dates": [
+        "2026-06-19",
         "2026-06-19",
         "2026-06-25",
         "2026-06-26",
-        "2026-07-01",
-        "2026-07-06"
+        "2026-07-01"
       ]
     },
     "Uruguay": {
