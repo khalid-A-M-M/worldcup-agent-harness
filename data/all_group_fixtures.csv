@@ -1,73 +1,73 @@
 match_id,home_team,away_team,kickoff_utc,generated_at_utc,group,ground,round,stage
-WC-001,Mexico,South Africa,2026-06-11T19:00:00Z,2026-07-10T21:30:46.919077Z,Group A,Mexico City,Matchday 1,group
-WC-002,South Korea,Czech Republic,2026-06-12T02:00:00Z,2026-07-10T21:30:46.919077Z,Group A,Guadalajara (Zapopan),Matchday 1,group
-WC-003,Czech Republic,South Africa,2026-06-18T16:00:00Z,2026-07-10T21:30:46.919077Z,Group A,Atlanta,Matchday 8,group
-WC-004,Mexico,South Korea,2026-06-19T01:00:00Z,2026-07-10T21:30:46.919077Z,Group A,Guadalajara (Zapopan),Matchday 8,group
-WC-005,Czech Republic,Mexico,2026-06-25T01:00:00Z,2026-07-10T21:30:46.919077Z,Group A,Mexico City,Matchday 14,group
-WC-006,South Africa,South Korea,2026-06-25T01:00:00Z,2026-07-10T21:30:46.919077Z,Group A,Monterrey (Guadalupe),Matchday 14,group
-WC-007,Canada,Bosnia & Herzegovina,2026-06-12T19:00:00Z,2026-07-10T21:30:46.919077Z,Group B,Toronto,Matchday 2,group
-WC-008,Qatar,Switzerland,2026-06-13T19:00:00Z,2026-07-10T21:30:46.919077Z,Group B,San Francisco Bay Area (Santa Clara),Matchday 3,group
-WC-009,Switzerland,Bosnia & Herzegovina,2026-06-18T19:00:00Z,2026-07-10T21:30:46.919077Z,Group B,Los Angeles (Inglewood),Matchday 8,group
-WC-010,Canada,Qatar,2026-06-18T22:00:00Z,2026-07-10T21:30:46.919077Z,Group B,Vancouver,Matchday 8,group
-WC-011,Switzerland,Canada,2026-06-24T19:00:00Z,2026-07-10T21:30:46.919077Z,Group B,Vancouver,Matchday 14,group
-WC-012,Bosnia & Herzegovina,Qatar,2026-06-24T19:00:00Z,2026-07-10T21:30:46.919077Z,Group B,Seattle,Matchday 14,group
-WC-013,Brazil,Morocco,2026-06-13T22:00:00Z,2026-07-10T21:30:46.919077Z,Group C,New York/New Jersey (East Rutherford),Matchday 3,group
-WC-014,Haiti,Scotland,2026-06-14T01:00:00Z,2026-07-10T21:30:46.919077Z,Group C,Boston (Foxborough),Matchday 3,group
-WC-015,Scotland,Morocco,2026-06-19T22:00:00Z,2026-07-10T21:30:46.919077Z,Group C,Boston (Foxborough),Matchday 9,group
-WC-016,Brazil,Haiti,2026-06-20T00:30:00Z,2026-07-10T21:30:46.919077Z,Group C,Philadelphia,Matchday 9,group
-WC-017,Scotland,Brazil,2026-06-24T22:00:00Z,2026-07-10T21:30:46.919077Z,Group C,Miami (Miami Gardens),Matchday 14,group
-WC-018,Morocco,Haiti,2026-06-24T22:00:00Z,2026-07-10T21:30:46.919077Z,Group C,Atlanta,Matchday 14,group
-WC-019,USA,Paraguay,2026-06-13T01:00:00Z,2026-07-10T21:30:46.919077Z,Group D,Los Angeles (Inglewood),Matchday 2,group
-WC-020,Australia,Turkey,2026-06-14T04:00:00Z,2026-07-10T21:30:46.919077Z,Group D,Vancouver,Matchday 3,group
-WC-021,USA,Australia,2026-06-19T19:00:00Z,2026-07-10T21:30:46.919077Z,Group D,Seattle,Matchday 9,group
-WC-022,Turkey,Paraguay,2026-06-20T03:00:00Z,2026-07-10T21:30:46.919077Z,Group D,San Francisco Bay Area (Santa Clara),Matchday 9,group
-WC-023,Turkey,USA,2026-06-26T02:00:00Z,2026-07-10T21:30:46.919077Z,Group D,Los Angeles (Inglewood),Matchday 15,group
-WC-024,Paraguay,Australia,2026-06-26T02:00:00Z,2026-07-10T21:30:46.919077Z,Group D,San Francisco Bay Area (Santa Clara),Matchday 15,group
-WC-025,Germany,Curaçao,2026-06-14T17:00:00Z,2026-07-10T21:30:46.919077Z,Group E,Houston,Matchday 4,group
-WC-026,Ivory Coast,Ecuador,2026-06-14T23:00:00Z,2026-07-10T21:30:46.919077Z,Group E,Philadelphia,Matchday 4,group
-WC-027,Germany,Ivory Coast,2026-06-20T20:00:00Z,2026-07-10T21:30:46.919077Z,Group E,Toronto,Matchday 10,group
-WC-028,Ecuador,Curaçao,2026-06-21T00:00:00Z,2026-07-10T21:30:46.919077Z,Group E,Kansas City,Matchday 10,group
-WC-029,Curaçao,Ivory Coast,2026-06-25T20:00:00Z,2026-07-10T21:30:46.919077Z,Group E,Philadelphia,Matchday 15,group
-WC-030,Ecuador,Germany,2026-06-25T20:00:00Z,2026-07-10T21:30:46.919077Z,Group E,New York/New Jersey (East Rutherford),Matchday 15,group
-WC-031,Netherlands,Japan,2026-06-14T20:00:00Z,2026-07-10T21:30:46.919077Z,Group F,Dallas (Arlington),Matchday 4,group
-WC-032,Sweden,Tunisia,2026-06-15T02:00:00Z,2026-07-10T21:30:46.919077Z,Group F,Monterrey (Guadalupe),Matchday 4,group
-WC-033,Netherlands,Sweden,2026-06-20T17:00:00Z,2026-07-10T21:30:46.919077Z,Group F,Houston,Matchday 10,group
-WC-034,Tunisia,Japan,2026-06-21T04:00:00Z,2026-07-10T21:30:46.919077Z,Group F,Monterrey (Guadalupe),Matchday 10,group
-WC-035,Japan,Sweden,2026-06-25T23:00:00Z,2026-07-10T21:30:46.919077Z,Group F,Dallas (Arlington),Matchday 15,group
-WC-036,Tunisia,Netherlands,2026-06-25T23:00:00Z,2026-07-10T21:30:46.919077Z,Group F,Kansas City,Matchday 15,group
-WC-037,Belgium,Egypt,2026-06-15T19:00:00Z,2026-07-10T21:30:46.919077Z,Group G,Seattle,Matchday 5,group
-WC-038,Iran,New Zealand,2026-06-16T01:00:00Z,2026-07-10T21:30:46.919077Z,Group G,Los Angeles (Inglewood),Matchday 5,group
-WC-039,Belgium,Iran,2026-06-21T19:00:00Z,2026-07-10T21:30:46.919077Z,Group G,Los Angeles (Inglewood),Matchday 11,group
-WC-040,New Zealand,Egypt,2026-06-22T01:00:00Z,2026-07-10T21:30:46.919077Z,Group G,Vancouver,Matchday 11,group
-WC-041,Egypt,Iran,2026-06-27T03:00:00Z,2026-07-10T21:30:46.919077Z,Group G,Seattle,Matchday 16,group
-WC-042,New Zealand,Belgium,2026-06-27T03:00:00Z,2026-07-10T21:30:46.919077Z,Group G,Vancouver,Matchday 16,group
-WC-043,Spain,Cape Verde,2026-06-15T16:00:00Z,2026-07-10T21:30:46.919077Z,Group H,Atlanta,Matchday 5,group
-WC-044,Saudi Arabia,Uruguay,2026-06-15T22:00:00Z,2026-07-10T21:30:46.919077Z,Group H,Miami (Miami Gardens),Matchday 5,group
-WC-045,Spain,Saudi Arabia,2026-06-21T16:00:00Z,2026-07-10T21:30:46.919077Z,Group H,Atlanta,Matchday 11,group
-WC-046,Uruguay,Cape Verde,2026-06-21T22:00:00Z,2026-07-10T21:30:46.919077Z,Group H,Miami (Miami Gardens),Matchday 11,group
-WC-047,Cape Verde,Saudi Arabia,2026-06-27T00:00:00Z,2026-07-10T21:30:46.919077Z,Group H,Houston,Matchday 16,group
-WC-048,Uruguay,Spain,2026-06-27T00:00:00Z,2026-07-10T21:30:46.919077Z,Group H,Guadalajara (Zapopan),Matchday 16,group
-WC-049,France,Senegal,2026-06-16T19:00:00Z,2026-07-10T21:30:46.919077Z,Group I,New York/New Jersey (East Rutherford),Matchday 6,group
-WC-050,Iraq,Norway,2026-06-16T22:00:00Z,2026-07-10T21:30:46.919077Z,Group I,Boston (Foxborough),Matchday 6,group
-WC-051,France,Iraq,2026-06-22T21:00:00Z,2026-07-10T21:30:46.919077Z,Group I,Philadelphia,Matchday 12,group
-WC-052,Norway,Senegal,2026-06-23T00:00:00Z,2026-07-10T21:30:46.919077Z,Group I,New York/New Jersey (East Rutherford),Matchday 12,group
-WC-053,Norway,France,2026-06-26T19:00:00Z,2026-07-10T21:30:46.919077Z,Group I,Boston (Foxborough),Matchday 16,group
-WC-054,Senegal,Iraq,2026-06-26T19:00:00Z,2026-07-10T21:30:46.919077Z,Group I,Toronto,Matchday 16,group
-WC-055,Argentina,Algeria,2026-06-17T01:00:00Z,2026-07-10T21:30:46.919077Z,Group J,Kansas City,Matchday 6,group
-WC-056,Austria,Jordan,2026-06-17T04:00:00Z,2026-07-10T21:30:46.919077Z,Group J,San Francisco Bay Area (Santa Clara),Matchday 6,group
-WC-057,Argentina,Austria,2026-06-22T17:00:00Z,2026-07-10T21:30:46.919077Z,Group J,Dallas (Arlington),Matchday 12,group
-WC-058,Jordan,Algeria,2026-06-23T03:00:00Z,2026-07-10T21:30:46.919077Z,Group J,San Francisco Bay Area (Santa Clara),Matchday 12,group
-WC-059,Algeria,Austria,2026-06-28T02:00:00Z,2026-07-10T21:30:46.919077Z,Group J,Kansas City,Matchday 17,group
-WC-060,Jordan,Argentina,2026-06-28T02:00:00Z,2026-07-10T21:30:46.919077Z,Group J,Dallas (Arlington),Matchday 17,group
-WC-061,Portugal,DR Congo,2026-06-17T17:00:00Z,2026-07-10T21:30:46.919077Z,Group K,Houston,Matchday 7,group
-WC-062,Uzbekistan,Colombia,2026-06-18T02:00:00Z,2026-07-10T21:30:46.919077Z,Group K,Mexico City,Matchday 7,group
-WC-063,Portugal,Uzbekistan,2026-06-23T17:00:00Z,2026-07-10T21:30:46.919077Z,Group K,Houston,Matchday 13,group
-WC-064,Colombia,DR Congo,2026-06-24T02:00:00Z,2026-07-10T21:30:46.919077Z,Group K,Guadalajara (Zapopan),Matchday 13,group
-WC-065,Colombia,Portugal,2026-06-27T23:30:00Z,2026-07-10T21:30:46.919077Z,Group K,Miami (Miami Gardens),Matchday 17,group
-WC-066,DR Congo,Uzbekistan,2026-06-27T23:30:00Z,2026-07-10T21:30:46.919077Z,Group K,Atlanta,Matchday 17,group
-WC-067,England,Croatia,2026-06-17T20:00:00Z,2026-07-10T21:30:46.919077Z,Group L,Dallas (Arlington),Matchday 7,group
-WC-068,Ghana,Panama,2026-06-17T23:00:00Z,2026-07-10T21:30:46.919077Z,Group L,Toronto,Matchday 7,group
-WC-069,England,Ghana,2026-06-23T20:00:00Z,2026-07-10T21:30:46.919077Z,Group L,Boston (Foxborough),Matchday 13,group
-WC-070,Panama,Croatia,2026-06-23T23:00:00Z,2026-07-10T21:30:46.919077Z,Group L,Toronto,Matchday 13,group
-WC-071,Panama,England,2026-06-27T21:00:00Z,2026-07-10T21:30:46.919077Z,Group L,New York/New Jersey (East Rutherford),Matchday 17,group
-WC-072,Croatia,Ghana,2026-06-27T21:00:00Z,2026-07-10T21:30:46.919077Z,Group L,Philadelphia,Matchday 17,group
+WC-001,Mexico,South Africa,2026-06-11T19:00:00Z,2026-07-10T21:47:30.568472Z,Group A,Mexico City,Matchday 1,group
+WC-002,South Korea,Czech Republic,2026-06-12T02:00:00Z,2026-07-10T21:47:30.568472Z,Group A,Guadalajara (Zapopan),Matchday 1,group
+WC-003,Czech Republic,South Africa,2026-06-18T16:00:00Z,2026-07-10T21:47:30.568472Z,Group A,Atlanta,Matchday 8,group
+WC-004,Mexico,South Korea,2026-06-19T01:00:00Z,2026-07-10T21:47:30.568472Z,Group A,Guadalajara (Zapopan),Matchday 8,group
+WC-005,Czech Republic,Mexico,2026-06-25T01:00:00Z,2026-07-10T21:47:30.568472Z,Group A,Mexico City,Matchday 14,group
+WC-006,South Africa,South Korea,2026-06-25T01:00:00Z,2026-07-10T21:47:30.568472Z,Group A,Monterrey (Guadalupe),Matchday 14,group
+WC-007,Canada,Bosnia & Herzegovina,2026-06-12T19:00:00Z,2026-07-10T21:47:30.568472Z,Group B,Toronto,Matchday 2,group
+WC-008,Qatar,Switzerland,2026-06-13T19:00:00Z,2026-07-10T21:47:30.568472Z,Group B,San Francisco Bay Area (Santa Clara),Matchday 3,group
+WC-009,Switzerland,Bosnia & Herzegovina,2026-06-18T19:00:00Z,2026-07-10T21:47:30.568472Z,Group B,Los Angeles (Inglewood),Matchday 8,group
+WC-010,Canada,Qatar,2026-06-18T22:00:00Z,2026-07-10T21:47:30.568472Z,Group B,Vancouver,Matchday 8,group
+WC-011,Switzerland,Canada,2026-06-24T19:00:00Z,2026-07-10T21:47:30.568472Z,Group B,Vancouver,Matchday 14,group
+WC-012,Bosnia & Herzegovina,Qatar,2026-06-24T19:00:00Z,2026-07-10T21:47:30.568472Z,Group B,Seattle,Matchday 14,group
+WC-013,Brazil,Morocco,2026-06-13T22:00:00Z,2026-07-10T21:47:30.568472Z,Group C,New York/New Jersey (East Rutherford),Matchday 3,group
+WC-014,Haiti,Scotland,2026-06-14T01:00:00Z,2026-07-10T21:47:30.568472Z,Group C,Boston (Foxborough),Matchday 3,group
+WC-015,Scotland,Morocco,2026-06-19T22:00:00Z,2026-07-10T21:47:30.568472Z,Group C,Boston (Foxborough),Matchday 9,group
+WC-016,Brazil,Haiti,2026-06-20T00:30:00Z,2026-07-10T21:47:30.568472Z,Group C,Philadelphia,Matchday 9,group
+WC-017,Scotland,Brazil,2026-06-24T22:00:00Z,2026-07-10T21:47:30.568472Z,Group C,Miami (Miami Gardens),Matchday 14,group
+WC-018,Morocco,Haiti,2026-06-24T22:00:00Z,2026-07-10T21:47:30.568472Z,Group C,Atlanta,Matchday 14,group
+WC-019,USA,Paraguay,2026-06-13T01:00:00Z,2026-07-10T21:47:30.568472Z,Group D,Los Angeles (Inglewood),Matchday 2,group
+WC-020,Australia,Turkey,2026-06-14T04:00:00Z,2026-07-10T21:47:30.568472Z,Group D,Vancouver,Matchday 3,group
+WC-021,USA,Australia,2026-06-19T19:00:00Z,2026-07-10T21:47:30.568472Z,Group D,Seattle,Matchday 9,group
+WC-022,Turkey,Paraguay,2026-06-20T03:00:00Z,2026-07-10T21:47:30.568472Z,Group D,San Francisco Bay Area (Santa Clara),Matchday 9,group
+WC-023,Turkey,USA,2026-06-26T02:00:00Z,2026-07-10T21:47:30.568472Z,Group D,Los Angeles (Inglewood),Matchday 15,group
+WC-024,Paraguay,Australia,2026-06-26T02:00:00Z,2026-07-10T21:47:30.568472Z,Group D,San Francisco Bay Area (Santa Clara),Matchday 15,group
+WC-025,Germany,Curaçao,2026-06-14T17:00:00Z,2026-07-10T21:47:30.568472Z,Group E,Houston,Matchday 4,group
+WC-026,Ivory Coast,Ecuador,2026-06-14T23:00:00Z,2026-07-10T21:47:30.568472Z,Group E,Philadelphia,Matchday 4,group
+WC-027,Germany,Ivory Coast,2026-06-20T20:00:00Z,2026-07-10T21:47:30.568472Z,Group E,Toronto,Matchday 10,group
+WC-028,Ecuador,Curaçao,2026-06-21T00:00:00Z,2026-07-10T21:47:30.568472Z,Group E,Kansas City,Matchday 10,group
+WC-029,Curaçao,Ivory Coast,2026-06-25T20:00:00Z,2026-07-10T21:47:30.568472Z,Group E,Philadelphia,Matchday 15,group
+WC-030,Ecuador,Germany,2026-06-25T20:00:00Z,2026-07-10T21:47:30.568472Z,Group E,New York/New Jersey (East Rutherford),Matchday 15,group
+WC-031,Netherlands,Japan,2026-06-14T20:00:00Z,2026-07-10T21:47:30.568472Z,Group F,Dallas (Arlington),Matchday 4,group
+WC-032,Sweden,Tunisia,2026-06-15T02:00:00Z,2026-07-10T21:47:30.568472Z,Group F,Monterrey (Guadalupe),Matchday 4,group
+WC-033,Netherlands,Sweden,2026-06-20T17:00:00Z,2026-07-10T21:47:30.568472Z,Group F,Houston,Matchday 10,group
+WC-034,Tunisia,Japan,2026-06-21T04:00:00Z,2026-07-10T21:47:30.568472Z,Group F,Monterrey (Guadalupe),Matchday 10,group
+WC-035,Japan,Sweden,2026-06-25T23:00:00Z,2026-07-10T21:47:30.568472Z,Group F,Dallas (Arlington),Matchday 15,group
+WC-036,Tunisia,Netherlands,2026-06-25T23:00:00Z,2026-07-10T21:47:30.568472Z,Group F,Kansas City,Matchday 15,group
+WC-037,Belgium,Egypt,2026-06-15T19:00:00Z,2026-07-10T21:47:30.568472Z,Group G,Seattle,Matchday 5,group
+WC-038,Iran,New Zealand,2026-06-16T01:00:00Z,2026-07-10T21:47:30.568472Z,Group G,Los Angeles (Inglewood),Matchday 5,group
+WC-039,Belgium,Iran,2026-06-21T19:00:00Z,2026-07-10T21:47:30.568472Z,Group G,Los Angeles (Inglewood),Matchday 11,group
+WC-040,New Zealand,Egypt,2026-06-22T01:00:00Z,2026-07-10T21:47:30.568472Z,Group G,Vancouver,Matchday 11,group
+WC-041,Egypt,Iran,2026-06-27T03:00:00Z,2026-07-10T21:47:30.568472Z,Group G,Seattle,Matchday 16,group
+WC-042,New Zealand,Belgium,2026-06-27T03:00:00Z,2026-07-10T21:47:30.568472Z,Group G,Vancouver,Matchday 16,group
+WC-043,Spain,Cape Verde,2026-06-15T16:00:00Z,2026-07-10T21:47:30.568472Z,Group H,Atlanta,Matchday 5,group
+WC-044,Saudi Arabia,Uruguay,2026-06-15T22:00:00Z,2026-07-10T21:47:30.568472Z,Group H,Miami (Miami Gardens),Matchday 5,group
+WC-045,Spain,Saudi Arabia,2026-06-21T16:00:00Z,2026-07-10T21:47:30.568472Z,Group H,Atlanta,Matchday 11,group
+WC-046,Uruguay,Cape Verde,2026-06-21T22:00:00Z,2026-07-10T21:47:30.568472Z,Group H,Miami (Miami Gardens),Matchday 11,group
+WC-047,Cape Verde,Saudi Arabia,2026-06-27T00:00:00Z,2026-07-10T21:47:30.568472Z,Group H,Houston,Matchday 16,group
+WC-048,Uruguay,Spain,2026-06-27T00:00:00Z,2026-07-10T21:47:30.568472Z,Group H,Guadalajara (Zapopan),Matchday 16,group
+WC-049,France,Senegal,2026-06-16T19:00:00Z,2026-07-10T21:47:30.568472Z,Group I,New York/New Jersey (East Rutherford),Matchday 6,group
+WC-050,Iraq,Norway,2026-06-16T22:00:00Z,2026-07-10T21:47:30.568472Z,Group I,Boston (Foxborough),Matchday 6,group
+WC-051,France,Iraq,2026-06-22T21:00:00Z,2026-07-10T21:47:30.568472Z,Group I,Philadelphia,Matchday 12,group
+WC-052,Norway,Senegal,2026-06-23T00:00:00Z,2026-07-10T21:47:30.568472Z,Group I,New York/New Jersey (East Rutherford),Matchday 12,group
+WC-053,Norway,France,2026-06-26T19:00:00Z,2026-07-10T21:47:30.568472Z,Group I,Boston (Foxborough),Matchday 16,group
+WC-054,Senegal,Iraq,2026-06-26T19:00:00Z,2026-07-10T21:47:30.568472Z,Group I,Toronto,Matchday 16,group
+WC-055,Argentina,Algeria,2026-06-17T01:00:00Z,2026-07-10T21:47:30.568472Z,Group J,Kansas City,Matchday 6,group
+WC-056,Austria,Jordan,2026-06-17T04:00:00Z,2026-07-10T21:47:30.568472Z,Group J,San Francisco Bay Area (Santa Clara),Matchday 6,group
+WC-057,Argentina,Austria,2026-06-22T17:00:00Z,2026-07-10T21:47:30.568472Z,Group J,Dallas (Arlington),Matchday 12,group
+WC-058,Jordan,Algeria,2026-06-23T03:00:00Z,2026-07-10T21:47:30.568472Z,Group J,San Francisco Bay Area (Santa Clara),Matchday 12,group
+WC-059,Algeria,Austria,2026-06-28T02:00:00Z,2026-07-10T21:47:30.568472Z,Group J,Kansas City,Matchday 17,group
+WC-060,Jordan,Argentina,2026-06-28T02:00:00Z,2026-07-10T21:47:30.568472Z,Group J,Dallas (Arlington),Matchday 17,group
+WC-061,Portugal,DR Congo,2026-06-17T17:00:00Z,2026-07-10T21:47:30.568472Z,Group K,Houston,Matchday 7,group
+WC-062,Uzbekistan,Colombia,2026-06-18T02:00:00Z,2026-07-10T21:47:30.568472Z,Group K,Mexico City,Matchday 7,group
+WC-063,Portugal,Uzbekistan,2026-06-23T17:00:00Z,2026-07-10T21:47:30.568472Z,Group K,Houston,Matchday 13,group
+WC-064,Colombia,DR Congo,2026-06-24T02:00:00Z,2026-07-10T21:47:30.568472Z,Group K,Guadalajara (Zapopan),Matchday 13,group
+WC-065,Colombia,Portugal,2026-06-27T23:30:00Z,2026-07-10T21:47:30.568472Z,Group K,Miami (Miami Gardens),Matchday 17,group
+WC-066,DR Congo,Uzbekistan,2026-06-27T23:30:00Z,2026-07-10T21:47:30.568472Z,Group K,Atlanta,Matchday 17,group
+WC-067,England,Croatia,2026-06-17T20:00:00Z,2026-07-10T21:47:30.568472Z,Group L,Dallas (Arlington),Matchday 7,group
+WC-068,Ghana,Panama,2026-06-17T23:00:00Z,2026-07-10T21:47:30.568472Z,Group L,Toronto,Matchday 7,group
+WC-069,England,Ghana,2026-06-23T20:00:00Z,2026-07-10T21:47:30.568472Z,Group L,Boston (Foxborough),Matchday 13,group
+WC-070,Panama,Croatia,2026-06-23T23:00:00Z,2026-07-10T21:47:30.568472Z,Group L,Toronto,Matchday 13,group
+WC-071,Panama,England,2026-06-27T21:00:00Z,2026-07-10T21:47:30.568472Z,Group L,New York/New Jersey (East Rutherford),Matchday 17,group
+WC-072,Croatia,Ghana,2026-06-27T21:00:00Z,2026-07-10T21:47:30.568472Z,Group L,Philadelphia,Matchday 17,group
