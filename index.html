@@ -765,13 +765,14 @@
     }
     .bracket-viewport {
       width: 100%;
-      overflow: hidden;
+      overflow-x: auto;
       padding: 4px 0 12px;
+      scrollbar-width: thin;
     }
     .bracket-board {
       direction: ltr;
       width: 100%;
-      min-width: 0;
+      min-width: 1300px;
       margin-inline: auto;
       display: grid;
       grid-template-columns: 1.2fr .98fr .78fr .66fr .95fr .66fr .78fr .98fr 1.2fr;
