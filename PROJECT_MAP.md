@@ -55,3 +55,5 @@ These are pending feature upgrades requested by the user, inspired by `mcp.magni
 - [x] **Probability Bars**: Render probability percentages (`home_win %` / `draw %` / `away_win %`) as visual colored horizontal bars instead of plain text.
 - [x] **Match Meta**: Display stadium name and local kickoff time on the cards.
 - [x] **Referees & Stadium Info**: Expand the detailed views to show referee names and additional match metadata when stats are available.
+
+<!-- Trigger Pages Build -->
