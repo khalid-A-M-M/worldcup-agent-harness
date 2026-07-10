@@ -30,7 +30,7 @@ def main() -> None:
     matches = data["matches"]
     from_date = datetime.fromisoformat(args.from_date).date() if args.from_date else None
     to_date = datetime.fromisoformat(args.to_date).date() if args.to_date else None
-    generated_at = datetime(2026, 6, 23, 10, 0, tzinfo=timezone.utc)
+    generated_at = datetime.now(timezone.utc)
 
     completed = [m for m in matches if "score" in m and "ft" in m["score"]]
     all_group_fixtures = [(idx, match) for idx, match in enumerate(matches, start=1) if match.get("group")]

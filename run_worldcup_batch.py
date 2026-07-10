@@ -27,6 +27,7 @@ def main() -> None:
                 "arabic_name": row["arabic_name"],
                 "primary_color": row["primary_color"],
                 "secondary_color": row["secondary_color"],
+                "fifa_rank": row.get("fifa_rank", ""),
             }
             for row in csv.DictReader(f)
         }

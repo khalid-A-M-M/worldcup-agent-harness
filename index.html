@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>توقعات كأس العالم | Agent Harness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: dark;
@@ -19,7 +22,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      font-family: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
       color: var(--ink);
       background:
         radial-gradient(circle at 18% 12%, rgba(214,168,73,.26), transparent 28%),
@@ -150,13 +153,25 @@
       position: relative;
       overflow: hidden;
       min-height: 292px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       background:
-        linear-gradient(135deg, color-mix(in srgb, var(--team-a) 36%, transparent), transparent 42%),
-        linear-gradient(315deg, color-mix(in srgb, var(--team-b) 36%, transparent), transparent 42%),
-        var(--panel);
-      box-shadow: 0 24px 70px rgba(0,0,0,.28);
+        linear-gradient(135deg, color-mix(in srgb, var(--team-a) 12%, transparent), transparent 45%),
+        linear-gradient(315deg, color-mix(in srgb, var(--team-b) 12%, transparent), transparent 45%),
+        rgba(10, 22, 38, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.1),
+        0 12px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--team-a) 40%, rgba(255,255,255,0.25));
+      box-shadow: 
+        0 0 20px color-mix(in srgb, var(--team-a) 15%, transparent),
+        0 20px 50px rgba(0, 0, 0, 0.5);
     }
     .card::before {
       content: "";
@@ -229,10 +244,39 @@
       font-weight: 800;
     }
     .winner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
       margin-bottom: 12px;
       color: #fff2bd;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 14px;
+    }
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 1px 5px;
+      font-size: 10px;
+      font-weight: 800;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .predicted-score-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 11px;
+      font-weight: 800;
+      border-radius: 5px;
+      background: rgba(14, 165, 233, 0.16);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.24);
     }
     .stack {
       display: flex;
@@ -762,12 +806,14 @@
       border: 1px solid rgba(255,255,255,.16);
       border-radius: 12px;
       background:
-        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 23%, transparent), transparent 54%),
-        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 23%, transparent), transparent 54%),
-        rgba(6, 17, 18, .78);
+        linear-gradient(135deg, color-mix(in srgb, var(--home-color, #38bdf8) 12%, transparent), transparent 54%),
+        linear-gradient(315deg, color-mix(in srgb, var(--away-color, #ef4444) 12%, transparent), transparent 54%),
+        rgba(10, 22, 38, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       padding: 7px;
       min-height: clamp(52px, 7vw, 82px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 12px 26px rgba(0,0,0,.22);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 12px 26px rgba(0, 0, 0, 0.4);
       transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
     }
     .bracket-match:hover {
@@ -838,6 +884,7 @@
       word-break: normal;
       overflow-wrap: normal;
       display: block;
+      font-size: clamp(11px, 1.2vw, 15px);
     }
     .bracket-team b {
       direction: ltr;
@@ -919,6 +966,7 @@
       .bracket-team .team-name {
         font-weight: 750;
         line-height: 1.1;
+        font-size: clamp(8px, 1.8vw, 11px);
       }
       .bracket-method {
         margin-top: 3px;
@@ -1087,7 +1135,7 @@
     </div>
     <div class="filters" id="filters">
       <button class="active" data-filter="all">كل المباريات</button>
-      <button data-filter="today">23 يونيو</button>
+      <button data-filter="today" id="todayFilterBtn">اليوم</button>
       <button data-filter="group">دور المجموعات</button>
       <button data-filter="close">مباريات متقاربة</button>
     </div>
@@ -1136,6 +1184,17 @@
       group: "دور المجموعات",
       knockout: "خروج المغلوب"
     };
+
+    // تحديث زر "اليوم" بالتاريخ الحالي بالعربية
+    (function updateTodayButtonLabel() {
+      const btn = document.getElementById("todayFilterBtn");
+      if (!btn) return;
+      const now = new Date();
+      const day = now.getUTCDate();
+      const monthNames = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+      const month = monthNames[now.getUTCMonth()];
+      btn.textContent = `${day} ${month}`;
+    })();
 
     function pct(value) {
       return `${Math.round(value * 1000) / 10}%`;
@@ -1417,6 +1476,11 @@
         ? `تمت المراجعة: Brier ${selfCorrection.payload.brier_score.toFixed(3)} / Log Loss ${selfCorrection.payload.log_loss.toFixed(3)}`
         : "لا توجد نتيجة فعلية بعد لهذه المباراة";
 
+      const rankA = teamA.fifa_rank ? `<span class="rank-badge">#${teamA.fifa_rank}</span>` : "";
+      const rankB = teamB.fifa_rank ? `<span class="rank-badge">#${teamB.fifa_rank}</span>` : "";
+      const expGoals = report.agents.specialist_analysis?.payload?.expected_goals;
+      const predictedScore = expGoals ? `🤖 التوقع: ${Math.round(expGoals.home)} - ${Math.round(expGoals.away)}` : "";
+
       return `
         <article class="card" data-match-id="${report.match.match_id}" onclick="window.openMatchDetailsById('${report.match.match_id}')" style="--team-a:${teamA.primary_color};--team-b:${teamB.primary_color};">
           <div class="card-inner">
@@ -1426,16 +1490,19 @@
             </div>
             <div class="teams">
               <div class="team left">
-                <h2 class="team-name">${teamA.arabic_name}</h2>
+                <h2 class="team-name">${teamA.arabic_name} ${rankA}</h2>
                 <div class="team-original">${report.match.home_team}</div>
               </div>
               <div class="versus">ضد</div>
               <div class="team right">
-                <h2 class="team-name">${teamB.arabic_name}</h2>
+                <h2 class="team-name">${teamB.arabic_name} ${rankB}</h2>
                 <div class="team-original">${report.match.away_team}</div>
               </div>
             </div>
-            <div class="winner">${winnerText(report, final, teamA, teamB)}</div>
+            <div class="winner">
+              <span>${winnerText(report, final, teamA, teamB)}</span>
+              ${predictedScore ? `<span class="predicted-score-pill">${predictedScore}</span>` : ""}
+            </div>
             ${stackBar(report, final, teamA, teamB)}
             <p class="note">${arabicExplanation(report, final, teamA, teamB)}</p>
             ${renderEconomicStrip(report, teamA, teamB)}
@@ -1512,7 +1579,10 @@
     function applyFilter() {
       const filtered = chronologicalReports(allReports).filter(report => {
         const final = report.agents.synthesizer.payload;
-        if (currentFilter === "today") return report.match.kickoff_utc.startsWith("2026-06-23");
+        if (currentFilter === "today") {
+          const todayUtc = new Date().toISOString().slice(0, 10);
+          return report.match.kickoff_utc.startsWith(todayUtc);
+        }
         if (currentFilter === "group") return (report.match.stage || "group") === "group";
         if (currentFilter === "close") {
           const values = [final.home_win, final.draw, final.away_win].sort((a, b) => b - a);
@@ -1625,7 +1695,7 @@
                 <strong style="color:${team.primary_color}">${team.arabic_name}</strong>
                 <div class="team-original">${team.team} · نقاط متوقعة ${(team.points + team.expected_points).toFixed(1)}</div>
               </div>
-              <span class="route">${team.route_strength}</span>
+              <span class="route">${({strong:"مسار قوي",medium:"مسار متوسط",weak:"مسار صعب",very_strong:"مسار مريح جداً",very_weak:"مسار بالغ الصعوبة"})[team.route_strength] || team.route_strength}</span>
             </div>
           `).join("")}
         </article>
@@ -1976,12 +2046,32 @@
     }
 
     function parseCsv(text) {
+      // محلل CSV يدعم الحقول المقتبسة التي تحتوي على فواصل أو أسطر جديدة (RFC-4180)
+      function parseLine(line) {
+        const fields = [];
+        let current = "";
+        let inQuotes = false;
+        for (let i = 0; i < line.length; i++) {
+          const ch = line[i];
+          if (inQuotes) {
+            if (ch === '"' && line[i + 1] === '"') { current += '"'; i++; }
+            else if (ch === '"') { inQuotes = false; }
+            else { current += ch; }
+          } else {
+            if (ch === '"') { inQuotes = true; }
+            else if (ch === ',') { fields.push(current); current = ""; }
+            else { current += ch; }
+          }
+        }
+        fields.push(current);
+        return fields;
+      }
       const lines = text.trim().split(/\r?\n/);
       if (!lines.length) return [];
-      const headers = lines[0].split(",");
+      const headers = parseLine(lines[0]);
       return lines.slice(1).filter(Boolean).map(line => {
-        const values = line.split(",");
-        return Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]));
+        const values = parseLine(line);
+        return Object.fromEntries(headers.map((header, index) => [header.trim(), (values[index] ?? "").trim()]));
       });
     }
 
@@ -2078,34 +2168,62 @@
         const isCorrect = row.correct;
         const teamA = visual(row.home_team);
         const teamB = visual(row.away_team);
-        const resultLabel = {
-          home_win: "فوز المنتخب الأول",
+        const stageLabel = row.stage === "knockout" ? "خروج المغلوب" : "دور المجموعات";
+        const kickoffDate = row.kickoff_utc ? new Date(row.kickoff_utc).toLocaleString("ar", { dateStyle: "medium", timeStyle: "short" }) : "";
+        const outcomeLabel = {
+          home_win: `فوز ${teamA.arabic_name}`,
           draw: "تعادل",
-          away_win: "فوز المنتخب الثاني"
+          away_win: `فوز ${teamB.arabic_name}`
         };
+        const predictedAr = outcomeLabel[row.predicted] || row.predicted;
+        const actualAr    = outcomeLabel[row.actual]    || row.actual;
+        const statusBg   = isCorrect ? "rgba(34,197,94,.18)" : "rgba(239,68,68,.18)";
+        const statusBorder = isCorrect ? "#22c55e" : "#ef4444";
         return `
-          <article class="pairing-card">
-            <h2>${teamA.arabic_name} ضد ${teamB.arabic_name}</h2>
+          <article class="pairing-card" style="border-right:4px solid ${statusBorder};">
+            <div class="meta" style="margin-bottom:8px">
+              <span class="pill">${stageLabel}</span>
+              <span class="pill">${row.match_id}</span>
+              ${kickoffDate ? `<span class="pill">${kickoffDate}</span>` : ""}
+            </div>
+            <h2 style="margin:0 0 10px">${teamA.arabic_name} ضد ${teamB.arabic_name}</h2>
             <div class="pairing">
-              <strong style="color:${teamA.primary_color}">${teamA.arabic_name}</strong>
-              <span class="versus" style="width:50px;height:50px;background:${isCorrect ? "rgba(34,197,94,.3)" : "rgba(239,68,68,.3)"}">${isCorrect ? "صح" : "خطأ"}</span>
-              <strong style="text-align:left;color:${teamB.primary_color}">${teamB.arabic_name}</strong>
+              <div style="text-align:right">
+                <strong style="font-size:22px;color:${teamA.primary_color}">${teamA.arabic_name}</strong>
+              </div>
+              <span class="versus" style="width:56px;height:56px;font-size:13px;background:${statusBg};border:2px solid ${statusBorder};color:${statusBorder}">${isCorrect ? "✓ صح" : "✗ خطأ"}</span>
+              <div style="text-align:left">
+                <strong style="font-size:22px;color:${teamB.primary_color}">${teamB.arabic_name}</strong>
+              </div>
             </div>
             <div class="detail-grid" style="margin-top:12px">
               <div class="detail-box">
                 <h3>التوقع والنتيجة</h3>
-                <p class="note">توقع النموذج: ${resultLabel[row.predicted] || row.predicted}</p>
-                <p class="note">النتيجة الفعلية: ${resultLabel[row.actual] || row.actual}</p>
-                <p class="note">احتمال النتيجة الفعلية قبل المباراة: ${pct(row.probability_actual || 0)}</p>
+                <div class="standing-row">
+                  <span class="rank">ت</span>
+                  <strong>توقع النموذج</strong>
+                  <span style="color:#d6a849">${predictedAr}</span>
+                </div>
+                <div class="standing-row">
+                  <span class="rank" style="background:${statusBg};color:${statusBorder}">ن</span>
+                  <strong>النتيجة الفعلية</strong>
+                  <span style="color:${statusBorder};font-weight:700">${actualAr}</span>
+                </div>
+                <div class="standing-row">
+                  <span class="rank">%</span>
+                  <strong>احتمال النتيجة قبل المباراة</strong>
+                  <span>${pct(row.probability_actual || 0)}</span>
+                </div>
               </div>
               <div class="detail-box">
                 <h3>دقة المباراة</h3>
                 <div class="standing-row"><span class="rank">B</span><strong>Brier Score</strong><span>${row.brier_score.toFixed(3)}</span></div>
                 <div class="standing-row"><span class="rank">L</span><strong>Log Loss</strong><span>${row.log_loss.toFixed(3)}</span></div>
-                <div class="standing-row"><span class="rank">V</span><strong>نسخة المعايرة</strong><span>${row.calibration_version}</span></div>
+                <div class="standing-row"><span class="rank">V</span><strong>نسخة المعايرة</strong><span>${row.calibration_version ?? "—"}</span></div>
+                <div class="standing-row"><span class="rank">M</span><strong>عائلة النموذج</strong><span style="font-size:11px">${row.model_family || "—"}</span></div>
               </div>
               <div class="detail-box">
-                <h3>الإحصاءات</h3>
+                <h3>إحصاءات المباراة</h3>
                 ${renderCompletedStats(row, teamA, teamB)}
               </div>
             </div>
@@ -2159,17 +2277,27 @@
             </div>
           </div>
         </article>
-        ${(report.matches || []).map(row => `
+        ${(report.matches || []).map(row => {
+          const teamA = visual(row.home_team);
+          const teamB = visual(row.away_team);
+          const stageLabel = row.stage === "knockout" ? "خروج المغلوب" : "دور المجموعات";
+          return `
           <article class="pairing-card">
-            <h2>${row.match_id}</h2>
-            <div class="pairing">
-              <strong>${row.home_team}</strong>
-              <span class="versus" style="width:42px;height:42px">${row.correct ? "صح" : "خطأ"}</span>
-              <strong style="text-align:left">${row.away_team}</strong>
+            <h2>${teamA.arabic_name} ضد ${teamB.arabic_name}</h2>
+            <div class="meta" style="margin-bottom:8px">
+              <span class="pill">${stageLabel}</span>
+              <span class="pill">${row.match_id}</span>
             </div>
-            <p class="note">التوقع: ${row.predicted} · الفعلي: ${row.actual} · Brier ${row.brier_score.toFixed(3)} · LogLoss ${row.log_loss.toFixed(3)}</p>
+            <div class="pairing">
+              <strong style="color:${teamA.primary_color}">${teamA.arabic_name}</strong>
+              <span class="versus" style="width:50px;height:50px;background:${row.correct ? 'rgba(34,197,94,.3)' : 'rgba(239,68,68,.3)'}">${row.correct ? "✓ صح" : "✗ خطأ"}</span>
+              <strong style="text-align:left;color:${teamB.primary_color}">${teamB.arabic_name}</strong>
+            </div>
+            <p class="note">توقع النموذج: <b>${outcomeText(row, row.predicted)}</b></p>
+            <p class="note">النتيجة الفعلية: <b style="color:${row.correct ? '#22c55e' : '#ef4444'}">${outcomeText(row, row.actual)}</b></p>
+            <p class="note">Brier ${row.brier_score.toFixed(3)} · LogLoss ${row.log_loss.toFixed(3)} · احتمال النتيجة الفعلية ${pct(row.probability_actual || 0)}</p>
           </article>
-        `).join("")}
+        `}).join("")}
       `;
     }
 
@@ -2227,25 +2355,6 @@
       document.getElementById("status").innerHTML = `\u062a\u0645 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0644\u0648\u062d\u0629 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b ${new Date().toLocaleTimeString("ar")} \u0645\u0646 <code>${location.origin}</code>${warning}`;
     }
 
-    if (false) loadFiles().then(files => Promise.all([
-      Promise.all(files.map(file => fetch(file).then(response => {
-      if (!response.ok) throw new Error(file);
-      return response.json();
-      }))),
-      fetch("outputs/tournament_projection.json").then(response => response.ok ? response.json() : null),
-      fetch("outputs/accuracy_report.json").then(response => response.ok ? response.json() : null),
-      fetch("data/match_advanced_stats.csv").then(response => response.ok ? response.text() : "")
-    ])).then(([reports, projection, accuracy, statsCsv]) => {
-      allReports = chronologicalReports(reports);
-      tournamentProjection = projection;
-      knockoutPrediction = knockout;
-      accuracyReport = accuracy;
-      advancedStats = statsCsv ? parseCsv(statsCsv) : [];
-      switchView("matches");
-      document.getElementById("status").innerHTML = `تم التحميل من <code>${location.origin}</code>`;
-    }).catch(error => {
-      document.getElementById("status").textContent = `تعذر تحميل ملف: ${error.message}`;
-    });
 
     refreshDashboard(false).catch(error => {
       document.getElementById("status").textContent = `تعذر تحميل ملف: ${error.message}`;

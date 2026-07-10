@@ -1,8 +1,8 @@
 match_id,source_actual_match_id,winner,method
-KO-073,WC-073,Canada,direct
-KO-074,WC-074,Brazil,penalties
-KO-075,WC-075,Paraguay,penalties
-KO-076,WC-076,Morocco,penalties
+KO-073,KO-073,Canada,direct
+KO-074,KO-074,Paraguay,penalties
+KO-075,KO-075,Morocco,penalties
+KO-076,KO-076,Brazil,direct
 KO-077,KO-077,Norway,direct
 KO-078,KO-078,France,direct
 KO-082,KO-082,Spain,direct

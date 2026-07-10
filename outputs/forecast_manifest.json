@@ -4,242 +4,290 @@
     "France": {
       "arabic_name": "فرنسا",
       "primary_color": "#1d4ed8",
-      "secondary_color": "#ef4444"
+      "secondary_color": "#ef4444",
+      "fifa_rank": "2"
     },
     "Argentina": {
       "arabic_name": "الأرجنتين",
       "primary_color": "#6ecff6",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "1"
     },
     "Spain": {
       "arabic_name": "إسبانيا",
       "primary_color": "#c60b1e",
-      "secondary_color": "#ffc400"
+      "secondary_color": "#ffc400",
+      "fifa_rank": "3"
     },
     "England": {
       "arabic_name": "إنجلترا",
       "primary_color": "#ffffff",
-      "secondary_color": "#cf142b"
+      "secondary_color": "#cf142b",
+      "fifa_rank": "4"
     },
     "Brazil": {
       "arabic_name": "البرازيل",
       "primary_color": "#009b3a",
-      "secondary_color": "#ffdf00"
+      "secondary_color": "#ffdf00",
+      "fifa_rank": "5"
     },
     "Portugal": {
       "arabic_name": "البرتغال",
       "primary_color": "#006600",
-      "secondary_color": "#ff0000"
+      "secondary_color": "#ff0000",
+      "fifa_rank": "7"
     },
     "Netherlands": {
       "arabic_name": "هولندا",
       "primary_color": "#f97316",
-      "secondary_color": "#1d4ed8"
+      "secondary_color": "#1d4ed8",
+      "fifa_rank": "8"
     },
     "Belgium": {
       "arabic_name": "بلجيكا",
       "primary_color": "#111111",
-      "secondary_color": "#ef3340"
+      "secondary_color": "#ef3340",
+      "fifa_rank": "6"
     },
     "Germany": {
       "arabic_name": "ألمانيا",
       "primary_color": "#111111",
-      "secondary_color": "#dd0000"
+      "secondary_color": "#dd0000",
+      "fifa_rank": "13"
     },
     "Croatia": {
       "arabic_name": "كرواتيا",
       "primary_color": "#d90429",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "12"
     },
     "Uruguay": {
       "arabic_name": "أوروغواي",
       "primary_color": "#60a5fa",
-      "secondary_color": "#111827"
+      "secondary_color": "#111827",
+      "fifa_rank": "11"
     },
     "Colombia": {
       "arabic_name": "كولومبيا",
       "primary_color": "#facc15",
-      "secondary_color": "#2563eb"
+      "secondary_color": "#2563eb",
+      "fifa_rank": "9"
     },
     "USA": {
       "arabic_name": "الولايات المتحدة",
       "primary_color": "#1d4ed8",
-      "secondary_color": "#b91c1c"
+      "secondary_color": "#b91c1c",
+      "fifa_rank": "17"
     },
     "Switzerland": {
       "arabic_name": "سويسرا",
       "primary_color": "#dc2626",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "16"
     },
     "Morocco": {
       "arabic_name": "المغرب",
       "primary_color": "#c1272d",
-      "secondary_color": "#006233"
+      "secondary_color": "#006233",
+      "fifa_rank": "14"
     },
     "Mexico": {
       "arabic_name": "المكسيك",
       "primary_color": "#006847",
-      "secondary_color": "#ce1126"
+      "secondary_color": "#ce1126",
+      "fifa_rank": "16"
     },
     "Japan": {
       "arabic_name": "اليابان",
       "primary_color": "#ffffff",
-      "secondary_color": "#bc002d"
+      "secondary_color": "#bc002d",
+      "fifa_rank": "15"
     },
     "Sweden": {
       "arabic_name": "السويد",
       "primary_color": "#006aa7",
-      "secondary_color": "#fecc00"
+      "secondary_color": "#fecc00",
+      "fifa_rank": "26"
     },
     "Senegal": {
       "arabic_name": "السنغال",
       "primary_color": "#00853f",
-      "secondary_color": "#fdef42"
+      "secondary_color": "#fdef42",
+      "fifa_rank": "18"
     },
     "Iran": {
       "arabic_name": "إيران",
       "primary_color": "#239f40",
-      "secondary_color": "#da0000"
+      "secondary_color": "#da0000",
+      "fifa_rank": "19"
     },
     "Austria": {
       "arabic_name": "النمسا",
       "primary_color": "#ed2939",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "22"
     },
     "South Korea": {
       "arabic_name": "كوريا الجنوبية",
       "primary_color": "#ffffff",
-      "secondary_color": "#cd2e3a"
+      "secondary_color": "#cd2e3a",
+      "fifa_rank": "23"
     },
     "Australia": {
       "arabic_name": "أستراليا",
       "primary_color": "#006b3f",
-      "secondary_color": "#ffcd00"
+      "secondary_color": "#ffcd00",
+      "fifa_rank": "24"
     },
     "Turkey": {
       "arabic_name": "تركيا",
       "primary_color": "#e30a17",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "28"
     },
     "Ecuador": {
       "arabic_name": "الإكوادور",
       "primary_color": "#ffdd00",
-      "secondary_color": "#034ea2"
+      "secondary_color": "#034ea2",
+      "fifa_rank": "30"
     },
     "Qatar": {
       "arabic_name": "قطر",
       "primary_color": "#8a1538",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "34"
     },
     "Ivory Coast": {
       "arabic_name": "ساحل العاج",
       "primary_color": "#f77f00",
-      "secondary_color": "#009e60"
+      "secondary_color": "#009e60",
+      "fifa_rank": "38"
     },
     "Algeria": {
       "arabic_name": "الجزائر",
       "primary_color": "#006233",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "44"
     },
     "Canada": {
       "arabic_name": "كندا",
       "primary_color": "#ff0000",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "40"
     },
     "Scotland": {
       "arabic_name": "اسكتلندا",
       "primary_color": "#005eb8",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "39"
     },
     "Norway": {
       "arabic_name": "النرويج",
       "primary_color": "#ba0c2f",
-      "secondary_color": "#00205b"
+      "secondary_color": "#00205b",
+      "fifa_rank": "47"
     },
     "Egypt": {
       "arabic_name": "مصر",
       "primary_color": "#ce1126",
-      "secondary_color": "#000000"
+      "secondary_color": "#000000",
+      "fifa_rank": "36"
     },
     "Ghana": {
       "arabic_name": "غانا",
       "primary_color": "#ce1126",
-      "secondary_color": "#fcd116"
+      "secondary_color": "#fcd116",
+      "fifa_rank": "64"
     },
     "Tunisia": {
       "arabic_name": "تونس",
       "primary_color": "#e70013",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "41"
     },
     "Panama": {
       "arabic_name": "بنما",
       "primary_color": "#005293",
-      "secondary_color": "#d21034"
+      "secondary_color": "#d21034",
+      "fifa_rank": "43"
     },
     "Cape Verde": {
       "arabic_name": "الرأس الأخضر",
       "primary_color": "#003893",
-      "secondary_color": "#f7d116"
+      "secondary_color": "#f7d116",
+      "fifa_rank": "65"
     },
     "Saudi Arabia": {
       "arabic_name": "السعودية",
       "primary_color": "#006c35",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "56"
     },
     "DR Congo": {
       "arabic_name": "الكونغو الديمقراطية",
       "primary_color": "#007fff",
-      "secondary_color": "#f7d618"
+      "secondary_color": "#f7d618",
+      "fifa_rank": "61"
     },
     "South Africa": {
       "arabic_name": "جنوب أفريقيا",
       "primary_color": "#007a4d",
-      "secondary_color": "#ffb612"
+      "secondary_color": "#ffb612",
+      "fifa_rank": "59"
     },
     "Uzbekistan": {
       "arabic_name": "أوزبكستان",
       "primary_color": "#1eb4e9",
-      "secondary_color": "#009739"
+      "secondary_color": "#009739",
+      "fifa_rank": "60"
     },
     "Paraguay": {
       "arabic_name": "باراغواي",
       "primary_color": "#0038a8",
-      "secondary_color": "#d52b1e"
+      "secondary_color": "#d52b1e",
+      "fifa_rank": "62"
     },
     "Czech Republic": {
       "arabic_name": "التشيك",
       "primary_color": "#11457e",
-      "secondary_color": "#d7141a"
+      "secondary_color": "#d7141a",
+      "fifa_rank": "35"
     },
     "Bosnia & Herzegovina": {
       "arabic_name": "البوسنة والهرسك",
       "primary_color": "#002395",
-      "secondary_color": "#fecb00"
+      "secondary_color": "#fecb00",
+      "fifa_rank": "74"
     },
     "Iraq": {
       "arabic_name": "العراق",
       "primary_color": "#ce1126",
-      "secondary_color": "#000000"
+      "secondary_color": "#000000",
+      "fifa_rank": "55"
     },
     "New Zealand": {
       "arabic_name": "نيوزيلندا",
       "primary_color": "#111827",
-      "secondary_color": "#ffffff"
+      "secondary_color": "#ffffff",
+      "fifa_rank": "95"
     },
     "Haiti": {
       "arabic_name": "هايتي",
       "primary_color": "#00209f",
-      "secondary_color": "#d21034"
+      "secondary_color": "#d21034",
+      "fifa_rank": "85"
     },
     "Jordan": {
       "arabic_name": "الأردن",
       "primary_color": "#007a3d",
-      "secondary_color": "#ce1126"
+      "secondary_color": "#ce1126",
+      "fifa_rank": "68"
     },
     "Curaçao": {
       "arabic_name": "كوراساو",
       "primary_color": "#002b7f",
-      "secondary_color": "#f9e814"
+      "secondary_color": "#f9e814",
+      "fifa_rank": "86"
     }
   },
   "knockout_bracket": "outputs/knockout_bracket_prediction.json",

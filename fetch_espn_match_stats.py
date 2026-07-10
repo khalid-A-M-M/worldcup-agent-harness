@@ -6,7 +6,7 @@ import json
 import subprocess
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 
@@ -53,13 +53,17 @@ ADVANCED_FIELDS = [
 ESPN_TO_INTERNAL = {
     "Congo DR": "DR Congo",
     "Bosnia and Herzegovina": "Bosnia & Herzegovina",
-    "C?te d'Ivoire": "Ivory Coast",
+    "Côte d'Ivoire": "Ivory Coast",
+    "C\u00f4te d'Ivoire": "Ivory Coast",
     "Ivory Coast": "Ivory Coast",
     "Cabo Verde": "Cape Verde",
     "Cape Verde Islands": "Cape Verde",
     "Czechia": "Czech Republic",
     "United States": "USA",
     "Korea Republic": "South Korea",
+    "New Zealand All Whites": "New Zealand",
+    "Algérie": "Algeria",
+    "Al\u00e9grie": "Algeria",
 }
 
 
@@ -86,14 +90,23 @@ def main() -> None:
     updated_results = 0
     updated_stats = 0
     for fixture in fixtures:
-        date_key = datetime.fromisoformat(fixture["kickoff_utc"].replace("Z", "+00:00")).strftime("%Y%m%d")
-        try:
-            scoreboard = _load_json_from_url(SCOREBOARD_URL.format(date=date_key), CACHE / f"scoreboard_{date_key}.json")
-        except Exception as exc:
-            print(f"Skipping ESPN scoreboard for {date_key}: {exc}")
-            continue
-        event = _find_event(scoreboard, fixture["home_team"], fixture["away_team"])
+        base_date = datetime.fromisoformat(fixture["kickoff_utc"].replace("Z", "+00:00"))
+        event = None
+        found_date_key = None
+        # البحث في نافذة زمنية ±3 أيام لتفادي أي فروقات في التوقيت أو المواعيد المجدولة
+        for offset in [0, -1, 1, -2, 2, -3, 3]:
+            date_key = (base_date + timedelta(days=offset)).strftime("%Y%m%d")
+            try:
+                scoreboard = _load_json_from_url(SCOREBOARD_URL.format(date=date_key), CACHE / f"scoreboard_{date_key}.json")
+            except Exception as exc:
+                print(f"Skipping ESPN scoreboard for {date_key}: {exc}")
+                continue
+            event = _find_event(scoreboard, fixture["home_team"], fixture["away_team"])
+            if event:
+                found_date_key = date_key
+                break
         if not event:
+            print(f"Could not find event on ESPN for {fixture['match_id']}: {fixture['home_team']} vs {fixture['away_team']}")
             continue
         competition = event["competitions"][0]
         status = competition["status"]["type"]
