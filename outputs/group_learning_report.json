@@ -4,18 +4,18 @@
     "correct": 29,
     "missed": 13,
     "accuracy": 0.6904761904761905,
-    "mean_brier_score": 0.4489647495260188,
-    "mean_log_loss": 0.9778277296132065
+    "mean_brier_score": 0.4542431806678196,
+    "mean_log_loss": 0.8274738969954278
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
-      "home_win": 6,
-      "away_win": 7
+      "home_win": 5,
+      "away_win": 8
     },
     "misses_by_actual_label": {
       "draw": 7,
-      "away_win": 2,
-      "home_win": 4
+      "home_win": 5,
+      "away_win": 1
     },
     "severe_log_loss_match_ids": [
       "WC-069",
@@ -27,6 +27,7 @@
       "WC-024",
       "WC-047",
       "WC-041",
+      "WC-072",
       "WC-065",
       "WC-059"
     ],
@@ -37,7 +38,7 @@
     ]
   },
   "learned_knockout_adjustments": {
-    "uncertainty_multiplier": 1.0587,
+    "uncertainty_multiplier": 1.0496,
     "favorite_shrink": 0.04,
     "upset_floor": 0.145,
     "penalty_sensitivity": 1.0202,
