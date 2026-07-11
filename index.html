@@ -11,45 +11,45 @@
   <style>
     :root {
       color-scheme: dark;
-      --bg: #0a0e1a;
-      --surface: #111827;
-      --surface-2: #1a2235;
-      --ink: #e8eaed;
-      --muted: #8b95a5;
-      --line: rgba(255,255,255,.08);
-      --panel: rgba(17,24,39,.95);
-      --accent: #6366f1;
-      --accent-light: #818cf8;
-      --accent-glow: rgba(99,102,241,.15);
+      --bg: #2d0006;
+      --surface: #1d0206;
+      --surface-2: #3a0811;
+      --ink: #fce7f3;
+      --muted: #fda4af;
+      --line: rgba(253,164,175,.15);
+      --panel: rgba(30,0,4,.96);
+      --accent: #e11d48;
+      --accent-light: #f43f5e;
+      --accent-glow: rgba(244,63,94,.15);
       --success: #10b981;
       --success-glow: rgba(16,185,129,.15);
       --danger: #ef4444;
       --danger-glow: rgba(239,68,68,.15);
       --warning: #f59e0b;
-      --draw: #f59e0b;
+      --draw: #d6a849;
       --glass: rgba(255,255,255,.04);
-      --card-radius: 16px;
-      --shadow-card: 0 4px 24px rgba(0,0,0,.25);
-      --shadow-hover: 0 8px 40px rgba(0,0,0,.35);
-      --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+      --card-radius: 12px;
+      --shadow-card: 0 4px 20px rgba(0,0,0,.4);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,.6);
+      --gradient-accent: linear-gradient(135deg, #e11d48 0%, #be123c 50%, #9f1239 100%);
     }
     [data-theme="light"] {
       color-scheme: light;
-      --bg: #f0f2f5;
+      --bg: #f8fafc;
       --surface: #ffffff;
-      --surface-2: #f7f8fa;
-      --ink: #1f2937;
-      --muted: #6b7280;
-      --line: rgba(0,0,0,.06);
+      --surface-2: #f1f5f9;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: rgba(0,0,0,.08);
       --panel: rgba(255,255,255,.98);
-      --accent: #4f46e5;
-      --accent-light: #6366f1;
-      --accent-glow: rgba(79,70,229,.08);
+      --accent: #e11d48;
+      --accent-light: #f43f5e;
+      --accent-glow: rgba(244,63,94,.08);
       --glass: rgba(0,0,0,.02);
       --success-glow: rgba(16,185,129,.08);
       --danger-glow: rgba(239,68,68,.08);
-      --shadow-card: 0 2px 12px rgba(0,0,0,.06);
-      --shadow-hover: 0 6px 24px rgba(0,0,0,.10);
+      --shadow-card: 0 2px 10px rgba(0,0,0,.08);
+      --shadow-hover: 0 6px 20px rgba(0,0,0,.15);
     }
     * { box-sizing: border-box; }
     body {
@@ -1166,6 +1166,121 @@
       .economic-pillar { grid-template-columns: 1fr; }
       .accuracy-hero { grid-column: span 1; grid-template-columns: 1fr; }
     }
+    /* Dashboard Grid Layout (Power BI style) */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+      direction: rtl;
+    }
+    .dashboard-grid.hidden {
+      display: none;
+    }
+    .dashboard-kpi-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--card-radius);
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .kpi-title {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .kpi-value {
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 900;
+      color: var(--accent-light);
+      font-family: "Inter", "Cairo", sans-serif;
+    }
+    .dashboard-center-col, .dashboard-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .dashboard-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--card-radius);
+      padding: 16px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .dashboard-panel h3 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+    }
+    .dashboard-bracket-viewport {
+      max-height: 280px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-inline-end: 6px;
+    }
+    .dashboard-teams-list {
+      max-height: 280px;
+      overflow-y: auto;
+      padding-inline-end: 6px;
+    }
+    .dashboard-team-row {
+      display: grid;
+      grid-template-columns: 24px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+    .dashboard-team-row:last-child {
+      border-bottom: none;
+    }
+    .dashboard-team-row .rank-num {
+      font-weight: 700;
+      color: var(--muted);
+      text-align: center;
+    }
+    .dashboard-team-row .team-name-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+    }
+    .dashboard-team-row .team-prob {
+      font-weight: 900;
+      color: var(--accent-light);
+    }
+    @media (max-width: 1024px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      .dashboard-kpi-col {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+    }
   </style>
 </head>
 <body>
@@ -1188,7 +1303,8 @@
       <span id="count">...</span>
     </div>
     <div class="tabs" id="tabs">
-      <button class="active" data-view="matches">المباريات والتوقعات</button>
+      <button class="active" data-view="overview">📊 لوحة التحكم الشاملة</button>
+      <button data-view="matches">المباريات والتوقعات</button>
       <button data-view="paths">المجموعات والمسارات</button>
       <button data-view="pairings">مواجهات محتملة</button>
       <button data-view="knockout">خروج المغلوب</button>
@@ -1197,13 +1313,66 @@
       <button data-view="completed">المباريات المكتملة</button>
       <button data-view="analytics">📊 لوحة التحليلات</button>
     </div>
-    <div class="filters" id="filters">
+    <div class="filters hidden" id="filters">
       <button class="active" data-filter="all">كل المباريات</button>
       <button data-filter="today" id="todayFilterBtn">اليوم</button>
       <button data-filter="group">دور المجموعات</button>
       <button data-filter="close">مباريات متقاربة</button>
     </div>
-    <section class="grid" id="cards"></section>
+    <section class="dashboard-grid" id="overview">
+      <!-- Left Column: KPI Cards -->
+      <div class="dashboard-kpi-col">
+        <div class="kpi-card">
+          <span class="kpi-title">عدد مباريات البطولة</span>
+          <span class="kpi-value" id="kpiMatches">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">أهداف البطولة</span>
+          <span class="kpi-value" id="kpiGoals">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">متوسط الأهداف / مباراة</span>
+          <span class="kpi-value" id="kpiAvgGoals">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">البطاقات الصفراء</span>
+          <span class="kpi-value" id="kpiCards">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">متوسط البطاقات / مباراة</span>
+          <span class="kpi-value" id="kpiAvgCards">-</span>
+        </div>
+      </div>
+
+      <!-- Center Column: Bracket & Donut Chart -->
+      <div class="dashboard-center-col">
+        <div class="dashboard-panel">
+          <h3>شجرة خروج المغلوب المتوقعة</h3>
+          <div id="dashboardBracket" class="dashboard-bracket-viewport"></div>
+        </div>
+        <div class="dashboard-panel">
+          <h3>توزيع نتائج التوقعات (فوز/خسارة)</h3>
+          <div style="height:200px;display:flex;justify-content:center;position:relative">
+            <canvas id="dashboardDonutChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Top Teams Standings & Bar Chart -->
+      <div class="dashboard-right-col">
+        <div class="dashboard-panel">
+          <h3>المنتخبات الأكثر ترشيحاً للفوز باللقب</h3>
+          <div id="dashboardTeamsList" class="dashboard-teams-list"></div>
+        </div>
+        <div class="dashboard-panel">
+          <h3>دقة التوقعات عبر المراحل %</h3>
+          <div style="height:200px;position:relative">
+            <canvas id="dashboardBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="grid hidden" id="cards"></section>
     <section class="projection-grid hidden" id="paths"></section>
     <section class="projection-grid hidden" id="pairings"></section>
     <section class="projection-grid hidden" id="knockout"></section>
@@ -1269,10 +1438,12 @@
     let knockoutPrediction = null;
     let accuracyReport = null;
     let advancedStats = [];
+    let actualResults = [];
+    let overviewChartInstances = {};
     let resourceLoadErrors = [];
     const rawContentBase = "https://raw.githubusercontent.com/khalid-A-M-M/worldcup-agent-harness/master/";
     let currentFilter = "all";
-    let currentView = "matches";
+    let currentView = "overview";
 
     const stageNames = {
       group: "دور المجموعات",
@@ -2089,6 +2260,7 @@
 
     function switchView(view) {
       currentView = view;
+      document.getElementById("overview").classList.toggle("hidden", view !== "overview");
       document.getElementById("cards").classList.toggle("hidden", view !== "matches");
       document.getElementById("filters").classList.toggle("hidden", view !== "matches");
       document.getElementById("paths").classList.toggle("hidden", view !== "paths");
@@ -2099,7 +2271,10 @@
       document.getElementById("completed").classList.toggle("hidden", view !== "completed");
       document.getElementById("analytics").classList.toggle("hidden", view !== "analytics");
       document.querySelectorAll("#tabs button").forEach(item => item.classList.toggle("active", item.dataset.view === view));
-      if (view === "paths") {
+      if (view === "overview") {
+        renderOverviewDashboard();
+        document.getElementById("count").textContent = "لوحة التحكم الشاملة والمؤشرات الحية";
+      } else if (view === "paths") {
         document.getElementById("paths").innerHTML = renderPaths(tournamentProjection);
         document.getElementById("count").textContent = "إسقاط ترتيب المجموعات والمسارات";
       } else if (view === "pairings") {
@@ -2436,20 +2611,22 @@
       resourceLoadErrors = [];
       const suffix = cacheBust ? `?t=${Date.now()}` : "";
       const files = await loadFiles(suffix);
-      const [reportResults, projection, knockout, accuracy, statsCsv] = await Promise.all([
+      const [reportResults, projection, knockout, accuracy, statsCsv, actualResultsCsv] = await Promise.all([
         Promise.all(files.map(file => fetchJsonWithFallback(file, suffix))),
         fetchJsonWithFallback("outputs/tournament_projection.json", suffix),
         fetchJsonWithFallback("outputs/knockout_bracket_prediction.json", suffix),
         fetchJsonWithFallback("outputs/accuracy_report.json", suffix),
-        fetchTextWithFallback("data/match_advanced_stats.csv", suffix)
+        fetchTextWithFallback("data/match_advanced_stats.csv", suffix),
+        fetchTextWithFallback("data/actual_results.csv", suffix)
       ]);
       allReports = chronologicalReports(reportResults.filter(Boolean));
       tournamentProjection = projection;
       knockoutPrediction = knockout;
       accuracyReport = accuracy;
       advancedStats = statsCsv ? parseCsv(statsCsv) : [];
+      actualResults = actualResultsCsv ? parseCsv(actualResultsCsv) : [];
       const active = document.querySelector("#tabs button.active");
-      switchView(active ? active.dataset.view : "matches");
+      switchView(active ? active.dataset.view : "overview");
       const warning = resourceLoadErrors.length ? ` \u00b7 \u062a\u0646\u0628\u064a\u0647: ${resourceLoadErrors.length} \u0645\u0644\u0641 \u0627\u062d\u062a\u0627\u062c \u0645\u0633\u0627\u0631\u0627\u064b \u0628\u062f\u064a\u0644\u0627\u064b \u0623\u0648 \u0644\u0645 \u064a\u062d\u0645\u0644` : "";
       document.getElementById("status").innerHTML = `\u062a\u0645 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0644\u0648\u062d\u0629 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b ${new Date().toLocaleTimeString("ar")} \u0645\u0646 <code>${location.origin}</code>${warning}`;
     }
@@ -2478,9 +2655,158 @@
       document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
       document.getElementById('themeToggle').textContent = isLight ? '🌙' : '☀️';
       localStorage.setItem('wc-theme', isLight ? 'dark' : 'light');
-      // Rebuild charts if on analytics tab
+      // Rebuild charts if on overview or analytics tab
+      if (currentView === 'overview') renderOverviewDashboard();
       if (currentView === 'analytics') renderAnalytics();
     });
+
+    // === Dashboard Overview Functions ===
+    function destroyOverviewCharts() {
+      if (window.overviewChartInstances) {
+        Object.values(window.overviewChartInstances).forEach(c => { if (c && c.destroy) c.destroy(); });
+      }
+      window.overviewChartInstances = {};
+    }
+
+    function renderOverviewDashboard() {
+      if (!accuracyReport || !accuracyReport.matches) return;
+      destroyOverviewCharts();
+
+      // 1. Calculate KPI Metrics
+      const totalMatches = allReports.length;
+      const completedMatchesCount = accuracyReport.matches.length;
+      
+      let totalGoals = 0;
+      actualResults.forEach(r => {
+        totalGoals += (Number(r.home_goals || 0) + Number(r.away_goals || 0));
+      });
+      const avgGoals = completedMatchesCount > 0 ? totalGoals / completedMatchesCount : 0;
+
+      let totalYellowCards = 0;
+      advancedStats.forEach(r => {
+        totalYellowCards += Number(r.yellow_cards || 0);
+      });
+      const matchesWithStats = new Set(advancedStats.map(r => r.match_id)).size;
+      const avgYellowCards = matchesWithStats > 0 ? totalYellowCards / matchesWithStats : 0;
+
+      document.getElementById("kpiMatches").textContent = totalMatches;
+      document.getElementById("kpiGoals").textContent = totalGoals;
+      document.getElementById("kpiAvgGoals").textContent = avgGoals.toFixed(2);
+      document.getElementById("kpiCards").textContent = totalYellowCards;
+      document.getElementById("kpiAvgCards").textContent = avgYellowCards.toFixed(2);
+
+      // 2. Render Mini Bracket Timeline
+      let bracketHtml = "";
+      if (knockoutPrediction && knockoutPrediction.rounds) {
+        knockoutPrediction.rounds.forEach(round => {
+          bracketHtml += `<div style="font-weight:700;margin:12px 0 6px;color:var(--accent-light);font-size:13px">${roundTitle(round.round)}</div>`;
+          round.matches.slice(0, 4).forEach(match => {
+            const home = visual(match.home_team);
+            const away = visual(match.away_team);
+            const winner = visual(match.winner);
+            bracketHtml += `
+              <div style="background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:8px;margin-bottom:8px;font-size:12px;display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <span style="color:${home.primary_color};font-weight:700">${home.arabic_name}</span> vs 
+                  <span style="color:${away.primary_color};font-weight:700">${away.arabic_name}</span>
+                </div>
+                <div style="color:var(--draw);font-weight:700">🏆 ${winner.arabic_name}</div>
+              </div>
+            `;
+          });
+        });
+      }
+      document.getElementById("dashboardBracket").innerHTML = bracketHtml || "<p class='note'>سيتم تحديث المواجهات الإقصائية فور انتهاء دور المجموعات.</p>";
+
+      // 3. Render Top Teams List
+      const teamVisualsKeys = Object.keys(teamVisuals);
+      const sortedTeams = teamVisualsKeys
+        .map(name => ({ name, ...teamVisuals[name] }))
+        .sort((a, b) => Number(a.fifa_rank || 999) - Number(b.fifa_rank || 999))
+        .slice(0, 10);
+      
+      let teamsHtml = sortedTeams.map((team, idx) => `
+        <div class="dashboard-team-row">
+          <span class="rank-num">#${idx+1}</span>
+          <div class="team-name-wrap">
+            <span>${flagFor(team.name)}</span>
+            <span style="color:${team.primary_color}">${team.arabic_name}</span>
+          </div>
+          <span class="team-prob">فيفا ${team.fifa_rank}</span>
+        </div>
+      `).join("");
+      document.getElementById("dashboardTeamsList").innerHTML = teamsHtml;
+
+      // 4. Render Charts (Donut & Bar)
+      const colors = getChartColors();
+      
+      const matches = accuracyReport.matches;
+      const homeWins = matches.filter(m => m.actual === 'home_win').length;
+      const draws = matches.filter(m => m.actual === 'draw').length;
+      const awayWins = matches.filter(m => m.actual === 'away_win').length;
+
+      const donutCtx = document.getElementById('dashboardDonutChart');
+      if (donutCtx) {
+        window.overviewChartInstances.donut = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['فوز صاحب الأرض', 'تعادل', 'فوز الضيف'],
+            datasets: [{
+              data: [homeWins, draws, awayWins],
+              backgroundColor: [colors.success, colors.warning, colors.accent],
+              borderWidth: 0,
+              hoverOffset: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '60%',
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: { boxWidth: 12, padding: 8, font: { family: 'Cairo', size: 11 }, color: colors.text }
+              }
+            }
+          }
+        });
+      }
+
+      // Bar Chart: Stage Accuracy %
+      const groupMatches = matches.filter(m => m.stage === 'group');
+      const koMatches = matches.filter(m => m.stage === 'knockout');
+      const groupAcc = groupMatches.length ? (groupMatches.filter(m=>m.correct).length / groupMatches.length) * 100 : 0;
+      const koAcc = koMatches.length ? (koMatches.filter(m=>m.correct).length / koMatches.length) * 100 : 0;
+
+      const barCtx = document.getElementById('dashboardBarChart');
+      if (barCtx) {
+        window.overviewChartInstances.bar = new Chart(barCtx, {
+          type: 'bar',
+          data: {
+            labels: ['دور المجموعات', 'خروج المغلوب'],
+            datasets: [{
+              label: 'نسبة الدقة %',
+              data: [groupAcc, koAcc],
+              backgroundColor: [colors.accent, colors.success],
+              borderRadius: 6,
+              borderWidth: 0,
+              barThickness: 32
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: { beginAtZero: true, max: 100, ticks: { font: { family: 'Cairo', size: 10 }, color: colors.text } },
+              x: { ticks: { font: { family: 'Cairo', size: 11 }, color: colors.text } }
+            },
+            plugins: {
+              legend: { display: false }
+            }
+          }
+        });
+      }
+    }
 
     // === Analytics Charts ===
     let chartInstances = {};
