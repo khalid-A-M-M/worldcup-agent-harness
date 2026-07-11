@@ -22,7 +22,9 @@
       --accent-light: #818cf8;
       --accent-glow: rgba(99,102,241,.15);
       --success: #10b981;
+      --success-glow: rgba(16,185,129,.15);
       --danger: #ef4444;
+      --danger-glow: rgba(239,68,68,.15);
       --warning: #f59e0b;
       --draw: #f59e0b;
       --glass: rgba(255,255,255,.04);
@@ -44,6 +46,8 @@
       --accent-light: #6366f1;
       --accent-glow: rgba(79,70,229,.08);
       --glass: rgba(0,0,0,.02);
+      --success-glow: rgba(16,185,129,.08);
+      --danger-glow: rgba(239,68,68,.08);
       --shadow-card: 0 2px 12px rgba(0,0,0,.06);
       --shadow-hover: 0 6px 24px rgba(0,0,0,.10);
     }
@@ -2272,8 +2276,8 @@
         };
         const predictedAr = outcomeLabel[row.predicted] || row.predicted;
         const actualAr    = outcomeLabel[row.actual]    || row.actual;
-        const statusBg   = isCorrect ? "rgba(34,197,94,.18)" : "rgba(239,68,68,.18)";
-        const statusBorder = isCorrect ? "#22c55e" : "#ef4444";
+        const statusBg   = isCorrect ? "var(--success-glow)" : "var(--danger-glow)";
+        const statusBorder = isCorrect ? "var(--success)" : "var(--danger)";
         return `
           <article class="pairing-card" style="border-right:4px solid ${statusBorder};">
             <div class="meta" style="margin-bottom:8px">
@@ -2297,7 +2301,7 @@
                 <div class="standing-row">
                   <span class="rank">ت</span>
                   <strong>توقع النموذج</strong>
-                  <span style="color:#d6a849">${predictedAr}</span>
+                  <span style="color:var(--warning)">${predictedAr}</span>
                 </div>
                 <div class="standing-row">
                   <span class="rank" style="background:${statusBg};color:${statusBorder}">ن</span>
@@ -2361,9 +2365,9 @@
             <h2>نبض دقة النموذج</h2>
             <p class="note">هذه الدائرة تتحدث تلقائياً بعد كل مباراة مكتملة: الأخضر توقعات أصابها النموذج، والأحمر توقعات لم تتحقق.</p>
             <div class="accuracy-legend">
-              <span style="color:#22c55e"><i></i>${correctCount} توقع صحيح</span>
-              <span style="color:#ef4444"><i></i>${missedCount} توقع لم يتحقق</span>
-              <span style="color:#d6a849"><i></i>${totalEvaluated} مباراة مقيّمة</span>
+              <span style="color:var(--success)"><i></i>${correctCount} توقع صحيح</span>
+              <span style="color:var(--danger)"><i></i>${missedCount} توقع لم يتحقق</span>
+              <span style="color:var(--warning)"><i></i>${totalEvaluated} مباراة مقيّمة</span>
             </div>
             <div class="accuracy-meter">
               <div class="accuracy-metric"><b>${pct(accuracyValue)}</b><span>نسبة الإصابة</span></div>
@@ -2385,11 +2389,11 @@
             </div>
             <div class="pairing">
               <strong style="color:${teamA.primary_color}">${teamA.arabic_name}</strong>
-              <span class="versus" style="width:50px;height:50px;background:${row.correct ? 'rgba(34,197,94,.3)' : 'rgba(239,68,68,.3)'}">${row.correct ? "✓ صح" : "✗ خطأ"}</span>
+              <span class="versus" style="width:50px;height:50px;background:${row.correct ? 'var(--success-glow)' : 'var(--danger-glow)'};border-color:${row.correct ? 'var(--success)' : 'var(--danger)'};color:${row.correct ? 'var(--success)' : 'var(--danger)'}">${row.correct ? "✓ صح" : "✗ خطأ"}</span>
               <strong style="text-align:left;color:${teamB.primary_color}">${teamB.arabic_name}</strong>
             </div>
             <p class="note">توقع النموذج: <b>${outcomeText(row, row.predicted)}</b></p>
-            <p class="note">النتيجة الفعلية: <b style="color:${row.correct ? '#22c55e' : '#ef4444'}">${outcomeText(row, row.actual)}</b></p>
+            <p class="note">النتيجة الفعلية: <b style="color:${row.correct ? 'var(--success)' : 'var(--danger)'}">${outcomeText(row, row.actual)}</b></p>
             <p class="note">Brier ${row.brier_score.toFixed(3)} · LogLoss ${row.log_loss.toFixed(3)} · احتمال النتيجة الفعلية ${pct(row.probability_actual || 0)}</p>
           </article>
         `}).join("")}
