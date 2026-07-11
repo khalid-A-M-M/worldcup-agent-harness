@@ -3,32 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>توقعات كأس العالم | Agent Harness</title>
+  <title>لوحة تحليلات كأس العالم 2026 | Agent Harness</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <style>
     :root {
       color-scheme: dark;
-      --bg: #061313;
-      --ink: #f8fafc;
-      --muted: #b8c8c4;
-      --line: rgba(255,255,255,.14);
-      --panel: rgba(8, 24, 24, .78);
-      --draw: #d6a849;
-      --glass: rgba(255,255,255,.08);
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --surface-2: #1a2235;
+      --ink: #e8eaed;
+      --muted: #8b95a5;
+      --line: rgba(255,255,255,.08);
+      --panel: rgba(17,24,39,.95);
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99,102,241,.15);
+      --success: #10b981;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --draw: #f59e0b;
+      --glass: rgba(255,255,255,.04);
+      --card-radius: 16px;
+      --shadow-card: 0 4px 24px rgba(0,0,0,.25);
+      --shadow-hover: 0 8px 40px rgba(0,0,0,.35);
+      --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+    }
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #f0f2f5;
+      --surface: #ffffff;
+      --surface-2: #f7f8fa;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: rgba(0,0,0,.06);
+      --panel: rgba(255,255,255,.98);
+      --accent: #4f46e5;
+      --accent-light: #6366f1;
+      --accent-glow: rgba(79,70,229,.08);
+      --glass: rgba(0,0,0,.02);
+      --shadow-card: 0 2px 12px rgba(0,0,0,.06);
+      --shadow-hover: 0 6px 24px rgba(0,0,0,.10);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+      font-family: "Cairo", "Inter", "Segoe UI", sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 18% 12%, rgba(214,168,73,.26), transparent 28%),
-        radial-gradient(circle at 90% 6%, rgba(0,120,92,.32), transparent 32%),
-        linear-gradient(135deg, #04100f 0%, #08211e 44%, #14110a 100%);
+      background: var(--bg);
       overflow-x: hidden;
+      transition: background .3s ease, color .3s ease;
     }
     body::before {
       content: "";
@@ -36,39 +63,66 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px);
-      background-size: 72px 72px;
-      mask-image: radial-gradient(circle at center, #000 0%, transparent 78%);
+        radial-gradient(ellipse at 20% 0%, var(--accent-glow), transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(139,92,246,.06), transparent 50%);
     }
     header {
       position: relative;
-      padding: 34px clamp(18px, 5vw, 72px) 26px;
+      padding: 16px clamp(18px, 5vw, 72px);
+      background: var(--surface);
       border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-card);
+      transition: background .3s ease;
     }
+    .header-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .header-content { flex: 1; min-width: 0; }
     .kicker {
       display: inline-flex;
       gap: 8px;
       align-items: center;
-      padding: 6px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--glass);
-      color: #ffe4a3;
-      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 6px;
+      background: var(--gradient-accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
     }
     h1 {
-      margin: 14px 0 8px;
-      font-size: clamp(34px, 6vw, 68px);
-      letter-spacing: 0;
-      line-height: 1.05;
+      margin: 8px 0 4px;
+      font-size: clamp(22px, 4vw, 36px);
+      letter-spacing: -.01em;
+      line-height: 1.2;
+      font-weight: 900;
     }
     header p {
-      max-width: 980px;
+      max-width: 700px;
       margin: 0;
       color: var(--muted);
-      font-size: clamp(15px, 2vw, 18px);
+      font-size: clamp(13px, 1.6vw, 15px);
     }
+    .theme-toggle {
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--glass);
+      color: var(--ink);
+      font-size: 20px;
+      display: grid;
+      place-items: center;
+      transition: all .2s ease;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover { background: var(--accent-glow); border-color: var(--accent); }
     main {
       position: relative;
       width: min(1320px, calc(100% - 28px));
@@ -98,34 +152,41 @@
     .tabs button {
       cursor: pointer;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      color: var(--ink);
-      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--muted);
+      padding: 10px 16px;
       font: inherit;
-      font-size: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all .2s ease;
     }
+    .tabs button:hover { border-color: var(--accent); color: var(--ink); }
     .tabs button.active {
-      background: #fff7cf;
-      color: #201604;
+      background: var(--gradient-accent);
+      color: #fff;
       border-color: transparent;
-      font-weight: 900;
+      font-weight: 700;
+      box-shadow: 0 2px 12px rgba(99,102,241,.3);
     }
     .filters button {
       cursor: pointer;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      color: var(--ink);
-      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--muted);
+      padding: 8px 14px;
       font: inherit;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all .2s ease;
     }
+    .filters button:hover { border-color: var(--accent); }
     .filters button.active {
-      background: #d6a849;
-      color: #201604;
+      background: var(--accent);
+      color: #fff;
       border-color: transparent;
-      font-weight: 800;
+      font-weight: 700;
     }
     .legend {
       display: flex;
@@ -153,35 +214,24 @@
       position: relative;
       overflow: hidden;
       min-height: 292px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      background:
-        linear-gradient(135deg, color-mix(in srgb, var(--team-a) 12%, transparent), transparent 45%),
-        linear-gradient(315deg, color-mix(in srgb, var(--team-b) 12%, transparent), transparent 45%),
-        rgba(10, 22, 38, 0.72);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.1),
-        0 12px 40px rgba(0, 0, 0, 0.4);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      border: 1px solid var(--line);
+      border-radius: var(--card-radius);
+      background: var(--surface);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .card:hover {
-      transform: translateY(-4px);
-      border-color: color-mix(in srgb, var(--team-a) 40%, rgba(255,255,255,0.25));
-      box-shadow: 
-        0 0 20px color-mix(in srgb, var(--team-a) 15%, transparent),
-        0 20px 50px rgba(0, 0, 0, 0.5);
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-hover), 0 0 0 1px var(--accent-glow);
     }
     .card::before {
       content: "";
       position: absolute;
-      inset: 0;
-      opacity: .18;
-      background:
-        radial-gradient(circle at 50% 50%, transparent 0 18%, rgba(255,255,255,.7) 18.5% 19.2%, transparent 20%),
-        linear-gradient(90deg, transparent 49.7%, rgba(255,255,255,.65) 50%, transparent 50.3%);
-      pointer-events: none;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--team-a), var(--team-b));
+      opacity: .7;
     }
     .card-inner {
       position: relative;
@@ -193,18 +243,19 @@
       justify-content: space-between;
       gap: 12px;
       align-items: center;
-      color: #d7e5e1;
-      font-size: 13px;
-      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 16px;
     }
     .pill {
       display: inline-flex;
       align-items: center;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.24);
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--glass);
       border: 1px solid var(--line);
       white-space: nowrap;
+      font-size: 11px;
     }
     .teams {
       display: grid;
@@ -224,7 +275,7 @@
       overflow-wrap: anywhere;
     }
     .team-original {
-      color: rgba(255,255,255,.62);
+      color: var(--muted);
       font-size: 12px;
       margin-top: 5px;
       direction: ltr;
@@ -233,15 +284,16 @@
     .team.left { text-align: right; }
     .team.right { text-align: left; direction: rtl; }
     .versus {
-      width: 54px;
-      height: 54px;
+      width: 48px;
+      height: 48px;
       display: grid;
       place-items: center;
-      border-radius: 50%;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.22);
-      color: #ffe7a8;
+      border-radius: 12px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent-light);
       font-weight: 800;
+      font-size: 13px;
     }
     .winner {
       display: flex;
@@ -250,7 +302,7 @@
       flex-wrap: wrap;
       gap: 6px;
       margin-bottom: 12px;
-      color: #fff2bd;
+      color: var(--accent-light);
       font-weight: 700;
       font-size: 14px;
     }
@@ -281,12 +333,11 @@
     .stack {
       display: flex;
       width: 100%;
-      height: 46px;
+      height: 40px;
       overflow: hidden;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      background: rgba(0,0,0,.35);
-      box-shadow: inset 0 1px 10px rgba(0,0,0,.42);
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
     }
     .seg {
       position: relative;
@@ -294,15 +345,16 @@
       place-items: center;
       min-width: 42px;
       color: #fff;
-      font-weight: 800;
-      text-shadow: 0 1px 7px rgba(0,0,0,.55);
+      font-weight: 700;
+      font-size: 13px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.4);
       transition: filter .2s ease;
     }
-    .seg:hover { filter: brightness(1.12); }
+    .seg:hover { filter: brightness(1.15); }
     .seg.draw {
-      color: #211806;
+      color: #1f2937;
       text-shadow: none;
-      background: var(--draw);
+      background: var(--warning);
     }
     .prob-labels {
       display: grid;
@@ -315,17 +367,17 @@
     .prob-labels .center { text-align: center; color: #ffe5a1; }
     .prob-labels .right { text-align: left; }
     .note {
-      margin: 16px 0 0;
-      color: rgba(255,255,255,.72);
+      margin: 14px 0 0;
+      color: var(--muted);
       font-size: 13px;
     }
     .auditor {
-      margin-top: 14px;
-      padding: 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 12px;
-      background: rgba(0,0,0,.18);
-      color: rgba(255,255,255,.74);
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--glass);
+      color: var(--muted);
       font-size: 12px;
     }
     .factors {
@@ -335,34 +387,33 @@
     }
     .factor {
       display: grid;
-      grid-template-columns: 8px 1fr auto;
+      grid-template-columns: 4px 1fr auto;
       gap: 9px;
       align-items: start;
       padding: 10px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 12px;
-      background: rgba(0,0,0,.2);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--glass);
       font-size: 12px;
     }
     .factor i {
-      width: 8px;
+      width: 4px;
       height: 100%;
       min-height: 32px;
       border-radius: 999px;
-      background: var(--draw);
     }
     .factor strong {
       display: block;
-      color: #fff7cf;
+      color: var(--accent-light);
       margin-bottom: 2px;
     }
     .factor small {
-      color: rgba(255,255,255,.7);
+      color: var(--muted);
     }
     .impact {
       direction: ltr;
-      font-weight: 800;
-      color: #fff;
+      font-weight: 700;
+      color: var(--ink);
       white-space: nowrap;
     }
     .economic-strip {
@@ -526,18 +577,11 @@
       grid-template-columns: minmax(180px, 260px) 1fr;
       gap: 22px;
       align-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      background:
-        radial-gradient(circle at 18% 18%, rgba(34,197,94,.16), transparent 28%),
-        radial-gradient(circle at 84% 74%, rgba(239,68,68,.14), transparent 30%),
-        rgba(10, 22, 38, 0.72);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: var(--card-radius);
+      background: var(--surface);
       padding: 22px;
-      box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.1),
-        0 12px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--shadow-card);
     }
     .accuracy-donut {
       --correct: 0deg;
@@ -556,7 +600,7 @@
       position: absolute;
       inset: 22%;
       border-radius: 50%;
-      background: #08211e;
+      background: var(--surface);
       box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
     }
     .accuracy-donut strong {
@@ -616,7 +660,7 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: rgba(0,0,0,.72);
+      background: rgba(0,0,0,.6);
       backdrop-filter: blur(8px);
     }
     .modal.open { display: flex; }
@@ -625,9 +669,9 @@
       max-height: 88vh;
       overflow: auto;
       border: 1px solid var(--line);
-      border-radius: 22px;
-      background: linear-gradient(145deg, rgba(11,31,31,.98), rgba(20,17,10,.98));
-      box-shadow: 0 30px 90px rgba(0,0,0,.5);
+      border-radius: var(--card-radius);
+      background: var(--surface);
+      box-shadow: 0 30px 90px rgba(0,0,0,.4);
       padding: 22px;
     }
     .modal-head {
@@ -653,13 +697,10 @@
       gap: 14px;
     }
     .detail-box {
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      background: rgba(10, 22, 38, 0.5);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-2);
       padding: 14px;
-      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
     }
     .stat-row {
       display: grid;
@@ -1045,23 +1086,17 @@
     .path-status.missed { color: #fecaca; background: rgba(239,68,68,.14); border: 1px solid rgba(239,68,68,.30); }
 
     .group-card, .pairing-card {
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      background: rgba(10, 22, 38, 0.72);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: var(--card-radius);
+      background: var(--surface);
       padding: 16px;
-      box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.1),
-        0 12px 40px rgba(0, 0, 0, 0.4);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .group-card:hover, .pairing-card:hover {
       transform: translateY(-2px);
-      border-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 
-        0 0 15px rgba(255, 255, 255, 0.05),
-        0 16px 40px rgba(0, 0, 0, 0.5);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-hover);
     }
     .group-card h2, .pairing-card h2 {
       margin: 0 0 12px;
@@ -1131,9 +1166,13 @@
 </head>
 <body>
   <header>
-    <span class="kicker">نظام توقعات كأس العالم عبر Agent Harness</span>
-    <h1>احتمالات المباريات بلغة الملعب</h1>
-    <p>كل بطاقة تعرض توقع النموذج كصراع ألوان بين المنتخبين. في دور المجموعات يظهر التعادل كمساحة ذهبية ثابتة، وبعد المجموعات يتحول العرض إلى فائز وخاسر فقط.</p>
+    <img src="World_Cup_Logo_2026.png" alt="FIFA World Cup 2026" class="header-logo">
+    <div class="header-content">
+      <span class="kicker">⚽ Agent Harness · تحليلات كأس العالم 2026</span>
+      <h1>لوحة التحليلات والتوقعات الذكية</h1>
+      <p>رسوم بيانية تفاعلية ومؤشرات إحصائية مبنية على نماذج الذكاء الاصطناعي لتوقع نتائج كأس العالم 2026.</p>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="تبديل المظهر">🌙</button>
   </header>
   <main>
     <div class="toolbar">
@@ -1152,6 +1191,7 @@
       <button data-view="economic">النموذج الاقتصادي</button>
       <button data-view="accuracy">دقة النموذج</button>
       <button data-view="completed">المباريات المكتملة</button>
+      <button data-view="analytics">📊 لوحة التحليلات</button>
     </div>
     <div class="filters" id="filters">
       <button class="active" data-filter="all">كل المباريات</button>
@@ -1166,6 +1206,36 @@
     <section class="projection-grid hidden" id="economic"></section>
     <section class="projection-grid hidden" id="accuracy"></section>
     <section class="projection-grid hidden" id="completed"></section>
+    <section class="projection-grid hidden" id="analytics">
+      <article class="accuracy-hero" style="grid-column:1/-1">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start">
+          <div>
+            <h2 style="margin:0 0 12px">توزيع دقة التوقعات</h2>
+            <canvas id="accuracyDonutChart" height="260"></canvas>
+          </div>
+          <div>
+            <h2 style="margin:0 0 12px">تطور أداء النموذج عبر المباريات</h2>
+            <canvas id="brierLineChart" height="260"></canvas>
+          </div>
+        </div>
+      </article>
+      <article class="accuracy-hero" style="grid-column:1/-1">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start">
+          <div>
+            <h2 style="margin:0 0 12px">مقارنة دقة المجموعات مقابل خروج المغلوب</h2>
+            <canvas id="stageCompareChart" height="260"></canvas>
+          </div>
+          <div>
+            <h2 style="margin:0 0 12px">أكبر المفاجآت: أعلى Brier Score</h2>
+            <canvas id="topUpsetsChart" height="260"></canvas>
+          </div>
+        </div>
+      </article>
+      <article class="group-card" id="heatmapContainer" style="grid-column:1/-1">
+        <h2>خريطة حرارية: توزيع المنتخبات بين الصواب والخطأ</h2>
+        <div id="heatmapGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:4px;margin-top:12px"></div>
+      </article>
+    </section>
     <p class="status" id="status">جاري تحميل توقعات كأس العالم...</p>
   </main>
   <div class="modal" id="matchModal" aria-hidden="true">
@@ -2023,6 +2093,7 @@
       document.getElementById("economic").classList.toggle("hidden", view !== "economic");
       document.getElementById("accuracy").classList.toggle("hidden", view !== "accuracy");
       document.getElementById("completed").classList.toggle("hidden", view !== "completed");
+      document.getElementById("analytics").classList.toggle("hidden", view !== "analytics");
       document.querySelectorAll("#tabs button").forEach(item => item.classList.toggle("active", item.dataset.view === view));
       if (view === "paths") {
         document.getElementById("paths").innerHTML = renderPaths(tournamentProjection);
@@ -2039,6 +2110,10 @@
       } else if (view === "accuracy") {
         document.getElementById("accuracy").innerHTML = renderAccuracy(accuracyReport);
         document.getElementById("count").textContent = "دقة النموذج بعد المباريات المكتملة";
+      } else if (view === "analytics") {
+        document.getElementById("analytics").innerHTML = document.getElementById("analytics").innerHTML;
+        renderAnalytics();
+        document.getElementById("count").textContent = "لوحة التحليلات الإحصائية البيانية";
       } else if (view === "completed") {
         document.getElementById("completed").innerHTML = renderCompletedMatches();
         document.getElementById("count").textContent = "المباريات التي انتهت وتم تقييمها";
@@ -2386,6 +2461,190 @@
           .catch(() => {});
       }
     }, 60000);
+    // === Theme Toggle ===
+    (function initTheme() {
+      const saved = localStorage.getItem('wc-theme');
+      if (saved === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.getElementById('themeToggle').textContent = '☀️';
+      }
+    })();
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+      document.getElementById('themeToggle').textContent = isLight ? '🌙' : '☀️';
+      localStorage.setItem('wc-theme', isLight ? 'dark' : 'light');
+      // Rebuild charts if on analytics tab
+      if (currentView === 'analytics') renderAnalytics();
+    });
+
+    // === Analytics Charts ===
+    let chartInstances = {};
+    function destroyCharts() {
+      Object.values(chartInstances).forEach(c => { if (c && c.destroy) c.destroy(); });
+      chartInstances = {};
+    }
+
+    function getChartColors() {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      return {
+        text: isLight ? '#1f2937' : '#e8eaed',
+        grid: isLight ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.08)',
+        accent: '#6366f1',
+        success: '#10b981',
+        danger: '#ef4444',
+        warning: '#f59e0b',
+        surface: isLight ? '#ffffff' : '#111827'
+      };
+    }
+
+    function renderAnalytics() {
+      if (!accuracyReport || !accuracyReport.matches) return;
+      destroyCharts();
+      const matches = accuracyReport.matches;
+      const colors = getChartColors();
+      const chartDefaults = {
+        color: colors.text,
+        borderColor: colors.grid,
+      };
+      Chart.defaults.color = colors.text;
+      Chart.defaults.borderColor = colors.grid;
+
+      // 1. Accuracy Donut
+      const correct = matches.filter(m => m.correct).length;
+      const missed = matches.length - correct;
+      const donutCtx = document.getElementById('accuracyDonutChart');
+      if (donutCtx) {
+        chartInstances.donut = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['توقع صحيح', 'توقع خاطئ'],
+            datasets: [{
+              data: [correct, missed],
+              backgroundColor: [colors.success, colors.danger],
+              borderWidth: 0,
+              hoverOffset: 8
+            }]
+          },
+          options: {
+            responsive: true,
+            cutout: '68%',
+            plugins: {
+              legend: { position: 'bottom', labels: { padding: 16, font: { family: 'Cairo', size: 13 } } },
+              title: { display: false }
+            }
+          }
+        });
+      }
+
+      // 2. Brier Score line chart
+      const brierCtx = document.getElementById('brierLineChart');
+      if (brierCtx) {
+        const sorted = [...matches].sort((a,b) => new Date(a.kickoff_utc) - new Date(b.kickoff_utc));
+        const labels = sorted.map((m,i) => `${i+1}`);
+        const brierData = sorted.map(m => m.brier_score);
+        let cumAvg = [];
+        let sum = 0;
+        brierData.forEach((v,i) => { sum += v; cumAvg.push(sum / (i+1)); });
+        chartInstances.brier = new Chart(brierCtx, {
+          type: 'line',
+          data: {
+            labels,
+            datasets: [
+              {
+                label: 'Brier Score (كل مباراة)',
+                data: brierData,
+                borderColor: colors.accent,
+                backgroundColor: 'rgba(99,102,241,.1)',
+                fill: true,
+                tension: .3,
+                pointRadius: 3,
+                pointHoverRadius: 6
+              },
+              {
+                label: 'المتوسط التراكمي',
+                data: cumAvg,
+                borderColor: colors.warning,
+                borderDash: [6, 3],
+                fill: false,
+                tension: .3,
+                pointRadius: 0
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              x: { title: { display: true, text: 'رقم المباراة', font: { family: 'Cairo' } }, grid: { display: false } },
+              y: { title: { display: true, text: 'Brier Score', font: { family: 'Cairo' } }, beginAtZero: true }
+            },
+            plugins: { legend: { labels: { font: { family: 'Cairo', size: 12 } } } }
+          }
+        });
+      }
+
+      // 3. Stage comparison bar
+      const stageCtx = document.getElementById('stageCompareChart');
+      if (stageCtx) {
+        const groupMatches = matches.filter(m => m.stage === 'group');
+        const koMatches = matches.filter(m => m.stage === 'knockout');
+        const groupAcc = groupMatches.length ? groupMatches.filter(m=>m.correct).length / groupMatches.length : 0;
+        const koAcc = koMatches.length ? koMatches.filter(m=>m.correct).length / koMatches.length : 0;
+        const groupBrier = groupMatches.length ? groupMatches.reduce((s,m)=>s+m.brier_score,0)/groupMatches.length : 0;
+        const koBrier = koMatches.length ? koMatches.reduce((s,m)=>s+m.brier_score,0)/koMatches.length : 0;
+        chartInstances.stage = new Chart(stageCtx, {
+          type: 'bar',
+          data: {
+            labels: ['دور المجموعات', 'خروج المغلوب'],
+            datasets: [
+              { label: 'الدقة %', data: [groupAcc*100, koAcc*100], backgroundColor: colors.success, borderRadius: 8 },
+              { label: 'متوسط Brier', data: [groupBrier*100, koBrier*100], backgroundColor: colors.accent, borderRadius: 8 }
+            ]
+          },
+          options: {
+            responsive: true,
+            scales: { y: { beginAtZero: true, max: 100 } },
+            plugins: { legend: { labels: { font: { family: 'Cairo', size: 12 } } } }
+          }
+        });
+      }
+
+      // 4. Top upsets bar
+      const upsetsCtx = document.getElementById('topUpsetsChart');
+      if (upsetsCtx) {
+        const topUpsets = [...matches].sort((a,b) => b.brier_score - a.brier_score).slice(0, 8);
+        chartInstances.upsets = new Chart(upsetsCtx, {
+          type: 'bar',
+          data: {
+            labels: topUpsets.map(m => `${visual(m.home_team).arabic_name} vs ${visual(m.away_team).arabic_name}`),
+            datasets: [{
+              label: 'Brier Score',
+              data: topUpsets.map(m => m.brier_score),
+              backgroundColor: topUpsets.map(m => m.correct ? colors.success : colors.danger),
+              borderRadius: 6
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            scales: { x: { beginAtZero: true } },
+            plugins: { legend: { display: false } }
+          }
+        });
+      }
+
+      // 5. Heatmap
+      const heatmapGrid = document.getElementById('heatmapGrid');
+      if (heatmapGrid) {
+        heatmapGrid.innerHTML = matches.map(m => {
+          const bg = m.correct ? 'rgba(16,185,129,.25)' : 'rgba(239,68,68,.25)';
+          const border = m.correct ? '#10b981' : '#ef4444';
+          const homeV = visual(m.home_team);
+          const awayV = visual(m.away_team);
+          return `<div style="padding:8px;border-radius:8px;background:${bg};border:1px solid ${border};text-align:center;font-size:10px;font-weight:700;line-height:1.3" title="${homeV.arabic_name} vs ${awayV.arabic_name}: Brier ${m.brier_score.toFixed(2)}">${homeV.arabic_name.substring(0,6)}<br>vs<br>${awayV.arabic_name.substring(0,6)}</div>`;
+        }).join('');
+      }
+    }
   </script>
 </body>
 </html>
