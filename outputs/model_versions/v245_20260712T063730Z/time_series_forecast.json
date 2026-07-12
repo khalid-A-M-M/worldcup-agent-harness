@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-12T06:37:30.605761Z",
+  "generated_at_utc": "2026-07-12T03:47:33.426426Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -31,22 +31,22 @@
       ]
     },
     "Argentina": {
-      "sample_size": 10,
-      "momentum_index": 2.2325,
+      "sample_size": 9,
+      "momentum_index": 6.1441,
       "stat_trend_index": -1.9508,
-      "volatility_index": 1.7963,
-      "time_series_edge": 0.0099,
-      "confidence": 0.88,
-      "point_momentum": 1.7541,
-      "goal_difference_momentum": 0.4091,
-      "scoring_form": 1.7495,
-      "defensive_form": 1.3404,
+      "volatility_index": 1.6398,
+      "time_series_edge": 0.0812,
+      "confidence": 0.844,
+      "point_momentum": 2.7954,
+      "goal_difference_momentum": 0.9741,
+      "scoring_form": 2.7846,
+      "defensive_form": 1.8105,
       "last_dates": [
+        "2026-06-27",
         "2026-06-28",
         "2026-07-03",
         "2026-07-03",
-        "2026-07-07",
-        "2026-07-11"
+        "2026-07-07"
       ]
     },
     "Australia": {
@@ -810,22 +810,22 @@
       ]
     },
     "Switzerland": {
-      "sample_size": 10,
-      "momentum_index": 1.0665,
+      "sample_size": 9,
+      "momentum_index": 3.3678,
       "stat_trend_index": -0.702,
-      "volatility_index": 1.7963,
-      "time_series_edge": 0.0014,
-      "confidence": 0.88,
-      "point_momentum": 1.3509,
-      "goal_difference_momentum": 0.3298,
-      "scoring_form": 0.9409,
-      "defensive_form": 0.6111,
+      "volatility_index": 2.1063,
+      "time_series_edge": 0.041,
+      "confidence": 0.8573,
+      "point_momentum": 1.8354,
+      "goal_difference_momentum": 0.7851,
+      "scoring_form": 0.8592,
+      "defensive_form": 0.0741,
       "last_dates": [
+        "2026-06-24",
         "2026-06-24",
         "2026-07-02",
         "2026-07-02",
-        "2026-07-07",
-        "2026-07-11"
+        "2026-07-07"
       ]
     },
     "Tunisia": {
