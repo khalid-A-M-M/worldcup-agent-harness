@@ -16,22 +16,7 @@ SOURCE_URL = "https://raw.githubusercontent.com/openfootball/worldcup.json/maste
 
 
 def main() -> None:
-    target = DATA / "worldcup_2026_openfootball.json"
-    fallback = DATA / "worldcup_2026_openfootball_latest_check.json"
-    print(f"Downloading latest World Cup data from {SOURCE_URL}")
-    try:
-        _download_with_retry(target)
-    except URLError as exc:
-        if fallback.exists():
-            print(f"Download failed ({exc}); using latest checked local source: {fallback.name}")
-            target.write_text(fallback.read_text(encoding="utf-8"), encoding="utf-8")
-        else:
-            raise
-    subprocess.run(
-        [sys.executable, str(ROOT / "import_worldcup_data.py"), "--scope", "remaining-groups"],
-        cwd=ROOT,
-        check=True,
-    )
+    subprocess.run([sys.executable, str(ROOT / "sync_espn_tournament.py")], cwd=ROOT, check=True)
     _refresh_due_espn_matches()
     subprocess.run([sys.executable, str(ROOT / "evolve_after_results.py")], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / "predict_knockout_bracket.py")], cwd=ROOT, check=True)

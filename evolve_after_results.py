@@ -31,7 +31,7 @@ def main() -> None:
     metrics = _aggregate_metrics(scored)
     version_dir = _snapshot_version(scored, metrics)
     calibration = _load_calibration()
-    updated = _update_calibration(calibration, metrics)
+    updated = _update_calibration(calibration, metrics) if scored else calibration
     CALIBRATION.write_text(json.dumps(updated, ensure_ascii=False, indent=2), encoding="utf-8")
 
     (OUTPUTS / "accuracy_report.json").write_text(

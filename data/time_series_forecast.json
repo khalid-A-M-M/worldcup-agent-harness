@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-12T08:53:06.576787Z",
+  "generated_at_utc": "2026-07-12T09:34:54.458435Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -31,22 +31,22 @@
       ]
     },
     "Argentina": {
-      "sample_size": 10,
-      "momentum_index": 2.2325,
+      "sample_size": 11,
+      "momentum_index": 6.2737,
       "stat_trend_index": -1.9508,
       "volatility_index": 1.7963,
-      "time_series_edge": 0.0099,
+      "time_series_edge": 0.0826,
       "confidence": 0.88,
-      "point_momentum": 1.7541,
-      "goal_difference_momentum": 0.4091,
-      "scoring_form": 1.7495,
-      "defensive_form": 1.3404,
+      "point_momentum": 2.4767,
+      "goal_difference_momentum": 1.3318,
+      "scoring_form": 2.4748,
+      "defensive_form": 1.143,
       "last_dates": [
-        "2026-06-28",
         "2026-07-03",
         "2026-07-03",
         "2026-07-07",
-        "2026-07-11"
+        "2026-07-11",
+        "2026-07-12"
       ]
     },
     "Australia": {
@@ -88,21 +88,21 @@
       ]
     },
     "Belgium": {
-      "sample_size": 10,
-      "momentum_index": 0.6805,
+      "sample_size": 11,
+      "momentum_index": -2.9042,
       "stat_trend_index": 1.4838,
-      "volatility_index": 4.2917,
-      "time_series_edge": 0.0013,
-      "confidence": 0.8577,
-      "point_momentum": 1.1631,
-      "goal_difference_momentum": 0.3556,
-      "scoring_form": 2.0764,
-      "defensive_form": 1.7208,
+      "volatility_index": 4.2127,
+      "time_series_edge": -0.0627,
+      "confidence": 0.88,
+      "point_momentum": 0.4885,
+      "goal_difference_momentum": -0.4306,
+      "scoring_form": 1.4521,
+      "defensive_form": 1.8827,
       "last_dates": [
-        "2026-06-27",
         "2026-07-01",
         "2026-07-01",
         "2026-07-06",
+        "2026-07-10",
         "2026-07-10"
       ]
     },
@@ -316,21 +316,21 @@
       ]
     },
     "England": {
-      "sample_size": 10,
-      "momentum_index": 2.4995,
+      "sample_size": 11,
+      "momentum_index": 4.9358,
       "stat_trend_index": -1.6524,
-      "volatility_index": 1.5118,
-      "time_series_edge": 0.0194,
+      "volatility_index": 1.2702,
+      "time_series_edge": 0.0647,
       "confidence": 0.88,
-      "point_momentum": 1.831,
-      "goal_difference_momentum": 0.4421,
-      "scoring_form": 1.6565,
-      "defensive_form": 1.2144,
+      "point_momentum": 2.509,
+      "goal_difference_momentum": 0.7657,
+      "scoring_form": 1.8557,
+      "defensive_form": 1.0901,
       "last_dates": [
-        "2026-06-27",
         "2026-07-01",
         "2026-07-01",
         "2026-07-05",
+        "2026-07-11",
         "2026-07-11"
       ]
     },
@@ -582,21 +582,21 @@
       ]
     },
     "Norway": {
-      "sample_size": 10,
-      "momentum_index": 2.03,
+      "sample_size": 11,
+      "momentum_index": -2.3374,
       "stat_trend_index": 0.2747,
-      "volatility_index": 3.9661,
-      "time_series_edge": 0.0155,
-      "confidence": 0.8658,
-      "point_momentum": 1.7631,
-      "goal_difference_momentum": 0.3194,
-      "scoring_form": 1.4008,
-      "defensive_form": 1.0814,
+      "volatility_index": 3.2175,
+      "time_series_edge": -0.0586,
+      "confidence": 0.88,
+      "point_momentum": 0.7405,
+      "goal_difference_momentum": -0.4458,
+      "scoring_form": 1.1683,
+      "defensive_form": 1.6142,
       "last_dates": [
-        "2026-06-26",
         "2026-06-30",
         "2026-06-30",
         "2026-07-05",
+        "2026-07-11",
         "2026-07-11"
       ]
     },
@@ -772,21 +772,21 @@
       ]
     },
     "Spain": {
-      "sample_size": 10,
-      "momentum_index": 7.4533,
+      "sample_size": 11,
+      "momentum_index": 7.0164,
       "stat_trend_index": -1.425,
       "volatility_index": 2.0742,
-      "time_series_edge": 0.1075,
+      "time_series_edge": 0.0996,
       "confidence": 0.88,
-      "point_momentum": 2.9981,
-      "goal_difference_momentum": 1.3032,
-      "scoring_form": 1.8832,
-      "defensive_form": 0.58,
+      "point_momentum": 2.9992,
+      "goal_difference_momentum": 1.1273,
+      "scoring_form": 1.9509,
+      "defensive_form": 0.8236,
       "last_dates": [
-        "2026-06-27",
         "2026-07-02",
         "2026-07-02",
         "2026-07-06",
+        "2026-07-10",
         "2026-07-10"
       ]
     },
@@ -810,22 +810,22 @@
       ]
     },
     "Switzerland": {
-      "sample_size": 10,
-      "momentum_index": 1.0665,
+      "sample_size": 11,
+      "momentum_index": -4.1921,
       "stat_trend_index": -0.702,
-      "volatility_index": 1.7963,
-      "time_series_edge": 0.0014,
+      "volatility_index": 3.0458,
+      "time_series_edge": -0.1008,
       "confidence": 0.88,
-      "point_momentum": 1.3509,
-      "goal_difference_momentum": 0.3298,
-      "scoring_form": 0.9409,
-      "defensive_form": 0.6111,
+      "point_momentum": 0.5674,
+      "goal_difference_momentum": -1.0215,
+      "scoring_form": 0.9752,
+      "defensive_form": 1.9967,
       "last_dates": [
-        "2026-06-24",
         "2026-07-02",
         "2026-07-02",
         "2026-07-07",
-        "2026-07-11"
+        "2026-07-11",
+        "2026-07-12"
       ]
     },
     "Tunisia": {
