@@ -7119,6 +7119,38 @@
       "calibration_version": 72,
       "created_at_utc": "20260628T015320Z",
       "path": "outputs/forecast_ledger/WC-060_v072_20260628T015320Z.json"
+    },
+    {
+      "match_id": "ESPN-760514",
+      "home_team": "France",
+      "away_team": "Spain",
+      "calibration_version": 249,
+      "created_at_utc": "20260712T094223Z",
+      "path": "outputs/forecast_ledger/ESPN-760514_v249_20260712T094223Z.json"
+    },
+    {
+      "match_id": "ESPN-760515",
+      "home_team": "England",
+      "away_team": "Argentina",
+      "calibration_version": 249,
+      "created_at_utc": "20260712T094223Z",
+      "path": "outputs/forecast_ledger/ESPN-760515_v249_20260712T094223Z.json"
+    },
+    {
+      "match_id": "ESPN-760516",
+      "home_team": "Semifinal 1 Loser",
+      "away_team": "Semifinal 2 Loser",
+      "calibration_version": 249,
+      "created_at_utc": "20260712T094223Z",
+      "path": "outputs/forecast_ledger/ESPN-760516_v249_20260712T094223Z.json"
+    },
+    {
+      "match_id": "ESPN-760517",
+      "home_team": "Semifinal 1 Winner",
+      "away_team": "Semifinal 2 Winner",
+      "calibration_version": 249,
+      "created_at_utc": "20260712T094223Z",
+      "path": "outputs/forecast_ledger/ESPN-760517_v249_20260712T094223Z.json"
     }
   ]
 }

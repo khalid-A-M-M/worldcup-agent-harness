@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-12T09:42:23.639272Z",
+  "generated_at_utc": "2026-07-12T09:34:54.458435Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -33,9 +33,9 @@
     "Argentina": {
       "sample_size": 11,
       "momentum_index": 6.2737,
-      "stat_trend_index": -0.3026,
+      "stat_trend_index": -1.9508,
       "volatility_index": 1.7963,
-      "time_series_edge": 0.0991,
+      "time_series_edge": 0.0826,
       "confidence": 0.88,
       "point_momentum": 2.4767,
       "goal_difference_momentum": 1.3318,
@@ -318,9 +318,9 @@
     "England": {
       "sample_size": 11,
       "momentum_index": 4.9358,
-      "stat_trend_index": -0.3244,
+      "stat_trend_index": -1.6524,
       "volatility_index": 1.2702,
-      "time_series_edge": 0.078,
+      "time_series_edge": 0.0647,
       "confidence": 0.88,
       "point_momentum": 2.509,
       "goal_difference_momentum": 0.7657,
@@ -584,9 +584,9 @@
     "Norway": {
       "sample_size": 11,
       "momentum_index": -2.3374,
-      "stat_trend_index": 0.2545,
+      "stat_trend_index": 0.2747,
       "volatility_index": 3.2175,
-      "time_series_edge": -0.0588,
+      "time_series_edge": -0.0586,
       "confidence": 0.88,
       "point_momentum": 0.7405,
       "goal_difference_momentum": -0.4458,
@@ -812,9 +812,9 @@
     "Switzerland": {
       "sample_size": 11,
       "momentum_index": -4.1921,
-      "stat_trend_index": 0.1045,
+      "stat_trend_index": -0.702,
       "volatility_index": 3.0458,
-      "time_series_edge": -0.0927,
+      "time_series_edge": -0.1008,
       "confidence": 0.88,
       "point_momentum": 0.5674,
       "goal_difference_momentum": -1.0215,
