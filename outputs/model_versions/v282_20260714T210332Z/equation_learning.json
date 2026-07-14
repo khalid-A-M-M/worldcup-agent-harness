@@ -1,6 +1,6 @@
 {
-  "equation_version": 392,
-  "generated_at_utc": "2026-07-14T21:03:33.033989Z",
+  "equation_version": 390,
+  "generated_at_utc": "2026-07-14T19:54:33.499656Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -8,26 +8,26 @@
     "upset_floor": "base_upset_floor + upset_curve when favorite errors rise"
   },
   "coefficients": {
-    "favorite_temperature": 0.8209302325581396,
-    "home_bias_delta": 0.0010465116279069766,
-    "draw_intercept": 0.008953488372093024,
-    "draw_temperature": 1.061860465116279,
-    "stat_signal_gain": 1.3716666666666666,
-    "player_signal_gain": 0.9906976744186047,
-    "timing_signal_gain": 0.8809302325581396,
-    "penalty_logit_gain": 1.0013953488372094,
-    "upset_curve": 0.17162790697674418
+    "favorite_temperature": 0.8297619047619047,
+    "home_bias_delta": 0.0021428571428571425,
+    "draw_intercept": 0.009166666666666667,
+    "draw_temperature": 1.0633333333333332,
+    "stat_signal_gain": 1.3685714285714285,
+    "player_signal_gain": 0.9990476190476191,
+    "timing_signal_gain": 0.8809523809523809,
+    "penalty_logit_gain": 1.0033333333333334,
+    "upset_curve": 0.1680952380952381
   },
   "training_summary": {
-    "completed_matches": 43,
+    "completed_matches": 42,
     "correct": 29,
-    "accuracy": 0.6744186046511628,
-    "misses": 14,
-    "favorite_error_rate": 0.32558139534883723,
-    "draw_error_rate": 0.16279069767441862,
-    "stat_alignment": 0.8611111111111112,
+    "accuracy": 0.6904761904761905,
+    "misses": 13,
+    "favorite_error_rate": 0.30952380952380953,
+    "draw_error_rate": 0.16666666666666666,
+    "stat_alignment": 0.8571428571428571,
     "home_miss_actuals": 4,
-    "away_miss_actuals": 3
+    "away_miss_actuals": 2
   },
   "notes": [
     "هذه الطبقة تتعلم معاملات معادلة تصحيحية من أخطاء المباريات المكتملة بدلاً من الاكتفاء بتغيير أوزان عامة.",
