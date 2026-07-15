@@ -1,20 +1,20 @@
 {
   "summary": {
     "completed_forecasts": 44,
-    "correct": 30,
-    "missed": 14,
-    "accuracy": 0.6818181818181818,
-    "mean_brier_score": 0.45080172857065276,
-    "mean_log_loss": 0.8966003456602487
+    "correct": 29,
+    "missed": 15,
+    "accuracy": 0.6590909090909091,
+    "mean_brier_score": 0.4732751808101156,
+    "mean_log_loss": 0.8555842384067592
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
-      "home_win": 7,
+      "home_win": 8,
       "away_win": 7
     },
     "misses_by_actual_label": {
       "draw": 7,
-      "home_win": 4,
+      "home_win": 5,
       "away_win": 3
     },
     "severe_log_loss_match_ids": [
@@ -27,6 +27,7 @@
       "WC-024",
       "WC-047",
       "WC-041",
+      "WC-072",
       "WC-065",
       "WC-059",
       "ESPN-760514",
@@ -35,14 +36,15 @@
     "shock_match_ids": [
       "WC-006",
       "WC-030",
-      "WC-023"
+      "WC-023",
+      "WC-072"
     ]
   },
   "learned_knockout_adjustments": {
-    "uncertainty_multiplier": 1.0538,
+    "uncertainty_multiplier": 1.0513,
     "favorite_shrink": 0.04,
-    "upset_floor": 0.145,
-    "penalty_sensitivity": 1.025,
+    "upset_floor": 0.16,
+    "penalty_sensitivity": 1.0375,
     "target_accuracy_note": "90% is an ambition target, not a guaranteed property; the model now reports confidence and penalty risk instead of pretending certainty."
   },
   "lessons": [
