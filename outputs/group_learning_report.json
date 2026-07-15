@@ -4,8 +4,8 @@
     "correct": 29,
     "missed": 14,
     "accuracy": 0.6744186046511628,
-    "mean_brier_score": 0.4672852976981589,
-    "mean_log_loss": 0.8481364795514901
+    "mean_brier_score": 0.44567723170579615,
+    "mean_log_loss": 0.9542681719228159
   },
   "miss_patterns": {
     "misses_by_predicted_label": {
@@ -14,8 +14,8 @@
     },
     "misses_by_actual_label": {
       "draw": 7,
-      "home_win": 5,
-      "away_win": 2
+      "away_win": 3,
+      "home_win": 4
     },
     "severe_log_loss_match_ids": [
       "WC-069",
@@ -27,7 +27,6 @@
       "WC-024",
       "WC-047",
       "WC-041",
-      "WC-072",
       "WC-065",
       "WC-059",
       "ESPN-760514"
@@ -35,14 +34,13 @@
     "shock_match_ids": [
       "WC-006",
       "WC-030",
-      "WC-023",
-      "WC-072"
+      "WC-023"
     ]
   },
   "learned_knockout_adjustments": {
-    "uncertainty_multiplier": 1.0509,
+    "uncertainty_multiplier": 1.0573,
     "favorite_shrink": 0.04,
-    "upset_floor": 0.16,
+    "upset_floor": 0.145,
     "penalty_sensitivity": 1.0291,
     "target_accuracy_note": "90% is an ambition target, not a guaranteed property; the model now reports confidence and penalty risk instead of pretending certainty."
   },
