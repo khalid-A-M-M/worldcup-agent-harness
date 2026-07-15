@@ -1,6 +1,5 @@
 {
   "system_start_utc": "2026-06-23T00:00:00Z",
-  "update_policy": "GitHub Actions checks every 20 minutes; completed matches are refreshed after kickoff + 110 minutes, which approximates 20 minutes after full time for open sources to publish results and stats.",
   "metrics": {
     "completed_forecasts": 43,
     "accuracy": 0.6744186046511628,
@@ -786,6 +785,5 @@
       "kickoff_utc": "2026-07-14T19:00:00+00:00",
       "model_family": "Agent Harness group model"
     }
-  ],
-  "snapshot": "outputs/model_versions/v293_20260715T172105Z"
+  ]
 }
