@@ -1,6 +1,6 @@
 {
-  "equation_version": 422,
-  "generated_at_utc": "2026-07-15T22:38:38.551962Z",
+  "equation_version": 420,
+  "generated_at_utc": "2026-07-15T21:25:59.500087Z",
   "formula": {
     "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
     "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
@@ -8,26 +8,26 @@
     "upset_floor": "base_upset_floor + upset_curve when favorite errors rise"
   },
   "coefficients": {
-    "favorite_temperature": 0.825,
-    "home_bias_delta": 0.0010227272727272728,
+    "favorite_temperature": 0.8125,
+    "home_bias_delta": 0.0,
     "draw_intercept": 0.008749999999999999,
     "draw_temperature": 1.0604545454545455,
     "stat_signal_gain": 1.3745945945945945,
-    "player_signal_gain": 0.9945454545454545,
-    "timing_signal_gain": 0.8786363636363637,
+    "player_signal_gain": 0.9827272727272726,
+    "timing_signal_gain": 0.8809090909090909,
     "penalty_logit_gain": 0.9995454545454546,
-    "upset_curve": 0.16999999999999998
+    "upset_curve": 0.175
   },
   "training_summary": {
     "completed_matches": 44,
-    "correct": 30,
-    "accuracy": 0.6818181818181818,
-    "misses": 14,
-    "favorite_error_rate": 0.3181818181818182,
+    "correct": 29,
+    "accuracy": 0.6590909090909091,
+    "misses": 15,
+    "favorite_error_rate": 0.3409090909090909,
     "draw_error_rate": 0.1590909090909091,
     "stat_alignment": 0.8648648648648649,
     "home_miss_actuals": 4,
-    "away_miss_actuals": 3
+    "away_miss_actuals": 4
   },
   "notes": [
     "هذه الطبقة تتعلم معاملات معادلة تصحيحية من أخطاء المباريات المكتملة بدلاً من الاكتفاء بتغيير أوزان عامة.",
