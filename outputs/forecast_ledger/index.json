@@ -8847,6 +8847,22 @@
       "calibration_version": 315,
       "created_at_utc": "20260717T070217Z",
       "path": "outputs/forecast_ledger/ESPN-760517_v315_20260717T070217Z.json"
+    },
+    {
+      "match_id": "ESPN-760516",
+      "home_team": "France",
+      "away_team": "England",
+      "calibration_version": 316,
+      "created_at_utc": "20260717T092356Z",
+      "path": "outputs/forecast_ledger/ESPN-760516_v316_20260717T092356Z.json"
+    },
+    {
+      "match_id": "ESPN-760517",
+      "home_team": "Spain",
+      "away_team": "Argentina",
+      "calibration_version": 316,
+      "created_at_utc": "20260717T092357Z",
+      "path": "outputs/forecast_ledger/ESPN-760517_v316_20260717T092357Z.json"
     }
   ]
 }
