@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-18T23:57:32.653631Z",
+  "generated_at_utc": "2026-07-18T22:54:30.356225Z",
   "agent": "time_series_agent",
   "inspired_by": {
     "project": "google-research/timesfm",
@@ -316,41 +316,41 @@
       ]
     },
     "England": {
-      "sample_size": 13,
-      "momentum_index": 4.8669,
-      "stat_trend_index": 1.3505,
-      "volatility_index": 2.0742,
-      "time_series_edge": 0.0887,
+      "sample_size": 12,
+      "momentum_index": -1.117,
+      "stat_trend_index": 1.7267,
+      "volatility_index": 1.6803,
+      "time_series_edge": -0.0129,
       "confidence": 0.88,
-      "point_momentum": 2.1826,
-      "goal_difference_momentum": 1.0515,
-      "scoring_form": 4.051,
-      "defensive_form": 2.9995,
+      "point_momentum": 1.0538,
+      "goal_difference_momentum": -0.2584,
+      "scoring_form": 1.3594,
+      "defensive_form": 1.6178,
       "last_dates": [
+        "2026-07-01",
         "2026-07-05",
         "2026-07-11",
         "2026-07-11",
-        "2026-07-15",
-        "2026-07-18"
+        "2026-07-15"
       ]
     },
     "France": {
-      "sample_size": 12,
-      "momentum_index": -4.996,
-      "stat_trend_index": 0.6935,
-      "volatility_index": 4.6525,
-      "time_series_edge": -0.1109,
+      "sample_size": 11,
+      "momentum_index": -0.8476,
+      "stat_trend_index": 0.4363,
+      "volatility_index": 3.9491,
+      "time_series_edge": -0.0346,
       "confidence": 0.88,
-      "point_momentum": 0.5292,
-      "goal_difference_momentum": -1.3064,
-      "scoring_form": 2.6655,
-      "defensive_form": 3.9719,
+      "point_momentum": 1.26,
+      "goal_difference_momentum": -0.3486,
+      "scoring_form": 0.8225,
+      "defensive_form": 1.1712,
       "last_dates": [
+        "2026-06-30",
         "2026-06-30",
         "2026-07-04",
         "2026-07-09",
-        "2026-07-14",
-        "2026-07-18"
+        "2026-07-14"
       ]
     },
     "Germany": {
