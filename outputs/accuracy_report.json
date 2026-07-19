@@ -4,8 +4,8 @@
   "metrics": {
     "completed_forecasts": 45,
     "accuracy": 0.6444444444444445,
-    "mean_brier_score": 0.48634005383813916,
-    "mean_log_loss": 1.032599205859778,
+    "mean_brier_score": 0.48635059249886897,
+    "mean_log_loss": 1.032617011373215,
     "group_completed_forecasts": 31,
     "knockout_completed_forecasts": 14,
     "correct": 29,
@@ -421,7 +421,7 @@
       "probability_actual": 0.6399802885527829,
       "brier_score": 0.20214183011158252,
       "log_loss": 0.4463179022389994,
-      "calibration_version": 70,
+      "calibration_version": 62,
       "forecast_created_at": null,
       "kickoff_utc": "2026-06-27T21:00:00+00:00",
       "model_family": "Agent Harness group model"
@@ -439,7 +439,7 @@
       "probability_actual": 0.4090649308377193,
       "brier_score": 0.5246219522148666,
       "log_loss": 0.8938813804351452,
-      "calibration_version": 70,
+      "calibration_version": 62,
       "forecast_created_at": null,
       "kickoff_utc": "2026-06-27T21:00:00+00:00",
       "model_family": "Agent Harness group model"
@@ -454,10 +454,10 @@
       "predicted": "away_win",
       "actual": "draw",
       "correct": false,
-      "probability_actual": 0.26382000825946134,
-      "brier_score": 0.8212737853339513,
-      "log_loss": 1.3324881952541796,
-      "calibration_version": 71,
+      "probability_actual": 0.2638574052672745,
+      "brier_score": 0.8211817011225976,
+      "log_loss": 1.3323464533227756,
+      "calibration_version": 62,
       "forecast_created_at": null,
       "kickoff_utc": "2026-06-27T23:30:00+00:00",
       "model_family": "Agent Harness group model"
@@ -472,10 +472,10 @@
       "predicted": "home_win",
       "actual": "home_win",
       "correct": true,
-      "probability_actual": 0.5194031043135575,
-      "brier_score": 0.3471527742805872,
-      "log_loss": 0.6550750030413582,
-      "calibration_version": 71,
+      "probability_actual": 0.5192736043798175,
+      "brier_score": 0.3473390831827633,
+      "log_loss": 0.6553243586557224,
+      "calibration_version": 62,
       "forecast_created_at": null,
       "kickoff_utc": "2026-06-27T23:30:00+00:00",
       "model_family": "Agent Harness group model"
@@ -490,10 +490,10 @@
       "predicted": "away_win",
       "actual": "draw",
       "correct": false,
-      "probability_actual": 0.2616492674900331,
-      "brier_score": 0.8259606400977814,
-      "log_loss": 1.3407503457473036,
-      "calibration_version": 72,
+      "probability_actual": 0.26143997150829124,
+      "brier_score": 0.8264160317987386,
+      "log_loss": 1.3415505762904192,
+      "calibration_version": 62,
       "forecast_created_at": null,
       "kickoff_utc": "2026-06-28T02:00:00+00:00",
       "model_family": "Agent Harness group model"
@@ -508,10 +508,10 @@
       "predicted": "away_win",
       "actual": "away_win",
       "correct": true,
-      "probability_actual": 0.7006755731927655,
-      "brier_score": 0.14054367636649492,
-      "log_loss": 0.355710304791621,
-      "calibration_version": 72,
+      "probability_actual": 0.7007502664721704,
+      "brier_score": 0.14046829970755653,
+      "log_loss": 0.35560370867021157,
+      "calibration_version": 62,
       "forecast_created_at": null,
       "kickoff_utc": "2026-06-28T02:00:00+00:00",
       "model_family": "Agent Harness group model"
@@ -823,5 +823,5 @@
       "model_family": "Agent Harness group model"
     }
   ],
-  "snapshot": "outputs/model_versions/v355_20260719T205514Z"
+  "snapshot": "outputs/model_versions/v356_20260719T215745Z"
 }
