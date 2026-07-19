@@ -9295,6 +9295,14 @@
       "calibration_version": 344,
       "created_at_utc": "20260719T033958Z",
       "path": "outputs/forecast_ledger/ESPN-760517_v344_20260719T033958Z.json"
+    },
+    {
+      "match_id": "ESPN-760517",
+      "home_team": "Spain",
+      "away_team": "Argentina",
+      "calibration_version": 345,
+      "created_at_utc": "20260719T061624Z",
+      "path": "outputs/forecast_ledger/ESPN-760517_v345_20260719T061624Z.json"
     }
   ]
 }
