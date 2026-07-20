@@ -1,0 +1,36 @@
+{
+  "equation_version": 562,
+  "generated_at_utc": "2026-07-20T21:47:45.899714Z",
+  "formula": {
+    "two_way_logit": "favorite_temperature * base_logit + stat_signal_gain * stat_edge + player_signal_gain * player_edge + timing_signal_gain * timing_edge + home_bias_delta",
+    "draw_mass": "draw_temperature * base_draw + draw_intercept + scenario_chaos_adjustment",
+    "penalty_logit": "penalty_logit_gain * base_penalty_logit + goalkeeper_edge + taker_edge",
+    "upset_floor": "base_upset_floor + upset_curve when favorite errors rise"
+  },
+  "coefficients": {
+    "favorite_temperature": 0.808695652173913,
+    "home_bias_delta": -0.0009782608695652173,
+    "draw_intercept": 0.008369565217391305,
+    "draw_temperature": 1.0578260869565217,
+    "stat_signal_gain": 1.3399999999999999,
+    "player_signal_gain": 0.9791304347826086,
+    "timing_signal_gain": 0.8786956521739131,
+    "penalty_logit_gain": 0.9960869565217392,
+    "upset_curve": 0.17652173913043478
+  },
+  "training_summary": {
+    "completed_matches": 46,
+    "correct": 30,
+    "accuracy": 0.6521739130434783,
+    "misses": 16,
+    "favorite_error_rate": 0.34782608695652173,
+    "draw_error_rate": 0.15217391304347827,
+    "stat_alignment": 0.8205128205128205,
+    "home_miss_actuals": 4,
+    "away_miss_actuals": 5
+  },
+  "notes": [
+    "هذه الطبقة تتعلم معاملات معادلة تصحيحية من أخطاء المباريات المكتملة بدلاً من الاكتفاء بتغيير أوزان عامة.",
+    "كل تحديث بعد مباراة يحفظ نسخة جديدة من equation_version لاستخدامها في توقعات خروج المغلوب التالية."
+  ]
+}
