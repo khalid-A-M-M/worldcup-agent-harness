@@ -1,0 +1,927 @@
+{
+  "generated_at_utc": "2026-07-21T09:15:10.393633Z",
+  "agent": "time_series_agent",
+  "inspired_by": {
+    "project": "google-research/timesfm",
+    "note": "Stable local fallback: EWMA/quantile time-series layer for GitHub Actions. If TimesFM is installed later, this file can become the adapter input/output contract without changing the dashboard."
+  },
+  "method": {
+    "series": "Per-team chronological goal-difference and points signal from completed World Cup matches, enriched with advanced match stats when available.",
+    "forecast": "Exponentially weighted momentum with volatility penalty and confidence bands. This keeps the free GitHub workflow deterministic while borrowing the TimesFM idea: recent sequence shape matters, not only static weights.",
+    "equation": "time_series_edge = 0.018 * momentum_index + 0.010 * stat_trend_index - 0.006 * volatility_index"
+  },
+  "teams": {
+    "Algeria": {
+      "sample_size": 8,
+      "momentum_index": -6.5619,
+      "stat_trend_index": 0.0,
+      "volatility_index": 2.7439,
+      "time_series_edge": -0.1346,
+      "confidence": 0.7364,
+      "point_momentum": 0.2222,
+      "goal_difference_momentum": -1.638,
+      "scoring_form": 0.4871,
+      "defensive_form": 2.1251,
+      "last_dates": [
+        "2026-06-23",
+        "2026-06-27",
+        "2026-06-28",
+        "2026-07-02",
+        "2026-07-02"
+      ]
+    },
+    "Argentina": {
+      "sample_size": 13,
+      "momentum_index": -0.4512,
+      "stat_trend_index": -0.775,
+      "volatility_index": 2.0742,
+      "time_series_edge": -0.0283,
+      "confidence": 0.88,
+      "point_momentum": 1.1677,
+      "goal_difference_momentum": -0.1015,
+      "scoring_form": 0.9238,
+      "defensive_form": 1.0252,
+      "last_dates": [
+        "2026-07-07",
+        "2026-07-11",
+        "2026-07-12",
+        "2026-07-15",
+        "2026-07-19"
+      ]
+    },
+    "Australia": {
+      "sample_size": 8,
+      "momentum_index": -0.7359,
+      "stat_trend_index": 0.5106,
+      "volatility_index": 2.0742,
+      "time_series_edge": -0.0206,
+      "confidence": 0.7781,
+      "point_momentum": 0.9854,
+      "goal_difference_momentum": -0.0403,
+      "scoring_form": 0.8346,
+      "defensive_form": 0.8749,
+      "last_dates": [
+        "2026-06-19",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-07-03",
+        "2026-07-03"
+      ]
+    },
+    "Austria": {
+      "sample_size": 8,
+      "momentum_index": -8.8895,
+      "stat_trend_index": 2.9036,
+      "volatility_index": 2.7439,
+      "time_series_edge": -0.14,
+      "confidence": 0.7864,
+      "point_momentum": 0.1618,
+      "goal_difference_momentum": -2.5111,
+      "scoring_form": 0.4523,
+      "defensive_form": 2.9634,
+      "last_dates": [
+        "2026-06-22",
+        "2026-06-27",
+        "2026-06-28",
+        "2026-07-02",
+        "2026-07-02"
+      ]
+    },
+    "Belgium": {
+      "sample_size": 11,
+      "momentum_index": -2.9042,
+      "stat_trend_index": 1.4838,
+      "volatility_index": 4.2127,
+      "time_series_edge": -0.0627,
+      "confidence": 0.88,
+      "point_momentum": 0.4885,
+      "goal_difference_momentum": -0.4306,
+      "scoring_form": 1.4521,
+      "defensive_form": 1.8827,
+      "last_dates": [
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-06",
+        "2026-07-10",
+        "2026-07-10"
+      ]
+    },
+    "Bosnia & Herzegovina": {
+      "sample_size": 7,
+      "momentum_index": -2.1061,
+      "stat_trend_index": 0.0,
+      "volatility_index": 4.6956,
+      "time_series_edge": -0.0661,
+      "confidence": 0.6076,
+      "point_momentum": 1.0508,
+      "goal_difference_momentum": -0.6512,
+      "scoring_form": 1.1118,
+      "defensive_form": 1.7631,
+      "last_dates": [
+        "2026-06-18",
+        "2026-06-18",
+        "2026-06-24",
+        "2026-06-24",
+        "2026-07-01"
+      ]
+    },
+    "Brazil": {
+      "sample_size": 9,
+      "momentum_index": -0.0339,
+      "stat_trend_index": -0.7894,
+      "volatility_index": 3.2796,
+      "time_series_edge": -0.0282,
+      "confidence": 0.828,
+      "point_momentum": 1.2554,
+      "goal_difference_momentum": -0.0187,
+      "scoring_form": 1.4895,
+      "defensive_form": 1.5082,
+      "last_dates": [
+        "2026-06-24",
+        "2026-06-24",
+        "2026-06-29",
+        "2026-06-29",
+        "2026-07-05"
+      ]
+    },
+    "Canada": {
+      "sample_size": 9,
+      "momentum_index": -3.9027,
+      "stat_trend_index": 0.6597,
+      "volatility_index": 6.19,
+      "time_series_edge": -0.1008,
+      "confidence": 0.7552,
+      "point_momentum": 1.0723,
+      "goal_difference_momentum": -1.3905,
+      "scoring_form": 0.4738,
+      "defensive_form": 1.8643,
+      "last_dates": [
+        "2026-06-24",
+        "2026-06-24",
+        "2026-06-28",
+        "2026-06-28",
+        "2026-07-04"
+      ]
+    },
+    "Cape Verde": {
+      "sample_size": 8,
+      "momentum_index": -3.442,
+      "stat_trend_index": -1.0006,
+      "volatility_index": 0.8199,
+      "time_series_edge": -0.0769,
+      "confidence": 0.8345,
+      "point_momentum": 0.42,
+      "goal_difference_momentum": -0.58,
+      "scoring_form": 1.4549,
+      "defensive_form": 2.0349,
+      "last_dates": [
+        "2026-06-21",
+        "2026-06-26",
+        "2026-06-27",
+        "2026-07-03",
+        "2026-07-03"
+      ]
+    },
+    "Colombia": {
+      "sample_size": 9,
+      "momentum_index": 2.0263,
+      "stat_trend_index": -1.3897,
+      "volatility_index": 1.1,
+      "time_series_edge": 0.016,
+      "confidence": 0.8575,
+      "point_momentum": 1.718,
+      "goal_difference_momentum": 0.3613,
+      "scoring_form": 0.3636,
+      "defensive_form": 0.0023,
+      "last_dates": [
+        "2026-06-27",
+        "2026-06-27",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-07"
+      ]
+    },
+    "Croatia": {
+      "sample_size": 8,
+      "momentum_index": -3.4286,
+      "stat_trend_index": 0.1987,
+      "volatility_index": 2.0742,
+      "time_series_edge": -0.0722,
+      "confidence": 0.8281,
+      "point_momentum": 0.5127,
+      "goal_difference_momentum": -0.6637,
+      "scoring_form": 1.1508,
+      "defensive_form": 1.8144,
+      "last_dates": [
+        "2026-06-23",
+        "2026-06-27",
+        "2026-06-27",
+        "2026-07-02",
+        "2026-07-02"
+      ]
+    },
+    "Curaçao": {
+      "sample_size": 6,
+      "momentum_index": -7.2361,
+      "stat_trend_index": 1.0815,
+      "volatility_index": 5.4878,
+      "time_series_edge": -0.14,
+      "confidence": 0.5828,
+      "point_momentum": 0.1453,
+      "goal_difference_momentum": -1.8339,
+      "scoring_form": 0.0311,
+      "defensive_form": 1.865,
+      "last_dates": [
+        "2026-06-14",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-25",
+        "2026-06-25"
+      ]
+    },
+    "Czech Republic": {
+      "sample_size": 6,
+      "momentum_index": -8.9061,
+      "stat_trend_index": 0.0,
+      "volatility_index": 2.7439,
+      "time_series_edge": -0.14,
+      "confidence": 0.6264,
+      "point_momentum": 0.1453,
+      "goal_difference_momentum": -2.5019,
+      "scoring_form": 0.1764,
+      "defensive_form": 2.6783,
+      "last_dates": [
+        "2026-06-12",
+        "2026-06-18",
+        "2026-06-18",
+        "2026-06-24",
+        "2026-06-25"
+      ]
+    },
+    "DR Congo": {
+      "sample_size": 8,
+      "momentum_index": -3.3374,
+      "stat_trend_index": 3.1238,
+      "volatility_index": 3.1113,
+      "time_series_edge": -0.0475,
+      "confidence": 0.7772,
+      "point_momentum": 0.4413,
+      "goal_difference_momentum": -0.5587,
+      "scoring_form": 1.2649,
+      "defensive_form": 1.8236,
+      "last_dates": [
+        "2026-06-24",
+        "2026-06-27",
+        "2026-06-27",
+        "2026-07-01",
+        "2026-07-01"
+      ]
+    },
+    "Ecuador": {
+      "sample_size": 8,
+      "momentum_index": -5.661,
+      "stat_trend_index": 0.8564,
+      "volatility_index": 2.7439,
+      "time_series_edge": -0.1098,
+      "confidence": 0.7864,
+      "point_momentum": 0.4615,
+      "goal_difference_momentum": -1.5074,
+      "scoring_form": 0.2906,
+      "defensive_form": 1.798,
+      "last_dates": [
+        "2026-06-21",
+        "2026-06-25",
+        "2026-06-25",
+        "2026-06-30",
+        "2026-06-30"
+      ]
+    },
+    "Egypt": {
+      "sample_size": 9,
+      "momentum_index": -3.3365,
+      "stat_trend_index": -0.597,
+      "volatility_index": 1.9746,
+      "time_series_edge": -0.0779,
+      "confidence": 0.8356,
+      "point_momentum": 0.4415,
+      "goal_difference_momentum": -0.5585,
+      "scoring_form": 1.6015,
+      "defensive_form": 2.16,
+      "last_dates": [
+        "2026-06-26",
+        "2026-06-27",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-07"
+      ]
+    },
+    "England": {
+      "sample_size": 13,
+      "momentum_index": 4.8669,
+      "stat_trend_index": 1.3505,
+      "volatility_index": 2.0742,
+      "time_series_edge": 0.0887,
+      "confidence": 0.88,
+      "point_momentum": 2.1826,
+      "goal_difference_momentum": 1.0515,
+      "scoring_form": 4.051,
+      "defensive_form": 2.9995,
+      "last_dates": [
+        "2026-07-05",
+        "2026-07-11",
+        "2026-07-11",
+        "2026-07-15",
+        "2026-07-18"
+      ]
+    },
+    "France": {
+      "sample_size": 12,
+      "momentum_index": -4.996,
+      "stat_trend_index": 0.6935,
+      "volatility_index": 4.6525,
+      "time_series_edge": -0.1109,
+      "confidence": 0.88,
+      "point_momentum": 0.5292,
+      "goal_difference_momentum": -1.3064,
+      "scoring_form": 2.6655,
+      "defensive_form": 3.9719,
+      "last_dates": [
+        "2026-06-30",
+        "2026-07-04",
+        "2026-07-09",
+        "2026-07-14",
+        "2026-07-18"
+      ]
+    },
+    "Germany": {
+      "sample_size": 8,
+      "momentum_index": -1.0161,
+      "stat_trend_index": -3.8304,
+      "volatility_index": 1.7963,
+      "time_series_edge": -0.0674,
+      "confidence": 0.8351,
+      "point_momentum": 0.917,
+      "goal_difference_momentum": -0.0867,
+      "scoring_form": 1.0586,
+      "defensive_form": 1.1453,
+      "last_dates": [
+        "2026-06-20",
+        "2026-06-25",
+        "2026-06-25",
+        "2026-06-29",
+        "2026-06-29"
+      ]
+    },
+    "Ghana": {
+      "sample_size": 8,
+      "momentum_index": -5.3075,
+      "stat_trend_index": 0.1098,
+      "volatility_index": 1.0371,
+      "time_series_edge": -0.1007,
+      "confidence": 0.8541,
+      "point_momentum": 0.0421,
+      "goal_difference_momentum": -0.9634,
+      "scoring_form": 0.1508,
+      "defensive_form": 1.1142,
+      "last_dates": [
+        "2026-06-23",
+        "2026-06-27",
+        "2026-06-27",
+        "2026-07-03",
+        "2026-07-03"
+      ]
+    },
+    "Haiti": {
+      "sample_size": 6,
+      "momentum_index": -8.2854,
+      "stat_trend_index": 0.0,
+      "volatility_index": 1.7963,
+      "time_series_edge": -0.14,
+      "confidence": 0.6501,
+      "point_momentum": 0.0,
+      "goal_difference_momentum": -2.1142,
+      "scoring_form": 1.6472,
+      "defensive_form": 3.7614,
+      "last_dates": [
+        "2026-06-14",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-24",
+        "2026-06-24"
+      ]
+    },
+    "Iran": {
+      "sample_size": 6,
+      "momentum_index": -0.6,
+      "stat_trend_index": 0.0,
+      "volatility_index": 0.0,
+      "time_series_edge": -0.0108,
+      "confidence": 0.695,
+      "point_momentum": 1.0,
+      "goal_difference_momentum": 0.0,
+      "scoring_form": 0.8858,
+      "defensive_form": 0.8858,
+      "last_dates": [
+        "2026-06-16",
+        "2026-06-21",
+        "2026-06-21",
+        "2026-06-26",
+        "2026-06-27"
+      ]
+    },
+    "Iraq": {
+      "sample_size": 6,
+      "momentum_index": -10.0,
+      "stat_trend_index": -1.0872,
+      "volatility_index": 2.0742,
+      "time_series_edge": -0.14,
+      "confidence": 0.6931,
+      "point_momentum": 0.0,
+      "goal_difference_momentum": -4.6472,
+      "scoring_form": 0.0311,
+      "defensive_form": 4.6783,
+      "last_dates": [
+        "2026-06-16",
+        "2026-06-22",
+        "2026-06-22",
+        "2026-06-26",
+        "2026-06-26"
+      ]
+    },
+    "Ivory Coast": {
+      "sample_size": 8,
+      "momentum_index": -3.2974,
+      "stat_trend_index": -1.5415,
+      "volatility_index": 3.1113,
+      "time_series_edge": -0.0934,
+      "confidence": 0.8022,
+      "point_momentum": 0.4523,
+      "goal_difference_momentum": -0.5532,
+      "scoring_form": 1.1453,
+      "defensive_form": 1.6985,
+      "last_dates": [
+        "2026-06-20",
+        "2026-06-25",
+        "2026-06-25",
+        "2026-06-30",
+        "2026-06-30"
+      ]
+    },
+    "Japan": {
+      "sample_size": 8,
+      "momentum_index": -4.2563,
+      "stat_trend_index": 2.1262,
+      "volatility_index": 4.7525,
+      "time_series_edge": -0.0839,
+      "confidence": 0.7612,
+      "point_momentum": 0.2277,
+      "goal_difference_momentum": -0.7211,
+      "scoring_form": 1.0824,
+      "defensive_form": 1.8035,
+      "last_dates": [
+        "2026-06-21",
+        "2026-06-25",
+        "2026-06-25",
+        "2026-06-29",
+        "2026-06-29"
+      ]
+    },
+    "Jordan": {
+      "sample_size": 6,
+      "momentum_index": -7.6368,
+      "stat_trend_index": 0.0,
+      "volatility_index": 1.0371,
+      "time_series_edge": -0.14,
+      "confidence": 0.6691,
+      "point_momentum": 0.0,
+      "goal_difference_momentum": -1.8547,
+      "scoring_form": 1.0,
+      "defensive_form": 2.8547,
+      "last_dates": [
+        "2026-06-17",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-27",
+        "2026-06-28"
+      ]
+    },
+    "Mexico": {
+      "sample_size": 9,
+      "momentum_index": 0.7996,
+      "stat_trend_index": 1.0641,
+      "volatility_index": 3.0236,
+      "time_series_edge": 0.0069,
+      "confidence": 0.8094,
+      "point_momentum": 1.26,
+      "goal_difference_momentum": 0.3103,
+      "scoring_form": 2.0503,
+      "defensive_form": 1.74,
+      "last_dates": [
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-30",
+        "2026-06-30",
+        "2026-07-05"
+      ]
+    },
+    "Morocco": {
+      "sample_size": 10,
+      "momentum_index": -1.6116,
+      "stat_trend_index": 3.94,
+      "volatility_index": 3.685,
+      "time_series_edge": -0.0117,
+      "confidence": 0.88,
+      "point_momentum": 0.9675,
+      "goal_difference_momentum": -0.3734,
+      "scoring_form": 0.9841,
+      "defensive_form": 1.3575,
+      "last_dates": [
+        "2026-06-24",
+        "2026-06-29",
+        "2026-06-29",
+        "2026-07-04",
+        "2026-07-09"
+      ]
+    },
+    "Netherlands": {
+      "sample_size": 8,
+      "momentum_index": 1.2031,
+      "stat_trend_index": 2.9439,
+      "volatility_index": 3.5926,
+      "time_series_edge": 0.0295,
+      "confidence": 0.7902,
+      "point_momentum": 1.3418,
+      "goal_difference_momentum": 0.3931,
+      "scoring_form": 1.3986,
+      "defensive_form": 1.0055,
+      "last_dates": [
+        "2026-06-20",
+        "2026-06-25",
+        "2026-06-25",
+        "2026-06-29",
+        "2026-06-29"
+      ]
+    },
+    "New Zealand": {
+      "sample_size": 6,
+      "momentum_index": -10.0,
+      "stat_trend_index": 0.0,
+      "volatility_index": 3.5926,
+      "time_series_edge": -0.14,
+      "confidence": 0.5802,
+      "point_momentum": 0.0311,
+      "goal_difference_momentum": -3.585,
+      "scoring_form": 1.0311,
+      "defensive_form": 4.6161,
+      "last_dates": [
+        "2026-06-16",
+        "2026-06-21",
+        "2026-06-22",
+        "2026-06-26",
+        "2026-06-27"
+      ]
+    },
+    "Norway": {
+      "sample_size": 11,
+      "momentum_index": -2.3374,
+      "stat_trend_index": 0.2545,
+      "volatility_index": 3.2175,
+      "time_series_edge": -0.0588,
+      "confidence": 0.88,
+      "point_momentum": 0.7405,
+      "goal_difference_momentum": -0.4458,
+      "scoring_form": 1.1683,
+      "defensive_form": 1.6142,
+      "last_dates": [
+        "2026-06-30",
+        "2026-06-30",
+        "2026-07-05",
+        "2026-07-11",
+        "2026-07-11"
+      ]
+    },
+    "Panama": {
+      "sample_size": 6,
+      "momentum_index": -7.559,
+      "stat_trend_index": -3.2809,
+      "volatility_index": 1.0371,
+      "time_series_edge": -0.14,
+      "confidence": 0.7191,
+      "point_momentum": 0.0,
+      "goal_difference_momentum": -1.8236,
+      "scoring_form": 0.0,
+      "defensive_form": 1.8236,
+      "last_dates": [
+        "2026-06-17",
+        "2026-06-23",
+        "2026-06-23",
+        "2026-06-27",
+        "2026-06-27"
+      ]
+    },
+    "Paraguay": {
+      "sample_size": 9,
+      "momentum_index": -3.3862,
+      "stat_trend_index": 0.0,
+      "volatility_index": 1.2702,
+      "time_series_edge": -0.0686,
+      "confidence": 0.8282,
+      "point_momentum": 0.4392,
+      "goal_difference_momentum": -0.5762,
+      "scoring_form": 0.359,
+      "defensive_form": 0.9351,
+      "last_dates": [
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-29",
+        "2026-07-04"
+      ]
+    },
+    "Portugal": {
+      "sample_size": 9,
+      "momentum_index": -0.7306,
+      "stat_trend_index": 0.4852,
+      "volatility_index": 4.2127,
+      "time_series_edge": -0.0336,
+      "confidence": 0.8297,
+      "point_momentum": 1.1334,
+      "goal_difference_momentum": -0.1803,
+      "scoring_form": 0.7479,
+      "defensive_form": 0.9282,
+      "last_dates": [
+        "2026-06-27",
+        "2026-06-27",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-06"
+      ]
+    },
+    "Qatar": {
+      "sample_size": 6,
+      "momentum_index": -9.2226,
+      "stat_trend_index": -2.2058,
+      "volatility_index": 5.4878,
+      "time_series_edge": -0.14,
+      "confidence": 0.5828,
+      "point_momentum": 0.0311,
+      "goal_difference_momentum": -2.5189,
+      "scoring_form": 0.8547,
+      "defensive_form": 3.3736,
+      "last_dates": [
+        "2026-06-13",
+        "2026-06-18",
+        "2026-06-18",
+        "2026-06-24",
+        "2026-06-24"
+      ]
+    },
+    "Saudi Arabia": {
+      "sample_size": 6,
+      "momentum_index": -2.4015,
+      "stat_trend_index": -1.1718,
+      "volatility_index": 4.1484,
+      "time_series_edge": -0.0798,
+      "confidence": 0.6163,
+      "point_momentum": 0.8547,
+      "goal_difference_momentum": -0.5811,
+      "scoring_form": 0.0311,
+      "defensive_form": 0.6122,
+      "last_dates": [
+        "2026-06-15",
+        "2026-06-21",
+        "2026-06-21",
+        "2026-06-26",
+        "2026-06-27"
+      ]
+    },
+    "Scotland": {
+      "sample_size": 6,
+      "momentum_index": -9.2384,
+      "stat_trend_index": 2.9239,
+      "volatility_index": 3.5926,
+      "time_series_edge": -0.14,
+      "confidence": 0.6302,
+      "point_momentum": 0.0934,
+      "goal_difference_momentum": -2.585,
+      "scoring_form": 0.0311,
+      "defensive_form": 2.6161,
+      "last_dates": [
+        "2026-06-14",
+        "2026-06-19",
+        "2026-06-19",
+        "2026-06-24",
+        "2026-06-24"
+      ]
+    },
+    "Senegal": {
+      "sample_size": 8,
+      "momentum_index": -1.0948,
+      "stat_trend_index": 3.9183,
+      "volatility_index": 6.0138,
+      "time_series_edge": -0.0166,
+      "confidence": 0.7047,
+      "point_momentum": 0.6794,
+      "goal_difference_momentum": 0.1098,
+      "scoring_form": 2.4304,
+      "defensive_form": 2.3206,
+      "last_dates": [
+        "2026-06-23",
+        "2026-06-26",
+        "2026-06-26",
+        "2026-07-01",
+        "2026-07-01"
+      ]
+    },
+    "South Africa": {
+      "sample_size": 8,
+      "momentum_index": -3.6157,
+      "stat_trend_index": 2.5278,
+      "volatility_index": 1.7963,
+      "time_series_edge": -0.0506,
+      "confidence": 0.8101,
+      "point_momentum": 0.4615,
+      "goal_difference_momentum": -0.6893,
+      "scoring_form": 0.1709,
+      "defensive_form": 0.8602,
+      "last_dates": [
+        "2026-06-18",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-28",
+        "2026-06-28"
+      ]
+    },
+    "South Korea": {
+      "sample_size": 6,
+      "momentum_index": -5.1204,
+      "stat_trend_index": 0.0,
+      "volatility_index": 2.0742,
+      "time_series_edge": -0.1046,
+      "confidence": 0.6181,
+      "point_momentum": 0.0934,
+      "goal_difference_momentum": -0.9378,
+      "scoring_form": 0.0622,
+      "defensive_form": 1.0,
+      "last_dates": [
+        "2026-06-12",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-24",
+        "2026-06-25"
+      ]
+    },
+    "Spain": {
+      "sample_size": 13,
+      "momentum_index": 7.3648,
+      "stat_trend_index": 2.1506,
+      "volatility_index": 1.6803,
+      "time_series_edge": 0.14,
+      "confidence": 0.88,
+      "point_momentum": 2.9999,
+      "goal_difference_momentum": 1.2661,
+      "scoring_form": 1.4113,
+      "defensive_form": 0.1453,
+      "last_dates": [
+        "2026-07-06",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-14",
+        "2026-07-19"
+      ]
+    },
+    "Sweden": {
+      "sample_size": 8,
+      "momentum_index": -8.9902,
+      "stat_trend_index": 3.8445,
+      "volatility_index": 3.7393,
+      "time_series_edge": -0.14,
+      "confidence": 0.7615,
+      "point_momentum": 0.1618,
+      "goal_difference_momentum": -2.5514,
+      "scoring_form": 0.1984,
+      "defensive_form": 2.7497,
+      "last_dates": [
+        "2026-06-20",
+        "2026-06-25",
+        "2026-06-25",
+        "2026-06-30",
+        "2026-06-30"
+      ]
+    },
+    "Switzerland": {
+      "sample_size": 11,
+      "momentum_index": -4.1921,
+      "stat_trend_index": 0.1045,
+      "volatility_index": 3.0458,
+      "time_series_edge": -0.0927,
+      "confidence": 0.88,
+      "point_momentum": 0.5674,
+      "goal_difference_momentum": -1.0215,
+      "scoring_form": 0.9752,
+      "defensive_form": 1.9967,
+      "last_dates": [
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-07",
+        "2026-07-11",
+        "2026-07-12"
+      ]
+    },
+    "Tunisia": {
+      "sample_size": 6,
+      "momentum_index": -8.882,
+      "stat_trend_index": 2.2824,
+      "volatility_index": 2.0742,
+      "time_series_edge": -0.14,
+      "confidence": 0.6681,
+      "point_momentum": 0.0,
+      "goal_difference_momentum": -2.3528,
+      "scoring_form": 0.8547,
+      "defensive_form": 3.2075,
+      "last_dates": [
+        "2026-06-15",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-25",
+        "2026-06-25"
+      ]
+    },
+    "Turkey": {
+      "sample_size": 6,
+      "momentum_index": 4.4701,
+      "stat_trend_index": 0.0,
+      "volatility_index": 2.7439,
+      "time_series_edge": 0.064,
+      "confidence": 0.6014,
+      "point_momentum": 2.4708,
+      "goal_difference_momentum": 0.6161,
+      "scoring_form": 2.4708,
+      "defensive_form": 1.8547,
+      "last_dates": [
+        "2026-06-14",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-25",
+        "2026-06-26"
+      ]
+    },
+    "USA": {
+      "sample_size": 8,
+      "momentum_index": -4.3479,
+      "stat_trend_index": 0.0,
+      "volatility_index": 4.2917,
+      "time_series_edge": -0.104,
+      "confidence": 0.6977,
+      "point_momentum": 0.8242,
+      "goal_difference_momentum": -1.3304,
+      "scoring_form": 1.431,
+      "defensive_form": 2.7613,
+      "last_dates": [
+        "2026-06-19",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-07-01",
+        "2026-07-06"
+      ]
+    },
+    "Uruguay": {
+      "sample_size": 6,
+      "momentum_index": -4.6356,
+      "stat_trend_index": -4.2879,
+      "volatility_index": 1.0371,
+      "time_series_edge": -0.1325,
+      "confidence": 0.6941,
+      "point_momentum": 0.1764,
+      "goal_difference_momentum": -0.8236,
+      "scoring_form": 0.3217,
+      "defensive_form": 1.1453,
+      "last_dates": [
+        "2026-06-15",
+        "2026-06-21",
+        "2026-06-21",
+        "2026-06-26",
+        "2026-06-27"
+      ]
+    },
+    "Uzbekistan": {
+      "sample_size": 6,
+      "momentum_index": -9.0896,
+      "stat_trend_index": -0.2583,
+      "volatility_index": 3.1113,
+      "time_series_edge": -0.14,
+      "confidence": 0.6422,
+      "point_momentum": 0.0,
+      "goal_difference_momentum": -2.4358,
+      "scoring_form": 0.8547,
+      "defensive_form": 3.2906,
+      "last_dates": [
+        "2026-06-18",
+        "2026-06-23",
+        "2026-06-23",
+        "2026-06-27",
+        "2026-06-27"
+      ]
+    }
+  }
+}
